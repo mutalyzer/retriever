@@ -1,14 +1,24 @@
 """
 Module for gff files parsing.
 
-We consider that:
-    - gff files have 9 columns.
-    - '#' is used to comment lines in the gff file, so we ignore those lines.
+GFF3 specifications:
+- https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md
+- ftp://ftp.ncbi.nlm.nih.gov/genomes/README_GFF3.txt
+
+Notes:
+    - GFF files have 9 columns, not explicitly mentioned in the file, tab
+    delimited, with the following order: seqid, source, type, start, end,
+    score, strand, phase, and attributes.
+    - There can be multiple parents for one entry, e.g., for exons.
+    - Multiple entries can have the same parent.
+    - There are entries with no parents.
+    - Multiple entries have the same,
+    '#' is used for comments.
+
     - mRNA and gene ID fields in the attributes column are unique.
     - CDS ID fields in the attributes column are not unique. However, the CDS
     entries with the same ID are part of the same protein. They are split like
     this in the same manner as the exons are.
-
 """
 import argparse
 import json
@@ -25,6 +35,14 @@ gff_columns = [
     'phase',
     'attributes'
 ]
+
+keys = {
+    'region': 'seqid',
+    'gene': 'HGNC',
+    'mRNA': 'transcript_id',
+    'CDS': 'protein_id',
+    'transcript': 'transcript_id',
+}
 
 # Separators
 # ----------
@@ -74,43 +92,78 @@ def read_gff_raw_records(gff_content):
         }
 
 
-def add_to_existing(existing, new):
-    if existing['location'] != new['location']:
-        existing['location'].extend(new['location'])
-    for k in new['attributes']:
-        if existing['attributes'].get(k) is None:
-            existing['attributes'][k] = new['attributes'][k]
-            # print('strange thing here since key: {} not in existing.'.format(k))
-            # print(json.dumps(existing, indent=2))
-            # print(json.dumps(new, indent=2))
+def add_to_composed(records, entry_id, new):
+    """
+    Some loci are composed of multiple entries. This function deals with
+    composing the final loci object.
+    """
+    existing = records[entry_id]
+
+    if existing.get('parts'):
+        existing['parts'].append({'attributes': new['attributes'],
+                                  'location': new['location']})
+    else:
+        existing = {'parts': [{'attributes': existing['attributes'],
+                               'location': existing['location']},
+                              {'attributes': new['attributes'],
+                               'location': new['location']}],
+                    'type': existing['type']}
+    records[entry_id] = existing
+
+
+def add_children_to_parents(records):
+    """
+
+    """
+    for record_id in records:
+        if records[record_id].get('parts'):
+            parent_id = records[record_id]['parts'][0]['attributes'].get('Parent')
         else:
-            if k == 'phase':
-                existing['attributes'][k].extend(new['attributes'][k])
-            elif existing['attributes'][k] != new['attributes'][k]:
-                print('different value for key: {}'.format(k))
-                print(' {} in existing'.format(existing['attributes'][k]))
-                print(' {} in new'.format(new['attributes'][k]))
+            parent_id = records[record_id]['attributes'].get('Parent')
+        if parent_id:
+            if records[parent_id].get('children') is None:
+                records[parent_id]['children'] = [record_id]
+            else:
+                records[parent_id]['children'].append(record_id)
+
+
+def retrieve_gene(records, gene_name):
+    """
+    Retrieves a gene object from an GFF record object.
+    """
+    for record_id in records:
+        if records[record_id].get('type') == 'gene':
+            if records[record_id]['attributes'].get('gene') == gene_name:
+                return records[record_id]
+
+
+def retrieve_locus(records, locus_name, locus_type):
+    """
+    Retrieves a gene object from an GFF record object.
+    """
+    for record_id in records:
+        if records[record_id].get('type') == locus_type:
+            if records[record_id]['attributes'].get('Name') == locus_name:
+                return records[record_id]
 
 
 def parse(gff_file):
     """
-    Import transcript mappings from an GFF file.
+    Entry point for the GFF parser.
     """
     records = {}
-    already_there = 0
     with open(gff_file, 'rb') as gff_content:
         for raw_record in read_gff_raw_records(gff_content):
             if raw_record['attributes']['ID'] in records:
-                add_to_existing(records[raw_record['attributes']['ID']],
+                add_to_composed(records, raw_record['attributes']['ID'],
                                 raw_record)
-                already_there += 1
             else:
                 records[raw_record['attributes']['ID']] = raw_record
-    print("done")
-    print("Total records", len(records))
-    print("Already there", already_there)
+    add_children_to_parents(records)
     print(json.dumps(records, indent=2))
-    # print(json.dumps(chromosomes, indent=2))
+    # print(json.dumps(retrieve_gene(records, 'PIGR'), indent=2))
+    # print(json.dumps(records['rna13638'], indent=2))
+    # print(json.dumps(records['rna13637'], indent=2))
 
 
 def main():
