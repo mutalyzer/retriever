@@ -26,15 +26,17 @@ import argparse
 from BCBio.GFF import GFFParser
 import io
 import requests
+import json
 
 
-def extract_model(features, indent):
-    for feature in features:
-        print('{}id = {}'.format(indent, feature.id))
-        print('{}type = {}'.format(indent, feature.type))
-        if feature.sub_features:
-            extract_model(feature.sub_features, indent + ' ')
-
+def extract_model(feature):
+    model = {'id': feature.id,
+             'type': feature.type}
+    if feature.sub_features:
+        model['sub_features'] = []
+        for sub_feature in feature.sub_features:
+            model['sub_features'].append(extract_model(sub_feature))
+    return model
 
 
 def parse(feature_id):
@@ -50,8 +52,11 @@ def parse(feature_id):
     gff_parser = GFFParser()
     gff = gff_parser.parse(io.StringIO(response.text))
 
+    model = []
     for rec in gff:
-        extract_model(rec.features, '')
+        for feature in rec.features:
+            model.append(extract_model(feature))
+    print(json.dumps(model, indent=2))
 
 
 def main():
