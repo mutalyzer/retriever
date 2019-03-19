@@ -81,6 +81,7 @@ def get_raw_record(feature_id):
         for rec in gff:
             for feature in rec.features:
                 model.append(extract_raw_features(feature))
+        model.append({'sequence': get_sequence(feature_id)})
         return model
 
 
