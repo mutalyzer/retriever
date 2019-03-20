@@ -5,9 +5,9 @@ CLI entry point.
 import argparse
 
 from . import usage, version
-from .retriever import retrieve
-from .ncbi import link_reference
-from .parser import parse
+from .sources.ncbi import link_reference
+import json
+from retriever.retriever import retrieve
 
 
 def main():
@@ -31,29 +31,24 @@ def main():
     parser.add_argument("--parse", help="parse reference content",
                         action="store_true")
 
+    parser.add_argument("--source", help="retrieval source",
+                        choices=['ncbi', 'ensembl', 'lrg'])
+
+    parser.add_argument("--type", help="reference type",
+                        choices=['gff', 'genbank', 'json'])
+
+    parser.add_argument("--no_sequence", help="do not include the sequence",
+                        action="store_true")
+
     args = parser.parse_args()
 
     if args.link:
         link, method = link_reference(args.reference)
         if link:
             print('{} (from {})'.format(link, method))
-        else:
-            print('Link not found.')
         return
 
-    if args.sizeoff:
-        content, reference_type = retrieve(args.reference, not args.sizeoff)
-    else:
-        content, reference_type = retrieve(args.reference)
-
-    if args.parse:
-        if content:
-            reference_model = parse(content, reference_type)
-            print(reference_model.to_json())
-        else:
-            print('No content, parsing not performed.')
-    else:
-        if content:
-            print(content)
-        else:
-            print('File not retrieved.')
+    print(json.dumps(retrieve(reference_id=args.reference,
+                              reference_source=args.source,
+                              reference_type=args.type, size_on=args.sizeoff,
+                              parse=args.parse), indent=2))

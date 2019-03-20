@@ -1,67 +1,38 @@
-from pathlib import Path
-
-from .lrg import fetch_lrg
-from .ncbi import fetch_ncbi, NcbiConnectionError
-from . import settings
+from .sources import ncbi, ensembl
+from retriever import parser
 
 
-def retrieve(reference_id, size_on=True, parse=False):
+def retrieve(reference_id, reference_source=None, reference_type=None,
+             size_on=True, parse=False):
     """
     Main retriever entry point. Identifies and calls the appropriate specific
     retriever methods (lrg or ncbi genbank so far).
 
+    :param reference_type: The type of the reference, e.g., gff, genbank.
+    :param reference_source: The source of the reference, e.g., ncbi, ensembl.
     :arg bool parse: Flag for parsing or not the reference.
     :arg str reference_id: The id of the reference.
     :arg bool size_on: Flag for the maximum sequence length.
     :return: The reference raw content and its type.
     :rtype: tuple
     """
-    checks = {
-        'ncbi': False,
-        'lrg': False
-    }
+    if reference_source == 'ncbi':
+        if reference_type == 'gff':
+            annotations = ncbi.get_gff(reference_id)
+            sequence = ncbi.get_sequence(reference_id)
+            output = {'annotations': annotations,
+                      'sequence': sequence}
+            if parse:
+                model = parser.parse(annotations, 'gff_ncbi')
+                output['model'] = model
+    elif reference_source == 'ensembl':
+        if reference_type == 'gff':
+            annotations = ensembl.get_gff(reference_id)
+            # sequence = ncbi.get_sequence(reference_id)
+            output = {'annotations': annotations},
+                      # 'sequence': sequence}
+            if parse:
+                model = parser.parse(annotations, 'gff_ensembl')
+                output['model'] = model
 
-    content = None
-    if settings.CACHE_DIR:
-        path = Path(settings.CACHE_DIR) / reference_id
-        if path.is_file():
-            with path.open() as f:
-                content = f.read()
-            # Todo: Retrieve the reference type also
-            return content, None
-
-    if 'LRG' in reference_id:
-        content = fetch_lrg(reference_id, size_on)
-        checks['lrg'] = True
-        reference_type = 'lrg' if content else None
-    else:
-        try:
-            content = fetch_ncbi(reference_id, size_on)
-        except NcbiConnectionError:
-            print('NCBI connection error.')
-        else:
-            checks['ncbi'] = True
-            reference_type = 'genbank_ncbi' if content else None
-
-    if (content is None) and (not checks['lrg']):
-        content = fetch_lrg(reference_id, size_on)
-        reference_type = 'lrg'
-    if (content is None) and (not checks['ncbi']):
-        try:
-            content = fetch_ncbi(reference_id, size_on)
-        except NcbiConnectionError:
-            print('NCBI connection error.')
-            return content, None
-        else:
-            checks['ncbi'] = True
-            reference_type = 'genbank_ncbi' if content else None
-
-    if content and settings.CACHE_DIR:
-        if isinstance(content, bytes):
-            write_mode = 'wb'
-        else:
-            write_mode = 'w'
-        with path.open(write_mode) as f:
-            f.write(content)
-
-    return content, reference_type
+    return output

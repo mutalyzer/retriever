@@ -2,10 +2,11 @@ from http.client import HTTPException
 from http.client import HTTPException
 from urllib.error import HTTPError
 import io
+import requests
 
 from Bio import Entrez, SeqIO
 import redis
-from . import settings
+from .. import settings
 
 redis = redis.StrictRedis.from_url(
     settings.REDIS_URI, decode_responses=True, encoding='utf-8')
@@ -524,3 +525,37 @@ def compose_reference(accession, version=None):
         return accession
     else:
         return '{}.{}'.format(accession, version)
+
+
+def get_sequence(feature_id):
+
+    Entrez.email = 'info@mutalyzer.nl'
+
+    handle = Entrez.efetch(db='nucleotide', id=feature_id, rettype='fasta')
+    records = []
+    for record in SeqIO.parse(handle, "fasta"):
+        records.append(str(record.seq))
+    handle.close()
+    if len(records) == 1:
+        return records[0]
+
+
+def get_gff(feature_id):
+    url = 'https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi'
+    params = {'db': 'nuccore',
+              'report': 'gff3',
+              'id': feature_id}
+
+    try:
+        response = requests.get(url, params=params)
+        response.raise_for_status()
+    except requests.exceptions.HTTPError as errh:
+        print("HTTP Error:", errh)
+    except requests.exceptions.ConnectionError as errc:
+        print("Connection Error:", errc)
+    except requests.exceptions.Timeout as errt:
+        print("Timeout Error:", errt)
+    except requests.exceptions.RequestException as err:
+        print("Some other Error", err)
+    else:
+        return response.text

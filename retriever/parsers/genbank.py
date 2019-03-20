@@ -3,7 +3,7 @@ Genbank file parser.
 
 Creates a reference model based on genbank file.
 
-Additionaly it should also provide some checks:
+Additionally it should also provide some checks:
 - what features do not contain the the configuration qualifiers.
 - what features were not linked.
 - what features do not have a key.
@@ -15,7 +15,7 @@ import json
 
 from Bio import SeqIO, SeqRecord, SeqFeature
 from ..reference import Position, Locus, Reference
-from ..ncbi import link_reference, compose_reference, decompose_reference
+from ..sources.ncbi import link_reference, compose_reference, decompose_reference
 
 FEATURES = {
     'gene': {
