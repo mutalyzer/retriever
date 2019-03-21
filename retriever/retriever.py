@@ -28,11 +28,16 @@ def retrieve(reference_id, reference_source=None, reference_type=None,
     elif reference_source == 'ensembl':
         if reference_type == 'gff':
             annotations = ensembl.get_gff(reference_id)
-            # sequence = ncbi.get_sequence(reference_id)
-            output = {'annotations': annotations},
-                      # 'sequence': sequence}
+            sequence = ensembl.get_sequence(reference_id)
+            output = {'annotations': annotations,
+                      'sequence': sequence}
             if parse:
                 model = parser.parse(annotations, 'gff_ensembl')
                 output['model'] = model
+        if reference_type == 'json':
+            annotations = ensembl.get_json(reference_id)
+            sequence = ensembl.get_sequence(reference_id)
+            output = {'annotations': annotations,
+                      'sequence': sequence}
 
     return output

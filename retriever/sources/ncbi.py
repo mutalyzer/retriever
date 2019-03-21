@@ -7,6 +7,8 @@ import requests
 from Bio import Entrez, SeqIO
 import redis
 from .. import settings
+from retriever.util import make_request
+
 
 redis = redis.StrictRedis.from_url(
     settings.REDIS_URI, decode_responses=True, encoding='utf-8')
@@ -545,17 +547,4 @@ def get_gff(feature_id):
     params = {'db': 'nuccore',
               'report': 'gff3',
               'id': feature_id}
-
-    try:
-        response = requests.get(url, params=params)
-        response.raise_for_status()
-    except requests.exceptions.HTTPError as errh:
-        print("HTTP Error:", errh)
-    except requests.exceptions.ConnectionError as errc:
-        print("Connection Error:", errc)
-    except requests.exceptions.Timeout as errt:
-        print("Timeout Error:", errt)
-    except requests.exceptions.RequestException as err:
-        print("Some other Error", err)
-    else:
-        return response.text
+    return make_request(url, params)

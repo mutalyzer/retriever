@@ -78,8 +78,6 @@ def get_id(feature):
         return feature.id
 
 
-
-
 def main():
     """
     Command-line interface to gff parser.

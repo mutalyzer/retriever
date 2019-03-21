@@ -1,22 +1,30 @@
-import requests
+from retriever.util import make_request
+from Bio import SeqIO
+from io import StringIO
+
+
+def get_json(feature_id):
+    url = 'https://rest.ensembl.org/lookup/id/{}'.format(feature_id)
+    params = {'expand': 1}
+    headers = {'Content-Type': 'application/json'}
+    return make_request(url, params, headers)
 
 
 def get_gff(feature_id):
-    url = 'https://rest.ensembl.org/lookup/id/{}'.format(feature_id)
-    params = {'expand': 1,
-              'Content-type': 'application/json'},
+    url = 'http://rest.ensembl.org/overlap/id/{}'.format(feature_id)
+    params = {'feature': ['gene', 'transcript', 'cds']}
+    headers = {'Content-Type': 'text/x-gff3'}
+    return make_request(url, params, headers)
 
-    try:
-        response = requests.get(url, params=params)
-        response.raise_for_status()
-    except requests.exceptions.HTTPError as errh:
-        print("HTTP Error:", errh)
-    except requests.exceptions.ConnectionError as errc:
-        print("Connection Error:", errc)
-    except requests.exceptions.Timeout as errt:
-        print("Timeout Error:", errt)
-    except requests.exceptions.RequestException as err:
-        print("Some other Error", err)
-    else:
-        print(response.headers.get('content-type'))
-        return response.text
+
+def get_sequence(feature_id):
+    url = 'http://rest.ensembl.org/sequence/id/{}'.format(feature_id)
+    headers = {'Content-Type': 'text/x-fasta'}
+    handle = StringIO(make_request(url, headers=headers))
+
+    records = []
+    for record in SeqIO.parse(handle, "fasta"):
+        records.append(str(record.seq))
+    handle.close()
+    if len(records) == 1:
+        return records[0]
