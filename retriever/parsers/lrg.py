@@ -130,7 +130,6 @@ def _get_transcripts(section):
         # Get the transcript exons.
         exons = []
         for exon_data in tdata.getElementsByTagName('exon'):
-            coordinates = exon_data.getElementsByTagName('coordinates')[0]
             exon = {'type': 'exon'}
             exon.update(_get_coordinates(exon_data, lrg_id))
             exons.append(exon)
