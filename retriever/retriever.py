@@ -1,4 +1,4 @@
-from .sources import ncbi, ensembl
+from .sources import ncbi, ensembl, lrg
 from retriever import parser
 
 
@@ -16,6 +16,7 @@ def retrieve(reference_id, reference_source=None, reference_type=None,
     :return: The reference raw content and its type.
     :rtype: tuple
     """
+    output = None
     if reference_source == 'ncbi':
         if reference_type == 'gff':
             annotations = ncbi.get_gff(reference_id)
@@ -39,5 +40,9 @@ def retrieve(reference_id, reference_source=None, reference_type=None,
             sequence = ensembl.get_sequence(reference_id)
             output = {'annotations': annotations,
                       'sequence': sequence}
+    elif reference_source == 'lrg':
+        annotations = lrg.fetch_lrg(reference_id)
+        # output = {'annotations': annotations}
+        output = {'model': parser.parse(annotations, 'lrg')}
 
     return output

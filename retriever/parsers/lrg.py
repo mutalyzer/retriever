@@ -74,7 +74,9 @@ def _get_coordinates(data, system=None):
         if result and system and attributes.get('coord_system') != system:
             continue
         result = attributes
-    return result
+    return {'start': int(result['start']),
+            'end': int(result['end']),
+            'strand': int(result['strand'])}
 
 
 def _get_gene_name(section):
@@ -106,11 +108,9 @@ def _get_gene(fixed, updatable):
     :param updatable: The updatable section of the LRG XML file.
     :return: Corresponding gene locus.
     """
-    gene = Locus(locus_type='gene')
-    gene.qualifiers = {
-        'gene': _get_gene_name(updatable),
-        'HGNC': _get_content(fixed, 'hgnc_id')}
-    return gene
+
+    return {'id': _get_content(fixed, 'hgnc_id'),
+            'type': 'gene'}
 
 
 def _get_transcripts(section):
@@ -122,61 +122,36 @@ def _get_transcripts(section):
     """
     lrg_id = _get_content(section, 'id')
 
-    mrna_list = {}
-    cds_list = {}
+    transcripts = []
     for tdata in section.getElementsByTagName('transcript'):
-        transcript = Locus(locus_type='mRNA')
-        cds = Locus(locus_type='CDS')
+        transcript = {'id': tdata.getAttribute('name')}
+        transcript.update(_get_coordinates(tdata, lrg_id))
 
-        # iterate over the transcripts in the fixed section.
-        # get the transcript from the updatable section and combine results
-        transcript_name = tdata.getAttribute('name')
-
-        transcript.qualifiers['transcript_id'] = transcript_name
-
-        # Set the locusTag, linkMethod (used in the output) and the location
-        # LRG file transcripts can (for now) always be linked via the locustag
-        transcript.qualifiers['locusTag'] = transcript_name and 't' + \
-                                            transcript_name
-        transcript.qualifiers['linkMethod'] = 'Locus Tag'
-
-        coordinates = tdata.getElementsByTagName('coordinates')[0]
-        transcript.start = int(coordinates.getAttribute('start'))
-        transcript.end = int(coordinates.getAttribute('end'))
-
-        # Get the transcript exons and store them in a position list.
+        # Get the transcript exons.
         exons = []
-        for exon in tdata.getElementsByTagName('exon'):
-            coordinates = _get_coordinates(exon, lrg_id)
-            start = Position(coordinates['start'])
-            end = Position(coordinates['end'])
-            exons.append(Locus(start=start, end=end, orientation=1))
+        for exon_data in tdata.getElementsByTagName('exon'):
+            coordinates = exon_data.getElementsByTagName('coordinates')[0]
+            exon = {'type': 'exon'}
+            exon.update(_get_coordinates(exon_data, lrg_id))
+            exons.append(exon)
 
-        transcript.parts = exons
+        transcript['sub_features'] = exons
 
-        # Get the CDS of the transcript and store them in a position list.
+        # Get the CDSes of the transcript.
         for cds_id, source_cds in enumerate(
                 tdata.getElementsByTagName("coding_region")):
             if cds_id > 0:
                 # Todo: For now, we only support one CDS per transcript and
                 #   ignore all others. This should be discussed.
                 continue
-            cds_name = source_cds.getElementsByTagName(
-                'translation')[0].getAttribute('name')
-            coordinates = _get_coordinates(source_cds, lrg_id)
-            cds.start = Position(coordinates['start'])
-            cds.end = Position(coordinates['end'])
-            cds.qualifiers['protein_id'] = cds_name
+            cds = {'type': 'cds',
+                   'id': source_cds.getElementsByTagName(
+                       'translation')[0].getAttribute('name')}
+            cds.update(_get_coordinates(source_cds, lrg_id))
+            transcript['sub_features'].append(cds)
 
-        # Note: Not all the transcripts contain a coding_region.
-        if tdata.getElementsByTagName('coding_region'):
-            transcript.qualifiers['transcribe'] = True
-            transcript.link = cds
-            cds.link = transcript
-
-        mrna_list.update({transcript_name: transcript})
-        cds_list.update({cds_name: cds})
-    return mrna_list, cds_list
+        transcripts.append(transcript)
+    return transcripts
 
 
 def _get_loci(fixed, updatable):
@@ -189,19 +164,9 @@ def _get_loci(fixed, updatable):
     """
     gene = _get_gene(fixed, updatable)
 
-    loci = {'gene': {gene.qualifiers.get('gene'): gene}}
+    gene['sub_features'] = _get_transcripts(fixed)
 
-    mrna_list, cds_list = _get_transcripts(fixed)
-    if len(mrna_list) > 0:
-        loci['mRNA'] = mrna_list
-        for mrna in mrna_list:
-            gene.add_child(loci['mRNA'][mrna])
-    if len(cds_list) > 0:
-        loci['CDS'] = cds_list
-        for cds in cds_list:
-            gene.add_child(loci['CDS'][cds])
-
-    return loci
+    return gene
 
 
 def parse(content):
@@ -214,23 +179,24 @@ def parse(content):
     :return: Corresponding reference instance.
     :rtype: Reference
     """
-    reference = Reference()
-    reference.type = 'LRG'
 
     # Extract the fixed and updatable section.
     data = xml.dom.minidom.parseString(content)
     fixed = data.getElementsByTagName('fixed_annotation')[0]
     updatable = data.getElementsByTagName('updatable_annotation')[0]
 
-    reference.info = {
+    info = {
         'organism': _get_content(data, 'organism'),
         'sequence_source': _get_content(data, 'sequence_source'),
         'creation_date': _get_content(data, 'creation_date'),
         'molType': 'g'}
 
     # Get the sequence from the fixed section
-    reference.seq = Seq(_get_content(fixed, 'sequence'), IUPAC.unambiguous_dna)
+    sequence = Seq(_get_content(fixed, 'sequence'), IUPAC.unambiguous_dna)
 
-    reference.loci = _get_loci(fixed, updatable)
+    features = _get_loci(fixed, updatable)
 
-    return reference
+    return {'model':
+                {'info': info,
+                 'features': features},
+            'sequence': sequence.tostring()}
