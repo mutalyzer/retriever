@@ -533,7 +533,10 @@ def get_sequence(feature_id):
 
     Entrez.email = 'info@mutalyzer.nl'
 
-    handle = Entrez.efetch(db='nucleotide', id=feature_id, rettype='fasta')
+    try:
+        handle = Entrez.efetch(db='nucleotide', id=feature_id, rettype='fasta')
+    except HTTPError:
+        return
     records = []
     for record in SeqIO.parse(handle, "fasta"):
         records.append(str(record.seq))
@@ -547,4 +550,7 @@ def get_gff(feature_id):
     params = {'db': 'nuccore',
               'report': 'gff3',
               'id': feature_id}
-    return make_request(url, params)
+    try:
+        return make_request(url, params)
+    except HTTPError as err:
+        print("gdfdfgfd")
