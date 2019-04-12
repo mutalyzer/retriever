@@ -48,7 +48,13 @@ def main():
             print('{} (from {})'.format(link, method))
         return
 
-    print(json.dumps(retrieve(reference_id=args.reference,
-                              reference_source=args.source,
-                              reference_type=args.type, size_on=args.sizeoff,
-                              parse=args.parse), indent=2))
+    output = retrieve(reference_id=args.reference,
+                   reference_source=args.source,
+                   reference_type=args.type,
+                   size_on=args.sizeoff,
+                   parse=args.parse)
+    if isinstance(output, dict):
+        print(json.dumps(output, indent=2))
+    else:
+        print(output)
+

@@ -4,8 +4,8 @@ import requests
 def make_request(url, params=None, headers=None):
 
     try:
-        response = requests.get(url, params=params, headers=headers)
-        response.raise_for_status()
+        request = requests.get(url, params=params, headers=headers)
+        request.raise_for_status()
     except requests.exceptions.HTTPError as errh:
         print("HTTP Error:", errh)
     except requests.exceptions.ConnectionError as errc:
@@ -15,4 +15,4 @@ def make_request(url, params=None, headers=None):
     except requests.exceptions.RequestException as err:
         print("Some other Error", err)
     else:
-        return response.text
+        return request.text
