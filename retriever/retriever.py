@@ -4,16 +4,17 @@ from retriever import parser
 
 def fetch_annotations(reference_id):
     annotations = ncbi.get_gff(reference_id)
-    if annotations is None:
-        annotations = ensembl.get_gff(reference_id)
-    else:
+    if annotations is not None:
         return annotations, 'gff_ncbi'
-    if annotations is None:
-        annotations = lrg.fetch_lrg(reference_id)
+    annotations = ensembl.get_gff(reference_id)
+    if annotations is not None:
+        return annotations, 'gff_ensembl'
+    annotations = lrg.fetch_lrg(reference_id)
+    return annotations, 'lrg'
 
 
 def retrieve(reference_id, reference_source=None, reference_type=None,
-             size_on=True, parse=False):
+             size_off=True, parse=False):
     """
     Main retriever entry point. Identifies and calls the appropriate specific
     retriever methods (lrg or ncbi genbank so far).
@@ -22,13 +23,13 @@ def retrieve(reference_id, reference_source=None, reference_type=None,
     :param reference_source: The source of the reference, e.g., ncbi, ensembl.
     :arg bool parse: Flag for parsing or not the reference.
     :arg str reference_id: The id of the reference.
-    :arg bool size_on: Flag for the maximum sequence length.
+    :arg bool size_off: Flag for the maximum sequence length.
     :return: The reference raw content and its type.
     :rtype: tuple
     """
     output = None
     if reference_source is None and reference_type is None:
-        fetch_annotations(reference_id)
+        return fetch_annotations(reference_id)[0]
 
     if reference_source == 'ncbi':
         if reference_type == 'gff':
@@ -37,14 +38,16 @@ def retrieve(reference_id, reference_source=None, reference_type=None,
             parser_type = 'gff_ncbi'
             output = {'annotations': annotations,
                       'sequence': sequence}
+        if reference_type == 'genbank':
+            output = ncbi.fetch_ncbi(reference_id, not size_off)
     elif reference_source == 'ensembl':
-        if reference_type == 'gff':
+        if reference_type is None or reference_type == 'gff':
             annotations = ensembl.get_gff(reference_id)
             sequence = ensembl.get_sequence(reference_id)
             parser_type = 'gff_ensembl'
-        output = {'annotations': annotations,
-                  'sequence': sequence}
-        if reference_type == 'json':
+            output = {'annotations': annotations,
+                      'sequence': sequence}
+        elif reference_type == 'json':
             annotations = ensembl.get_json(reference_id)
             sequence = ensembl.get_sequence(reference_id)
             parser_type = 'json_ensembl'

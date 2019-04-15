@@ -49,10 +49,10 @@ def main():
         return
 
     output = retrieve(reference_id=args.reference,
-                   reference_source=args.source,
-                   reference_type=args.type,
-                   size_on=args.sizeoff,
-                   parse=args.parse)
+                      reference_source=args.source,
+                      reference_type=args.type,
+                      size_off=args.sizeoff,
+                      parse=args.parse)
     if isinstance(output, dict):
         print(json.dumps(output, indent=2))
     else:
