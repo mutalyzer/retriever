@@ -15,9 +15,9 @@ def parse(reference, reference_type=None):
 
     if reference_type == 'lrg':
         model = lrg.parse(reference)
-    elif reference_type == 'genbank_ncbi':
+    elif reference_type == 'genbank':
         model = genbank.parse(reference)
-    elif reference_type in ['gff_ncbi', 'gff_ensembl']:
+    elif reference_type in ['gff', 'gff']:
         model = gff.get_raw_record(reference)
     else:
         return None

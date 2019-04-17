@@ -2,24 +2,40 @@ from .sources import ncbi, ensembl, lrg
 from retriever import parser
 
 
-def fetch_annotations(reference_id):
-    annotations = ncbi.get_gff(reference_id)
+def fetch_annotations(reference_id, reference_type=None):
+    annotations, reference_type = \
+        ncbi.fetch_annotations(reference_id, reference_type)
     if annotations is not None:
-        return annotations, 'gff_ncbi'
-    annotations = ensembl.get_gff(reference_id)
-    if annotations is not None:
-        return annotations, 'gff_ensembl'
+        return annotations, reference_type, 'ncbi'
     annotations = lrg.fetch_lrg(reference_id)
-    return annotations, 'lrg'
+    if annotations is not None:
+        return annotations, 'lrg', 'lrg'
+    annotations, reference_type = \
+        ensembl.get_annotations(reference_id, reference_type)
+    return annotations, reference_type, 'ensembl'
+
+
+def fetch_sequence(reference_id, reference_source=None):
+    if reference_source is None:
+        sequence = ncbi.get_sequence(reference_id)
+        if sequence is not None:
+            return sequence
+        sequence = ensembl.get_sequence(reference_id)
+        return sequence
+    else:
+        if reference_source == 'ncbi':
+            return ncbi.get_sequence(reference_id)
+        elif reference_source == 'ensembl':
+            return ensembl.get_sequence(reference_id)
 
 
 def retrieve(reference_id, reference_source=None, reference_type=None,
              size_off=True, parse=False):
     """
     Main retriever entry point. Identifies and calls the appropriate specific
-    retriever methods (lrg or ncbi genbank so far).
+    retriever methods.
 
-    :param reference_type: The type of the reference, e.g., gff, genbank.
+    :param reference_type: The type of the reference: gff, genbank, or lrg.
     :param reference_source: The source of the reference, e.g., ncbi, ensembl.
     :arg bool parse: Flag for parsing or not the reference.
     :arg str reference_id: The id of the reference.
@@ -27,39 +43,33 @@ def retrieve(reference_id, reference_source=None, reference_type=None,
     :return: The reference raw content and its type.
     :rtype: tuple
     """
-    output = None
-    if reference_source is None and reference_type is None:
-        return fetch_annotations(reference_id)[0]
-
-    if reference_source == 'ncbi':
-        if reference_type == 'gff':
+    annotations = model = sequence = None
+    if reference_source is None:
+        annotations, reference_type, reference_source = \
+            fetch_annotations(reference_id, reference_type)
+        # print(annotations)
+    elif reference_source == 'ncbi':
+        if reference_type is None or reference_type == 'gff':
             annotations = ncbi.get_gff(reference_id)
-            sequence = ncbi.get_sequence(reference_id)
-            parser_type = 'gff_ncbi'
-            output = {'annotations': annotations,
-                      'sequence': sequence}
-        if reference_type == 'genbank':
-            output = ncbi.fetch_ncbi(reference_id, not size_off)
+            reference_type = 'gff'
+        elif reference_type == 'genbank':
+            annotations = ncbi.get_genbank(reference_id, not size_off)
+            reference_type = 'genbank'
     elif reference_source == 'ensembl':
         if reference_type is None or reference_type == 'gff':
             annotations = ensembl.get_gff(reference_id)
-            sequence = ensembl.get_sequence(reference_id)
-            parser_type = 'gff_ensembl'
-            output = {'annotations': annotations,
-                      'sequence': sequence}
+            reference_type = 'gff'
         elif reference_type == 'json':
             annotations = ensembl.get_json(reference_id)
-            sequence = ensembl.get_sequence(reference_id)
-            parser_type = 'json_ensembl'
-            output = {'annotations': annotations,
-                      'sequence': sequence}
     elif reference_source == 'lrg':
         annotations = lrg.fetch_lrg(reference_id)
-        output = {'model': parser.parse(annotations, 'lrg')}
-        parser_type = 'lrg'
 
     if parse:
-        model = parser.parse(annotations, parser_type)
-        output['model'] = model
-
-    return output
+        model = parser.parse(annotations, reference_type)
+        if reference_type is 'gff':
+            sequence = fetch_sequence(reference_id, reference_source)
+            return {'model': model, 'sequence': sequence}
+        else:
+            return model
+    else:
+        return annotations

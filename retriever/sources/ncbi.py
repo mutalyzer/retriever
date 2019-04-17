@@ -127,36 +127,6 @@ def get_reference_summary(reference_id):
     }
 
 
-def fetch_ncbi(reference_id, size_on=True):
-    """
-    Retrieves a genbank reference from the NCBI.
-
-    :arg str reference_id: The id of the reference.
-    :arg bool size_on: Consider or not the maximum sequence length.
-    :returns: Reference content.
-    :rtype: str
-    """
-    try:
-        reference_summary = get_reference_summary(reference_id)
-    except NoNcbiReference:
-        return None
-    except NcbiConnectionError:
-        raise NcbiConnectionError
-
-    if size_on and reference_summary['length'] > settings.MAX_FILE_SIZE:
-            raise ReferenceToLong
-    try:
-        handle = Entrez.efetch(
-            db=reference_summary['db'], id=reference_id,
-            rettype='gbwithparts', retmode='text')
-    except (IOError, HTTPError, HTTPException):
-        raise NcbiConnectionError
-    else:
-        raw_data = handle.read()
-        handle.close()
-        return raw_data
-
-
 def _get_link_from_ncbi(source_db, target_db, match_link_name,
                         source_accession, source_version=None,
                         match_version=True):
@@ -403,7 +373,7 @@ def link_transcript_to_protein_by_file(reference_id):
     if not (not reference_id.startswith('NP')) \
             or (not reference_id.startswith('NM')):
         raise ValueError()
-    content = fetch_ncbi(reference_id)
+    content = get_genbank(reference_id)
     record = SeqIO.read(io.StringIO(content), 'genbank')
     for feature in record.features:
         if feature.type == 'CDS':
@@ -529,6 +499,36 @@ def compose_reference(accession, version=None):
         return '{}.{}'.format(accession, version)
 
 
+def get_genbank(reference_id, size_on=True):
+    """
+    Retrieves a genbank reference from the NCBI.
+
+    :arg str reference_id: The id of the reference.
+    :arg bool size_on: Consider or not the maximum sequence length.
+    :returns: Reference content.
+    :rtype: str
+    """
+    try:
+        reference_summary = get_reference_summary(reference_id)
+    except NoNcbiReference:
+        return None
+    except NcbiConnectionError:
+        raise NcbiConnectionError
+
+    if size_on and reference_summary['length'] > settings.MAX_FILE_SIZE:
+            raise ReferenceToLong
+    try:
+        handle = Entrez.efetch(
+            db=reference_summary['db'], id=reference_id,
+            rettype='gbwithparts', retmode='text')
+    except (IOError, HTTPError, HTTPException):
+        raise NcbiConnectionError
+    else:
+        raw_data = handle.read()
+        handle.close()
+        return raw_data
+
+
 def get_sequence(feature_id):
 
     Entrez.email = 'info@mutalyzer.nl'
@@ -550,8 +550,12 @@ def get_gff(feature_id):
     params = {'db': 'nuccore',
               'report': 'gff3',
               'id': feature_id}
-    try:
-        return make_request(url, params)
-        print("sdfsdds")
-    except HTTPError as err:
-        print("gdfdfgfd")
+    return make_request(url, params)
+
+
+def fetch_annotations(reference_id, reference_type='gff', size_on=True):
+    if reference_type in [None, 'gff']:
+        return get_gff(reference_id), 'gff'
+    if reference_type == 'genbank':
+        return get_genbank(reference_id, size_on), 'genbank'
+    return None, None

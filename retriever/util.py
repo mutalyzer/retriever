@@ -6,8 +6,8 @@ def make_request(url, params=None, headers=None):
     try:
         request = requests.get(url, params=params, headers=headers)
         request.raise_for_status()
-    except requests.exceptions.HTTPError as errh:
-        print("HTTP Error:", errh)
+    except requests.exceptions.HTTPError:
+        return
     except requests.exceptions.ConnectionError as errc:
         print("Connection Error:", errc)
     except requests.exceptions.Timeout as errt:

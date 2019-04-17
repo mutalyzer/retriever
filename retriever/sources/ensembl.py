@@ -32,3 +32,13 @@ def get_sequence(feature_id):
     handle.close()
     if len(records) == 1:
         return records[0]
+
+
+def get_annotations(reference_id, reference_type):
+    if reference_type in [None, 'gff']:
+        return get_gff(reference_id), 'gff'
+    if reference_type == 'json':
+        return get_json(reference_id), 'json'
+    if reference_type == 'genbank':
+        return None, 'genbank'
+    return None, None
