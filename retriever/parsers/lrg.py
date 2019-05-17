@@ -198,4 +198,4 @@ def parse(content):
     return {'model':
                 {'info': info,
                  'features': features},
-            'sequence': sequence.tostring()}
+            'sequence': str(sequence)}
