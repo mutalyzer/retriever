@@ -47,7 +47,6 @@ def retrieve(reference_id, reference_source=None, reference_type=None,
     if reference_source is None:
         annotations, reference_type, reference_source = \
             fetch_annotations(reference_id, reference_type)
-        # print(annotations)
     elif reference_source == 'ncbi':
         if reference_type is None or reference_type == 'gff':
             annotations = ncbi.get_gff(reference_id)
@@ -55,6 +54,8 @@ def retrieve(reference_id, reference_source=None, reference_type=None,
         elif reference_type == 'genbank':
             annotations = ncbi.get_genbank(reference_id, not size_off)
             reference_type = 'genbank'
+        elif reference_type == 'sequence':
+            return fetch_sequence(reference_id, reference_source)
     elif reference_source == 'ensembl':
         if reference_type is None or reference_type == 'gff':
             annotations = ensembl.get_gff(reference_id)

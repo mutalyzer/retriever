@@ -35,7 +35,7 @@ def main():
                         choices=['ncbi', 'ensembl', 'lrg'])
 
     parser.add_argument("--type", help="reference type",
-                        choices=['gff', 'genbank', 'json'])
+                        choices=['gff', 'genbank', 'json', 'sequence'])
 
     parser.add_argument("--no_sequence", help="do not include the sequence",
                         action="store_true")
