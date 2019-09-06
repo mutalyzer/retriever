@@ -2,7 +2,6 @@ import requests
 
 
 def make_request(url, params=None, headers=None):
-
     try:
         request = requests.get(url, params=params, headers=headers)
         request.raise_for_status()

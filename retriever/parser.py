@@ -18,7 +18,7 @@ def parse(reference, reference_type=None):
     elif reference_type == 'genbank':
         model = genbank.parse(reference)
     elif reference_type in ['gff', 'gff']:
-        model = gff.get_raw_record(reference)
+        model = gff.parse(reference)
     else:
         return None
 

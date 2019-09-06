@@ -39,7 +39,7 @@ def _get_content(data, refname):
     temp = data.getElementsByTagName(refname)
     if temp:
         return temp[0].lastChild.data
-    return ""
+    return None
 
 
 def _attr2dict(attr):
@@ -134,7 +134,7 @@ def _get_transcripts(section):
             exon.update(_get_coordinates(exon_data, lrg_id))
             exons.append(exon)
 
-        transcript['sub_features'] = exons
+        transcript['features'] = exons
 
         # Get the CDSes of the transcript.
         for cds_id, source_cds in enumerate(
@@ -147,7 +147,7 @@ def _get_transcripts(section):
                    'id': source_cds.getElementsByTagName(
                        'translation')[0].getAttribute('name')}
             cds.update(_get_coordinates(source_cds, lrg_id))
-            transcript['sub_features'].append(cds)
+            transcript['features'].append(cds)
 
         transcripts.append(transcript)
     return transcripts
@@ -163,7 +163,7 @@ def _get_loci(fixed, updatable):
     """
     gene = _get_gene(fixed, updatable)
 
-    gene['sub_features'] = _get_transcripts(fixed)
+    gene['features'] = _get_transcripts(fixed)
 
     return gene
 
@@ -184,18 +184,23 @@ def parse(content):
     fixed = data.getElementsByTagName('fixed_annotation')[0]
     updatable = data.getElementsByTagName('updatable_annotation')[0]
 
-    info = {
-        'organism': _get_content(data, 'organism'),
-        'sequence_source': _get_content(data, 'sequence_source'),
-        'creation_date': _get_content(data, 'creation_date'),
-        'molType': 'g'}
-
     # Get the sequence from the fixed section
     sequence = Seq(_get_content(fixed, 'sequence'), IUPAC.unambiguous_dna)
 
+    info = {'start': {"position": 0},
+            'end':  {"position": len(sequence) - 1},
+            'qualifiers': {'organism': _get_content(data, 'organism'),
+                           'sequence_source': _get_content(data,
+                                                           'sequence_source'),
+                           'creation_date': _get_content(data,
+                                                         'creation_date'),
+                           'hgnc_id': _get_content(data, 'hgnc_id'),
+                           'mol_type': _get_content(data, 'mol_type')},
+            'type': 'info',
+            'id': _get_content(data, 'id')
+            }
+
     features = _get_loci(fixed, updatable)
 
-    return {'model':
-                {'info': info,
-                 'features': features},
+    return {'model': [info, features],
             'sequence': str(sequence)}

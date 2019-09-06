@@ -69,8 +69,11 @@ def retrieve(reference_id, reference_source=None, reference_type=None,
         model = parser.parse(annotations, reference_type)
         if reference_type is 'gff':
             sequence = fetch_sequence(reference_id, reference_source)
-            return {'model': model, 'sequence': sequence}
+            return {'model': model,
+                    'sequence': sequence,
+                    'source': reference_source}
         else:
+            model.update({'source': reference_source})
             return model
     else:
         return annotations

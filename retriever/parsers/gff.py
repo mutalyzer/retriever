@@ -30,7 +30,7 @@ from Bio import Entrez
 from Bio import SeqIO
 
 
-def get_qualifiers(feature):
+def _get_qualifiers(feature):
     qualifiers = {}
     for qualifier in feature.qualifiers:
         if len(feature.qualifiers[qualifier]) == 1:
@@ -40,42 +40,29 @@ def get_qualifiers(feature):
     return qualifiers
 
 
-def extract_raw_features(feature):
+def _get_features(feature):
     model = {'id': feature.id,
              'type': feature.type,
-             'qualifiers': get_qualifiers(feature),
+             'qualifiers': _get_qualifiers(feature),
              'start': {'position': feature.location.start},
              'end': {'position': feature.location.end},
              'orientation': feature.location.strand}
     if feature.sub_features:
-        model['sub_features'] = []
+        model['features'] = []
         for sub_feature in feature.sub_features:
-            model['sub_features'].append(extract_raw_features(sub_feature))
+            model['features'].append(_get_features(sub_feature))
     return model
 
 
-def get_raw_record(reference):
+def parse(gff_content):
     gff_parser = GFFParser()
-    gff = gff_parser.parse(io.StringIO(reference))
+    gff = gff_parser.parse(io.StringIO(gff_content))
 
     model = []
     for rec in gff:
         for feature in rec.features:
-            model.append(extract_raw_features(feature))
+            model.append(_get_features(feature))
     return model
-
-
-def get_id(feature):
-    if feature.type == 'CDS':
-        return feature.qualifiers.get('protein_id')[0]
-    elif feature.type in ['mRNA']:
-        return feature.qualifiers.get('transcript_id')[0]
-    elif feature.type == 'gene':
-        for dbxref in feature.qualifiers['Dbxref']:
-            if dbxref.startswith('HGNC'):
-                return dbxref.split(':')[-1]
-    else:
-        return feature.id
 
 
 def main():
