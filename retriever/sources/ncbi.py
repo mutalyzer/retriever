@@ -546,7 +546,7 @@ def get_sequence(feature_id):
 
 
 def get_gff(feature_id):
-    url = 'https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi'
+    url = 'https://eutils.ncbi.nlm.nih.gov/sviewer/viewer.cgi'
     params = {'db': 'nuccore',
               'report': 'gff3',
               'id': feature_id}
