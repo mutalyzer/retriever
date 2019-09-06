@@ -15,7 +15,7 @@
    viewBox="0 0 297 210"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.4 (unknown)"
+   inkscape:version="0.92.4 (f8dce91, 2019-08-02)"
    sodipodi:docname="overview.svg">
   <defs
      id="defs2" />
@@ -26,14 +26,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="196.74208"
-     inkscape:cy="262.08036"
+     inkscape:zoom="5.6"
+     inkscape:cx="448.92289"
+     inkscape:cy="488.0683"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1136"
+     inkscape:window-height="1145"
      inkscape:window-x="1280"
      inkscape:window-y="27"
      inkscape:window-maximized="1" />
@@ -54,14 +54,70 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-87)">
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#c1fdc1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect6353"
+       width="18.965796"
+       height="1.7953868"
+       x="375.75558"
+       y="225.11375" />
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#c1fdc1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect6351"
+       width="19.107536"
+       height="1.7953868"
+       x="375.75558"
+       y="247.94354" />
+    <rect
+       y="260.22778"
+       x="375.75558"
+       height="1.7953868"
+       width="19.107536"
+       id="rect6349"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#c1fdc1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <rect
+       y="237.28458"
+       x="375.75558"
+       height="1.7953868"
+       width="18.965796"
+       id="rect6345"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#c1fdc1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <rect
+       y="196.78436"
+       x="375.75558"
+       height="1.7953868"
+       width="15.658498"
+       id="rect6343"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#4cf84c;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#c1fdc1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect6341"
+       width="18.965796"
+       height="1.7953868"
+       x="375.75558"
+       y="212.65938" />
+    <rect
+       y="198.57974"
+       x="375.75558"
+       height="1.7953868"
+       width="15.658504"
+       id="rect6339"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffe4e1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffa07a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect6337"
+       width="12.284225"
+       height="1.7953868"
+       x="375.75558"
+       y="182.59132" />
     <path
        inkscape:connector-curvature="0"
        id="path1094"
-       d="M 57.381512,205.89222 H 61.13765"
+       d="m 78.54818,216.47556 h 3.756138"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 36.214844,205.89222 h 3.756138"
+       d="M 57.381512,216.47556 H 61.13765"
        id="path1092"
        inkscape:connector-curvature="0" />
     <path
@@ -510,7 +566,7 @@
            id="tspan1075"
            x="27.254501"
            y="132.72594"
-           style="text-align:start;text-anchor:start;stroke-width:0.26458332px">https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi?db=nuccore;report=gff3;id=NM_000088.3</tspan></text>
+           style="text-align:start;text-anchor:start;stroke-width:0.26458332px">https://eutils.ncbi.nlm.nih.gov/sviewer/viewer.cgi?db=nuccore;report=gff3;id=NM_000088.3</tspan></text>
     </a>
     <path
        sodipodi:nodetypes="ccccc"
@@ -603,7 +659,7 @@
            id="tspan4914"
            x="27.134611"
            y="132.72594"
-           style="text-align:start;text-anchor:start;stroke-width:0.26458332px">Eutils do not yet provide GFF3.</tspan></text>
+           style="text-align:start;text-anchor:start;stroke-width:0.26458332px">Eutils do not yet provide GFF3 as usual.</tspan></text>
     </a>
     <path
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#dcdcdc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
@@ -1468,92 +1524,92 @@
          style="text-align:center;text-anchor:middle;stroke-width:0.26458332px">Notes</tspan></text>
     <path
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#dcdcdc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       d="m 18.802301,204.30472 h 17.4625 v 3.175 h -17.4625 z"
+       d="m 39.968969,214.88806 h 17.4625 v 3.175 h -17.4625 z"
        id="path1062"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
     <text
        id="text1066"
-       y="206.28023"
-       x="19.992929"
+       y="216.86357"
+       x="41.159595"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:125%;font-family:mono;-inkscape-font-specification:mono;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         y="206.28023"
-         x="19.992929"
+         y="216.86357"
+         x="41.159595"
          id="tspan1064"
          sodipodi:role="line">LRG_11</tspan></text>
     <path
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
        id="path1068"
-       d="m 39.968969,204.30472 h 17.4625 v 3.175 h -17.4625 z"
+       d="m 61.135637,214.88806 h 17.4625 v 3.175 h -17.4625 z"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#dcdcdc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:125%;font-family:mono;-inkscape-font-specification:mono;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="41.159595"
-       y="206.28023"
+       x="62.326267"
+       y="216.86357"
        id="text1072"><tspan
          sodipodi:role="line"
          id="tspan1070"
-         x="41.159595"
-         y="206.28023"
+         x="62.326267"
+         y="216.86357"
          style="text-align:start;text-anchor:start;stroke-width:0.26458332px">NG_007485.1</tspan></text>
     <path
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#dcdcdc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       d="m 61.135637,204.30472 h 17.4625 v 3.175 h -17.4625 z"
+       d="m 82.302305,214.88806 h 17.4625 v 3.175 h -17.4625 z"
        id="path1074"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
     <text
        id="text1078"
-       y="206.28023"
-       x="62.326267"
+       y="216.86357"
+       x="83.492928"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:125%;font-family:mono;-inkscape-font-specification:mono;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         y="206.28023"
-         x="62.326267"
+         y="216.86357"
+         x="83.492928"
          id="tspan1076"
          sodipodi:role="line">ENSG00000147889.17</tspan></text>
     <path
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
        id="path1080"
-       d="m 61.135637,208.00888 h 17.4625 v 3.175 h -17.4625 z"
+       d="m 82.302305,218.59222 h 17.4625 v 3.175 h -17.4625 z"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#f5f5f5;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:125%;font-family:mono;-inkscape-font-specification:mono;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="62.326267"
-       y="209.98442"
+       x="83.492928"
+       y="220.56776"
        id="text1084"><tspan
          sodipodi:role="line"
          id="tspan1082"
-         x="62.326267"
-         y="209.98442"
+         x="83.492928"
+         y="220.56776"
          style="text-align:start;text-anchor:start;stroke-width:0.26458332px">ENST00000304494.9</tspan></text>
     <path
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#f5f5f5;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       d="m 39.968969,208.00888 h 17.4625 v 3.175 h -17.4625 z"
+       d="m 61.135637,218.59222 h 17.4625 v 3.175 h -17.4625 z"
        id="path1086"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
     <text
        id="text1090"
-       y="209.98442"
-       x="41.159595"
+       y="220.56776"
+       x="62.326267"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:125%;font-family:mono;-inkscape-font-specification:mono;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
-         y="209.98442"
-         x="41.159595"
+         y="220.56776"
+         x="62.326267"
          id="tspan1088"
          sodipodi:role="line">NM_000077.4</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 57.381512,209.59638 H 61.13765"
+       d="m 78.54818,220.17972 h 3.756138"
        id="path1096"
        inkscape:connector-curvature="0" />
     <path
@@ -1578,10 +1634,10 @@
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
        id="path1413"
-       d="m 19.860628,220.70893 h 49.212529 v 3.175 H 19.860628 Z"
+       d="M 14.568961,197.95474 H 63.78149 v 3.175 H 14.568961 Z"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#fffafa;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <a
-       transform="translate(-6.4698953,89.958339)"
+       transform="translate(-11.761562,67.20417)"
        xlink:href="https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi?db=nuccore;report=gff3;id=NM_000088.3"
        id="a1419">
       <text
@@ -1600,18 +1656,510 @@
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
        id="path1421"
-       d="m 19.860628,217.00477 h 49.212519 v 3.175 H 19.860628 Z"
+       d="M 14.568961,194.25058 H 63.78148 v 3.175 H 14.568961 Z"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#dcdcdc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.13229166;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:125%;font-family:mono;-inkscape-font-specification:mono;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="39.196964"
-       y="219.12215"
+       x="39.196922"
+       y="196.36798"
        id="text1425"><tspan
          sodipodi:role="line"
          id="tspan1423"
-         x="39.196964"
-         y="219.12215"
+         x="39.196922"
+         y="196.36798"
          style="text-align:center;text-anchor:middle;stroke-width:0.26458332px">Notes</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:125%;font-family:mono;-inkscape-font-specification:mono;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="331.00443"
+       y="164.57715"
+       id="text1823"><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="164.57715"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan1829">##sequence-region NG_007485.1 1 33740</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="166.34103"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan1840">##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="168.10492"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan2030">NG_007485.1	 RefSeq	 region	     1	  33740	 .	 +	 .	 ID=NG_007485.1:1..33740;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="169.86882"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6137">                                                     Dbxref=taxon:9606;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="171.63271"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6139">                                                     Name=9;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="173.39659"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6141">                                                     chromosome=9;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="175.16048"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6143">                                                     gbkey=Src;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="176.92438"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6145">                                                     genome=genomic;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="178.68826"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6147">                                                     map=9p21.3;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="180.45215"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6149">                                                     mol_type=genomic DNA</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="182.21603"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6151">...</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="183.97992"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6153">NG_007485.1	 RefSeq	 gene  	  5001	  31740	 .	 +	 .	 ID=gene-CDKN2A;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="185.74382"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6155">                                                     Dbxref=GeneID:1029,HGNC:HGNC:1787,MIM:600160;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="187.50771"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6157">                                                     Name=CDKN2A;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="189.27159"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6159">                                                     description=cyclin dependent kinase inhibitor 2A;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="191.03548"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6161">                                                     gbkey=Gene;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="192.79938"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6163">                                                     gene=CDKN2A;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="194.56326"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6165">                                                     gene_biotype=protein_coding;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="196.32715"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6167">                                                     gene_synonym=ARF,CDK4I,CDKN2,CMM2,INK4,INK4A,MLM, ...</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="198.09103"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6169">NG_007485.1	 RefSeq	 mRNA	    5001	  31740	 .	 +	 .	 ID=rna-NM_058195.3;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="199.85492"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6171">                                                     Parent=gene-CDKN2A;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="201.61882"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6173">                                                     Dbxref=GeneID:1029,LRG:t2,Genbank:NM_058195.3,HGNC:HGNC:1787,MIM:600160;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="203.38271"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6175">                                                     Name=NM_058195.3;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="205.14659"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6177">                                                     gbkey=mRNA;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="206.91048"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6179">                                                     gene=CDKN2A;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="208.67438"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6181">                                                     product=cyclin dependent kinase inhibitor 2A%2C transcript variant 4;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="210.43826"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6183">                                                     transcript_id=NM_058195.3</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="212.20215"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6185">NG_007485.1	 RefSeq	 exon	    5001	   5353	 .	 +	 .	 ID=exon-NM_058195.3-1;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="213.96603"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6187">                                                     Parent=rna-NM_058195.3;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="215.72992"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6189">                                                     Dbxref=GeneID:1029,LRG:t2,Genbank:NM_058195.3,HGNC:HGNC:1787,MIM:600160;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="217.49382"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6191">                                                     gbkey=mRNA;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="219.25771"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6193">                                                     gene=CDKN2A;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="221.02159"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6195">                                                     product=cyclin dependent kinase inhibitor 2A%2C transcript variant 4;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="222.78548"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6197">                                                     transcript_id=NM_058195.3</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="224.54936"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6199">NG_007485.1	 RefSeq	 exon	   28284	  28590	 .	 +	 .	 ID=exon-NM_058195.3-2;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="226.31325"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6201">                                                     Parent=rna-NM_058195.3;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="228.07716"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6203">                                                     Dbxref=GeneID:1029,LRG:t2,Genbank:NM_058195.3,HGNC:HGNC:1787,MIM:600160;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="229.84105"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6205">                                                     gbkey=mRNA;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="231.60493"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6207">                                                     gene=CDKN2A;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="233.36882"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6209">                                                     product=cyclin dependent kinase inhibitor 2A%2C transcript variant 4;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="235.13271"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6211">                                                     transcript_id=NM_058195.3</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="236.89659"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6213">NG_007485.1	 RefSeq	 exon	   31250	  31740	 .	 +	 .	 ID=exon-NM_058195.3-3;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="238.66048"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6301">                                                     Parent=rna-NM_058195.3;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="240.42436"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6303">                                                     Dbxref=GeneID:1029,LRG:t2,Genbank:NM_058195.3,HGNC:HGNC:1787,MIM:600160;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="242.18825"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6305">                                                     gbkey=mRNA;gene=CDKN2A;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="243.95216"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6307">                                                     product=cyclin dependent kinase inhibitor 2A%2C transcript variant 4;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="245.71605"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6309">                                                     transcript_id=NM_058195.3</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="247.47993"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6215">NG_007485.1	 RefSeq	 CDS	     5161	   5353	 .	 +	 0	 ID=cds-NP_478102.2;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="249.24382"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6311">                                                     Parent=rna-NM_058195.3;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="251.00771"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6313">                                                     Dbxref=CCDS:CCDS6511.2,GeneID:1029,LRG:p2,Genbank:NP_478102.2,HGNC:HGNC:1787,MIM:600160;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="252.77159"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6317">                                                     Name=NP_478102.2;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="254.53548"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6319">                                                     Note=isoform p14ARF is encoded by transcript variant 4;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="256.29935"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6321">                                                     gbkey=CDS;gene=CDKN2A;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="258.06323"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6323">                                                     product=cyclin-dependent kinase inhibitor 2A isoform p14ARF;protein_id=NP_478102.2</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="259.82715"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6217">NG_007485.1	 RefSeq	 CDS	    28284	  28489	 .	 +	 2	 ID=cds-NP_478102.2;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="261.59103"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6325">                                                     Parent=rna-NM_058195.3;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="263.35492"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6327">                                                     Dbxref=CCDS:CCDS6511.2,GeneID:1029,LRG:p2,Genbank:NP_478102.2,HGNC:HGNC:1787,MIM:600160;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="265.1188"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6329">                                                     Name=NP_478102.2;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="266.88269"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6331">                                                     Note=isoform p14ARF is encoded by transcript variant 4;gbkey=CDS;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="268.64658"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6333">                                                     gene=CDKN2A;product=cyclin-dependent kinase inhibitor 2A isoform p14ARF;</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="270.41046"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6335">                                                     protein_id=NP_478102.2</tspan><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="272.17435"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6219" /><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="273.93823"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan6221" /><tspan
+         sodipodi:role="line"
+         x="331.00443"
+         y="275.70215"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         id="tspan4987" /></text>
+    <text
+       id="text4973"
+       y="230.51445"
+       x="26.73464"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:125%;font-family:mono;-inkscape-font-specification:mono;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4971"
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="230.51445"
+         x="26.73464"
+         sodipodi:role="line">##gff-version 3</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="232.27834"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan4980">##sequence-region   9 21967753 21995301</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="234.04222"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6281">...</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="235.80612"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6283">9	 ensembl_havana	 gene	   21967753	 21995301	 .	 -	 .	 ID=gene:ENSG00000147889;</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="237.57001"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6285">                                                        Name=CDKN2A;</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="239.33389"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6357">                                                        assembly_name=GRCh38;biotype=protein_coding;</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="241.09778"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6287">                                                        description=cyclin dependent kinase inhibitor 2A </tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="242.86168"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6289">                                                                    [Source:HGNC Symbol%3BAcc:HGNC:1787];</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="244.62556"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6291">                                                        gene_id=ENSG00000147889;</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="246.38945"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6293">                                                        logic_name=ensembl_havana_gene;</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="248.15334"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6295">                                                        version=17</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="249.91722"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan5001">9	ensembl_havana  	  mRNA	 21967753	 21975098	 .	 -	 .	 ID=transcript:ENST00000304494;</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="251.68112"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6387">                                                        Name=CDKN2A-201;</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="253.44501"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6385">                                                        Parent=gene:ENSG00000147889;</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="255.20889"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6389">                                                        assembly_name=GRCh38;biotype=protein_coding;</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="256.97278"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6391">                                                        ccdsid=CCDS6510.1;</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="258.73666"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6393">                                                        logic_name=ensembl_havana_transcript;</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="260.50055"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6395">                                                        tag=basic;</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="262.26447"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6399">                                                        transcript_id=ENST00000304494;</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="264.02835"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6397">                                                        transcript_support_level=1;version=9</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="265.79224"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6361">9	ensembl_havana	    mRNA	 21967753	 21994624	 .	 - 	.	 ID=transcript:ENST00000579755;Name=CDKN2A-214;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;ccdsid=CCDS6511.2;logic_name=ensembl_havana_transcript;tag=basic;transcript_id=ENST00000579755;transcript_support_level=1;version=1</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="267.55612"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6363">9	havana	            mRNA	 21967991 	21974858	 .	-	.	ID=transcript:ENST00000579122;Name=CDKN2A-213;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;logic_name=havana;tag=basic;transcript_id=ENST00000579122;transcript_support_level=3;version=1</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="269.32001"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6365">9	havana          	  mRNA	 21967996 	21971332	 .	-	.	ID=transcript:ENST00000578845;Name=CDKN2A-212;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;ccdsid=CCDS87644.1;logic_name=havana;tag=basic;transcript_id=ENST00000578845;transcript_support_level=2;version=2</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="271.08389"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6367">9	havana	            mRNA	 21968001 	21994411	 .	-	.	ID=transcript:ENST00000530628;Name=CDKN2A-210;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;ccdsid=CCDS6511.2;logic_name=havana;tag=basic;transcript_id=ENST00000530628;transcript_support_level=5;version=2</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="272.84778"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6369">9	ensembl_havana	    mRNA	 21968056 	21974866	 .	-	.	ID=transcript:ENST00000498124;Name=CDKN2A-208;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;ccdsid=CCDS56565.1;logic_name=ensembl_havana_transcript;tag=basic;transcript_id=ENST00000498124;transcript_support_level=1;version=1</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="274.61166"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6371">9	havana	            mRNA	 21968105 	21995301	 .	-	.	ID=transcript:ENST00000498628;Name=CDKN2A-209;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;ccdsid=CCDS87644.1;logic_name=havana;tag=basic;transcript_id=ENST00000498628;transcript_support_level=2;version=6</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="276.37555"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6373">9	havana	            mRNA	 21968180 	21974827	 .	-	.	ID=transcript:ENST00000380151;Name=CDKN2A-203;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=nonsense_mediated_decay;logic_name=havana;transcript_id=ENST00000380151;transcript_support_level=1;version=3</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="278.13947"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6375">9	havana	            mRNA	 21968182 	21995269	 .	-	.	ID=transcript:ENST00000494262;Name=CDKN2A-206;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;ccdsid=CCDS87644.1;logic_name=havana;tag=basic;transcript_id=ENST00000494262;transcript_support_level=3;version=5</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="279.90335"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6377">9	havana	            mRNA	 21969569 	21971346	 .	-	.	ID=transcript:ENST00000479692;Name=CDKN2A-205;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;logic_name=havana;tag=basic;transcript_id=ENST00000479692;transcript_support_level=5;version=2</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="281.66724"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6379">9	havana	         lnc_RNA	 21969583 	21970467	 .	-	.	ID=transcript:ENST00000577854;Name=CDKN2A-211;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=processed_transcript;logic_name=havana;transcript_id=ENST00000577854;transcript_support_level=3;version=1</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="283.43112"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6381">9	havana	         lnc_RNA	 21970442	 21971332	 .	-	.	ID=transcript:ENST00000380150;Name=CDKN2A-202;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=processed_transcript;logic_name=havana;transcript_id=ENST00000380150;transcript_support_level=3;version=2</tspan><tspan
+         style="text-align:start;text-anchor:start;stroke-width:0.26458332px"
+         y="285.19501"
+         x="26.73464"
+         sodipodi:role="line"
+         id="tspan6383" /></text>
   </g>
 </svg>
