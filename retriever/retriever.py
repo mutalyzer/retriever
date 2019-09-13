@@ -12,7 +12,9 @@ def fetch_annotations(reference_id, reference_type=None):
         return annotations, 'lrg', 'lrg'
     annotations, reference_type = \
         ensembl.get_annotations(reference_id, reference_type)
-    return annotations, reference_type, 'ensembl'
+    if annotations is not None:
+        return annotations, reference_type, 'ensembl'
+    return None, None, None
 
 
 def fetch_sequence(reference_id, reference_source=None):
