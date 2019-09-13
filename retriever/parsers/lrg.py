@@ -23,8 +23,6 @@ import xml.dom.minidom
 from Bio.Seq import Seq
 from Bio.Alphabet import IUPAC
 
-from ..reference import Position, Locus, Reference
-
 
 def _get_content(data, refname):
     """
@@ -52,65 +50,35 @@ def _attr2dict(attr):
     Integer string values are converted to integers.
     :rtype: dictionary
     """
-    ret = {}
+    attr_dict = {}
     for key, value in attr.items():
         if value.isdigit():
             value = int(value)
-        ret[key] = value
-    return ret
+        attr_dict[key] = value
+    return attr_dict
 
 
-def _get_coordinates(data, system=None):
+def _get_location(data, coord_system=None):
     """
     Get attributes from descendent <coordinates> element as a dictionary. If
     more than one <coordinates> element is found, we have a preference for the
-    one with 'coord_system' attribute equal to the `system` argument, if
+    one with 'coord_system' attribute equal to the `coord_system` argument, if
     defined.
     """
     result = None
     coordinates = data.getElementsByTagName('coordinates')
     for coordinate in coordinates:
         attributes = _attr2dict(coordinate.attributes)
-        if result and system and attributes.get('coord_system') != system:
+        if result and coord_system and \
+                attributes.get('coord_system') != coord_system:
             continue
         result = attributes
-    return {'start': int(result['start']),
-            'end': int(result['end']),
+    return {'type': 'range',
+            'start': {'type': 'point',
+                      'position': int(result['start']) - 1},
+            'end': {'type': 'point',
+                    'position': int(result['end'])},
             'strand': int(result['strand'])}
-
-
-def _get_gene_name(section):
-    """
-    Extract the gene name from the LRG record updatable section.
-
-    NOTE: It is necessary to use the updatable section since there is no
-    other way to identify the main gene directly from the LRG file.
-    A possibility would be to use the HGNC id with some external service.
-    Another way would be to make use of the special file with genes to LRG:
-    http://ftp.ebi.ac.uk/pub/databases/lrgex/list_LRGs_transcripts_GRCh38.txt
-
-    :arg section: (updatable) section of the LRG file
-    :return: gene name present under the lrg annotation set
-    """
-    gene_name = ''
-    annotation_nodes = section.getElementsByTagName('annotation_set')
-    for anno in annotation_nodes:
-        if anno.getAttribute('type') == 'lrg':
-            gene_name = _get_content(anno, 'lrg_locus')
-    return gene_name
-
-
-def _get_gene(fixed, updatable):
-    """
-    Create the gene locus.
-
-    :param fixed: The fixed section of the LRG XML file.
-    :param updatable: The updatable section of the LRG XML file.
-    :return: Corresponding gene locus.
-    """
-
-    return {'id': _get_content(fixed, 'hgnc_id'),
-            'type': 'gene'}
 
 
 def _get_transcripts(section):
@@ -123,48 +91,46 @@ def _get_transcripts(section):
     lrg_id = _get_content(section, 'id')
 
     transcripts = []
-    for tdata in section.getElementsByTagName('transcript'):
-        transcript = {'id': tdata.getAttribute('name')}
-        transcript.update(_get_coordinates(tdata, lrg_id))
+    for transcript_data in section.getElementsByTagName('transcript'):
+        transcript = {'id': transcript_data.getAttribute('name'),
+                      'type': 'transcript',
+                      'location': _get_location(transcript_data, lrg_id)}
 
-        # Get the transcript exons.
+        # Get the exons.
         exons = []
-        for exon_data in tdata.getElementsByTagName('exon'):
-            exon = {'type': 'exon'}
-            exon.update(_get_coordinates(exon_data, lrg_id))
-            exons.append(exon)
-
+        for exon_data in transcript_data.getElementsByTagName('exon'):
+            exons.append({'type': 'exon',
+                          'id': exon_data.getAttribute('label'),
+                          'location': _get_location(exon_data, lrg_id)})
         transcript['features'] = exons
 
-        # Get the CDSes of the transcript.
+        # Get the CDS.
         for cds_id, source_cds in enumerate(
-                tdata.getElementsByTagName("coding_region")):
+                transcript_data.getElementsByTagName("coding_region")):
             if cds_id > 0:
                 # Todo: For now, we only support one CDS per transcript and
                 #   ignore all others. This should be discussed.
                 continue
-            cds = {'type': 'cds',
-                   'id': source_cds.getElementsByTagName(
-                       'translation')[0].getAttribute('name')}
-            cds.update(_get_coordinates(source_cds, lrg_id))
-            transcript['features'].append(cds)
+            transcript['features'].append(
+                {'type': 'cds',
+                 'id': source_cds.getElementsByTagName(
+                     'translation')[0].getAttribute('name'),
+                 'location': _get_location(source_cds, lrg_id)})
 
         transcripts.append(transcript)
     return transcripts
 
 
-def _get_loci(fixed, updatable):
+def _get_gene(fixed):
     """
-    Construct the loci reference model.
+    Construct the gene reference model.
 
     :param fixed: The fixed section of the LRG XML file.
-    :param updatable: The updatable section of the LRG XML file.
     :return: Corresponding loci reference model.
     """
-    gene = _get_gene(fixed, updatable)
-
-    gene['features'] = _get_transcripts(fixed)
-
+    gene = {'type': 'gene',
+            'id': _get_content(fixed, 'hgnc_id'),
+            'features': _get_transcripts(fixed)}
     return gene
 
 
@@ -173,34 +139,32 @@ def parse(content):
     Parses an LRG <xml> formatted string and calls the appropriate methods to
     create and return the defined reference model.
 
-    :arg bytes content: Content of LRG file
-
-    :return: Corresponding reference instance.
-    :rtype: Reference
+    :arg bytes content: LRG file content.
+    :return: Corresponding dictionary model.
     """
 
-    # Extract the fixed and updatable section.
+    # Extract the fixed section.
     data = xml.dom.minidom.parseString(content)
     fixed = data.getElementsByTagName('fixed_annotation')[0]
-    updatable = data.getElementsByTagName('updatable_annotation')[0]
 
     # Get the sequence from the fixed section
     sequence = Seq(_get_content(fixed, 'sequence'), IUPAC.unambiguous_dna)
 
-    info = {'start': {"position": 0},
-            'end':  {"position": len(sequence) - 1},
-            'qualifiers': {'organism': _get_content(data, 'organism'),
-                           'sequence_source': _get_content(data,
-                                                           'sequence_source'),
-                           'creation_date': _get_content(data,
-                                                         'creation_date'),
-                           'hgnc_id': _get_content(data, 'hgnc_id'),
-                           'mol_type': _get_content(data, 'mol_type')},
-            'type': 'info',
-            'id': _get_content(data, 'id')
-            }
+    model = {'type': 'top',
+             'id': _get_content(data, 'id'),
+             'location': {'type': 'range',
+                          'start': {'type': 'point',
+                                    'position': 0},
+                          'end':  {'type': 'point',
+                                   'position': len(sequence)}},
+             'qualifiers': {'organism': _get_content(data, 'organism'),
+                            'sequence_source': _get_content(data,
+                                                            'sequence_source'),
+                            'creation_date': _get_content(data,
+                                                          'creation_date'),
+                            'hgnc_id': _get_content(data, 'hgnc_id'),
+                            'mol_type': _get_content(data, 'mol_type')},
+             'features': [_get_gene(fixed)]}
 
-    features = _get_loci(fixed, updatable)
-
-    return {'model': [info, features],
+    return {'model': model,
             'sequence': str(sequence)}
