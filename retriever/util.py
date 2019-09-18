@@ -15,3 +15,18 @@ def make_request(url, params=None, headers=None):
         print("Some other Error", err)
     else:
         return request.text
+
+
+def make_location(start, end=None, strand=None):
+    if end is not None:
+        location = {'type': 'range',
+                    'start': {'type': 'point',
+                              'position': start},
+                    'end': {'type': 'point',
+                            'position': end}}
+    else:
+        location ={'type': 'point',
+                   'position': start},
+    if strand is not None:
+        location['strand'] = strand
+    return location

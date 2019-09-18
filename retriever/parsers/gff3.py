@@ -22,12 +22,9 @@ Notes:
     entries with the same ID are part of the same protein. They are split like
     this in the same manner as the exons are.
 """
-import argparse
 from BCBio.GFF import GFFParser
 import io
-import json
-from Bio import Entrez
-from Bio import SeqIO
+from ..util import make_location
 
 
 def _get_qualifiers(feature):
@@ -44,9 +41,10 @@ def _get_features(feature):
     model = {'id': feature.id,
              'type': feature.type,
              'qualifiers': _get_qualifiers(feature),
-             'start': {'position': feature.location.start},
-             'end': {'position': feature.location.end},
-             'orientation': feature.location.strand}
+             'location': make_location(
+                 int(feature.location.start),
+                 int(feature.location.end),
+                 int(feature.location.strand))}
     if feature.sub_features:
         model['features'] = []
         for sub_feature in feature.sub_features:
@@ -58,28 +56,20 @@ def parse(gff_content):
     gff_parser = GFFParser()
     gff = gff_parser.parse(io.StringIO(gff_content))
 
-    model = []
+    records = []
     for rec in gff:
+        record = {'type': 'top',
+                  'id': rec.id,
+                  'qualifiers': {'annotations': rec.annotations},
+                  'location': make_location(
+                      int(rec.annotations['sequence-region'][0][2]),
+                      int(rec.annotations['sequence-region'][0][1]))}
+        features = []
         for feature in rec.features:
-            model.append(_get_features(feature))
-    return model
-
-
-def main():
-    """
-    Command-line interface to gff parser.
-    """
-
-    parser = argparse.ArgumentParser(
-        formatter_class=argparse.RawDescriptionHelpFormatter)
-
-    parser.add_argument(dest='id',
-                        help='NCBI feature ID.')
-
-    args = parser.parse_args()
-
-    get_raw_record(args.id)
-
-
-if __name__ == '__main__':
-    main()
+            features.append(_get_features(feature))
+        if features:
+            record['features'] = features
+        records.append(record)
+    if len(records) >= 1:
+        return records[0]
+    # TODO: Decide what to do when there are multiple records.

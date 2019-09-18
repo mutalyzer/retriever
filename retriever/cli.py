@@ -35,10 +35,7 @@ def main():
                         choices=['ncbi', 'ensembl', 'lrg'])
 
     parser.add_argument("--type", help="reference type",
-                        choices=['gff', 'genbank', 'json', 'sequence'])
-
-    parser.add_argument("--no_sequence", help="do not include the sequence",
-                        action="store_true")
+                        choices=['gff3', 'genbank', 'json', 'sequence'])
 
     args = parser.parse_args()
 
@@ -47,14 +44,14 @@ def main():
         if link:
             print('{} (from {})'.format(link, method))
         return
-
-    output = retrieve(reference_id=args.reference,
-                      reference_source=args.source,
-                      reference_type=args.type,
-                      size_off=args.sizeoff,
-                      parse=args.parse)
-    if isinstance(output, dict):
-        print(json.dumps(output, indent=2))
     else:
-        print(output)
+        output = retrieve(reference_id=args.reference,
+                          reference_source=args.source,
+                          reference_type=args.type,
+                          size_off=args.sizeoff,
+                          parse=args.parse)
+        if isinstance(output, dict):
+            print(json.dumps(output, indent=2))
+        else:
+            print(output)
 

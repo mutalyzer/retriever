@@ -167,4 +167,4 @@ def parse(content):
              'features': [_get_gene(fixed)]}
 
     return {'model': model,
-            'sequence': str(sequence)}
+            'sequence': {'seq': str(sequence)}}

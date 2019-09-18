@@ -539,13 +539,14 @@ def get_sequence(feature_id):
         return
     records = []
     for record in SeqIO.parse(handle, "fasta"):
-        records.append(str(record.seq))
+        records.append({'seq': str(record.seq),
+                        'description': record.description})
     handle.close()
     if len(records) == 1:
         return records[0]
 
 
-def get_gff(feature_id):
+def get_gff3(feature_id):
     url = 'https://eutils.ncbi.nlm.nih.gov/sviewer/viewer.cgi'
     params = {'db': 'nuccore',
               'report': 'gff3',
@@ -553,9 +554,9 @@ def get_gff(feature_id):
     return make_request(url, params)
 
 
-def fetch_annotations(reference_id, reference_type='gff', size_on=True):
-    if reference_type in [None, 'gff']:
-        return get_gff(reference_id), 'gff'
+def fetch_annotations(reference_id, reference_type='gff3', size_on=True):
+    if reference_type in [None, 'gff3']:
+        return get_gff3(reference_id), 'gff3'
     if reference_type == 'genbank':
         return get_genbank(reference_id, size_on), 'genbank'
     return None, None

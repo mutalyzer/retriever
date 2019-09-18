@@ -1,0 +1,51 @@
+##sequence-region L41870.1 1 4839
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+L41870.1	Genbank	region	1	4839	.	+	.	ID=L41870.1:1..4839;Dbxref=taxon:9606;gbkey=Src;map=13q14.2;mol_type=mRNA
+L41870.1	Genbank	gene	1	4839	.	+	.	ID=gene-RB1;Name=RB1;gbkey=Gene;gene=RB1
+L41870.1	Genbank	CDS	138	2924	.	+	0	ID=cds-AAB59465.1;Parent=gene-RB1;Dbxref=GDB:G00-118-734,NCBI_GP:AAB59465.1;Name=AAB59465.1;gbkey=CDS;gene=RB1;product=retinoblastoma suspectibility protein;protein_id=AAB59465.1
+L41870.1	Genbank	exon	1	274	.	+	.	ID=id-RB1-1;Parent=gene-RB1;Note=G00-118-734;exon_number=1;gbkey=exon;gene=RB1;number=1
+L41870.1	Genbank	exon	275	401	.	+	.	ID=id-RB1-2;Parent=gene-RB1;Note=G00-118-734;exon_number=2;gbkey=exon;gene=RB1;number=2
+L41870.1	Genbank	exon	402	517	.	+	.	ID=id-RB1-3;Parent=gene-RB1;Note=G00-118-734;exon_number=3;gbkey=exon;gene=RB1;number=3
+L41870.1	Genbank	exon	518	637	.	+	.	ID=id-RB1-4;Parent=gene-RB1;Note=G00-118-734;exon_number=4;gbkey=exon;gene=RB1;number=4
+L41870.1	Genbank	exon	638	676	.	+	.	ID=id-RB1-5;Parent=gene-RB1;Note=G00-118-734;exon_number=5;gbkey=exon;gene=RB1;number=5
+L41870.1	Genbank	exon	677	744	.	+	.	ID=id-RB1-6;Parent=gene-RB1;Note=G00-118-734;exon_number=6;gbkey=exon;gene=RB1;number=6
+L41870.1	Genbank	exon	745	855	.	+	.	ID=id-RB1-7;Parent=gene-RB1;Note=G00-118-734;exon_number=7;gbkey=exon;gene=RB1;number=7
+L41870.1	Genbank	exon	856	998	.	+	.	ID=id-RB1-8;Parent=gene-RB1;Note=G00-118-734;exon_number=8;gbkey=exon;gene=RB1;number=8
+L41870.1	Genbank	exon	999	1076	.	+	.	ID=id-RB1-9;Parent=gene-RB1;Note=G00-118-734;exon_number=9;gbkey=exon;gene=RB1;number=9
+L41870.1	Genbank	exon	1077	1186	.	+	.	ID=id-RB1-10;Parent=gene-RB1;Note=G00-118-734;exon_number=10;gbkey=exon;gene=RB1;number=10
+L41870.1	Genbank	exon	1187	1264	.	+	.	ID=id-RB1-11;Parent=gene-RB1;Note=G00-118-734;exon_number=11;gbkey=exon;gene=RB1;number=11
+L41870.1	Genbank	exon	1265	1352	.	+	.	ID=id-RB1-12;Parent=gene-RB1;Note=G00-118-734;exon_number=12;gbkey=exon;gene=RB1;number=12
+L41870.1	Genbank	exon	1353	1469	.	+	.	ID=id-RB1-13;Parent=gene-RB1;Note=G00-118-734;exon_number=13;gbkey=exon;gene=RB1;number=13
+L41870.1	Genbank	exon	1470	1526	.	+	.	ID=id-RB1-14;Parent=gene-RB1;Note=G00-118-734;exon_number=14;gbkey=exon;gene=RB1;number=14
+L41870.1	Genbank	exon	1527	1558	.	+	.	ID=id-RB1-15;Parent=gene-RB1;Note=G00-118-734;exon_number=15;gbkey=exon;gene=RB1;number=15
+L41870.1	Genbank	exon	1636	1832	.	+	.	ID=id-RB1-17;Parent=gene-RB1;Note=G00-118-734;exon_number=17;gbkey=exon;gene=RB1;number=17
+L41870.1	Genbank	exon	1833	1951	.	+	.	ID=id-RB1-18;Parent=gene-RB1;Note=G00-118-734;exon_number=18;gbkey=exon;gene=RB1;number=18
+L41870.1	Genbank	exon	2098	2243	.	+	.	ID=id-RB1-20;Parent=gene-RB1;Note=G00-118-734;exon_number=20;gbkey=exon;gene=RB1;number=20
+L41870.1	Genbank	exon	2244	2348	.	+	.	ID=id-RB1-21;Parent=gene-RB1;Note=G00-118-734;exon_number=21;gbkey=exon;gene=RB1;number=21
+L41870.1	Genbank	exon	2349	2462	.	+	.	ID=id-RB1-22;Parent=gene-RB1;Note=G00-118-734;exon_number=22;gbkey=exon;gene=RB1;number=22
+L41870.1	Genbank	exon	2627	2657	.	+	.	ID=id-RB1-24;Parent=gene-RB1;Note=G00-118-734;exon_number=24;gbkey=exon;gene=RB1;number=24
+L41870.1	Genbank	exon	2658	2800	.	+	.	ID=id-RB1-25;Parent=gene-RB1;Note=G00-118-734;exon_number=25;gbkey=exon;gene=RB1;number=25
+L41870.1	Genbank	exon	2801	2850	.	+	.	ID=id-RB1-26;Parent=gene-RB1;Note=G00-118-734;exon_number=26;gbkey=exon;gene=RB1;number=26
+L41870.1	Genbank	exon	2851	4839	.	+	.	ID=id-RB1-27;Parent=gene-RB1;Note=G00-118-734;exon_number=27;gbkey=exon;gene=RB1;number=27
+L41870.1	Genbank	sequence_alteration	179	179	.	+	.	ID=id-RB1;Note=Tumor GOS19 unilateral mutation causing a tentative wrong splice%3B G00-118-734;gbkey=variation;gene=RB1;replace=t
+L41870.1	Genbank	sequence_alteration	506	509	.	+	.	ID=id-RB1-16;Note=RBF64 bilateral familial deletion mutation causing premature stop;gbkey=variation;gene=RB1;replace=ca
+L41870.1	Genbank	sequence_alteration	537	542	.	+	.	ID=id-RB1-19;Note=Tumor GOS561 unilateral frameshift mutation causing premature stop;gbkey=variation;gene=RB1;replace=ta
+L41870.1	Genbank	sequence_alteration	621	622	.	+	.	ID=id-RB1-23;Note=Tumor GOS537 bilateral frameshift mutation causing premature stop.%3B G00-118-734;gbkey=variation;gene=RB1;replace=c
+L41870.1	Genbank	sequence_alteration	1095	1095	.	+	.	ID=id-RB1-28;Note=Tumor GOS559 mutation causing premature stop.%3B G00-118-734;gbkey=variation;gene=RB1;replace=t
+L41870.1	Genbank	sequence_alteration	1104	1104	.	+	.	ID=id-RB1-29;Note=Tumor GOS563 unilateral mutation causing premature stop%3B G00-118-734;gbkey=variation;gene=RB1;replace=t
+L41870.1	Genbank	sequence_alteration	1209	1209	.	+	.	ID=id-RB1-30;Note=Tumor GOS159 unilateral mutation causing a premature stop%3B G00-118-734;gbkey=variation;gene=RB1;replace=t
+L41870.1	Genbank	sequence_alteration	1320	1320	.	+	.	ID=id-RB1-31;Note=Tumor GOS559 mutation causing premature stop.%3B G00-118-734;gbkey=variation;gene=RB1;replace=t
+L41870.1	Genbank	sequence_alteration	1352	1375	.	+	.	ID=id-RB1-32;Note=Tumor GOS13 unilateral frameshift mutation resulting in premature stop%3B Associated with this mutation is a large 13q14.3 sub-band deletion%3B G00-118-734;gbkey=variation;gene=RB1;replace=ca
+L41870.1	Genbank	sequence_alteration	1400	1401	.	+	.	ID=id-RB1-33;Note=RBF58 insertion mutation causing premature stop%3B G00-118-734;gbkey=variation;gene=RB1;replace=taa
+L41870.1	Genbank	sequence_alteration	1500	1500	.	+	.	ID=id-RB1-34;Note=Tumor GOS159 unilateral mutation causing a premature stop%3B G00-118-734;gbkey=variation;gene=RB1;replace=t
+L41870.1	Genbank	sequence_alteration	1507	1507	.	+	.	ID=id-RB1-35;Note=Tumor GOS109  bilateral mutation causes new splice acceptor causing premature stop%3B G00-118-734;gbkey=variation;gene=RB1;replace=g
+L41870.1	Genbank	sequence_alteration	1575	1576	.	+	.	ID=id-RB1-36;Note=Tumor GOS568 unilateral insetion mutation causing premature stop%3B G00-118-734;gbkey=variation;gene=RB1;replace=aaa
+L41870.1	Genbank	sequence_alteration	1766	1768	.	+	.	ID=id-RB1-37;Note=RBF59 deletion mutation causing premature stop.;gbkey=variation;gene=RB1;replace=ag
+L41870.1	Genbank	sequence_alteration	1791	1791	.	+	.	ID=id-RB1-38;Note=Tumor GOS563 unilateral mutation causing premature stop%3B G00-118-734;gbkey=variation;gene=RB1;replace=t
+L41870.1	Genbank	sequence_alteration	1803	1803	.	+	.	ID=id-RB1-39;Note=Tumor GOS561 mutation causing premature stop%3B G00-118-734;gbkey=variation;gene=RB1;replace=t
+L41870.1	Genbank	sequence_alteration	2072	2075	.	+	.	ID=id-RB1-40;Note=Tumor GOS45 unilateral frame shift mutation causing a premature stop%3B G00-118-734;gbkey=variation;gene=RB1;replace=ct
+L41870.1	Genbank	sequence_alteration	2118	2118	.	+	.	ID=id-RB1-41;Note=Substitution mutation (no tumor) in RBF29%3B G00-118-734;gbkey=variation;gene=RB1;replace=t
+L41870.1	Genbank	sequence_alteration	2149	2150	.	+	.	ID=id-RB1-42;Note=Germline bilateral familial frameshift mutation causing premature stop in DNA of patient S.T.%3B G00-118-734;gbkey=variation;gene=RB1;replace=ctt
+L41870.1	Genbank	sequence_alteration	2160	2160	.	+	.	ID=id-RB1-43;Note=Unilateral low penetrance familial retinoma RBF18 mutation%3B G00-118-734;gbkey=variation;gene=RB1;replace=t
+
+

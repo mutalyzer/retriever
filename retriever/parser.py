@@ -1,4 +1,4 @@
-from .parsers import genbank, lrg, gff
+from .parsers import genbank, lrg, gff3
 
 
 def get_reference_type(content):
@@ -8,17 +8,17 @@ def get_reference_type(content):
         return 'genbank_ncbi'
 
 
-def parse(reference, reference_type=None):
+def parse(reference_content, reference_type=None):
 
     if reference_type is None:
-        reference_type = get_reference_type(reference)
+        reference_type = get_reference_type(reference_content)
 
     if reference_type == 'lrg':
-        model = lrg.parse(reference)
+        model = lrg.parse(reference_content)
     elif reference_type == 'genbank':
-        model = genbank.parse(reference)
-    elif reference_type in ['gff', 'gff']:
-        model = gff.parse(reference)
+        model = genbank.parse(reference_content)
+    elif reference_type == 'gff3':
+        model = gff3.parse(reference_content)
     else:
         return None
 

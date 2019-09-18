@@ -1,0 +1,20 @@
+##sequence-region NM_078467.2 1 2122
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+NM_078467.2	RefSeq	region	1	2122	.	+	.	ID=NM_078467.2:1..2122;Dbxref=taxon:9606;Name=6;chromosome=6;gbkey=Src;genome=genomic;map=6p21.2;mol_type=mRNA
+NM_078467.2	RefSeq	gene	1	2122	.	+	.	ID=gene-CDKN1A;Dbxref=GeneID:1026,HGNC:HGNC:1784,MIM:116899;Name=CDKN1A;description=cyclin dependent kinase inhibitor 1A;gbkey=Gene;gene=CDKN1A;gene_synonym=CAP20,CDKN1,CIP1,MDA-6,P21,p21CIP1,SDI1,WAF1
+NM_078467.2	RefSeq	CDS	73	567	.	+	0	ID=cds-NP_510867.1;Parent=gene-CDKN1A;Dbxref=CCDS:CCDS4824.1,Genbank:NP_510867.1,GeneID:1026,HGNC:HGNC:1784,MIM:116899;Name=NP_510867.1;Note=isoform 1 is encoded by transcript variant 2;gbkey=CDS;gene=CDKN1A;product=cyclin-dependent kinase inhibitor 1 isoform 1;protein_id=NP_510867.1
+NM_078467.2	RefSeq	exon	1	35	.	+	.	ID=id-CDKN1A;Parent=gene-CDKN1A;Dbxref=GeneID:1026,HGNC:HGNC:1784,MIM:116899;gbkey=exon;gene=CDKN1A;inference=alignment:Splign:2.1.0
+NM_078467.2	RefSeq	exon	36	67	.	+	.	ID=id-CDKN1A-2;Parent=gene-CDKN1A;Dbxref=GeneID:1026,HGNC:HGNC:1784,MIM:116899;gbkey=exon;gene=CDKN1A;inference=alignment:Splign:2.1.0
+NM_078467.2	RefSeq	exon	68	517	.	+	.	ID=id-CDKN1A-3;Parent=gene-CDKN1A;Dbxref=GeneID:1026,HGNC:HGNC:1784,MIM:116899;gbkey=exon;gene=CDKN1A;inference=alignment:Splign:2.1.0
+NM_078467.2	RefSeq	exon	518	2106	.	+	.	ID=id-CDKN1A-4;Parent=gene-CDKN1A;Dbxref=GeneID:1026,HGNC:HGNC:1784,MIM:116899;gbkey=exon;gene=CDKN1A;inference=alignment:Splign:2.1.0
+NM_078467.2	RefSeq	polyA_site	2106	2106	.	+	.	ID=id-CDKN1A-5;Dbxref=GeneID:1026,HGNC:HGNC:1784,MIM:116899;gbkey=polyA_site;gene=CDKN1A
+NM_078467.2	RefSeq	STS	240	411	.	+	.	ID=id-CDKN1A-6;Dbxref=UniSTS:272287,GeneID:1026,HGNC:HGNC:1784,MIM:116899;gbkey=STS;gene=CDKN1A;standard_name=PMC25807P2
+NM_078467.2	RefSeq	STS	523	645	.	+	.	ID=id-CDKN1A-7;Dbxref=UniSTS:158231,GeneID:1026,HGNC:HGNC:1784,MIM:116899;gbkey=STS;gene=CDKN1A;standard_name=GDB:607527
+NM_078467.2	RefSeq	STS	551	848	.	+	.	ID=id-CDKN1A-8;Dbxref=UniSTS:270664,GeneID:1026,HGNC:HGNC:1784,MIM:116899;gbkey=STS;gene=CDKN1A;standard_name=PMC133799P1
+NM_078467.2	RefSeq	STS	877	971	.	+	.	ID=id-CDKN1A-9;Dbxref=UniSTS:153810,GeneID:1026,HGNC:HGNC:1784,MIM:116899;gbkey=STS;gene=CDKN1A;standard_name=D20S716E
+NM_078467.2	RefSeq	STS	1638	1736	.	+	.	ID=id-CDKN1A-10;Dbxref=UniSTS:272664,GeneID:1026,HGNC:HGNC:1784,MIM:116899;gbkey=STS;gene=CDKN1A;standard_name=PMC310739P1
+NM_078467.2	RefSeq	STS	1667	1787	.	+	.	ID=id-CDKN1A-11;Dbxref=UniSTS:5860,GeneID:1026,HGNC:HGNC:1784,MIM:116899;gbkey=STS;gene=CDKN1A;standard_name=RH70551
+NM_078467.2	RefSeq	STS	1930	2060	.	+	.	ID=id-CDKN1A-12;Dbxref=UniSTS:20745,GeneID:1026,HGNC:HGNC:1784,MIM:116899;gbkey=STS;gene=CDKN1A;standard_name=D6S2036
+NM_078467.2	RefSeq	polyA_signal_sequence	2076	2081	.	+	.	ID=id-CDKN1A-13;Dbxref=GeneID:1026,HGNC:HGNC:1784,MIM:116899;gbkey=regulatory;gene=CDKN1A;regulatory_class=polyA_signal_sequence
+
+

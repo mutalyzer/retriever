@@ -1,0 +1,15 @@
+##sequence-region NR_002196.2 1 2362
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+NR_002196.2	RefSeq	region	1	2362	.	+	.	ID=NR_002196.2:1..2362;Dbxref=taxon:9606;Name=11;chromosome=11;gbkey=Src;genome=genomic;map=11p15.5;mol_type=transcribed RNA
+NR_002196.2	RefSeq	gene	1	2362	.	+	.	ID=gene-H19;Dbxref=GeneID:283120,HGNC:HGNC:4713,MIM:103280;Name=H19;description=H19 imprinted maternally expressed transcript;gbkey=Gene;gene=H19;gene_synonym=ASM,ASM1,BWS,D11S813E,LINC00008,MIR675HG,NCRNA00008,WT2
+NR_002196.2	RefSeq	exon	1	1358	.	+	.	ID=id-H19;Parent=gene-H19;Dbxref=GeneID:283120,HGNC:HGNC:4713,MIM:103280;gbkey=exon;gene=H19;inference=alignment:Splign:2.1.0
+NR_002196.2	RefSeq	exon	1359	1493	.	+	.	ID=id-H19-2;Parent=gene-H19;Dbxref=GeneID:283120,HGNC:HGNC:4713,MIM:103280;gbkey=exon;gene=H19;inference=alignment:Splign:2.1.0
+NR_002196.2	RefSeq	exon	1494	1606	.	+	.	ID=id-H19-3;Parent=gene-H19;Dbxref=GeneID:283120,HGNC:HGNC:4713,MIM:103280;gbkey=exon;gene=H19;inference=alignment:Splign:2.1.0
+NR_002196.2	RefSeq	exon	1607	1729	.	+	.	ID=id-H19-4;Parent=gene-H19;Dbxref=GeneID:283120,HGNC:HGNC:4713,MIM:103280;gbkey=exon;gene=H19;inference=alignment:Splign:2.1.0
+NR_002196.2	RefSeq	exon	1730	2348	.	+	.	ID=id-H19-5;Parent=gene-H19;Dbxref=GeneID:283120,HGNC:HGNC:4713,MIM:103280;gbkey=exon;gene=H19;inference=alignment:Splign:2.1.0
+NR_002196.2	RefSeq	polyA_site	2348	2348	.	+	.	ID=id-H19-6;Dbxref=GeneID:283120,HGNC:HGNC:4713,MIM:103280;gbkey=polyA_site;gene=H19
+NR_002196.2	RefSeq	lnc_RNA	1	2362	.	+	.	ID=rna-H19;Parent=gene-H19;Dbxref=GeneID:283120,HGNC:HGNC:4713,MIM:103280;gbkey=ncRNA;gene=H19;product=H19 imprinted maternally expressed transcript%2C transcript variant 1
+NR_002196.2	RefSeq	exon	1	2362	.	+	.	ID=exon-H19-1;Parent=rna-H19;Dbxref=GeneID:283120,HGNC:HGNC:4713,MIM:103280;gbkey=ncRNA;gene=H19;product=H19 imprinted maternally expressed transcript%2C transcript variant 1
+NR_002196.2	RefSeq	polyA_signal_sequence	2329	2334	.	+	.	ID=id-H19-7;Dbxref=GeneID:283120,HGNC:HGNC:4713,MIM:103280;gbkey=regulatory;gene=H19;regulatory_class=polyA_signal_sequence
+
+

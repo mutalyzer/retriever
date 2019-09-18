@@ -2,6 +2,7 @@ from retriever.util import make_request
 from Bio import SeqIO
 from io import StringIO
 from urllib.error import HTTPError
+import json
 
 
 def get_json(feature_id):
@@ -21,22 +22,25 @@ def get_gff(feature_id):
         print("HTTP error")
 
 
-def get_sequence(feature_id):
-    url = 'https://rest.ensembl.org/sequence/id/{}'.format(feature_id)
-    headers = {'Content-Type': 'text/x-fasta'}
-    handle = StringIO(make_request(url, headers=headers))
+def get_sequence_details(feature_id):
+    url = 'https://rest.ensembl.org/lookup/id/{}'.format(feature_id)
+    headers = {'Content-Type': 'application/json'}
+    response = json.loads(make_request(url, headers=headers))
+    return response['start'], response['end'], response['species'], \
+           response['seq_region_name']
 
-    records = []
-    for record in SeqIO.parse(handle, "fasta"):
-        records.append(str(record.seq))
-    handle.close()
-    if len(records) == 1:
-        return records[0]
+
+def get_sequence(feature_id):
+    start, end, species, seq_region_name = get_sequence_details(feature_id)
+    url = 'https://rest.ensembl.org/sequence/region/{}/{}:{}..{}'.format(
+        species, seq_region_name, start, end)
+    headers = {'Content-Type': 'application/json'}
+    return json.loads(make_request(url, headers=headers))
 
 
 def get_annotations(reference_id, reference_type):
-    if reference_type in [None, 'gff']:
-        return get_gff(reference_id), 'gff'
+    if reference_type in [None, 'gff3']:
+        return get_gff(reference_id), 'gff3'
     if reference_type == 'json':
         return get_json(reference_id), 'json'
     if reference_type == 'genbank':
