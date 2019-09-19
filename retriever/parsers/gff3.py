@@ -42,9 +42,9 @@ def _get_features(feature):
              'type': feature.type,
              'qualifiers': _get_qualifiers(feature),
              'location': make_location(
-                 int(feature.location.start),
-                 int(feature.location.end),
-                 int(feature.location.strand))}
+                 feature.location.start,
+                 feature.location.end,
+                 feature.location.strand)}
     if feature.sub_features:
         model['features'] = []
         for sub_feature in feature.sub_features:
@@ -62,8 +62,8 @@ def parse(gff_content):
                   'id': rec.id,
                   'qualifiers': {'annotations': rec.annotations},
                   'location': make_location(
-                      int(rec.annotations['sequence-region'][0][2]),
-                      int(rec.annotations['sequence-region'][0][1]))}
+                      rec.annotations['sequence-region'][0][2],
+                      rec.annotations['sequence-region'][0][1])}
         features = []
         for feature in rec.features:
             features.append(_get_features(feature))

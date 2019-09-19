@@ -21,12 +21,12 @@ def make_location(start, end=None, strand=None):
     if end is not None:
         location = {'type': 'range',
                     'start': {'type': 'point',
-                              'position': start},
+                              'position': int(start)},
                     'end': {'type': 'point',
-                            'position': end}}
+                            'position': int(end)}}
     else:
-        location ={'type': 'point',
-                   'position': start},
+        location = {'type': 'point',
+                    'position': int(start)},
     if strand is not None:
-        location['strand'] = strand
+        location['strand'] = int(strand)
     return location
