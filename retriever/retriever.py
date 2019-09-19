@@ -77,6 +77,8 @@ def retrieve(reference_id, reference_source=None, reference_type=None,
         annotations = lrg.fetch_lrg(reference_id)
 
     if parse:
+        if annotations is None:
+            return
         model = parser.parse(annotations, reference_type)
         if reference_type is 'gff3':
             sequence = fetch_sequence(reference_id, reference_source)
