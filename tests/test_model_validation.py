@@ -51,6 +51,6 @@ def test_schema_validation(reference_source, reference_type, reference_content):
         reference_source=reference_source,
     )
     if reference_source == "lrg":
-        assert validate(reference_model["model"]) is None
+        assert validate(reference_model["annotations"]) is None
     else:
         assert validate(reference_model) is None

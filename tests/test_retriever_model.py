@@ -4,6 +4,11 @@ from pathlib import Path
 import pytest
 from mutalyzer_retriever import retrieve_model
 
+import socket
+def guard(*args, **kwargs):
+    raise Exception("I told you not to use the Internet!")
+socket.socket = guard
+
 
 def _get_content(relative_location):
     data_file = Path(__file__).parent.joinpath(relative_location)
@@ -42,39 +47,58 @@ def get_tests(references):
         {
             "ncbi": {
                 "gff3": [
-                    # "NM_078467.2",
-                    # "NM_152263.2",
-                    # "NM_152263.3",
-                    # "NM_000077.4",
-                    # "NG_012337.1",
-                    # "NR_002196.2",
-                    # "L41870.1",
-                    # "NG_007485.1",
+                    "NM_078467.2",
+                    "NM_152263.2",
+                    "NM_152263.3",
+                    "NM_000077.4",
+                    "NG_012337.1",
+                    "NR_002196.2",
+                    "L41870.1",
+                    "NG_007485.1",
                 ]
             },
             "ensembl": {"gff3": ["ENSG00000147889"]},
-            # "lrg": {"lrg": ["LRG_11"]},
+            "lrg": {"lrg": ["LRG_11"]},
         }
     ),
 )
 def test_model(r_id, r_source, r_type, expected_model, monkeypatch):
     def mock_fetch_gff3(reference_id):
-        print('fsdfsdfd')
         return _get_content("data/" + reference_id + ".gff3")
 
     def mock_fetch_fasta(reference_id):
         return _get_content("data/" + reference_id + ".fasta")
 
-    if r_source in ['ncbi', 'ensembl']:
-        monkeypatch.setattr(
-            "mutalyzer_retriever.sources.{}.fetch_gff3".format(r_source),
-            mock_fetch_gff3
-        )
-        monkeypatch.setattr(
-            "mutalyzer_retriever.sources.{}.fetch_fasta".format(r_source),
-            mock_fetch_fasta
-        )
+    def mock_fetch_lrg(reference_id):
+        return _get_content("data/" + reference_id + ".lrg")
 
-    print(retrieve_model(r_id))
-    print(expected_model)
-    assert ordered(retrieve_model(r_id, r_source)) != ordered(expected_model)
+    def mock_fetch_name_error(reference_id):
+        raise NameError
+
+    if r_source == 'ncbi':
+        monkeypatch.setattr(
+            "mutalyzer_retriever.sources.ncbi.fetch_gff3", mock_fetch_gff3)
+        monkeypatch.setattr(
+            "mutalyzer_retriever.sources.ncbi.fetch_fasta", mock_fetch_fasta )
+        monkeypatch.setattr(
+            "mutalyzer_retriever.sources.ensembl.fetch_gff3", mock_fetch_name_error)
+        monkeypatch.setattr(
+            "mutalyzer_retriever.sources.lrg.fetch_lrg", mock_fetch_name_error)
+    elif r_source == 'ensembl':
+        monkeypatch.setattr(
+            "mutalyzer_retriever.sources.ensembl.fetch_gff3", mock_fetch_gff3)
+        monkeypatch.setattr(
+            "mutalyzer_retriever.sources.ensembl.fetch_fasta", mock_fetch_fasta)
+        monkeypatch.setattr(
+            "mutalyzer_retriever.sources.ncbi.fetch_gff3", mock_fetch_name_error)
+        monkeypatch.setattr(
+            "mutalyzer_retriever.sources.lrg.fetch_lrg", mock_fetch_name_error)
+    elif r_source == 'lrg':
+        monkeypatch.setattr(
+            "mutalyzer_retriever.sources.lrg.fetch_lrg", mock_fetch_lrg)
+        monkeypatch.setattr(
+            "mutalyzer_retriever.sources.ensembl.fetch_gff3", mock_fetch_name_error)
+        monkeypatch.setattr(
+            "mutalyzer_retriever.sources.ncbi.fetch_gff3", mock_fetch_name_error )
+
+    assert ordered(retrieve_model(r_id, r_source)) == ordered(expected_model)

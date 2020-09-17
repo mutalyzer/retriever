@@ -14,32 +14,9 @@ NM_152263.3	RefSeq	exon	823	892	.	+	.	ID=id-TPM3-8;Parent=gene-TPM3;Dbxref=GeneI
 NM_152263.3	RefSeq	exon	893	971	.	+	.	ID=id-TPM3-9;Parent=gene-TPM3;Dbxref=GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=exon;gene=TPM3;inference=alignment:Splign:2.1.0
 NM_152263.3	RefSeq	exon	972	7099	.	+	.	ID=id-TPM3-10;Parent=gene-TPM3;Dbxref=GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=exon;gene=TPM3;inference=alignment:Splign:2.1.0
 NM_152263.3	RefSeq	sequence_feature	94	96	.	+	.	ID=id-TPM3-11;Dbxref=GeneID:7170,HGNC:HGNC:12012,MIM:191030;Note=upstream in-frame stop codon;gbkey=misc_feature;gene=TPM3
-NM_152263.3	RefSeq	polyA_site	1170	1170	.	+	.	ID=id-TPM3-12;Dbxref=GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=polyA_site;gene=TPM3
-NM_152263.3	RefSeq	polyA_site	7099	7099	.	+	.	ID=id-TPM3-13;Dbxref=GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=polyA_site;gene=TPM3
-NM_152263.3	RefSeq	STS	436	537	.	+	.	ID=id-TPM3-14;Dbxref=UniSTS:424834,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=REN100037
-NM_152263.3	RefSeq	STS	630	878	.	+	.	ID=id-TPM3-15;Dbxref=UniSTS:390047,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=REN65247
-NM_152263.3	RefSeq	STS	731	892	.	+	.	ID=id-TPM3-16;Dbxref=UniSTS:157588,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=GDB:545460
-NM_152263.3	RefSeq	STS	760	928	.	+	.	ID=id-TPM3-17;Dbxref=UniSTS:157589,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=GDB:545462
-NM_152263.3	RefSeq	STS	974	1094	.	+	.	ID=id-TPM3-18;Dbxref=UniSTS:6462,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=RH70810
-NM_152263.3	RefSeq	STS	1004	1101	.	+	.	ID=id-TPM3-19;Dbxref=UniSTS:38418,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=RH64675
-NM_152263.3	RefSeq	STS	1040	1159	.	+	.	ID=id-TPM3-20;Dbxref=UniSTS:125645,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=U04541
-NM_152263.3	RefSeq	STS	1148	1412	.	+	.	ID=id-TPM3-21;Dbxref=UniSTS:85929,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=RH41815
-NM_152263.3	RefSeq	STS	1951	3384	.	+	.	ID=id-TPM3-22;Dbxref=UniSTS:158429,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=GDB:631802
-NM_152263.3	RefSeq	STS	2038	2426	.	+	.	ID=id-TPM3-23;Dbxref=UniSTS:473907,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=D8S2279
-NM_152263.3	RefSeq	STS	2038	2127	.	+	.	ID=id-TPM3-24;Dbxref=UniSTS:473907,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=D8S2279
-NM_152263.3	RefSeq	STS	2089	2158	.	+	.	ID=id-TPM3-25;Dbxref=UniSTS:149619,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=D1S1423
-NM_152263.3	RefSeq	STS	3171	3283	.	+	.	ID=id-TPM3-26;Dbxref=UniSTS:152828,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=D11S3590
-NM_152263.3	RefSeq	STS	3376	3559	.	+	.	ID=id-TPM3-27;Dbxref=UniSTS:61334,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=L17877
-NM_152263.3	RefSeq	STS	3376	3552	.	+	.	ID=id-TPM3-28;Dbxref=UniSTS:39087,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=L17809
-NM_152263.3	RefSeq	STS	3536	3750	.	+	.	ID=id-TPM3-29;Dbxref=UniSTS:91103,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=RH80031
-NM_152263.3	RefSeq	STS	4523	5834	.	+	.	ID=id-TPM3-30;Dbxref=UniSTS:42740,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=L17791
-NM_152263.3	RefSeq	STS	5002	5104	.	+	.	ID=id-TPM3-31;Dbxref=UniSTS:152207,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=D11S3114
-NM_152263.3	RefSeq	STS	5081	5183	.	+	.	ID=id-TPM3-32;Dbxref=UniSTS:473906,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=D8S2278
-NM_152263.3	RefSeq	STS	5086	5175	.	+	.	ID=id-TPM3-33;Dbxref=UniSTS:473907,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=D8S2279
-NM_152263.3	RefSeq	STS	5106	5255	.	+	.	ID=id-TPM3-34;Dbxref=UniSTS:480103,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=AB049870
-NM_152263.3	RefSeq	STS	5228	5833	.	+	.	ID=id-TPM3-35;Dbxref=UniSTS:61334,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=L17877
-NM_152263.3	RefSeq	STS	6926	7045	.	+	.	ID=id-TPM3-36;Dbxref=UniSTS:29074,GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=STS;gene=TPM3;standard_name=RH41905
-NM_152263.3	RefSeq	polyA_signal_sequence	1142	1147	.	+	.	ID=id-TPM3-37;Dbxref=GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=regulatory;gene=TPM3;regulatory_class=polyA_signal_sequence
-NM_152263.3	RefSeq	polyA_signal_sequence	7079	7084	.	+	.	ID=id-TPM3-38;Dbxref=GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=regulatory;gene=TPM3;regulatory_class=polyA_signal_sequence
+NM_152263.3	RefSeq	polyA_site	1170	1170	.	+	.	ID=id-TPM3-12;Parent=gene-TPM3;Dbxref=GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=polyA_site;gene=TPM3
+NM_152263.3	RefSeq	polyA_site	7099	7099	.	+	.	ID=id-TPM3-13;Parent=gene-TPM3;Dbxref=GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=polyA_site;gene=TPM3
+NM_152263.3	RefSeq	polyA_signal_sequence	1142	1147	.	+	.	ID=id-TPM3-14;Parent=gene-TPM3;Dbxref=GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=regulatory;gene=TPM3;regulatory_class=polyA_signal_sequence
+NM_152263.3	RefSeq	polyA_signal_sequence	7079	7084	.	+	.	ID=id-TPM3-15;Parent=gene-TPM3;Dbxref=GeneID:7170,HGNC:HGNC:12012,MIM:191030;gbkey=regulatory;gene=TPM3;regulatory_class=polyA_signal_sequence
 
 
