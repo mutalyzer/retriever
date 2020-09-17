@@ -1,4 +1,4 @@
-from .parsers import genbank, gff3, lrg
+from .parsers import gff3, lrg, fasta
 
 
 def get_reference_type(content):
@@ -15,10 +15,10 @@ def parse(reference_content, reference_type=None, reference_source=None):
 
     if reference_type == "lrg":
         model = lrg.parse(reference_content)
-    elif reference_type == "genbank":
-        model = genbank.parse(reference_content)
     elif reference_type == "gff3":
         model = gff3.parse(reference_content, reference_source)
+    elif reference_type == "fasta":
+        model = fasta.parse(reference_content)
     else:
         return None
 

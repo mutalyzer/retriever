@@ -2,117 +2,175 @@ from . import configuration, parser
 from .sources import ensembl, lrg, ncbi
 
 
-def fetch_annotations(reference_id, reference_type=None):
-    """
-
-    :arg str reference_id: The reference ID.
-    :arg str reference_type: The source from where to retrieve the annotations.
-
-    :returns tuple: Annotations, reference type, reference source.
-    """
-    annotations = lrg.fetch_lrg(reference_id)
-    if annotations is not None:
-        return annotations, "lrg", "lrg"
-
-    annotations, reference_type = ncbi.fetch_annotations(reference_id, reference_type)
-    if annotations is not None:
-        return annotations, reference_type, "ncbi"
-
-    annotations, reference_type = ensembl.fetch_annotations(
-        reference_id, reference_type
-    )
-    if annotations is not None:
-        return annotations, reference_type, "ensembl"
-    return None, None, None
+class NoReferenceRetrieved(Exception):
+    pass
 
 
-def fetch_sequence(reference_id, reference_source=None):
-    """
-    Sequence retrieval.
+class NoReferenceError(Exception):
+    def __init__(self, status):
+        self.no_reference = []
+        message = ""
+        for source in status.keys():
+            source_errors = []
+            for error in status[source]["errors"]:
+                if isinstance(error, ValueError):
+                    source_errors.append("ValueError")
+                elif isinstance(error, NameError):
+                    source_errors.append("NameError")
+                elif isinstance(error, ConnectionError):
+                    source_errors.append("ConnectionError")
+            if source_errors:
+                message += "\n{}: {}.".format(source, ", ".join(source_errors))
 
-    :arg str reference_id: The reference ID.
-    :arg str reference_source: The source from where to retrieve the sequence.
+        self.message = message
 
-    :returns str: The sequence.
-    """
-    if reference_source is None:
-        sequence = ncbi.fetch_sequence(reference_id)
-        if sequence is None:
-            lrg_annotations = lrg.fetch_lrg(reference_id)
-            if lrg_annotations is not None:
-                lrg_model = parser.parse(lrg_annotations, "lrg")
-                if lrg_model is not None and lrg_model.get("sequence"):
-                    sequence = lrg_model["sequence"]
-        if sequence is None:
-            sequence = ensembl.fetch_sequence(reference_id)
-        return sequence
+    def __str__(self):
+        return self.message
+
+
+def raise_error(status):
+    no_reference_retrieved = []
+    for source in status.keys():
+        if len(status[source]["errors"]) == 1 and isinstance(
+            status[source]["errors"][0], NameError
+        ):
+            no_reference_retrieved.append(True)
+        else:
+            no_reference_retrieved.append(False)
+    if all(no_reference_retrieved):
+        raise NoReferenceRetrieved
+
+    raise NoReferenceError(status)
+
+
+def fetch_unknown_source(reference_id, reference_type, size_off=True):
+
+    status = {"lrg": {"errors": []}, "ncbi": {"errors": []}, "ensembl": {"errors": []}}
+
+    # LRG
+    if reference_type in [None, "lrg"]:
+        try:
+            reference_content = lrg.fetch_lrg(reference_id)
+        except (NameError, ConnectionError) as e:
+            status["lrg"]["errors"].append(e)
+        else:
+            return reference_content, "lrg", "lrg"
     else:
-        if reference_source == "ncbi":
-            return ncbi.fetch_sequence(reference_id)
-        elif reference_source == "ensembl":
-            return ensembl.fetch_sequence(reference_id)
+        status["lrg"]["errors"].append(
+            ValueError(
+                "Lrg fetch does not support '{}' reference type.".format(reference_type)
+            )
+        )
+
+    # NCBI
+    try:
+        reference_content, reference_type = ncbi.fetch(
+            reference_id, reference_type, size_off
+        )
+    except (NameError, ConnectionError, ValueError) as e:
+        status["ncbi"]["errors"].append(e)
+    else:
+        return reference_content, reference_type, "ncbi"
+
+    # Ensembl
+    try:
+        reference_content, reference_type = ensembl.fetch(reference_id, reference_type)
+    except (NameError, ConnectionError, ValueError) as e:
+        status["ensembl"]["errors"].append(e)
+    else:
+        return reference_content, reference_type, "ensembl"
+
+    raise_error(status)
 
 
-def retrieve(
+def retrieve_raw(
     reference_id,
     reference_source=None,
     reference_type=None,
     size_off=True,
-    parse=False,
     configuration_path=None,
 ):
-    """
-    Main retriever entry point. Identifies and calls the appropriate specific
-    retriever methods.
-
-    :arg str reference_id: The id of the reference.
-    :arg str reference_source: The source of the reference, e.g., ncbi, ensembl.
-    :arg str reference_type: The type of the reference: gff3, genbank, or lrg.
-    :arg bool size_off: Flag for the maximum sequence length.
-    :arg bool parse: Flag for parsing or not the reference.
-    :arg bool parse: Flag for parsing or not the reference.
-    :arg str configuration_path: Path towards configuration file.
-
-    :return: The reference content and its type.
-    """
     configuration.settings = configuration.setup_settings(configuration_path)
 
-    annotations = None
-    if reference_source is None and reference_type is None:
-        annotations, reference_type, reference_source = fetch_annotations(
-            reference_id, reference_type
-        )
-    elif reference_source is None and reference_type == "sequence":
-        return fetch_sequence(reference_id)
-    elif reference_source == "ncbi":
-        if reference_type is None or reference_type == "gff3":
-            annotations = ncbi.fetch_gff3(reference_id)
-            reference_type = "gff3"
-        elif reference_type == "genbank":
-            annotations = ncbi.fetch_genbank(reference_id, not size_off)
-            reference_type = "genbank"
-        elif reference_type == "sequence":
-            return fetch_sequence(reference_id, reference_source)
-    elif reference_source == "ensembl":
-        if reference_type is None or reference_type == "gff3":
-            annotations = ensembl.fetch_gff(reference_id)
-            reference_type = "gff3"
-        elif reference_type == "json":
-            annotations = ensembl.fetch_json(reference_id)
-        elif reference_type == "sequence":
-            return fetch_sequence(reference_id, reference_source)
-    elif reference_source == "lrg":
-        annotations = lrg.fetch_lrg(reference_id)
+    reference_content = None
 
-    if parse:
-        if annotations is None:
-            return
-        model = parser.parse(annotations, reference_type, reference_source)
-        if reference_type is "gff3":
-            sequence = fetch_sequence(reference_id, reference_source)
-            return {"model": model, "sequence": sequence, "source": reference_source}
-        else:
-            model.update({"source": reference_source})
+    if reference_source is None:
+        reference_content, reference_type, reference_source = fetch_unknown_source(
+            reference_id, reference_type, size_off
+        )
+    elif reference_source == "ncbi":
+        reference_content, reference_type = ncbi.fetch(reference_id, reference_type)
+    elif reference_source == "ensembl":
+        reference_content, reference_type = ensembl.fetch(reference_id, reference_type)
+    elif reference_source == "lrg":
+        reference_content = lrg.fetch_lrg(reference_id)
+        if reference_content:
+            reference_type = "lrg"
+
+    return reference_content, reference_type, reference_source
+
+
+def retrieve_model(
+    reference_id,
+    reference_source=None,
+    reference_type=None,
+    size_off=True,
+    model_type="all",
+    configuration_path=None,
+):
+    configuration.settings = configuration.setup_settings(configuration_path)
+
+    reference_content, reference_type, reference_source = retrieve_raw(
+        reference_id, reference_source, reference_type, size_off
+    )
+
+    if reference_type == "lrg":
+        model = parser.parse(reference_content, reference_type, reference_source)
+        if model_type == "all":
             return model
-    else:
-        return annotations
+        elif model_type == "sequence":
+            return model["sequence"]
+        elif model_type == "annotations":
+            return model["annotations"]
+    elif reference_type == "gff3":
+        if model_type == "all":
+            fasta = retrieve_raw(reference_id, reference_source, "fasta", size_off)
+            return {
+                "annotations": parser.parse(
+                    reference_content, reference_type, reference_source
+                ),
+                "sequence": parser.parse(fasta[0], "fasta"),
+            }
+        elif model_type == "sequence":
+            fasta = retrieve_raw(reference_id, "fasta", size_off)
+            return {"sequence": parser.parse(fasta, "fasta")}
+        elif model_type == "annotations":
+            return parser.parse(
+                reference_content, reference_source, "fasta", reference_source
+            )
+    elif reference_type == "fasta":
+        return {
+            "sequence": parser.parse(reference_content, "fasta"),
+        }
+
+
+def retrieve_model_from_file(paths=[], is_lrg=False):
+    if is_lrg:
+        with open(paths[0]) as f:
+            content = f.read()
+            model = parser.parse(content, "lrg")
+            return model
+
+    gff3 = paths[0]
+    fasta = paths[1]
+
+    model = {}
+    with open(gff3) as f:
+        annotations = f.read()
+        model["annotations"] = parser.parse(annotations, "gff3")
+
+    with open(fasta) as f:
+        sequence = f.read()
+        model["sequence"] = parser.parse(sequence, "fasta")
+
+    return model

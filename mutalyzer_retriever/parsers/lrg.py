@@ -59,7 +59,7 @@ def _attr2dict(attr):
     return attr_dict
 
 
-def _get_location(data, coord_system=None):
+def _get_location(data, coord_system=None, recursive=False):
     """
     Get attributes from descendent <coordinates> element as a dictionary. If
     more than one <coordinates> element is found, we have a preference for the
@@ -73,6 +73,8 @@ def _get_location(data, coord_system=None):
         if result and coord_system and attributes.get("coord_system") != coord_system:
             continue
         result = attributes
+        if not recursive:
+            break
     return {
         "type": "range",
         "start": {"type": "point", "position": int(result["start"]) - 1},
@@ -166,7 +168,7 @@ def parse(content):
     # Get the sequence from the fixed section
     sequence = Seq(_get_content(fixed, "sequence"), IUPAC.unambiguous_dna)
 
-    model = {
+    annotations = {
         "type": "record",
         "id": _get_content(data, "id"),
         "location": {
@@ -184,4 +186,4 @@ def parse(content):
         "features": [_get_gene(fixed)],
     }
 
-    return {"model": model, "sequence": {"seq": str(sequence)}}
+    return {"annotations": annotations, "sequence": {"seq": str(sequence)}}

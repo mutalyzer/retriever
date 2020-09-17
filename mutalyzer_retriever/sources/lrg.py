@@ -70,7 +70,7 @@ def fetch_lrg(reference_id, size_on=True):
     try:
         handle = urlopen(url)
     except URLError:
-        return None
+        raise NameError
 
     info = handle.info()
 
@@ -93,4 +93,4 @@ def fetch_lrg(reference_id, size_on=True):
         return raw_data.decode()
     else:
         handle.close()
-        raise (NotLrg())
+        raise NotLrg()

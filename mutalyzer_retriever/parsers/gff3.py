@@ -236,13 +236,12 @@ def _create_record_model(record, source=None):
 
     features = None
     mol_type = None
-    if source and source == "ncbi":
-        region_model = _get_region_model(record.features)
-        if region_model and region_model.get("qualifiers"):
-            if region_model["qualifiers"].get("mol_type"):
-                mol_type = region_model["qualifiers"]["mol_type"]
-                if "RNA" in region_model["qualifiers"]["mol_type"].upper():
-                    features = _get_rna_features(record, mol_type)
+    region_model = _get_region_model(record.features)
+    if region_model and region_model.get("qualifiers"):
+        if region_model["qualifiers"].get("mol_type"):
+            mol_type = region_model["qualifiers"]["mol_type"]
+            if "RNA" in region_model["qualifiers"]["mol_type"].upper():
+                features = _get_rna_features(record, mol_type)
     if features is None:
         features = _get_record_features_model(record, skip={"gene": "exon"})
 
@@ -250,8 +249,8 @@ def _create_record_model(record, source=None):
         "id": record.id,
         "type": "record",
         "location": make_location(
-            record.annotations["sequence-region"][0][2],
             record.annotations["sequence-region"][0][1],
+            record.annotations["sequence-region"][0][2],
         ),
     }
     if mol_type:
