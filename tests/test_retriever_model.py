@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 
 import pytest
+
 from mutalyzer_retriever import retrieve_model
 
 
@@ -67,6 +68,7 @@ def get_tests(references):
                     "L41870.1",
                     "NG_007485.1",
                     "NC_012920.1",
+                    "NG_009930.1",
                 ]
             },
             "ensembl": {"gff3": ["ENSG00000147889"]},
