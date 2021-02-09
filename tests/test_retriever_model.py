@@ -72,7 +72,7 @@ def get_tests(references):
                 ]
             },
             "ensembl": {"gff3": ["ENSG00000147889"]},
-            "lrg": {"lrg": ["LRG_11"]},
+            "lrg": {"lrg": ["LRG_11", "LRG_417", "LRG_857"]},
         }
     ),
 )
