@@ -6,7 +6,7 @@ def make_location(start, end=None, strand=None):
             "end": {"type": "point", "position": int(end)},
         }
     else:
-        location = ({"type": "point", "position": int(start)},)
+        location = {"type": "point", "position": int(start)}
     if strand is not None:
         location["strand"] = int(strand)
     return location

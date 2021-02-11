@@ -264,16 +264,25 @@
                   "strand": 1
                 },
                 "qualifiers": {
-                  "translation_exception": [
-                    {
-                      "codon": "127",
-                      "sequence": "U"
-                    },
-                    {
-                      "codon": "462",
-                      "sequence": "U"
-                    }
-                  ]
+                  "translation_exception": {
+                    "exceptions": [
+                      {
+                        "location": {
+                          "type": "point",
+                          "position": 127
+                        },
+                        "amino_acid": "U"
+                      },
+                      {
+                        "location": {
+                          "type": "point",
+                          "position": 462
+                        },
+                        "amino_acid": "U"
+                      }
+                    ]
+                  },
+                  "coordinate_system": "p"
                 }
               }
             ],

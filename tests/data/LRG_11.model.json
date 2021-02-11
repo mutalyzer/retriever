@@ -102,9 +102,6 @@
                     "position": 31263
                   },
                   "strand": 1
-                },
-                "qualifiers": {
-                  "translation_exception": []
                 }
               }
             ],
@@ -187,9 +184,6 @@
                     "position": 28489
                   },
                   "strand": 1
-                },
-                "qualifiers": {
-                  "translation_exception": []
                 }
               }
             ],

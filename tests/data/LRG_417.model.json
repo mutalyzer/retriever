@@ -344,12 +344,18 @@
                   "strand": 1
                 },
                 "qualifiers": {
-                  "translation_exception": [
-                    {
-                      "codon": "523",
-                      "sequence": "U"
-                    }
-                  ]
+                  "translation_exception": {
+                    "exceptions": [
+                      {
+                        "location": {
+                          "type": "point",
+                          "position": 523
+                        },
+                        "amino_acid": "U"
+                      }
+                    ]
+                  },
+                  "coordinate_system": "p"
                 }
               }
             ],

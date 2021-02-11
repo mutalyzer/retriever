@@ -36,6 +36,7 @@ import io
 
 from BCBio.GFF import GFFParser
 from Bio.SeqFeature import SeqFeature
+from Bio.SeqUtils import seq1
 
 from ..util import make_location
 
@@ -69,7 +70,8 @@ def _get_feature_id(feature):
     elif feature.type == "lnc_RNA":
         return feature.qualifiers["transcript_id"][0]
     elif feature.type == "CDS":
-        return feature.qualifiers["protein_id"][0]
+        if feature.qualifiers.get("protein_id"):
+            return feature.qualifiers["protein_id"][0]
     elif feature.type == "exon":
         if feature.qualifiers.get("exon_id"):
             return feature.qualifiers["exon_id"][0]
@@ -116,10 +118,13 @@ def _extract_translation_exception(translation_exception):
         pos_start = int(pos_start) - 1
         pos_end = int(pos_end)
 
-        aa = aa.split(":")[1]
+        if ":" in aa:
+            aa = aa.split(":")[1]
+        elif "=" in aa:
+            aa = aa.split("=")[1]
 
         output.append(
-            {"location": make_location(pos_start, pos_end, strand), "amino_acid": aa}
+            {"location": make_location(pos_start, pos_end, strand), "amino_acid": seq1(aa)}
         )
     return output
 
@@ -127,7 +132,7 @@ def _extract_translation_exception(translation_exception):
 def _extract_special_qualifiers(qs):
     for q in qs:
         if q == "translation_exception":
-            qs[q] = _extract_translation_exception(qs[q])
+            qs[q] = {"exceptions": _extract_translation_exception(qs[q])}
 
 
 def _get_qualifiers(feature):

@@ -23,6 +23,8 @@ from xml.dom import minidom
 
 from Bio.Seq import Seq
 
+from ..util import make_location
+
 
 def _get_content(data, refname):
     """
@@ -87,11 +89,12 @@ def _get_translation_exception(cds):
     for t_e in cds.getElementsByTagName("translation_exception"):
         output.append(
             {
-                "codon": t_e.getAttribute("codon"),
-                "sequence": _get_content(t_e, "sequence"),
+                "location": make_location(t_e.getAttribute("codon")),
+                "amino_acid": _get_content(t_e, "sequence"),
             }
         )
-    return {"translation_exception": output}
+    if output:
+        return {"translation_exception": {"exceptions": output}, "coordinate_system": "p"}
 
 
 def _get_transcripts(section):

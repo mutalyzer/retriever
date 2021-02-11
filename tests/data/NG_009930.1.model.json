@@ -494,38 +494,40 @@
                   "strand": 1
                 },
                 "qualifiers": {
-                  "translation_exception": [
-                    {
-                      "location": {
-                        "type": "range",
-                        "start": {
-                          "type": "point",
-                          "position": 6917
+                  "translation_exception": {
+                    "exceptions": [
+                      {
+                        "location": {
+                          "type": "range",
+                          "start": {
+                            "type": "point",
+                            "position": 6917
+                          },
+                          "end": {
+                            "type": "point",
+                            "position": 6920
+                          },
+                          "strand": 1
                         },
-                        "end": {
-                          "type": "point",
-                          "position": 6920
-                        },
-                        "strand": 1
+                        "amino_acid": "U"
                       },
-                      "amino_acid": "Sec"
-                    },
-                    {
-                      "location": {
-                        "type": "range",
-                        "start": {
-                          "type": "point",
-                          "position": 17613
+                      {
+                        "location": {
+                          "type": "range",
+                          "start": {
+                            "type": "point",
+                            "position": 17613
+                          },
+                          "end": {
+                            "type": "point",
+                            "position": 17616
+                          },
+                          "strand": 1
                         },
-                        "end": {
-                          "type": "point",
-                          "position": 17616
-                        },
-                        "strand": 1
-                      },
-                      "amino_acid": "Sec"
-                    }
-                  ]
+                        "amino_acid": "U"
+                      }
+                    ]
+                  }
                 }
               }
             ]

@@ -165,23 +165,25 @@
               "strand": 1
             },
             "qualifiers": {
-              "translation_exception": [
-                {
-                  "location": {
-                    "type": "range",
-                    "start": {
-                      "type": "point",
-                      "position": 4260
+              "translation_exception": {
+                "exceptions": [
+                  {
+                    "location": {
+                      "type": "range",
+                      "start": {
+                        "type": "point",
+                        "position": 4260
+                      },
+                      "end": {
+                        "type": "point",
+                        "position": 4262
+                      },
+                      "strand": 1
                     },
-                    "end": {
-                      "type": "point",
-                      "position": 4262
-                    },
-                    "strand": 1
-                  },
-                  "amino_acid": "TERM"
-                }
-              ]
+                    "amino_acid": "*"
+                  }
+                ]
+              }
             }
           }
         ]
@@ -289,23 +291,25 @@
               "strand": 1
             },
             "qualifiers": {
-              "translation_exception": [
-                {
-                  "location": {
-                    "type": "range",
-                    "start": {
-                      "type": "point",
-                      "position": 5510
+              "translation_exception": {
+                "exceptions": [
+                  {
+                    "location": {
+                      "type": "range",
+                      "start": {
+                        "type": "point",
+                        "position": 5510
+                      },
+                      "end": {
+                        "type": "point",
+                        "position": 5511
+                      },
+                      "strand": 1
                     },
-                    "end": {
-                      "type": "point",
-                      "position": 5511
-                    },
-                    "strand": 1
-                  },
-                  "amino_acid": "TERM"
-                }
-              ]
+                    "amino_acid": "*"
+                  }
+                ]
+              }
             }
           }
         ]
@@ -694,23 +698,25 @@
               "strand": 1
             },
             "qualifiers": {
-              "translation_exception": [
-                {
-                  "location": {
-                    "type": "range",
-                    "start": {
-                      "type": "point",
-                      "position": 9989
+              "translation_exception": {
+                "exceptions": [
+                  {
+                    "location": {
+                      "type": "range",
+                      "start": {
+                        "type": "point",
+                        "position": 9989
+                      },
+                      "end": {
+                        "type": "point",
+                        "position": 9990
+                      },
+                      "strand": 1
                     },
-                    "end": {
-                      "type": "point",
-                      "position": 9990
-                    },
-                    "strand": 1
-                  },
-                  "amino_acid": "TERM"
-                }
-              ]
+                    "amino_acid": "*"
+                  }
+                ]
+              }
             }
           }
         ]
@@ -774,23 +780,25 @@
               "strand": 1
             },
             "qualifiers": {
-              "translation_exception": [
-                {
-                  "location": {
-                    "type": "range",
-                    "start": {
-                      "type": "point",
-                      "position": 10403
+              "translation_exception": {
+                "exceptions": [
+                  {
+                    "location": {
+                      "type": "range",
+                      "start": {
+                        "type": "point",
+                        "position": 10403
+                      },
+                      "end": {
+                        "type": "point",
+                        "position": 10404
+                      },
+                      "strand": 1
                     },
-                    "end": {
-                      "type": "point",
-                      "position": 10404
-                    },
-                    "strand": 1
-                  },
-                  "amino_acid": "TERM"
-                }
-              ]
+                    "amino_acid": "*"
+                  }
+                ]
+              }
             }
           }
         ]
@@ -893,23 +901,25 @@
               "strand": 1
             },
             "qualifiers": {
-              "translation_exception": [
-                {
-                  "location": {
-                    "type": "range",
-                    "start": {
-                      "type": "point",
-                      "position": 12136
+              "translation_exception": {
+                "exceptions": [
+                  {
+                    "location": {
+                      "type": "range",
+                      "start": {
+                        "type": "point",
+                        "position": 12136
+                      },
+                      "end": {
+                        "type": "point",
+                        "position": 12137
+                      },
+                      "strand": 1
                     },
-                    "end": {
-                      "type": "point",
-                      "position": 12137
-                    },
-                    "strand": 1
-                  },
-                  "amino_acid": "TERM"
-                }
-              ]
+                    "amino_acid": "*"
+                  }
+                ]
+              }
             }
           }
         ]
@@ -1117,23 +1127,25 @@
               "strand": 1
             },
             "qualifiers": {
-              "translation_exception": [
-                {
-                  "location": {
-                    "type": "range",
-                    "start": {
-                      "type": "point",
-                      "position": 15886
+              "translation_exception": {
+                "exceptions": [
+                  {
+                    "location": {
+                      "type": "range",
+                      "start": {
+                        "type": "point",
+                        "position": 15886
+                      },
+                      "end": {
+                        "type": "point",
+                        "position": 15887
+                      },
+                      "strand": 1
                     },
-                    "end": {
-                      "type": "point",
-                      "position": 15887
-                    },
-                    "strand": 1
-                  },
-                  "amino_acid": "TERM"
-                }
-              ]
+                    "amino_acid": "*"
+                  }
+                ]
+              }
             }
           }
         ]
