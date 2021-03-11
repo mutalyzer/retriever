@@ -80,7 +80,7 @@ def _fetch_reference_summary(reference_id):
 
     try:
         handle = Entrez.esummary(db=db, id=reference_id)
-    except (IOError, HTTPError, HTTPException) as e:
+    except (IOError, HTTPError, HTTPException):
         raise ConnectionError
     else:
         try:
