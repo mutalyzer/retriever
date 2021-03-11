@@ -1,7 +1,7 @@
 from .parsers import fasta, gff3, lrg
 
 
-def get_reference_type(content):
+def _get_reference_type(content):
     if content.startswith("<?xml version="):
         return "lrg"
     elif content.startswith("LOCUS"):
@@ -11,7 +11,7 @@ def get_reference_type(content):
 def parse(reference_content, reference_type=None, reference_source=None):
 
     if reference_type is None:
-        reference_type = get_reference_type(reference_content)
+        reference_type = _get_reference_type(reference_content)
 
     if reference_type == "lrg":
         model = lrg.parse(reference_content)

@@ -28,7 +28,7 @@ class NoReferenceError(Exception):
         return self.message
 
 
-def raise_error(status):
+def _raise_error(status):
     no_reference_retrieved = []
     for source in status.keys():
         if len(status[source]["errors"]) == 1 and isinstance(
@@ -43,7 +43,7 @@ def raise_error(status):
     raise NoReferenceError(status)
 
 
-def fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1):
+def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1):
 
     status = {"lrg": {"errors": []}, "ncbi": {"errors": []}, "ensembl": {"errors": []}}
 
@@ -82,7 +82,7 @@ def fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1)
     else:
         return reference_content, reference_type, "ensembl"
 
-    raise_error(status)
+    _raise_error(status)
 
 
 def retrieve_raw(
@@ -93,12 +93,24 @@ def retrieve_raw(
     configuration_path=None,
     timeout=1,
 ):
+    """
+    Retrieve a reference based on the provided id.
+
+    :arg str reference_id: The id of the reference to retrieve.
+    :arg str reference_source: A dedicated retrieval source.
+    :arg str reference_type: A dedicated retrieval type.
+    :arg bool size_off: Download large files.
+    :arg str configuration_path: Paths towards a configuration file.
+    :arg float timeout: Timeout.
+    :returns: Reference content.
+    :rtype: str
+    """
     configuration.settings = configuration.setup_settings(configuration_path)
 
     reference_content = None
 
     if reference_source is None:
-        reference_content, reference_type, reference_source = fetch_unknown_source(
+        reference_content, reference_type, reference_source = _fetch_unknown_source(
             reference_id, reference_type, size_off, timeout
         )
     elif reference_source == "ncbi":
@@ -126,6 +138,18 @@ def retrieve_model(
     configuration_path=None,
     timeout=1,
 ):
+    """
+    Obtain the model of the provided reference id.
+
+    :arg str reference_id: The id of the reference to retrieve.
+    :arg str reference_source: A dedicated retrieval source.
+    :arg str reference_type: A dedicated retrieval type.
+    :arg bool size_off: Download large files.
+    :arg str configuration_path: Paths towards a configuration file.
+    :arg float timeout: Timeout.
+    :returns: Reference model.
+    :rtype: dict
+    """
     configuration.settings = configuration.setup_settings(configuration_path)
 
     reference_content, reference_type, reference_source = retrieve_raw(
@@ -165,6 +189,13 @@ def retrieve_model(
 
 
 def retrieve_model_from_file(paths=[], is_lrg=False):
+    """
+
+    :arg list paths: Path towards the gff3, fasta, or lrg files.
+    :arg bool is_lrg: If there is only one file path of an lrg.
+    :returns: Reference model.
+    :rtype: dict
+    """
     if is_lrg:
         with open(paths[0]) as f:
             content = f.read()

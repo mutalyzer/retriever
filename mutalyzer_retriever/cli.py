@@ -64,7 +64,7 @@ def main():
 
     parser_from_file.add_argument(
         "--paths",
-        help="either gff3 and fasta paths or just one for lrg",
+        help="both gff3 and fasta paths or just an lrg",
         nargs="+",
     )
     parser_from_file.add_argument(
