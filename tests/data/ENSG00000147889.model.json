@@ -30,7 +30,9 @@
           "strand": 1
         },
         "qualifiers": {
-          "name": "AL359922.1"
+          "name": "AL359922.1",
+          "assembly_name": "GRCh38",
+          "version": "2"
         },
         "features": [
           {
@@ -47,6 +49,10 @@
                 "position": 22029594
               },
               "strand": 1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "3"
             },
             "features": [
               {
@@ -85,7 +91,9 @@
           "strand": -1
         },
         "qualifiers": {
-          "name": "CDKN2A"
+          "name": "CDKN2A",
+          "assembly_name": "GRCh38",
+          "version": "17"
         },
         "features": [
           {
@@ -102,6 +110,10 @@
                 "position": 21975098
               },
               "strand": -1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "9"
             },
             "features": [
               {
@@ -185,6 +197,10 @@
               },
               "strand": -1
             },
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "1"
+            },
             "features": [
               {
                 "id": "ENSE00002698483",
@@ -266,6 +282,10 @@
                 "position": 21974858
               },
               "strand": -1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "1"
             },
             "features": [
               {
@@ -349,6 +369,10 @@
               },
               "strand": -1
             },
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "2"
+            },
             "features": [
               {
                 "id": "ENSE00003655039",
@@ -414,6 +438,10 @@
                 "position": 21994411
               },
               "strand": -1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "2"
             },
             "features": [
               {
@@ -496,6 +524,10 @@
                 "position": 21974866
               },
               "strand": -1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "1"
             },
             "features": [
               {
@@ -595,6 +627,10 @@
               },
               "strand": -1
             },
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "6"
+            },
             "features": [
               {
                 "id": "ENSE00001869207",
@@ -677,6 +713,10 @@
               },
               "strand": -1
             },
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "3"
+            },
             "features": [
               {
                 "id": "ENSE00001483879",
@@ -758,6 +798,10 @@
                 "position": 21995269
               },
               "strand": -1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "5"
             },
             "features": [
               {
@@ -856,6 +900,10 @@
                 "position": 21971346
               },
               "strand": -1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "2"
             },
             "features": [
               {
@@ -1039,6 +1087,10 @@
               },
               "strand": -1
             },
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "1"
+            },
             "features": [
               {
                 "id": "ENSE00001907639",
@@ -1152,6 +1204,809 @@
                     "position": 21989955
                   },
                   "strand": -1
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ENSG00000240498",
+        "type": "ncRNA_gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 21994138
+          },
+          "end": {
+            "type": "point",
+            "position": 22128103
+          },
+          "strand": 1
+        },
+        "qualifiers": {
+          "name": "CDKN2B-AS1",
+          "assembly_name": "GRCh38",
+          "version": "9"
+        },
+        "features": [
+          {
+            "id": "ENST00000468603",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994138
+              },
+              "end": {
+                "type": "point",
+                "position": 22034504
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00003842495",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994138
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21994390
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSE00001839178",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21995047
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000651588",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994549
+              },
+              "end": {
+                "type": "point",
+                "position": 22015088
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00003845590",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994549
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000652420",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994777
+              },
+              "end": {
+                "type": "point",
+                "position": 22039498
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00001884148",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994777
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21994849
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSE00001839178",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21995047
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000584351",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994790
+              },
+              "end": {
+                "type": "point",
+                "position": 22077890
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00001681245",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994790
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000583719",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994790
+              },
+              "end": {
+                "type": "point",
+                "position": 22077890
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00001681245",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994790
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000580467",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994790
+              },
+              "end": {
+                "type": "point",
+                "position": 22077890
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00001681245",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994790
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000585267",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994790
+              },
+              "end": {
+                "type": "point",
+                "position": 22120544
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00001681245",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994790
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000580576",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994790
+              },
+              "end": {
+                "type": "point",
+                "position": 22120637
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00001681245",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994790
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000428597",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994790
+              },
+              "end": {
+                "type": "point",
+                "position": 22121097
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00001681245",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994790
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000455933",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994821
+              },
+              "end": {
+                "type": "point",
+                "position": 22077891
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00003850005",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994821
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000645313",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994822
+              },
+              "end": {
+                "type": "point",
+                "position": 22031041
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00003819285",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994822
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000582301",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994901
+              },
+              "end": {
+                "type": "point",
+                "position": 22077890
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00002701784",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994901
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000582072",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994901
+              },
+              "end": {
+                "type": "point",
+                "position": 22120572
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00002701784",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994901
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000584816",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994901
+              },
+              "end": {
+                "type": "point",
+                "position": 22120572
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00002701784",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994901
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000584020",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994901
+              },
+              "end": {
+                "type": "point",
+                "position": 22120572
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00002701784",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994901
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000577551",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994901
+              },
+              "end": {
+                "type": "point",
+                "position": 22120572
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00002701784",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994901
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000584637",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994901
+              },
+              "end": {
+                "type": "point",
+                "position": 22120572
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00002701784",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994901
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000581051",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994901
+              },
+              "end": {
+                "type": "point",
+                "position": 22120572
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00002701784",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994901
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000421632",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21995094
+              },
+              "end": {
+                "type": "point",
+                "position": 22120689
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00002699013",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21995094
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000651904",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21995103
+              },
+              "end": {
+                "type": "point",
+                "position": 22118651
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00003842012",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21995103
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000651784",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21995113
+              },
+              "end": {
+                "type": "point",
+                "position": 22030466
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00003847469",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21995113
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000650946",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21995132
+              },
+              "end": {
+                "type": "point",
+                "position": 22128103
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00003846477",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21995132
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
                 }
               }
             ]

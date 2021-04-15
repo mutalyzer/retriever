@@ -1,0 +1,6 @@
+##gff-version 3
+##sequence-region   1 16514122 16514285
+1	ensembl	ncRNA_gene	16514122	16514285	.	-	.	ID=gene:ENSG00000206652;Name=RNU1-1;assembly_name=GRCh38;biotype=snRNA;description=RNA%2C U1 small nuclear 1 [Source:HGNC Symbol%3BAcc:HGNC:10120];gene_id=ENSG00000206652;logic_name=ncrna_homo_sapiens;version=1
+1	ensembl	snRNA	16514122	16514285	.	-	.	ID=transcript:ENST00000383925;Name=RNU1-1-201;Parent=gene:ENSG00000206652;assembly_name=GRCh38;biotype=snRNA;logic_name=ncrna_homo_sapiens;tag=basic;transcript_id=ENST00000383925;transcript_support_level=NA;version=1
+1	ensembl	exon	16514122	16514285	.	-	.	Name=ENSE00001808303;Parent=transcript:ENST00000383925;assembly_name=GRCh38;constitutive=1;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSE00001808303;rank=1;version=1
+

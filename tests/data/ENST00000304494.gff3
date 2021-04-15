@@ -1,0 +1,79 @@
+##gff-version 3
+##sequence-region   9 21967752 21974857
+9	havana	gene	21802636	22029594	.	+	.	ID=gene:ENSG00000264545;Name=AL359922.1;assembly_name=GRCh38;biotype=protein_coding;description=novel transcript;gene_id=ENSG00000264545;logic_name=havana_homo_sapiens;version=2
+9	ensembl_havana	gene	21967752	21995301	.	-	.	ID=gene:ENSG00000147889;Name=CDKN2A;assembly_name=GRCh38;biotype=protein_coding;description=cyclin dependent kinase inhibitor 2A [Source:HGNC Symbol%3BAcc:HGNC:1787];gene_id=ENSG00000147889;logic_name=ensembl_havana_gene_homo_sapiens;version=18
+9	havana	mRNA	21802636	22029594	.	+	.	ID=transcript:ENST00000404796;Name=AL359922.1-201;Parent=gene:ENSG00000264545;assembly_name=GRCh38;biotype=nonsense_mediated_decay;logic_name=havana_homo_sapiens;tag=basic;transcript_id=ENST00000404796;transcript_support_level=5 (assigned to previous version 2);version=3
+9	ensembl_havana	mRNA	21967752	21974857	.	-	.	ID=transcript:ENST00000304494;Name=CDKN2A-201;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;ccdsid=CCDS6510.1;logic_name=ensembl_havana_transcript_homo_sapiens;tag=basic;transcript_id=ENST00000304494;transcript_support_level=1 (assigned to previous version 9);version=10
+9	ensembl_havana	mRNA	21967752	21994392	.	-	.	ID=transcript:ENST00000579755;Name=CDKN2A-214;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;ccdsid=CCDS6511.2;logic_name=ensembl_havana_transcript_homo_sapiens;tag=basic;transcript_id=ENST00000579755;transcript_support_level=1 (assigned to previous version 1);version=2
+9	havana	mRNA	21967991	21974858	.	-	.	ID=transcript:ENST00000579122;Name=CDKN2A-213;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;logic_name=havana_homo_sapiens;tag=basic;transcript_id=ENST00000579122;transcript_support_level=3;version=1
+9	havana	mRNA	21967996	21971332	.	-	.	ID=transcript:ENST00000578845;Name=CDKN2A-212;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;ccdsid=CCDS87644.1;logic_name=havana_homo_sapiens;tag=basic;transcript_id=ENST00000578845;transcript_support_level=2;version=2
+9	havana	mRNA	21968001	21994411	.	-	.	ID=transcript:ENST00000530628;Name=CDKN2A-210;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;ccdsid=CCDS6511.2;logic_name=havana_homo_sapiens;tag=basic;transcript_id=ENST00000530628;transcript_support_level=5;version=2
+9	ensembl_havana	mRNA	21968056	21974866	.	-	.	ID=transcript:ENST00000498124;Name=CDKN2A-208;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;ccdsid=CCDS56565.1;logic_name=ensembl_havana_transcript_homo_sapiens;tag=basic;transcript_id=ENST00000498124;transcript_support_level=1;version=1
+9	havana	mRNA	21968105	21995301	.	-	.	ID=transcript:ENST00000498628;Name=CDKN2A-209;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;ccdsid=CCDS87644.1;logic_name=havana_homo_sapiens;tag=basic;transcript_id=ENST00000498628;transcript_support_level=2;version=6
+9	havana	mRNA	21968180	21974827	.	-	.	ID=transcript:ENST00000380151;Name=CDKN2A-203;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=nonsense_mediated_decay;logic_name=havana_homo_sapiens;transcript_id=ENST00000380151;transcript_support_level=1;version=3
+9	havana	mRNA	21968182	21995269	.	-	.	ID=transcript:ENST00000494262;Name=CDKN2A-206;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;ccdsid=CCDS87644.1;logic_name=havana_homo_sapiens;tag=basic;transcript_id=ENST00000494262;transcript_support_level=3;version=5
+9	havana	mRNA	21969569	21971346	.	-	.	ID=transcript:ENST00000479692;Name=CDKN2A-205;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;logic_name=havana_homo_sapiens;tag=basic;transcript_id=ENST00000479692;transcript_support_level=5;version=2
+9	havana	lnc_RNA	21969583	21970467	.	-	.	ID=transcript:ENST00000577854;Name=CDKN2A-211;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=processed_transcript;logic_name=havana_homo_sapiens;transcript_id=ENST00000577854;transcript_support_level=3;version=1
+9	havana	lnc_RNA	21970442	21971332	.	-	.	ID=transcript:ENST00000380150;Name=CDKN2A-202;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=processed_transcript;logic_name=havana_homo_sapiens;transcript_id=ENST00000380150;transcript_support_level=3;version=2
+9	havana	mRNA	21970716	21971400	.	-	.	ID=transcript:ENST00000497750;Name=CDKN2A-207;Parent=gene:ENSG00000147889;assembly_name=GRCh38;biotype=protein_coding;logic_name=havana_homo_sapiens;tag=basic;transcript_id=ENST00000497750;transcript_support_level=4;version=1
+9	havana	CDS	21802749	21802781	.	+	0	ID=CDS:ENSP00000385916;Parent=transcript:ENST00000404796;assembly_name=GRCh38;protein_id=ENSP00000385916
+9	havana	CDS	21815433	21815519	.	+	0	ID=CDS:ENSP00000385916;Parent=transcript:ENST00000404796;assembly_name=GRCh38;protein_id=ENSP00000385916
+9	havana	CDS	21816714	21816772	.	+	0	ID=CDS:ENSP00000385916;Parent=transcript:ENST00000404796;assembly_name=GRCh38;protein_id=ENSP00000385916
+9	havana	CDS	21818035	21818202	.	+	1	ID=CDS:ENSP00000385916;Parent=transcript:ENST00000404796;assembly_name=GRCh38;protein_id=ENSP00000385916
+9	havana	CDS	22029433	22029517	.	+	1	ID=CDS:ENSP00000385916;Parent=transcript:ENST00000404796;assembly_name=GRCh38;protein_id=ENSP00000385916
+9	ensembl_havana	CDS	21974678	21974827	.	-	0	ID=CDS:ENSP00000307101;Parent=transcript:ENST00000304494;assembly_name=GRCh38;protein_id=ENSP00000307101
+9	ensembl_havana	CDS	21970902	21971208	.	-	0	ID=CDS:ENSP00000307101;Parent=transcript:ENST00000304494;assembly_name=GRCh38;protein_id=ENSP00000307101
+9	ensembl_havana	CDS	21968229	21968242	.	-	2	ID=CDS:ENSP00000307101;Parent=transcript:ENST00000304494;assembly_name=GRCh38;protein_id=ENSP00000307101
+9	ensembl_havana	CDS	21994139	21994331	.	-	0	ID=CDS:ENSP00000462950;Parent=transcript:ENST00000579755;assembly_name=GRCh38;protein_id=ENSP00000462950
+9	ensembl_havana	CDS	21971003	21971208	.	-	2	ID=CDS:ENSP00000462950;Parent=transcript:ENST00000579755;assembly_name=GRCh38;protein_id=ENSP00000462950
+9	havana	CDS	21974678	21974827	.	-	0	ID=CDS:ENSP00000464202;Parent=transcript:ENST00000579122;assembly_name=GRCh38;protein_id=ENSP00000464202
+9	havana	CDS	21970976	21971208	.	-	0	ID=CDS:ENSP00000464202;Parent=transcript:ENST00000579122;assembly_name=GRCh38;protein_id=ENSP00000464202
+9	havana	CDS	21968209	21968242	.	-	1	ID=CDS:ENSP00000464202;Parent=transcript:ENST00000579122;assembly_name=GRCh38;protein_id=ENSP00000464202
+9	havana	CDS	21970902	21971205	.	-	0	ID=CDS:ENSP00000467390;Parent=transcript:ENST00000578845;assembly_name=GRCh38;protein_id=ENSP00000467390
+9	havana	CDS	21968229	21968242	.	-	2	ID=CDS:ENSP00000467390;Parent=transcript:ENST00000578845;assembly_name=GRCh38;protein_id=ENSP00000467390
+9	havana	CDS	21994139	21994331	.	-	0	ID=CDS:ENSP00000432664;Parent=transcript:ENST00000530628;assembly_name=GRCh38;protein_id=ENSP00000432664
+9	havana	CDS	21971003	21971208	.	-	2	ID=CDS:ENSP00000432664;Parent=transcript:ENST00000530628;assembly_name=GRCh38;protein_id=ENSP00000432664
+9	ensembl_havana	CDS	21974678	21974827	.	-	0	ID=CDS:ENSP00000418915;Parent=transcript:ENST00000498124;assembly_name=GRCh38;protein_id=ENSP00000418915
+9	ensembl_havana	CDS	21970902	21971208	.	-	0	ID=CDS:ENSP00000418915;Parent=transcript:ENST00000498124;assembly_name=GRCh38;protein_id=ENSP00000418915
+9	ensembl_havana	CDS	21968725	21968771	.	-	2	ID=CDS:ENSP00000418915;Parent=transcript:ENST00000498124;assembly_name=GRCh38;protein_id=ENSP00000418915
+9	havana	CDS	21970902	21971205	.	-	0	ID=CDS:ENSP00000467857;Parent=transcript:ENST00000498628;assembly_name=GRCh38;protein_id=ENSP00000467857
+9	havana	CDS	21968229	21968242	.	-	2	ID=CDS:ENSP00000467857;Parent=transcript:ENST00000498628;assembly_name=GRCh38;protein_id=ENSP00000467857
+9	havana	CDS	21974477	21974827	.	-	0	ID=CDS:ENSP00000369496;Parent=transcript:ENST00000380151;assembly_name=GRCh38;protein_id=ENSP00000369496
+9	havana	CDS	21970902	21971205	.	-	0	ID=CDS:ENSP00000464952;Parent=transcript:ENST00000494262;assembly_name=GRCh38;protein_id=ENSP00000464952
+9	havana	CDS	21968229	21968242	.	-	2	ID=CDS:ENSP00000464952;Parent=transcript:ENST00000494262;assembly_name=GRCh38;protein_id=ENSP00000464952
+9	havana	CDS	21970902	21971205	.	-	0	ID=CDS:ENSP00000466887;Parent=transcript:ENST00000479692;assembly_name=GRCh38;protein_id=ENSP00000466887
+9	havana	CDS	21969732	21969793	.	-	2	ID=CDS:ENSP00000466887;Parent=transcript:ENST00000479692;assembly_name=GRCh38;protein_id=ENSP00000466887
+9	havana	CDS	21970891	21971205	.	-	0	ID=CDS:ENSP00000468510;Parent=transcript:ENST00000497750;assembly_name=GRCh38;protein_id=ENSP00000468510
+9	ensembl_havana	exon	21974678	21974857	.	-	.	Name=ENSE00001833804;Parent=transcript:ENST00000304494;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=0;ensembl_phase=-1;exon_id=ENSE00001833804;rank=1;version=2
+9	ensembl_havana	exon	21970902	21971208	.	-	.	Name=ENSE00003496053;Parent=transcript:ENST00000304494;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=1;ensembl_phase=0;exon_id=ENSE00003496053;rank=2;version=1
+9	ensembl_havana	exon	21967752	21968242	.	-	.	Name=ENSE00003529527;Parent=transcript:ENST00000304494;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=1;exon_id=ENSE00003529527;rank=3;version=2
+9	ensembl_havana	exon	21970902	21971208	.	-	.	Name=ENSE00003513347;Parent=transcript:ENST00000579755;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=1;exon_id=ENSE00003513347;rank=2;version=1
+9	ensembl_havana	exon	21967752	21968242	.	-	.	Name=ENSE00003565933;Parent=transcript:ENST00000579755;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSE00003565933;rank=3;version=2
+9	havana	exon	21974678	21974858	.	-	.	Name=ENSE00002732562;Parent=transcript:ENST00000579122;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=0;ensembl_phase=-1;exon_id=ENSE00002732562;rank=1;version=1
+9	havana	exon	21970976	21971208	.	-	.	Name=ENSE00003492255;Parent=transcript:ENST00000579122;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=2;ensembl_phase=0;exon_id=ENSE00003492255;rank=2;version=1
+9	havana	exon	21967991	21968242	.	-	.	Name=ENSE00002690503;Parent=transcript:ENST00000579122;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=2;exon_id=ENSE00002690503;rank=3;version=1
+9	havana	exon	21970902	21971332	.	-	.	Name=ENSE00003655039;Parent=transcript:ENST00000578845;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=1;ensembl_phase=-1;exon_id=ENSE00003655039;rank=1;version=1
+9	havana	exon	21967996	21968242	.	-	.	Name=ENSE00002793208;Parent=transcript:ENST00000578845;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=1;exon_id=ENSE00002793208;rank=2;version=1
+9	havana	exon	21970976	21971208	.	-	.	Name=ENSE00003622025;Parent=transcript:ENST00000530628;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=1;exon_id=ENSE00003622025;rank=2;version=1
+9	havana	exon	21968001	21968242	.	-	.	Name=ENSE00002700745;Parent=transcript:ENST00000530628;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSE00002700745;rank=3;version=1
+9	ensembl_havana	exon	21974678	21974866	.	-	.	Name=ENSE00001831262;Parent=transcript:ENST00000498124;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=0;ensembl_phase=-1;exon_id=ENSE00001831262;rank=1;version=1
+9	ensembl_havana	exon	21970902	21971208	.	-	.	Name=ENSE00003496053;Parent=transcript:ENST00000498124;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=1;ensembl_phase=0;exon_id=ENSE00003496053;rank=2;version=1
+9	ensembl_havana	exon	21968575	21968771	.	-	.	Name=ENSE00001908861;Parent=transcript:ENST00000498124;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=1;exon_id=ENSE00001908861;rank=3;version=1
+9	ensembl_havana	exon	21968056	21968242	.	-	.	Name=ENSE00001885678;Parent=transcript:ENST00000498124;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSE00001885678;rank=4;version=1
+9	havana	exon	21970902	21971208	.	-	.	Name=ENSE00003475459;Parent=transcript:ENST00000498628;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=1;ensembl_phase=-1;exon_id=ENSE00003475459;rank=2;version=1
+9	havana	exon	21968105	21968242	.	-	.	Name=ENSE00002711598;Parent=transcript:ENST00000498628;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=1;exon_id=ENSE00002711598;rank=3;version=1
+9	havana	exon	21974404	21974827	.	-	.	Name=ENSE00001483879;Parent=transcript:ENST00000380151;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=0;exon_id=ENSE00001483879;rank=1;version=3
+9	havana	exon	21970902	21971208	.	-	.	Name=ENSE00003654153;Parent=transcript:ENST00000380151;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSE00003654153;rank=2;version=1
+9	havana	exon	21968180	21968242	.	-	.	Name=ENSE00001938650;Parent=transcript:ENST00000380151;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSE00001938650;rank=3;version=1
+9	havana	exon	21970902	21971208	.	-	.	Name=ENSE00003475459;Parent=transcript:ENST00000494262;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=1;ensembl_phase=-1;exon_id=ENSE00003475459;rank=3;version=1
+9	havana	exon	21968182	21968242	.	-	.	Name=ENSE00001904663;Parent=transcript:ENST00000494262;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=1;exon_id=ENSE00001904663;rank=4;version=1
+9	havana	exon	21971335	21971346	.	-	.	Name=ENSE00002738871;Parent=transcript:ENST00000479692;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSE00002738871;rank=1;version=1
+9	havana	exon	21970902	21971208	.	-	.	Name=ENSE00003475459;Parent=transcript:ENST00000479692;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=1;ensembl_phase=-1;exon_id=ENSE00003475459;rank=2;version=1
+9	havana	exon	21969569	21969793	.	-	.	Name=ENSE00001947937;Parent=transcript:ENST00000479692;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=1;exon_id=ENSE00001947937;rank=3;version=1
+9	havana	exon	21970237	21970467	.	-	.	Name=ENSE00002698371;Parent=transcript:ENST00000577854;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSE00002698371;rank=1;version=1
+9	havana	exon	21969583	21969793	.	-	.	Name=ENSE00002710477;Parent=transcript:ENST00000577854;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSE00002710477;rank=2;version=1
+9	havana	exon	21970902	21971332	.	-	.	Name=ENSE00003662052;Parent=transcript:ENST00000380150;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSE00003662052;rank=1;version=1
+9	havana	exon	21970442	21970503	.	-	.	Name=ENSE00001939805;Parent=transcript:ENST00000380150;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSE00001939805;rank=2;version=1
+9	havana	exon	21971329	21971400	.	-	.	Name=ENSE00001907639;Parent=transcript:ENST00000497750;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSE00001907639;rank=1;version=1
+9	havana	exon	21970716	21971208	.	-	.	Name=ENSE00001888208;Parent=transcript:ENST00000497750;assembly_name=GRCh38;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSE00001888208;rank=2;version=1
+

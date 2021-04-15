@@ -40,9 +40,20 @@ from Bio.SeqUtils import seq1
 
 from ..util import make_location
 
-CONSIDERED_TYPES = ["gene", "mRNA", "exon", "CDS", "lnc_RNA"]
+CONSIDERED_TYPES = ["gene", "ncRNA_gene", "mRNA", "exon", "CDS", "lnc_RNA", "snRNA"]
 QUALIFIERS = {
-    "gene": {"Name": "name", "gene_synonym": "synonym"},
+    "gene": {
+        "Name": "name",
+        "gene_synonym": "synonym",
+        "version": "version",
+        "assembly_name": "assembly_name",
+    },
+    "ncRNA_gene": {
+        "Name": "name",
+        "gene_synonym": "synonym",
+        "version": "version",
+        "assembly_name": "assembly_name",
+    },
     "region": {
         "organism": "organism",
         "mol_type": "mol_type",
@@ -54,6 +65,14 @@ QUALIFIERS = {
         "Name": "name",
     },
     "CDS": {"transl_except": "translation_exception"},
+    "mRNA": {
+        "version": "version",
+        "assembly_name": "assembly_name",
+    },
+    "snRNA": {
+        "version": "version",
+        "assembly_name": "assembly_name",
+    },
 }
 SO_IDS = {
     "gene": "SO:0000704",
@@ -69,9 +88,15 @@ def _get_feature_id(feature):
         if feature.qualifiers.get("gene_id"):
             return feature.qualifiers["gene_id"][0]
         return feature.qualifiers["Name"][0]
+    if feature.type == "ncRNA_gene":
+        if feature.qualifiers.get("gene_id"):
+            return feature.qualifiers["gene_id"][0]
+        return feature.qualifiers["Name"][0]
     elif feature.type == "mRNA":
         return feature.qualifiers["transcript_id"][0]
     elif feature.type == "lnc_RNA":
+        return feature.qualifiers["transcript_id"][0]
+    elif feature.type == "snRNA":
         return feature.qualifiers["transcript_id"][0]
     elif feature.type == "CDS":
         if feature.qualifiers.get("protein_id"):
