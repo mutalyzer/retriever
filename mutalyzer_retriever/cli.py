@@ -9,9 +9,9 @@ from . import usage, version
 from .retriever import retrieve_model, retrieve_model_from_file, retrieve_raw
 
 
-def main():
+def _arg_parser():
     """
-    Main entry point.
+    Command line argument parsing.
     """
     parser = argparse.ArgumentParser(
         description=usage[0],
@@ -56,11 +56,9 @@ def main():
 
     parser.add_argument("-c", "--configuration", help="configuration file path")
 
-    subparsers = parser.add_subparsers(
-        help="parse files to get the model", dest="from_file"
-    )
+    subparsers = parser.add_subparsers(dest="from_file")
 
-    parser_from_file = subparsers.add_parser("from_file")
+    parser_from_file = subparsers.add_parser("from_file", help="parse files to get the model")
 
     parser_from_file.add_argument(
         "--paths",
@@ -73,8 +71,19 @@ def main():
         action="store_true",
         default=False,
     )
+    return parser
 
-    args = parser.parse_args()
+
+def main():
+    """
+    Main entry point.
+    """
+    parser = _arg_parser()
+
+    try:
+        args = parser.parse_args()
+    except IOError as error:
+        parser.error(error)
 
     if args.indent:
         args.indent = int(args.indent)

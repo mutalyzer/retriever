@@ -1,45 +1,7 @@
 Usage
 =====
 
-The package provides a command line interface. Use ``-h`` to see the available options.
-
-.. code-block:: console
-
-    $ mutalyzer_retriever -h
-    usage: mutalyzer_retriever [-h] [-v]
-                               [--id ID]
-                               [-s {ncbi,ensembl,lrg}]
-                               [-t {gff3,genbank,json,fasta}]
-                               [-p]
-                               [-m {all,sequence,annotations}
-                               [--timeout TIMEOUT]
-                               [--indent INDENT]
-                               [--sizeoff]
-                               [-c CONFIGURATION]
-                               {from_file} ...
-
-    Mutalyzer genomic reference retriever.
-
-    positional arguments:
-      {from_file}           parse files to get the model
-
-    optional arguments:
-      -h, --help            show this help message and exit
-      -v                    show program's version number and exit
-      --id ID               the reference id
-      -s {ncbi,ensembl,lrg}, --source {ncbi,ensembl,lrg}
-                            retrieval source
-      -t {gff3,genbank,json,fasta}, --type {gff3,genbank,json,fasta}
-                            reference type
-      -p, --parse           parse reference content
-      -m {all,sequence,annotations}, --model_type {all,sequence,annotations}
-                            include the complete model or parts of it
-      --timeout TIMEOUT     timeout
-      --indent INDENT       indentation spaces
-      --sizeoff             do not consider file size
-      -c CONFIGURATION, --configuration CONFIGURATION
-                            configuration file path
-
+This package provides a :doc:`command line interface <cli>`.
 
 Retrieve a reference
 --------------------
