@@ -1,0 +1,46 @@
+##gff-version 3
+##sequence-region   15 61857240 61862223
+15	ensembl_havana	gene	61857240	61862223	.	+	.	ID=gene:ENSMUSG00000022346;Name=Myc;assembly_name=GRCm39;biotype=protein_coding;description=myelocytomatosis oncogene [Source:MGI Symbol%3BAcc:MGI:97250];gene_id=ENSMUSG00000022346;logic_name=ensembl_havana_gene_mus_musculus;version=18
+15	ensembl_havana	mRNA	61857240	61862199	.	+	.	ID=transcript:ENSMUST00000161976;Name=Myc-205;Parent=gene:ENSMUSG00000022346;assembly_name=GRCm39;biotype=protein_coding;ccdsid=CCDS49615.1;logic_name=ensembl_havana_transcript_mus_musculus;tag=basic;transcript_id=ENSMUST00000161976;transcript_support_level=1 (assigned to previous version 7);version=8
+15	ensembl_havana	mRNA	61857240	61862199	.	+	.	ID=transcript:ENSMUST00000022971;Name=Myc-201;Parent=gene:ENSMUSG00000022346;assembly_name=GRCm39;biotype=protein_coding;ccdsid=CCDS27504.1;logic_name=ensembl_havana_transcript_mus_musculus;tag=basic;transcript_id=ENSMUST00000022971;transcript_support_level=1 (assigned to previous version 7);version=8
+15	havana	mRNA	61857413	61862223	.	+	.	ID=transcript:ENSMUST00000159327;Name=Myc-202;Parent=gene:ENSMUSG00000022346;assembly_name=GRCm39;biotype=protein_coding;ccdsid=CCDS49615.1;logic_name=havana_mus_musculus;tag=basic;transcript_id=ENSMUST00000159327;transcript_support_level=1 (assigned to previous version 1);version=2
+15	havana	mRNA	61857471	61861916	.	+	.	ID=transcript:ENSMUST00000167731;Name=Myc-206;Parent=gene:ENSMUSG00000022346;assembly_name=GRCm39;biotype=protein_coding;ccdsid=CCDS49614.1;logic_name=havana_mus_musculus;tag=basic;transcript_id=ENSMUST00000167731;transcript_support_level=1 (assigned to previous version 7);version=8
+15	ensembl	mRNA	61857771	61861757	.	+	.	ID=transcript:ENSMUST00000191178;Name=Myc-207;Parent=gene:ENSMUSG00000022346;assembly_name=GRCm39;biotype=protein_coding;ccdsid=CCDS49614.1;logic_name=ensembl_mus_musculus;tag=basic;transcript_id=ENSMUST00000191178;transcript_support_level=1 (assigned to previous version 1);version=3
+15	havana	mRNA	61858883	61859466	.	+	.	ID=transcript:ENSMUST00000159338;Name=Myc-203;Parent=gene:ENSMUSG00000022346;assembly_name=GRCm39;biotype=protein_coding;logic_name=havana_mus_musculus;transcript_id=ENSMUST00000159338;transcript_support_level=2 (assigned to previous version 1);version=2
+15	ensembl_havana	mRNA	61859271	61862102	.	+	.	ID=transcript:ENSMUST00000160009;Name=Myc-204;Parent=gene:ENSMUSG00000022346;assembly_name=GRCm39;biotype=protein_coding;ccdsid=CCDS49615.1;logic_name=ensembl_havana_transcript_mus_musculus;tag=basic;transcript_id=ENSMUST00000160009;transcript_support_level=1 (assigned to previous version 1);version=2
+15	ensembl_havana	CDS	61859371	61860127	.	+	0	ID=CDS:ENSMUSP00000123821;Parent=transcript:ENSMUST00000161976;assembly_name=GRCm39;protein_id=ENSMUSP00000123821
+15	ensembl_havana	CDS	61861195	61861757	.	+	2	ID=CDS:ENSMUSP00000123821;Parent=transcript:ENSMUST00000161976;assembly_name=GRCm39;protein_id=ENSMUSP00000123821
+15	ensembl_havana	CDS	61857771	61857800	.	+	0	ID=CDS:ENSMUSP00000022971;Parent=transcript:ENSMUST00000022971;assembly_name=GRCm39;protein_id=ENSMUSP00000022971
+15	ensembl_havana	CDS	61859356	61860127	.	+	0	ID=CDS:ENSMUSP00000022971;Parent=transcript:ENSMUST00000022971;assembly_name=GRCm39;protein_id=ENSMUSP00000022971
+15	ensembl_havana	CDS	61861195	61861757	.	+	2	ID=CDS:ENSMUSP00000022971;Parent=transcript:ENSMUST00000022971;assembly_name=GRCm39;protein_id=ENSMUSP00000022971
+15	havana	CDS	61859371	61860127	.	+	0	ID=CDS:ENSMUSP00000124758;Parent=transcript:ENSMUST00000159327;assembly_name=GRCm39;protein_id=ENSMUSP00000124758
+15	havana	CDS	61861195	61861757	.	+	2	ID=CDS:ENSMUSP00000124758;Parent=transcript:ENSMUST00000159327;assembly_name=GRCm39;protein_id=ENSMUSP00000124758
+15	havana	CDS	61857771	61857800	.	+	0	ID=CDS:ENSMUSP00000130285;Parent=transcript:ENSMUST00000167731;assembly_name=GRCm39;protein_id=ENSMUSP00000130285
+15	havana	CDS	61859359	61860127	.	+	0	ID=CDS:ENSMUSP00000130285;Parent=transcript:ENSMUST00000167731;assembly_name=GRCm39;protein_id=ENSMUSP00000130285
+15	havana	CDS	61861195	61861757	.	+	2	ID=CDS:ENSMUSP00000130285;Parent=transcript:ENSMUST00000167731;assembly_name=GRCm39;protein_id=ENSMUSP00000130285
+15	ensembl	CDS	61857771	61857800	.	+	0	ID=CDS:ENSMUSP00000141139;Parent=transcript:ENSMUST00000191178;assembly_name=GRCm39;protein_id=ENSMUSP00000141139
+15	ensembl	CDS	61859359	61860127	.	+	0	ID=CDS:ENSMUSP00000141139;Parent=transcript:ENSMUST00000191178;assembly_name=GRCm39;protein_id=ENSMUSP00000141139
+15	ensembl	CDS	61861195	61861757	.	+	2	ID=CDS:ENSMUSP00000141139;Parent=transcript:ENSMUST00000191178;assembly_name=GRCm39;protein_id=ENSMUSP00000141139
+15	havana	CDS	61859371	61859466	.	+	0	ID=CDS:ENSMUSP00000125480;Parent=transcript:ENSMUST00000159338;assembly_name=GRCm39;protein_id=ENSMUSP00000125480
+15	ensembl_havana	CDS	61859371	61860127	.	+	0	ID=CDS:ENSMUSP00000123852;Parent=transcript:ENSMUST00000160009;assembly_name=GRCm39;protein_id=ENSMUSP00000123852
+15	ensembl_havana	CDS	61861195	61861757	.	+	2	ID=CDS:ENSMUSP00000123852;Parent=transcript:ENSMUST00000160009;assembly_name=GRCm39;protein_id=ENSMUSP00000123852
+15	ensembl_havana	exon	61857240	61857800	.	+	.	Name=ENSMUSE00001294475;Parent=transcript:ENSMUST00000161976;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSMUSE00001294475;rank=1;version=2
+15	ensembl_havana	exon	61859356	61860127	.	+	.	Name=ENSMUSE00001285920;Parent=transcript:ENSMUST00000161976;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=1;ensembl_phase=-1;exon_id=ENSMUSE00001285920;rank=2;version=2
+15	ensembl_havana	exon	61861195	61862199	.	+	.	Name=ENSMUSE00000853356;Parent=transcript:ENSMUST00000161976;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=-1;ensembl_phase=1;exon_id=ENSMUSE00000853356;rank=3;version=2
+15	ensembl_havana	exon	61857240	61857800	.	+	.	Name=ENSMUSE00001254467;Parent=transcript:ENSMUST00000022971;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=0;ensembl_phase=-1;exon_id=ENSMUSE00001254467;rank=1;version=2
+15	ensembl_havana	exon	61859356	61860127	.	+	.	Name=ENSMUSE00001251339;Parent=transcript:ENSMUST00000022971;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=1;ensembl_phase=0;exon_id=ENSMUSE00001251339;rank=2;version=2
+15	ensembl_havana	exon	61861195	61862199	.	+	.	Name=ENSMUSE00000853356;Parent=transcript:ENSMUST00000022971;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=-1;ensembl_phase=1;exon_id=ENSMUSE00000853356;rank=3;version=2
+15	havana	exon	61857413	61857800	.	+	.	Name=ENSMUSE00000852050;Parent=transcript:ENSMUST00000159327;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSMUSE00000852050;rank=1;version=2
+15	havana	exon	61859359	61860127	.	+	.	Name=ENSMUSE00001250447;Parent=transcript:ENSMUST00000159327;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=1;ensembl_phase=-1;exon_id=ENSMUSE00001250447;rank=2;version=2
+15	havana	exon	61861195	61862223	.	+	.	Name=ENSMUSE00000853670;Parent=transcript:ENSMUST00000159327;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=-1;ensembl_phase=1;exon_id=ENSMUSE00000853670;rank=3;version=2
+15	havana	exon	61857471	61857800	.	+	.	Name=ENSMUSE00000872475;Parent=transcript:ENSMUST00000167731;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=0;ensembl_phase=-1;exon_id=ENSMUSE00000872475;rank=1;version=2
+15	havana	exon	61859359	61860127	.	+	.	Name=ENSMUSE00001248962;Parent=transcript:ENSMUST00000167731;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=1;ensembl_phase=0;exon_id=ENSMUSE00001248962;rank=2;version=2
+15	havana	exon	61861195	61861916	.	+	.	Name=ENSMUSE00000888774;Parent=transcript:ENSMUST00000167731;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=-1;ensembl_phase=1;exon_id=ENSMUSE00000888774;rank=3;version=2
+15	ensembl	exon	61857771	61857800	.	+	.	Name=ENSMUSE00001324076;Parent=transcript:ENSMUST00000191178;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=0;ensembl_phase=0;exon_id=ENSMUSE00001324076;rank=1;version=2
+15	ensembl	exon	61859359	61860127	.	+	.	Name=ENSMUSE00001248962;Parent=transcript:ENSMUST00000191178;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=1;ensembl_phase=0;exon_id=ENSMUSE00001248962;rank=2;version=2
+15	ensembl	exon	61861195	61861757	.	+	.	Name=ENSMUSE00001320269;Parent=transcript:ENSMUST00000191178;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=0;ensembl_phase=1;exon_id=ENSMUSE00001320269;rank=3;version=2
+15	havana	exon	61858883	61859152	.	+	.	Name=ENSMUSE00000869230;Parent=transcript:ENSMUST00000159338;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=-1;ensembl_phase=-1;exon_id=ENSMUSE00000869230;rank=1;version=2
+15	havana	exon	61859356	61859466	.	+	.	Name=ENSMUSE00000848798;Parent=transcript:ENSMUST00000159338;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=0;ensembl_phase=-1;exon_id=ENSMUSE00000848798;rank=2;version=2
+15	ensembl_havana	exon	61859271	61860127	.	+	.	Name=ENSMUSE00000858939;Parent=transcript:ENSMUST00000160009;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=1;ensembl_phase=-1;exon_id=ENSMUSE00000858939;rank=1;version=2
+15	ensembl_havana	exon	61861195	61862102	.	+	.	Name=ENSMUSE00000865439;Parent=transcript:ENSMUST00000160009;assembly_name=GRCm39;constitutive=0;ensembl_end_phase=-1;ensembl_phase=1;exon_id=ENSMUSE00000865439;rank=2;version=2
+

@@ -1,0 +1,84 @@
+{
+  "annotations": {
+    "id": "1",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 16514121
+      },
+      "end": {
+        "type": "point",
+        "position": 16514285
+      }
+    },
+    "features": [
+      {
+        "id": "ENSG00000206652",
+        "type": "ncRNA_gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 16514121
+          },
+          "end": {
+            "type": "point",
+            "position": 16514285
+          },
+          "strand": -1
+        },
+        "qualifiers": {
+          "name": "RNU1-1",
+          "assembly_name": "GRCh38",
+          "version": "1"
+        },
+        "features": [
+          {
+            "id": "ENST00000383925",
+            "type": "snRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 16514121
+              },
+              "end": {
+                "type": "point",
+                "position": 16514285
+              },
+              "strand": -1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "1"
+            },
+            "features": [
+              {
+                "id": "ENSE00001808303",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 16514121
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 16514285
+                  },
+                  "strand": -1
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "ATACTTACCTGGCAGGGGAGATACCATGATCACGAAGGTGGTTTTCCCAGGGCGAGGCTTATCCATTGCACTCCGGATGTGCTGACCCCTGCGATTTCCCCAAATGTGGGAAACTCGACTGCATAATTTGTGGTAGTGGGGGACTGCGTTCGCGCTTTCCCCTG",
+    "description": "ENST00000383925.1 chromosome:GRCh38:1:16514122:16514285:-1"
+  }
+}

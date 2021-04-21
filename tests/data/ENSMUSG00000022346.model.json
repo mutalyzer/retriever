@@ -1,0 +1,616 @@
+{
+  "annotations": {
+    "id": "15",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 61857239
+      },
+      "end": {
+        "type": "point",
+        "position": 61862223
+      }
+    },
+    "features": [
+      {
+        "id": "ENSMUSG00000022346",
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 61857239
+          },
+          "end": {
+            "type": "point",
+            "position": 61862223
+          },
+          "strand": 1
+        },
+        "qualifiers": {
+          "name": "Myc",
+          "assembly_name": "GRCm39",
+          "version": "18"
+        },
+        "features": [
+          {
+            "id": "ENSMUST00000161976",
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 61857239
+              },
+              "end": {
+                "type": "point",
+                "position": 61862199
+              },
+              "strand": 1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCm39",
+              "version": "8"
+            },
+            "features": [
+              {
+                "id": "ENSMUSE00001294475",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61857239
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61857800
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSE00001285920",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61859355
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61860127
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSE00000853356",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61861194
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61862199
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSP00000123821",
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61859370
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61861757
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENSMUST00000022971",
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 61857239
+              },
+              "end": {
+                "type": "point",
+                "position": 61862199
+              },
+              "strand": 1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCm39",
+              "version": "8"
+            },
+            "features": [
+              {
+                "id": "ENSMUSE00001254467",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61857239
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61857800
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSE00001251339",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61859355
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61860127
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSE00000853356",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61861194
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61862199
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSP00000022971",
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61857770
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61861757
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENSMUST00000159327",
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 61857412
+              },
+              "end": {
+                "type": "point",
+                "position": 61862223
+              },
+              "strand": 1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCm39",
+              "version": "2"
+            },
+            "features": [
+              {
+                "id": "ENSMUSE00000852050",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61857412
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61857800
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSE00001250447",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61859358
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61860127
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSE00000853670",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61861194
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61862223
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSP00000124758",
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61859370
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61861757
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENSMUST00000167731",
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 61857470
+              },
+              "end": {
+                "type": "point",
+                "position": 61861916
+              },
+              "strand": 1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCm39",
+              "version": "8"
+            },
+            "features": [
+              {
+                "id": "ENSMUSE00000872475",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61857470
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61857800
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSE00001248962",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61859358
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61860127
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSE00000888774",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61861194
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61861916
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSP00000130285",
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61857770
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61861757
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENSMUST00000191178",
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 61857770
+              },
+              "end": {
+                "type": "point",
+                "position": 61861757
+              },
+              "strand": 1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCm39",
+              "version": "3"
+            },
+            "features": [
+              {
+                "id": "ENSMUSE00001324076",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61857770
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61857800
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSE00001248962",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61859358
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61860127
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSE00001320269",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61861194
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61861757
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSP00000141139",
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61857770
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61861757
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENSMUST00000159338",
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 61858882
+              },
+              "end": {
+                "type": "point",
+                "position": 61859466
+              },
+              "strand": 1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCm39",
+              "version": "2"
+            },
+            "features": [
+              {
+                "id": "ENSMUSE00000869230",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61858882
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61859152
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSE00000848798",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61859355
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61859466
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSP00000125480",
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61859370
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61859466
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENSMUST00000160009",
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 61859270
+              },
+              "end": {
+                "type": "point",
+                "position": 61862102
+              },
+              "strand": 1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCm39",
+              "version": "2"
+            },
+            "features": [
+              {
+                "id": "ENSMUSE00000858939",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61859270
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61860127
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSE00000865439",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61861194
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61862102
+                  },
+                  "strand": 1
+                }
+              },
+              {
+                "id": "ENSMUSP00000123852",
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 61859370
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 61861757
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "TGGGCTGCGCTGCTCTCAGCTGCCGGGTCCGACTCGCCTCACTCAGCTCCCCTCCTGCCTCCTGAAGGGCAGGGCTTCGCCGACGCTTGGCGGGAAAAAGAAGGGAGGGGAGGGATCCTGAGTCGCAGTATAAAAGAAGCTTTTCGGGCGTTTTTTTCTGACTCGCTGTAGTAATTCCAGCGAGAGACAGAGGGAGTGAGCGGACGGTTGGAAGAGCCGTGTGTGCAGAGCCGCGCTCCGGGGCGACCTAAGAAGGCAGCTCTGGAGTGAGAGGGGCTTTGCCTCCGAGCCTGCCGCCCACTCTCCCCAACCCTGCGACTGACCCAACATCAGCGGCCGCAACCCTCGCCGCCGCTGGGAAACTTTGCCCATTGCAGCGGGCAGACACTTCTCACTGGAACTTACAATCTGCGAGCCAGGACAGGACTCCCCAGGCTCCGGGGAGGGAATTTTTGTCTATTTGGGGACAGTGTTCTCTGCCTCTGCCCGCGATCAGCTCTCCTGAAAAGAGCTCCTCGAGCTGTTTGAAGGCTGGATTTCCTTTGGGCGTTGGAAACCCCGGTAAGCACAGATCTGGTGGTCTTTCCCTGTGTTCTTTCTGCGTCTTGAATGTAGCGGCCGGTTAGGACAGTCTTTCTTCCATTCCTGTGCTTTTGACACTTTTCTCAAGAGTAGTTGGGGTAGGCTGGGGTAGATCTGAGTCGGGGTAGAGCGACTTGTCAAGATGACAGAGGAAAGGGGAAGGGAAAAACCGGGATGCATTTTGAAGCGGGGTTCCCGAGGTTACTATGGGCTGACGCTGACCCGGCCGGTTGGACATTCTTGCTTTGCTACATTAATTGATATGTGTCCTTTGAGGGGTCAAACCGGGAGGTCGCTTCGTGGTGGCCAAAGAAAGCCCTTGGAATCCTGAGGTCTTTGGAGAAGGGATTACCTTTTGCGTTTGGGAGCGAGAAGGCTCCGTAGCTTCTGACTTACCAGTCTCTGAGAGGGCATTTAAATTTCAGCTTGGTGCATTTCTGACAGCCTGGGACCGACACGGAGGTGCGTCCCGCCCGCCAATCCCCGGCGGCGATCGCAACCCGTCCCTGAGCCTTTTAAGAAGTTGCTATTTTGGCTTTAAAAATAGTGATCGTAGTAAAATTTAAGCCTGACCCCCGCGGCACTAGGACTTGATGTTGGGCTAGCGCAGTGAGGAGAAGCAAAATTGGGACAGGGATGTGACCGATTCGTTGACTTGGGGGAAACCAGAGGGAATCCTCACATTCCTACTTGGGATCCGCGGGTATCCCTCGCGCCCCTGAATTGCTAGGAAGACTGCGGTGAGTCGTGATCTGAGCGGTTCCGTAACAGCTGCTACCCTCGGCGGGGAGAGGGAAGACGCCCTGCACCCAGTGCTGAATCGCTGCAGGGTCTCTGGTGCAGTGGCGTCGCGGTTTAGAGTGTAGAAGGGAGGTGTCTCTTATTATTTGACACCCCCTCCCCTTTTATTTCGAGAGGCTTGTGATAGCCGGAGACTGAGCTCTCTCCTCCAAGTCAGCAATCGGAAAGAAAAGCCGGCAAAGGAAGGAAGGGGGCGCGCTGGGGGTGGAGAAAGAGGAGGGCGGAGAGGGGCGGCGGCGCCGGCTGGGTAGGAGCGCGGCGACGGCGCGAATAGGGACTCGGACCCGGTCGGCGGCGCAGAGAGCCGGCACACGGGAGGGGGCCGAGCGACGCGGCGCCTCTCGCCTTTCTCCTTCAGGTGGCGCAAAACTTTGCGCCTCGGCTCTTAGCAGACTGTATTCCCTACAGTCGCCTCCCTCAGCCTCTGAAGCCAAGGCCGATGGCGATTCCTGGGCGTCTGCAGGGCTAAGTCCCTGCTCGAAGGAGGCGGGGACTCGGAGCAGCTGCTAGTCCGACGAGCGTCACTGATAGTAGGGAGTAAAAGAGTGCATGCCTCCCCCCCAACCACACACACACACACACACACACACACACACACACACACACACACACTTGGAAGTACAGCACGCTGAAAGGGGAGTGGTTCAGGATTGGGGTACGCGCTGCGCCAGGTTTCCGCACCAACCAGAGCTGGATAACTCTAGACTTGCTTCCCTTGCTGTGCCCCCTCCAGCAGACAGCCACGACGATGCCCCTCAACGTGAACTTCACCAACAGGAACTATGACCTCGACTACGACTCCGTACAGCCCTATTTCATCTGCGACGAGGAAGAGAATTTCTATCACCAGCAACAGCAGAGCGAGCTGCAGCCGCCCGCGCCCAGTGAGGATATCTGGAAGAAATTCGAGCTGCTTCCCACCCCGCCCCTGTCCCCGAGCCGCCGCTCCGGGCTCTGCTCTCCATCCTATGTTGCGGTCGCTACGTCCTTCTCCCCAAGGGAAGACGATGACGGCGGCGGTGGCAACTTCTCCACCGCCGATCAGCTGGAGATGATGACCGAGTTACTTGGAGGAGACATGGTGAACCAGAGCTTCATCTGCGATCCTGACGACGAGACCTTCATCAAGAACATCATCATCCAGGACTGTATGTGGAGCGGTTTCTCAGCCGCTGCCAAGCTGGTCTCGGAGAAGCTGGCCTCCTACCAGGCTGCGCGCAAAGACAGCACCAGCCTGAGCCCCGCCCGCGGGCACAGCGTCTGCTCCACCTCCAGCCTGTACCTGCAGGACCTCACCGCCGCCGCGTCCGAGTGCATTGACCCCTCAGTGGTCTTTCCCTACCCGCTCAACGACAGCAGCTCGCCCAAATCCTGTACCTCGTCCGATTCCACGGCCTTCTCTCCTTCCTCGGACTCGCTGCTGTCCTCCGAGTCCTCCCCACGGGCCAGCCCTGAGCCCCTAGTGCTGCATGAGGAGACACCGCCCACCACCAGCAGCGACTCTGGTAAGCTACCCCATTCACAGCAGGGTAGGAAGCGAGAGGTTGGATGGACCTCCTTCTCCACCACTCATTGGCATTAATTCAATTGGCCTCCGGGGCTCCCCCTTTCTTTCCCTTCTGTCTAAGAGCTCTTCATCCCTGGATTCCCGTGCTTCAGCTATCCCTCCCTCCCCTCCCCCCCCCCCCCCCAGACCGCCCTGGTTGTCACCCCCACCCCCCACCCTTCCCACCCCTCAGGAATTTCATTTGGGTTTTTAAATCTTCTGGCTTATCTTTCAGCTCCATCCACTCCCTTTACCCCTCCTAAGCATTTTAATTACCCTGGGAAGGGTGTGAATGAGGATAAAGGAACTGATCTGGAGGGGGGTGAATTACCTGCTTCTTTTCTTGACTGCCAGAAGAATATTTGAATTTAATGGATACGTTTGTCTAAGACCCAAGAGAAGCAATGACAGAAGCTGGGACAGCCTTTATAGCCTTAGAGCCAGGCACTAGTGAAAGTTCCTAAAGAATTGAAGAGCTGGGCTCTTTTGGGTGTTTTGTTTTGCTTTGTTTTTTCGTCCTCTTTTGAACACTTCAAAGCAAATTCTGTTCAATTTGGACTTCTCCCCCCGTCCCAACACTCCCCCAACACCAGGACGTTTGGCAAAGCTGCAAGACTTTTTTTTTTTTTTTTTTTTTTTAATTGTGCTTCCAGTAAAATAGGGAGTTGCTAAAGTCATAGCAAGAGATTTGCAGCTATCCCTCACGGGACCTGAAAGGTTCTCGGTAAAGTCCCTTAAAAATAGGAGGTGCTTGGGAAATGTGCTTTGCTTTGGGTGTGTCTGAAGCCTCATTAAATCTTAGGTAAGAATTGGCAAGGATACCATATCCTGGTACATGGTAATTTTCTCACCTGTGCCCTAACCCTGTTCTGCCTTTCTGGGAGAAGGGAAGATGGTGTCTGGATCTGATTCTTACTTTCTTCCCTTTCCAACTTGGTATTTGGATAGCATCGGTCAAATCCTATGTATAGCGTCCGGGATTCAGGAGGCGTGGCTAACTGTGATCTTCCACTTCCTCCCTTACAGAAGAAGAGCAAGAAGATGAGGAAGAAATTGATGTGGTGTCTGTGGAGAAGAGGCAAACCCCTGCCAAGAGGTCGGAGTCGGGCTCATCTCCATCCCGAGGCCACAGCAAACCTCCGCACAGCCCACTGGTCCTCAAGAGGTGCCACGTCTCCACTCACCAGCACAACTACGCCGCACCCCCCTCCACAAGGAAGGACTATCCAGCTGCCAAGAGGGCCAAGTTGGACAGTGGCAGGGTCCTGAAGCAGATCAGCAACAACCGCAAGTGCTCCAGCCCCAGGTCCTCAGACACGGAGGAAAACGACAAGAGGCGGACACACAACGTCTTGGAACGTCAGAGGAGGAACGAGCTGAAGCGCAGCTTTTTTGCCCTGCGTGACCAGATCCCTGAATTGGAAAACAACGAAAAGGCCCCCAAGGTAGTGATCCTCAAAAAAGCCACCGCCTACATCCTGTCCATTCAAGCAGACGAGCACAAGCTCACCTCTGAAAAGGACTTATTGAGGAAACGACGAGAACAGTTGAAACACAAACTCGAACAGCTTCGAAACTCTGGTGCATAAACTGACCTAACTCGAGGAGGAGCTGGAATCTCTCGTGAGAGTAAGGAGAACGGTTCCTTCTGACAGAACTGATGCGCTGGAATTAAAATGCATGCTCAAAGCCTAACCTCACAACCTTGGCTGGGGCTTTGGGACTGTAAGCTTCAGCCATAATTTTAACTGCCTCAAACTTAAATAGTATAAAAGAACTTTTTTTTATGCTTCCCATCTTTTTTCTTTTTCCTTTTAACAGATTTGTATTTAATTGTTTTTTTAAAAAAATCTTAAAATCTATCCAATTTTCCCATGTAAATAGGGCCTTGAAATGTAAATAACTTTAATAAAACGTTTATAACAGTTACAAAAGATTTTAAGACATGTACCATAATTTTTTTTATTTAAAGACATTTTCATTTTTAAAGTTGATTTTTTTCTATTGTTTTTAGAAAAAAATAAAATAATTGGAAAAAATACAATTGGGCCAACT",
+    "description": "ENSMUSG00000022346.18 chromosome:GRCm39:15:61857240:61862223:1"
+  }
+}

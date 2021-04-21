@@ -6,11 +6,11 @@
       "type": "range",
       "start": {
         "type": "point",
-        "position": 21967751
+        "position": 21967750
       },
       "end": {
         "type": "point",
-        "position": 21995301
+        "position": 21995300
       }
     },
     "features": [
@@ -21,18 +21,18 @@
           "type": "range",
           "start": {
             "type": "point",
-            "position": 21802635
+            "position": 21802634
           },
           "end": {
             "type": "point",
-            "position": 22029594
+            "position": 22032985
           },
           "strand": 1
         },
         "qualifiers": {
-          "name": "AL359922.1",
-          "assembly_name": "GRCh38",
-          "version": "2"
+          "name": "RP11-145E5.5",
+          "assembly_name": "GRCh37",
+          "version": "1"
         },
         "features": [
           {
@@ -42,17 +42,17 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21802635
+                "position": 21802634
               },
               "end": {
                 "type": "point",
-                "position": 22029594
+                "position": 22032985
               },
               "strand": 1
             },
             "qualifiers": {
-              "assembly_name": "GRCh38",
-              "version": "3"
+              "assembly_name": "GRCh37",
+              "version": "2"
             },
             "features": [
               {
@@ -62,11 +62,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21802748
+                    "position": 21802747
                   },
                   "end": {
                     "type": "point",
-                    "position": 22029517
+                    "position": 22029516
                   },
                   "strand": 1
                 }
@@ -82,20 +82,106 @@
           "type": "range",
           "start": {
             "type": "point",
-            "position": 21967751
+            "position": 21967750
           },
           "end": {
             "type": "point",
-            "position": 21995301
+            "position": 21995300
           },
           "strand": -1
         },
         "qualifiers": {
           "name": "CDKN2A",
-          "assembly_name": "GRCh38",
-          "version": "18"
+          "assembly_name": "GRCh37",
+          "version": "12"
         },
         "features": [
+          {
+            "id": "ENST00000361570",
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21967750
+              },
+              "end": {
+                "type": "point",
+                "position": 21994490
+              },
+              "strand": -1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCh37",
+              "version": "3"
+            },
+            "features": [
+              {
+                "id": "ENSE00001017087",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994137
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21994490
+                  },
+                  "strand": -1
+                }
+              },
+              {
+                "id": "ENSE00003513347",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21970900
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21971207
+                  },
+                  "strand": -1
+                }
+              },
+              {
+                "id": "ENSE00002202547",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21967750
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21968241
+                  },
+                  "strand": -1
+                }
+              },
+              {
+                "id": "ENSP00000355153",
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21971001
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21994453
+                  },
+                  "strand": -1
+                }
+              }
+            ]
+          },
           {
             "id": "ENST00000304494",
             "type": "mRNA",
@@ -107,13 +193,13 @@
               },
               "end": {
                 "type": "point",
-                "position": 21974857
+                "position": 21975097
               },
               "strand": -1
             },
             "qualifiers": {
-              "assembly_name": "GRCh38",
-              "version": "10"
+              "assembly_name": "GRCh37",
+              "version": "5"
             },
             "features": [
               {
@@ -123,11 +209,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21974677
+                    "position": 21974676
                   },
                   "end": {
                     "type": "point",
-                    "position": 21974857
+                    "position": 21975097
                   },
                   "strand": -1
                 }
@@ -139,11 +225,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970901
+                    "position": 21970900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971208
+                    "position": 21971207
                   },
                   "strand": -1
                 }
@@ -159,7 +245,7 @@
                   },
                   "end": {
                     "type": "point",
-                    "position": 21968242
+                    "position": 21968241
                   },
                   "strand": -1
                 }
@@ -171,11 +257,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21968228
+                    "position": 21968227
                   },
                   "end": {
                     "type": "point",
-                    "position": 21974827
+                    "position": 21974826
                   },
                   "strand": -1
                 }
@@ -193,13 +279,13 @@
               },
               "end": {
                 "type": "point",
-                "position": 21994392
+                "position": 21994623
               },
               "strand": -1
             },
             "qualifiers": {
-              "assembly_name": "GRCh38",
-              "version": "2"
+              "assembly_name": "GRCh37",
+              "version": "1"
             },
             "features": [
               {
@@ -209,11 +295,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994138
+                    "position": 21994137
                   },
                   "end": {
                     "type": "point",
-                    "position": 21994392
+                    "position": 21994623
                   },
                   "strand": -1
                 }
@@ -225,11 +311,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970901
+                    "position": 21970900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971208
+                    "position": 21971207
                   },
                   "strand": -1
                 }
@@ -245,7 +331,7 @@
                   },
                   "end": {
                     "type": "point",
-                    "position": 21968242
+                    "position": 21968241
                   },
                   "strand": -1
                 }
@@ -257,11 +343,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21971002
+                    "position": 21971001
                   },
                   "end": {
                     "type": "point",
-                    "position": 21994331
+                    "position": 21994330
                   },
                   "strand": -1
                 }
@@ -275,16 +361,16 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21967990
+                "position": 21967989
               },
               "end": {
                 "type": "point",
-                "position": 21974858
+                "position": 21974857
               },
               "strand": -1
             },
             "qualifiers": {
-              "assembly_name": "GRCh38",
+              "assembly_name": "GRCh37",
               "version": "1"
             },
             "features": [
@@ -295,11 +381,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21974677
+                    "position": 21974676
                   },
                   "end": {
                     "type": "point",
-                    "position": 21974858
+                    "position": 21974857
                   },
                   "strand": -1
                 }
@@ -311,11 +397,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970975
+                    "position": 21970974
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971208
+                    "position": 21971207
                   },
                   "strand": -1
                 }
@@ -327,11 +413,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21967990
+                    "position": 21967989
                   },
                   "end": {
                     "type": "point",
-                    "position": 21968242
+                    "position": 21968241
                   },
                   "strand": -1
                 }
@@ -343,11 +429,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21968208
+                    "position": 21968207
                   },
                   "end": {
                     "type": "point",
-                    "position": 21974827
+                    "position": 21974826
                   },
                   "strand": -1
                 }
@@ -361,16 +447,16 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21967995
+                "position": 21967994
               },
               "end": {
                 "type": "point",
-                "position": 21971332
+                "position": 21971331
               },
               "strand": -1
             },
             "qualifiers": {
-              "assembly_name": "GRCh38",
+              "assembly_name": "GRCh37",
               "version": "2"
             },
             "features": [
@@ -381,11 +467,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970901
+                    "position": 21970900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971332
+                    "position": 21971331
                   },
                   "strand": -1
                 }
@@ -397,11 +483,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21967995
+                    "position": 21967994
                   },
                   "end": {
                     "type": "point",
-                    "position": 21968242
+                    "position": 21968241
                   },
                   "strand": -1
                 }
@@ -413,11 +499,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21968228
+                    "position": 21968227
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971205
+                    "position": 21971204
                   },
                   "strand": -1
                 }
@@ -431,16 +517,16 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21968000
+                "position": 21967999
               },
               "end": {
                 "type": "point",
-                "position": 21994411
+                "position": 21994410
               },
               "strand": -1
             },
             "qualifiers": {
-              "assembly_name": "GRCh38",
+              "assembly_name": "GRCh37",
               "version": "2"
             },
             "features": [
@@ -451,11 +537,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994138
+                    "position": 21994137
                   },
                   "end": {
                     "type": "point",
-                    "position": 21994411
+                    "position": 21994410
                   },
                   "strand": -1
                 }
@@ -467,11 +553,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970975
+                    "position": 21970974
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971208
+                    "position": 21971207
                   },
                   "strand": -1
                 }
@@ -483,11 +569,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21968000
+                    "position": 21967999
                   },
                   "end": {
                     "type": "point",
-                    "position": 21968242
+                    "position": 21968241
                   },
                   "strand": -1
                 }
@@ -499,11 +585,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21971002
+                    "position": 21971001
                   },
                   "end": {
                     "type": "point",
-                    "position": 21994331
+                    "position": 21994330
                   },
                   "strand": -1
                 }
@@ -517,16 +603,16 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21968055
+                "position": 21968054
               },
               "end": {
                 "type": "point",
-                "position": 21974866
+                "position": 21974865
               },
               "strand": -1
             },
             "qualifiers": {
-              "assembly_name": "GRCh38",
+              "assembly_name": "GRCh37",
               "version": "1"
             },
             "features": [
@@ -537,11 +623,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21974677
+                    "position": 21974676
                   },
                   "end": {
                     "type": "point",
-                    "position": 21974866
+                    "position": 21974865
                   },
                   "strand": -1
                 }
@@ -553,11 +639,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970901
+                    "position": 21970900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971208
+                    "position": 21971207
                   },
                   "strand": -1
                 }
@@ -569,11 +655,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21968574
+                    "position": 21968573
                   },
                   "end": {
                     "type": "point",
-                    "position": 21968771
+                    "position": 21968770
                   },
                   "strand": -1
                 }
@@ -585,11 +671,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21968055
+                    "position": 21968054
                   },
                   "end": {
                     "type": "point",
-                    "position": 21968242
+                    "position": 21968241
                   },
                   "strand": -1
                 }
@@ -601,11 +687,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21968724
+                    "position": 21968723
                   },
                   "end": {
                     "type": "point",
-                    "position": 21974827
+                    "position": 21974826
                   },
                   "strand": -1
                 }
@@ -619,17 +705,17 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21968104
+                "position": 21968103
               },
               "end": {
                 "type": "point",
-                "position": 21995301
+                "position": 21995300
               },
               "strand": -1
             },
             "qualifiers": {
-              "assembly_name": "GRCh38",
-              "version": "6"
+              "assembly_name": "GRCh37",
+              "version": "2"
             },
             "features": [
               {
@@ -639,11 +725,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994820
+                    "position": 21994819
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995301
+                    "position": 21995300
                   },
                   "strand": -1
                 }
@@ -655,11 +741,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970901
+                    "position": 21970900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971208
+                    "position": 21971207
                   },
                   "strand": -1
                 }
@@ -671,11 +757,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21968104
+                    "position": 21968103
                   },
                   "end": {
                     "type": "point",
-                    "position": 21968242
+                    "position": 21968241
                   },
                   "strand": -1
                 }
@@ -687,11 +773,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21968228
+                    "position": 21968227
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971205
+                    "position": 21971204
                   },
                   "strand": -1
                 }
@@ -705,16 +791,16 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21968179
+                "position": 21968178
               },
               "end": {
                 "type": "point",
-                "position": 21974827
+                "position": 21974826
               },
               "strand": -1
             },
             "qualifiers": {
-              "assembly_name": "GRCh38",
+              "assembly_name": "GRCh37",
               "version": "3"
             },
             "features": [
@@ -725,11 +811,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21974403
+                    "position": 21974402
                   },
                   "end": {
                     "type": "point",
-                    "position": 21974827
+                    "position": 21974826
                   },
                   "strand": -1
                 }
@@ -741,11 +827,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970901
+                    "position": 21970900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971208
+                    "position": 21971207
                   },
                   "strand": -1
                 }
@@ -757,11 +843,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21968179
+                    "position": 21968178
                   },
                   "end": {
                     "type": "point",
-                    "position": 21968242
+                    "position": 21968241
                   },
                   "strand": -1
                 }
@@ -773,11 +859,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21974476
+                    "position": 21974475
                   },
                   "end": {
                     "type": "point",
-                    "position": 21974827
+                    "position": 21974826
                   },
                   "strand": -1
                 }
@@ -791,17 +877,17 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21968181
+                "position": 21968180
               },
               "end": {
                 "type": "point",
-                "position": 21995269
+                "position": 21995268
               },
               "strand": -1
             },
             "qualifiers": {
-              "assembly_name": "GRCh38",
-              "version": "5"
+              "assembly_name": "GRCh37",
+              "version": "1"
             },
             "features": [
               {
@@ -811,11 +897,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994820
+                    "position": 21994819
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995269
+                    "position": 21995268
                   },
                   "strand": -1
                 }
@@ -827,11 +913,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21993881
+                    "position": 21993880
                   },
                   "end": {
                     "type": "point",
-                    "position": 21994053
+                    "position": 21994052
                   },
                   "strand": -1
                 }
@@ -843,11 +929,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970901
+                    "position": 21970900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971208
+                    "position": 21971207
                   },
                   "strand": -1
                 }
@@ -859,11 +945,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21968181
+                    "position": 21968180
                   },
                   "end": {
                     "type": "point",
-                    "position": 21968242
+                    "position": 21968241
                   },
                   "strand": -1
                 }
@@ -875,11 +961,97 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21968228
+                    "position": 21968227
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971205
+                    "position": 21971204
+                  },
+                  "strand": -1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000446177",
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21968723
+              },
+              "end": {
+                "type": "point",
+                "position": 21975038
+              },
+              "strand": -1
+            },
+            "qualifiers": {
+              "assembly_name": "GRCh37",
+              "version": "1"
+            },
+            "features": [
+              {
+                "id": "ENSE00001422939",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21974676
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21975038
+                  },
+                  "strand": -1
+                }
+              },
+              {
+                "id": "ENSE00003496053",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21970900
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21971207
+                  },
+                  "strand": -1
+                }
+              },
+              {
+                "id": "ENSE00001645286",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21968723
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21968770
+                  },
+                  "strand": -1
+                }
+              },
+              {
+                "id": "ENSP00000394932",
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21968723
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21974826
                   },
                   "strand": -1
                 }
@@ -893,16 +1065,16 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21969568
+                "position": 21969567
               },
               "end": {
                 "type": "point",
-                "position": 21971346
+                "position": 21971345
               },
               "strand": -1
             },
             "qualifiers": {
-              "assembly_name": "GRCh38",
+              "assembly_name": "GRCh37",
               "version": "2"
             },
             "features": [
@@ -913,11 +1085,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21971334
+                    "position": 21971333
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971346
+                    "position": 21971345
                   },
                   "strand": -1
                 }
@@ -929,11 +1101,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970901
+                    "position": 21970900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971208
+                    "position": 21971207
                   },
                   "strand": -1
                 }
@@ -945,11 +1117,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21969568
+                    "position": 21969567
                   },
                   "end": {
                     "type": "point",
-                    "position": 21969793
+                    "position": 21969792
                   },
                   "strand": -1
                 }
@@ -961,11 +1133,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21969731
+                    "position": 21969730
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971205
+                    "position": 21971204
                   },
                   "strand": -1
                 }
@@ -979,11 +1151,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21969582
+                "position": 21969581
               },
               "end": {
                 "type": "point",
-                "position": 21970467
+                "position": 21970466
               },
               "strand": -1
             },
@@ -995,11 +1167,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970236
+                    "position": 21970235
                   },
                   "end": {
                     "type": "point",
-                    "position": 21970467
+                    "position": 21970466
                   },
                   "strand": -1
                 }
@@ -1011,11 +1183,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21969582
+                    "position": 21969581
                   },
                   "end": {
                     "type": "point",
-                    "position": 21969793
+                    "position": 21969792
                   },
                   "strand": -1
                 }
@@ -1029,11 +1201,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21970441
+                "position": 21970440
               },
               "end": {
                 "type": "point",
-                "position": 21971332
+                "position": 21971331
               },
               "strand": -1
             },
@@ -1045,11 +1217,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970901
+                    "position": 21970900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971332
+                    "position": 21971331
                   },
                   "strand": -1
                 }
@@ -1061,11 +1233,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970441
+                    "position": 21970440
                   },
                   "end": {
                     "type": "point",
-                    "position": 21970503
+                    "position": 21970502
                   },
                   "strand": -1
                 }
@@ -1079,16 +1251,16 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21970715
+                "position": 21970714
               },
               "end": {
                 "type": "point",
-                "position": 21971400
+                "position": 21971399
               },
               "strand": -1
             },
             "qualifiers": {
-              "assembly_name": "GRCh38",
+              "assembly_name": "GRCh37",
               "version": "1"
             },
             "features": [
@@ -1099,11 +1271,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21971328
+                    "position": 21971327
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971400
+                    "position": 21971399
                   },
                   "strand": -1
                 }
@@ -1115,11 +1287,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970715
+                    "position": 21970714
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971208
+                    "position": 21971207
                   },
                   "strand": -1
                 }
@@ -1131,11 +1303,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21970890
+                    "position": 21970889
                   },
                   "end": {
                     "type": "point",
-                    "position": 21971205
+                    "position": 21971204
                   },
                   "strand": -1
                 }
@@ -1149,11 +1321,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21989339
+                "position": 21989338
               },
               "end": {
                 "type": "point",
-                "position": 21994873
+                "position": 21994872
               },
               "strand": -1
             },
@@ -1165,11 +1337,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994820
+                    "position": 21994819
                   },
                   "end": {
                     "type": "point",
-                    "position": 21994873
+                    "position": 21994872
                   },
                   "strand": -1
                 }
@@ -1181,11 +1353,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21993881
+                    "position": 21993880
                   },
                   "end": {
                     "type": "point",
-                    "position": 21994068
+                    "position": 21994067
                   },
                   "strand": -1
                 }
@@ -1197,11 +1369,45 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21989339
+                    "position": 21989338
                   },
                   "end": {
                     "type": "point",
-                    "position": 21989955
+                    "position": 21989954
+                  },
+                  "strand": -1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000582361",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994026
+              },
+              "end": {
+                "type": "point",
+                "position": 21994319
+              },
+              "strand": -1
+            },
+            "features": [
+              {
+                "id": "ENSE00002685854",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994026
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21994319
                   },
                   "strand": -1
                 }
@@ -1217,18 +1423,18 @@
           "type": "range",
           "start": {
             "type": "point",
-            "position": 21994138
+            "position": 21994776
           },
           "end": {
             "type": "point",
-            "position": 22128103
+            "position": 22121096
           },
           "strand": 1
         },
         "qualifiers": {
           "name": "CDKN2B-AS1",
-          "assembly_name": "GRCh38",
-          "version": "9"
+          "assembly_name": "GRCh37",
+          "version": "2"
         },
         "features": [
           {
@@ -1238,95 +1444,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21994138
+                "position": 21994776
               },
               "end": {
                 "type": "point",
-                "position": 22034504
-              },
-              "strand": 1
-            },
-            "features": [
-              {
-                "id": "ENSE00003842495",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21994138
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21994390
-                  },
-                  "strand": 1
-                }
-              },
-              {
-                "id": "ENSE00001839178",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21995047
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
-            "id": "ENST00000651588",
-            "type": "ncRNA",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 21994549
-              },
-              "end": {
-                "type": "point",
-                "position": 22015088
-              },
-              "strand": 1
-            },
-            "features": [
-              {
-                "id": "ENSE00003845590",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21994549
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
-            "id": "ENST00000652420",
-            "type": "ncRNA",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 21994777
-              },
-              "end": {
-                "type": "point",
-                "position": 22039498
+                "position": 22032955
               },
               "strand": 1
             },
@@ -1338,11 +1460,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994777
+                    "position": 21994776
                   },
                   "end": {
                     "type": "point",
-                    "position": 21994849
+                    "position": 21994848
                   },
                   "strand": 1
                 }
@@ -1354,11 +1476,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21995047
+                    "position": 21995046
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -1372,11 +1494,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21994790
+                "position": 21994789
               },
               "end": {
                 "type": "point",
-                "position": 22077890
+                "position": 22077889
               },
               "strand": 1
             },
@@ -1388,11 +1510,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994790
+                    "position": 21994789
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -1406,11 +1528,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21994790
+                "position": 21994789
               },
               "end": {
                 "type": "point",
-                "position": 22077890
+                "position": 22077889
               },
               "strand": 1
             },
@@ -1422,11 +1544,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994790
+                    "position": 21994789
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -1440,11 +1562,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21994790
+                "position": 21994789
               },
               "end": {
                 "type": "point",
-                "position": 22077890
+                "position": 22077889
               },
               "strand": 1
             },
@@ -1456,11 +1578,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994790
+                    "position": 21994789
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -1474,11 +1596,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21994790
+                "position": 21994789
               },
               "end": {
                 "type": "point",
-                "position": 22120544
+                "position": 22120543
               },
               "strand": 1
             },
@@ -1490,11 +1612,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994790
+                    "position": 21994789
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -1508,11 +1630,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21994790
+                "position": 21994789
               },
               "end": {
                 "type": "point",
-                "position": 22120637
+                "position": 22120645
               },
               "strand": 1
             },
@@ -1524,11 +1646,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994790
+                    "position": 21994789
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -1542,11 +1664,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21994790
+                "position": 21994789
               },
               "end": {
                 "type": "point",
-                "position": 22121097
+                "position": 22121094
               },
               "strand": 1
             },
@@ -1558,79 +1680,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994790
+                    "position": 21994789
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
-            "id": "ENST00000455933",
-            "type": "ncRNA",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 21994821
-              },
-              "end": {
-                "type": "point",
-                "position": 22077891
-              },
-              "strand": 1
-            },
-            "features": [
-              {
-                "id": "ENSE00003850005",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21994821
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
-            "id": "ENST00000645313",
-            "type": "ncRNA",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 21994822
-              },
-              "end": {
-                "type": "point",
-                "position": 22031041
-              },
-              "strand": 1
-            },
-            "features": [
-              {
-                "id": "ENSE00003819285",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21994822
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -1644,11 +1698,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21994901
+                "position": 21994900
               },
               "end": {
                 "type": "point",
-                "position": 22077890
+                "position": 22077889
               },
               "strand": 1
             },
@@ -1660,45 +1714,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994901
+                    "position": 21994900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
-            "id": "ENST00000582072",
-            "type": "ncRNA",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 21994901
-              },
-              "end": {
-                "type": "point",
-                "position": 22120572
-              },
-              "strand": 1
-            },
-            "features": [
-              {
-                "id": "ENSE00002701784",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21994901
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -1712,11 +1732,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21994901
+                "position": 21994900
               },
               "end": {
                 "type": "point",
-                "position": 22120572
+                "position": 22120571
               },
               "strand": 1
             },
@@ -1728,11 +1748,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994901
+                    "position": 21994900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -1746,11 +1766,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21994901
+                "position": 21994900
               },
               "end": {
                 "type": "point",
-                "position": 22120572
+                "position": 22120571
               },
               "strand": 1
             },
@@ -1762,11 +1782,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994901
+                    "position": 21994900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -1780,11 +1800,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21994901
+                "position": 21994900
               },
               "end": {
                 "type": "point",
-                "position": 22120572
+                "position": 22120571
               },
               "strand": 1
             },
@@ -1796,11 +1816,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994901
+                    "position": 21994900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -1814,11 +1834,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21994901
+                "position": 21994900
               },
               "end": {
                 "type": "point",
-                "position": 22120572
+                "position": 22120571
               },
               "strand": 1
             },
@@ -1830,11 +1850,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994901
+                    "position": 21994900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -1848,11 +1868,11 @@
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21994901
+                "position": 21994900
               },
               "end": {
                 "type": "point",
-                "position": 22120572
+                "position": 22120571
               },
               "strand": 1
             },
@@ -1864,11 +1884,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21994901
+                    "position": 21994900
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -1876,17 +1896,51 @@
             ]
           },
           {
-            "id": "ENST00000421632",
+            "id": "ENST00000582072",
             "type": "ncRNA",
             "location": {
               "type": "range",
               "start": {
                 "type": "point",
-                "position": 21995094
+                "position": 21994900
               },
               "end": {
                 "type": "point",
-                "position": 22120689
+                "position": 22120571
+              },
+              "strand": 1
+            },
+            "features": [
+              {
+                "id": "ENSE00002701784",
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994900
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995160
+                  },
+                  "strand": 1
+                }
+              }
+            ]
+          },
+          {
+            "id": "ENST00000455933",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21995093
+              },
+              "end": {
+                "type": "point",
+                "position": 22077890
               },
               "strand": 1
             },
@@ -1898,113 +1952,11 @@
                   "type": "range",
                   "start": {
                     "type": "point",
-                    "position": 21995094
+                    "position": 21995093
                   },
                   "end": {
                     "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
-            "id": "ENST00000651904",
-            "type": "ncRNA",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 21995103
-              },
-              "end": {
-                "type": "point",
-                "position": 22118651
-              },
-              "strand": 1
-            },
-            "features": [
-              {
-                "id": "ENSE00003842012",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21995103
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
-            "id": "ENST00000651784",
-            "type": "ncRNA",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 21995113
-              },
-              "end": {
-                "type": "point",
-                "position": 22030466
-              },
-              "strand": 1
-            },
-            "features": [
-              {
-                "id": "ENSE00003847469",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21995113
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
-            "id": "ENST00000650946",
-            "type": "ncRNA",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 21995132
-              },
-              "end": {
-                "type": "point",
-                "position": 22128103
-              },
-              "strand": 1
-            },
-            "features": [
-              {
-                "id": "ENSE00003846477",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21995132
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
+                    "position": 21995160
                   },
                   "strand": 1
                 }
@@ -2017,6 +1969,6 @@
   },
   "sequence": {
     "seq": "GGTTAAAACCGAAAATAAAAATGGGCTAGACACAAAGGACTCGGTGCTTGTCCCAGCCAGGCGCCCTCGGCGACGCGGGCAGCTGGGAGGGGAATGGGCGCCCGGACCCAGCTGGGACCCCCGGGTGCGACTCCACCTACCTAGTCCGGCGCCAGGCCGGGTCGACAGCTCCGGCAGCGCCAGCGCCGCGCCGTGTCCAGATGTCGCGTCAGAGGCGTGCAGCGGTTTAGTTTAATTTCGCTTGTTTTCCAAATCTAGAAGAGGAGCGGAGCGGCTTTTAGTTCAAAACTGACATTCAGCCTCCTGATTGGCGGATAGAGCAATGAGATGACCTCGCTTTCCTTTCTTCCTTTTTCATTTTTAAATAATCTAGTTTGAAGAATGGAAGACTTTCGACGAGGGGAGCCAGGAATAAAATAAGGGGAATAGGGGAGCGGGGACGCGAGCAGCACCAGAATCCGCGGGAGCGCGGCTGTTCCTGGTAGGGCCGTGTCAGGTGACGGATGTAGCTAGGGGGCGAGCTGCCTGGAGTTGCGTTCCAGGCGTCCGGCCCCTGGGCCGTCACCGCGGGGCGCCCGCGCTGAGGGTGGGAAGATGGTGGTGGGGGTGGGGGCGCACACAGGGCGGGAAAGTGGCGGTAGGCGGGAGGGAGAGGAACGCGGGCCCTGAGCCGCCCGCGCGCGCGCCTCCCTACGGGCGCCTCCGGCAGCCCTTCCCGCGTGCGCAGGGCTCAGAGCCGTTCCGAGATCTTGGAGGTCCGGGTGGGAGTGGGGGTGGGGTGGGGGTGGGGGTGAAGGTGGGGGGCGGGCGCGCTCAGGGAAGGCGGGTGCGCGCCTGCGGGGCGGAGATGGGCAGGGGGCGGTGCGTGGGTCCCAGTCTGCAGTTAAGGGGGCAGGAGTGGCGCTGCTCACCTCTGGTGCCAAAGGGCGGCGCAGCGGCTGCCGAGCTCGGCCCTGGAGGCGGCGAGAACATGGTGCGCAGGTTCTTGGTGACCCTCCGGATTCGGCGCGCGTGCGGCCCGCCGCGAGTGAGGGTTTTCGTGGTTCACATCCCGCGGCTCACGGGGGAGTGGGCAGCGCCAGGGGCGCCCGCCGCTGTGGCCCTCGTGCTGATGCTACTGAGGAGCCAGCGTCTAGGGCAGCAGCCGCTTCCTAGAAGACCAGGTAGGAAAGGCCCTCGAAAAGTCCGGGGCGCATTCGGCACTTGTTTTGTTTGGTGTGATTTCGTAAACAGATAATTCGTCTCTAGCCCAGGCTAGGAGGAGGAGGAGATAACCGCCGGTGGAGGCTTCCCCATTCGGGTTACAACGACTTAGACATGTGGTTCTCGCAGTACCATTGAACCTGGACCTCCCTTCACACAGCCCCTCAATCGTGGGAAACTGAGGCGAACAGAGCTTCTAAACCCACCTCAGAAGTCAGTGAGTCCCGAATATCCTGGGTGGGAATGACTAAGACACACACACACACACACACACACACACACACACACACACACACACAGTAGGAAAGGTGTATTTCAAGCACACTTTCTTTCTCCTTGGGGAGAATTATTGCTAACCATCTAAGTTTTCTGGAGGCGGCCTTTTTTCTCCCCAGCCTCCCGGCGGGGTCACCCTCTCCCACCTTCCAGGAGAGTGGAGGACCCGTGAGATACGGGGCACGCAGGCAGCGACTTCCTGAAATGCTAACAAGGATCGTAGGATCAGTTACTGCTGCGAGGAGCAAGCACTTGCTTCTTGGGGGAGTTTTGCAGCCAACAGGGAAATGGGCTTTCTTTGTGAGTTAGAGGTAGAGGTCCGGCGGCCTGAGTGATTGAAACTGCTCGGGACAATGCTCGTATGTTTAGCAAACGACAGAACTGTAGAACTGTTCCTGAGAAATCCCAACTGATAGTATTTTAGTCATCTCAGACGACAGTTAGCACAGTTTAAAAATGAGGCCTACTTCTTGAAAAACAGAATCCAAGGTAGTTTTGTCCTCACATTGACAAATGTTGACACAGCCAGTGTAATTTCCTATAACCAGGAAAACTGAAAGAATATATGTACAGTTAAAATATGTACAATGCTAATTAAAACTTGTGTAATAAGTCTAAAAGTAATTTAATGAGGCTTCACTTTTATGACCGTCCTTGTGGTATGCTTCGCCAGGAATATATAGCTTCAAAAAGCAAAGGCCAGCGGAGGGGTAATTATTTTTTTACTGCAATGTTAATTGTCTCTTTGACATGGAAATATAAACCTGTTAAAACTATCAGTGTTTAATTTAGTGTCTCAATTTCTATTAGCAAAAATTTATAATCTATAGGATAAATGCACATTTTATTTTTTACTTTTCATATTATGCAAGTTAATTTTTTTAATTTAGTCAAAGGAGCTTATAAAGGATTTCAGGGCCTGTTGCTGGATTTGATTTTAATTCATTTTGAAACATTGACAAGACCCTGGTTGTTGTTTTTTTTAACAGTGGTTTATCCGTATCAGCAAAAGTTTAGCCACTGTGACCGGTAACTGTATGAATATAGTTCTTAATATTATTGTCTATATAAAAATATTTATTACTCTAGTTAATATTATTCTATATAAAATCATTTTGTTTAAATTATTAAGTTGCCTCTGAAAATCTGTAGTAACAAAGTAGAACATGTCAATGTATATAAATGCCATAATTATGTATTTTTTAGTTTAGGCCTATAAAACATAACATTGTGGTGATTTTAAGTTAGAGAAAATATTTTATAGTATGTTAATGTATATGCATGAAATGCAAAAATATTTAAATGATAGGTTCATTGAAATAGATCATTTTTTGTTATTTAGGTATAAATCAATTTTCAGGACGTATGTGAAAAGCGCAATCTTCAGGAAGTTTCTCAAGATAGAACACAGCTTGGATAGAATGTCTTGAAATATATGCAATTTTCCAATTTCATATGTAAAATGATATACATAATATAAAATCTAGCGGTGTTAATTATAATGATATGTAATTATATATTTCACATTAATATATTTTATGCCCATGGCTATATTGATTTGGGAATATATATGGATACTAATTATGTTAGGATTCATACAATTCCTTGAGAGGCACAAGTGCTAAAAATTACTTGTATGAATTATTTAATATCATTGCAAATAAGATGTTATTTTAACTTTTTTTAAGTTTCTGCAAATATGTTTATTATGACTTTTTATTTTTATATGATTGGAAATACATATACTAAAATTCCACGTTACCAGTTTCTTAACCACAGAAACCTGAAAAATTGCCATAGTTGATTTGTTACTTCTACCTTGGTGCATTTACAAAATAGTCATATTTTTATTATGAAGTTAAATATTCATTTGTTTATAGCTACTTCAGAAGGCTCAGGTTATTTTTTTCTTTAATAGCACAGAGTCCTCTCAAGGTAAGCACTGTGCAGTTAGTATAAACCATTATTCCCCATGTGTACATGATTCACAGTTTGTATTGTGTTCCAAGTGAACCATAGCCCTTTCAGAAATCAAGACTTATATTCATTTTACTTCTTTGAGTACTCTTGAATTTTAGAAAGTCCATTATGATCCTAAGGTAGCAACAACATAGCCTATTACCGTCTATGATGGTTTACAGATCTATTATTCCACGTTAGTTCATCACTATCAACTACCATGATAGAGTTAAGCTAAACCATTTTCCCAACATATGAAAAACTCCTATTACTAAAGTGATACAAATGGTATCAAAAATACTTTTTTATAGCAAGGTTCAACAGTGGGCCCAGTGCTTTTACACTTTTTCAAAAGTCCTTGGAGAAACAGAGAAAATCTCACTTGCCTTCTGTACTAAAACATTCTAGGCCGAACTAAAACTGAAACTTCATAGTAGAACACTGTAGGCCAGGGGTGTTCAATCTTTTACCTTCCCTGGGCCACATAGGAAGAAGAAGAATTGTCTTGGGACACACATTAAATACACTAACACTAACAATAGCTGATGAGCTTAAAAAAAAAAAAAAACTCATGATACTTTAAGAAAGTGTATGAATTTGTGTTGGGCAGCATTCAAAACCATCCTGGGCTGCATGTGACCCTCGGGCCCACAGGTTGGACAAGCTTGCCCTAGCTCCTCCATCTGCTGCAAAGCCCAGCCTGATACAAAAACCAACGTGATAAAAAGTTTTTGTGGTGCTTTATTTTGGCAGTTTAAGTTATATAAACAATGGGTACAGTTTCATTTTCTAAATATAAAATTTTTACATTGAATATGAATTTTTAAGACAAATTATCTGAATTCTGATTCTCATATACCTAACTACTAATATCTTCTCTATTTGTTGCCCAATGAGATTAATCCACCTCTTAAACACTTCACCATCAAGAAAAACAATTTTGTATTTTAAAATGAACCCATCCACTTTCATTCAGCTATTTTATATTCAGGCATCATCCTAAGGAAAGAAAGGTTCTGACAAAGATTAATACAGATGGATAAGTAGTAGCAAGAAATCAAAAACTGCATAAAATTCTAGCAATAAAGTGTTAAATTATGGTACAGTTACATTCTGGATCATCAGGTATCTGAAGAATATTTCATAGACTGTTAAATGATTGCATTATAAAGTCAGGTTTTTTTAAAGCAAGATTCCAAACAGTAAACAGTTTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCACCAAATTAGTTATAATGGTTTCCGCAGGATGAGAGGGGTTGGGAAAAAGTTTGGTGATATTTATTTTCTTCGTTTCACTTTTGAGTTTTCCAAAGTGCTATGACCATCATCAGTAAAATATACATTTCCAAAGCCTTTGACACACGGTAACAGTCCTACACAGTGGATGAACTAAGAGCTTCTCTACCCTTAGATGGGTAGGGAGGGAGGAAAGACAAGGAAACTGAGTTGTTTAAGTGTCATACACGAGAACGTGGCTTTAAGGTCTGGGAAAACCTGCGAGGGCTGTGACGTCAGACTGTGAAATGCACGCTATGTCCATTCACCAAGACGTTCCATTTTAAAACCCATAAATCCGTAGCTATACCTGTTTCCAAGGTGCCTCGTGTTAGGCCTCTGGTCACAGCACTTGGCGCCCTTCTTGGGATCTCTTCTCTCCGCCCCCACTACCCCACCCCACAAGCACACTCTAGTCCCCTCCAATCAATTTCAGGCAGGTCTCGCCGCCTCCGGAGCCACGCTGGGGGTGCAAGGGCCCTGGACCCGAAAGAGCGCCCGCCCGGCGACAAGAGATGAGATGCACGCTGCTCCTCCACTCCTCAGCCCCCACCATCCTCCTCCTGGATCCTAACTTCCCCACTCTCTCAATTCCTAGAGACGCTGCGGATCCCAGAGGCTTAACTGGCAGCTGGAACGAGGTCCTCCAACAAGAATTTAGACGCTAGGTCCAATTATCACTCCACCGCGCGCACTTTCCGCAGGAGCGATGTGATCCGTTATCATAACTGCGGACCTGGGGTTCCACGTGGAAGACGATTGGGATTTCACTGGCCGCGGTGGGGGTGGGAGCAGACAGAGTCTGAGTGGGGTTAGTGGACTCGAGACGAAAGGCAGGACATGACAGAAGGCAACTCTGGGTCACCTCTCCAGCTTGGAACTGGCTAGGCCTTGTTTTGGAGGGGATGGGTAGATGAAAAGTGAGTCAGGGTTACCCGGAGGAACCACGGGGAAAGTGCGCTTCTGAGACTCTTGACAGCCATTTCGTTCCCTTCCAAGCCAGATGGAGACCCAAGAGTGTTGAAAGGCCACGACTTCCCTCAGTTTCTCCATCTGGGGGTGCAGGATGGTATAGAGAGTGGCCCGTAGTATTTTTCCAGTGACGATGTCTCTCCATTGTTTTCTTCTTATATTGCAGCTTTCCCCATGTTTGAAAATTTTCTTTTCAAATGAAATCATTGATTAGAATAAAAAAAAGTAAGTAGCTATTAAAACAAGATCAATTTCCATGACAGTAAGCCAACCGATGGAGAAAACCTTGGGAATTAATAAATGAAGGATTTGTTTGGTAGATGATAAAAGGTCCTTTTAAAGGGTCTGACTCTTCCTAGAAAAACCCACCAACTTGGGACCGCAACAGATTTACCATATCCTAATTCATGCTATTTTAATGTGTATTCAGCAAACCCACATGTGTTTACAATTGTCGAAGCTACCAAATGTCAATAGCGTTTTTTTTCTATTTGTTGAATGTGAATCTCTTGTACGAAGCCATATAAACAGAAGAAATTACAGGAATGATTTTAAATCACATACAAAACCAATAGTATTGCTAGAGGAGAGTTAGTCAAGGACGGCATTATGAAGAAAGTGAGGGAGAATTTCCAAAGAGCAGAACGATAGGGCTTGGTGGACCAAAGAACGTTTCCATCTAAAGGGAATGGCAAATACTTAGAGTCTCTGAACCCACTGAATCTTGGACTATTTAACTAATATTTGTAGTTCCAGATATAGCACAGTGCCTTGTACATAGTGGTATTTTTAAAAATATAGTGCCTCGTAGATTTTTTTTCAACTTTTATTTAGGAGGAGAGGGCACATGTGCAGGTTAATTACAAAGGTATATTGCACCATGCTGAGGTTTCGAGTACGACTGAATCTGTCACTCAAGTAGTGAGCACAGTACCCACAGTAGGTAGTATTTCAGCCCTCGCTCATTCCCTTTCTCCTCCATCTAGTAGTCCCCAATGTCTATTGTTCTCATATTTATGTCCAATTAGCATTTGTTTTTTAAAAAGGGTGGTTGAAGAAATTCTCAGTGCTTGTCAGTGTCTCTCAGTGCATTCATTTAATTCATGAGCCCTGGAATGATGGTTTCATTTGGGCAGAACTCTACAATCAAAAAGAAGTAATAAAAGGGAAAAAAAAGTGAAAGCCATCAACTACAGGATTGAAATTCCCAAAGCATCAGAGGTCCTTTCAAAAAATAGTATGTTGATTTTTAATTTTTATGACTTATTGGCTTTGTTCATGAAAATATAAACATGTTATCACAAAGGATTTTTTAATTCAACTATTTCTCAGTTTTCTCTTTCACCTTCAAAATAAAATATCATAAATTATTTAAATGGTTGTGAAGGCAGTAGGATTTTTTTAAGAGAGAAAAGTTTTATAGAGGTTCAGAATTACATGAACAAAGACATGTAATCTCTTAAGCAAATTGAAACTAATAAAATCGTACAATCAAGGTAACGTAAATAAAAAAGCCTCTGCTTTCTTAATTGAATTATGTGAGTAACTAGAAATTTTAAAAGTATGGCAAAGGTTAACAACAGCATTATTACCTGGGCTGCCTTTAAAAATACATATTTCTGGGGTTCACGTTCAGAAAATTTGATTCAGATTTGCTGTGGGTCCCAGAAATCTGCATTTTAAATAAACACTTGAAGGAGATACTAATACAAGTGGCCCATTGGGACACAATTTGACAAATATGACCAATTTTACTTTTTAAACCTTATTTCTGCTTCTTTATCTTTGAATTGAGGTCCAGGATTTTAGGTAAGATTTTAAGTTTAGAGTCAGTTTACTGGATCCCAGGGAGGAGAGTCTGAGTAATCAGTGGAGGAGTTATTTCACCAAATGAAGGAGACCCTTTATTATTATGTGACCCTTTGTATGAATTGGAAAAGAATGTCTTGTAGATACCACATTTTTACAGTCAGAACATAGTTTGAGAGAAAAAAATATAACAAGATATATTTGTGTTTTAAAGCTTACAGAACCAGACAGAAAATTTCCACATAAGCTATATAAGATACGTTGTCTTTTTAAAACACTATATACACTTCTTTCTGTTCGTGCAGGATGAATGGATCTCTCTCTCTCTCTCTCTCTCTCTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTTGTAATAAGGGGTTTCTTTCATTTTATGATCCAGACCAGGCTCGTAATAAACATGACAACCTAAAATTATGTAAAAAAGAAAAATCAAAGCACAAGTGTTTCACAGGTTTAACTTATGCTTATCTAAGATCAGGGCAAGATTGCAGGAAAATGTAGCCATAACAGAATAAAGCATTTATGGACAAAATGATGGGTCTTTATGTCTCTGTAAAAGCACAGTGATGGGGGGGGAAATATAGATGAAAAATGTAAGCTAAAAAGTAACAATTATAAGAAAAACTAAAATATCATGCCTTTCAAATGATCATTTTTCTGCTTTTAAGCTAAAATTTGTCTAATATTACACCAGTGACTTTGCTGATGTATTAGGAAAAAGCTTGTTTTGCTTTCTTTTCTCGAGTGCCACCATTTTCTTGCTCTCATTCTCTTTCAGGCTGCCAGATCATCTGACTCAGCAATTGTATAACTCTCTCACCCAATTTAAAGAAACAGCAGCTGTCTAGAGAACAATGACTCCCCCAGTTGAACATCTAATTGTTAAATGTCCAACATCGGACACTTTGAATTTTACTCCATGCAATTTACATGCTGAATAGTTGAAGTTGAATATATTATATTTAACATTTAATTTTTAAAAGCTTATTGAAACTTTCTTCCTAAATCACATGGTAAAGTTATTGTTTTCTTCAAAAACAATTAGGAGGAGCTTAACAATAATAGGACACTTCAACTTCCATTATCTAATTTAATTATCACAATATCCTTATGTTTTCAATGTTTCATTTTTTCATTTTGTAGATCTGGAGACTGAGGCTCAGATAGGTTGCATGGCCTACCAAAAGTCATTGACTAGTAATTCATATATAGTTGAACTTGGTTGCCCATGGAGTGCTATAAATATGTATATGGTTTCAGTTCCATCTCTTTTAGTTAACTATTATTTTGAAAGTCGCTTAACCCCTTTGGGCCTCTACTATACTCAAGCATCAGCCGTATAAGTCACAGTAAATATTTATTGGTTGAAAGGAGGTTAACATCTTTCAAAAATTTATTTTTTGACCAAAATAAAACCAGTGAAAAATTCTCATATGACTGTACATATAAATTACTTATTCCTACCTTAATTTAAAAGCAATAAGTGGGATACCTATTCACCAGCACAGGAACCACTTGAAGCGTGCAGTTGAAAGATTACTTTCTTTAGCATTCACATGACCTGTGAGCAGATTCTATTTCTTTTGCTTATTAGCTGTCATGGTACCAGAATGAAGTATGAGAAACTCTCAGTGCTTTCATGTTCTCATCTGTAAACCTGAGACCCTATGGTAGTCCCGTAATAAGAGGTAGATAAAATAGTATGTGTGAAGAGTCACTGTAAACTTTTACACAGTGTACGTTTGTCAGTTATTATAGTGCCTAATTAAACTATGCCCTTAAGAAAGCACATTAGTTTTTTACAGTAAATACCTACTTCATTATAATTTTTCAGTGTAGCTAGAAATTTCTAAACTCCACTTTAAAAATATACATATCATAATAAAAATATATTTATGTATTCAGACTCCTGGTATGTTCCAAGGTGTTAGGTAAAATCAGTGTAAATTTGCATACTTTTAAATTCACATCTGTACAGAAGATCTATATGGTGGCCTTTAGGGTATACCTCTAAGCTATTCTAGTATTCATAATCATTAAAGAGATATTAAGCAGTGTTTGTGAACCCCTGTTTTCTAAGACAGGAAATCAAGGTAGCTTTAGAAAACTGGAAAAAAAGTTATTAGTCTATCTATCTAATAACCCAGAATAATAATTTCCAAAGGAATCACTGAAGATAACTGGATTTTTAATTCCTTCAGAATGGTTGTCACAGTCTGAATATCTGAATCAACAGTTTTGACCAAAACAATTTTCTAAAAATTCTTTAGTATAAAAAATTATGTGTGTGTGTGTCTGTGTGATGAAAGGAATGATAGGCAGAAACATTACTGTCATCCTTACGACATTCAAAATGCCTACCTTGGAGGGTGACCTTCAGTTATTTTTATGCAAATGTGAAGAAGTTATTTAGAAGTAGGATATCAAAGAGTAACACAAAATACACTAAATAGTATGCTTTCTTAAGGCTAAATTGACTTGGGGGTTTTAAATCAGTACAGAGTAAACATACAGTATATTCTGTTATCATTGCCTTTTTGAAAAATTAATTATGGAAGTTATCATCTTAACCGTAACAACACAAAAGATAAAACTCTACCCTCAACCCAGAGACTCAAAGGAAAACATGAGTGGAAATGTTAAATCTGTATGTGAAAAGTGCTAAAACATGAATAGGAAGCAGTTACTTATTTAATCAAAGTTGATTATATTTCATCAAGAAGTTGATTCCCTTGAGTGGAGTTGAATCACATATCAGGTGAAGAATGTGATTTGGGGAAGAATGGTCTAACACAAGAAAATTTTCTTGCAATCTTTAATAATATCAGAGGGGAGATTGGCTTCAGAACTCTCCTAAGTTCAGGAAAGGACACAGAAAATTGAACATAACAGTAAGACTATAGAGTCCCAAGAAAGCAAGCTACTTTTAAAGGATAGTTTTTTAGAGGGGCAAAAGGGGGACAACCATTCTCCATTTGATGAGAAAAGCTTCCATGTAGATGGTGCCCCTGAAATTAGAGTATCCTAAACCAGTGTTAAACCTATCAGTGAAACATGAATATTAAACCTCCACTCCCAGTAGTGAAAACCGAATACATTATTATTTATCTGTGACTTTCAACATTATCTCAGAACTCTAACAGCACATGCGTACATCAGCAGCATAAGCAGAAATGAGATATTATATATGCTTGTGTTAGCAATTAAAAAGGACAGCATATTTGAGAGGGGAAAATCTGTCCTATCAAGAATGAAAAAGAGGGAGGTTAGGAAAAGTAGTTTAGAGAAAGTAAATTTTGCAATTCCTCAGTTTTAACTGTAGTTTCTCCATTGTACCTTCCACTTGAAATGCACTCCAAGCAGTGGAGGTGGGTAGCAATGAATGCAGAGGAAACACTGAACACAGTGACACTCTCCAGTGTCACTTCTCATGATTTAATGAGGGGTTTTTTTTGGAAATTCTTCTGTCATAACATGGGAAACTTTGTTACAAAGAAGCTGTTTTTTCAGAGGGTTAGAATTCAGAGGTAGCATCATACCTTTTAGAAGAGAATTTGCTTGTTGAAACCACAGATACCTGCTAGAATGTACAGGAATTAATGAAAAATTACTCAAAAGGACATTTATTTTGATGACCTAAATGAATAACTTCATAGTAAATGTCATATATATTCTCAAAAAATTAAAAAGCACCATTTATTGAGAGCCTACCGTGCACCCGGATTTTTATATATCTGACATTCTTTATTCCTCACAGTAACCTTATGGGGTAAATTTTATTTTCCCCACTTTGTGAGGTGAGGAAATAAAGGCTCAGAAAGTTTACATAACTTATTCAAGCCCACAGAGCTGGTAAATGAGAGGTCAGTTCTATCTGAGTTTAAAGACTAGGCTTGTCCCACTTGCATATGTGTCATTTCCAAAATTATGATTAAGGATATGGTTGGCATTTCCCGCCACCCACATTAAGTCCAATTAAGTAGCTGTGGCCATAGAAAGAATGGAGAATGGAGAGAGGAACTGACTTCAACAGCTACAGCAAACATTTATTAGCTGAGTAACCATAGCTACATAGTTCCTCAATATGTACCACTCCTCCATTTTGTTATCTATAAATCAAAATGGTGGCTTTTTAAAAAGCAGTTTTACAATATATTCAAGAGCCTTCTACCCTTTGAAAAACTGCAATACTATTTTTAGTAGCAATTAGAAACACCTTAAATATCTGACAACAGGGACATCATTAAGTAAATTATAACTTTTTCCAGTGGGATGTGTTACAGCTGTTAAAAGTAGCATTTATGAAGTGTTTTTGGAGAAGTTTGGAAAATGCTGTAATAAGTTAGAAAAAGCTCATTTCAAAATTGCATAATATTCACAATGTAAAGATTAAGCAAAGAAAAAGGAAGAAGTATTTCAAAATGTTAATAATTATTGCTTTGTGTGGGGTAGTTTTTCATTTTCTATGTGCAGCTAATTCCTTAATTATTTTTAAATATGTGAGCTTTAATCAGGAAAGCAAATCATTCAAAAATGAGGGGACTGAATTAAGTGACTTTCAGGGGACTTTGCGTGTCTTTGAGTTCCAAATTTCTATCACTATGTATTACTACTGAAGAATAATCATAGAAGCACAGTAGTTTCTGAAAATGGAGAGTCAGTAATCTTGGCCCAGGTTTTGCAACTTGCTCTAAAGCAGAGTCCTCAAAGAAAAGGAAGCATTGATGAGTTGTCCACAATGTACTGGATAAATTATCATTAGGAAAACATATTGTAGTAGGGAGAGTGAGGACCTCTCAAACAGAACTGAGAACCTTAAGTTTGAACTTTTCTTTTCCTTATTACTTAAGCACTCTGAGCTTTTTTTTTTGTCTGCATTATGAAGAAAGAATAATACTCTCTATCCCATGGGACAGCTGTGGAATTATAAATTACACATATAAAACTGCTTGATGCTTGTCACATAGCTGGGGGTTGAAAAAATGATAGCCATTATTTTCTTGGCAACTTTTAATGAATTTTTTATTATCTCTATTTCTTTCTGCCTATCTCCTCTAATTATGTTTATTACTTATTTTGTTCCTCAGGATGAGGTCAATTCTCAATATCTGTGCTGTACATAATATACATATATACCAAATATGTGCATATAGTATGTACATACATACATACTGTGCTAATCTTTTAGTGTTCTCAGCTGATCAAATAGCTACAAATAGATATAAGTAATTCGCCACAAGTAATTTATCAACATAAAAAAAATTTACAAAAAAGTTAAGGAATAATTGTCTCCATGAGCTGCAAAGATCCCTCATTTCACAAGAGTACACCCTAGAGATATTTTAATAGTAAATTTCTCACATAGATTTAAAATCACATTTGTTTTGCACATAATTTAGAAAAGATACCTGCTATATAATAAGTAATATACTTTTAAGTTTCCTTCAAAATATTCTTGGGAAGATGATAATAGGTACTGCTAATTCTATACCCAGTTAACATTTTGGAAACTAAGGTTGAAAATTGTGACTTAACTATAATTATGCATTAAATCTACAACACATCAAAGAATTTTGCATTTTGTACTCCTTACTAAGATCCAGTTTGAGTAGGAAGATAAATTTTACAGTAATTCTGAATGAGGGAAGTTGGCACAGAGTTTCTAAAAGAGTACCTTCCTTATAGCAAATACTAAATAATTGTGCTATATTGAATTTAATTAAATAGAGAATAGTAAAAGGGAGAAAGAAACATCCAATGTTTTGAAACTTCTAGAGATCTACTCCCAGGGACACATTGTTTTTTCTTAGCAAATCTGTTTGGAGGTCTGCTCTACTTTCTCAGAGGTCTCCCTTTCATGCTGAAGCTATCTTTTTTCCTTGTGGAACATAAGTAATTAAATACCTTGCAATTATTTACCTAAGAAAGTGTTTCTTTCCCGTTTAAAATGCTCTTACCACCCACATTGGACTCGATTATCAGAATTTTTATCCGGGGCAGCTTCAGGAGCACTTTGGCACTTCGGGGCTAAACCACAATCTGTTTTTACATGTTTGTGATTATACCCGTTTTGTAGATCAAGACATTGAAGCTAGTAAAAAAAAAAAAAAGTCATTTTTTCAGGGTAACAAAGTAGGTGGTAGAACTAGGACAGGGACTCTAATTTCCTTACATTATTGCTTTTCTAAATTAAAGGGATGCATGGAATTATTCCTCCATTGCCTTTGCCTTCAAATAATTATCTATTGCACCCAACATCCTATTCTAGAACTCATCTATGAAGGCTTAACACAGCTGTACCTGGGAGCTCCATTACAGGGCATATATCTCGCTCTCATAAGCTACTTCCTAAGGAATTCTCTTTAATTATGGGAGCTTTTCCAGACTCTGAAATCTTTTTTTCCTGGTAACACAAGTGTGAGGTGTCATTTATCAGAATGCATCACCCCAGTCTTCCCTCCTCAAATGATTACTGTAGGCTCCACTCAAGAGCTCATCCCAGTTCAAGACCACCTTCCTCCTCCAGAGAAGCAAATATATATATACACGTATATATATATATACACGTATATATATATATACACGTATATATATATATACACGTATATATATATATACACGTATATATATATATACACGTATATATATACACGTATATATATATATACACGTATATATATATACACGTATATATATATATACACGTATATATATATACACGTATATATATATATACACGTATATATATATACGTGTATATATATATATACATTTTTTTTTTTTGAGACGGAGTCTCGCTCTGTTGCCCAGGCTGGAGTGCAGTGGCGCGATCTCGGCTCACTGCAAGCTCCGCCCCCCGGGTTCACGCCATTCTCCTTCCTCAGCCTCCGGAGTAGCTGGGACTACAGGTGCCCGCCACCTCGCCTGGCTAATTTTTTGTATCTTTAGTAGAGATGGGGTTTCACCGTGTTACCTAGGATGGTCTAGATCTCCTGACCTCGTGATCCGCCCGCCTCGGCCTCCCAAAGTGCTGGGATTACAGGCGTGAGCCACCGCGCCTGGCAGAGAAGCAAATATATTGATGGTTGTTACCAATACATGCTCTTGACTAAGAAACCTTCTTTCTTAATTAATATTGACAACTTTAAGCCGAGTGCCTGACATATATTAGGTACTCAGTTACTCTTTTTCAACTAAAGTTATGAATGATGATTCTAATAAAAGTAACTTATTTGTCTACTAGTTTTATTATGTTTATTTAATTCATTAGAAAGGCCATGGACATAGTACAAAATTCAAACAATATAAATCATGGAATGTGAAAAGTAAGTCACATGCCCATCCCAGTTCTTCATTTCCTTACCTCACAGGTAACAGCTTTTCCTGTATCTCCCCAGAGATATTCTATGTATATTTTGTTTTTAACACCAAGCTATATTTAAAACAATTATCTTTAATAATAATGTTAATATTGAAACTGGTAAAGAAATATGTGTGTATTATCTCACCTCAAGCGTAAACAATAGAACAAGAGAGAGCCCATTTTGAAAATTATGGACAATGAATCTAGAAATAATCTCAAAAGATTTTGCAGTCAAAAAATAGTTCATTAGATACATGAGAACTGTCACTTGGTCTCAGTGTAGAGCTATTGCCTCAACTCCCTTTATTTTCCTAACAAAATCATCTTGCTTATCCCATGAAATACGTGCATATTGCCAATCCTACAATGCCGCATCAGAACCAGAACCCAACTCTGGAACACTACCTTCTCAAGTATCTTTCTGTCTCTTTATGGTAATATGTTGAATTAATATTCACATCTATTATGACTAGTCTTTGATTTGTAGGGTTGCTGAAGTAGTAGCACCACTGCAGGGCTTTCTTTAGTTTAAAGAAAGTAATCAGGTGTCCCTACTGTGTCATGATCTCCACCCTCAGCTGGGTTCTCCAGTCTGGTTTTAAAGAACAAAACAAAAGGCTTCTCTGTCTGAGTCTTACTCAACCCATCCTCTCTACTCATAAGAGGTATTCCAAACCTTTACGATTCTCAAACTTCCTAACCGACCATCTTATTTTCACTCTGCAAACAAGCTAACCTCCTCATTCATAGAAGGAAGTGCCTCAACTTCCTCCCCGTTCTGACCTTTTCTCCCTCCCAAATCTATGTATCTCTTGTGACAAAATCTATAACCACCGCTGTACTTTGAGTTCTATTTCTTCATTATTTTTGAGGGACCTCAAGTCCTCAAAAATATCCTATCTTGCCTGTGTACTTAACTTTTCTTTTATTCTTTTCTAACTTTCCCTTCTCTTCACTTGGCACTTGCCCTTCCAGGTATATGTGTGCTCAGGTCTCCTCCACCTTCCATCTGCCTCACTTCATGGCATAGGGCCTTGAACTATCACAACCAAGCTATGAAAGAGTAGTCAACGCAGTGTCCCCACTTCCTTGCCATCCCATTATCCTAGTTTTTCTTTTGGCTCTCTGAGGAGTCCTTCACAGGCTGGTTTTCAGGAATAAGTCTAAATGAATCACTTTCAGTTTTCCTAAACTTCTATGCCTTTGCACATCCTCTTACCTCTGCCTAGAATATCTTTCTCCTTCTTTTCCATCTTTAAACTCTCACATCATTCTTCAAGACTGGGATCAGCTCTCAGCATCCGGAAGCCTTTGCCTACTAGAGACAAATGAGAATGAGTTTGGTCACCTTTTCATTTTCTTGTATCATTCTGTGCTTTATTTTGCTCTTCTAAGAGCGTTACATGCTTCATTTAATCCCTAAACAACTGTTTGAGGCAAGTACAGTTATTATCCTAATCATGCAAATGAGAAAACAGAGGCCCAGACATGTTGAGTAACTTTGATAAAAGTTAAAGAACCAATAAGTGGAACAGTTGAGGTTTGAACCCTGGCAGTCTGACTGTAGAGATACTATGTTTGACCTACTCCCCTCTGCCCCCACCCCATGTCTGCCCTTAGTTTCTGAGCTTGTTGAATGAATGAACAGGTGGTAGTCTTTTTTTGTTATAAGACTGATCAGAATTAAGACAGGTTTAAATTTCACGTGTAGAATTTTCAAAACTGCAAAGGCAGTGCAAATCTAAAAAAAGAATGGCATTCTCAGGAAAGAGGAAAAGTAAGTGTGAGAATAATAATAACAATAACCAACAAACTTTAGTAAATTTAGTAAATGTAGTAAATTTTTACATTAAAAGCTTTTGGACATACATTATCATATTTTATGGCCACATGAAATATATTATAATCCCATTTTGCACATAGGAAATCTGAGACTGGCATAAGGAGCACAGAGATCCAGGACTTTATATTTTCATTCTTCTAGGATTTTGCACCTCAGGTCGATATGTATGAGTAAACTGGGAGTATAATGGGCTCTTTAACAGAAAAACTAGGAAAGTTTTCCCACTATTATTAATTATTTACATAATATTTTTTTAATTTTATTATTATTTATACTTTAAGTTTTAGAGTACATGTGCACAATGTGCAGGTTTGTTACATATGTATACATGTGCCATGTTGGTGTGCTGCACCCATCAACTCATCATTTAGCATTAGGTATATCTCCTAATGCTATCCCTCCCCCCTCCCCCCTACATAAGATTTATAATGGATAATGGACTTCAATTTCTAGAGCAAAATGGCCCCACCCAAGGATGCCATAATCCTTCCAGAGCTCTACTGCAAGATATGAGATATACATATCTAAAACTTGTTCTTGGTATTTCCAAAGCAGTCAACTTTTACACCTGTTTATAATGCATCCAAATGTTGTTTTTATATGGTTGCATCTCCCATCTTCTTCACCAATAGCTATATATATTTTTCACAAGAGCTGAAAGAGTTCTTGATGTAGGAATCCATGGTAGAGTTTCAGAGAAATCCCTGAATTCACTGAAAGTTTTATCTAGAAATACATGTGCAAGTGAACACATCTTTTTTAAAAAAAATCATTACCTACTTTCTTTTTTGAGAAGAAGGTATTTATTTCAACAGACTCTTGAAGGAGCCTACTCTTCCCACTCTCCCACCCCCATTAAGAACCACTGTAGGCCGGGCACGATGGCTCATGCCTGTAATCCCAGCACTTTGGGAGGCTAAGGTGGGTGGATCACCTGAGGTCAGGAGTTCGAGACAAGCCTAGCCAACATAGTGAAACCCCGTCTCTACTAATAATACAAAAATTAGCTGGGTATGGCAGCATGTGCCTGTAATCCCAGCTACTCGGGAGGCTGAGGCAGGAGAATTGCTCGAACCCGGGAGGCGGAGGTTGCAGTGAACCGAGAGAGATCGTGCGGTGCCATTTCACTCCAGCCTGGGCAACAGAGCGAAACTCCATCTCAAAAAAACACACAAAACAAACAAACAAAAAGAAAGAACCATTGTATTAGTGATGGAAATGTGTTCCCTCCCTCCCATCCTGGCAACCACTTTCTTCCTCCTCCATCATAAAATATCTTAAACTAAACTAAAATAATTTTATTTATCGATAGTTTGAATTTTCCCTATCATTGCTACACAGCTAATTGAGAGGTACCCCGAGGAAAATATAAATGGTACAGTAATGCATTGTAGATTTTAATAACATACTTGACATCCCAAATTGTTTTCATTGGCTTCATTTTAAAAACTACATGTTTTAAAATCAAGCAGACACTAAAAGTACAAGATATACTGGGTCTACAAGGTTTAAGTCAACCAGGGATTGAAATATAACTTTTAAACAGAGCTGGATTATCCAGTAGGCAGATTAAGCATGTGCTTAAGGCATCAGCAAAGTCTGAGCAATCCATTTTTTAAAACGTAGTACATGTTTTTGATAAGCTTAAAAAGTAGTAGTCACAGGAAAAATTAGAACTTTTACCTCCTTGCGCTTGTTATACTCTTTAGTGCTGTTTAACTTTTCTTTGTAAGTGAGGGTGGTGGAGGGTGCCCATAATCTTTTCAGGGAGTAAGTTCTTCTTGGTCTTTCTTTCTTTCTTTCTTTCTTTTTTTCTTGAGACCAAGTTTCGCTCTTGTCTCCCAGGCTGGAGTGCAATGGCGCGATCTCGGCTCACTGCAACCTCCGCCTTCTCCTGGGTTCAAGCGATTCTCCTACATCAGCCTCCGAGTAGCTGGGATTACAGGCATGCGCCACCAAGCCCCGCTAATTTTGTATTTTTTAGTAGAGACAGGGTTTCGCCATGTTGGTCAGGCTTGTCTCGAACTCCTGGCCTCAGGTGATCCGCCTGTCTCGGCCTCCCAGAATGCTGGGATTATAGACGTGAGCCACCGCATCCGGACTTTCCTTTTATGTAATAGTGATAATTCTATCCAAAGCATTTTTTTTTTTTTTTTTGAGTCGGAGTCTCATTCTGTCACCCAGGCTGGAGGGTGGTGGCGCGATCTCGGCTTACTGCAACCTCTGCCTCCCGGGTTCAAGCGATTCTCCTGCCTCAGCCTCCTGAGTAGCTGGAATTACACACGTGCGCCACCATGGCCAGCTAATTTTTGTATTTTTAGTAGAGACGGGGTGTCACCATTTTGGCCAAGCTGGCCTCGAACTCCTGACCTCAGGTGATCTGCCCGCCTCGGCTTCCCAAAGTGCTGGGATTACAGGTGTGAGCCACCGCGTCCTGCTCCAAAGCATTTTCTTTCTATGCCTCAAAACAAGATTGCAAGCCAGTCCTCAAAGCGGATAATTCAAGAGCTAACAGGTATTAGCTTAGGATGTGTGGCACTGTTCTTAAGGCTTATATGTATTAATACATCATTTAAACTCACAACAACCCCTATAAAGCAGGGGGCACTCATATTCCCTTCCCCCTTTATAATTACGAAAAATGCAAGGTATTTTCAGTAGGAAAGAGAAATGTGAGAAGTGTGAAGGAGACAGGACAGTATTTGAAGCTGGTCTTTGGATCACTGTGCAACTCTGCTTCTAGAACACTGAGCACTTTTTCTGGTCTAGGAATTATGACTTTGAGAATGGAGTCCGTCCTTCCAATGACTCCCTCCCCATTTTCCTATCTGCCTACAGGCAGAATTCTCCCCCGTCCGTATTAAATAAACCTCATCTTTTCAGAGTCTGCTCTTATACCAGGCAATGTACACGTCTGAGAAACCCTTGCCCCAGACAGCCGTTTTACACGCAGGAGGGGAAGGGGAGGGGAAGGAGAGAGCAGTCCGACTCTCCAAAAGGAATCCTTTGAACTAGGGTTTCTGACTTAGTGAACCCCGCGCTCCTGAAAATCAAGGGTTGAGGGGGTAGGGGGACACTTTCTAGTCGTACAGGTGATTTCGATTCTCGGTGGGGCTCTCACAACTAGGAAAGAATAGTTTTGCTTTTTCTTATGATTAAAAGAAGAAGCCATACTTTCCCTATGACACCAAACACCCCGATTCAATTTGGCAGTTAGGAAGGTTGTATCGCGGAGGAAGGAAACGGGGCGGGGGCGGATTTCTTTTTAACAGAGTGAACGCACTCAAACACGCCTTTGCTGGCAGGCGGGGGAGCGCGGCTGGGAGCAGGGAGGCCGGAGGGCGGTGTGGGGGGCAGGTGGGGAGGAGCCCAGTCCTCCTTCCTTGCCAACGCTGGCTCTGGCGAGGGCTGCTTCCGGCTGGTGCCCCCGGGGGAGACCCAACCTGGGGCGACTTCAGGGGTGCCACATTCGCTAAGTGCTCGGAGTTAATAGCACCTCCTCCGAGCACTCGCTCACGGCGTCCCCTTGCCTGGAAAGATACCGCGGTCCCTCCAGAGGATTTGAGGGACAGGGTCGGAGGGGGCTCTTCCGCCAGCACCGGAGGAAGAAAGAGGAGGGGCTGGCTGGTCACCAGAGGGTGGGGCGGACCGCGTGCGCTCGGCGGCTGCGGAGAGGGGGAGAGCAGGCAGCGGGCGGCGGGGAGCAGCATGGAGCCGGCGGCGGGGAGCAGCATGGAGCCTTCGGCTGACTGGCTGGCCACGGCCGCGGCCCGGGGTCGGGTAGAGGAGGTGCGGGCGCTGCTGGAGGCGGGGGCGCTGCCCAACGCACCGAATAGTTACGGTCGGAGGCCGATCCAGGTGGGTAGAGGGTCTGCAGCGGGAGCAGGGGATGGCGGGCGACTCTGGAGGACGAAGTTTGCAGGGGAATTGGAATCAGGTAGCGCTTCGATTCTCCGGAAAAAGGGGAGGCTTCCTGGGGAGTTTTCAGAAGGGGTTTGTAATCACAGACCTCCTCCTGGCGACGCCCTGGGGGCTTGGGAAGCCAAGGAAGAGGAATGAGGAGCCACGCGCGTACAGATCTCTCGAATGCTGAGAAGATCTGAAGGGGGGAACATATTTGTATTAGATGGAAGTATGCTCTTTATCAGATACAAAATTTACGAACGTTTGGGATAAAAAGGGAGTCTTAAAGAAATGTAAGATGTGCTGGGACTACTTAGCCTCCAATTCACAGATACCTGGATGGAGCTTATCTTTCTTACTAGGAGGGATTATCAGTGGAAATCTGTGGTGTATGTTGGAATAAATATCGAATATAAATTTTGATCGAAATTATTCAGAAGCGGCCGGGCGCGGTGCCTCACGCCTTGTAATCCCTTCACTTTGGGAGATCAAGGCGGGGGGAATCACCTGAGGTCGGGAGTTCGAGACCAGCCTGGCCAACAGGTGAAACCTCGCCTCTACTAAAAATACAAAAAGTAGCCGGGGGTGGTGGCAGGCGCCTGTAATCCCAGCTACTCGGGAGGTTGAGGCAGGAGAATCGCTTGAACCCGGGAGGCTGAGGTTGTAGTGAACAGCGAGATGGAGCCACTTCACTCCAGCCTGGGTGACAGAGTGAGACTTTGTCGAAAGAAAGAAAGAGAGAAAGAGAGAGAGAAAAATTATTCAGAAGCAACTACATATTGTGTTTATTTTTAACTGAGTAGGGCAAATAAATATATGTTTGCTGTAGGAACTTAGGAAATAATGAGCCACATTCATGTGATCATTCCAGAGGTAATATGTAGTTACCATTTTGGGAATATCTGCTAACATTTTTGCTCTTTTACTATCTTTAGCTTACTTGATATAGTTTATTTGTGATAAGAGTTTTCAATTCCTCATTTTTGAACAGAGGTGTTTCTCCTCTCCCTACTCCTGTTTTGTGAGGGAGTTAGGGGAGGATTTAAAAGTAATTAATACATGGGTAACTTAGCATCTCTAAAATTTTGCCAACAGCTTGAACCCGGGAGTTTGGCTTTGTAGTCCTACAATATCTTAGAAGAGACCTTATTTGTTTAAAAACAAAAAGGAAAAAGAAAAGTGGATAGTTTTGACAATTTTTAATGGAGACGGGAGAAGAACATGTAGAAAAGGGGAAATGATGTTGGCTTAGAATCCTAACTACATTGGTGTTTAATATAGGAACATTTATTTATATAACATTTTAAAGTACTAAATTCATATTAGTATATTATCAAATGGATATATTATCAAATGGGTTTAAGCATCCTACACATTTTAATTCAATTGATTCATTTTCTTTTTGCTTTGGATTTCTATCATGATTTAAATATTTACATATGGGTTACTTTTTAGATTTTTCATACTATGAAATATAAGAAAAACCTTTAAGGCTAGTTTTATGACCAAGACGAAGGACTTCATTGAATACACAAAACAATAAATATACTGCAACATTTTGTCTTTCTTTTTGTAGCTGCAATTTGGTTTGCTTATACTTTCTCTTTGTCTCTTTGAAAACTGAGTCAGTTTCACTTTCTCAGGACAGGATTTAATAACCATAATATAATTTAGTATAATTCCTTGATTTAGGCAAATTATGCAATTTGTGTTTAGTATGAAATGTACCTAAAAATAAGTAACTCCTCTTTAACACCACCATCCTCAAACTAATATAACAAATAACAGTTATCCTAAAATAAATTGTCTACTTCCACCATGCAGCACTCAAATTTTAAGGTTGCTATGACTGCAGACAGTATTTTAAAATTCCTCTCTGGAAATGGCTTTGTTTCCAAGATGATTTAGGAACCAAAGAGGTGACCATCTCTTGTTTAATGAACTCTCAAATCATAAACCTGGGAAGTGTTTTAGTTTCCTACTGCTGCTGTTACAAATTATCACAAATGTGTTAGCTAAAACAAACACAAAATTATTATTTTACAGTTCTAGAGATCAGAAGTCAAAAATGGGTCCACAAGGTTTCATTCCTTTTGGAAACTCTAAGGGGCAATCTGTTTCCTTGTCTTTTCCAGCTTCTAGTGACCATCAAATTCCTTGGCTCATGGTCTCTGTATTTTCTCTGTGGCCTGTGCTTCCATTCTTGTATCTTCTCTCTGACTGTGACCCTCTAATAAAAACACTTGGGGTTATGTTGGGCCCACCCTGAAAATTCTGGATAATCTCCCTCAAGACCATTAATTAAATCACATCTGCAAAGCCTCTTTTGCCACATAAGTTAATGTATTAAAAGTTTTTGAGGATTAGGACATAGACATTGGGGGTGGGGGGGCATTATTCAGCCTACCACAGGAAGGAATTTTAGGGTTAATTAAACTAGCCTTCTTATTTTATACTTGAAGAAATTGAAGTTTTGGAATTGGAGAGCATTATGCTAAATGAAATAAGCCAAACACAGAAAGACAAATATCACATGTTCTCACTTATCTGTGAAATATAAAACAATTACATTCTTAGCAGTAAAGAGTAGAATGGTGGTTACTAGAGCTGGGGGGTGGGAGGAATGGGGAGATGGTAATCAAGATATAAAGCCTCAGTTAAGATGGGAGGAATAAGTTTGATTGTTTTTTTTGAGATGTGTTTCATAGCATGATGAATATAGCTAAATAGTAAATCCCAAATGCTCTCATTTGACAAAAATGTCAAATATTTGAGATGATGGATAGGTTACTTAGCTTGACTTAATAATTCCCCATTGTGTTCAAAGATCATAACTTCATATTGTACCACATAAATATATACAACTGTACTATCCCAATATATAATTTTAAAACTAATATAATGAAAAAGAAATTGAAGTTCAACATTCCCAGAAGCTAAGTGTAACTTAAAAGTTTTGTGAGAATTTGTTTTAACAAACAAACAAGTTTTCTCTTTTTAACAATTACCACATTCTGCGCTTGGATATACAGCAGTGAACAAAAAAAAAAAAAAAAATCTCCAGGCCTAACATAATTTCAGGAAGAAATTTCAGTAGTTGTATCTCAGGGGAAATACAGGAAGTTAGCCTGGAGTAAAAGTCAGTCTGTCCCTGCCCCTTTGCTATTTTGCCCGTGCCTCACAGTGCTCTCTGCCTGTGACGACAGCTCCGCAGAAGTTCGGAGGATATAATGGAATTCATTGTGTACTGAAGAATGGATAGAGAACTCAAGAAGGAAATTGGAAACTGGAAGCAAATGTAGGGGTAATTAGACACCTGGGGCTTGTGTGGGGGTCTGCTTGGCGGTGAGGGGGCTCTACACAAGCTTCCTTTCCGTCATGCCGGCCCCCACCCTGGCTCTGACCATTCTGTTCTCTCTGGCAGGTCATGATGATGGGCAGCGCCCGAGTGGCGGAGCTGCTGCTGCTCCACGGCGCGGAGCCCAACTGCGCCGACCCCGCCACTCTCACCCGACCCGTGCACGACGCTGCCCGGGAGGGCTTCCTGGACACGCTGGTGGTGCTGCACCGGGCCGGGGCGCGGCTGGACGTGCGCGATGCCTGGGGCCGTCTGCCCGTGGACCTGGCTGAGGAGCTGGGCCATCGCGATGTCGCACGGTACCTGCGCGCGGCTGCGGGGGGCACCAGAGGCAGTAACCATGCCCGCATAGATGCCGCGGAAGGTCCCTCAGGTGAGGACTGATGATCTGAGAATTTGTACCCTGAGAGCTTCCAAAGCTCAGAGCATTCATTTTCCAGCACAGAAAGTTCAGCCCGGGAGACCAGTCTCCGGTCTTGCCTCAGCTCACGCGCCAATCGGTGGGACGGCCTGAGTCTCCCTATCGCCCTGCCCCGCCAGGGCGGCAAATGGGAAATAATCCCGAAATGGACTTGCGCACGTGAAAGCCCATTTTGTACATTATACTTCCCAAAGCATACCACCACCCAAACACCTACCCTCTGCTAGTTCAAGGCCTAGACTGCGGAGCAATGAAGACTCAAGAGGCTAGAGGTCTAGTGCCCCCTCTTCCTCCAAACTAGGGCCAGTTGCATCCACTTACCAGGTCTGTTTCCTCATTTGCATACCAAGCTGGCTGGACCAACCTCAGGATTTCCAAACCCAATTGTGCGTGGCATCATCTGGAGATCTCTCGATCTCGGCTCTTCTGCACAACTCAACTAATCTGACCCTCCTCAGCTAATCTGACCCTCCGCTTTATGCGGTAGAGTTTTCCAGAGCTGCCCCAGGGGGTTCTGGGGACATCAGGACCAAGACTTCGCTGACCCTGGCAGTCTGTGCACCGGAGTTGGCTCCTTTCCCTCTTAAACTTGTGCAAGAGATCGCTGAGCGATGAAGGTAGAATTATGGTCCTCCTTGCCCTTGCCTTTCCTTTTTGTGATCTCAAAGCATCCTCCCTCCGCCCCCATTCCATGGCCCCAGTTCCCTACTCCCACAGCTGTCTGCTGAAACTGCCAACATTACTCAATTGTTTCTGGGGGGAGGAACATTTTTTTTTGAAACAAAATAGATATATGAAACAGTACACGGGAATTAACACGAATATTTAAGGTAAAACATGACCTTGAAGATTATGAAATCCATCTTATTTTGGCCCAGAACGGGGGCATTGGGCTCCTTGGGCCATAGGGGAGCTGGGGAGGACAGGGTGAAGAGTTAGCTCTAAGCCCTCTGCTTGGAGATGCTGTAAATACAGAACGCAAAATCACCTTCGAAGTTAAAGACGCGAAGTTCTTCTTTACTCGGCCCCTCCTCCCCTCCCCCCCGCCAATTCCCTCCAGTTACAGCTAGCATCCAGGTCCCGGGAGGTGAAGAAGGAGACTTCGGCTCCAGTTACAGCTAGCATCCGGGTCCCGATTTAGAAGGAGCTGCCAATTACAGCGCGGTTCCAGGGCTGAGCAAAAAGCCTGAGGAGCCAAGTGGGAGAGGGAGTAAAACTACTGAATTGGGCCACAAGCAAATGAATAAACTGAACGACTCTTAACCAAACCTAATATATTTAATCCAAACACACAAGTCTTTCATTTCTTCCCTCCTCCCTTCCTTCTCTTACTCCCCAACACCCCCTCTTCAAGCACAATTAATTATATGGTTAGATTCTACTGCGTGATCAGCCCTGTTCTAGGTGGTGGGCACGCCAAGGTGAATGAGACCAAACAAGAGTCTTGCCCTCATGGGGTTTACATTTGGAGACAGAGTCGATCTGTTGCCCAACCTGGAGTGCAGTGGCGCGATCACAGCTCACTGCAGCCTCAAACTCCCTGGCTCAAGGGGTTCTCCCACCTGAGCCTCCCGACTAGCTGGGACCACAGGTGCACGCCACGACGCCTGGGTTTGTTTGTTTGTTTAATAGAGACGAAGGTCTCACCATGTTATCTGGGCTCAAGCGATCATCCCCCCTCCTCCTCCTAAAGTACTGGGATTACAGTCCCAAGCTATCTTGCCCGACCTGGGAAACAGACGTTAAGGAAGATAACAATCTATTTTCAGAGAGCGAGTTTATAAAACCAATGCAATGGGTAAATATGAAGTGTGAATAGGAGGAGAAGCTAAAGAGTGGTCGGAGAATCTAATGCAAGCTACGGGAGAAAGAAACTCAAGTGCAAATGCTGCCTCAGGAATAAACGTAAAAAGAGACTTTCAAGTGCAAATGCTCCCTCAGGAATAAAATAATCTTGAGACTCTCAAGTGTAAATGCTGCCTCGGGAGAACCGAACGGCGAGCTGGAGCCCATACGCAACGAGATTAGAGAGGAAGGCAGAAGCCAGAGCACATGAATAAATGAGCATCCATTTTGTTTCAGAAATGATCGGAAACCATTTGTGGGTTTGTAGAAGCAGGCATGCGTAGGGAAGCTACGGGATTCCGCCGAGGAGCGCCAGAGCCTGAGGCGCCCTTTGGTTATCGCAAGCTGGCTGGCTCACTCCGCACCAGGTGCAAAAGATGCCTGGGGATGCGGGAAGGGAAAGGCCACATCTTCACGCCTTCGCGCCTGGCATTGTGAGCAACCACTGAGACTCATTATATAACACTCGTTTTCTTCTTGCAACCCTGCGGGCCGCGCGGTCGCGCTTTCTCTGCCCTCCGCCGGGTGGACCTGGAGCGCTTGAGCGGTCGGCGCGCCTGGAGCAGCCAGGCGGGCAGTGGACTAGCTGCTGGACCAGGGAGGTGTGGGAGAGCGGTGGCGGCGGGTACATGCACGTGAAGCCATTGCGAGAACTTTATCCATAAGTATTTCAATGCCGGTAGGGACGGCAAGAGAGGAGGGCGGGATGTGCCACACATCTTTGACCTCAGGTTTCTAACGCCTGTTTTCTTTCTGCCCTCTGCAGACATCCCCGATTGAAAGAACCAGAGAGGCTCTGAGAAACCTCGGGAAACTTAGATCATCAGTCACCGAAGGTCCTACAGGGCCACAACTGCCCCCGCCACAACCCACCCCGCTTTCGTAGTTTTCATTTAGAAAATAGAGCTTTTAAAAATGTCCTGCCTTTTAACGTAGATATATGCCTTCCCCCACTACCGTAAATGTCCATTTATATCATTTTTTATATATTCTTATAAAAATGTAAAAAAGAAAAACACCGCTTCTGCCTTTTCACTGTGTTGGAGTTTTCTGGAGTGAGCACTCACGCCCTAAGCGCACATTCATGTGGGCATTTCTTGCGAGCCTCGCAGCCTCCGGAAGCTGTCGACTTCATGACAAGCATTTTGTGAACTAGGGAAGCTCAGGGGGGTTACTGGCTTCTCTTGAGTCACACTGCTAGCAAATGGCAGAACCAAAGCTCAAATAAAAATAAAATAATTTTCATTCATTCACTCA",
-    "description": "ENSG00000147889.18 chromosome:GRCh38:9:21967752:21995301:-1"
+    "description": "ENSG00000147889.12 chromosome:GRCh37:9:21967751:21995300:-1"
   }
 }
