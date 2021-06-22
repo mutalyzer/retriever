@@ -40,7 +40,16 @@ from Bio.SeqUtils import seq1
 
 from ..util import make_location
 
-CONSIDERED_TYPES = ["gene", "ncRNA_gene", "mRNA", "exon", "CDS", "lnc_RNA", "snRNA"]
+CONSIDERED_TYPES = [
+    "gene",
+    "ncRNA_gene",
+    "mRNA",
+    "exon",
+    "CDS",
+    "lnc_RNA",
+    "snRNA",
+    "polypeptide",
+]
 QUALIFIERS = {
     "gene": {
         "Name": "name",
@@ -73,6 +82,7 @@ QUALIFIERS = {
         "version": "version",
         "assembly_name": "assembly_name",
     },
+    "polypeptide": {"gbkey": "gbkey", "product": "product"},
 }
 SO_IDS = {
     "gene": "SO:0000704",
@@ -106,6 +116,8 @@ def _get_feature_id(feature):
             return feature.qualifiers["exon_id"][0]
         elif feature.id:
             return feature.id
+    elif feature.type == "polypeptide":
+        return feature.id.split("-")[1].split(":")[0]
 
 
 def _combine_cdses(mrna):
@@ -313,7 +325,6 @@ def _create_record_model(record, source=None):
     """
 
     features = None
-    mol_type = None
     region_model = _get_region_model(record.features)
     if region_model and region_model.get("qualifiers"):
         if region_model["qualifiers"].get("mol_type"):
