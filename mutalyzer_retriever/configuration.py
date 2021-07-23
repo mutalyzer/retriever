@@ -7,7 +7,7 @@ import os
 settings = {
     "EMAIL": "make_sure_to_configure_this@email.com",
     "NCBI_API_KEY": None,
-    "LRG_URL": "ftp://ftp.ebi.ac.uk/pub/databases/lrgex/",
+    "LRG_URL": "http://ftp.ebi.ac.uk/pub/databases/lrgex/",
     "MAX_FILE_SIZE": 10 * 1048576,
 }
 
