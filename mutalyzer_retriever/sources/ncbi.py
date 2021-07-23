@@ -81,7 +81,7 @@ def _fetch_reference_summary(reference_id):
     :returns dict:
     """
     try:
-        handle = Entrez.esummary(db=db, id=reference_id)
+        handle = Entrez.esummary(id=reference_id)
     except (IOError, HTTPError, HTTPException):
         raise ConnectionError
     else:
