@@ -94,7 +94,10 @@ def _get_translation_exception(cds):
             }
         )
     if output:
-        return {"translation_exception": {"exceptions": output}, "coordinate_system": "p"}
+        return {
+            "translation_exception": {"exceptions": output},
+            "coordinate_system": "p",
+        }
 
 
 def _get_transcripts(section):

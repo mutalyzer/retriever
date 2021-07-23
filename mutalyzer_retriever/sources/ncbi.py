@@ -54,6 +54,24 @@ def fetch_ncbi_databases(reference_id):
     return databases
 
 
+def _get_database(reference_id):
+    try:
+        databases = fetch_ncbi_databases(reference_id)
+    except ConnectionError as e:
+        raise e
+
+    if "nuccore" in databases:
+        return "nuccore"
+    elif "protein" in databases:
+        return "protein"
+    elif "nucest" in databases:
+        return "nucest"
+        # Todo: Pay attention to the following:
+        # https://ncbiinsights.ncbi.nlm.nih.gov/2018/07/30/upcoming-changes-est-gss-databases/
+    else:
+        raise NameError
+
+
 def _fetch_reference_summary(reference_id):
     """
     Retrieves the reference summary if available on the NCBI.
@@ -63,23 +81,7 @@ def _fetch_reference_summary(reference_id):
     :returns dict:
     """
     try:
-        databases = fetch_ncbi_databases(reference_id)
-    except ConnectionError as e:
-        raise e
-
-    if "nuccore" in databases:
-        db = "nuccore"
-    elif "protein" in databases:
-        db = "protein"
-    elif "nucest" in databases:
-        db = "nucest"
-        # Todo: Pay attention to the following:
-        # https://ncbiinsights.ncbi.nlm.nih.gov/2018/07/30/upcoming-changes-est-gss-databases/
-    else:
-        raise NameError
-
-    try:
-        handle = Entrez.esummary(db=db, id=reference_id)
+        handle = Entrez.esummary(id=reference_id)
     except (IOError, HTTPError, HTTPException):
         raise ConnectionError
     else:
@@ -92,7 +94,7 @@ def _fetch_reference_summary(reference_id):
 
     return {
         "reference_id": record[0]["AccessionVersion"],
-        "db": db,
+        "db": _get_database(reference_id),
         "length": int(record[0]["Length"]),
     }
 
@@ -128,7 +130,7 @@ def fetch_genbank(reference_id, size_on=True):
         return raw_data
 
 
-def fetch_fasta(reference_id):
+def fetch_fasta(reference_id, db):
     """
     Retrieve the sequence of corresponding reference ID.
 
@@ -137,7 +139,7 @@ def fetch_fasta(reference_id):
     :returns str: The sequence.
     """
     try:
-        handle = Entrez.efetch(db="nucleotide", id=reference_id, rettype="fasta")
+        handle = Entrez.efetch(db=db, id=reference_id, rettype="fasta")
     except HTTPError as e:
         if e.code == 400:
             # TODO: Check whether in the response is mentioned that the
@@ -153,7 +155,7 @@ def fetch_fasta(reference_id):
         return raw_data
 
 
-def fetch_gff3(reference_id, timeout=1):
+def fetch_gff3(reference_id, db, timeout=1):
     """
     Retrieve the gff3 for the corresponding reference ID.
 
@@ -162,7 +164,7 @@ def fetch_gff3(reference_id, timeout=1):
     :returns str: gff3 content.
     """
     url = "https://eutils.ncbi.nlm.nih.gov/sviewer/viewer.cgi"
-    params = {"db": "nuccore", "report": "gff3", "id": reference_id}
+    params = {"db": db, "report": "gff3", "id": reference_id}
     try:
         response = request(url=url, params=params, timeout=timeout)
     except RequestErrors:
@@ -186,10 +188,11 @@ def fetch(reference_id, reference_type, size_on=True, timeout=1):
 
     :returns tuple: raw annotations, type ("gff3" or "genbank")
     """
+    db = _get_database(reference_id)
     if reference_type in [None, "gff3"]:
-        return fetch_gff3(reference_id, timeout), "gff3"
+        return fetch_gff3(reference_id, db, timeout), "gff3"
     elif reference_type == "fasta":
-        return fetch_fasta(reference_id), "fasta"
+        return fetch_fasta(reference_id, db), "fasta"
     elif reference_type == "genbank":
         return fetch_genbank(reference_id, size_on), "genbank"
 
