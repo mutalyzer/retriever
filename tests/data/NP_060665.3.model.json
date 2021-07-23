@@ -1,0 +1,50 @@
+{
+  "annotations": {
+    "id": "NP_060665.3",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 293
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:9606",
+      "name": "11",
+      "chromosome": "11",
+      "map": "11q23.1",
+      "mol_type": "unassigned"
+    },
+    "features": [
+      {
+        "id": "NP_060665.3",
+        "type": "polypeptide",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 0
+          },
+          "end": {
+            "type": "point",
+            "position": 293
+          },
+          "strand": 1
+        },
+        "qualifiers": {
+          "gbkey": "Prot",
+          "product": "uncharacterized protein NKAPD1 isoform a"
+        }
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "MSRIPLGKVLLRNVIRHTDAHNKIQEESDMWKIRELEKQMEDAYRGTKRKMLPSSSSRMRSDGFDEESQRYYWRPKNEISGTLEDDFLKAKSWNKKFYDYEANMPDRWGHSGYKELYPEEFETDSSDQQDITNGKKTSPQVKSSTHESRKHKKSKKSHKKKQKKRSHKKQKKSKKEATDITADSSSEFSEETGASGTRKGKQPHKRKKKSRKKSLKKPALFLEAESNTSHSDDSASSSSEESEERDTKKTKRKKREKKAHTSVANNEIQERTNKRTNWKVATDERSAESSEDD",
+    "description": "NP_060665.3 uncharacterized protein NKAPD1 isoform a [Homo sapiens]"
+  }
+}

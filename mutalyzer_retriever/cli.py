@@ -58,7 +58,9 @@ def _arg_parser():
 
     subparsers = parser.add_subparsers(dest="from_file")
 
-    parser_from_file = subparsers.add_parser("from_file", help="parse files to get the model")
+    parser_from_file = subparsers.add_parser(
+        "from_file", help="parse files to get the model"
+    )
 
     parser_from_file.add_argument(
         "--paths",

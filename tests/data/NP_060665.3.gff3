@@ -1,0 +1,14 @@
+##sequence-region NP_060665.3 1 293
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+NP_060665.3	RefSeq	region	1	293	.	+	.	ID=NP_060665.3:1..293;Dbxref=taxon:9606;Name=11;chromosome=11;gbkey=Src;genome=genomic;map=11q23.1;mol_type=unassigned
+NP_060665.3	RefSeq	polypeptide	1	293	.	+	.	ID=id-NP_060665.3:1..293;calculated_mol_wt=34066;gbkey=Prot;product=uncharacterized protein NKAPD1 isoform a
+NP_060665.3	RefSeq	biological_region	47	67	.	+	.	ID=id-NP_060665.3:47..67;Name=Disordered. /evidence%3DECO:0000256|SAM:MobiDB-lite;Note=propagated from UniProtKB/Swiss-Prot (Q6ZUT1.2);gbkey=Region
+NP_060665.3	RefSeq	biological_region	86	147	.	+	.	ID=id-NP_060665.3:86..147;Dbxref=CDD:292320;Name=NKAP;Note=NF-kappa-B-activating protein;gbkey=Region
+NP_060665.3	RefSeq	region	94	94	.	+	.	ID=id-NP_060665.3:94..94;Note=Phosphothreonine. /evidence%3DECO:0007744|PubMed:21406692%3B propagated from UniProtKB/Swiss-Prot (Q6ZUT1.2);gbkey=Site
+NP_060665.3	RefSeq	region	96	96	.	+	.	ID=id-NP_060665.3:96..96;Note=Phosphoserine. /evidence%3DECO:0007744|PubMed:21406692%3B propagated from UniProtKB/Swiss-Prot (Q6ZUT1.2);gbkey=Site
+NP_060665.3	RefSeq	region	97	97	.	+	.	ID=id-NP_060665.3:97..97;Note=Phosphoserine. /evidence%3DECO:0007744|PubMed:21406692%3B propagated from UniProtKB/Swiss-Prot (Q6ZUT1.2);gbkey=Site
+NP_060665.3	RefSeq	region	123	123	.	+	.	ID=id-NP_060665.3:123..123;Note=Phosphothreonine. /evidence%3DECO:0007744|PubMed:21406692%3B propagated from UniProtKB/Swiss-Prot (Q6ZUT1.2);gbkey=Site
+NP_060665.3	RefSeq	region	125	125	.	+	.	ID=id-NP_060665.3:125..125;Note=Phosphoserine. /evidence%3DECO:0007744|PubMed:21406692%3B propagated from UniProtKB/Swiss-Prot (Q6ZUT1.2);gbkey=Site
+NP_060665.3	RefSeq	region	127	127	.	+	.	ID=id-NP_060665.3:127..127;Note=Phosphoserine. /evidence%3DECO:0007744|PubMed:21406692%3B propagated from UniProtKB/Swiss-Prot (Q6ZUT1.2);gbkey=Site
+
+
