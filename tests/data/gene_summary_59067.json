@@ -1,0 +1,147 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "59067"
+    ],
+    "59067": {
+      "uid": "59067",
+      "name": "IL21",
+      "description": "interleukin 21",
+      "status": "",
+      "currentid": "",
+      "chromosome": "4",
+      "geneticsource": "genomic",
+      "maplocation": "4q27",
+      "otheraliases": "CVID11, IL-21, Za11",
+      "otherdesignations": "interleukin-21",
+      "nomenclaturesymbol": "IL21",
+      "nomenclaturename": "interleukin 21",
+      "nomenclaturestatus": "Official",
+      "mim": [
+        "605384"
+      ],
+      "genomicinfo": [
+        {
+          "chrloc": "4",
+          "chraccver": "NC_000004.12",
+          "chrstart": 122621065,
+          "chrstop": 122610107,
+          "exoncount": 5
+        }
+      ],
+      "geneweight": 37447,
+      "summary": "This gene encodes a member of the common-gamma chain family of cytokines with immunoregulatory activity. The encoded protein plays a role in both the innate and adaptive immune responses by inducing the differentiation, proliferation and activity of multiple target cells including macrophages, natural killer cells, B cells and cytotoxic T cells. Dysregulation of this gene plays a role in multiple immune-mediated diseases including lupus, psoriasis and chronic inflammatory diseases. Alternatively spliced transcript variants encoding multiple isoforms have been observed for this gene. [provided by RefSeq, Dec 2011]",
+      "chrsort": "04",
+      "chrstart": 122610107,
+      "organism": {
+        "scientificname": "Homo sapiens",
+        "commonname": "human",
+        "taxid": 9606
+      },
+      "locationhist": [
+        {
+          "annotationrelease": "109.20210514",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000004.12",
+          "chrstart": 122621065,
+          "chrstop": 122610107
+        },
+        {
+          "annotationrelease": "109.20210226",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000004.12",
+          "chrstart": 122621065,
+          "chrstop": 122610107
+        },
+        {
+          "annotationrelease": "109.20201120",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000004.12",
+          "chrstart": 122621065,
+          "chrstop": 122610107
+        },
+        {
+          "annotationrelease": "109.20200815",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000004.12",
+          "chrstart": 122621065,
+          "chrstop": 122610107
+        },
+        {
+          "annotationrelease": "109.20200522",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000004.12",
+          "chrstart": 122621065,
+          "chrstop": 122610107
+        },
+        {
+          "annotationrelease": "109.20200228",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000004.12",
+          "chrstart": 122621065,
+          "chrstop": 122610107
+        },
+        {
+          "annotationrelease": "109.20191205",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000004.12",
+          "chrstart": 122621065,
+          "chrstop": 122610107
+        },
+        {
+          "annotationrelease": "109.20190905",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000004.12",
+          "chrstart": 122621065,
+          "chrstop": 122610107
+        },
+        {
+          "annotationrelease": "109.20190607",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000004.12",
+          "chrstart": 122621065,
+          "chrstop": 122610107
+        },
+        {
+          "annotationrelease": "109",
+          "assemblyaccver": "GCF_000001405.38",
+          "chraccver": "NC_000004.12",
+          "chrstart": 122621056,
+          "chrstop": 122612627
+        },
+        {
+          "annotationrelease": "105.20201022",
+          "assemblyaccver": "GCF_000001405.25",
+          "chraccver": "NC_000004.11",
+          "chrstart": 123542220,
+          "chrstop": 123531262
+        },
+        {
+          "annotationrelease": "105",
+          "assemblyaccver": "GCF_000001405.25",
+          "chraccver": "NC_000004.11",
+          "chrstart": 123542211,
+          "chrstop": 123533782
+        },
+        {
+          "annotationrelease": "105",
+          "assemblyaccver": "GCF_000002125.1",
+          "chraccver": "AC_000136.1",
+          "chrstart": 119268549,
+          "chrstop": 119260227
+        },
+        {
+          "annotationrelease": "105",
+          "assemblyaccver": "GCF_000306695.2",
+          "chraccver": "NC_018915.2",
+          "chrstart": 123518678,
+          "chrstop": 123510249
+        }
+      ]
+    }
+  }
+}
