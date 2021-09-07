@@ -134,6 +134,7 @@ def _to_model(d):
     output = {}
     for k in d:
         output[k] = []
+        # print(sorted(d[k], key=lambda r_id: r_id['id'] if r_id.get("selector") is None else (r_id['id'], r_id["selector"]["id"])))
         for i in d[k]:
             if len(i) == 1:
                 output[k].append({"id": i[0]})
@@ -219,4 +220,5 @@ def _get_related_ncbi(reference_id, timeout=1):
 
 def get_related(reference_id, timeout=1):
     ncbi = _get_related_ncbi(reference_id, timeout)
+    print(ncbi)
     return _to_model(ncbi)

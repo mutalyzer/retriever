@@ -1,0 +1,261 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "1519245278"
+    ],
+    "1519245278": {
+      "uid": "1519245278",
+      "term": "1519245278",
+      "caption": "NM_003002",
+      "title": "Homo sapiens succinate dehydrogenase complex subunit D (SDHD), transcript variant 1, mRNA; nuclear gene for mitochondrial product",
+      "extra": "gi|1519245278|ref|NM_003002.4|",
+      "gi": 1519245278,
+      "createdate": "1999/03/19",
+      "updatedate": "2021/07/05",
+      "flags": 512,
+      "taxid": 9606,
+      "slen": 1339,
+      "biomol": "mRNA",
+      "moltype": "rna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "genomic",
+      "subtype": "chromosome|map",
+      "subname": "11|11q23.1",
+      "assemblygi": "",
+      "assemblyacc": "AP002007.4",
+      "tech": "",
+      "completeness": "complete",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 1339
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 1339
+        },
+        {
+          "type": "all",
+          "count": 4
+        },
+        {
+          "type": "blob_size",
+          "count": 21541
+        },
+        {
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "subtype": "misc_feature",
+          "count": 1
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 7
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed/Gene-rif",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "all",
+          "count": 6
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "subtype": "Prot",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "site",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "site",
+          "subtype": "Site",
+          "count": 3
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "subtype": "NA000146873.18#17",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 1339
+        },
+        {
+          "source": "all",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 19
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 21541
+        },
+        {
+          "source": "all",
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "evidence",
+          "count": 4
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 9
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "prot",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "source": "all",
+          "type": "site",
+          "count": 3
+        },
+        {
+          "source": "exons",
+          "type": "all",
+          "count": 4
+        },
+        {
+          "source": "exons",
+          "type": "evidence",
+          "count": 4
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "count": 4
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "subtype": "exon",
+          "count": 4
+        },
+        {
+          "source": "polyA sites",
+          "type": "all",
+          "count": 4
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "count": 4
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "subtype": "polyA_site",
+          "count": 2
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "subtype": "regulatory",
+          "count": 2
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NM_003002.4"
+      },
+      "accessionversion": "NM_003002.4"
+    }
+  }
+}
