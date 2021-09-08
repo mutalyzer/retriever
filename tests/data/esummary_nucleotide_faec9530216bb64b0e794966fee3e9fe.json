@@ -1,0 +1,3692 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "224514656",
+      "224514657",
+      "224514662",
+      "224514663",
+      "224514667",
+      "224514669",
+      "224514671",
+      "568336002",
+      "568801964",
+      "568801965",
+      "568801966",
+      "568801967",
+      "568801968",
+      "568801969",
+      "568801970",
+      "568801971",
+      "568801972",
+      "568801973",
+      "568801974",
+      "568801975",
+      "568801976",
+      "568801977",
+      "568801978",
+      "568801979",
+      "568801980",
+      "568801981",
+      "568801982",
+      "568801983",
+      "568801984",
+      "568801985",
+      "568801986",
+      "568801987",
+      "568801988",
+      "568801989",
+      "568801990",
+      "568801991",
+      "568801992"
+    ],
+    "224514656": {
+      "uid": "224514656",
+      "term": "224514656",
+      "caption": "NT_167229",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_14",
+      "extra": "gi|224514656|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_14|ref|NT_167229.1|",
+      "gi": 224514656,
+      "createdate": "2009/06/10",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 34474,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 224183285,
+      "assemblyacc": "GL000235.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 34474
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 34474
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15647
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 34474
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15647
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_167229.1"
+      },
+      "accessionversion": "NT_167229.1"
+    },
+    "224514657": {
+      "uid": "224514657",
+      "term": "224514657",
+      "caption": "NT_167230",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_5",
+      "extra": "gi|224514657|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_5|ref|NT_167230.1|",
+      "gi": 224514657,
+      "createdate": "2009/06/10",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 41934,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 224183286,
+      "assemblyacc": "GL000236.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 41934
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 41934
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15644
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 41934
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15644
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_167230.1"
+      },
+      "accessionversion": "NT_167230.1"
+    },
+    "224514662": {
+      "uid": "224514662",
+      "term": "224514662",
+      "caption": "NT_167234",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_15",
+      "extra": "gi|224514662|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_15|ref|NT_167234.1|",
+      "gi": 224514662,
+      "createdate": "2009/06/10",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 41933,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 224183291,
+      "assemblyacc": "GL000240.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 41933
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 41933
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15647
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 41933
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15647
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_167234.1"
+      },
+      "accessionversion": "NT_167234.1"
+    },
+    "224514663": {
+      "uid": "224514663",
+      "term": "224514663",
+      "caption": "NT_167235",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_3",
+      "extra": "gi|224514663|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_3|ref|NT_167235.1|",
+      "gi": 224514663,
+      "createdate": "2009/06/10",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 42152,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 224183292,
+      "assemblyacc": "GL000241.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 42152
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 42152
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15644
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 42152
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15644
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_167235.1"
+      },
+      "accessionversion": "NT_167235.1"
+    },
+    "224514667": {
+      "uid": "224514667",
+      "term": "224514667",
+      "caption": "NT_167237",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_19",
+      "extra": "gi|224514667|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_19|ref|NT_167237.1|",
+      "gi": 224514667,
+      "createdate": "2009/06/10",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 43341,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 224183294,
+      "assemblyacc": "GL000243.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 43341
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 43341
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15647
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 43341
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15647
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_167237.1"
+      },
+      "accessionversion": "NT_167237.1"
+    },
+    "224514669": {
+      "uid": "224514669",
+      "term": "224514669",
+      "caption": "NT_167238",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_2",
+      "extra": "gi|224514669|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_2|ref|NT_167238.1|",
+      "gi": 224514669,
+      "createdate": "2009/06/10",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 39929,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 224183295,
+      "assemblyacc": "GL000244.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 39929
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 39929
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15644
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 39929
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15644
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_167238.1"
+      },
+      "accessionversion": "NT_167238.1"
+    },
+    "224514671": {
+      "uid": "224514671",
+      "term": "224514671",
+      "caption": "NT_167239",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_16",
+      "extra": "gi|224514671|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_16|ref|NT_167239.1|",
+      "gi": 224514671,
+      "createdate": "2009/06/10",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 36651,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 224183296,
+      "assemblyacc": "GL000245.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 36651
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 36651
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15647
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 36651
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15647
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_167239.1"
+      },
+      "accessionversion": "NT_167239.1"
+    },
+    "568336002": {
+      "uid": "568336002",
+      "term": "568336002",
+      "caption": "CM000684",
+      "title": "Homo sapiens chromosome 22, GRCh38 reference primary assembly",
+      "extra": "gi|568336002|gnl|ASM:GCA_000001305|22|gb|CM000684.2|",
+      "gi": 568336002,
+      "createdate": "2009/02/27",
+      "updatedate": "2013/12/20",
+      "flags": 32,
+      "taxid": 9606,
+      "slen": 50818468,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "insd",
+      "segsetsize": "",
+      "projectid": "31257",
+      "genome": "chromosome",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": "",
+      "assemblyacc": "",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Gap",
+          "count": 38
+        },
+        {
+          "type": "Length",
+          "count": 50818468
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 39195568
+        },
+        {
+          "type": "Length",
+          "subtype": "gap",
+          "count": 11622900
+        },
+        {
+          "type": "all",
+          "count": 2
+        },
+        {
+          "type": "blob_size",
+          "count": 16581
+        },
+        {
+          "type": "imp",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "subtype": "centromere",
+          "count": 1
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 4
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Gap",
+          "count": 38
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 50818468
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 2
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16581
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 4
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "CM000684.2"
+      },
+      "accessionversion": "CM000684.2"
+    },
+    "568801964": {
+      "uid": "568801964",
+      "term": "568801964",
+      "caption": "NT_011526",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG3_3",
+      "extra": "gi|568801964|gnl|ASM:GCF_000001305.15|HSCHR22_CTG3_3|ref|NT_011526.8||gpp|GPS_003205726.1|",
+      "gi": 568801964,
+      "createdate": "2000/11/17",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 833103,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335449,
+      "assemblyacc": "GL000156.2",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 833103
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 833103
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 17362
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 833103
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 17362
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_011526.8"
+      },
+      "accessionversion": "NT_011526.8"
+    },
+    "568801965": {
+      "uid": "568801965",
+      "term": "568801965",
+      "caption": "NT_011520",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG3_2",
+      "extra": "gi|568801965|gnl|ASM:GCF_000001305.15|HSCHR22_CTG3_2|ref|NT_011520.13||gpp|GPS_003205725.1|",
+      "gi": 568801965,
+      "createdate": "2000/11/17",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 31264301,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335456,
+      "assemblyacc": "GL000155.2",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 31264301
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 31264301
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 64836
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 4
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 4
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 31264301
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 64836
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 4
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_011520.13"
+      },
+      "accessionversion": "NT_011520.13"
+    },
+    "568801966": {
+      "uid": "568801966",
+      "term": "568801966",
+      "caption": "NT_187357",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG3_1",
+      "extra": "gi|568801966|gnl|ASM:GCF_000001305.15|HSCHR22_CTG3_1|ref|NT_187357.1||gpp|GPS_003205724.1|",
+      "gi": 568801966,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 176051,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335463,
+      "assemblyacc": "KI270702.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 176051
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 176051
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15677
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 176051
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15677
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187357.1"
+      },
+      "accessionversion": "NT_187357.1"
+    },
+    "568801967": {
+      "uid": "568801967",
+      "term": "568801967",
+      "caption": "NT_187356",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG2_1",
+      "extra": "gi|568801967|gnl|ASM:GCF_000001305.15|HSCHR22_CTG2_1|ref|NT_187356.1||gpp|GPS_003205723.1|",
+      "gi": 568801967,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 94384,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335464,
+      "assemblyacc": "KI270701.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 94384
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 94384
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15677
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 94384
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15677
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187356.1"
+      },
+      "accessionversion": "NT_187356.1"
+    },
+    "568801968": {
+      "uid": "568801968",
+      "term": "568801968",
+      "caption": "NT_187355",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG2",
+      "extra": "gi|568801968|gnl|ASM:GCF_000001305.15|HSCHR22_CTG2|ref|NT_187355.1||gpp|GPS_003205722.1|",
+      "gi": 568801968,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 3084811,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335465,
+      "assemblyacc": "KI270700.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Gap",
+          "count": 5
+        },
+        {
+          "type": "Length",
+          "count": 3084811
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 3059358
+        },
+        {
+          "type": "Length",
+          "subtype": "gap",
+          "count": 25453
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 21213
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 4
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 4
+        },
+        {
+          "source": "all",
+          "type": "Gap",
+          "count": 5
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 3084811
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 21213
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 4
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187355.1"
+      },
+      "accessionversion": "NT_187355.1"
+    },
+    "568801969": {
+      "uid": "568801969",
+      "term": "568801969",
+      "caption": "NT_187354",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_15",
+      "extra": "gi|568801969|gnl|ASM:GCF_000001305.15|CEN22_15|ref|NT_187354.1||gpp|GPS_003205721.1|",
+      "gi": 568801969,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 632586,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335466,
+      "assemblyacc": "KI270699.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 632586
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 632586
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16210
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 632586
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16210
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187354.1"
+      },
+      "accessionversion": "NT_187354.1"
+    },
+    "568801970": {
+      "uid": "568801970",
+      "term": "568801970",
+      "caption": "NT_187353",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_14",
+      "extra": "gi|568801970|gnl|ASM:GCF_000001305.15|CEN22_14|ref|NT_187353.1||gpp|GPS_003205720.1|",
+      "gi": 568801970,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 1198,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335467,
+      "assemblyacc": "KI270694.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 1198
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 1198
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16208
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 1198
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16208
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187353.1"
+      },
+      "accessionversion": "NT_187353.1"
+    },
+    "568801971": {
+      "uid": "568801971",
+      "term": "568801971",
+      "caption": "NT_187352",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_13",
+      "extra": "gi|568801971|gnl|ASM:GCF_000001305.15|CEN22_13|ref|NT_187352.1||gpp|GPS_003205719.1|",
+      "gi": 568801971,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 340,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335468,
+      "assemblyacc": "KI866542.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 340
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 340
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16208
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 340
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16208
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187352.1"
+      },
+      "accessionversion": "NT_187352.1"
+    },
+    "568801972": {
+      "uid": "568801972",
+      "term": "568801972",
+      "caption": "NT_187351",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_12",
+      "extra": "gi|568801972|gnl|ASM:GCF_000001305.15|CEN22_12|ref|NT_187351.1||gpp|GPS_003205718.1|",
+      "gi": 568801972,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 340,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335469,
+      "assemblyacc": "KI866541.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 340
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 340
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16208
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 340
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16208
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187351.1"
+      },
+      "accessionversion": "NT_187351.1"
+    },
+    "568801973": {
+      "uid": "568801973",
+      "term": "568801973",
+      "caption": "NT_187350",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_11",
+      "extra": "gi|568801973|gnl|ASM:GCF_000001305.15|CEN22_11|ref|NT_187350.1||gpp|GPS_003205717.1|",
+      "gi": 568801973,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 1134211,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335472,
+      "assemblyacc": "KI270680.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 1134211
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 1134211
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16210
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 1134211
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16210
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187350.1"
+      },
+      "accessionversion": "NT_187350.1"
+    },
+    "568801974": {
+      "uid": "568801974",
+      "term": "568801974",
+      "caption": "NT_187349",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_10",
+      "extra": "gi|568801974|gnl|ASM:GCF_000001305.15|CEN22_10|ref|NT_187349.1||gpp|GPS_003205716.1|",
+      "gi": 568801974,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 4185,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335473,
+      "assemblyacc": "KI270449.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 4185
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 4185
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16208
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 4185
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16208
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187349.1"
+      },
+      "accessionversion": "NT_187349.1"
+    },
+    "568801975": {
+      "uid": "568801975",
+      "term": "568801975",
+      "caption": "NT_187348",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_9",
+      "extra": "gi|568801975|gnl|ASM:GCF_000001305.15|CEN22_9|ref|NT_187348.1||gpp|GPS_003205715.1|",
+      "gi": 568801975,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 22561,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335474,
+      "assemblyacc": "KI270677.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 22561
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 22561
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16205
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 22561
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16205
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187348.1"
+      },
+      "accessionversion": "NT_187348.1"
+    },
+    "568801976": {
+      "uid": "568801976",
+      "term": "568801976",
+      "caption": "NT_187347",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_8",
+      "extra": "gi|568801976|gnl|ASM:GCF_000001305.15|CEN22_8|ref|NT_187347.1||gpp|GPS_003205714.1|",
+      "gi": 568801976,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 3245,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335475,
+      "assemblyacc": "KI270676.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 3245
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 3245
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16205
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 3245
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16205
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187347.1"
+      },
+      "accessionversion": "NT_187347.1"
+    },
+    "568801977": {
+      "uid": "568801977",
+      "term": "568801977",
+      "caption": "NT_187346",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_7",
+      "extra": "gi|568801977|gnl|ASM:GCF_000001305.15|CEN22_7|ref|NT_187346.1||gpp|GPS_003205713.1|",
+      "gi": 568801977,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 6670,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335476,
+      "assemblyacc": "KI270675.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 6670
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 6670
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16205
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 6670
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16205
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187346.1"
+      },
+      "accessionversion": "NT_187346.1"
+    },
+    "568801978": {
+      "uid": "568801978",
+      "term": "568801978",
+      "caption": "NT_187345",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_6",
+      "extra": "gi|568801978|gnl|ASM:GCF_000001305.15|CEN22_6|ref|NT_187345.1||gpp|GPS_003205712.1|",
+      "gi": 568801978,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 20670,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335477,
+      "assemblyacc": "KI270673.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 20670
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 20670
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16205
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 20670
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16205
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187345.1"
+      },
+      "accessionversion": "NT_187345.1"
+    },
+    "568801979": {
+      "uid": "568801979",
+      "term": "568801979",
+      "caption": "NT_187344",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_5",
+      "extra": "gi|568801979|gnl|ASM:GCF_000001305.15|CEN22_5|ref|NT_187344.1||gpp|GPS_003205711.1|",
+      "gi": 568801979,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 63535,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335479,
+      "assemblyacc": "KI270671.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 63535
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 63535
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16207
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 63535
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16207
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187344.1"
+      },
+      "accessionversion": "NT_187344.1"
+    },
+    "568801980": {
+      "uid": "568801980",
+      "term": "568801980",
+      "caption": "NT_187343",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_4",
+      "extra": "gi|568801980|gnl|ASM:GCF_000001305.15|CEN22_4|ref|NT_187343.1||gpp|GPS_003205710.1|",
+      "gi": 568801980,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 54133,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335480,
+      "assemblyacc": "KI270670.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 54133
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 54133
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16207
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 54133
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16207
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187343.1"
+      },
+      "accessionversion": "NT_187343.1"
+    },
+    "568801981": {
+      "uid": "568801981",
+      "term": "568801981",
+      "caption": "NT_187342",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_3",
+      "extra": "gi|568801981|gnl|ASM:GCF_000001305.15|CEN22_3|ref|NT_187342.1||gpp|GPS_003205709.1|",
+      "gi": 568801981,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 88022,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335485,
+      "assemblyacc": "KI270669.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 88022
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 88022
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16207
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 88022
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16207
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187342.1"
+      },
+      "accessionversion": "NT_187342.1"
+    },
+    "568801982": {
+      "uid": "568801982",
+      "term": "568801982",
+      "caption": "NT_187341",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_2",
+      "extra": "gi|568801982|gnl|ASM:GCF_000001305.15|CEN22_2|ref|NT_187341.1||gpp|GPS_003205708.1|",
+      "gi": 568801982,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 43897,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335487,
+      "assemblyacc": "KI270436.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Gap",
+          "count": 2
+        },
+        {
+          "type": "Length",
+          "count": 43897
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 33564
+        },
+        {
+          "type": "Length",
+          "subtype": "gap",
+          "count": 10333
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16424
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Gap",
+          "count": 2
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 43897
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16424
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187341.1"
+      },
+      "accessionversion": "NT_187341.1"
+    },
+    "568801983": {
+      "uid": "568801983",
+      "term": "568801983",
+      "caption": "NT_187340",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly CEN22_1",
+      "extra": "gi|568801983|gnl|ASM:GCF_000001305.15|CEN22_1|ref|NT_187340.1||gpp|GPS_003205707.1|",
+      "gi": 568801983,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 22537,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335489,
+      "assemblyacc": "KI270663.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 22537
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 22537
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 16205
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 22537
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 16205
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187340.1"
+      },
+      "accessionversion": "NT_187340.1"
+    },
+    "568801984": {
+      "uid": "568801984",
+      "term": "568801984",
+      "caption": "NT_187339",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_13",
+      "extra": "gi|568801984|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_13|ref|NT_187339.1||gpp|GPS_003205706.1|",
+      "gi": 568801984,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 153040,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335493,
+      "assemblyacc": "KI270662.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 153040
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 153040
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15681
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 153040
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15681
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187339.1"
+      },
+      "accessionversion": "NT_187339.1"
+    },
+    "568801985": {
+      "uid": "568801985",
+      "term": "568801985",
+      "caption": "NT_187338",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_12",
+      "extra": "gi|568801985|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_12|ref|NT_187338.1||gpp|GPS_003205705.1|",
+      "gi": 568801985,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 163102,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335494,
+      "assemblyacc": "KI270661.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 163102
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 163102
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15681
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 163102
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15681
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187338.1"
+      },
+      "accessionversion": "NT_187338.1"
+    },
+    "568801986": {
+      "uid": "568801986",
+      "term": "568801986",
+      "caption": "NT_187337",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_11",
+      "extra": "gi|568801986|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_11|ref|NT_187337.1||gpp|GPS_003205704.1|",
+      "gi": 568801986,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 198033,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335495,
+      "assemblyacc": "KI270660.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 198033
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 198033
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15681
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 198033
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15681
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187337.1"
+      },
+      "accessionversion": "NT_187337.1"
+    },
+    "568801987": {
+      "uid": "568801987",
+      "term": "568801987",
+      "caption": "NT_187336",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_10",
+      "extra": "gi|568801987|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_10|ref|NT_187336.1||gpp|GPS_003205703.1|",
+      "gi": 568801987,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 202926,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335496,
+      "assemblyacc": "KI270659.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 202926
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 202926
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15681
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 202926
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15681
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187336.1"
+      },
+      "accessionversion": "NT_187336.1"
+    },
+    "568801988": {
+      "uid": "568801988",
+      "term": "568801988",
+      "caption": "NT_187335",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_8",
+      "extra": "gi|568801988|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_8|ref|NT_187335.1||gpp|GPS_003205702.1|",
+      "gi": 568801988,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 83951,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335497,
+      "assemblyacc": "KI270658.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 83951
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 83951
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15913
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 83951
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15913
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187335.1"
+      },
+      "accessionversion": "NT_187335.1"
+    },
+    "568801989": {
+      "uid": "568801989",
+      "term": "568801989",
+      "caption": "NT_167227",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_7",
+      "extra": "gi|568801989|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_7|ref|NT_167227.2||gpp|GPS_003205701.1|",
+      "gi": 568801989,
+      "createdate": "2009/06/10",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 69281,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335498,
+      "assemblyacc": "GL000233.2",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 69281
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 69281
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15831
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 69281
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15831
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_167227.2"
+      },
+      "accessionversion": "NT_167227.2"
+    },
+    "568801990": {
+      "uid": "568801990",
+      "term": "568801990",
+      "caption": "NT_187334",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_6",
+      "extra": "gi|568801990|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_6|ref|NT_187334.1||gpp|GPS_003205700.1|",
+      "gi": 568801990,
+      "createdate": "2014/02/03",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 167135,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335499,
+      "assemblyacc": "KI270657.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 167135
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 167135
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15678
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 167135
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15678
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_187334.1"
+      },
+      "accessionversion": "NT_187334.1"
+    },
+    "568801991": {
+      "uid": "568801991",
+      "term": "568801991",
+      "caption": "NT_167231",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_4",
+      "extra": "gi|568801991|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_4|ref|NT_167231.2||gpp|GPS_003205699.1|",
+      "gi": 568801991,
+      "createdate": "2009/06/10",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 52263,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335500,
+      "assemblyacc": "GL000237.2",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 52263
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 52263
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15831
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 52263
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15831
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_167231.2"
+      },
+      "accessionversion": "NT_167231.2"
+    },
+    "568801992": {
+      "uid": "568801992",
+      "term": "568801992",
+      "caption": "NT_167212",
+      "title": "Homo sapiens chromosome 22 genomic scaffold, GRCh38.p13 Primary Assembly HSCHR22_CTG1_1",
+      "extra": "gi|568801992|gnl|ASM:GCF_000001305.15|HSCHR22_CTG1_1|ref|NT_167212.2||gpp|GPS_003205698.1|",
+      "gi": 568801992,
+      "createdate": "2009/06/10",
+      "updatedate": "2020/08/17",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 274643,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome",
+      "subname": "22",
+      "assemblygi": 568335501,
+      "assemblyacc": "GL000217.2",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 274643
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 274643
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 15795
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 274643
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 15795
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NT_167212.2"
+      },
+      "accessionversion": "NT_167212.2"
+    }
+  }
+}

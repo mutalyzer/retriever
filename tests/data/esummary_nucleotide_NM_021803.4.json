@@ -1,0 +1,255 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "1436049126"
+    ],
+    "1436049126": {
+      "uid": "1436049126",
+      "term": "1436049126",
+      "caption": "NM_021803",
+      "title": "Homo sapiens interleukin 21 (IL21), transcript variant 1, mRNA",
+      "extra": "gi|1436049126|ref|NM_021803.4|",
+      "gi": 1436049126,
+      "createdate": "2000/11/14",
+      "updatedate": "2021/08/09",
+      "flags": 512,
+      "taxid": 9606,
+      "slen": 3146,
+      "biomol": "mRNA",
+      "moltype": "rna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "genomic",
+      "subtype": "chromosome|map",
+      "subname": "4|4q27",
+      "assemblygi": "",
+      "assemblyacc": "LC133256.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 3146
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 3146
+        },
+        {
+          "type": "all",
+          "count": 4
+        },
+        {
+          "type": "blob_size",
+          "count": 21125
+        },
+        {
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "subtype": "misc_feature",
+          "count": 1
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 5
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed/Gene-rif",
+          "count": 5
+        },
+        {
+          "source": "CDS",
+          "type": "all",
+          "count": 4
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "count": 2
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "subtype": "Prot",
+          "count": 2
+        },
+        {
+          "source": "CDS",
+          "type": "region",
+          "count": 1
+        },
+        {
+          "source": "CDS",
+          "type": "region",
+          "subtype": "Region",
+          "count": 1
+        },
+        {
+          "source": "CDS",
+          "type": "site",
+          "count": 1
+        },
+        {
+          "source": "CDS",
+          "type": "site",
+          "subtype": "Site",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "subtype": "NA000146873.18#17",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 3146
+        },
+        {
+          "source": "all",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 14
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 21125
+        },
+        {
+          "source": "all",
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "evidence",
+          "count": 5
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 6
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "prot",
+          "count": 2
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "source": "all",
+          "type": "region",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "site",
+          "count": 1
+        },
+        {
+          "source": "exons",
+          "type": "all",
+          "count": 5
+        },
+        {
+          "source": "exons",
+          "type": "evidence",
+          "count": 5
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "count": 5
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "subtype": "exon",
+          "count": 5
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NM_021803.4"
+      },
+      "accessionversion": "NM_021803.4"
+    }
+  }
+}

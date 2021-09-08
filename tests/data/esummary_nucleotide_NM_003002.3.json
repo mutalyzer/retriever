@@ -1,0 +1,92 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "452405284"
+    ],
+    "452405284": {
+      "uid": "452405284",
+      "term": "452405284",
+      "caption": "NM_003002",
+      "accessionversion": "NM_003002.3",
+      "sourcedb": "refseq",
+      "title": "Homo sapiens succinate dehydrogenase complex subunit D (SDHD), transcript variant 1, mRNA",
+      "extra": "gi|452405284|ref|NM_003002.3|",
+      "gi": 452405284,
+      "createdate": "1999/03/19",
+      "updatedate": "2018/10/20",
+      "genome": "genomic",
+      "organism": "Homo sapiens",
+      "taxid": 9606,
+      "geneticcode": "1",
+      "subtype": "chromosome|map",
+      "subname": "11|11q23.1",
+      "slen": 1395,
+      "moltype": "rna",
+      "topology": "linear",
+      "completeness": "complete",
+      "biomol": "mRNA",
+      "assemblyacc": "AI753083.1",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "type": "Length",
+          "count": 1395
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 1395
+        },
+        {
+          "type": "all",
+          "count": 11
+        },
+        {
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "count": 9
+        }
+      ],
+      "comment": "This sequence has been updated.",
+      "status": "replaced",
+      "replacedby": "NM_003002.4",
+      "flags": 512,
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": false,
+        "value": "NM_003002.3"
+      },
+      "idgiclass": {
+        "mol": "2",
+        "repr": "2",
+        "gi_state": "0",
+        "sat": "47",
+        "sat_key": "502156",
+        "owner": "20",
+        "sat_name": "OLD16",
+        "owner_name": "NCBI-Genomes",
+        "defdiv": "GNM",
+        "length": "1395",
+        "extfeatmask": "5"
+      }
+    }
+  }
+}

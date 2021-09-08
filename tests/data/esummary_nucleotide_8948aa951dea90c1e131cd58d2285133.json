@@ -1,0 +1,1060 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "1519246106",
+      "166235902",
+      "1674986257",
+      "1889628716",
+      "29466516",
+      "56786154"
+    ],
+    "1519246106": {
+      "uid": "1519246106",
+      "term": "1519246106",
+      "caption": "NM_015991",
+      "title": "Homo sapiens complement C1q A chain (C1QA), transcript variant 1, mRNA",
+      "extra": "gi|1519246106|ref|NM_015991.4|",
+      "gi": 1519246106,
+      "createdate": "2000/05/03",
+      "updatedate": "2021/07/19",
+      "flags": 512,
+      "taxid": 9606,
+      "slen": 1091,
+      "biomol": "mRNA",
+      "moltype": "rna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "genomic",
+      "subtype": "chromosome|map",
+      "subname": "1|1p36.12",
+      "assemblygi": "",
+      "assemblyacc": "BX369252.2",
+      "tech": "",
+      "completeness": "complete",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 1091
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 1091
+        },
+        {
+          "type": "all",
+          "count": 3
+        },
+        {
+          "type": "blob_size",
+          "count": 21721
+        },
+        {
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 1
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 7
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed/Gene-rif",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "all",
+          "count": 20
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "subtype": "Prot",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "region",
+          "count": 1
+        },
+        {
+          "source": "CDS",
+          "type": "region",
+          "subtype": "Region",
+          "count": 1
+        },
+        {
+          "source": "CDS",
+          "type": "site",
+          "count": 16
+        },
+        {
+          "source": "CDS",
+          "type": "site",
+          "subtype": "Site",
+          "count": 16
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "subtype": "NA000146873.18#17",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 1091
+        },
+        {
+          "source": "all",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 31
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 21721
+        },
+        {
+          "source": "all",
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "evidence",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 7
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "prot",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "source": "all",
+          "type": "region",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "site",
+          "count": 16
+        },
+        {
+          "source": "exons",
+          "type": "all",
+          "count": 3
+        },
+        {
+          "source": "exons",
+          "type": "evidence",
+          "count": 3
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "count": 3
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "subtype": "exon",
+          "count": 3
+        },
+        {
+          "source": "polyA sites",
+          "type": "all",
+          "count": 4
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "count": 4
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "subtype": "polyA_site",
+          "count": 2
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "subtype": "regulatory",
+          "count": 2
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NM_015991.4"
+      },
+      "accessionversion": "NM_015991.4"
+    },
+    "166235902": {
+      "uid": "166235902",
+      "term": "166235902",
+      "caption": "NM_001114101",
+      "accessionversion": "NM_001114101.1",
+      "sourcedb": "refseq",
+      "title": "Homo sapiens complement C1q C chain (C1QC), transcript variant 1, mRNA",
+      "extra": "gi|166235902|ref|NM_001114101.1|",
+      "gi": 166235902,
+      "createdate": "2008/01/30",
+      "updatedate": "2016/10/06",
+      "genome": "genomic",
+      "organism": "Homo sapiens",
+      "taxid": 9606,
+      "geneticcode": "1",
+      "subtype": "chromosome|map",
+      "subname": "1|1p36.12",
+      "slen": 1205,
+      "moltype": "rna",
+      "topology": "linear",
+      "completeness": "has-right",
+      "biomol": "mRNA",
+      "assemblyacc": "BG060138.1",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "type": "Length",
+          "count": 1205
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 1205
+        },
+        {
+          "type": "all",
+          "count": 5
+        },
+        {
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "count": 3
+        }
+      ],
+      "comment": "This sequence has been updated.",
+      "status": "replaced",
+      "replacedby": "NM_001114101.2",
+      "flags": 512,
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": false,
+        "value": "NM_001114101.1"
+      },
+      "idgiclass": {
+        "mol": "2",
+        "repr": "2",
+        "gi_state": "0",
+        "sat": "46",
+        "sat_key": "43339797",
+        "owner": "20",
+        "sat_name": "OLD15",
+        "owner_name": "NCBI-Genomes",
+        "defdiv": "GNM",
+        "length": "1205",
+        "extfeatmask": "5"
+      }
+    },
+    "1674986257": {
+      "uid": "1674986257",
+      "term": "1674986257",
+      "caption": "NM_001347465",
+      "title": "Homo sapiens complement C1q A chain (C1QA), transcript variant 2, mRNA",
+      "extra": "gi|1674986257|ref|NM_001347465.2|",
+      "gi": 1674986257,
+      "createdate": "2016/12/01",
+      "updatedate": "2021/07/19",
+      "flags": 512,
+      "taxid": 9606,
+      "slen": 1111,
+      "biomol": "mRNA",
+      "moltype": "rna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "genomic",
+      "subtype": "chromosome|map",
+      "subname": "1|1p36.12",
+      "assemblygi": "",
+      "assemblyacc": "BX369252.2",
+      "tech": "",
+      "completeness": "has-right",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 1111
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 1111
+        },
+        {
+          "type": "all",
+          "count": 3
+        },
+        {
+          "type": "blob_size",
+          "count": 21300
+        },
+        {
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 1
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 7
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed/Gene-rif",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "all",
+          "count": 20
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "subtype": "Prot",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "region",
+          "count": 1
+        },
+        {
+          "source": "CDS",
+          "type": "region",
+          "subtype": "Region",
+          "count": 1
+        },
+        {
+          "source": "CDS",
+          "type": "site",
+          "count": 16
+        },
+        {
+          "source": "CDS",
+          "type": "site",
+          "subtype": "Site",
+          "count": 16
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "subtype": "NA000146873.18#17",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 1111
+        },
+        {
+          "source": "all",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 31
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 21300
+        },
+        {
+          "source": "all",
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "evidence",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 7
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "prot",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "source": "all",
+          "type": "region",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "site",
+          "count": 16
+        },
+        {
+          "source": "exons",
+          "type": "all",
+          "count": 3
+        },
+        {
+          "source": "exons",
+          "type": "evidence",
+          "count": 3
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "count": 3
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "subtype": "exon",
+          "count": 3
+        },
+        {
+          "source": "polyA sites",
+          "type": "all",
+          "count": 4
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "count": 4
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "subtype": "polyA_site",
+          "count": 2
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "subtype": "regulatory",
+          "count": 2
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NM_001347465.2"
+      },
+      "accessionversion": "NM_001347465.2"
+    },
+    "1889628716": {
+      "uid": "1889628716",
+      "term": "1889628716",
+      "caption": "NM_001347466",
+      "title": "Homo sapiens complement C1q A chain (C1QA), transcript variant 3, mRNA",
+      "extra": "gi|1889628716|ref|NM_001347466.2|",
+      "gi": 1889628716,
+      "createdate": "2016/12/01",
+      "updatedate": "2021/07/19",
+      "flags": 512,
+      "taxid": 9606,
+      "slen": 1414,
+      "biomol": "mRNA",
+      "moltype": "rna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "genomic",
+      "subtype": "chromosome|map",
+      "subname": "1|1p36.12",
+      "assemblygi": "",
+      "assemblyacc": "BX369252.2",
+      "tech": "",
+      "completeness": "has-right",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 1414
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 1414
+        },
+        {
+          "type": "all",
+          "count": 4
+        },
+        {
+          "type": "blob_size",
+          "count": 21238
+        },
+        {
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "subtype": "misc_feature",
+          "count": 1
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 7
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed/Gene-rif",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "all",
+          "count": 20
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "subtype": "Prot",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "region",
+          "count": 1
+        },
+        {
+          "source": "CDS",
+          "type": "region",
+          "subtype": "Region",
+          "count": 1
+        },
+        {
+          "source": "CDS",
+          "type": "site",
+          "count": 16
+        },
+        {
+          "source": "CDS",
+          "type": "site",
+          "subtype": "Site",
+          "count": 16
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "subtype": "NA000146873.18#17",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 1414
+        },
+        {
+          "source": "all",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 32
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 21238
+        },
+        {
+          "source": "all",
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "evidence",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 8
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "prot",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "source": "all",
+          "type": "region",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "site",
+          "count": 16
+        },
+        {
+          "source": "exons",
+          "type": "all",
+          "count": 3
+        },
+        {
+          "source": "exons",
+          "type": "evidence",
+          "count": 3
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "count": 3
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "subtype": "exon",
+          "count": 3
+        },
+        {
+          "source": "polyA sites",
+          "type": "all",
+          "count": 4
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "count": 4
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "subtype": "polyA_site",
+          "count": 2
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "subtype": "regulatory",
+          "count": 2
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NM_001347466.2"
+      },
+      "accessionversion": "NM_001347466.2"
+    },
+    "29466516": {
+      "uid": "29466516",
+      "term": "29466516",
+      "caption": "AL158086",
+      "title": "Human DNA sequence from clone RP4-815O16 on chromosome 1p35.1-36.13, complete sequence",
+      "extra": "gi|29466516|emb|AL158086.32|",
+      "gi": 29466516,
+      "createdate": "2000/03/02",
+      "updatedate": "2012/12/13",
+      "flags": "",
+      "taxid": 9606,
+      "slen": 87320,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "insd",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "",
+      "subtype": "chromosome|map|clone|clone_lib",
+      "subname": "1|p35.1-36.13|RP4-815O16|RPCI-4",
+      "assemblygi": "",
+      "assemblyacc": "",
+      "tech": "htgs-3",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 87320
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 87320
+        },
+        {
+          "type": "all",
+          "count": 7
+        },
+        {
+          "type": "blob_size",
+          "count": 27024
+        },
+        {
+          "type": "imp",
+          "count": 6
+        },
+        {
+          "type": "imp",
+          "subtype": "misc_feature",
+          "count": 6
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 87320
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 7
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 27024
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 6
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 1
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "AL158086.32"
+      },
+      "accessionversion": "AL158086.32"
+    },
+    "56786154": {
+      "uid": "56786154",
+      "term": "56786154",
+      "caption": "NM_172369",
+      "accessionversion": "NM_172369.2",
+      "sourcedb": "refseq",
+      "title": "Homo sapiens complement component 1, q subcomponent, C chain (C1QC), mRNA",
+      "extra": "gi|56786154|ref|NM_172369.2|",
+      "gi": 56786154,
+      "createdate": "2002/12/23",
+      "updatedate": "2008/01/13",
+      "genome": "genomic",
+      "organism": "Homo sapiens",
+      "taxid": 9606,
+      "geneticcode": "1",
+      "subtype": "chromosome|map",
+      "subname": "1|1p36.11",
+      "slen": 1171,
+      "moltype": "rna",
+      "topology": "linear",
+      "biomol": "mRNA",
+      "assemblyacc": "AK130613.1",
+      "assemblygi": 14290496,
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "type": "Length",
+          "count": 1171
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 1171
+        },
+        {
+          "type": "all",
+          "count": 2
+        },
+        {
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "count": 1
+        }
+      ],
+      "comment": "This sequence has been updated.",
+      "status": "replaced",
+      "replacedby": "NM_172369.3",
+      "flags": 512,
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": false,
+        "value": "NM_172369.2"
+      },
+      "idgiclass": {
+        "mol": "2",
+        "repr": "2",
+        "gi_state": "0",
+        "sat": "12",
+        "sat_key": "1409963",
+        "owner": "20",
+        "sat_name": "OLD07",
+        "owner_name": "NCBI-Genomes",
+        "defdiv": "GNM",
+        "length": "1171",
+        "extfeatmask": "5"
+      }
+    }
+  }
+}

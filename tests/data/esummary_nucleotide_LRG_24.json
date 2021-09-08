@@ -1,0 +1,232 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "187423886"
+    ],
+    "187423886": {
+      "uid": "187423886",
+      "term": "187423886",
+      "caption": "NG_007565",
+      "title": "Homo sapiens complement C1q C chain (C1QC), RefSeqGene (LRG_24) on chromosome 1",
+      "extra": "gi|187423886|ref|NG_007565.1||gnl|LRG|LRG_24",
+      "gi": 187423886,
+      "createdate": "2008/05/02",
+      "updatedate": "2020/10/14",
+      "flags": 512,
+      "taxid": 9606,
+      "slen": 11486,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "genomic",
+      "subtype": "chromosome|map",
+      "subname": "1|1p36.12",
+      "assemblygi": "",
+      "assemblyacc": "AL158086.32",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 11486
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 11486
+        },
+        {
+          "type": "all",
+          "count": 17
+        },
+        {
+          "type": "blob_size",
+          "count": 19289
+        },
+        {
+          "type": "cdregion",
+          "count": 5
+        },
+        {
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 5
+        },
+        {
+          "type": "evidence",
+          "count": 10
+        },
+        {
+          "type": "gene",
+          "count": 2
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 2
+        },
+        {
+          "type": "imp",
+          "count": 4
+        },
+        {
+          "type": "imp",
+          "subtype": "exon",
+          "count": 4
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 4
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 4
+        },
+        {
+          "type": "rna",
+          "count": 5
+        },
+        {
+          "type": "rna",
+          "subtype": "mRNA",
+          "count": 5
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "subtype": "NA000146873.16#17",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 11486
+        },
+        {
+          "source": "all",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 52
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 19289
+        },
+        {
+          "source": "all",
+          "type": "cdregion",
+          "count": 15
+        },
+        {
+          "source": "all",
+          "type": "evidence",
+          "count": 10
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 16
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 4
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 4
+        },
+        {
+          "source": "all",
+          "type": "rna",
+          "count": 15
+        },
+        {
+          "source": "xref",
+          "type": "all",
+          "count": 34
+        },
+        {
+          "source": "xref",
+          "type": "cdregion",
+          "count": 10
+        },
+        {
+          "source": "xref",
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 10
+        },
+        {
+          "source": "xref",
+          "type": "gene",
+          "count": 14
+        },
+        {
+          "source": "xref",
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 14
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "count": 10
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "mRNA",
+          "count": 10
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NG_007565.1"
+      },
+      "accessionversion": "NG_007565.1"
+    }
+  }
+}

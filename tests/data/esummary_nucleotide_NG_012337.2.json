@@ -1,0 +1,96 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "383209650"
+    ],
+    "383209650": {
+      "uid": "383209650",
+      "term": "383209650",
+      "caption": "NG_012337",
+      "accessionversion": "NG_012337.2",
+      "sourcedb": "refseq",
+      "title": "Homo sapiens succinate dehydrogenase complex subunit D (SDHD), RefSeqGene on chromosome 11",
+      "extra": "gi|383209650|ref|NG_012337.2|",
+      "gi": 383209650,
+      "createdate": "2009/07/17",
+      "updatedate": "2016/03/12",
+      "genome": "genomic",
+      "organism": "Homo sapiens",
+      "taxid": 9606,
+      "geneticcode": "1",
+      "subtype": "chromosome|map",
+      "subname": "11|11q23",
+      "slen": 39783,
+      "moltype": "dna",
+      "topology": "linear",
+      "completeness": "has-right",
+      "biomol": "genomic",
+      "assemblyacc": "AP002007.4",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "pub",
+          "count": 6
+        },
+        {
+          "type": "Length",
+          "count": 39783
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 39783
+        },
+        {
+          "type": "all",
+          "count": 25
+        },
+        {
+          "type": "cdregion",
+          "count": 8
+        },
+        {
+          "type": "gene",
+          "count": 3
+        },
+        {
+          "type": "imp",
+          "count": 4
+        },
+        {
+          "type": "rna",
+          "count": 10
+        }
+      ],
+      "comment": "This sequence has been updated.",
+      "status": "replaced",
+      "replacedby": "NG_012337.3",
+      "flags": 512,
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": false,
+        "value": "NG_012337.2"
+      },
+      "idgiclass": {
+        "mol": "1",
+        "repr": "2",
+        "gi_state": "0",
+        "sat": "46",
+        "sat_key": "1717303",
+        "owner": "31",
+        "sat_name": "OLD15",
+        "owner_name": "NCBI-GrgnRefSeq",
+        "defdiv": "GRR",
+        "length": "39783",
+        "extfeatmask": "5"
+      }
+    }
+  }
+}

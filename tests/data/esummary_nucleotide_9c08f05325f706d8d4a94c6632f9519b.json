@@ -1,0 +1,1336 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "1018191682",
+      "13359384",
+      "1519245278",
+      "15929518",
+      "452415518",
+      "568815587"
+    ],
+    "1018191682": {
+      "uid": "1018191682",
+      "term": "1018191682",
+      "caption": "NG_012337",
+      "title": "Homo sapiens succinate dehydrogenase complex subunit D (SDHD), RefSeqGene (LRG_9) on chromosome 11; nuclear gene for mitochondrial product",
+      "extra": "gi|1018191682|ref|NG_012337.3||gnl|LRG|LRG_9",
+      "gi": 1018191682,
+      "createdate": "2009/07/17",
+      "updatedate": "2021/07/05",
+      "flags": 512,
+      "taxid": 9606,
+      "slen": 39784,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "genomic",
+      "subtype": "chromosome|map",
+      "subname": "11|11q23.1",
+      "assemblygi": "",
+      "assemblyacc": "KF455507.1",
+      "tech": "",
+      "completeness": "has-right",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 39784
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 39784
+        },
+        {
+          "type": "all",
+          "count": 27
+        },
+        {
+          "type": "blob_size",
+          "count": 34261
+        },
+        {
+          "type": "cdregion",
+          "count": 8
+        },
+        {
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 8
+        },
+        {
+          "type": "evidence",
+          "count": 17
+        },
+        {
+          "type": "gene",
+          "count": 3
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 3
+        },
+        {
+          "type": "imp",
+          "count": 4
+        },
+        {
+          "type": "imp",
+          "subtype": "exon",
+          "count": 4
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 6
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 6
+        },
+        {
+          "type": "rna",
+          "count": 11
+        },
+        {
+          "type": "rna",
+          "subtype": "mRNA",
+          "count": 8
+        },
+        {
+          "type": "rna",
+          "subtype": "misc_RNA",
+          "count": 3
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "subtype": "NA000146873.18#17",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 39784
+        },
+        {
+          "source": "all",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 86
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 34261
+        },
+        {
+          "source": "all",
+          "type": "cdregion",
+          "count": 24
+        },
+        {
+          "source": "all",
+          "type": "evidence",
+          "count": 17
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 26
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 4
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 6
+        },
+        {
+          "source": "all",
+          "type": "rna",
+          "count": 30
+        },
+        {
+          "source": "xref",
+          "type": "all",
+          "count": 58
+        },
+        {
+          "source": "xref",
+          "type": "cdregion",
+          "count": 16
+        },
+        {
+          "source": "xref",
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 16
+        },
+        {
+          "source": "xref",
+          "type": "gene",
+          "count": 23
+        },
+        {
+          "source": "xref",
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 23
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "count": 19
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "mRNA",
+          "count": 16
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "misc_RNA",
+          "count": 3
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NG_012337.3"
+      },
+      "accessionversion": "NG_012337.3"
+    },
+    "13359384": {
+      "uid": "13359384",
+      "term": "13359384",
+      "caption": "AP002007",
+      "title": "Homo sapiens genomic DNA, chromosome 11 clone:RP11-762O23, complete sequence",
+      "extra": "gi|13359384|dbj|AP002007.4|",
+      "gi": 13359384,
+      "createdate": "2000/05/10",
+      "updatedate": "2003/06/17",
+      "flags": "",
+      "taxid": 9606,
+      "slen": 168922,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "insd",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "",
+      "subtype": "chromosome|map|clone",
+      "subname": "11|11q|RP11-762O23",
+      "assemblygi": "",
+      "assemblyacc": "",
+      "tech": "htgs-3",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 168922
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 168922
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 44260
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 2
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 168922
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 44260
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 2
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "AP002007.4"
+      },
+      "accessionversion": "AP002007.4"
+    },
+    "1519245278": {
+      "uid": "1519245278",
+      "term": "1519245278",
+      "caption": "NM_003002",
+      "title": "Homo sapiens succinate dehydrogenase complex subunit D (SDHD), transcript variant 1, mRNA; nuclear gene for mitochondrial product",
+      "extra": "gi|1519245278|ref|NM_003002.4|",
+      "gi": 1519245278,
+      "createdate": "1999/03/19",
+      "updatedate": "2021/07/05",
+      "flags": 512,
+      "taxid": 9606,
+      "slen": 1339,
+      "biomol": "mRNA",
+      "moltype": "rna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "genomic",
+      "subtype": "chromosome|map",
+      "subname": "11|11q23.1",
+      "assemblygi": "",
+      "assemblyacc": "AP002007.4",
+      "tech": "",
+      "completeness": "complete",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 1339
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 1339
+        },
+        {
+          "type": "all",
+          "count": 4
+        },
+        {
+          "type": "blob_size",
+          "count": 21541
+        },
+        {
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "subtype": "misc_feature",
+          "count": 1
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 7
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed/Gene-rif",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "all",
+          "count": 6
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "subtype": "Prot",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "site",
+          "count": 3
+        },
+        {
+          "source": "CDS",
+          "type": "site",
+          "subtype": "Site",
+          "count": 3
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "subtype": "NA000146873.18#17",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 1339
+        },
+        {
+          "source": "all",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 19
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 21541
+        },
+        {
+          "source": "all",
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "evidence",
+          "count": 4
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 9
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "prot",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "source": "all",
+          "type": "site",
+          "count": 3
+        },
+        {
+          "source": "exons",
+          "type": "all",
+          "count": 4
+        },
+        {
+          "source": "exons",
+          "type": "evidence",
+          "count": 4
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "count": 4
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "subtype": "exon",
+          "count": 4
+        },
+        {
+          "source": "polyA sites",
+          "type": "all",
+          "count": 4
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "count": 4
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "subtype": "polyA_site",
+          "count": 2
+        },
+        {
+          "source": "polyA sites",
+          "type": "imp",
+          "subtype": "regulatory",
+          "count": 2
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NM_003002.4"
+      },
+      "accessionversion": "NM_003002.4"
+    },
+    "15929518": {
+      "uid": "15929518",
+      "term": "15929518",
+      "caption": "BC015188",
+      "title": "Homo sapiens succinate dehydrogenase complex, subunit D, integral membrane protein, mRNA (cDNA clone MGC:14593 IMAGE:4279214), complete cds",
+      "extra": "gi|15929518|gb|BC015188.1|",
+      "gi": 15929518,
+      "createdate": "2001/10/04",
+      "updatedate": "2006/07/15",
+      "flags": 128,
+      "taxid": 9606,
+      "slen": 1347,
+      "biomol": "mRNA",
+      "moltype": "rna",
+      "topology": "linear",
+      "sourcedb": "insd",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "",
+      "subtype": "note|clone|tissue_type|clone_lib|lab_host",
+      "subname": "Vector: pDNR-LIB|MGC:14593 IMAGE:4279214|Brain, primitive neuroectodermal|NIH_MGC_56|DH10B",
+      "assemblygi": "",
+      "assemblyacc": "",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 1347
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 1347
+        },
+        {
+          "type": "all",
+          "count": 3
+        },
+        {
+          "type": "blob_size",
+          "count": 8707
+        },
+        {
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 1
+        },
+        {
+          "type": "graph",
+          "count": 1
+        },
+        {
+          "type": "graph",
+          "subtype": "Phrap Quality",
+          "count": 1
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 2
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 1
+        },
+        {
+          "type": "quality_score",
+          "count": 1
+        },
+        {
+          "source": "CDS",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "count": 1
+        },
+        {
+          "source": "CDS",
+          "type": "prot",
+          "subtype": "Prot",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 1347
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 4
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 8707
+        },
+        {
+          "source": "all",
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "graph",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "prot",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 2
+        },
+        {
+          "source": "all",
+          "type": "quality_score",
+          "count": 1
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "BC015188.1"
+      },
+      "accessionversion": "BC015188.1"
+    },
+    "452415518": {
+      "uid": "452415518",
+      "term": "452415518",
+      "caption": "NG_033145",
+      "title": "Homo sapiens translocase of inner mitochondrial membrane 8 homolog B (TIMM8B), RefSeqGene on chromosome 11; nuclear gene for mitochondrial product",
+      "extra": "gi|452415518|ref|NG_033145.1|",
+      "gi": 452415518,
+      "createdate": "2013/02/23",
+      "updatedate": "2021/07/05",
+      "flags": 512,
+      "taxid": 9606,
+      "slen": 8999,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "genomic",
+      "subtype": "chromosome|map",
+      "subname": "11|11q23.1",
+      "assemblygi": "",
+      "assemblyacc": "AP002007.4",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 8999
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 8999
+        },
+        {
+          "type": "all",
+          "count": 30
+        },
+        {
+          "type": "blob_size",
+          "count": 20173
+        },
+        {
+          "type": "cdregion",
+          "count": 11
+        },
+        {
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 11
+        },
+        {
+          "type": "evidence",
+          "count": 24
+        },
+        {
+          "type": "gene",
+          "count": 3
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 3
+        },
+        {
+          "type": "imp",
+          "count": 2
+        },
+        {
+          "type": "imp",
+          "subtype": "exon",
+          "count": 2
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "rna",
+          "count": 13
+        },
+        {
+          "type": "rna",
+          "subtype": "mRNA",
+          "count": 11
+        },
+        {
+          "type": "rna",
+          "subtype": "misc_RNA",
+          "count": 2
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "subtype": "NA000146873.18#17",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 8999
+        },
+        {
+          "source": "all",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 103
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 20173
+        },
+        {
+          "source": "all",
+          "type": "cdregion",
+          "count": 33
+        },
+        {
+          "source": "all",
+          "type": "evidence",
+          "count": 24
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 29
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 2
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "rna",
+          "count": 37
+        },
+        {
+          "source": "xref",
+          "type": "all",
+          "count": 72
+        },
+        {
+          "source": "xref",
+          "type": "cdregion",
+          "count": 22
+        },
+        {
+          "source": "xref",
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 22
+        },
+        {
+          "source": "xref",
+          "type": "gene",
+          "count": 26
+        },
+        {
+          "source": "xref",
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 26
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "count": 24
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "mRNA",
+          "count": 22
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "misc_RNA",
+          "count": 2
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NG_033145.1"
+      },
+      "accessionversion": "NG_033145.1"
+    },
+    "568815587": {
+      "uid": "568815587",
+      "term": "568815587",
+      "caption": "NC_000011",
+      "title": "Homo sapiens chromosome 11, GRCh38.p13 Primary Assembly",
+      "extra": "gi|568815587|gnl|ASM:GCF_000001305|11|ref|NC_000011.10||gpp|GPC_000001303.1||gnl|NCBI_GENOMES|11",
+      "gi": 568815587,
+      "createdate": "2002/08/29",
+      "updatedate": "2021/05/16",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 135086622,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "chromosome",
+      "subtype": "chromosome",
+      "subname": "11",
+      "assemblygi": 568336013,
+      "assemblyacc": "CM000673.2",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Gap",
+          "count": 9
+        },
+        {
+          "type": "Length",
+          "count": 135086622
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 134634728
+        },
+        {
+          "type": "Length",
+          "subtype": "gap",
+          "count": 451894
+        },
+        {
+          "type": "all",
+          "count": 20571
+        },
+        {
+          "type": "blob_size",
+          "count": 28667512
+        },
+        {
+          "type": "cdregion",
+          "count": 6824
+        },
+        {
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 6824
+        },
+        {
+          "type": "evidence",
+          "count": 918
+        },
+        {
+          "type": "gene",
+          "count": 2921
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 2079
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene/pseudo",
+          "count": 842
+        },
+        {
+          "type": "imp",
+          "count": 1156
+        },
+        {
+          "type": "imp",
+          "subtype": "centromere",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "subtype": "exon/pseudo",
+          "count": 378
+        },
+        {
+          "type": "imp",
+          "subtype": "misc_feature",
+          "count": 57
+        },
+        {
+          "type": "imp",
+          "subtype": "misc_recomb",
+          "count": 42
+        },
+        {
+          "type": "imp",
+          "subtype": "misc_structure",
+          "count": 5
+        },
+        {
+          "type": "imp",
+          "subtype": "mobile_element",
+          "count": 11
+        },
+        {
+          "type": "imp",
+          "subtype": "protein_bind",
+          "count": 156
+        },
+        {
+          "type": "imp",
+          "subtype": "regulatory",
+          "count": 486
+        },
+        {
+          "type": "imp",
+          "subtype": "rep_origin",
+          "count": 9
+        },
+        {
+          "type": "imp",
+          "subtype": "repeat_region",
+          "count": 11
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "type": "region",
+          "count": 301
+        },
+        {
+          "type": "region",
+          "subtype": "Region",
+          "count": 300
+        },
+        {
+          "type": "region",
+          "subtype": "Region/pseudo",
+          "count": 1
+        },
+        {
+          "type": "rna",
+          "count": 9368
+        },
+        {
+          "type": "rna",
+          "subtype": "mRNA",
+          "count": 6824
+        },
+        {
+          "type": "rna",
+          "subtype": "misc_RNA",
+          "count": 966
+        },
+        {
+          "type": "rna",
+          "subtype": "misc_RNA/pseudo",
+          "count": 59
+        },
+        {
+          "type": "rna",
+          "subtype": "ncRNA",
+          "count": 1404
+        },
+        {
+          "type": "rna",
+          "subtype": "precursor_RNA",
+          "count": 102
+        },
+        {
+          "type": "rna",
+          "subtype": "tRNA",
+          "count": 13
+        },
+        {
+          "source": "all",
+          "type": "Gap",
+          "count": 9
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 135086622
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 75571
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 28667512
+        },
+        {
+          "source": "all",
+          "type": "cdregion",
+          "count": 20472
+        },
+        {
+          "source": "all",
+          "type": "evidence",
+          "count": 918
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 20569
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 1534
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "prot",
+          "count": 6824
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "region",
+          "count": 301
+        },
+        {
+          "source": "all",
+          "type": "rna",
+          "count": 25870
+        },
+        {
+          "source": "xref",
+          "type": "all",
+          "count": 55000
+        },
+        {
+          "source": "xref",
+          "type": "cdregion",
+          "count": 13648
+        },
+        {
+          "source": "xref",
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 13648
+        },
+        {
+          "source": "xref",
+          "type": "gene",
+          "count": 17648
+        },
+        {
+          "source": "xref",
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 17648
+        },
+        {
+          "source": "xref",
+          "type": "imp",
+          "count": 378
+        },
+        {
+          "source": "xref",
+          "type": "imp",
+          "subtype": "exon",
+          "count": 378
+        },
+        {
+          "source": "xref",
+          "type": "prot",
+          "count": 6824
+        },
+        {
+          "source": "xref",
+          "type": "prot",
+          "subtype": "Prot",
+          "count": 6824
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "count": 16502
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "mRNA",
+          "count": 13648
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "misc_RNA",
+          "count": 1025
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "ncRNA",
+          "count": 1559
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "precursor_RNA",
+          "count": 257
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "tRNA",
+          "count": 13
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NC_000011.10"
+      },
+      "accessionversion": "NC_000011.10"
+    }
+  }
+}
