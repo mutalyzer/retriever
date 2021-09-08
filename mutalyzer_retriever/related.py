@@ -79,9 +79,11 @@ def _get_new_versions(summary, timeout):
 def _get_linked_references(reference_id, genome, timeout):
     links = _fetch_ncbi_elink("nucleotide", "nucleotide", reference_id, timeout)
     link_uids = _extract_link_uids(links, genome)
-    summary = _fetch_ncbi_esummary("nucleotide", ",".join(link_uids), timeout)
-    # TODO: Make sure that request uri is not too long (414)
-    return _get_summary_accession_versions(summary)
+    if link_uids:
+        summary = _fetch_ncbi_esummary("nucleotide", ",".join(link_uids), timeout)
+        # TODO: Make sure that request uri is not too long (414)
+        return _get_summary_accession_versions(summary)
+    return set()
 
 
 def _fetch_ncbi_entrez_eutils_esummary(gene_id, timeout=1):
@@ -200,6 +202,15 @@ def _get_ncbi_datasets_non_chromosome_related(reference_id, timeout=10):
     return {}
 
 
+def _get_related_from_summary(summary):
+    related = set()
+    if summary.get("accessionversion"):
+        related.add(summary["accessionversion"])
+    if summary.get("assemblyacc"):
+        related.add(summary["assemblyacc"])
+    return related
+
+
 def _get_related_ncbi(reference_id, timeout=1):
     related = set()
     summary = _get_summary_result_one(
@@ -208,9 +219,10 @@ def _get_related_ncbi(reference_id, timeout=1):
     if not summary:
         return {}
 
+    related.update(_get_related_from_summary(summary))
     related.update(_get_new_versions(summary, timeout))
     related.update(_get_linked_references(reference_id, summary.get("genome"), timeout))
-    related = {"ncbi": set([(i,) for i in related])}
+    related = {"ncbi": set([(i,) for i in related if i != reference_id])}
     if summary.get("biomol") in ["mRNA", "peptide", "ncRNA|lncRNA"]:
         datasets_related = _get_ncbi_datasets_non_chromosome_related(reference_id)
         for k in datasets_related:
@@ -220,5 +232,4 @@ def _get_related_ncbi(reference_id, timeout=1):
 
 def get_related(reference_id, timeout=1):
     ncbi = _get_related_ncbi(reference_id, timeout)
-    print(ncbi)
     return _to_model(ncbi)

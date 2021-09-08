@@ -59,9 +59,18 @@ def get_tests(references):
     "r_id, expected_model",
     get_tests(
         [
-            # "NM_021803.4",
-            # "NM_003002.4",
+            "NM_021803.4",
+            "NM_003002.2",
             "NM_003002.4",
+            "NR_002196.2",
+            "NG_012337.1",
+            "NG_012337.2",
+            "NG_012337.3",
+            "LRG_24",
+            "NC_000022.10",
+            "NC_000022.11",
+            "NC_000022",
+            "CYP2D6",
         ]
     ),
 )
@@ -79,6 +88,22 @@ def test_model(r_id, expected_model, monkeypatch):
     related = get_related(r_id)
     assert related.keys() == expected_model.keys()
     for k in related:
-        assert set([tuple(v) for v in related[k]]) == set(
-            [tuple(v) for v in expected_model[k]]
+        rel_ids = set([v["id"] for v in related[k]])
+        exp_ids = set([v["id"] for v in expected_model[k]])
+        assert rel_ids == exp_ids
+
+        rel_selector_ids = set(
+            [
+                v["id"] + v["selector"]["id"]
+                for v in related[k]
+                if v.get("selector")
+            ]
         )
+        exp_selector_ids = set(
+            [
+                v["id"] + v["selector"]["id"]
+                for v in expected_model[k]
+                if v.get("selector")
+            ]
+        )
+        assert rel_selector_ids == exp_selector_ids
