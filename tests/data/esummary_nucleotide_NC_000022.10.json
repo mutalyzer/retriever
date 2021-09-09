@@ -1,0 +1,86 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "224589814"
+    ],
+    "224589814": {
+      "uid": "224589814",
+      "term": "224589814",
+      "caption": "NC_000022",
+      "accessionversion": "NC_000022.10",
+      "sourcedb": "refseq",
+      "title": "Homo sapiens chromosome 22, GRCh37.p13 Primary Assembly",
+      "extra": "gi|224589814|gnl|ASM:GCF_000001305|22|ref|NC_000022.10||gpp|GPC_000000046.1||gnl|NCBI_GENOMES|22",
+      "gi": 224589814,
+      "createdate": "2002/08/30",
+      "updatedate": "2013/08/13",
+      "genome": "chromosome",
+      "organism": "Homo sapiens",
+      "taxid": 9606,
+      "geneticcode": "1",
+      "subtype": "chromosome",
+      "subname": "22",
+      "slen": 51304566,
+      "moltype": "dna",
+      "topology": "linear",
+      "biomol": "genomic",
+      "assemblyacc": "CM000684.1",
+      "assemblygi": 224384747,
+      "projectid": "PRJNA168",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "Length",
+          "count": 51304566
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 34894566
+        },
+        {
+          "type": "Length",
+          "subtype": "gap",
+          "count": 16410000
+        },
+        {
+          "type": "Gap",
+          "count": 9
+        }
+      ],
+      "comment": "This sequence has been updated.",
+      "status": "replaced",
+      "replacedby": "NC_000022.11",
+      "flags": 544,
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": false,
+        "value": "NC_000022.10"
+      },
+      "idgiclass": {
+        "mol": "1",
+        "repr": "8",
+        "gi_state": "0",
+        "sat": "18",
+        "sat_key": "1915308",
+        "owner": "27",
+        "sat_name": "OLD13",
+        "owner_name": "NCBI-LegRefSeq",
+        "defdiv": "CGR",
+        "length": "51304566",
+        "extfeatmask": "0"
+      }
+    }
+  }
+}

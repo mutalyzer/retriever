@@ -1,0 +1,754 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "1595688550",
+      "25455647",
+      "568815587"
+    ],
+    "1595688550": {
+      "uid": "1595688550",
+      "term": "1595688550",
+      "caption": "NW_021160004",
+      "title": "Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p13 PATCHES HG28_PATCH",
+      "extra": "gi|1595688550|gnl|ASM:GCF_000005045.25|HG28_PATCH|ref|NW_021160004.1||gpp|GPS_017936283.1|",
+      "gi": 1595688550,
+      "createdate": "2019/06/14",
+      "updatedate": "2021/05/16",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 270122,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "genomic",
+      "subtype": "chromosome|map",
+      "subname": "11|11p15.5",
+      "assemblygi": 1584178795,
+      "assemblyacc": "ML143358.1",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "ds",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 270122
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 270122
+        },
+        {
+          "type": "all",
+          "count": 125
+        },
+        {
+          "type": "blob_size",
+          "count": 141641
+        },
+        {
+          "type": "cdregion",
+          "count": 32
+        },
+        {
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 32
+        },
+        {
+          "type": "evidence",
+          "count": 29
+        },
+        {
+          "type": "gene",
+          "count": 13
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 13
+        },
+        {
+          "type": "imp",
+          "count": 30
+        },
+        {
+          "type": "imp",
+          "subtype": "misc_feature",
+          "count": 3
+        },
+        {
+          "type": "imp",
+          "subtype": "protein_bind",
+          "count": 8
+        },
+        {
+          "type": "imp",
+          "subtype": "regulatory",
+          "count": 10
+        },
+        {
+          "type": "imp",
+          "subtype": "repeat_region",
+          "count": 9
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 1
+        },
+        {
+          "type": "region",
+          "count": 3
+        },
+        {
+          "type": "region",
+          "subtype": "Region",
+          "count": 3
+        },
+        {
+          "type": "rna",
+          "count": 46
+        },
+        {
+          "type": "rna",
+          "subtype": "mRNA",
+          "count": 32
+        },
+        {
+          "type": "rna",
+          "subtype": "ncRNA",
+          "count": 11
+        },
+        {
+          "type": "rna",
+          "subtype": "precursor_RNA",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 270122
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 418
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 141641
+        },
+        {
+          "source": "all",
+          "type": "cdregion",
+          "count": 96
+        },
+        {
+          "source": "all",
+          "type": "evidence",
+          "count": 29
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 124
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 30
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "prot",
+          "count": 32
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "region",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "rna",
+          "count": 132
+        },
+        {
+          "source": "xref",
+          "type": "all",
+          "count": 293
+        },
+        {
+          "source": "xref",
+          "type": "cdregion",
+          "count": 64
+        },
+        {
+          "source": "xref",
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 64
+        },
+        {
+          "source": "xref",
+          "type": "gene",
+          "count": 111
+        },
+        {
+          "source": "xref",
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 111
+        },
+        {
+          "source": "xref",
+          "type": "prot",
+          "count": 32
+        },
+        {
+          "source": "xref",
+          "type": "prot",
+          "subtype": "Prot",
+          "count": 32
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "count": 86
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "mRNA",
+          "count": 64
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "ncRNA",
+          "count": 15
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "precursor_RNA",
+          "count": 7
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NW_021160004.1"
+      },
+      "accessionversion": "NW_021160004.1"
+    },
+    "25455647": {
+      "uid": "25455647",
+      "term": "25455647",
+      "caption": "BC040073",
+      "title": "Homo sapiens H19, imprinted maternally expressed transcript (non-protein coding), mRNA (cDNA clone IMAGE:4993796), with apparent retained intron",
+      "extra": "gi|25455647|gb|BC040073.1|",
+      "gi": 25455647,
+      "createdate": "2002/11/26",
+      "updatedate": "2008/06/09",
+      "flags": 128,
+      "taxid": 9606,
+      "slen": 2265,
+      "biomol": "mRNA",
+      "moltype": "rna",
+      "topology": "linear",
+      "sourcedb": "insd",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "",
+      "subtype": "note|clone|tissue_type|clone_lib|lab_host",
+      "subname": "Vector: pCMV-SPORT6|IMAGE:4993796|Placenta, choriocarcinoma|NIH_MGC_10|DH10B",
+      "assemblygi": "",
+      "assemblyacc": "",
+      "tech": "htc",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 2265
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 2265
+        },
+        {
+          "type": "all",
+          "count": 1
+        },
+        {
+          "type": "blob_size",
+          "count": 9284
+        },
+        {
+          "type": "graph",
+          "count": 1
+        },
+        {
+          "type": "graph",
+          "subtype": "Phrap Quality",
+          "count": 1
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 2
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 1
+        },
+        {
+          "type": "quality_score",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 2265
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 9284
+        },
+        {
+          "source": "all",
+          "type": "graph",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 2
+        },
+        {
+          "source": "all",
+          "type": "quality_score",
+          "count": 1
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "BC040073.1"
+      },
+      "accessionversion": "BC040073.1"
+    },
+    "568815587": {
+      "uid": "568815587",
+      "term": "568815587",
+      "caption": "NC_000011",
+      "title": "Homo sapiens chromosome 11, GRCh38.p13 Primary Assembly",
+      "extra": "gi|568815587|gnl|ASM:GCF_000001305|11|ref|NC_000011.10||gpp|GPC_000001303.1||gnl|NCBI_GENOMES|11",
+      "gi": 568815587,
+      "createdate": "2002/08/29",
+      "updatedate": "2021/05/16",
+      "flags": 544,
+      "taxid": 9606,
+      "slen": 135086622,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "168",
+      "genome": "chromosome",
+      "subtype": "chromosome",
+      "subname": "11",
+      "assemblygi": 568336013,
+      "assemblyacc": "CM000673.2",
+      "tech": "",
+      "completeness": "",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Gap",
+          "count": 9
+        },
+        {
+          "type": "Length",
+          "count": 135086622
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 134634728
+        },
+        {
+          "type": "Length",
+          "subtype": "gap",
+          "count": 451894
+        },
+        {
+          "type": "all",
+          "count": 20571
+        },
+        {
+          "type": "blob_size",
+          "count": 28667512
+        },
+        {
+          "type": "cdregion",
+          "count": 6824
+        },
+        {
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 6824
+        },
+        {
+          "type": "evidence",
+          "count": 918
+        },
+        {
+          "type": "gene",
+          "count": 2921
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 2079
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene/pseudo",
+          "count": 842
+        },
+        {
+          "type": "imp",
+          "count": 1156
+        },
+        {
+          "type": "imp",
+          "subtype": "centromere",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "subtype": "exon/pseudo",
+          "count": 378
+        },
+        {
+          "type": "imp",
+          "subtype": "misc_feature",
+          "count": 57
+        },
+        {
+          "type": "imp",
+          "subtype": "misc_recomb",
+          "count": 42
+        },
+        {
+          "type": "imp",
+          "subtype": "misc_structure",
+          "count": 5
+        },
+        {
+          "type": "imp",
+          "subtype": "mobile_element",
+          "count": 11
+        },
+        {
+          "type": "imp",
+          "subtype": "protein_bind",
+          "count": 156
+        },
+        {
+          "type": "imp",
+          "subtype": "regulatory",
+          "count": 486
+        },
+        {
+          "type": "imp",
+          "subtype": "rep_origin",
+          "count": 9
+        },
+        {
+          "type": "imp",
+          "subtype": "repeat_region",
+          "count": 11
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 3
+        },
+        {
+          "type": "region",
+          "count": 301
+        },
+        {
+          "type": "region",
+          "subtype": "Region",
+          "count": 300
+        },
+        {
+          "type": "region",
+          "subtype": "Region/pseudo",
+          "count": 1
+        },
+        {
+          "type": "rna",
+          "count": 9368
+        },
+        {
+          "type": "rna",
+          "subtype": "mRNA",
+          "count": 6824
+        },
+        {
+          "type": "rna",
+          "subtype": "misc_RNA",
+          "count": 966
+        },
+        {
+          "type": "rna",
+          "subtype": "misc_RNA/pseudo",
+          "count": 59
+        },
+        {
+          "type": "rna",
+          "subtype": "ncRNA",
+          "count": 1404
+        },
+        {
+          "type": "rna",
+          "subtype": "precursor_RNA",
+          "count": 102
+        },
+        {
+          "type": "rna",
+          "subtype": "tRNA",
+          "count": 13
+        },
+        {
+          "source": "all",
+          "type": "Gap",
+          "count": 9
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 135086622
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 75571
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 28667512
+        },
+        {
+          "source": "all",
+          "type": "cdregion",
+          "count": 20472
+        },
+        {
+          "source": "all",
+          "type": "evidence",
+          "count": 918
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 20569
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 1534
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "prot",
+          "count": 6824
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 3
+        },
+        {
+          "source": "all",
+          "type": "region",
+          "count": 301
+        },
+        {
+          "source": "all",
+          "type": "rna",
+          "count": 25870
+        },
+        {
+          "source": "xref",
+          "type": "all",
+          "count": 55000
+        },
+        {
+          "source": "xref",
+          "type": "cdregion",
+          "count": 13648
+        },
+        {
+          "source": "xref",
+          "type": "cdregion",
+          "subtype": "CDS",
+          "count": 13648
+        },
+        {
+          "source": "xref",
+          "type": "gene",
+          "count": 17648
+        },
+        {
+          "source": "xref",
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 17648
+        },
+        {
+          "source": "xref",
+          "type": "imp",
+          "count": 378
+        },
+        {
+          "source": "xref",
+          "type": "imp",
+          "subtype": "exon",
+          "count": 378
+        },
+        {
+          "source": "xref",
+          "type": "prot",
+          "count": 6824
+        },
+        {
+          "source": "xref",
+          "type": "prot",
+          "subtype": "Prot",
+          "count": 6824
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "count": 16502
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "mRNA",
+          "count": 13648
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "misc_RNA",
+          "count": 1025
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "ncRNA",
+          "count": 1559
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "precursor_RNA",
+          "count": 257
+        },
+        {
+          "source": "xref",
+          "type": "rna",
+          "subtype": "tRNA",
+          "count": 13
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NC_000011.10"
+      },
+      "accessionversion": "NC_000011.10"
+    }
+  }
+}

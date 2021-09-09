@@ -1,0 +1,207 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "802084044"
+    ],
+    "802084044": {
+      "uid": "802084044",
+      "term": "802084044",
+      "caption": "NR_002196",
+      "title": "Homo sapiens H19 imprinted maternally expressed transcript (H19), transcript variant 1, long non-coding RNA",
+      "extra": "gi|802084044|ref|NR_002196.2|",
+      "gi": 802084044,
+      "createdate": "2005/01/15",
+      "updatedate": "2021/08/31",
+      "flags": 512,
+      "taxid": 9606,
+      "slen": 2362,
+      "biomol": "ncRNA|lncRNA",
+      "moltype": "rna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "segsetsize": "",
+      "projectid": "0",
+      "genome": "genomic",
+      "subtype": "chromosome|map",
+      "subname": "11|11p15.5",
+      "assemblygi": "",
+      "assemblyacc": "BC040073.1",
+      "tech": "",
+      "completeness": "has-right",
+      "geneticcode": "1",
+      "strand": "",
+      "organism": "human",
+      "strain": "",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "Length",
+          "count": 2362
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 2362
+        },
+        {
+          "type": "all",
+          "count": 5
+        },
+        {
+          "type": "blob_size",
+          "count": 18164
+        },
+        {
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "subtype": "Gene",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "count": 2
+        },
+        {
+          "type": "imp",
+          "subtype": "polyA_site",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "subtype": "regulatory",
+          "count": 1
+        },
+        {
+          "type": "org",
+          "count": 1
+        },
+        {
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed",
+          "count": 6
+        },
+        {
+          "type": "pub",
+          "subtype": "PubMed/Gene-rif",
+          "count": 4
+        },
+        {
+          "type": "rna",
+          "count": 1
+        },
+        {
+          "type": "rna",
+          "subtype": "ncRNA",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "VDB",
+          "subtype": "NA000146873.18#17",
+          "count": 1
+        },
+        {
+          "source": "SNP",
+          "type": "all",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "Length",
+          "count": 2362
+        },
+        {
+          "source": "all",
+          "type": "VDB",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "all",
+          "count": 11
+        },
+        {
+          "source": "all",
+          "type": "blob_size",
+          "count": 18164
+        },
+        {
+          "source": "all",
+          "type": "evidence",
+          "count": 5
+        },
+        {
+          "source": "all",
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "imp",
+          "count": 7
+        },
+        {
+          "source": "all",
+          "type": "org",
+          "count": 1
+        },
+        {
+          "source": "all",
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "source": "all",
+          "type": "rna",
+          "count": 1
+        },
+        {
+          "source": "exons",
+          "type": "all",
+          "count": 5
+        },
+        {
+          "source": "exons",
+          "type": "evidence",
+          "count": 5
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "count": 5
+        },
+        {
+          "source": "exons",
+          "type": "imp",
+          "subtype": "exon",
+          "count": 5
+        }
+      ],
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NR_002196.2"
+      },
+      "accessionversion": "NR_002196.2"
+    }
+  }
+}

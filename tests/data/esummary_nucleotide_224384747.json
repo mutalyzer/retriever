@@ -1,0 +1,84 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "224384747"
+    ],
+    "224384747": {
+      "uid": "224384747",
+      "term": "224384747",
+      "caption": "CM000684",
+      "accessionversion": "CM000684.1",
+      "sourcedb": "insd",
+      "title": "Homo sapiens chromosome 22, GRCh37 primary reference assembly",
+      "extra": "gi|224384747|gnl|ASM:GCA_000001305|22|gb|CM000684.1|",
+      "gi": 224384747,
+      "createdate": "2009/02/27",
+      "updatedate": "2009/06/29",
+      "genome": "chromosome",
+      "organism": "Homo sapiens",
+      "taxid": 9606,
+      "geneticcode": "1",
+      "subtype": "chromosome",
+      "subname": "22",
+      "slen": 51304566,
+      "moltype": "dna",
+      "topology": "linear",
+      "biomol": "genomic",
+      "projectid": "PRJNA31257",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "pub",
+          "count": 4
+        },
+        {
+          "type": "Length",
+          "count": 51304566
+        },
+        {
+          "type": "Length",
+          "subtype": "component",
+          "count": 34894566
+        },
+        {
+          "type": "Length",
+          "subtype": "gap",
+          "count": 16410000
+        },
+        {
+          "type": "Gap",
+          "count": 9
+        }
+      ],
+      "comment": "This sequence has been updated.",
+      "status": "replaced",
+      "replacedby": "CM000684.2",
+      "flags": 32,
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": false,
+        "value": "CM000684.1"
+      },
+      "idgiclass": {
+        "mol": "1",
+        "repr": "8",
+        "gi_state": "0",
+        "sat": "18",
+        "sat_key": "1167464",
+        "owner": "65",
+        "sat_name": "OLD13",
+        "owner_name": "NCBI_WGS2_SCFLD",
+        "defdiv": "CON",
+        "length": "51304566",
+        "extfeatmask": "0"
+      }
+    }
+  }
+}

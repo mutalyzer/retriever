@@ -7,6 +7,7 @@ import json
 
 from . import usage, version
 from .retriever import retrieve_model, retrieve_model_from_file, retrieve_raw
+from .related import get_related
 
 
 def _arg_parser():
@@ -44,6 +45,10 @@ def _arg_parser():
         help="include the complete model or parts of it",
         choices=["all", "sequence", "annotations"],
         default="all",
+    )
+
+    parser.add_argument(
+        "-r", "--related", help="retrieve related reference ids", action="store_true"
     )
 
     parser.add_argument("--timeout", help="timeout", type=int)
@@ -100,6 +105,12 @@ def main():
             reference_type=args.type,
             model_type=args.model_type,
             size_off=args.sizeoff,
+            timeout=args.timeout,
+        )
+        print(json.dumps(output, indent=args.indent))
+    elif args.related:
+        output = get_related(
+            reference_id=args.id,
             timeout=args.timeout,
         )
         print(json.dumps(output, indent=args.indent))

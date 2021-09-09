@@ -1,0 +1,455 @@
+{
+  "genes": [
+    {
+      "query": [
+        "NR_002196.2"
+      ],
+      "gene": {
+        "gene_id": "283120",
+        "symbol": "H19",
+        "description": "H19 imprinted maternally expressed transcript",
+        "tax_id": "9606",
+        "taxname": "Homo sapiens",
+        "type": "ncRNA",
+        "orientation": "minus",
+        "genomic_ranges": [
+          {
+            "accession_version": "NC_000011.10",
+            "range": [
+              {
+                "begin": "1995176",
+                "end": "2001466",
+                "orientation": "minus"
+              }
+            ]
+          },
+          {
+            "accession_version": "NW_021160004.1",
+            "range": [
+              {
+                "begin": "187698",
+                "end": "193988",
+                "orientation": "minus"
+              }
+            ]
+          }
+        ],
+        "reference_standards": [
+          {
+            "gene_range": {
+              "accession_version": "NG_016165.1",
+              "range": [
+                {
+                  "begin": "4961",
+                  "end": "7660",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "type": "REFSEQ_GENE"
+          }
+        ],
+        "transcripts": [
+          {
+            "accession_version": "NR_131224.1",
+            "name": "transcript variant 3",
+            "length": 1253,
+            "genomic_range": {
+              "accession_version": "NC_000011.10",
+              "range": [
+                {
+                  "begin": "1995176",
+                  "end": "2001466",
+                  "orientation": "minus"
+                }
+              ]
+            },
+            "exons": {
+              "accession_version": "NC_000011.10",
+              "range": [
+                {
+                  "begin": "2001218",
+                  "end": "2001466",
+                  "order": 1
+                },
+                {
+                  "begin": "1996287",
+                  "end": "1996421",
+                  "order": 2
+                },
+                {
+                  "begin": "1996079",
+                  "end": "1996191",
+                  "order": 3
+                },
+                {
+                  "begin": "1995876",
+                  "end": "1995998",
+                  "order": 4
+                },
+                {
+                  "begin": "1995176",
+                  "end": "1995794",
+                  "order": 5
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p13 Primary Assembly",
+                "genomic_range": {
+                  "begin": "1995176",
+                  "end": "2001466",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "2001218",
+                    "end": "2001466",
+                    "order": 1
+                  },
+                  {
+                    "begin": "1996287",
+                    "end": "1996421",
+                    "order": 2
+                  },
+                  {
+                    "begin": "1996079",
+                    "end": "1996191",
+                    "order": 3
+                  },
+                  {
+                    "begin": "1995876",
+                    "end": "1995998",
+                    "order": 4
+                  },
+                  {
+                    "begin": "1995176",
+                    "end": "1995794",
+                    "order": 5
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NW_021160004.1",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p13 PATCHES",
+                "genomic_range": {
+                  "begin": "187698",
+                  "end": "193988",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "193740",
+                    "end": "193988",
+                    "order": 1
+                  },
+                  {
+                    "begin": "188809",
+                    "end": "188943",
+                    "order": 2
+                  },
+                  {
+                    "begin": "188601",
+                    "end": "188713",
+                    "order": 3
+                  },
+                  {
+                    "begin": "188398",
+                    "end": "188520",
+                    "order": 4
+                  },
+                  {
+                    "begin": "187698",
+                    "end": "188316",
+                    "order": 5
+                  }
+                ]
+              }
+            ],
+            "type": "NON_CODING"
+          },
+          {
+            "accession_version": "NR_131223.1",
+            "name": "transcript variant 2",
+            "length": 2356,
+            "genomic_range": {
+              "accession_version": "NC_000011.10",
+              "range": [
+                {
+                  "begin": "1995176",
+                  "end": "1997875",
+                  "orientation": "minus"
+                }
+              ]
+            },
+            "exons": {
+              "accession_version": "NC_000011.10",
+              "range": [
+                {
+                  "begin": "1996518",
+                  "end": "1997875",
+                  "order": 1
+                },
+                {
+                  "begin": "1996287",
+                  "end": "1996421",
+                  "order": 2
+                },
+                {
+                  "begin": "1996079",
+                  "end": "1996191",
+                  "order": 3
+                },
+                {
+                  "begin": "1995876",
+                  "end": "1995998",
+                  "order": 4
+                },
+                {
+                  "begin": "1995176",
+                  "end": "1995788",
+                  "order": 5
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p13 Primary Assembly",
+                "genomic_range": {
+                  "begin": "1995176",
+                  "end": "1997875",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "1996518",
+                    "end": "1997875",
+                    "order": 1
+                  },
+                  {
+                    "begin": "1996287",
+                    "end": "1996421",
+                    "order": 2
+                  },
+                  {
+                    "begin": "1996079",
+                    "end": "1996191",
+                    "order": 3
+                  },
+                  {
+                    "begin": "1995876",
+                    "end": "1995998",
+                    "order": 4
+                  },
+                  {
+                    "begin": "1995176",
+                    "end": "1995788",
+                    "order": 5
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NW_021160004.1",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p13 PATCHES",
+                "genomic_range": {
+                  "begin": "187698",
+                  "end": "190397",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "189040",
+                    "end": "190397",
+                    "order": 1
+                  },
+                  {
+                    "begin": "188809",
+                    "end": "188943",
+                    "order": 2
+                  },
+                  {
+                    "begin": "188601",
+                    "end": "188713",
+                    "order": 3
+                  },
+                  {
+                    "begin": "188398",
+                    "end": "188520",
+                    "order": 4
+                  },
+                  {
+                    "begin": "187698",
+                    "end": "188310",
+                    "order": 5
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000412788.5",
+            "type": "NON_CODING"
+          },
+          {
+            "accession_version": "NR_002196.2",
+            "name": "transcript variant 1",
+            "length": 2362,
+            "genomic_range": {
+              "accession_version": "NC_000011.10",
+              "range": [
+                {
+                  "begin": "1995176",
+                  "end": "1997875",
+                  "orientation": "minus"
+                }
+              ]
+            },
+            "exons": {
+              "accession_version": "NC_000011.10",
+              "range": [
+                {
+                  "begin": "1996518",
+                  "end": "1997875",
+                  "order": 1
+                },
+                {
+                  "begin": "1996287",
+                  "end": "1996421",
+                  "order": 2
+                },
+                {
+                  "begin": "1996079",
+                  "end": "1996191",
+                  "order": 3
+                },
+                {
+                  "begin": "1995876",
+                  "end": "1995998",
+                  "order": 4
+                },
+                {
+                  "begin": "1995176",
+                  "end": "1995794",
+                  "order": 5
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p13 Primary Assembly",
+                "genomic_range": {
+                  "begin": "1995176",
+                  "end": "1997875",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "1996518",
+                    "end": "1997875",
+                    "order": 1
+                  },
+                  {
+                    "begin": "1996287",
+                    "end": "1996421",
+                    "order": 2
+                  },
+                  {
+                    "begin": "1996079",
+                    "end": "1996191",
+                    "order": 3
+                  },
+                  {
+                    "begin": "1995876",
+                    "end": "1995998",
+                    "order": 4
+                  },
+                  {
+                    "begin": "1995176",
+                    "end": "1995794",
+                    "order": 5
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NW_021160004.1",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p13 PATCHES",
+                "genomic_range": {
+                  "begin": "187698",
+                  "end": "190397",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "189040",
+                    "end": "190397",
+                    "order": 1
+                  },
+                  {
+                    "begin": "188809",
+                    "end": "188943",
+                    "order": 2
+                  },
+                  {
+                    "begin": "188601",
+                    "end": "188713",
+                    "order": 3
+                  },
+                  {
+                    "begin": "188398",
+                    "end": "188520",
+                    "order": 4
+                  },
+                  {
+                    "begin": "187698",
+                    "end": "188316",
+                    "order": 5
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000414790.6",
+            "type": "NON_CODING"
+          }
+        ],
+        "common_name": "human",
+        "chromosomes": [
+          "11"
+        ],
+        "nomenclature_authority": {
+          "authority": "HGNC",
+          "identifier": "HGNC:4713"
+        },
+        "ensembl_gene_ids": [
+          "ENSG00000130600"
+        ],
+        "omim_ids": [
+          "103280"
+        ],
+        "synonyms": [
+          "ASM",
+          "BWS",
+          "WT2",
+          "ASM1",
+          "D11S813E",
+          "MIR675HG",
+          "LINC00008",
+          "NCRNA00008"
+        ],
+        "annotations": [
+          {
+            "release_name": "NCBI Homo sapiens Updated Annotation Release 109.20210514",
+            "release_date": "2021-05-14",
+            "assemblies_in_scope": [
+              {
+                "accession": "GCF_000001405.39",
+                "name": "GRCh38.p13"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

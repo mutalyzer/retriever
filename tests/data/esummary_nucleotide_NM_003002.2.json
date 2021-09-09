@@ -1,0 +1,92 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "222352156"
+    ],
+    "222352156": {
+      "uid": "222352156",
+      "term": "222352156",
+      "caption": "NM_003002",
+      "accessionversion": "NM_003002.2",
+      "sourcedb": "refseq",
+      "title": "Homo sapiens succinate dehydrogenase complex, subunit D, integral membrane protein (SDHD), nuclear gene encoding mitochondrial protein, mRNA",
+      "extra": "gi|222352156|ref|NM_003002.2|",
+      "gi": 222352156,
+      "createdate": "1999/03/19",
+      "updatedate": "2013/02/02",
+      "genome": "genomic",
+      "organism": "Homo sapiens",
+      "taxid": 9606,
+      "geneticcode": "1",
+      "subtype": "chromosome|map",
+      "subname": "11|11q23",
+      "slen": 1382,
+      "moltype": "rna",
+      "topology": "linear",
+      "completeness": "complete",
+      "biomol": "mRNA",
+      "assemblyacc": "BQ000657.1",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "pub",
+          "count": 10
+        },
+        {
+          "type": "Length",
+          "count": 1382
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 1382
+        },
+        {
+          "type": "all",
+          "count": 5
+        },
+        {
+          "type": "cdregion",
+          "count": 1
+        },
+        {
+          "type": "gene",
+          "count": 1
+        },
+        {
+          "type": "imp",
+          "count": 3
+        }
+      ],
+      "comment": "This sequence has been updated.",
+      "status": "replaced",
+      "replacedby": "NM_003002.3",
+      "flags": 512,
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": false,
+        "value": "NM_003002.2"
+      },
+      "idgiclass": {
+        "mol": "2",
+        "repr": "2",
+        "gi_state": "0",
+        "sat": "17",
+        "sat_key": "22191117",
+        "owner": "20",
+        "sat_name": "OLD12",
+        "owner_name": "NCBI-Genomes",
+        "defdiv": "GNM",
+        "length": "1382",
+        "extfeatmask": "5"
+      }
+    }
+  }
+}

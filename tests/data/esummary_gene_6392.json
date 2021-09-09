@@ -1,0 +1,147 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "6392"
+    ],
+    "6392": {
+      "uid": "6392",
+      "name": "SDHD",
+      "description": "succinate dehydrogenase complex subunit D",
+      "status": "",
+      "currentid": "",
+      "chromosome": "11",
+      "geneticsource": "genomic",
+      "maplocation": "11q23.1",
+      "otheraliases": "CBT1, CII-4, CWS3, MC2DN3, PGL, PGL1, QPs3, SDH4, cybS",
+      "otherdesignations": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial|succinate dehydrogenase complex subunit D integral membrane protein|succinate-ubiquinone oxidoreductase cytochrome b small subunit|succinate-ubiquinone reductase membrane anchor subunit",
+      "nomenclaturesymbol": "SDHD",
+      "nomenclaturename": "succinate dehydrogenase complex subunit D",
+      "nomenclaturestatus": "Official",
+      "mim": [
+        "602690"
+      ],
+      "genomicinfo": [
+        {
+          "chrloc": "11",
+          "chraccver": "NC_000011.10",
+          "chrstart": 112086872,
+          "chrstop": 112095793,
+          "exoncount": 6
+        }
+      ],
+      "geneweight": 15310,
+      "summary": "This gene encodes a member of complex II of the respiratory chain, which is responsible for the oxidation of succinate. The encoded protein is one of two integral membrane proteins anchoring the complex to the matrix side of the mitochondrial inner membrane. Mutations in this gene are associated with the formation of tumors, including hereditary paraganglioma. Transmission of disease occurs almost exclusively through the paternal allele, suggesting that this locus may be maternally imprinted. There are pseudogenes for this gene on chromosomes 1, 2, 3, 7, and 18. Alternative splicing results in multiple transcript variants. [provided by RefSeq, Feb 2013]",
+      "chrsort": "11",
+      "chrstart": 112086872,
+      "organism": {
+        "scientificname": "Homo sapiens",
+        "commonname": "human",
+        "taxid": 9606
+      },
+      "locationhist": [
+        {
+          "annotationrelease": "109.20210514",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000011.10",
+          "chrstart": 112086872,
+          "chrstop": 112095793
+        },
+        {
+          "annotationrelease": "109.20210226",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000011.10",
+          "chrstart": 112086872,
+          "chrstop": 112095793
+        },
+        {
+          "annotationrelease": "109.20201120",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000011.10",
+          "chrstart": 112086872,
+          "chrstop": 112095793
+        },
+        {
+          "annotationrelease": "109.20200815",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000011.10",
+          "chrstart": 112086872,
+          "chrstop": 112095793
+        },
+        {
+          "annotationrelease": "109.20200522",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000011.10",
+          "chrstart": 112086872,
+          "chrstop": 112095793
+        },
+        {
+          "annotationrelease": "109.20200228",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000011.10",
+          "chrstart": 112086872,
+          "chrstop": 112095793
+        },
+        {
+          "annotationrelease": "109.20191205",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000011.10",
+          "chrstart": 112086872,
+          "chrstop": 112095793
+        },
+        {
+          "annotationrelease": "109.20190905",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000011.10",
+          "chrstart": 112086872,
+          "chrstop": 112095793
+        },
+        {
+          "annotationrelease": "109.20190607",
+          "assemblyaccver": "GCF_000001405.39",
+          "chraccver": "NC_000011.10",
+          "chrstart": 112086823,
+          "chrstop": 112095800
+        },
+        {
+          "annotationrelease": "109",
+          "assemblyaccver": "GCF_000001405.38",
+          "chraccver": "NC_000011.10",
+          "chrstart": 112086823,
+          "chrstop": 112095800
+        },
+        {
+          "annotationrelease": "105.20201022",
+          "assemblyaccver": "GCF_000001405.25",
+          "chraccver": "NC_000011.9",
+          "chrstart": 111957596,
+          "chrstop": 111966517
+        },
+        {
+          "annotationrelease": "105",
+          "assemblyaccver": "GCF_000001405.25",
+          "chraccver": "NC_000011.9",
+          "chrstart": 111957547,
+          "chrstop": 111966524
+        },
+        {
+          "annotationrelease": "105",
+          "assemblyaccver": "GCF_000002125.1",
+          "chraccver": "AC_000143.1",
+          "chrstart": 107881579,
+          "chrstop": 107890556
+        },
+        {
+          "annotationrelease": "105",
+          "assemblyaccver": "GCF_000306695.2",
+          "chraccver": "NC_018922.2",
+          "chrstart": 111840725,
+          "chrstop": 111849703
+        }
+      ]
+    }
+  }
+}

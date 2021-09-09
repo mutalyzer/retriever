@@ -1,0 +1,23 @@
+{
+  "header": {
+    "type": "elink",
+    "version": "0.3"
+  },
+  "linksets": [
+    {
+      "dbfrom": "nuccore",
+      "ids": [
+        "224589814"
+      ],
+      "linksetdbs": [
+        {
+          "dbto": "nuccore",
+          "linkname": "nuccore_nuccore_rsgb",
+          "links": [
+            "224384747"
+          ]
+        }
+      ]
+    }
+  ]
+}

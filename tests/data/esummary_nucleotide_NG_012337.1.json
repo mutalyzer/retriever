@@ -1,0 +1,95 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "254039638"
+    ],
+    "254039638": {
+      "uid": "254039638",
+      "term": "254039638",
+      "caption": "NG_012337",
+      "accessionversion": "NG_012337.1",
+      "sourcedb": "refseq",
+      "title": "Homo sapiens succinate dehydrogenase complex, subunit D, integral membrane protein (SDHD); and translocase of inner mitochondrial membrane 8 homolog B (yeast) (TIMM8B), RefSeqGene on chromosome 11",
+      "extra": "gi|254039638|ref|NG_012337.1|",
+      "gi": 254039638,
+      "createdate": "2009/07/17",
+      "updatedate": "2012/03/26",
+      "genome": "genomic",
+      "organism": "Homo sapiens",
+      "taxid": 9606,
+      "geneticcode": "1",
+      "subtype": "chromosome|map",
+      "subname": "11|11q23",
+      "slen": 15948,
+      "moltype": "dna",
+      "topology": "linear",
+      "biomol": "genomic",
+      "assemblyacc": "AP002007.4",
+      "biosample": "",
+      "statistics": [
+        {
+          "type": "pub",
+          "count": 1
+        },
+        {
+          "type": "Length",
+          "count": 15948
+        },
+        {
+          "type": "Length",
+          "subtype": "literal",
+          "count": 15948
+        },
+        {
+          "type": "all",
+          "count": 20
+        },
+        {
+          "type": "cdregion",
+          "count": 5
+        },
+        {
+          "type": "gene",
+          "count": 3
+        },
+        {
+          "type": "imp",
+          "count": 7
+        },
+        {
+          "type": "rna",
+          "count": 5
+        }
+      ],
+      "comment": "This sequence has been updated.",
+      "status": "replaced",
+      "replacedby": "NG_012337.2",
+      "flags": 512,
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": false,
+        "value": "NG_012337.1"
+      },
+      "idgiclass": {
+        "mol": "1",
+        "repr": "2",
+        "gi_state": "0",
+        "sat": "15",
+        "sat_key": "6440979",
+        "owner": "31",
+        "sat_name": "OLD10",
+        "owner_name": "NCBI-GrgnRefSeq",
+        "defdiv": "GRR",
+        "length": "15948",
+        "extfeatmask": "5"
+      }
+    }
+  }
+}

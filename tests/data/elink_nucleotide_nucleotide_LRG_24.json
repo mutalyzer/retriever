@@ -1,0 +1,34 @@
+{
+  "header": {
+    "type": "elink",
+    "version": "0.3"
+  },
+  "linksets": [
+    {
+      "dbfrom": "nuccore",
+      "ids": [
+        "187423886"
+      ],
+      "linksetdbs": [
+        {
+          "dbto": "nuccore",
+          "linkname": "nuccore_nuccore_mrna",
+          "links": [
+            "1889628716",
+            "1674986257",
+            "1519246106",
+            "166235902",
+            "56786154"
+          ]
+        },
+        {
+          "dbto": "nuccore",
+          "linkname": "nuccore_nuccore_comp",
+          "links": [
+            "29466516"
+          ]
+        }
+      ]
+    }
+  ]
+}
