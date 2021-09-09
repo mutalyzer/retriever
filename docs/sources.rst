@@ -38,5 +38,5 @@ org/info/genome/stable_ids/index.html>`_, which start with ``ENS``.
 LRG
 ---
 
-LRG references are retrieved from the following `location <ftp://ftp.ebi.ac.uk
+LRG references are retrieved from the following `location <http://ftp.ebi.ac.uk
 /pub/databases/lrgex/>`__.

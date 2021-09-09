@@ -48,7 +48,7 @@ def _arg_parser():
     )
 
     parser.add_argument(
-        "-r", "--related", help="related references", action="store_true"
+        "-r", "--related", help="retrieve related reference ids", action="store_true"
     )
 
     parser.add_argument("--timeout", help="timeout", type=int)

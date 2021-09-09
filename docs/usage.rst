@@ -104,3 +104,31 @@ For an ``lrg`` file the ``--is_lrg`` flag needs to be added.
 
     $ mutalyzer_retriever from_file --paths LRG_417 --is_lrg
     {"annotations": {"type": "record", "id": "LRG_417", "location": ...
+
+
+Retrieve related reference ids
+------------------------------
+
+To obtain the related reference ids use the ``related`` flag.
+
+.. code-block:: console
+
+    $ mutalyzer_retriever --id LRG_303 --related --indent 2
+    {
+        "ncbi": [
+            {
+              "id": "NG_008376.4"
+            },
+            {
+              "id": "AC254562.1"
+            },
+            {
+              "id": "NM_000106.6"
+            },
+            {
+              "id": "NR_034118.2"
+            }
+        ]
+    }
+
+

@@ -231,5 +231,14 @@ def _get_related_ncbi(reference_id, timeout=1):
 
 
 def get_related(reference_id, timeout=1):
-    ncbi = _get_related_ncbi(reference_id, timeout)
-    return _to_model(ncbi)
+    """
+    Obtain the related reference ids for provided reference id.
+
+    :arg str reference_id: The id of the reference for which to
+                           retrieve the related ids.
+    :arg float timeout: Timeout.
+    :returns: Related reference ids.
+    :rtype: dict
+
+    """
+    return _to_model(_get_related_ncbi(reference_id, timeout))

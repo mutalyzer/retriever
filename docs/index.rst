@@ -33,6 +33,7 @@ This packages allows for genomic reference files retrieval from the NCBI, LRG, a
    install
    usage
    sources
+   related
    cli
    api
    credits

@@ -6,3 +6,4 @@ API documentation
    :caption: Contents:
 
    api/retriever
+   api/related
