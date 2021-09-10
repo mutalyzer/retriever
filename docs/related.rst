@@ -43,8 +43,6 @@ To retrieve the related reference IDs the following steps are performed:
   .nih.gov/entrez/eutils/esummary.fcgi?db=nucleotide&id=509155882,1435110251,5
   94191220&retmode=json>`__).
 
-    - `accessionversion`
-
 - If the reference id is from a transcript we make use of the `NCBI Datasets
   REST API <https://api.ncbi.nlm.nih.gov/datasets/docs/reference-docs/rest-api
   />`_ to obtain further related references (see `NM_003002.2 <https://api.ncb
