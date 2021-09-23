@@ -1,5 +1,6 @@
-from .request import Http400, RequestErrors, request
 import json
+
+from .request import Http400, RequestErrors, request
 
 
 def _fetch_ncbi_esummary(db, query_id, timeout=10):
@@ -211,7 +212,7 @@ def _get_related_from_summary(summary):
     return related
 
 
-def _get_related_ncbi(reference_id, timeout=1):
+def get_related_ncbi(reference_id, timeout=1):
     related = set()
     summary = _get_summary_result_one(
         _fetch_ncbi_esummary("nucleotide", reference_id, timeout)
@@ -227,7 +228,32 @@ def _get_related_ncbi(reference_id, timeout=1):
         datasets_related = _get_ncbi_datasets_non_chromosome_related(reference_id)
         for k in datasets_related:
             _update(related, k, datasets_related[k])
-    return related
+    return _to_model(related)
+
+
+def _fetch_ensembl_xrefs(query_id, timeout=10):
+    url = f"https://rest.ensembl.org/xrefs/id/{query_id}"
+    params = {"content-type": "application/json"}
+    return json.loads(request(url=url, params=params, timeout=timeout))
+
+
+def _get_related_ensembl(reference_id, timeout=1):
+    related = set()
+    try:
+        xrefs = _fetch_ensembl_xrefs(reference_id, timeout)
+    except (RequestErrors, Http400):
+        return None
+    else:
+        if isinstance(xrefs, dict):
+            return None
+        for xref in xrefs:
+            if (
+                xref.get("dbname") in ["ENS_LRG_gene", "LRG", "Ens_Hs_gene"]
+                and xref.get("primary_id")
+                and xref.get("primary_id") != reference_id
+            ):
+                related.add(xref.get("primary_id"))
+        return related
 
 
 def get_related(reference_id, timeout=1):
@@ -241,4 +267,8 @@ def get_related(reference_id, timeout=1):
     :rtype: dict
 
     """
-    return _to_model(_get_related_ncbi(reference_id, timeout))
+    related = get_related_ncbi(reference_id, timeout)
+    ensembl = _get_related_ensembl(reference_id, timeout)
+    if ensembl:
+        related["ensembl"] = sorted(list(ensembl))
+    return related

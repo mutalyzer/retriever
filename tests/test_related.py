@@ -1,10 +1,10 @@
+import hashlib
 import json
 from pathlib import Path
-import hashlib
 
 import pytest
 
-from mutalyzer_retriever.related import get_related
+from mutalyzer_retriever.related import get_related_ncbi as get_related
 
 
 def _get_hash(uids):
@@ -93,11 +93,7 @@ def test_model(r_id, expected_model, monkeypatch):
         assert rel_ids == exp_ids
 
         rel_selector_ids = set(
-            [
-                v["id"] + v["selector"]["id"]
-                for v in related[k]
-                if v.get("selector")
-            ]
+            [v["id"] + v["selector"]["id"] for v in related[k] if v.get("selector")]
         )
         exp_selector_ids = set(
             [
