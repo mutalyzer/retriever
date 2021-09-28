@@ -126,6 +126,12 @@ def _add(d, k, v, not_none=True):
     d[k].add(v)
 
 
+def _merge(d1, d2):
+    if isinstance(d1, dict) and isinstance(d2, dict):
+        for k in d2:
+            _update(d1, k, d2[k])
+
+
 def _update(d, k, s):
     if s:
         if d.get(k) is None:
@@ -135,14 +141,21 @@ def _update(d, k, s):
 
 def _to_model(d):
     output = {}
-    for k in d:
+    for k in sorted(d):
         output[k] = []
-        # print(sorted(d[k], key=lambda r_id: r_id['id'] if r_id.get("selector") is None else (r_id['id'], r_id["selector"]["id"])))
+        with_selectors = {}
+        no_selectors = [i[0] for i in d[k] if len(i) == 1]
         for i in d[k]:
-            if len(i) == 1:
-                output[k].append({"id": i[0]})
-            else:
-                output[k].append({"id": i[0], "selector": {"id": i[1]}})
+            if len(i) == 2:
+                if i[0] not in with_selectors:
+                    with_selectors[i[0]] = []
+                with_selectors[i[0]].append(i[1])
+        for i in sorted(set(list(with_selectors.keys()) + no_selectors)):
+            if i in no_selectors:
+                output[k].append({"id": i})
+            if i in with_selectors:
+                for s in sorted(with_selectors[i]):
+                    output[k].append({"id": i, "selector": {"id": s}})
     return output
 
 
@@ -156,18 +169,17 @@ def _extract_datasets(gene):
         _add(related, "ncbi", (_extract(gene, p),))
     transcripts = _extract(gene, ["transcripts"])
     if transcripts and isinstance(transcripts, list):
-        for transcript in transcripts:
-            _add(related, "ncbi", (_extract(transcript, ["accession_version"]),))
-            _add(related, "ensembl", (_extract(transcript, ["ensembl_transcript"]),))
-            if transcript.get("genomic_range") and transcript["genomic_range"].get(
-                "accession_version"
-            ):
+        for t in transcripts:
+            _add(related, "ncbi", (_extract(t, ["accession_version"]),))
+            _add(related, "ncbi", (_extract(t, ["protein", "accession_version"]),))
+            _add(related, "ensembl", (_extract(t, ["ensembl_transcript"]),))
+            if t.get("genomic_range") and t["genomic_range"].get("accession_version"):
                 _add(
                     related,
                     "ncbi",
                     (
-                        _extract(transcript, ["genomic_range", "accession_version"]),
-                        _extract(transcript, ["accession_version"]),
+                        _extract(t, ["genomic_range", "accession_version"]),
+                        _extract(t, ["accession_version"]),
                     ),
                 )
     if gene.get("ensembl_gene_ids"):
@@ -213,25 +225,23 @@ def _get_related_from_summary(summary):
 
 
 def get_related_ncbi(reference_id, timeout=1):
-    related = set()
     summary = _get_summary_result_one(
         _fetch_ncbi_esummary("nucleotide", reference_id, timeout)
     )
     if not summary:
         return {}
 
+    related = set()
     related.update(_get_related_from_summary(summary))
     related.update(_get_new_versions(summary, timeout))
     related.update(_get_linked_references(reference_id, summary.get("genome"), timeout))
     related = {"ncbi": set([(i,) for i in related if i != reference_id])}
     if summary.get("biomol") in ["mRNA", "peptide", "ncRNA|lncRNA"]:
-        datasets_related = _get_ncbi_datasets_non_chromosome_related(reference_id)
-        for k in datasets_related:
-            _update(related, k, datasets_related[k])
-    return _to_model(related)
+        _merge(related, _get_ncbi_datasets_non_chromosome_related(reference_id))
+    return related
 
 
-def _fetch_ensembl_xrefs(query_id, timeout=10):
+def _fetch_ensembl_xrefs(query_id, timeout=1):
     url = f"https://rest.ensembl.org/xrefs/id/{query_id}"
     params = {"content-type": "application/json"}
     return json.loads(request(url=url, params=params, timeout=timeout))
@@ -252,13 +262,14 @@ def _get_related_ensembl(reference_id, timeout=1):
                 and xref.get("primary_id")
                 and xref.get("primary_id") != reference_id
             ):
-                related.add(xref.get("primary_id"))
-        return related
+                related.add((xref.get("primary_id"),))
+        print(related)
+        return {"ensembl": related}
 
 
 def get_related(reference_id, timeout=1):
     """
-    Obtain the related reference ids for provided reference id.
+    Obtain the related reference ids.
 
     :arg str reference_id: The id of the reference for which to
                            retrieve the related ids.
@@ -268,7 +279,8 @@ def get_related(reference_id, timeout=1):
 
     """
     related = get_related_ncbi(reference_id, timeout)
-    ensembl = _get_related_ensembl(reference_id, timeout)
-    if ensembl:
-        related["ensembl"] = sorted(list(ensembl))
-    return related
+    _merge(related, _get_related_ensembl(reference_id, timeout))
+    import json
+
+    print(json.dumps(_to_model(related), indent=2))
+    return _to_model(related)

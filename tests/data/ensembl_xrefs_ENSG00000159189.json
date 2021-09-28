@@ -1,0 +1,180 @@
+[
+  {
+    "info_text": "",
+    "description": "Locus Reference Genomic record for C1QC",
+    "primary_id": "LRG_24",
+    "info_type": "DIRECT",
+    "dbname": "ENS_LRG_gene",
+    "synonyms": [],
+    "version": "0",
+    "db_display_name": "LRG display in Ensembl gene",
+    "display_id": "LRG_24"
+  },
+  {
+    "db_display_name": "Expression Atlas",
+    "display_id": "ENSG00000159189",
+    "info_type": "DIRECT",
+    "dbname": "ArrayExpress",
+    "primary_id": "ENSG00000159189",
+    "info_text": "",
+    "description": null,
+    "version": "0",
+    "synonyms": []
+  },
+  {
+    "version": "0",
+    "synonyms": [],
+    "info_type": "DEPENDENT",
+    "dbname": "EntrezGene",
+    "primary_id": "714",
+    "info_text": "",
+    "description": "complement C1q C chain",
+    "display_id": "C1QC",
+    "db_display_name": "NCBI gene (formerly Entrezgene)"
+  },
+  {
+    "display_id": "C1QC",
+    "db_display_name": "HGNC Symbol",
+    "synonyms": [
+      "C1QG"
+    ],
+    "version": "0",
+    "primary_id": "HGNC:1245",
+    "info_type": "DIRECT",
+    "dbname": "HGNC",
+    "info_text": "Generated via ensembl_manual",
+    "description": "complement C1q C chain"
+  },
+  {
+    "primary_id": "120575",
+    "info_type": "DEPENDENT",
+    "dbname": "MIM_GENE",
+    "description": "COMPLEMENT COMPONENT 1, q SUBCOMPONENT, C CHAIN; C1QC;;COMPLEMENT COMPONENT C1q, C CHAIN;;COMPLEMENT COMPONENT 1, q SUBCOMPONENT, GAMMA POLYPEPTIDE; C1QG",
+    "info_text": "",
+    "synonyms": [],
+    "version": "0",
+    "db_display_name": "MIM gene",
+    "display_id": "COMPLEMENT COMPONENT 1, q SUBCOMPONENT, C CHAIN; C1QC [*120575]"
+  },
+  {
+    "display_id": "C1q DEFICIENCY; C1QD [#613652]",
+    "db_display_name": "MIM morbid",
+    "synonyms": [],
+    "version": "0",
+    "info_text": "",
+    "description": "C1q DEFICIENCY; C1QD",
+    "primary_id": "613652",
+    "info_type": "DEPENDENT",
+    "dbname": "MIM_MORBID"
+  },
+  {
+    "synonyms": [],
+    "version": "0",
+    "info_text": "Generated via gene",
+    "description": "Innate Immune System",
+    "primary_id": "R-HSA-168249",
+    "info_type": "DIRECT",
+    "dbname": "Reactome_gene",
+    "display_id": "R-HSA-168249",
+    "db_display_name": "Reactome gene"
+  },
+  {
+    "primary_id": "R-HSA-168256",
+    "info_type": "DIRECT",
+    "dbname": "Reactome_gene",
+    "description": "Immune System",
+    "info_text": "Generated via gene",
+    "synonyms": [],
+    "version": "0",
+    "db_display_name": "Reactome gene",
+    "display_id": "R-HSA-168256"
+  },
+  {
+    "display_id": "R-HSA-166658",
+    "db_display_name": "Reactome gene",
+    "synonyms": [],
+    "version": "0",
+    "info_text": "Generated via gene",
+    "description": "Complement cascade",
+    "primary_id": "R-HSA-166658",
+    "dbname": "Reactome_gene",
+    "info_type": "DIRECT"
+  },
+  {
+    "display_id": "R-HSA-977606",
+    "db_display_name": "Reactome gene",
+    "version": "0",
+    "synonyms": [],
+    "info_type": "DIRECT",
+    "dbname": "Reactome_gene",
+    "primary_id": "R-HSA-977606",
+    "info_text": "Generated via gene",
+    "description": "Regulation of Complement cascade"
+  },
+  {
+    "db_display_name": "Reactome gene",
+    "display_id": "R-HSA-166663",
+    "description": "Initial triggering of complement",
+    "info_text": "Generated via gene",
+    "primary_id": "R-HSA-166663",
+    "info_type": "DIRECT",
+    "dbname": "Reactome_gene",
+    "synonyms": [],
+    "version": "0"
+  },
+  {
+    "description": "Creation of C4 and C2 activators",
+    "info_text": "Generated via gene",
+    "info_type": "DIRECT",
+    "dbname": "Reactome_gene",
+    "primary_id": "R-HSA-166786",
+    "version": "0",
+    "synonyms": [],
+    "db_display_name": "Reactome gene",
+    "display_id": "R-HSA-166786"
+  },
+  {
+    "synonyms": [],
+    "version": "0",
+    "primary_id": "R-HSA-173623",
+    "info_type": "DIRECT",
+    "dbname": "Reactome_gene",
+    "description": "Classical antibody-mediated complement activation",
+    "info_text": "Generated via gene",
+    "display_id": "R-HSA-173623",
+    "db_display_name": "Reactome gene"
+  },
+  {
+    "db_display_name": "UniProtKB Gene Name",
+    "display_id": "C1QC",
+    "info_text": "",
+    "description": null,
+    "primary_id": "P02747",
+    "dbname": "Uniprot_gn",
+    "info_type": "DEPENDENT",
+    "synonyms": [],
+    "version": "0"
+  },
+  {
+    "synonyms": [],
+    "version": "0",
+    "description": null,
+    "info_text": "",
+    "primary_id": "A0A024RAA7",
+    "info_type": "DEPENDENT",
+    "dbname": "Uniprot_gn",
+    "display_id": "ADIB",
+    "db_display_name": "UniProtKB Gene Name"
+  },
+  {
+    "db_display_name": "WikiGene",
+    "display_id": "C1QC",
+    "dbname": "WikiGene",
+    "info_type": "DEPENDENT",
+    "primary_id": "714",
+    "info_text": "",
+    "description": "complement C1q C chain",
+    "version": "0",
+    "synonyms": []
+  }
+]

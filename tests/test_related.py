@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from mutalyzer_retriever.related import get_related_ncbi as get_related
+from mutalyzer_retriever.related import get_related
 
 
 def _get_hash(uids):
@@ -34,6 +34,13 @@ def _fetch_ncbi_datasets_gene_accession(accession_id, timeout=1):
     return json.loads(
         _get_content(f"data/{accession_id}.ncbi_datasets_gene_accession.json")
     )
+
+
+def _fetch_ensembl_xrefs(query_id, timeout=1):
+    if query_id.startswith("LRG") or query_id.startswith("ENS"):
+        return json.loads(_get_content(f"data/ensembl_xrefs_{query_id}.json"))
+    else:
+        return []
 
 
 def get_tests(references):
@@ -71,6 +78,7 @@ def get_tests(references):
             "NC_000022.11",
             "NC_000022",
             "CYP2D6",
+            "ENSG00000159189",
         ]
     ),
 )
@@ -85,21 +93,9 @@ def test_model(r_id, expected_model, monkeypatch):
         "mutalyzer_retriever.related._fetch_ncbi_datasets_gene_accession",
         _fetch_ncbi_datasets_gene_accession,
     )
-    related = get_related(r_id)
-    assert related.keys() == expected_model.keys()
-    for k in related:
-        rel_ids = set([v["id"] for v in related[k]])
-        exp_ids = set([v["id"] for v in expected_model[k]])
-        assert rel_ids == exp_ids
+    monkeypatch.setattr(
+        "mutalyzer_retriever.related._fetch_ensembl_xrefs",
+        _fetch_ensembl_xrefs,
+    )
 
-        rel_selector_ids = set(
-            [v["id"] + v["selector"]["id"] for v in related[k] if v.get("selector")]
-        )
-        exp_selector_ids = set(
-            [
-                v["id"] + v["selector"]["id"]
-                for v in expected_model[k]
-                if v.get("selector")
-            ]
-        )
-        assert rel_selector_ids == exp_selector_ids
+    assert get_related(r_id) == expected_model

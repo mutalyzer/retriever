@@ -21,9 +21,10 @@ To retrieve the related reference IDs the following steps are performed:
       versions.
 
 - Get the NCBI linked uids by using the Eutils `ELink
-  <https://www.ncbi.nlm.nih.gov/books/NBK25499/#_chapter4_ELink_>`_ endpoint (
-  for example `LRG_303 <https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fc
-  gi?db=nucleotide&dbfrom=nucleotide&id=LRG_303&cmd=neighbor&retmode=json>`__).
+  <https://www.ncbi.nlm.nih.gov/books/NBK25499/#_chapter4_ELink_>`_ endpoint
+  (for example `LRG_303 <https://eutils.ncbi.nlm.nih.gov/entrez/eutils/
+  elink.fcgi?db=nucleotide&dbfrom=nucleotide&id=LRG_303&cmd=neighbor&retmode=
+  json>`__).
 
     - We use `nucleotide` in both database parameters (`db` and `dbfrom`).
     - We extract all the NCBI uids from the `linksetdbs`.
@@ -46,4 +47,4 @@ To retrieve the related reference IDs the following steps are performed:
 - If the reference id is from a transcript we make use of the `NCBI Datasets
   REST API <https://api.ncbi.nlm.nih.gov/datasets/docs/reference-docs/rest-api
   />`_ to obtain further related references (see `NM_003002.2 <https://api.ncb
-  i.nlm.nih.gov/datasets/v1/gene/accession/NM_003002.2>`_.
+  i.nlm.nih.gov/datasets/v1/gene/accession/NM_003002.2>`_).

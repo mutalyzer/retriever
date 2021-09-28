@@ -1,0 +1,103 @@
+[
+  {
+    "dbname": "LRG",
+    "db_display_name": "Locus Reference Genomic",
+    "version": "0",
+    "description": "Locus Reference Genomic record for C1QC",
+    "info_text": "",
+    "primary_id": "LRG_24",
+    "display_id": "LRG_24",
+    "synonyms": [],
+    "info_type": "DIRECT"
+  },
+  {
+    "dbname": "Ens_Hs_gene",
+    "db_display_name": "Ensembl Human Gene",
+    "version": "0",
+    "description": null,
+    "info_text": "",
+    "primary_id": "ENSG00000159189",
+    "display_id": "ENSG00000159189",
+    "synonyms": [],
+    "info_type": "NONE"
+  },
+  {
+    "info_type": "DEPENDENT",
+    "synonyms": [],
+    "display_id": "C1QC",
+    "primary_id": "714",
+    "info_text": "",
+    "description": "complement C1q C chain",
+    "version": "0",
+    "db_display_name": "NCBI gene (formerly Entrezgene)",
+    "dbname": "EntrezGene"
+  },
+  {
+    "info_text": "Generated via ensembl_manual",
+    "primary_id": "HGNC:1245",
+    "db_display_name": "HGNC Symbol",
+    "dbname": "HGNC",
+    "version": "0",
+    "description": "complement C1q C chain",
+    "info_type": "DIRECT",
+    "display_id": "C1QC",
+    "synonyms": [
+      "C1QG"
+    ]
+  },
+  {
+    "db_display_name": "MIM gene",
+    "dbname": "MIM_GENE",
+    "version": "0",
+    "description": "COMPLEMENT COMPONENT 1, q SUBCOMPONENT, C CHAIN; C1QC;;COMPLEMENT COMPONENT C1q, C CHAIN;;COMPLEMENT COMPONENT 1, q SUBCOMPONENT, GAMMA POLYPEPTIDE; C1QG",
+    "info_text": "",
+    "primary_id": "120575",
+    "display_id": "COMPLEMENT COMPONENT 1, q SUBCOMPONENT, C CHAIN; C1QC [*120575]",
+    "synonyms": [],
+    "info_type": "DEPENDENT"
+  },
+  {
+    "version": "0",
+    "description": "C1q DEFICIENCY; C1QD",
+    "dbname": "MIM_MORBID",
+    "db_display_name": "MIM morbid",
+    "primary_id": "613652",
+    "info_text": "",
+    "synonyms": [],
+    "display_id": "C1q DEFICIENCY; C1QD [#613652]",
+    "info_type": "DEPENDENT"
+  },
+  {
+    "info_text": "",
+    "primary_id": "P02747",
+    "dbname": "Uniprot_gn",
+    "db_display_name": "UniProtKB Gene Name",
+    "version": "0",
+    "description": null,
+    "info_type": "DEPENDENT",
+    "display_id": "C1QC",
+    "synonyms": []
+  },
+  {
+    "db_display_name": "UniProtKB Gene Name",
+    "dbname": "Uniprot_gn",
+    "description": null,
+    "version": "0",
+    "info_text": "",
+    "primary_id": "A0A024RAA7",
+    "display_id": "ADIB",
+    "synonyms": [],
+    "info_type": "DEPENDENT"
+  },
+  {
+    "info_type": "DEPENDENT",
+    "display_id": "C1QC",
+    "synonyms": [],
+    "info_text": "",
+    "primary_id": "714",
+    "dbname": "WikiGene",
+    "db_display_name": "WikiGene",
+    "version": "0",
+    "description": "complement C1q C chain"
+  }
+]
