@@ -48,3 +48,8 @@ To retrieve the related reference IDs the following steps are performed:
   REST API <https://api.ncbi.nlm.nih.gov/datasets/docs/reference-docs/rest-api
   />`_ to obtain further related references (see `NM_003002.2 <https://api.ncb
   i.nlm.nih.gov/datasets/v1/gene/accession/NM_003002.2>`_).
+
+- We query the `Ensembl REST API <https://rest.ensembl.org/>`_ to obtain their
+  related references (see `LRG_303 <https://rest.ensembl.org/xrefs/id/LRG_303?
+  content-type=application/json>`_). Momentarily, we consider the entries for
+  which `dbname` is either `ENS_LRG_gene`, `LRG` or`Ens_Hs_gene`.
