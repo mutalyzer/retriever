@@ -17,6 +17,7 @@
       "dbxref": "taxon:9606",
       "name": "9",
       "chromosome": "9",
+      "genome": "genomic",
       "map": "9p21.3",
       "mol_type": "genomic DNA"
     },

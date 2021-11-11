@@ -17,6 +17,7 @@
       "dbxref": "taxon:9606",
       "name": "1",
       "chromosome": "1",
+      "genome": "genomic",
       "map": "1q21.2",
       "mol_type": "mRNA"
     },

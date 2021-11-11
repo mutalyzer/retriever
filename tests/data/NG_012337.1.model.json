@@ -17,6 +17,7 @@
       "dbxref": "taxon:9606",
       "name": "11",
       "chromosome": "11",
+      "genome": "genomic",
       "map": "11q23",
       "mol_type": "genomic DNA"
     },

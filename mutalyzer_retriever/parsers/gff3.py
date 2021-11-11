@@ -72,6 +72,7 @@ QUALIFIERS = {
         "Is_circular": "is_circular",
         "transl_table": "transl_table",
         "Name": "name",
+        "genome": "genome",
     },
     "CDS": {"transl_except": "translation_exception"},
     "mRNA": {

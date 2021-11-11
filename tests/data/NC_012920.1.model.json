@@ -17,6 +17,7 @@
       "dbxref": "taxon:9606",
       "is_circular": "true",
       "name": "MT",
+      "genome": "mitochondrion",
       "mol_type": "genomic DNA"
     },
     "features": [
