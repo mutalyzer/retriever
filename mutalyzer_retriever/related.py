@@ -263,7 +263,6 @@ def _get_related_ensembl(reference_id, timeout=1):
                 and xref.get("primary_id") != reference_id
             ):
                 related.add((xref.get("primary_id"),))
-        print(related)
         return {"ensembl": related}
 
 
@@ -280,7 +279,5 @@ def get_related(reference_id, timeout=1):
     """
     related = get_related_ncbi(reference_id, timeout)
     _merge(related, _get_related_ensembl(reference_id, timeout))
-    import json
 
-    print(json.dumps(_to_model(related), indent=2))
     return _to_model(related)
