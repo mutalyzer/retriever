@@ -1,0 +1,32 @@
+##sequence-region D64137.1 1 3158
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+D64137.1	DDBJ	region	1	3158	.	+	.	ID=D64137.1:1..3158;Dbxref=taxon:9606;Name=11;chromosome=11;gbkey=Src;map=11p15.5;mol_type=genomic DNA
+D64137.1	DDBJ	region	826	832	.	+	.	ID=id-D64137.1:826..832;gbkey=CAAT_signal
+D64137.1	DDBJ	region	913	918	.	+	.	ID=id-D64137.1:913..918;gbkey=TATA_signal
+D64137.1	DDBJ	mRNA	984	3114	.	+	.	ID=rna-D64137.1:984..3114;Note=alternative splicing type A1;gbkey=mRNA
+D64137.1	DDBJ	exon	984	2047	.	+	.	ID=exon-D64137.1:984..3114-1;Parent=rna-D64137.1:984..3114;Note=alternative splicing type A1;gbkey=mRNA
+D64137.1	DDBJ	exon	2614	2749	.	+	.	ID=exon-D64137.1:984..3114-2;Parent=rna-D64137.1:984..3114;Note=alternative splicing type A1;gbkey=mRNA
+D64137.1	DDBJ	exon	2833	3114	.	+	.	ID=exon-D64137.1:984..3114-3;Parent=rna-D64137.1:984..3114;Note=alternative splicing type A1;gbkey=mRNA
+D64137.1	DDBJ	mRNA	984	3114	.	+	.	ID=rna-D64137.1:984..3114-2;Note=alternative splicing type A2;gbkey=mRNA
+D64137.1	DDBJ	exon	984	1084	.	+	.	ID=exon-D64137.1:984..3114-2-1;Parent=rna-D64137.1:984..3114-2;Note=alternative splicing type A2;gbkey=mRNA
+D64137.1	DDBJ	exon	1219	2047	.	+	.	ID=exon-D64137.1:984..3114-2-2;Parent=rna-D64137.1:984..3114-2;Note=alternative splicing type A2;gbkey=mRNA
+D64137.1	DDBJ	exon	2614	2749	.	+	.	ID=exon-D64137.1:984..3114-2-3;Parent=rna-D64137.1:984..3114-2;Note=alternative splicing type A2;gbkey=mRNA
+D64137.1	DDBJ	exon	2833	3114	.	+	.	ID=exon-D64137.1:984..3114-2-4;Parent=rna-D64137.1:984..3114-2;Note=alternative splicing type A2;gbkey=mRNA
+D64137.1	DDBJ	mRNA	984	3114	.	+	.	ID=rna-D64137.1:984..3114-3;gbkey=mRNA
+D64137.1	DDBJ	exon	984	1084	.	+	.	ID=exon-D64137.1:984..3114-3-1;Parent=rna-D64137.1:984..3114-3;gbkey=mRNA
+D64137.1	DDBJ	exon	1251	2047	.	+	.	ID=exon-D64137.1:984..3114-3-2;Parent=rna-D64137.1:984..3114-3;gbkey=mRNA
+D64137.1	DDBJ	exon	2614	2749	.	+	.	ID=exon-D64137.1:984..3114-3-3;Parent=rna-D64137.1:984..3114-3;gbkey=mRNA
+D64137.1	DDBJ	exon	2833	3114	.	+	.	ID=exon-D64137.1:984..3114-3-4;Parent=rna-D64137.1:984..3114-3;gbkey=mRNA
+D64137.1	DDBJ	exon	984	2047	.	+	.	ID=id-D64137.1:984..2047-1;Note=alternative splicing type A1 exon1;exon_number=1;gbkey=exon;number=1
+D64137.1	DDBJ	exon	984	1084	.	+	.	ID=id-D64137.1:984..1084-1;exon_number=1;gbkey=exon;number=1
+D64137.1	DDBJ	exon	1219	2047	.	+	.	ID=id-D64137.1:1219..2047-2;Note=alternative splicing type A2 exon2;exon_number=2;gbkey=exon;number=2
+D64137.1	DDBJ	gene	1228	2744	.	+	.	ID=gene-KIP2;Name=KIP2;gbkey=Gene;gene=KIP2;gene_biotype=protein_coding
+D64137.1	DDBJ	CDS	1228	2047	.	+	0	ID=cds-BAA11014.1;Parent=gene-KIP2;Dbxref=NCBI_GP:BAA11014.1;Name=BAA11014.1;Note=alternative splicing product;gbkey=CDS;gene=KIP2;product=p57KIP2;protein_id=BAA11014.1
+D64137.1	DDBJ	CDS	2614	2744	.	+	2	ID=cds-BAA11014.1;Parent=gene-KIP2;Dbxref=NCBI_GP:BAA11014.1;Name=BAA11014.1;Note=alternative splicing product;gbkey=CDS;gene=KIP2;product=p57KIP2;protein_id=BAA11014.1
+D64137.1	DDBJ	CDS	1261	2047	.	+	0	ID=cds-BAA11015.1;Parent=gene-KIP2;Dbxref=NCBI_GP:BAA11015.1;Name=BAA11015.1;gbkey=CDS;gene=KIP2;product=p57KIP2;protein_id=BAA11015.1
+D64137.1	DDBJ	CDS	2614	2744	.	+	2	ID=cds-BAA11015.1;Parent=gene-KIP2;Dbxref=NCBI_GP:BAA11015.1;Name=BAA11015.1;gbkey=CDS;gene=KIP2;product=p57KIP2;protein_id=BAA11015.1
+D64137.1	DDBJ	exon	1251	2047	.	+	.	ID=id-KIP2-2;Parent=gene-KIP2;exon_number=2;gbkey=exon;gene=KIP2;number=2
+D64137.1	DDBJ	exon	2614	2749	.	+	.	ID=id-D64137.1:2614..2749-3;exon_number=3;gbkey=exon;number=3
+D64137.1	DDBJ	exon	2833	3114	.	+	.	ID=id-D64137.1:2833..3114-4;exon_number=4;gbkey=exon;number=4
+
+

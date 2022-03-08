@@ -1,0 +1,92 @@
+##sequence-region AB006684.1 1 20000
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+AB006684.1	DDBJ	region	1	20000	.	+	.	ID=AB006684.1:1..20000;Dbxref=taxon:9606;Name=21;cell-line=GM130B;cell-type=B-lymphoblastoid;chromosome=21;clone=D4G11;gbkey=Src;map=21q22.3;mol_type=genomic DNA
+AB006684.1	DDBJ	mRNA	4580	16688	.	+	.	ID=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	4580	4838	.	+	.	ID=exon-AB006684.1:4580..16688-1;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	5257	5431	.	+	.	ID=exon-AB006684.1:4580..16688-2;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	5678	5833	.	+	.	ID=exon-AB006684.1:4580..16688-3;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	6217	6291	.	+	.	ID=exon-AB006684.1:4580..16688-4;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	7045	7158	.	+	.	ID=exon-AB006684.1:4580..16688-5;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	8357	8502	.	+	.	ID=exon-AB006684.1:4580..16688-6;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	8688	8768	.	+	.	ID=exon-AB006684.1:4580..16688-7;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	9795	9910	.	+	.	ID=exon-AB006684.1:4580..16688-8;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	11002	11101	.	+	.	ID=exon-AB006684.1:4580..16688-9;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	11693	11875	.	+	.	ID=exon-AB006684.1:4580..16688-10;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	12489	12610	.	+	.	ID=exon-AB006684.1:4580..16688-11;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	13100	13202	.	+	.	ID=exon-AB006684.1:4580..16688-12;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	15082	15144	.	+	.	ID=exon-AB006684.1:4580..16688-13;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	16355	16688	.	+	.	ID=exon-AB006684.1:4580..16688-14;Parent=rna-AB006684.1:4580..16688;Note=AIRE-1;gbkey=mRNA
+AB006684.1	DDBJ	exon	4580	4838	.	+	.	ID=id-AB006684.1:4580..4838-1;exon_number=1;gbkey=exon;number=1
+AB006684.1	DDBJ	five_prime_UTR	4580	4706	.	+	.	ID=id-AB006684.1:4580..4706;gbkey=5'UTR
+AB006684.1	DDBJ	gene	4707	16426	.	+	.	ID=gene-APECED;Name=APECED;gbkey=Gene;gene=APECED;gene_biotype=protein_coding
+AB006684.1	DDBJ	CDS	4707	4838	.	+	0	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	5257	5431	.	+	0	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	5678	5833	.	+	2	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	6217	6291	.	+	2	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	7045	7158	.	+	2	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	8357	8502	.	+	2	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	8688	8768	.	+	0	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	9795	9910	.	+	0	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	11002	11101	.	+	1	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	11693	11875	.	+	0	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	12489	12610	.	+	0	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	13100	13202	.	+	1	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	15082	15144	.	+	0	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	16355	16426	.	+	0	ID=cds-BAA23990.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23990.1;Name=BAA23990.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-1;protein_id=BAA23990.1
+AB006684.1	DDBJ	CDS	9507	9910	.	+	0	ID=cds-BAA23991.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23991.1;Name=BAA23991.1;Note=alternative splicing~autoimmune regulator-2;gbkey=CDS;gene=APECED;product=AIRE-2;protein_id=BAA23991.1
+AB006684.1	DDBJ	CDS	11002	11101	.	+	1	ID=cds-BAA23991.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23991.1;Name=BAA23991.1;Note=alternative splicing~autoimmune regulator-2;gbkey=CDS;gene=APECED;product=AIRE-2;protein_id=BAA23991.1
+AB006684.1	DDBJ	CDS	11693	11875	.	+	0	ID=cds-BAA23991.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23991.1;Name=BAA23991.1;Note=alternative splicing~autoimmune regulator-2;gbkey=CDS;gene=APECED;product=AIRE-2;protein_id=BAA23991.1
+AB006684.1	DDBJ	CDS	12489	12610	.	+	0	ID=cds-BAA23991.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23991.1;Name=BAA23991.1;Note=alternative splicing~autoimmune regulator-2;gbkey=CDS;gene=APECED;product=AIRE-2;protein_id=BAA23991.1
+AB006684.1	DDBJ	CDS	13100	13202	.	+	1	ID=cds-BAA23991.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23991.1;Name=BAA23991.1;Note=alternative splicing~autoimmune regulator-2;gbkey=CDS;gene=APECED;product=AIRE-2;protein_id=BAA23991.1
+AB006684.1	DDBJ	CDS	15082	15144	.	+	0	ID=cds-BAA23991.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23991.1;Name=BAA23991.1;Note=alternative splicing~autoimmune regulator-2;gbkey=CDS;gene=APECED;product=AIRE-2;protein_id=BAA23991.1
+AB006684.1	DDBJ	CDS	16355	16426	.	+	0	ID=cds-BAA23991.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23991.1;Name=BAA23991.1;Note=alternative splicing~autoimmune regulator-2;gbkey=CDS;gene=APECED;product=AIRE-2;protein_id=BAA23991.1
+AB006684.1	DDBJ	CDS	9507	9910	.	+	0	ID=cds-BAA23992.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23992.1;Name=BAA23992.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-3;protein_id=BAA23992.1
+AB006684.1	DDBJ	CDS	11002	11101	.	+	1	ID=cds-BAA23992.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23992.1;Name=BAA23992.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-3;protein_id=BAA23992.1
+AB006684.1	DDBJ	CDS	11693	11725	.	+	0	ID=cds-BAA23992.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23992.1;Name=BAA23992.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-3;protein_id=BAA23992.1
+AB006684.1	DDBJ	CDS	11808	11875	.	+	0	ID=cds-BAA23992.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23992.1;Name=BAA23992.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-3;protein_id=BAA23992.1
+AB006684.1	DDBJ	CDS	12489	12610	.	+	1	ID=cds-BAA23992.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23992.1;Name=BAA23992.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-3;protein_id=BAA23992.1
+AB006684.1	DDBJ	CDS	13100	13137	.	+	2	ID=cds-BAA23992.1;Parent=gene-APECED;Dbxref=NCBI_GP:BAA23992.1;Name=BAA23992.1;Note=alternative splicing;gbkey=CDS;gene=APECED;product=AIRE-3;protein_id=BAA23992.1
+AB006684.1	DDBJ	exon	5257	5431	.	+	.	ID=id-APECED-2;Parent=gene-APECED;exon_number=2;gbkey=exon;gene=APECED;number=2
+AB006684.1	DDBJ	exon	5678	5833	.	+	.	ID=id-APECED-3;Parent=gene-APECED;exon_number=3;gbkey=exon;gene=APECED;number=3
+AB006684.1	DDBJ	exon	6217	6291	.	+	.	ID=id-APECED-4;Parent=gene-APECED;exon_number=4;gbkey=exon;gene=APECED;number=4
+AB006684.1	DDBJ	exon	7045	7158	.	+	.	ID=id-APECED-5;Parent=gene-APECED;exon_number=5;gbkey=exon;gene=APECED;number=5
+AB006684.1	DDBJ	exon	8357	8502	.	+	.	ID=id-APECED-6;Parent=gene-APECED;exon_number=6;gbkey=exon;gene=APECED;number=6
+AB006684.1	DDBJ	exon	8688	8768	.	+	.	ID=id-APECED-7;Parent=gene-APECED;exon_number=7;gbkey=exon;gene=APECED;number=7
+AB006684.1	DDBJ	exon	8965	9148	.	+	.	ID=id-APECED-1;Parent=gene-APECED;exon_number=1;gbkey=exon;gene=APECED;number=1
+AB006684.1	DDBJ	exon	9455	9910	.	+	.	ID=id-APECED-8;Parent=gene-APECED;exon_number=8;gbkey=exon;gene=APECED;number=8
+AB006684.1	DDBJ	exon	9795	9910	.	+	.	ID=id-APECED-8-2;Parent=gene-APECED;exon_number=8;gbkey=exon;gene=APECED;number=8
+AB006684.1	DDBJ	exon	11002	11101	.	+	.	ID=id-APECED-9;Parent=gene-APECED;exon_number=9;gbkey=exon;gene=APECED;number=9
+AB006684.1	DDBJ	exon	11693	11875	.	+	.	ID=id-APECED-10;Parent=gene-APECED;exon_number=10;gbkey=exon;gene=APECED;number=10
+AB006684.1	DDBJ	exon	11693	11725	.	+	.	ID=id-APECED-10-2;Parent=gene-APECED;Note=10a;exon_number=10;gbkey=exon;gene=APECED;number=10
+AB006684.1	DDBJ	exon	11808	11875	.	+	.	ID=id-APECED-10-3;Parent=gene-APECED;Note=10b;exon_number=10;gbkey=exon;gene=APECED;number=10
+AB006684.1	DDBJ	exon	12489	12610	.	+	.	ID=id-APECED-11;Parent=gene-APECED;exon_number=11;gbkey=exon;gene=APECED;number=11
+AB006684.1	DDBJ	exon	13100	13202	.	+	.	ID=id-APECED-12;Parent=gene-APECED;exon_number=12;gbkey=exon;gene=APECED;number=12
+AB006684.1	DDBJ	exon	15082	15144	.	+	.	ID=id-APECED-13;Parent=gene-APECED;exon_number=13;gbkey=exon;gene=APECED;number=13
+AB006684.1	DDBJ	five_prime_UTR	8965	9148	.	+	.	ID=id-APECED;Parent=gene-APECED;gbkey=5'UTR;gene=APECED
+AB006684.1	DDBJ	five_prime_UTR	9455	9506	.	+	.	ID=id-APECED;Parent=gene-APECED;gbkey=5'UTR;gene=APECED
+AB006684.1	DDBJ	mRNA	8965	16688	.	+	.	ID=rna-AB006684.1:8965..16688;Note=AIRE-2;gbkey=mRNA
+AB006684.1	DDBJ	exon	8965	9148	.	+	.	ID=exon-AB006684.1:8965..16688-1;Parent=rna-AB006684.1:8965..16688;Note=AIRE-2;gbkey=mRNA
+AB006684.1	DDBJ	exon	9455	9910	.	+	.	ID=exon-AB006684.1:8965..16688-2;Parent=rna-AB006684.1:8965..16688;Note=AIRE-2;gbkey=mRNA
+AB006684.1	DDBJ	exon	11002	11101	.	+	.	ID=exon-AB006684.1:8965..16688-3;Parent=rna-AB006684.1:8965..16688;Note=AIRE-2;gbkey=mRNA
+AB006684.1	DDBJ	exon	11693	11875	.	+	.	ID=exon-AB006684.1:8965..16688-4;Parent=rna-AB006684.1:8965..16688;Note=AIRE-2;gbkey=mRNA
+AB006684.1	DDBJ	exon	12489	12610	.	+	.	ID=exon-AB006684.1:8965..16688-5;Parent=rna-AB006684.1:8965..16688;Note=AIRE-2;gbkey=mRNA
+AB006684.1	DDBJ	exon	13100	13202	.	+	.	ID=exon-AB006684.1:8965..16688-6;Parent=rna-AB006684.1:8965..16688;Note=AIRE-2;gbkey=mRNA
+AB006684.1	DDBJ	exon	15082	15144	.	+	.	ID=exon-AB006684.1:8965..16688-7;Parent=rna-AB006684.1:8965..16688;Note=AIRE-2;gbkey=mRNA
+AB006684.1	DDBJ	exon	16355	16688	.	+	.	ID=exon-AB006684.1:8965..16688-8;Parent=rna-AB006684.1:8965..16688;Note=AIRE-2;gbkey=mRNA
+AB006684.1	DDBJ	mRNA	8965	16688	.	+	.	ID=rna-AB006684.1:8965..16688-2;Note=AIRE-3;gbkey=mRNA
+AB006684.1	DDBJ	exon	8965	9148	.	+	.	ID=exon-AB006684.1:8965..16688-2-1;Parent=rna-AB006684.1:8965..16688-2;Note=AIRE-3;gbkey=mRNA
+AB006684.1	DDBJ	exon	9455	9910	.	+	.	ID=exon-AB006684.1:8965..16688-2-2;Parent=rna-AB006684.1:8965..16688-2;Note=AIRE-3;gbkey=mRNA
+AB006684.1	DDBJ	exon	11002	11101	.	+	.	ID=exon-AB006684.1:8965..16688-2-3;Parent=rna-AB006684.1:8965..16688-2;Note=AIRE-3;gbkey=mRNA
+AB006684.1	DDBJ	exon	11693	11725	.	+	.	ID=exon-AB006684.1:8965..16688-2-4;Parent=rna-AB006684.1:8965..16688-2;Note=AIRE-3;gbkey=mRNA
+AB006684.1	DDBJ	exon	11808	11875	.	+	.	ID=exon-AB006684.1:8965..16688-2-5;Parent=rna-AB006684.1:8965..16688-2;Note=AIRE-3;gbkey=mRNA
+AB006684.1	DDBJ	exon	12489	12610	.	+	.	ID=exon-AB006684.1:8965..16688-2-6;Parent=rna-AB006684.1:8965..16688-2;Note=AIRE-3;gbkey=mRNA
+AB006684.1	DDBJ	exon	13100	13202	.	+	.	ID=exon-AB006684.1:8965..16688-2-7;Parent=rna-AB006684.1:8965..16688-2;Note=AIRE-3;gbkey=mRNA
+AB006684.1	DDBJ	exon	15082	15144	.	+	.	ID=exon-AB006684.1:8965..16688-2-8;Parent=rna-AB006684.1:8965..16688-2;Note=AIRE-3;gbkey=mRNA
+AB006684.1	DDBJ	exon	16355	16688	.	+	.	ID=exon-AB006684.1:8965..16688-2-9;Parent=rna-AB006684.1:8965..16688-2;Note=AIRE-3;gbkey=mRNA
+AB006684.1	DDBJ	three_prime_UTR	13138	13202	.	+	.	ID=id-AB006684.1:13138..16688;gbkey=3'UTR
+AB006684.1	DDBJ	three_prime_UTR	15082	15144	.	+	.	ID=id-AB006684.1:13138..16688;gbkey=3'UTR
+AB006684.1	DDBJ	three_prime_UTR	16355	16688	.	+	.	ID=id-AB006684.1:13138..16688;gbkey=3'UTR
+AB006684.1	DDBJ	exon	16355	16688	.	+	.	ID=id-AB006684.1:16355..16688-14;exon_number=14;gbkey=exon;number=14
+AB006684.1	DDBJ	three_prime_UTR	16427	16688	.	+	.	ID=id-AB006684.1:16427..16688;gbkey=3'UTR
+
+

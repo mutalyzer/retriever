@@ -98,9 +98,11 @@ def _get_feature_id(feature):
     if feature.type in ["gene", "ncRNA_gene"]:
         if feature.qualifiers.get("gene_id"):
             return feature.qualifiers["gene_id"][0]
-        return feature.qualifiers["Name"][0]
+        elif feature.qualifiers.get("Name"):
+            return feature.qualifiers["Name"][0]
     elif feature.type in ["mRNA", "lnc_RNA", "snRNA"]:
-        return feature.qualifiers["transcript_id"][0]
+        if feature.qualifiers.get("transcript_id"):
+            return feature.qualifiers["transcript_id"][0]
     elif feature.type == "CDS" and feature.qualifiers.get("protein_id"):
         return feature.qualifiers["protein_id"][0]
     elif feature.type == "exon":
@@ -218,12 +220,14 @@ def _get_feature_model(
             return
     if feature.type in considered_types:
         model = {
-            "id": _get_feature_id(feature),
             "type": _get_feature_type(feature),
             "location": make_location(
                 feature.location.start, feature.location.end, feature.location.strand
             ),
         }
+        feature_id =  _get_feature_id(feature)
+        if feature_id:
+            model["id"] = feature_id
         qualifiers = _get_qualifiers(feature)
         if qualifiers:
             model["qualifiers"] = qualifiers
@@ -253,7 +257,7 @@ def _get_record_features_model(record, skip=None, considered_types=CONSIDERED_TY
                 skip=skip,
                 considered_types=considered_types,
             )
-            if feature_model:
+            if feature_model and feature_model.get("id"):
                 features.append(feature_model)
     return features
 

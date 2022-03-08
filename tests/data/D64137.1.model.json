@@ -1,0 +1,211 @@
+{
+  "annotations": {
+    "id": "D64137.1",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 3158
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:9606",
+      "name": "11",
+      "chromosome": "11",
+      "map": "11p15.5",
+      "mol_type": "genomic DNA"
+    },
+    "features": [
+      {
+        "type": "exon",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 983
+          },
+          "end": {
+            "type": "point",
+            "position": 2047
+          },
+          "strand": 1
+        },
+        "id": "id-D64137.1:984..2047-1"
+      },
+      {
+        "type": "exon",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 983
+          },
+          "end": {
+            "type": "point",
+            "position": 1084
+          },
+          "strand": 1
+        },
+        "id": "id-D64137.1:984..1084-1"
+      },
+      {
+        "type": "exon",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 1218
+          },
+          "end": {
+            "type": "point",
+            "position": 2047
+          },
+          "strand": 1
+        },
+        "id": "id-D64137.1:1219..2047-2"
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 1227
+          },
+          "end": {
+            "type": "point",
+            "position": 2744
+          },
+          "strand": 1
+        },
+        "id": "KIP2",
+        "qualifiers": {
+          "name": "KIP2"
+        },
+        "features": [
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 1227
+              },
+              "end": {
+                "type": "point",
+                "position": 2047
+              },
+              "strand": 1
+            },
+            "id": "BAA11014.1"
+          },
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 2613
+              },
+              "end": {
+                "type": "point",
+                "position": 2744
+              },
+              "strand": 1
+            },
+            "id": "BAA11014.1"
+          },
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 1260
+              },
+              "end": {
+                "type": "point",
+                "position": 2047
+              },
+              "strand": 1
+            },
+            "id": "BAA11015.1"
+          },
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 2613
+              },
+              "end": {
+                "type": "point",
+                "position": 2744
+              },
+              "strand": 1
+            },
+            "id": "BAA11015.1"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 1250
+              },
+              "end": {
+                "type": "point",
+                "position": 2047
+              },
+              "strand": 1
+            },
+            "id": "id-KIP2-2"
+          }
+        ]
+      },
+      {
+        "type": "exon",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 2613
+          },
+          "end": {
+            "type": "point",
+            "position": 2749
+          },
+          "strand": 1
+        },
+        "id": "id-D64137.1:2614..2749-3"
+      },
+      {
+        "type": "exon",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 2832
+          },
+          "end": {
+            "type": "point",
+            "position": 3114
+          },
+          "strand": 1
+        },
+        "id": "id-D64137.1:2833..3114-4"
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "GATCCCTCGATCCCGGGGCTGGAGTGGTCTGGCCCAAGGCTGAGAAGGGCTGGGACCCCCGACAGTGACATGATGGGCTCAGCCCCTGTTCCATCTACTGGGCAGGGTGGGCCTCCGCAGATAGCGGCTTCAGACTCCAGCTCCAGGGGGCTGGCGGGAGTCTCTCAAGGTGTCCCACACATGGTCCCTCGGGGAAAGAGTGGAGCTGACCCCTGTCCCCCCTCCCGACTCGAGGGCCTTAGGGCCAGCAGGTGTGTGAGGGCTCCAGGCGCGCGGAGCCCTCGAAGGGACACCAGCCCAGCAGCAGCAGGCCGCGGCCCGGGGGCAGCCGAAGACCCCATCCGGCGCAGGCCAGGCCCGAGCTGGCAGCGGCGGGTCCAAGCCTCGTCAGCTGGCGCAGGAGGCCCACGGGCGAGCGCGGGACGGAGCTGGGCGCCGGGGTCCGGACCGGGCCGGGGTCGAGTTGGGCCTGGCCGGACACCGGACCCGCCAGGAGCCGGCCCCTGCCGCGCTGGGCTGAGGCCCCCGCCTGCAGACAAAGGAGCCGGCGGGGGGCGGGAGCCGGGGGGGTGGGGAGTGTTGCAGGGGGGATGGGGCGAGGGGGCGGGGCGTCGCGGTGTCACGTTACCGCCCGCAGCGCCCTTTAACTCCCGCCCCCGCCCCGCTCACCGCCCCCTTCCCCTGCTACAGCGCGCTCGCCCCGCGGCCGCCAATCAGCCGCGCGCGCCGGCCGCGCGCCCCGCCCCGCCCCCGGTGGGTGTGCGCGCGGCCAATGGGCGGTGCGCGGGGGCCGGGCCGCGGCGGGGCGGGGCAGCGGGGCGGCCGCCAATCGCCGTGGTGTTGTTGAAACTGAAAATACTACATTATGCTAATCGCGGCCGGGCCCGCGCGCACGGGGGTGGGGCCCGCGCGTATAAAGGGGGCGCAGGCGGGCTGGGCGTTCCACAGGCCAAGTGCGCTGTGCTCGAGGGGTGCCGGCCAGGCCTGAGCGAGCGAGCTAGCCAGCAGGCATCGAGGGGGCGCGGCTGCCGTCCGGACGAGACAGGCGAACCCGACGCAGAAGAGTCCACCACCGGACAGCCAGGTAGCCGCCGCGTCCCTCGCACACGCAGAGTCGGGCGGCGCGGGGTCTCCCTTGCGCCCGGCCTCCGCCCTCTCCTCCTCTCCTTTCCCCTTCTTCTCGCTGTCCTCTCCTCTCTCGTGCCCGCGTTTGCGCAGCCCCGGGCCATGTCCGACGCGTCCCTCCGCAGCACATCCACGATGGAGCGTCTTGTCGCCCGTGGGACCTTCCCAGTACTAGTGCGCACCAGCGCCTGCCGCAGCCTCTTCGGGCCGGTGGACCACGAGGAGCTGAGCCGCGAGCTGCAGGCCCGCCTGGCCGAGCTGAACGCCGAGGACCAGAACCGCTGGGATTACGACTTCCAGCAGGACATGCCGCTGCGGGGCCCTGGACGCCTGCAGTGGACCGAAGTGGACAGCGACTCGGTGCCCGCGTTCTACCGCGAGACGGTGCAGGTGGGGCGCTGCCGCCTGCTGCTGGCGCCGCGGCCCGTCGCGGTCGCGGTGGCTGTCAGCCCGCCCCTCGAGCCGGCCGCTGAGTCCCTCGACGGCCTCGAGGAGGCGCCGGAGCAGCTGCCTAGTGTCCCGGTCCCGGCCCCGGCGTCCACCCCGCCCCCAGTCCCGGTCCTGGCTCCAGCCCCGGCCCCGGCTCCGGCTCCGGTCGCGGCTCCGGTCGCGGCTCCGGTCGCGGTCGCGGTCCTGGCCCCGGCCCCGGCCCCGGCTCCGGCTCCGGCTCCGGCCCCGGCTCCAGTCGCGGCCCCGGCCCCAGCCCCGGCCCCGGCCCCGGCCCCGGCCCCCGCCCCGGCCCCGGCCCCGGACGCGGCGCCTCAAGAGAGCGCCGAGCAGGGCGCGAACCAGGGGCAGCGCGGCCAGGAGCCTCTCGCTGACCAGCTGCACTCGGGGATTTCGGGACGTCCCGCGGCCGGCACCGCGGCCGCCAGCGCCAACGGCGCGGCGATCAAGAAGCTGTCCGGGCCTCTGATCTCCGGTGAGCCCCGCACGGCCCCGCCCCGGCCCGGGCCGGCCCCGCTTTGTCCGGCCGGCCGGTCCCCCCAGCCCTCGGGGGCCTCGCTGGGTTCCCGCCTCCTCCCGTGGCATTAAAGGGCCCGCAGCGCTCAGGGCGCGGCTGCGCTTACCCCCCTCCCCGCCCCGTTGTTGTGCCCTCCAGCGGCTTCGCGGCCCCGTTCTTCTCGGGTGGAGCGGCTTCGCGCGGGCCGGGGTGGGAGGCTGAATCCCGGCCGCGACCCCCCGGGAGCGCAGTTTTCGCCCCCGGCCGCGGGAGCCCCTCCCCGGGCGCGCCCGCGCCCCGTGAGCACGGCGTGGAGGGGGTTAAGCGCGGCGGCGGCCCCGGGGGGCTTGGCCGCGGGACAAGGGGAAATGCTTACACAGCACATTGCGCGGCGACGTAAACAAAGCTGACCCGCCGCGGACCTCGGCGCGGGCGGGGACGGCGCCCCCACCCCGGCCGGCCCGCGCCCCGCGCCCTCTCCCGGCCCCCTCTCGGGTCTCCGGGCCGGCCCCCGCCCTGACCGGCCGCGCGCCTGTCGCCCGCAGATTTCTTCGCCAAGCGCAAGAGATCAGCGCCTGAGAAGTCGTCGGGCGATGTCCCCGCGCCGTGTCCCTCTCCAAGCGCCGCCCCTGGCGTGGGCTCGGTGGAGCAGACCCCGCGCAAGAGGCTGCGGTGAGCCAAGTGAGTACAGCGCACCTGGGGGGGCGCGGAGGGCCGACCCGCCGGGTCCCCGCCGGCTTTGCTGACCGCCCCTCTCCTCGCAGTTTAGAGCCCAAAGAGCCCCGAGGGAACCTGCCGGGGCAGCGGACGTTGGAAGGGCGCTGGGCCTCGGCTGGGACCGTTCATGTAGCAGCAACCGGCGGCGGCTGCCGCAGAGCAGCGTTCGGTTTTGTTTTTAAATTTTGAAAACTGTGCAATGTATTAATAACGTCTTTTTATATCTAAATGTATTCTGCACGAGAAGGTACACTGGTCCCAAGGTGTAAAGCTTTAAGAGTCATTTATATAAAATGTTTAATCTCTGCTGAAACTCAGTGCAAAAAAAAGAAAAAGAAAAAAAAAAGGAAAAAATAAAAAAACCATGTACAAA",
+    "description": "D64137.1 Homo sapiens KIP2 gene for Cdk-inhibitor p57KIP2, complete cds (exon1-4)"
+  }
+}
