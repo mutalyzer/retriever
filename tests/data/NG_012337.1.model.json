@@ -23,7 +23,6 @@
     },
     "features": [
       {
-        "id": "C11orf57",
         "type": "gene",
         "location": {
           "type": "range",
@@ -37,29 +36,29 @@
           },
           "strand": 1
         },
+        "id": "C11orf57",
         "qualifiers": {
           "name": "C11orf57",
           "HGNC": "25569"
         },
         "features": [
           {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 135
+              },
+              "end": {
+                "type": "point",
+                "position": 3304
+              },
+              "strand": 1
+            },
             "id": "NM_018195.3",
-            "type": "mRNA",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 135
-              },
-              "end": {
-                "type": "point",
-                "position": 3304
-              },
-              "strand": 1
-            },
             "features": [
               {
-                "id": "exon-NM_018195.3-1",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -72,10 +71,10 @@
                     "position": 189
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_018195.3-1"
               },
               {
-                "id": "exon-NM_018195.3-2",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -88,28 +87,31 @@
                     "position": 3304
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_018195.3-2"
               },
               {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 135
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 1126
+                  },
+                  "strand": 1
+                },
                 "id": "NP_060665.3",
-                "type": "CDS",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 135
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 1126
-                  },
-                  "strand": 1
+                "qualifiers": {
+                  "exception": "annotated by transcript or proteomic data"
                 }
               }
             ]
           },
           {
-            "id": "NM_001082969.1",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -123,9 +125,9 @@
               },
               "strand": 1
             },
+            "id": "NM_001082969.1",
             "features": [
               {
-                "id": "exon-NM_001082969.1-1",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -138,10 +140,10 @@
                     "position": 189
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_001082969.1-1"
               },
               {
-                "id": "exon-NM_001082969.1-2",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -154,10 +156,10 @@
                     "position": 3304
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_001082969.1-2"
               },
               {
-                "id": "NP_001076438.1",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -170,12 +172,15 @@
                     "position": 1126
                   },
                   "strand": 1
+                },
+                "id": "NP_001076438.1",
+                "qualifiers": {
+                  "exception": "annotated by transcript or proteomic data"
                 }
               }
             ]
           },
           {
-            "id": "NM_001082970.1",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -189,9 +194,9 @@
               },
               "strand": 1
             },
+            "id": "NM_001082970.1",
             "features": [
               {
-                "id": "exon-NM_001082970.1-1",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -204,10 +209,10 @@
                     "position": 189
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_001082970.1-1"
               },
               {
-                "id": "exon-NM_001082970.1-2",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -220,10 +225,10 @@
                     "position": 3304
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_001082970.1-2"
               },
               {
-                "id": "NP_001076439.1",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -236,6 +241,10 @@
                     "position": 1126
                   },
                   "strand": 1
+                },
+                "id": "NP_001076439.1",
+                "qualifiers": {
+                  "exception": "annotated by transcript or proteomic data"
                 }
               }
             ]
@@ -243,7 +252,6 @@
         ]
       },
       {
-        "id": "TIMM8B",
         "type": "gene",
         "location": {
           "type": "range",
@@ -257,6 +265,7 @@
           },
           "strand": -1
         },
+        "id": "TIMM8B",
         "qualifiers": {
           "name": "TIMM8B",
           "synonym": [
@@ -267,7 +276,6 @@
         },
         "features": [
           {
-            "id": "id-TIMM8B-3",
             "type": "exon",
             "location": {
               "type": "range",
@@ -280,10 +288,10 @@
                 "position": 3616
               },
               "strand": -1
-            }
+            },
+            "id": "id-TIMM8B-3"
           },
           {
-            "id": "id-TIMM8B-2",
             "type": "exon",
             "location": {
               "type": "range",
@@ -296,10 +304,10 @@
                 "position": 4464
               },
               "strand": -1
-            }
+            },
+            "id": "id-TIMM8B-2"
           },
           {
-            "id": "id-TIMM8B-1",
             "type": "exon",
             "location": {
               "type": "range",
@@ -312,10 +320,10 @@
                 "position": 4952
               },
               "strand": -1
-            }
+            },
+            "id": "id-TIMM8B-1"
           },
           {
-            "id": "NM_012459.2",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -329,9 +337,9 @@
               },
               "strand": -1
             },
+            "id": "NM_012459.2",
             "features": [
               {
-                "id": "exon-NM_012459.2-1",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -344,10 +352,10 @@
                     "position": 4952
                   },
                   "strand": -1
-                }
+                },
+                "id": "exon-NM_012459.2-1"
               },
               {
-                "id": "exon-NM_012459.2-2",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -360,10 +368,10 @@
                     "position": 3616
                   },
                   "strand": -1
-                }
+                },
+                "id": "exon-NM_012459.2-2"
               },
               {
-                "id": "NP_036591.2",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -376,14 +384,14 @@
                     "position": 4922
                   },
                   "strand": -1
-                }
+                },
+                "id": "NP_036591.2"
               }
             ]
           }
         ]
       },
       {
-        "id": "SDHD",
         "type": "gene",
         "location": {
           "type": "range",
@@ -397,6 +405,7 @@
           },
           "strand": 1
         },
+        "id": "SDHD",
         "qualifiers": {
           "name": "SDHD",
           "synonym": [
@@ -409,7 +418,6 @@
         },
         "features": [
           {
-            "id": "id-SDHD-1",
             "type": "exon",
             "location": {
               "type": "range",
@@ -422,10 +430,10 @@
                 "position": 5113
               },
               "strand": 1
-            }
+            },
+            "id": "id-SDHD-1"
           },
           {
-            "id": "id-SDHD-2",
             "type": "exon",
             "location": {
               "type": "range",
@@ -438,10 +446,10 @@
                 "position": 6127
               },
               "strand": 1
-            }
+            },
+            "id": "id-SDHD-2"
           },
           {
-            "id": "id-SDHD-3",
             "type": "exon",
             "location": {
               "type": "range",
@@ -454,10 +462,10 @@
                 "position": 7165
               },
               "strand": 1
-            }
+            },
+            "id": "id-SDHD-3"
           },
           {
-            "id": "id-SDHD-4",
             "type": "exon",
             "location": {
               "type": "range",
@@ -470,10 +478,10 @@
                 "position": 13948
               },
               "strand": 1
-            }
+            },
+            "id": "id-SDHD-4"
           },
           {
-            "id": "NM_003002.2",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -487,9 +495,9 @@
               },
               "strand": 1
             },
+            "id": "NM_003002.2",
             "features": [
               {
-                "id": "exon-NM_003002.2-1",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -502,10 +510,10 @@
                     "position": 5113
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_003002.2-1"
               },
               {
-                "id": "exon-NM_003002.2-2",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -518,10 +526,10 @@
                     "position": 6127
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_003002.2-2"
               },
               {
-                "id": "exon-NM_003002.2-3",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -534,10 +542,10 @@
                     "position": 7165
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_003002.2-3"
               },
               {
-                "id": "exon-NM_003002.2-4",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -550,10 +558,10 @@
                     "position": 13948
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_003002.2-4"
               },
               {
-                "id": "NP_002993.1",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -566,7 +574,8 @@
                     "position": 13124
                   },
                   "strand": 1
-                }
+                },
+                "id": "NP_002993.1"
               }
             ]
           }

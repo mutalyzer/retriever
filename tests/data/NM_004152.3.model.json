@@ -1,0 +1,193 @@
+{
+  "annotations": {
+    "id": "NM_004152.3",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 1195
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:9606",
+      "name": "19",
+      "chromosome": "19",
+      "genome": "genomic",
+      "map": "19p13.3",
+      "mol_type": "mRNA"
+    },
+    "features": [
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 0
+          },
+          "end": {
+            "type": "point",
+            "position": 1195
+          },
+          "strand": 1
+        },
+        "id": "OAZ1",
+        "qualifiers": {
+          "name": "OAZ1",
+          "synonym": [
+            "AZ1",
+            "AZI",
+            "OAZ"
+          ],
+          "HGNC": "8095"
+        },
+        "features": [
+          {
+            "id": "NM_004152.3",
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 0
+              },
+              "end": {
+                "type": "point",
+                "position": 1181
+              }
+            },
+            "features": [
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 113
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 317
+                  },
+                  "strand": 1
+                },
+                "id": "NP_004143.1",
+                "qualifiers": {
+                  "exception": "ribosomal slippage"
+                }
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 318
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 801
+                  },
+                  "strand": 1
+                },
+                "id": "NP_004143.1",
+                "qualifiers": {
+                  "exception": "ribosomal slippage"
+                }
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 0
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 259
+                  },
+                  "strand": 1
+                },
+                "id": "id-OAZ1"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 259
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 405
+                  },
+                  "strand": 1
+                },
+                "id": "id-OAZ1-2"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 405
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 578
+                  },
+                  "strand": 1
+                },
+                "id": "id-OAZ1-3"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 578
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 664
+                  },
+                  "strand": 1
+                },
+                "id": "id-OAZ1-4"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 664
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 1181
+                  },
+                  "strand": 1
+                },
+                "id": "id-OAZ1-5"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "AGCATCTATAAAGGCGGGCGGCGGCAGAGGCGCCATTTTGCGAACGGCGAGCAGCGGCGGCGGCGCGGAGAGACGCAGCGGAGGTTTTCCTGGTTTCGGACCCCAGCGGCCGGATGGTGAAATCCTCCCTGCAGCGGATCCTCAATAGCCACTGCTTCGCCAGAGAGAAGGAAGGGGATAAACCCAGCGCCACCATCCACGCCAGCCGCACCATGCCGCTCCTAAGCCTGCACAGCCGCGGCGGCAGCAGCAGTGAGAGTTCCAGGGTCTCCCTCCACTGCTGTAGTAACCCGGGTCCGGGGCCTCGGTGGTGCTCCTGATGCCCCTCACCCACCCCTGAAGATCCCAGGTGGGCGAGGGAATAGTCAGAGGGATCACAATCTTTCAGCTAACTTATTCTACTCCGATGATCGGCTGAATGTAACAGAGGAACTAACGTCCAACGACAAGACGAGGATTCTCAACGTCCAGTCCAGGCTCACAGACGCCAAACGCATTAACTGGCGAACAGTGCTGAGTGGCGGCAGCCTCTACATCGAGATCCCGGGCGGCGCGCTGCCCGAGGGGAGCAAGGACAGCTTTGCAGTTCTCCTGGAGTTCGCTGAGGAGCAGCTGCGAGCCGACCATGTCTTCATTTGCTTCCACAAGAACCGCGAGGACAGAGCCGCCTTGCTCCGAACCTTCAGCTTTTTGGGCTTTGAGATTGTGAGACCGGGGCATCCCCTTGTCCCCAAGAGACCCGACGCTTGCTTCATGGCCTACACGTTCGAGAGAGAGTCTTCGGGAGAGGAGGAGGAGTAGGGCCGCCTCGGGGCTGGGCATCCGGCCCCTGGGGCCACCCCTTGTCAGCCGGGTGGGTAGGAACCGTAGACTCGCTCATCTCGCCTGGGTTTGTCCGCATGTTGTAATCGTGCAAATAAACGCTCACTCCGAATTAGCGGTGTATTTCTTGAAGTTTAATATTGTGTTTGTGATACTGAAGTATTTGCTTTAATTCTAAATAAAAATTTATATTTTACTTTTTTATTGCTGGTTTAAGATGATTCAGATTATCCTTGTACTTTGAGGAGAAGTTTCTTATTTGGAGTCTTTTGGAAACAGTCTTAGTCTTTTAACTTGGAAAGATGAGGTATTAATCCCCTCCATTGCTCTCCAAAAGCCAATAAAGTGATTACACCCGAAAAAAAAAAAAAAA",
+    "description": "NM_004152.3 Homo sapiens ornithine decarboxylase antizyme 1 (OAZ1), transcript variant 1, mRNA"
+  }
+}

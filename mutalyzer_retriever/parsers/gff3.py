@@ -74,7 +74,7 @@ QUALIFIERS = {
         "Name": "name",
         "genome": "genome",
     },
-    "CDS": {"transl_except": "translation_exception"},
+    "CDS": {"transl_except": "translation_exception", "exception": "exception"},
     "mRNA": {
         "version": "version",
         "assembly_name": "assembly_name",
@@ -225,7 +225,7 @@ def _get_feature_model(
                 feature.location.start, feature.location.end, feature.location.strand
             ),
         }
-        feature_id =  _get_feature_id(feature)
+        feature_id = _get_feature_id(feature)
         if feature_id:
             model["id"] = feature_id
         qualifiers = _get_qualifiers(feature)

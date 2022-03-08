@@ -73,6 +73,7 @@ def get_tests(references):
                     "NP_060665.3",
                     "D64137.1",
                     "AB006684.1",
+                    "NM_004152.3",
                 ]
             },
             "ensembl": {
