@@ -59,8 +59,6 @@ def _arg_parser():
         "--sizeoff", help="do not consider file size", action="store_true"
     )
 
-    parser.add_argument("-c", "--configuration", help="configuration file path")
-
     subparsers = parser.add_subparsers(dest="from_file")
 
     parser_from_file = subparsers.add_parser(
@@ -120,7 +118,6 @@ def main():
             reference_source=args.source,
             reference_type=args.type,
             size_off=args.sizeoff,
-            configuration_path=args.configuration,
             timeout=args.timeout,
         )
         print(output[0])
