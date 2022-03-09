@@ -1,4 +1,4 @@
-from . import configuration, parser
+from . import parser
 from .sources import ensembl, lrg, ncbi
 
 
@@ -90,7 +90,6 @@ def retrieve_raw(
     reference_source=None,
     reference_type=None,
     size_off=True,
-    configuration_path=None,
     timeout=1,
 ):
     """
@@ -100,13 +99,10 @@ def retrieve_raw(
     :arg str reference_source: A dedicated retrieval source.
     :arg str reference_type: A dedicated retrieval type.
     :arg bool size_off: Download large files.
-    :arg str configuration_path: Paths towards a configuration file.
     :arg float timeout: Timeout.
     :returns: Reference content.
     :rtype: str
     """
-    configuration.settings = configuration.setup_settings(configuration_path)
-
     reference_content = None
 
     if reference_source is None:
@@ -135,7 +131,6 @@ def retrieve_model(
     reference_type=None,
     size_off=True,
     model_type="all",
-    configuration_path=None,
     timeout=1,
 ):
     """
@@ -145,13 +140,10 @@ def retrieve_model(
     :arg str reference_source: A dedicated retrieval source.
     :arg str reference_type: A dedicated retrieval type.
     :arg bool size_off: Download large files.
-    :arg str configuration_path: Paths towards a configuration file.
     :arg float timeout: Timeout.
     :returns: Reference model.
     :rtype: dict
     """
-    configuration.settings = configuration.setup_settings(configuration_path)
-
     reference_content, reference_type, reference_source = retrieve_raw(
         reference_id, reference_source, reference_type, size_off, timeout=timeout
     )

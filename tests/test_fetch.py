@@ -2,11 +2,15 @@ from pathlib import Path
 
 import pytest
 
-from mutalyzer_retriever.sources.ensembl import API_BASE, API_BASE_GRCH37, fetch
+from mutalyzer_retriever.sources.ensembl import fetch
+from mutalyzer_retriever.configuration import settings
+
+API_BASE = settings["ENSEMBL_API"]
+API_BASE_GRCH37 = settings["ENSEMBL_API_GRCH37"]
 
 API_BASE_MAP = {
     "ENSG00000147889": {"version": 18, "species": "homo_sapiens"},
-    "ENSMUSG00000022346": {"version": 18, "species": "mus_musculus"}
+    "ENSMUSG00000022346": {"version": 18, "species": "mus_musculus"},
 }
 API_BASE_GRCH37_MAP = {"ENSG00000147889": {"version": 12, "species": "homo_sapiens"}}
 

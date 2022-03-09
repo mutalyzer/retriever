@@ -1,7 +1,7 @@
 from urllib.error import URLError
 from urllib.request import urlopen
 
-from .. import configuration
+from ..configuration import settings
 
 
 class NoLrgSettings(Exception):
@@ -60,8 +60,6 @@ def fetch_lrg(reference_id, size_on=True):
     :arg bool size_on: flag for the maximum sequence length
     :returns: the file content or None when the file was not retrieved
     """
-    settings = configuration.settings
-
     if settings.get("LRG_URL"):
         url = "{}/{}.xml".format(settings["LRG_URL"], reference_id)
     else:

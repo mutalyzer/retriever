@@ -1,14 +1,13 @@
-import io
 from http.client import HTTPException
 from urllib.error import HTTPError
 
-from Bio import Entrez, SeqIO
+from Bio import Entrez
 
-from .. import configuration
+from ..configuration import settings
 from ..request import Http400, RequestErrors, request
 
-Entrez.email = configuration.settings["EMAIL"]
-Entrez.api_key = configuration.settings.get("NCBI_API_KEY")
+Entrez.email = settings.get("EMAIL")
+Entrez.api_key = settings.get("NCBI_API_KEY")
 
 
 class ReferenceToLong(Exception):
@@ -110,10 +109,7 @@ def fetch_genbank(reference_id, size_on=True):
     """
     reference_summary = _fetch_reference_summary(reference_id)
 
-    if (
-        size_on
-        and reference_summary["length"] > configuration.settings["MAX_FILE_SIZE"]
-    ):
+    if size_on and reference_summary["length"] > settings["MAX_FILE_SIZE"]:
         raise ReferenceToLong
     try:
         handle = Entrez.efetch(
@@ -163,7 +159,7 @@ def fetch_gff3(reference_id, db, timeout=1):
 
     :returns str: gff3 content.
     """
-    url = "https://eutils.ncbi.nlm.nih.gov/sviewer/viewer.cgi"
+    url = settings["NCBI_GFF3_URL"]
     params = {"db": db, "report": "gff3", "id": reference_id}
     try:
         response = request(url=url, params=params, timeout=timeout)

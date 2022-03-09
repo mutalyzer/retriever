@@ -2,8 +2,7 @@ import json
 
 from ..request import Http400, RequestErrors, request
 
-API_BASE = "https://rest.ensembl.org"
-API_BASE_GRCH37 = "https://grch37.rest.ensembl.org"
+from ..configuration import settings
 
 
 def fetch_json(feature_id, timeout=1):
@@ -95,22 +94,23 @@ def _get_id_and_version(reference_id):
 
 
 def _in_grch37(r_id, r_version, r_info, timeout):
+    api_base = settings.get("ENSEMBL_API_GRCH37")
     if r_info["species"] == "homo_sapiens" and int(r_info["version"]) > r_version:
-        grch37_version = _get_most_recent_version(r_id, API_BASE_GRCH37, timeout)
+        grch37_version = _get_most_recent_version(r_id, api_base, timeout)
         if grch37_version and grch37_version == r_version:
             return True
     return False
 
 
 def fetch(reference_id, reference_type=None, timeout=1):
-    api_base = API_BASE
+    api_base = settings.get("ENSEMBL_API")
     r_id, r_version = _get_id_and_version(reference_id)
 
     if r_id and r_version:
-        r_info = _get_reference_information(r_id, API_BASE, timeout)
+        r_info = _get_reference_information(r_id, api_base, timeout)
         if int(r_info["version"]) > r_version:
             if _in_grch37(r_id, r_version, r_info, timeout):
-                api_base = API_BASE_GRCH37
+                api_base = settings.get("ENSEMBL_API_GRCH37")
             else:
                 raise NameError
 
