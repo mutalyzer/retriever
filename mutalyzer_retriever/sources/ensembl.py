@@ -1,12 +1,11 @@
 import json
 
+from ..configuration import settings
 from ..request import Http400, RequestErrors, request
 
-from ..configuration import settings
 
-
-def fetch_json(feature_id, timeout=1):
-    url = "https://rest.ensembl.org/lookup/id/{}".format(feature_id)
+def fetch_json(feature_id, api_base, timeout=1):
+    url = f"{api_base}/lookup/id/{feature_id}"
     params = {"feature": ["gene", "transcript", "cds"], "expand": 1}
     headers = {"Content-Type": "application/json"}
     try:

@@ -15,13 +15,13 @@ DEFAULT_SETTINGS = {
 
 def setup_settings():
     """
-    Setting up the configuration either from a file path (specified directly
-    or via the MUTALYZER_RETRIEVER_SETTINGS environment variable) or from the
-    default dictionary.
+    Setting up the configuration from the default dictionary above or (/ond
+    updated) from a file path specified via the MUTALYZER_SETTINGS
+    environment variable.
 
-    :arg str configuration_path: Path towards a configuration file.
     :returns dict: Configuration dictionary.
     """
+    settings = DEFAULT_SETTINGS
     if os.environ.get("MUTALYZER_SETTINGS"):
         configuration_path = os.environ["MUTALYZER_SETTINGS"]
         with open(configuration_path) as f:
@@ -33,15 +33,13 @@ def setup_settings():
             sect: dict(loaded_settings.items(sect))
             for sect in loaded_settings.sections()
         }["config"]
-    else:
-        loaded_settings = DEFAULT_SETTINGS
 
-    if loaded_settings.get("MAX_FILE_SIZE") and isinstance(
-        loaded_settings["MAX_FILE_SIZE"], str
-    ):
-        loaded_settings["MAX_FILE_SIZE"] = eval(loaded_settings["MAX_FILE_SIZE"])
+        settings.update(loaded_settings)
 
-    return loaded_settings
+    if settings.get("MAX_FILE_SIZE") and isinstance(settings["MAX_FILE_SIZE"], str):
+        settings["MAX_FILE_SIZE"] = eval(settings["MAX_FILE_SIZE"])
+
+    return settings
 
 
 settings = setup_settings()
