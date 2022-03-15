@@ -1,4 +1,4 @@
-from http.client import HTTPException
+from http.client import HTTPException, IncompleteRead
 from urllib.error import HTTPError
 
 from Bio import Entrez
@@ -146,7 +146,10 @@ def fetch_fasta(reference_id, db):
     except (IOError, HTTPException):
         raise ConnectionError
     else:
-        raw_data = handle.read()
+        try:
+            raw_data = handle.read()
+        except IncompleteRead as e:
+            raw_data = e.partial.decode()
         handle.close()
         return raw_data
 
