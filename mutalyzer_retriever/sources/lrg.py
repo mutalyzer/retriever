@@ -1,7 +1,9 @@
-from urllib.error import URLError
+import socket
+from urllib.error import HTTPError, URLError
 from urllib.request import urlopen
 
 from ..configuration import settings
+from ..util import f_e
 
 
 class NoLrgSettings(Exception):
@@ -52,7 +54,7 @@ class NoSizeRetrieved(Exception):
     pass
 
 
-def fetch_lrg(reference_id, size_on=True):
+def fetch_lrg(reference_id, size_on=True, timeout=1):
     """
     Fetch the LRG file content.
 
@@ -66,9 +68,17 @@ def fetch_lrg(reference_id, size_on=True):
         raise NoLrgUrlSet()
 
     try:
-        handle = urlopen(url)
-    except URLError:
-        raise NameError
+        handle = urlopen(url, timeout=timeout)
+    except socket.timeout as e:
+        raise ConnectionError(f_e("socket.timeout", e, f"timeout set to {timeout} s"))
+    except HTTPError as e:
+        if e.code == 404:
+            raise NameError(f_e("HTTPError", e))
+        else:
+            raise ConnectionError(f_e("HTTPError", e))
+    except URLError as e:
+        if hasattr(e, "reason"):
+            raise ConnectionError(f_e("URLError", e))
 
     info = handle.info()
 
@@ -88,7 +98,10 @@ def fetch_lrg(reference_id, size_on=True):
                     )
         else:
             raise NoSizeRetrieved()
-        raw_data = handle.read()
+        try:
+            raw_data = handle.read()
+        except socket.timeout as e:
+            raise ConnectionError(f_e("socket.timeout", e, f"timeout set to {timeout} s"))
         handle.close()
         return raw_data.decode()
     else:

@@ -7,20 +7,26 @@ class NoReferenceRetrieved(Exception):
 
 
 class NoReferenceError(Exception):
-    def __init__(self, status):
-        self.no_reference = []
+    def __init__(self, status, uncertain_sources):
+        self.uncertain_sources = uncertain_sources
         message = ""
+        if uncertain_sources is not []:
+            message = f"\n\nUncertain sources: {', '.join(uncertain_sources)}\n"
+
         for source in status.keys():
             source_errors = []
+            message += f"\n{source}:"
             for error in status[source]["errors"]:
                 if isinstance(error, ValueError):
-                    source_errors.append("ValueError")
+                    detail = {"type": "ValueError", "details": str(error)}
                 elif isinstance(error, NameError):
-                    source_errors.append("NameError")
+                    detail = {"type": "NameError", "details": str(error)}
                 elif isinstance(error, ConnectionError):
-                    source_errors.append("ConnectionError")
-            if source_errors:
-                message += "\n{}: {}.".format(source, ", ".join(source_errors))
+                    detail = {"type": "ConnectionError", "details": str(error)}
+                else:
+                    detail = {"type": "Unknown", "details": str(error)}
+                source_errors.append(detail)
+                message += f"\n {detail['type']}: {detail['details']}"
 
         self.message = message
 
@@ -29,18 +35,16 @@ class NoReferenceError(Exception):
 
 
 def _raise_error(status):
-    no_reference_retrieved = []
+    uncertain_sources = []
     for source in status.keys():
-        if len(status[source]["errors"]) == 1 and isinstance(
-            status[source]["errors"][0], NameError
+        if not (
+            len(status[source]["errors"]) == 1
+            and isinstance(status[source]["errors"][0], NameError)
         ):
-            no_reference_retrieved.append(True)
-        else:
-            no_reference_retrieved.append(False)
-    if all(no_reference_retrieved):
+            uncertain_sources.append(source)
+    if uncertain_sources is []:
         raise NoReferenceRetrieved
-
-    raise NoReferenceError(status)
+    raise NoReferenceError(status, uncertain_sources)
 
 
 def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1):
@@ -50,7 +54,7 @@ def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1
     # LRG
     if reference_type in [None, "lrg"]:
         try:
-            reference_content = lrg.fetch_lrg(reference_id)
+            reference_content = lrg.fetch_lrg(reference_id, timeout=timeout)
         except (NameError, ConnectionError) as e:
             status["lrg"]["errors"].append(e)
         else:
@@ -118,7 +122,7 @@ def retrieve_raw(
             reference_id, reference_type, timeout
         )
     elif reference_source == "lrg":
-        reference_content = lrg.fetch_lrg(reference_id)
+        reference_content = lrg.fetch_lrg(reference_id, timeout=timeout)
         if reference_content:
             reference_type = "lrg"
 

@@ -1,3 +1,10 @@
+def f_e(source, e, extra=None):
+    output = f"({source}) ({str(e)})"
+    if extra is not None:
+        output += f" ({extra})"
+    return output
+
+
 def make_location(start, end=None, strand=None):
     if end is not None:
         location = {

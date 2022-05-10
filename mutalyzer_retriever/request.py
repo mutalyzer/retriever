@@ -29,7 +29,6 @@ def request(url, params=None, headers=None, timeout=1, max_retries=1, sleep=1):
             errors.append(e)
             if e.response.status_code == 429:
                 time.sleep(sleep)
-            errors.append(e)
         except Exception as e:
             errors.append(e)
         else:

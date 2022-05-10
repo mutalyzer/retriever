@@ -5,6 +5,7 @@ from Bio import Entrez
 
 from ..configuration import settings
 from ..request import Http400, RequestErrors, request
+from ..util import f_e
 
 Entrez.email = settings.get("EMAIL")
 Entrez.api_key = settings.get("NCBI_API_KEY")
@@ -42,7 +43,7 @@ def fetch_ncbi_databases(reference_id):
         reference_id = reference_id.rsplit(".")[0]
     try:
         handle = Entrez.egquery(term=reference_id)
-    except (IOError, HTTPError, HTTPException):
+    except (IOError, HTTPError, HTTPException) as e:
         raise ConnectionError
 
     result = Entrez.read(handle)
@@ -140,11 +141,11 @@ def fetch_fasta(reference_id, db):
         if e.code == 400:
             # TODO: Check whether in the response is mentioned that the
             #  reference_id was not found.
-            raise NameError
+            raise NameError(f_e("fasta", e))
         else:
-            raise ConnectionError
-    except (IOError, HTTPException):
-        raise ConnectionError
+            raise ConnectionError(f_e("fasta", e))
+    except (IOError, HTTPException) as e:
+        raise ConnectionError(f_e("fasta", e))
     else:
         try:
             raw_data = handle.read()
@@ -166,13 +167,13 @@ def fetch_gff3(reference_id, db, timeout=1):
     params = {"db": db, "report": "gff3", "id": reference_id}
     try:
         response = request(url=url, params=params, timeout=timeout)
-    except RequestErrors:
-        raise ConnectionError
+    except RequestErrors as e:
+        raise ConnectionError(f"(gff3) Original: {str(e)}")
     except Http400 as e:
         if "Failed to understand id" in e.response.text:
-            raise NameError
+            raise NameError(f_e("gff3", e))
         else:
-            raise ConnectionError
+            raise ConnectionError(f_e("gff3", e))
     else:
         return response
 

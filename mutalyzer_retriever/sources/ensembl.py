@@ -2,6 +2,7 @@ import json
 
 from ..configuration import settings
 from ..request import Http400, RequestErrors, request
+from ..util import f_e
 
 
 def fetch_json(feature_id, api_base, timeout=1):
@@ -10,14 +11,14 @@ def fetch_json(feature_id, api_base, timeout=1):
     headers = {"Content-Type": "application/json"}
     try:
         response = request(url, params, headers, timeout=timeout)
-    except RequestErrors:
-        raise ConnectionError
+    except RequestErrors as e:
+        raise ConnectionError(f"(json) {str(e)}")
     except Http400 as e:
         response_json = e.response.json()
         if response_json and response_json.get("error") == "ID '{}' not found".format(
             feature_id
         ):
-            raise NameError
+            raise NameError(f"(json) {str(e)}")
         else:
             raise e
     else:
@@ -31,14 +32,14 @@ def fetch_fasta(feature_id, api_base, timeout=1):
 
     try:
         response = request(url, params, headers, timeout=timeout)
-    except RequestErrors:
-        raise ConnectionError
+    except RequestErrors as e:
+        raise ConnectionError(f_e("gff3", e))
     except Http400 as e:
         response_json = e.response.json()
         if response_json and response_json.get("error") == "ID '{}' not found".format(
             feature_id
         ):
-            raise NameError
+            raise NameError(f_e("fasta", e, response_json.get("error")))
         else:
             raise e
     else:
@@ -52,14 +53,14 @@ def fetch_gff3(feature_id, api_base, timeout=1):
 
     try:
         response = request(url, params, headers, timeout=timeout)
-    except RequestErrors:
-        raise ConnectionError
+    except RequestErrors as e:
+        raise ConnectionError(f_e("gff3", e))
     except Http400 as e:
         response_json = e.response.json()
         if response_json and response_json.get("error") == "ID '{}' not found".format(
             feature_id
         ):
-            raise NameError
+            raise NameError(f_e("gff3", e, response_json.get("error")))
         else:
             raise e
     else:
@@ -105,7 +106,9 @@ def fetch(reference_id, reference_type=None, timeout=1):
     api_base = settings.get("ENSEMBL_API")
     r_id, r_version = _get_id_and_version(reference_id)
 
-    if r_id and r_version:
+    if r_id is None:
+        raise NameError
+    elif r_version is not None:
         r_info = _get_reference_information(r_id, api_base, timeout)
         if int(r_info["version"]) > r_version:
             if _in_grch37(r_id, r_version, r_info, timeout):
