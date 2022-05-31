@@ -1,5 +1,6 @@
 import gzip
 import io
+import json
 
 import requests
 from BCBio.GFF import GFFParser
@@ -161,10 +162,19 @@ def _synonym_check(synonyms, features):
     return None
 
 
-def _get_transcript_ids(gene):
+def _get_gene_transcript_ids(gene):
     transcripts = []
-    for feature in gene["features"]:
-        transcripts.append(feature["id"])
+    if gene.get("features"):
+        for feature in gene["features"]:
+            transcripts.append(feature["id"])
+    return transcripts
+
+
+def _get_transcript_ids(model):
+    transcripts = []
+    if model.get("features"):
+        for feature in model["features"]:
+            transcripts += _get_gene_transcript_ids(feature)
     return transcripts
 
 
@@ -173,6 +183,16 @@ def _in(item_id, features):
         if feature.get("id") and feature["id"] == item_id:
             return True
     return False
+
+
+def _merge_genes(gene_new, gene_old):
+    if gene_old.get("features") and gene_new.get("features"):
+        old_transcripts = {t["id"]: i for i, t in enumerate(gene_old["features"])}
+        new_transcripts = {t["id"]: i for i, t in enumerate(gene_new["features"])}
+        for t_id in set(old_transcripts) - set(new_transcripts):
+            gene_new["features"].append(gene_old["features"][old_transcripts[t_id]])
+        return set(old_transcripts) - set(new_transcripts)
+    return set()
 
 
 def merge(new, old):
@@ -187,14 +207,24 @@ def merge(new, old):
             else:
                 genes_old_in.add(gene["id"])
 
-    def _hgnc_look_up():
+    def _merge_same_hgnc():
         for gene_old_id in genes_old_not_in:
-            gene = old["features"][genes_old[gene_old_id]]
-            if gene["qualifiers"].get("HGNC"):
-                gene_new_id = _hgnc_check(gene["qualifiers"]["HGNC"], new)
+            gene_old = old["features"][genes_old[gene_old_id]]
+            if gene_old["qualifiers"].get("HGNC"):
+                gene_new_id = _hgnc_check(gene_old["qualifiers"]["HGNC"], new)
                 if gene_new_id:
                     hgnc_found.add(gene_old_id)
                     genes_old_in_new_id[gene_old_id] = gene_new_id
+                    transcripts_old_added.update(
+                        _merge_genes(new["features"][genes_new[gene_new_id]], gene_old)
+                    )
+                    # print("\n")
+                    # print(json.dumps(old["features"][genes_old[gene_old_id]],
+                    #                  indent=2))
+                    # print("=====")
+                    # print(json.dumps(new["features"][genes_new[gene_new_id]],
+                    #                  indent=2))
+                    # print("=====")
 
     def _synonym_lookup():
         for gene_old_id in genes_old_not_in:
@@ -205,6 +235,37 @@ def merge(new, old):
             gene_new_id = _synonym_check(synonyms, new)
             if gene_new_id:
                 synonym_found.add(gene_old_id)
+                # print("\n")
+                # print(json.dumps(old["features"][genes_old[gene_old_id]], indent=2))
+                # print("=====")
+                # print(json.dumps(new["features"][genes_new[gene_new_id]], indent=2))
+                # print("=====")
+
+    def _transcript_lookup():
+        for gene_old_id in genes_old_not_in:
+            gene_old = old["features"][genes_old[gene_old_id]]
+            transcripts_old = _get_gene_transcript_ids(gene_old)
+            for gene_new in new.get("features"):
+                transcripts_new = _get_gene_transcript_ids(gene_new)
+                transcripts_intersection = set(transcripts_old).intersection(
+                    set(transcripts_new)
+                )
+                if transcripts_intersection:
+                    if (
+                        len(transcripts_intersection) == len(transcripts_new)
+                        or set(transcripts_old) == transcripts_intersection
+                    ):
+                        transcript_found.add(gene_old_id)
+                    else:
+                        print(
+                            f"  - old gene {gene_old['id']} - new gene {gene_new['id']}:\n  {transcripts_old}\n  {transcripts_new}"
+                        )
+
+                    # print(f"  - old gene {gene_old['id']} - new gene {gene_new['id']} transcripts overlap: {transcripts_intersection}")
+                    # print("---")
+                    # print(json.dumps(gene_old, indent=2))
+                    # print("---")
+                    # print(json.dumps(gene_new, indent=2))
 
     def _merge():
         for gene_id in genes_old_in:
@@ -214,29 +275,16 @@ def merge(new, old):
                 genes_equal.add(gene_id)
             else:
                 genes_different.add(gene_id)
-                if gene_old.get("features") and gene_new.get("features"):
-                    old_transcripts = {
-                        t["id"]: i for i, t in enumerate(gene_old["features"])
-                    }
-                    new_transcripts = {
-                        t["id"]: i for i, t in enumerate(gene_new["features"])
-                    }
-                    for t_id in set(old_transcripts) - set(new_transcripts):
-                        gene_new["features"].append(
-                            gene_old["features"][old_transcripts[t_id]]
-                        )
-                        transcripts_old_added.add(t_id)
-                        # print(f" - for {gene_id} added transcript {t_id}")
-                    # print(f" - for {gene_id}:")
-                    # print(f"   - transcripts not in new:", set(new_transcripts) - set(old_transcripts))
-                    # print(f"   - transcripts not in old:", set(old_transcripts) - set(new_transcripts))
+                transcripts_old_added.update(_merge_genes(gene_new, gene_old))
 
-                # print("\n\n\n")
-                # print(json.dumps(DeepDiff(gene_new, gene_old), indent=2))
+    def _add_not_in():
+        for gene_old_id in genes_old_not_in:
+            # print("add", gene_old_id, genes_old[gene_old_id])
+            new["features"].append(old["features"][genes_old[gene_old_id]])
 
     print("------")
-    print(f"new genes: {len(new.get('features'))}")
-    print(f"old genes: {len(old.get('features'))}")
+    # print(f"new genes: {len(new.get('features'))}")
+    # print(f"old genes: {len(old.get('features'))}")
 
     genes_new = {}
     genes_old = {}
@@ -246,28 +294,40 @@ def merge(new, old):
     genes_old_in_new_id = {}
     hgnc_found = set()
     synonym_found = set()
+    transcript_found = set()
     genes_equal = set()
     genes_different = set()
     transcripts_old_added = set()
 
     _genes_summary()
 
-    _hgnc_look_up()
+    _merge_same_hgnc()
     genes_old_not_in -= hgnc_found
 
     _synonym_lookup()
-    genes_old_not_in = genes_old_not_in - synonym_found
+    # genes_old_not_in = genes_old_not_in - synonym_found
+
+    _transcript_lookup()
+    genes_old_not_in -= transcript_found
 
     _merge()
+    transcripts = _get_transcript_ids(new)
+    transcripts_before = f"{len(transcripts)} vs {len(set(transcripts))}"
+    _add_not_in()
+    transcripts = _get_transcript_ids(new)
+    transcripts_after = f"{len(transcripts)} vs {len(set(transcripts))}"
 
     print("----")
-    print(f"- not in: {len(genes_old_not_in)}")
-    print(f"- HGNC found: {len(hgnc_found)}")
-    print(f"- synonym found: {len(synonym_found)}")
-    print(f"- genes in total: {len(genes_old_in)}")
+    print(f"- not in genes: {len(genes_old_not_in)}")
+    print(f"- HGNC found genes: {len(hgnc_found)}")
+    print(f"- synonym found genes: {len(synonym_found)}")
+    print(f"- transcript found genes: {len(transcript_found)}")
+    print(f"- genes in in total: {len(genes_old_in)}")
     print(f"  - equal: {len(genes_equal)}")
     print(f"  - different: {len(genes_different)}")
     print(f"    - old transcripts added: {len(transcripts_old_added)}")
+    print(f" - transcripts before adding not in: {transcripts_before}")
+    print(f" - transcripts after adding not in: {transcripts_after}")
     print("------")
 
 
@@ -303,7 +363,9 @@ def get_models():
                     extras += s_line
                 elif s_line.startswith("##sequence-region"):
                     # if current_id and current_id in ["NC_000001.10", "NC_000001.11", "NC_000024.10"]:
-                    if current_id and current_id in ["NC_000024.10"]:
+                    if current_id and current_id in ["NC_000001.11"]:
+                        # if current_id and current_id in ["NC_000024.10"]:
+                        # if current_id and current_id in ["NC_000003.12"]:
                         current_model = parse(current_content)
                         print(current_id)
                         # print(current_model["qualifiers"])
@@ -311,10 +373,18 @@ def get_models():
                             out[current_id] = current_model
                         else:
                             merge(current_model, out[current_id])
+                            out[current_id] = current_model
+
                     current_id = s_line.split(" ")[1]
                     current_content = f"##gff-version 3\n{extras}{s_line}"
                 elif s_line.startswith("##species") or s_line.startswith(current_id):
                     current_content += s_line
+    print("\n\n\n\n")
+    for r_id in out:
+        print(r_id)
+        transcripts = _get_transcript_ids(out[r_id])
+        print(f"{len(transcripts)} vs {len(set(transcripts))}")
+        # print(len(_get_transcript_ids(out[r_id])))
 
 
 if __name__ == "__main__":
