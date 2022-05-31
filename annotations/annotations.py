@@ -1,10 +1,9 @@
-import requests
 import gzip
 import io
 
+import requests
 from BCBio.GFF import GFFParser
-from Bio.SeqFeature import SeqFeature
-from Bio.SeqUtils import seq1
+
 from mutalyzer_retriever.parsers.gff3 import _create_record_model, parse
 
 MAIN = "https://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/annotation_releases"
@@ -12,23 +11,21 @@ MAIN = "https://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sa
 GRCH_37_ANNOTATIONS = {"105.20190906", "105.20220307"}
 GRCH_37_P = "GCF_000001405.25_GRCh37.p13"
 GRCH_38_ANNOTATIONS = {
-    "109.20190607",
-    "109.20190905",
-    "109.20191205",
-    # "109.20200228",
-    # "109.20200522",
-    # "109.20200815",
-    # "109.20201120",
-    # "109.20210226",
-    # "109.20210514",
-    # "109.20211119",
+    # "109.20190607",
+    # "109.20190905",
+    # "109.20191205",
+    "109.20200228",
+    "109.20200522",
+    "109.20200815",
+    "109.20201120",
+    "109.20210226",
+    "109.20210514",
+    "109.20211119",
 }
 GRCH_38_P = "GCF_000001405.39_GRCh38.p13"
 ENDING = "_genomic.gff.gz"
 
-SOURCES = {
-    "GCF_000001405.39_GRCh38": {".p13"}
-}
+SOURCES = {"GCF_000001405.39_GRCh38": {".p13"}}
 
 
 def retrieve_gz(annotations, patch):
@@ -142,84 +139,153 @@ def split_gff(annotations, patch):
 
 def _hgnc_check(hgnc, features):
     for gene in features.get("features"):
-        if gene.get("qualifiers") and gene["qualifiers"].get("HGNC") and gene["qualifiers"]["HGNC"] == hgnc:
+        if (
+            gene.get("qualifiers")
+            and gene["qualifiers"].get("HGNC")
+            and gene["qualifiers"]["HGNC"] == hgnc
+        ):
             return gene["id"]
 
 
 def _synonym_check(synonyms, features):
-    print(synonyms)
     for synonym in synonyms:
-        for i, gene in enumerate(features.get("features")):
+        for gene in features.get("features"):
             if synonym == gene["id"]:
-                return gene["id"], i
-            if gene.get("qualifiers") and gene["qualifiers"].get("synonym") and synonym in gene["qualifiers"]["synonym"]:
-                return gene["id"], i
-    return None, None
+                return gene["id"]
+            if (
+                gene.get("qualifiers")
+                and gene["qualifiers"].get("synonym")
+                and synonym in gene["qualifiers"]["synonym"]
+            ):
+                return gene["id"]
+    return None
 
 
-def merge_models(new, old):
-    print(len(new.get("features")))
-    print(len(old.get("features")))
+def _get_transcript_ids(gene):
+    transcripts = []
+    for feature in gene["features"]:
+        transcripts.append(feature["id"])
+    return transcripts
 
-    new_genes = {}
-    old_genes = {}
-    for i, gene in enumerate(new.get("features")):
-        new_genes[gene["id"]] = i
-    for i, gene in enumerate(old.get("features")):
-        old_genes[gene["id"]] = i
-    not_in = set()
-    in_different = set()
-    in_same = set()
-    for i, gene in enumerate(old.get("features")):
-        if gene["id"] not in new_genes:
-            not_in.add((gene['id'], i))
-            # print(gene["qualifiers"])
-            # if gene.get("features"):
-            #     for f in gene.get("features"):
-            #         print(f["id"])
-            # else:
-            #     print("no features")
-        else:
-            if gene != new["features"][new_genes[gene["id"]]]:
-                in_different.add(gene['id'])
+
+def _in(item_id, features):
+    for feature in features:
+        if feature.get("id") and feature["id"] == item_id:
+            return True
+    return False
+
+
+def merge(new, old):
+    def _genes_summary():
+        for idx, gene in enumerate(new.get("features")):
+            genes_new[gene["id"]] = idx
+        for idx, gene in enumerate(old.get("features")):
+            genes_old[gene["id"]] = idx
+        for gene in old.get("features"):
+            if gene["id"] not in genes_new:
+                genes_old_not_in.add(gene["id"])
             else:
-                in_same.add(gene['id'])
+                genes_old_in.add(gene["id"])
+
+    def _hgnc_look_up():
+        for gene_old_id in genes_old_not_in:
+            gene = old["features"][genes_old[gene_old_id]]
+            if gene["qualifiers"].get("HGNC"):
+                gene_new_id = _hgnc_check(gene["qualifiers"]["HGNC"], new)
+                if gene_new_id:
+                    hgnc_found.add(gene_old_id)
+                    genes_old_in_new_id[gene_old_id] = gene_new_id
+
+    def _synonym_lookup():
+        for gene_old_id in genes_old_not_in:
+            gene = old["features"][genes_old[gene_old_id]]
+            synonyms = [gene["id"]]
+            if gene["qualifiers"].get("synonym"):
+                synonyms += gene["qualifiers"]["synonym"]
+            gene_new_id = _synonym_check(synonyms, new)
+            if gene_new_id:
+                synonym_found.add(gene_old_id)
+
+    def _merge():
+        for gene_id in genes_old_in:
+            gene_old = old["features"][genes_old[gene_id]]
+            gene_new = new["features"][genes_new[gene_id]]
+            if gene_new == gene_old:
+                genes_equal.add(gene_id)
+            else:
+                genes_different.add(gene_id)
+                if gene_old.get("features") and gene_new.get("features"):
+                    old_transcripts = {
+                        t["id"]: i for i, t in enumerate(gene_old["features"])
+                    }
+                    new_transcripts = {
+                        t["id"]: i for i, t in enumerate(gene_new["features"])
+                    }
+                    for t_id in set(old_transcripts) - set(new_transcripts):
+                        gene_new["features"].append(
+                            gene_old["features"][old_transcripts[t_id]]
+                        )
+                        transcripts_old_added.add(t_id)
+                        # print(f" - for {gene_id} added transcript {t_id}")
+                    # print(f" - for {gene_id}:")
+                    # print(f"   - transcripts not in new:", set(new_transcripts) - set(old_transcripts))
+                    # print(f"   - transcripts not in old:", set(old_transcripts) - set(new_transcripts))
+
+                # print("\n\n\n")
+                # print(json.dumps(DeepDiff(gene_new, gene_old), indent=2))
+
+    print("------")
+    print(f"new genes: {len(new.get('features'))}")
+    print(f"old genes: {len(old.get('features'))}")
+
+    genes_new = {}
+    genes_old = {}
+
+    genes_old_not_in = set()
+    genes_old_in = set()
+    genes_old_in_new_id = {}
     hgnc_found = set()
-    for i in not_in:
-        gene = old["features"][i[1]]
-        if gene["qualifiers"].get("HGNC"):
-            new_gene_id = _hgnc_check(gene["qualifiers"]["HGNC"], new)
-            if new_gene_id:
-                print(f"not in, but found through hgnc: {gene['id']}, {gene['qualifiers']['HGNC']}, {new_gene_id}")
-                hgnc_found.add(i)
-
-    not_in = not_in - hgnc_found
     synonym_found = set()
-    for i in not_in:
-        gene = old["features"][i[1]]
-        synonyms = [gene["id"]]
-        if gene["qualifiers"].get("synonym"):
-            synonyms += gene["qualifiers"]["synonym"]
-        new_gene_id, n_i = _synonym_check(synonyms, new)
-        if new_gene_id:
-            print(f"not in, but found through synonyms: {gene['id']}, {synonyms}, {new_gene_id}, {new['features'][n_i]}")
-            synonym_found.add(i)
-    not_in = not_in - synonym_found
-    print(f" - not in: {len(not_in)}")
-    print(f" - HGNC found: {len(hgnc_found)}")
-    print(f" - synonym found: {len(synonym_found)}")
-    print(f" - in_different: {len(in_different)}")
-    print(f" - in_same: {len(in_same)}")
-    print(set(new_genes) - set(old_genes))
+    genes_equal = set()
+    genes_different = set()
+    transcripts_old_added = set()
+
+    _genes_summary()
+
+    _hgnc_look_up()
+    genes_old_not_in -= hgnc_found
+
+    _synonym_lookup()
+    genes_old_not_in = genes_old_not_in - synonym_found
+
+    _merge()
+
+    print("----")
+    print(f"- not in: {len(genes_old_not_in)}")
+    print(f"- HGNC found: {len(hgnc_found)}")
+    print(f"- synonym found: {len(synonym_found)}")
+    print(f"- genes in total: {len(genes_old_in)}")
+    print(f"  - equal: {len(genes_equal)}")
+    print(f"  - different: {len(genes_different)}")
+    print(f"    - old transcripts added: {len(transcripts_old_added)}")
+    print("------")
 
 
-def sandbox():
+def get_models():
     out = {}
     files = [
-        "GCF_000001405.25_GRCh37.p13_105.20190906_genomic.gff.gz",
-        "GCF_000001405.25_GRCh37.p13_105.20220307_genomic.gff.gz",
+        # "GCF_000001405.25_GRCh37.p13_105.20190906_genomic.gff.gz",
+        # "GCF_000001405.25_GRCh37.p13_105.20220307_genomic.gff.gz",
         "GCF_000001405.39_GRCh38.p13_109.20190607_genomic.gff.gz",
-        "GCF_000001405.39_GRCh38.p13_109.20190905_genomic.gff.gz"
+        "GCF_000001405.39_GRCh38.p13_109.20190905_genomic.gff.gz",
+        "GCF_000001405.39_GRCh38.p13_109.20191205_genomic.gff.gz",
+        "GCF_000001405.39_GRCh38.p13_109.20200228_genomic.gff.gz",
+        "GCF_000001405.39_GRCh38.p13_109.20200522_genomic.gff.gz",
+        "GCF_000001405.39_GRCh38.p13_109.20200815_genomic.gff.gz",
+        "GCF_000001405.39_GRCh38.p13_109.20201120_genomic.gff.gz",
+        "GCF_000001405.39_GRCh38.p13_109.20210226_genomic.gff.gz",
+        "GCF_000001405.39_GRCh38.p13_109.20210514_genomic.gff.gz",
+        "GCF_000001405.39_GRCh38.p13_109.20211119_genomic.gff.gz",
     ]
     for file in files:
         assembly_id = file.split(".p")[0]
@@ -236,14 +302,15 @@ def sandbox():
                 if s_line.startswith("#!"):
                     extras += s_line
                 elif s_line.startswith("##sequence-region"):
-                    if current_id and current_id in ["NC_000001.10", "NC_000001.11"]:
+                    # if current_id and current_id in ["NC_000001.10", "NC_000001.11", "NC_000024.10"]:
+                    if current_id and current_id in ["NC_000024.10"]:
                         current_model = parse(current_content)
                         print(current_id)
-                        print(current_model["qualifiers"])
+                        # print(current_model["qualifiers"])
                         if current_id not in out:
                             out[current_id] = current_model
                         else:
-                            merge_models(current_model, out[current_id])
+                            merge(current_model, out[current_id])
                     current_id = s_line.split(" ")[1]
                     current_content = f"##gff-version 3\n{extras}{s_line}"
                 elif s_line.startswith("##species") or s_line.startswith(current_id):
@@ -257,4 +324,4 @@ if __name__ == "__main__":
     # get_stats(records)
     # split_gff(GRCH_37_ANNOTATIONS, GRCH_37_P)
     # split_gff(GRCH_38_ANNOTATIONS, GRCH_38_P)
-    sandbox()
+    get_models()
