@@ -1,6 +1,9 @@
+from copy import deepcopy
 import gzip
 import io
 import json
+from ftplib import FTP
+from ftplib import error_perm
 
 import requests
 from BCBio.GFF import GFFParser
@@ -12,9 +15,9 @@ MAIN = "https://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sa
 GRCH_37_ANNOTATIONS = {"105.20190906", "105.20220307"}
 GRCH_37_P = "GCF_000001405.25_GRCh37.p13"
 GRCH_38_ANNOTATIONS = {
-    # "109.20190607",
-    # "109.20190905",
-    # "109.20191205",
+    "109.20190607",
+    "109.20190905",
+    "109.20191205",
     "109.20200228",
     "109.20200522",
     "109.20200815",
@@ -29,12 +32,12 @@ ENDING = "_genomic.gff.gz"
 SOURCES = {"GCF_000001405.39_GRCh38": {".p13"}}
 
 
-def retrieve_gz(annotations, patch):
-    for annotation in annotations:
-        url = f"{MAIN}/{annotation}/{patch}/{patch}{ENDING}"
-        print(url)
-        r = requests.get(url)
-        open(f"{patch}_{annotation}{ENDING}", "wb").write(r.content)
+# def retrieve_gz(annotations, patch):
+#     for annotation in annotations:
+#         url = f"{MAIN}/{annotation}/{patch}/{patch}{ENDING}"
+#         print(url)
+#         r = requests.get(url)
+#         open(f"{patch}_{annotation}{ENDING}", "wb").write(r.content)
 
 
 def extract_grch_37_records():
@@ -185,11 +188,24 @@ def _in(item_id, features):
     return False
 
 
-def _merge_genes(gene_new, gene_old):
+def _get_genes_for_transcript(t_id, model):
+    genes = []
+    if model.get("features"):
+        for feature in model["features"]:
+            if feature.get("features"):
+                for transcript in feature["features"]:
+                    if transcript["id"] == t_id:
+                        genes.append(feature)
+    return genes
+
+
+def _merge_genes(gene_new, gene_old, already_new_transcripts=[]):
     if gene_old.get("features") and gene_new.get("features"):
         old_transcripts = {t["id"]: i for i, t in enumerate(gene_old["features"])}
         new_transcripts = {t["id"]: i for i, t in enumerate(gene_new["features"])}
         for t_id in set(old_transcripts) - set(new_transcripts):
+            if already_new_transcripts and t_id in already_new_transcripts:
+                continue
             gene_new["features"].append(gene_old["features"][old_transcripts[t_id]])
         return set(old_transcripts) - set(new_transcripts)
     return set()
@@ -216,7 +232,7 @@ def merge(new, old):
                     hgnc_found.add(gene_old_id)
                     genes_old_in_new_id[gene_old_id] = gene_new_id
                     transcripts_old_added.update(
-                        _merge_genes(new["features"][genes_new[gene_new_id]], gene_old)
+                        _merge_genes(new["features"][genes_new[gene_new_id]], gene_old, _get_transcript_ids(new))
                     )
                     # print("\n")
                     # print(json.dumps(old["features"][genes_old[gene_old_id]],
@@ -256,10 +272,10 @@ def merge(new, old):
                         or set(transcripts_old) == transcripts_intersection
                     ):
                         transcript_found.add(gene_old_id)
-                    else:
-                        print(
-                            f"  - old gene {gene_old['id']} - new gene {gene_new['id']}:\n  {transcripts_old}\n  {transcripts_new}"
-                        )
+                    # else:
+                    #     print(
+                    #         f"  - old gene {gene_old['id']} - new gene {gene_new['id']}:\n    {transcripts_old}\n    {transcripts_new}"
+                    #     )
 
                     # print(f"  - old gene {gene_old['id']} - new gene {gene_new['id']} transcripts overlap: {transcripts_intersection}")
                     # print("---")
@@ -275,12 +291,22 @@ def merge(new, old):
                 genes_equal.add(gene_id)
             else:
                 genes_different.add(gene_id)
-                transcripts_old_added.update(_merge_genes(gene_new, gene_old))
+                transcripts_old_added.update(_merge_genes(gene_new, gene_old, _get_transcript_ids(new)))
 
     def _add_not_in():
+        already_new_transcripts = _get_transcript_ids(new)
         for gene_old_id in genes_old_not_in:
             # print("add", gene_old_id, genes_old[gene_old_id])
-            new["features"].append(old["features"][genes_old[gene_old_id]])
+            gene_not_in = deepcopy(old["features"][genes_old[gene_old_id]])
+            if gene_not_in.get("features"):
+                to_del = []
+                for i, feature in enumerate(gene_not_in["features"]):
+                    if feature["id"] in already_new_transcripts:
+                        to_del.append(i)
+                for i in reversed(to_del):
+                    del gene_not_in["features"][i]
+
+            new["features"].append(gene_not_in)
 
     print("------")
     # print(f"new genes: {len(new.get('features'))}")
@@ -301,6 +327,9 @@ def merge(new, old):
 
     _genes_summary()
 
+    transcripts = _get_transcript_ids(new)
+    transcripts_start = f"{len(transcripts)} vs {len(set(transcripts))}"
+
     _merge_same_hgnc()
     genes_old_not_in -= hgnc_found
 
@@ -310,12 +339,31 @@ def merge(new, old):
     _transcript_lookup()
     genes_old_not_in -= transcript_found
 
+    transcripts = _get_transcript_ids(new)
+    transcripts_before_merge = f"{len(transcripts)} vs {len(set(transcripts))}"
+
     _merge()
+
     transcripts = _get_transcript_ids(new)
-    transcripts_before = f"{len(transcripts)} vs {len(set(transcripts))}"
+    transcripts_before_not_in = f"{len(transcripts)} vs {len(set(transcripts))}"
+
+    # seen = set()
+    # dupes = [x for x in transcripts if x in seen or seen.add(x)]
+    # print(f"\ndupes: {dupes}\n")
+
+    # for dupe in dupes:
+    #     print(f" - {dupe}")
+        # for gene in _get_genes_for_transcript(dupe, new):
+        #     print(json.dumps(gene, indent=2))
+        #     print("--=-=-")
+        # print(_get_genes_for_transcript(dupe, new))
+        # print("----")
+        # print(_get_genes_for_transcript(dupe, old))
+
     _add_not_in()
+
     transcripts = _get_transcript_ids(new)
-    transcripts_after = f"{len(transcripts)} vs {len(set(transcripts))}"
+    transcripts_after_not_in = f"{len(transcripts)} vs {len(set(transcripts))}"
 
     print("----")
     print(f"- not in genes: {len(genes_old_not_in)}")
@@ -326,8 +374,10 @@ def merge(new, old):
     print(f"  - equal: {len(genes_equal)}")
     print(f"  - different: {len(genes_different)}")
     print(f"    - old transcripts added: {len(transcripts_old_added)}")
-    print(f" - transcripts before adding not in: {transcripts_before}")
-    print(f" - transcripts after adding not in: {transcripts_after}")
+    print(f" - transcripts start: {transcripts_start}")
+    print(f" - transcripts before merge: {transcripts_before_merge}")
+    print(f" - transcripts before not in: {transcripts_before_not_in}")
+    print(f" - transcripts after adding not in: {transcripts_after_not_in}")
     print("------")
 
 
@@ -336,6 +386,7 @@ def get_models():
     files = [
         # "GCF_000001405.25_GRCh37.p13_105.20190906_genomic.gff.gz",
         # "GCF_000001405.25_GRCh37.p13_105.20220307_genomic.gff.gz",
+        "GCF_000001405.38_GRCh38.p12_109_genomic.gff.gz",
         "GCF_000001405.39_GRCh38.p13_109.20190607_genomic.gff.gz",
         "GCF_000001405.39_GRCh38.p13_109.20190905_genomic.gff.gz",
         "GCF_000001405.39_GRCh38.p13_109.20191205_genomic.gff.gz",
@@ -346,6 +397,7 @@ def get_models():
         "GCF_000001405.39_GRCh38.p13_109.20210226_genomic.gff.gz",
         "GCF_000001405.39_GRCh38.p13_109.20210514_genomic.gff.gz",
         "GCF_000001405.39_GRCh38.p13_109.20211119_genomic.gff.gz",
+        "GCF_000001405.40_GRCh38.p14_110_genomic.gff.gz"
     ]
     for file in files:
         assembly_id = file.split(".p")[0]
@@ -363,14 +415,14 @@ def get_models():
                     extras += s_line
                 elif s_line.startswith("##sequence-region"):
                     # if current_id and current_id in ["NC_000001.10", "NC_000001.11", "NC_000024.10"]:
+                    # if current_id and current_id in ["NC_000001.11", "NC_000002.12"]:
                     if current_id and current_id in ["NC_000001.11"]:
-                        # if current_id and current_id in ["NC_000024.10"]:
-                        # if current_id and current_id in ["NC_000003.12"]:
+                    # if current_id and current_id in ["NC_000024.10"]:
+                    # if current_id and current_id in ["NC_000003.12"]:
                         current_model = parse(current_content)
                         print(current_id)
                         # print(current_model["qualifiers"])
-                        if current_id not in out:
-                            out[current_id] = current_model
+                        if current_id not in out:                            out[current_id] = current_model
                         else:
                             merge(current_model, out[current_id])
                             out[current_id] = current_model
@@ -387,6 +439,55 @@ def get_models():
         # print(len(_get_transcript_ids(out[r_id])))
 
 
+def get_ftp_locations():
+    annotations = []
+    main_url = 'ftp.ncbi.nlm.nih.gov'
+    main_dir = "genomes/refseq/vertebrate_mammalian/Homo_sapiens/annotation_releases"
+    with FTP(main_url) as ftp:
+        ftp.login()
+        ftp.cwd(main_dir)
+        for d_a in ftp.nlst():
+            try:
+                ftp.cwd(d_a)
+            except error_perm:
+                continue
+            annotation = {"id": d_a}
+            # print(f" - {d_a}")
+            for d_d in ftp.nlst():
+                # print(f"   - {d_d}")
+                if d_d.endswith("annotation_report.xml"):
+                    annotation["annotation_report"] = d_d
+                if d_d.startswith("GCF_") and "GRCh" in d_d:
+                    annotation["dir"] = d_d
+                    try:
+                        ftp.cwd(d_d)
+                    except error_perm:
+                        continue
+                    for d_f in ftp.nlst():
+                        # print(f"     - {d_f}")
+                        if d_f.endswith("_genomic.gff.gz"):
+                            annotation["file"] = d_f
+                    ftp.cwd("..")
+            ftp.cwd("..")
+            annotations.append(annotation)
+    return {"url": main_url, "dir": main_dir, "annotations": annotations}
+
+
+def retrieve_files(locations):
+    url = "https://" + locations["url"] + "/" + locations["dir"]
+    for annotation in locations["annotations"]:
+        url = f"{url}/{annotation['id']}/{annotation['dir']}/{annotation['file']}"
+        print(url)
+        r = requests.get(url)
+        out_file = annotation['file'].split("_genomic")[0] + "_" + annotation["id"] + "_genomic.gff.gz"
+        open(out_file, "wb").write(r.content)
+
+        url = f"{url}/{annotation['id']}/{annotation['annotation_report']}"
+        print(url)
+        r = requests.get(url)
+        open(annotation['annotation_report'], "wb").write(r.content)
+
+
 if __name__ == "__main__":
     # retrieve_gz(GRCH_37_ANNOTATIONS, GRCH_37_P)
     # retrieve_gz(GRCH_38_ANNOTATIONS, GRCH_38_P)
@@ -394,4 +495,10 @@ if __name__ == "__main__":
     # get_stats(records)
     # split_gff(GRCH_37_ANNOTATIONS, GRCH_37_P)
     # split_gff(GRCH_38_ANNOTATIONS, GRCH_38_P)
-    get_models()
+
+    locations = get_ftp_locations()
+    print(json.dumps(locations, indent=2))
+    retrieve_files(locations)
+    # get_models()
+
+
