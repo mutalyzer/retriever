@@ -6,117 +6,8 @@ from copy import deepcopy
 from ftplib import FTP, error_perm
 
 import requests
-from BCBio.GFF import GFFParser
 
-from mutalyzer_retriever.parsers.gff3 import _create_record_model, parse
-
-MAIN = "https://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/annotation_releases"
-
-GRCH_37_ANNOTATIONS = {"105.20190906", "105.20220307"}
-GRCH_37_P = "GCF_000001405.25_GRCh37.p13"
-GRCH_38_ANNOTATIONS = {
-    "109.20190607",
-    "109.20190905",
-    "109.20191205",
-    "109.20200228",
-    "109.20200522",
-    "109.20200815",
-    "109.20201120",
-    "109.20210226",
-    "109.20210514",
-    "109.20211119",
-}
-GRCH_38_P = "GCF_000001405.39_GRCh38.p13"
-ENDING = "_genomic.gff.gz"
-
-SOURCES = {"GCF_000001405.39_GRCh38": {".p13"}}
-
-
-# def retrieve_gz(annotations, patch):
-#     for annotation in annotations:
-#         url = f"{MAIN}/{annotation}/{patch}/{patch}{ENDING}"
-#         print(url)
-#         r = requests.get(url)
-#         open(f"{patch}_{annotation}{ENDING}", "wb").write(r.content)
-
-
-def extract_grch_37_records():
-    gff_parser = GFFParser()
-    records = {}
-    for annotation_id in GRCH_37_ANNOTATIONS:
-        with gzip.open(f"{GRCH_37_P}_{annotation_id}{ENDING}", "rb") as f:
-            content = f.read().decode()
-            gff = gff_parser.parse(io.StringIO(content))
-            print(f"gff for: {annotation_id}")
-            for record in gff:
-                if record.id == "NC_000001.10":
-                    parsed_record = _create_record_model(record)
-                    if parsed_record["id"] not in records:
-                        records[parsed_record["id"]] = {}
-                    if parsed_record.get("features"):
-                        for gene in parsed_record["features"]:
-                            if gene.get("features"):
-                                for feature in gene["features"]:
-                                    if (
-                                        feature["id"]
-                                        not in records[parsed_record["id"]]
-                                    ):
-                                        records[parsed_record["id"]][feature["id"]] = {}
-                                    records[parsed_record["id"]][feature["id"]][
-                                        annotation_id
-                                    ] = feature
-                else:
-                    print(f"  skipping: {record.id}")
-    # print(len(records))
-    # for r_id in records:
-    #     print(f"{r_id}: {len(records[r_id])}")
-    return records
-
-
-def _location(annotations):
-    locations = [
-        (
-            annotations[i]["location"]["start"]["position"],
-            annotations[i]["location"]["start"]["position"],
-        )
-        for i in annotations
-    ]
-    return locations[:-1] == locations[1:]
-
-
-def _exons(annotations):
-    exons = []
-    for annotation in annotations:
-        exon = []
-    locations = [
-        (
-            annotations[i]["location"]["start"]["position"],
-            annotations[i]["location"]["start"]["position"],
-        )
-        for i in annotations
-    ]
-    return locations[:-1] == locations[1:]
-
-
-def get_stats(records):
-    not_equal = {}
-    for r_id in records:
-        for f_id in records[r_id]:
-            if len(records[r_id][f_id]) == len(GRCH_37_ANNOTATIONS):
-                if _location(records[r_id][f_id]):
-                    records[r_id][f_id] = {"equal": True}
-                else:
-                    print("  - different:", r_id, f_id)
-                    if r_id not in not_equal:
-                        not_equal[r_id] = []
-                    if f_id not in not_equal[r_id]:
-                        not_equal[r_id].append(f_id)
-
-    for r_id in records:
-        to_print = f"{r_id}: {len(records[r_id])}"
-        if r_id in not_equal:
-            to_print += f"; not_equal: {len(not_equal[r_id])}"
-        print(to_print)
+from mutalyzer_retriever.parsers.gff3 import parse
 
 
 def split_gff(annotations, patch):
@@ -369,7 +260,9 @@ def merge(new, old):
     _add_not_in()
 
     transcripts = _get_transcript_ids(new)
-    transcripts_after_not_in = f"{len(transcripts)} vs {len(set(transcripts))}"
+    transcripts_final = f"{len(transcripts)} vs {len(set(transcripts))}"
+    transcripts_old = _get_transcript_ids(old)
+    transcripts_old_not_in_new_final = set(transcripts_old) - set(transcripts)
 
     print("----")
     print(f"- not in genes: {len(genes_old_not_in)}")
@@ -383,35 +276,17 @@ def merge(new, old):
     print(f" - transcripts start: {transcripts_start}")
     print(f" - transcripts before merge: {transcripts_before_merge}")
     print(f" - transcripts before not in: {transcripts_before_not_in}")
-    print(f" - transcripts after adding not in: {transcripts_after_not_in}")
+    print(f" - transcripts after adding not in: {transcripts_final}")
+    print(f" - old transcripts not in new final: {transcripts_old_not_in_new_final}")
     print("------")
 
 
-def get_models():
+def get_models(annotations):
     out = {}
-    files = [
-        # "GCF_000001405.25_GRCh37.p13_105.20190906_genomic.gff.gz",
-        # "GCF_000001405.25_GRCh37.p13_105.20220307_genomic.gff.gz",
-        "GCF_000001405.38_GRCh38.p12_109_genomic.gff.gz",
-        "GCF_000001405.39_GRCh38.p13_109.20190607_genomic.gff.gz",
-        "GCF_000001405.39_GRCh38.p13_109.20190905_genomic.gff.gz",
-        "GCF_000001405.39_GRCh38.p13_109.20191205_genomic.gff.gz",
-        "GCF_000001405.39_GRCh38.p13_109.20200228_genomic.gff.gz",
-        "GCF_000001405.39_GRCh38.p13_109.20200522_genomic.gff.gz",
-        "GCF_000001405.39_GRCh38.p13_109.20200815_genomic.gff.gz",
-        "GCF_000001405.39_GRCh38.p13_109.20201120_genomic.gff.gz",
-        "GCF_000001405.39_GRCh38.p13_109.20210226_genomic.gff.gz",
-        "GCF_000001405.39_GRCh38.p13_109.20210514_genomic.gff.gz",
-        "GCF_000001405.39_GRCh38.p13_109.20211119_genomic.gff.gz",
-        "GCF_000001405.40_GRCh38.p14_110_genomic.gff.gz",
-    ]
-    for file in files:
-        assembly_id = file.split(".p")[0]
-        patch_id = file.split(".")[2].split("_")[0]
-        annotation_id = file.split(".")[3].split("_")[0]
-        print(assembly_id, patch_id, annotation_id)
+    for annotation in annotations:
+        print(annotation)
 
-        with gzip.open(file, "rb") as f:
+        with gzip.open(_gff_file_name(annotation), "rb") as f:
             current_id = ""
             current_content = ""
             extras = ""
@@ -490,7 +365,7 @@ def _gff_file_name(annotation):
 
 
 def _report_file_name(annotation):
-    return annotation["annotation_report"]
+    return annotation["id"] + annotation["annotation_report"]
 
 
 def retrieve_files(annotations):
@@ -538,25 +413,22 @@ def group_by_accession(annotations):
 
 
 def main():
-    # retrieve_gz(GRCH_37_ANNOTATIONS, GRCH_37_P)
-    # retrieve_gz(GRCH_38_ANNOTATIONS, GRCH_38_P)
-    # records = extract_grch_37_records()
-    # get_stats(records)
-    # split_gff(GRCH_37_ANNOTATIONS, GRCH_37_P)
-    # split_gff(GRCH_38_ANNOTATIONS, GRCH_38_P)
 
     # annotations = get_ftp_locations()
     # open("annotations.json", "w").write(json.dumps(annotations, indent=2))
     # print(json.dumps(annotations, indent=2))
     # print(json.dumps(annotations, indent=2))
     # retrieve_files(annotations)
-    # get_models()
 
     annotations = json.loads(open("annotations.json", "r").read())
     report_updates(annotations)
     # print(json.dumps(annotations, indent=2))
     print(json.dumps(group_by_accession(annotations), indent=2))
     # _report("Homo_sapiens_AR105.20220307_annotation_report.xml")
+    assemblies = group_by_accession(annotations)
+    for assembly in assemblies:
+        get_models(assemblies[assembly])
+    # get_models()
 
 
 if __name__ == "__main__":
