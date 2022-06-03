@@ -1,9 +1,9 @@
-from copy import deepcopy
 import gzip
 import io
 import json
-from ftplib import FTP
-from ftplib import error_perm
+import xml.etree.ElementTree as ET
+from copy import deepcopy
+from ftplib import FTP, error_perm
 
 import requests
 from BCBio.GFF import GFFParser
@@ -232,7 +232,11 @@ def merge(new, old):
                     hgnc_found.add(gene_old_id)
                     genes_old_in_new_id[gene_old_id] = gene_new_id
                     transcripts_old_added.update(
-                        _merge_genes(new["features"][genes_new[gene_new_id]], gene_old, _get_transcript_ids(new))
+                        _merge_genes(
+                            new["features"][genes_new[gene_new_id]],
+                            gene_old,
+                            _get_transcript_ids(new),
+                        )
                     )
                     # print("\n")
                     # print(json.dumps(old["features"][genes_old[gene_old_id]],
@@ -291,7 +295,9 @@ def merge(new, old):
                 genes_equal.add(gene_id)
             else:
                 genes_different.add(gene_id)
-                transcripts_old_added.update(_merge_genes(gene_new, gene_old, _get_transcript_ids(new)))
+                transcripts_old_added.update(
+                    _merge_genes(gene_new, gene_old, _get_transcript_ids(new))
+                )
 
     def _add_not_in():
         already_new_transcripts = _get_transcript_ids(new)
@@ -353,12 +359,12 @@ def merge(new, old):
 
     # for dupe in dupes:
     #     print(f" - {dupe}")
-        # for gene in _get_genes_for_transcript(dupe, new):
-        #     print(json.dumps(gene, indent=2))
-        #     print("--=-=-")
-        # print(_get_genes_for_transcript(dupe, new))
-        # print("----")
-        # print(_get_genes_for_transcript(dupe, old))
+    # for gene in _get_genes_for_transcript(dupe, new):
+    #     print(json.dumps(gene, indent=2))
+    #     print("--=-=-")
+    # print(_get_genes_for_transcript(dupe, new))
+    # print("----")
+    # print(_get_genes_for_transcript(dupe, old))
 
     _add_not_in()
 
@@ -397,7 +403,7 @@ def get_models():
         "GCF_000001405.39_GRCh38.p13_109.20210226_genomic.gff.gz",
         "GCF_000001405.39_GRCh38.p13_109.20210514_genomic.gff.gz",
         "GCF_000001405.39_GRCh38.p13_109.20211119_genomic.gff.gz",
-        "GCF_000001405.40_GRCh38.p14_110_genomic.gff.gz"
+        "GCF_000001405.40_GRCh38.p14_110_genomic.gff.gz",
     ]
     for file in files:
         assembly_id = file.split(".p")[0]
@@ -417,12 +423,13 @@ def get_models():
                     # if current_id and current_id in ["NC_000001.10", "NC_000001.11", "NC_000024.10"]:
                     # if current_id and current_id in ["NC_000001.11", "NC_000002.12"]:
                     if current_id and current_id in ["NC_000001.11"]:
-                    # if current_id and current_id in ["NC_000024.10"]:
-                    # if current_id and current_id in ["NC_000003.12"]:
+                        # if current_id and current_id in ["NC_000024.10"]:
+                        # if current_id and current_id in ["NC_000003.12"]:
                         current_model = parse(current_content)
                         print(current_id)
                         # print(current_model["qualifiers"])
-                        if current_id not in out:                            out[current_id] = current_model
+                        if current_id not in out:
+                            out[current_id] = current_model
                         else:
                             merge(current_model, out[current_id])
                             out[current_id] = current_model
@@ -441,7 +448,7 @@ def get_models():
 
 def get_ftp_locations():
     annotations = []
-    main_url = 'ftp.ncbi.nlm.nih.gov'
+    main_url = "ftp.ncbi.nlm.nih.gov"
     main_dir = "genomes/refseq/vertebrate_mammalian/Homo_sapiens/annotation_releases"
     with FTP(main_url) as ftp:
         ftp.login()
@@ -473,22 +480,64 @@ def get_ftp_locations():
     return {"url": main_url, "dir": main_dir, "annotations": annotations}
 
 
-def retrieve_files(locations):
-    url = "https://" + locations["url"] + "/" + locations["dir"]
-    for annotation in locations["annotations"]:
-        url = f"{url}/{annotation['id']}/{annotation['dir']}/{annotation['file']}"
+def _gff_file_name(annotation):
+    return (
+        annotation["file"].split("_genomic")[0]
+        + "_"
+        + annotation["id"]
+        + "_genomic.gff.gz"
+    )
+
+
+def _report_file_name(annotation):
+    return annotation["annotation_report"]
+
+
+def retrieve_files(annotations):
+    main_url = "https://" + annotations["url"] + "/" + annotations["dir"]
+    for annotation in annotations["annotations"]:
+        url = f"{main_url}/{annotation['id']}/{annotation['dir']}/{annotation['file']}"
         print(url)
         r = requests.get(url)
-        out_file = annotation['file'].split("_genomic")[0] + "_" + annotation["id"] + "_genomic.gff.gz"
-        open(out_file, "wb").write(r.content)
+        open(_gff_file_name(annotation), "wb").write(r.content)
 
-        url = f"{url}/{annotation['id']}/{annotation['annotation_report']}"
+        url = f"{main_url}/{annotation['id']}/{annotation['annotation_report']}"
         print(url)
         r = requests.get(url)
-        open(annotation['annotation_report'], "wb").write(r.content)
+        open(_report_file_name(annotation), "wb").write(r.content)
 
 
-if __name__ == "__main__":
+def _report(report_file):
+    tree = ET.parse(report_file)
+    root = tree.getroot()
+    return {
+        "freeze_date_id": root.find("./BuildInfo/FreezeDateId").text,
+        "assembly_name": root.find("./AssembliesReport/FullAssembly/Name").text,
+        "assembly_accession": root.find(
+            "./AssembliesReport/FullAssembly/Accession"
+        ).text,
+    }
+
+
+def report_updates(annotations):
+    for annotation in annotations["annotations"]:
+        annotation.update(_report(_report_file_name(annotation)))
+
+
+def group_by_accession(annotations):
+    groups = {}
+    sorted_annotations = sorted(
+        annotations["annotations"], key=lambda d: d["freeze_date_id"]
+    )
+    for annotation in sorted_annotations:
+        assembly = annotation["assembly_name"].split(".")[0]
+        if assembly not in groups:
+            groups[assembly] = []
+        groups[assembly].append(annotation)
+    return groups
+
+
+def main():
     # retrieve_gz(GRCH_37_ANNOTATIONS, GRCH_37_P)
     # retrieve_gz(GRCH_38_ANNOTATIONS, GRCH_38_P)
     # records = extract_grch_37_records()
@@ -496,9 +545,19 @@ if __name__ == "__main__":
     # split_gff(GRCH_37_ANNOTATIONS, GRCH_37_P)
     # split_gff(GRCH_38_ANNOTATIONS, GRCH_38_P)
 
-    locations = get_ftp_locations()
-    print(json.dumps(locations, indent=2))
-    retrieve_files(locations)
+    # annotations = get_ftp_locations()
+    # open("annotations.json", "w").write(json.dumps(annotations, indent=2))
+    # print(json.dumps(annotations, indent=2))
+    # print(json.dumps(annotations, indent=2))
+    # retrieve_files(annotations)
     # get_models()
 
+    annotations = json.loads(open("annotations.json", "r").read())
+    report_updates(annotations)
+    # print(json.dumps(annotations, indent=2))
+    print(json.dumps(group_by_accession(annotations), indent=2))
+    # _report("Homo_sapiens_AR105.20220307_annotation_report.xml")
 
+
+if __name__ == "__main__":
+    main()
