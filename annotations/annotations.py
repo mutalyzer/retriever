@@ -39,6 +39,13 @@ def _get_gene(g_id, model):
                 return gene
 
 
+def _get_gene_i(g_id, model):
+    if model.get("features"):
+        for i, gene in enumerate(model["features"]):
+            if gene["id"] == g_id:
+                return i
+
+
 def _hgnc_check(hgnc, features):
     for gene in features.get("features"):
         if (
@@ -272,18 +279,8 @@ def merge(new, old):
     transcripts_old = _get_transcript_ids(old)
     transcripts_old_not_in_new_final = set(transcripts_old) - set(transcripts)
 
-    for t_id in transcripts_old_not_in_new_final:
-        print(t_id)
-        old_gene = _get_genes_for_transcript(t_id, old)[0]
-        print(old_gene)
-        print("=-=-")
-        print(_get_gene(old_gene["id"], new))
-        print("=-=-")
-        print(_get_genes_for_transcript(t_id, new))
 
-
-
-    print("----")
+    print("\n\n----")
     print(f"- not in genes: {len(genes_old_not_in)}")
     print(f"- HGNC found genes: {len(hgnc_found)}")
     print(f"- synonym found genes: {len(synonym_found)}")
@@ -298,6 +295,76 @@ def merge(new, old):
     print(f" - transcripts after adding not in: {transcripts_final}")
     print(f" - old transcripts not in new final: {transcripts_old_not_in_new_final}")
     print("------")
+
+    for t_id in transcripts_old_not_in_new_final:
+        print(t_id)
+        old_gene = _get_genes_for_transcript(t_id, old)[0]
+        print(old_gene)
+        print("=-=-")
+        print(_get_gene(old_gene["id"], new))
+        print("=-=- new genes with transcript")
+        print(_get_genes_for_transcript(t_id, new))
+
+        if transcripts_old_not_in_new_final:
+            raise Exception(transcripts_old_not_in_new_final)
+
+
+def _get_transcripts_mappings(model):
+    transcripts = {}
+    if model.get("features"):
+        for i_g, gene in enumerate(model["features"]):
+            if gene.get("features"):
+                for i_t, transcript in enumerate(gene["features"]):
+                    if transcript["id"] in transcripts:
+                        raise Exception(f"Multiple transcripts with same id ({transcript['id']}) in model.")
+                    else:
+                        transcripts[transcript["id"]] = {"i_g": i_g, "gene_id": gene["id"], "i_t": i_t}
+
+    return transcripts
+
+
+def _merge_2(new, old):
+    ts_new = _get_transcripts_mappings(new)
+    ts_old = _get_transcripts_mappings(old)
+
+    ts_not_in = set(ts_old.keys()) - set(ts_new.keys())
+    print("- before")
+    print(len(ts_new), len(ts_old))
+    print(len(ts_not_in))
+
+    for t_not_in_id in ts_not_in:
+        if t_not_in_id in ts_new:
+            continue
+        gene_new = _get_gene(ts_old[t_not_in_id]["gene_id"], new)
+        if not gene_new:
+            gene_old = deepcopy(_get_gene(ts_old[t_not_in_id]["gene_id"], old))
+            gene_ts = _get_gene_transcript_ids(gene_old)
+            gene_ts_already_in = []
+            for i, t in enumerate(gene_ts):
+                if t in ts_new:
+                    gene_ts_already_in.append(i)
+            for i in gene_ts_already_in[::-1]:
+                gene_old["features"].pop(i)
+            new["features"].append(gene_old)
+            for t in set(gene_ts) - set(gene_ts_already_in):
+                ts_new[t] = {"i_g": len(new["features"]), "gene_id": gene_old["id"]}
+        else:
+            # print(ts_old[t_not_in_id])
+            transcript = old["features"][ts_old[t_not_in_id]["i_g"]]["features"][ts_old[t_not_in_id]["i_t"]]
+            # print(" - add:", transcript)
+            if gene_new.get("features") is None:
+                gene_new["features"] = []
+            gene_new["features"].append(deepcopy(transcript))
+            ts_new[t_not_in_id] = {"i_g": _get_gene_i(ts_old[t_not_in_id]["gene_id"], new), "gene_id": gene_new["id"]}
+
+    ts_not_in = set(ts_old.keys()) - set(ts_new.keys())
+    ts_new = _get_transcripts_mappings(new)
+    ts_old = _get_transcripts_mappings(old)
+    print("- after")
+    print(len(ts_new), len(ts_old))
+    print(len(ts_not_in))
+    if len(ts_not_in) != 0:
+        raise Exception("Not all the transcripts were added.")
 
 
 def get_models(annotations):
@@ -321,20 +388,24 @@ def get_models(annotations):
                     # if current_id and current_id in ["NC_000003.12"]:
                     # if current_id and current_id in ["NC_000014.8"]:
                     # if current_id and current_id.startswith("NC_000"):
-                    if current_id and current_id.startswith("NC_000018.10"):
+                    # if current_id and current_id.startswith("NC_000018.10"):
+                    if current_id:
                         current_model = parse(current_content)
                         print(current_id)
                         # print(current_model["qualifiers"])
                         if current_id not in out:
                             out[current_id] = current_model
                         else:
-                            merge(current_model, out[current_id])
+                            _merge_2(current_model, out[current_id])
+                            # break
+                            # merge(current_model, out[current_id])
                             out[current_id] = current_model
 
                     current_id = s_line.split(" ")[1]
                     current_content = f"##gff-version 3\n{extras}{s_line}"
                 elif s_line.startswith("##species") or s_line.startswith(current_id):
                     current_content += s_line
+        print("\n\n")
     print("\n\n\n\n")
     for r_id in out:
         print(r_id)
@@ -445,7 +516,7 @@ def main():
     annotations = json.loads(open("annotations.json", "r").read())
     report_updates(annotations)
     # print(json.dumps(annotations, indent=2))
-    print(json.dumps(group_by_accession(annotations), indent=2))
+    # print(json.dumps(group_by_accession(annotations), indent=2))
     # _report("Homo_sapiens_AR105.20220307_annotation_report.xml")
     assemblies = group_by_accession(annotations)
     for assembly in assemblies:
