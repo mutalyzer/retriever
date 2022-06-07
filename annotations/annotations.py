@@ -8,7 +8,7 @@ from pathlib import Path
 
 import requests
 
-from mutalyzer_retriever.parsers.gff3 import parse
+from mutalyzer_retriever.parser import parse
 from mutalyzer_retriever.retriever import retrieve_raw
 
 
@@ -242,7 +242,9 @@ class Annotations:
     def get_assembly_model(self, annotations):
         out = {}
         for annotation in annotations:
-            print(annotation)
+            print(
+                f"- processing {annotation['id']} from {annotation['freeze_date_id']}, ({annotation['assembly_name']}, {annotation['assembly_accession']})"
+            )
 
             with gzip.open(self._gff_file_name(annotation), "rb") as f:
                 current_id = ""
@@ -254,11 +256,13 @@ class Annotations:
                         extras += s_line
                     elif s_line.startswith("##sequence-region"):
                         # if current_id and current_id.startswith("NC_000001"):
-                        if current_id and current_id.startswith("NC_000024"):
-                            # if current_id and current_id.startswith("NC_000018.10"):
-                            # if current_id:
-                            current_model = parse(current_content)
-                            print(current_id)
+                        # if current_id and current_id.startswith("NC_000003"):
+                        if current_id and current_id.startswith("NC_000023"):
+                        # if current_id and current_id.startswith("NC_000024"):
+                        # if current_id and current_id.startswith("NC_000018.10"):
+                        # if current_id:
+                            current_model = parse(current_content, "gff3")
+                            print(f"  - {current_id}")
                             # print(current_model["qualifiers"])
                             if current_id not in out:
                                 out[current_id] = current_model
@@ -272,19 +276,13 @@ class Annotations:
                         current_id
                     ):
                         current_content += s_line
-            print("\n\n")
 
-        print("\n\n\n\n")
         for r_id in out:
-            print(r_id)
-            open(self.local_output_dir + r_id + ".json", "w").write(
-                json.dumps(out[r_id])
-            )
-            # fasta = retrieve_raw(r_id, "ncbi", "fasta", timeout=10)
-
-            # transcripts = _get_transcript_ids(out[r_id])
-            # print(f"{len(transcripts)} vs {len(set(transcripts))}")
-            # print(len(_get_transcript_ids(out[r_id])))
+            print(f"- writing {r_id}")
+            fasta = retrieve_raw(r_id, "ncbi", "fasta", timeout=10)
+            model = {"annotations": out[r_id], "sequence": parse(fasta[0], "fasta")}
+            open(self.local_output_dir + r_id + ".json", "w").write(json.dumps(model))
+        print("\n")
 
 
 def main():
