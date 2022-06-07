@@ -32,6 +32,13 @@ def split_gff(annotations, patch):
                     current_content += s_line
 
 
+def _get_gene(g_id, model):
+    if model.get("features"):
+        for gene in model["features"]:
+            if gene["id"] == g_id:
+                return gene
+
+
 def _hgnc_check(hgnc, features):
     for gene in features.get("features"):
         if (
@@ -91,7 +98,7 @@ def _get_genes_for_transcript(t_id, model):
 
 
 def _merge_genes(gene_new, gene_old, already_new_transcripts=[]):
-    if gene_old.get("features") and gene_new.get("features"):
+    if gene_old.get("features") is not None and gene_new.get("features") is not None:
         old_transcripts = {t["id"]: i for i, t in enumerate(gene_old["features"])}
         new_transcripts = {t["id"]: i for i, t in enumerate(gene_new["features"])}
         for t_id in set(old_transcripts) - set(new_transcripts):
@@ -180,6 +187,7 @@ def merge(new, old):
 
     def _merge():
         for gene_id in genes_old_in:
+
             gene_old = old["features"][genes_old[gene_id]]
             gene_new = new["features"][genes_new[gene_id]]
             if gene_new == gene_old:
@@ -264,6 +272,17 @@ def merge(new, old):
     transcripts_old = _get_transcript_ids(old)
     transcripts_old_not_in_new_final = set(transcripts_old) - set(transcripts)
 
+    for t_id in transcripts_old_not_in_new_final:
+        print(t_id)
+        old_gene = _get_genes_for_transcript(t_id, old)[0]
+        print(old_gene)
+        print("=-=-")
+        print(_get_gene(old_gene["id"], new))
+        print("=-=-")
+        print(_get_genes_for_transcript(t_id, new))
+
+
+
     print("----")
     print(f"- not in genes: {len(genes_old_not_in)}")
     print(f"- HGNC found genes: {len(hgnc_found)}")
@@ -297,9 +316,12 @@ def get_models(annotations):
                 elif s_line.startswith("##sequence-region"):
                     # if current_id and current_id in ["NC_000001.10", "NC_000001.11", "NC_000024.10"]:
                     # if current_id and current_id in ["NC_000001.11", "NC_000002.12"]:
-                    if current_id and current_id in ["NC_000001.11"]:
-                        # if current_id and current_id in ["NC_000024.10"]:
-                        # if current_id and current_id in ["NC_000003.12"]:
+                    # if current_id and current_id in ["NC_000001.11"]:
+                    # if current_id and current_id in ["NC_000024.10"]:
+                    # if current_id and current_id in ["NC_000003.12"]:
+                    # if current_id and current_id in ["NC_000014.8"]:
+                    # if current_id and current_id.startswith("NC_000"):
+                    if current_id and current_id.startswith("NC_000018.10"):
                         current_model = parse(current_content)
                         print(current_id)
                         # print(current_model["qualifiers"])
@@ -427,7 +449,8 @@ def main():
     # _report("Homo_sapiens_AR105.20220307_annotation_report.xml")
     assemblies = group_by_accession(annotations)
     for assembly in assemblies:
-        get_models(assemblies[assembly])
+        if "38" in assembly:
+            get_models(assemblies[assembly])
     # get_models()
 
 
