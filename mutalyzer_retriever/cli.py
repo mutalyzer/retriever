@@ -4,13 +4,15 @@ CLI entry point.
 
 import argparse
 import json
+import sys
 
 from . import usage, version
-from .retriever import retrieve_model, retrieve_model_from_file, retrieve_raw
+from .annotations import retrieve_annotations
 from .related import get_related
+from .retriever import retrieve_model, retrieve_model_from_file, retrieve_raw
 
 
-def _arg_parser():
+def _parse_args(args):
     """
     Command line argument parsing.
     """
@@ -53,13 +55,13 @@ def _arg_parser():
 
     parser.add_argument("--timeout", help="timeout", type=int)
 
-    parser.add_argument("--indent", help="indentation spaces", default=None)
+    parser.add_argument("--indent", help="indentation spaces", default=None, type=int)
 
     parser.add_argument(
         "--sizeoff", help="do not consider file size", action="store_true"
     )
 
-    subparsers = parser.add_subparsers(dest="from_file")
+    subparsers = parser.add_subparsers(dest="command")
 
     parser_from_file = subparsers.add_parser(
         "from_file", help="parse files to get the model"
@@ -76,48 +78,81 @@ def _arg_parser():
         action="store_true",
         default=False,
     )
-    return parser
+
+    parser_annotations = subparsers.add_parser(
+        "annotations", help="retrieve genomic annotations (including history)"
+    )
+
+    parser_annotations.add_argument("--input", help="input directory path")
+    parser_annotations.add_argument("--output", help="output directory path")
+    parser_annotations.add_argument(
+        "--downloaded", help="output directory path", action="store_true"
+    )
+
+    parser_annotations.add_argument(
+        "--ref_id_start", help="reference id should start with", default=None
+    )
+
+    return parser.parse_args(args)
+
+
+def _from_file(args):
+    model = retrieve_model_from_file(paths=args.paths, is_lrg=args.is_lrg)
+    print(json.dumps(model, indent=args.indent))
+
+
+def _retrieve_annotations(args):
+    retrieve_annotations(args.input, args.output, args.downloaded, args.ref_id_start)
+
+
+def _retrieve_model(args):
+    output = retrieve_model(
+        reference_id=args.id,
+        reference_source=args.source,
+        reference_type=args.type,
+        model_type=args.model_type,
+        size_off=args.sizeoff,
+        timeout=args.timeout,
+    )
+    print(json.dumps(output, indent=args.indent))
+
+
+def _related(args):
+    output = get_related(
+        reference_id=args.id,
+        timeout=args.timeout,
+    )
+    print(json.dumps(output, indent=args.indent))
+
+
+def _retrieve_raw(args):
+    output = retrieve_raw(
+        reference_id=args.id,
+        reference_source=args.source,
+        reference_type=args.type,
+        size_off=args.sizeoff,
+        timeout=args.timeout,
+    )
+    print(output[0])
+
+
+def _endpoint(args):
+
+    if args.command == "from_file":
+        return _from_file
+    elif args.command == "annotations":
+        return _retrieve_annotations
+    elif args.parse:
+        return _retrieve_model
+    elif args.related:
+        return _related
+    else:
+        return _retrieve_raw
 
 
 def main():
     """
     Main entry point.
     """
-    parser = _arg_parser()
-
-    try:
-        args = parser.parse_args()
-    except IOError as error:
-        parser.error(error)
-
-    if args.indent:
-        args.indent = int(args.indent)
-
-    if args.from_file:
-        output = retrieve_model_from_file(paths=args.paths, is_lrg=args.is_lrg)
-        print(json.dumps(output, indent=args.indent))
-    elif args.parse:
-        output = retrieve_model(
-            reference_id=args.id,
-            reference_source=args.source,
-            reference_type=args.type,
-            model_type=args.model_type,
-            size_off=args.sizeoff,
-            timeout=args.timeout,
-        )
-        print(json.dumps(output, indent=args.indent))
-    elif args.related:
-        output = get_related(
-            reference_id=args.id,
-            timeout=args.timeout,
-        )
-        print(json.dumps(output, indent=args.indent))
-    else:
-        output = retrieve_raw(
-            reference_id=args.id,
-            reference_source=args.source,
-            reference_type=args.type,
-            size_off=args.sizeoff,
-            timeout=args.timeout,
-        )
-        print(output[0])
+    args = _parse_args(sys.argv[1:])
+    _endpoint(args)(args)

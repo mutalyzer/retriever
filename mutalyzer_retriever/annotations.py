@@ -115,19 +115,27 @@ def group_by_accession(annotations):
 
 
 class Annotations:
-    def __init__(self, raw_start=True):
+    def __init__(
+        self,
+        path_input="./downloads",
+        path_output="./models",
+        downloaded=False,
+        ref_id=None,
+    ):
         self.ftp_url = "ftp.ncbi.nlm.nih.gov"
         self.ftp_dir = (
             "genomes/refseq/vertebrate_mammalian/Homo_sapiens/annotation_releases"
         )
 
-        self.local_input_dir = "./downloads/"
-        self.local_output_dir = "./models/"
+        self.local_input_dir = path_input
+        self.local_output_dir = path_output
 
-        if raw_start:
-            self._raw_start()
-        else:
+        self.ref_id_start = ref_id
+
+        if downloaded:
             self.annotations = json.loads(open(self._metadata_path(), "r").read())
+        else:
+            self._raw_start()
 
         self._get_models()
 
@@ -169,18 +177,20 @@ class Annotations:
         return locations
 
     def _input_directory_setup(self):
-        print("- local input directory set up")
+        print(f"- local input directory set up to {self.local_input_dir}")
         local_dir_path = Path(self.local_input_dir)
 
         if not local_dir_path.is_dir():
+            print("  created")
             local_dir_path.mkdir()
         print("  done")
 
     def _output_directory_setup(self):
-        print("- local output directory set up")
+        print(f"- local output directory set up to {self.local_output_dir}")
         local_dir_path = Path(self.local_output_dir)
 
         if not local_dir_path.is_dir():
+            print("  created")
             local_dir_path.mkdir()
         print("  done")
 
@@ -206,13 +216,14 @@ class Annotations:
     def _report_file_name(self, annotation):
         return (
             self.local_input_dir
+            + "/"
             + annotation["id"]
             + "_"
             + annotation["annotation_report"]
         )
 
     def _metadata_path(self):
-        return self.local_input_dir + "metadata.json"
+        return self.local_input_dir + "/" + "metadata.json"
 
     def _update_dates(self):
         print("- update dates")
@@ -255,12 +266,10 @@ class Annotations:
                     if s_line.startswith("#!"):
                         extras += s_line
                     elif s_line.startswith("##sequence-region"):
-                        # if current_id and current_id.startswith("NC_000001"):
-                        # if current_id and current_id.startswith("NC_000003"):
-                        if current_id and current_id.startswith("NC_000023"):
-                        # if current_id and current_id.startswith("NC_000024"):
-                        # if current_id and current_id.startswith("NC_000018.10"):
-                        # if current_id:
+                        if current_id and (
+                            self.ref_id_start is None
+                            or current_id.startswith(self.ref_id_start)
+                        ):
                             current_model = parse(current_content, "gff3")
                             print(f"  - {current_id}")
                             # print(current_model["qualifiers"])
@@ -285,10 +294,7 @@ class Annotations:
         print("\n")
 
 
-def main():
+def retrieve_annotations(path_input, path_output, downloaded, ref_id_start=None):
+    print(path_input, path_output, downloaded, ref_id_start)
 
-    Annotations(raw_start=False)
-
-
-if __name__ == "__main__":
-    main()
+    Annotations(path_input, path_output, downloaded, ref_id_start)
