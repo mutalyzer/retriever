@@ -54,6 +54,26 @@ def _get_transcripts_mappings(model):
     return transcripts
 
 
+def _added_from(feature, model):
+    if feature.get("qualifiers") is None:
+        feature["qualifiers"] = {}
+    if feature["qualifiers"].get("added_freeze_date_id") is None:
+        feature["qualifiers"]["added_freeze_date_id"] = model["qualifiers"][
+            "freeze_date_id"
+        ]
+    if feature["qualifiers"].get("added_annotation_id") is None:
+        feature["qualifiers"]["added_annotation_id"] = model["qualifiers"][
+            "annotation_id"
+        ]
+
+
+def _gene_added_from(gene, model):
+    _added_from(gene, model)
+    if gene.get("features"):
+        for transcript in gene["features"]:
+            _added_from(transcript, model)
+
+
 def _merge(new, old):
     ts_new = _get_transcripts_mappings(new)
     ts_old = _get_transcripts_mappings(old)
@@ -76,6 +96,7 @@ def _merge(new, old):
                     gene_ts_already_in.append(i)
             for i in gene_ts_already_in[::-1]:
                 gene_old["features"].pop(i)
+            _gene_added_from(gene_old, old)
             new["features"].append(gene_old)
             for t in set(gene_ts) - set(gene_ts_already_in):
                 ts_new[t] = {"i_g": len(new["features"]), "gene_id": gene_old["id"]}
@@ -84,6 +105,7 @@ def _merge(new, old):
             transcript = old["features"][ts_old[t_not_in_id]["i_g"]]["features"][
                 ts_old[t_not_in_id]["i_t"]
             ]
+            _added_from(transcript, old)
             # print(" - add:", transcript)
             if gene_new.get("features") is None:
                 gene_new["features"] = []
@@ -94,8 +116,8 @@ def _merge(new, old):
             }
 
     ts_not_in = set(ts_old.keys()) - set(ts_new.keys())
-    ts_new = _get_transcripts_mappings(new)
-    ts_old = _get_transcripts_mappings(old)
+    # ts_new = _get_transcripts_mappings(new)
+    # ts_old = _get_transcripts_mappings(old)
     # print("- after")
     # print(len(ts_new), len(ts_old))
     # print(len(ts_not_in))
@@ -142,7 +164,7 @@ class Annotations:
     def _raw_start(self):
         self.annotations = self._get_ftp_locations()
         self._input_directory_setup()
-        self._retrieve_files()
+        self._retrieve_gff_files()
         self._update_dates()
         open(self._metadata_path(), "w").write(json.dumps(self.annotations, indent=2))
 
@@ -169,7 +191,9 @@ class Annotations:
                             continue
                         for d_f in ftp.nlst():
                             if d_f.endswith("_genomic.gff.gz"):
-                                annotation["file"] = d_f
+                                annotation["file_gff"] = d_f
+                            elif d_f.endswith("_genomic.fna.gz "):
+                                annotation["file_fasta"] = d_f
                         ftp.cwd("..")
                 ftp.cwd("..")
                 locations.append(annotation)
@@ -194,32 +218,37 @@ class Annotations:
             local_dir_path.mkdir()
         print("  done")
 
-    def _retrieve_files(self):
-        print("- retrieve files")
+    def _retrieve_gff_files(self):
+        print("- retrieve gff files")
 
         common_url = "https://" + self.ftp_url + "/" + self.ftp_dir
         for annotation in self.annotations:
-            url = f"{common_url}/{annotation['id']}/{annotation['dir']}/{annotation['file']}"
+            url = f"{common_url}/{annotation['id']}/{annotation['dir']}/{annotation['file_gff']}"
             # print(url)
             r = requests.get(url)
-            open(self._gff_file_name(annotation), "wb").write(r.content)
+            open(self._file_name_gff(annotation), "wb").write(r.content)
 
             url = f"{common_url}/{annotation['id']}/{annotation['annotation_report']}"
             # print(url)
             r = requests.get(url)
-            open(self._report_file_name(annotation), "wb").write(r.content)
+            open(self._file_name_report(annotation), "wb").write(r.content)
         print("  done")
 
-    def _gff_file_name(self, location):
-        return self.local_input_dir + "/" + location["id"] + "_" + location["file"]
+    def _file_name_gff(self, location):
+        return self.local_input_dir + "/" + location["id"] + "_" + location["file_gff"]
 
-    def _report_file_name(self, annotation):
+    def _file_name_fasta(self, location):
+        return (
+            self.local_input_dir + "/" + location["id"] + "_" + location["file_fasta"]
+        )
+
+    def _file_name_report(self, location):
         return (
             self.local_input_dir
             + "/"
-            + annotation["id"]
+            + location["id"]
             + "_"
-            + annotation["annotation_report"]
+            + location["annotation_report"]
         )
 
     def _metadata_path(self):
@@ -228,7 +257,7 @@ class Annotations:
     def _update_dates(self):
         print("- update dates")
         for annotation in self.annotations:
-            annotation.update(self._report_info(self._report_file_name(annotation)))
+            annotation.update(self._report_info(self._file_name_report(annotation)))
         print("  done")
 
     @staticmethod
@@ -250,6 +279,15 @@ class Annotations:
         for assembly in assemblies:
             self.get_assembly_model(assemblies[assembly])
 
+    @staticmethod
+    def _add_annotations_details(model, annotation):
+        if model.get("qualifiers") is None:
+            model["qualifiers"] = {}
+        model["qualifiers"]["freeze_date_id"] = annotation["freeze_date_id"]
+        model["qualifiers"]["annotation_id"] = annotation["id"]
+        model["qualifiers"]["assembly_name"] = annotation["assembly_name"]
+        model["qualifiers"]["assembly_accession"] = annotation["assembly_accession"]
+
     def get_assembly_model(self, annotations):
         out = {}
         for annotation in annotations:
@@ -257,7 +295,7 @@ class Annotations:
                 f"- processing {annotation['id']} from {annotation['freeze_date_id']}, ({annotation['assembly_name']}, {annotation['assembly_accession']})"
             )
 
-            with gzip.open(self._gff_file_name(annotation), "rb") as f:
+            with gzip.open(self._file_name_gff(annotation), "rb") as f:
                 current_id = ""
                 current_content = ""
                 extras = ""
@@ -271,8 +309,8 @@ class Annotations:
                             or current_id.startswith(self.ref_id_start)
                         ):
                             current_model = parse(current_content, "gff3")
+                            self._add_annotations_details(current_model, annotation)
                             print(f"  - {current_id}")
-                            # print(current_model["qualifiers"])
                             if current_id not in out:
                                 out[current_id] = current_model
                             else:
@@ -290,7 +328,7 @@ class Annotations:
             print(f"- writing {r_id}")
             fasta = retrieve_raw(r_id, "ncbi", "fasta", timeout=10)
             model = {"annotations": out[r_id], "sequence": parse(fasta[0], "fasta")}
-            open(self.local_output_dir + r_id + ".json", "w").write(json.dumps(model))
+            open(self.local_output_dir + r_id, "w").write(json.dumps(model))
         print("\n")
 
 
