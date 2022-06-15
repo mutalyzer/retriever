@@ -7,7 +7,7 @@ import json
 import sys
 
 from . import usage, version
-from .annotations import retrieve_annotations
+from .annotations import annotations_summary, retrieve_annotations
 from .related import get_related
 from .retriever import retrieve_model, retrieve_model_from_file, retrieve_raw
 
@@ -88,10 +88,14 @@ def _parse_args(args):
     parser_annotations.add_argument(
         "--downloaded", help="output directory path", action="store_true"
     )
-
     parser_annotations.add_argument(
         "--ref_id_start", help="reference id should start with", default=None
     )
+
+    parser_summary = subparsers.add_parser("summary", help="gather references summary")
+
+    parser_summary.add_argument("--directory", help="input directory path")
+    parser_summary.add_argument("--ref_id_start")
 
     return parser.parse_args(args)
 
@@ -136,12 +140,18 @@ def _retrieve_raw(args):
     print(output[0])
 
 
+def _annotations_summary(args):
+    annotations_summary(args.directory, args.ref_id_start)
+
+
 def _endpoint(args):
 
     if args.command == "from_file":
         return _from_file
     elif args.command == "annotations":
         return _retrieve_annotations
+    elif args.command == "summary":
+        return _annotations_summary
     elif args.parse:
         return _retrieve_model
     elif args.related:
