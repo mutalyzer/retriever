@@ -79,9 +79,6 @@ def _merge(new, old):
     ts_old = _get_transcripts_mappings(old)
 
     ts_not_in = set(ts_old.keys()) - set(ts_new.keys())
-    # print("- before")
-    # print(len(ts_new), len(ts_old))
-    # print(len(ts_not_in))
 
     for t_not_in_id in ts_not_in:
         if t_not_in_id in ts_new:
@@ -101,12 +98,10 @@ def _merge(new, old):
             for t in set(gene_ts) - set(gene_ts_already_in):
                 ts_new[t] = {"i_g": len(new["features"]), "gene_id": gene_old["id"]}
         else:
-            # print(ts_old[t_not_in_id])
             transcript = old["features"][ts_old[t_not_in_id]["i_g"]]["features"][
                 ts_old[t_not_in_id]["i_t"]
             ]
             _added_from(transcript, old)
-            # print(" - add:", transcript)
             if gene_new.get("features") is None:
                 gene_new["features"] = []
             gene_new["features"].append(deepcopy(transcript))
@@ -116,11 +111,6 @@ def _merge(new, old):
             }
 
     ts_not_in = set(ts_old.keys()) - set(ts_new.keys())
-    # ts_new = _get_transcripts_mappings(new)
-    # ts_old = _get_transcripts_mappings(old)
-    # print("- after")
-    # print(len(ts_new), len(ts_old))
-    # print(len(ts_not_in))
     if len(ts_not_in) != 0:
         raise Exception("Not all the transcripts were added.")
 
@@ -192,7 +182,7 @@ class Annotations:
                         for d_f in ftp.nlst():
                             if d_f.endswith("_genomic.gff.gz"):
                                 annotation["file_gff"] = d_f
-                            elif d_f.endswith("_genomic.fna.gz "):
+                            elif d_f.endswith("_genomic.fna.gz"):
                                 annotation["file_fasta"] = d_f
                         ftp.cwd("..")
                 ftp.cwd("..")
@@ -336,3 +326,66 @@ def retrieve_annotations(path_input, path_output, downloaded, ref_id_start=None)
     print(path_input, path_output, downloaded, ref_id_start)
 
     Annotations(path_input, path_output, downloaded, ref_id_start)
+
+
+def annotations_summary(directory, ref_id_start=None):
+    def _per_model():
+        output = {}
+        for file in Path(directory).glob(glob):
+            model = json.load(open(file))["annotations"]
+            summary = {"genes": 0, "transcripts": 0, "added": 0}
+            if model.get("features"):
+                summary["genes"] += len(model["features"])
+                for gene in model["features"]:
+                    if gene.get("features"):
+                        summary["transcripts"] += len(gene)
+                        for transcript in gene["features"]:
+                            if transcript.get("qualifiers") and transcript[
+                                "qualifiers"
+                            ].get("added_freeze_date_id"):
+                                summary["added"] += 1
+            output[model["id"]] = summary
+        total_genes = sum([output[ref_id]["genes"] for ref_id in output])
+        total_transcripts = sum([output[ref_id]["transcripts"] for ref_id in output])
+        total_added = sum([output[ref_id]["added"] for ref_id in output])
+
+        header = f"{'Reference ID':15} {'genes':>10}{'transcripts':>15}{'added':>10}"
+        print(f"\n{header}\n{'-' * len(header)}")
+        for ref_id in sorted(output):
+            genes = f"{output[ref_id]['genes']:>10}"
+            transcripts = f"{output[ref_id]['transcripts']:>15}"
+            added = f"{output[ref_id]['added']:>10}"
+            print(f"{ref_id:15} {genes}{transcripts}{added}")
+        total = (
+            f"{'Total':15} {total_genes:>10}{total_transcripts:>15}{total_added:>10}"
+        )
+        print(f"{'-' * len(header)}\n{total}\n")
+
+    def _general():
+        summary = {"models": 0, "genes": 0, "transcripts": 0, "added": 0}
+        for file in Path(directory).glob(glob):
+            model = json.load(open(file))["annotations"]
+            summary["models"] += 1
+            if model.get("features"):
+                summary["genes"] += len(model["features"])
+                for gene in model["features"]:
+                    if gene.get("features"):
+                        summary["transcripts"] += len(gene)
+                        for transcript in gene["features"]:
+                            if transcript.get("qualifiers") and transcript[
+                                "qualifiers"
+                            ].get("added_freeze_date_id"):
+                                summary["added"] += 1
+
+        print("Reference models:", summary["models"])
+        print("Total genes:", summary["genes"])
+        print("Total transcripts:", summary["transcripts"])
+        print("Total transcripts added:", summary["added"])
+
+    glob = "*"
+    if ref_id_start is not None:
+        glob = f"{ref_id_start}{glob}"
+
+    # _general()
+
+    _per_model()
