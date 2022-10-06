@@ -4,13 +4,20 @@ Retrieval sources
 NCBI
 ----
 
-NCBI references are retrieved using the `Eutils sviewer <https://www.ncbi.nlm.
-nih.gov/tools/sviewer/>`_ endpoint (`example <https://eutils.ncbi.nlm.nih.gov/
-sviewer/viewer.cgi?report=gff3;id=NG_012337.3>`_). Note that for GRCh37
-references the annotations are incomplete and can be manually retrieved from
-the following `location <https://ftp.ncbi.nlm.nih.gov/genomes/archive/old_refs
-eq/Homo_sapiens/ARCHIVE/ANNOTATION_RELEASE.105/GFF/ref_GRCh37.p13_top_level.gf
-f3.gz>`__. They can be merged later with the sequence to obtain the model.
+References annotations are retrieved using the `Eutils sviewer <https://www.nc
+bi.nlm.nih.gov/tools/sviewer/>`_ endpoint (`example <https://eutils.ncbi.nlm.n
+ih.gov/sviewer/viewer.cgi?report=gff3;id=NG_012337.3>`_), while the fasta
+sequences are retrieved using the Entrez API (`example <https://eutils.ncbi.nl
+m.nih.gov/entrez/eutils/efetch.fcgi?db=sequences&id=NG_012337.3&rettype=fasta&
+retmode=text>`__).
+
+Assemblies
+^^^^^^^^^^
+
+For human chromosomal references (NC\_) the following `FTP location <https://f
+tp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/annotatio
+n_releases/>`__ is used to manually retrieve the annotations making sure that
+the history is taken into account.
 
 Ensembl
 -------

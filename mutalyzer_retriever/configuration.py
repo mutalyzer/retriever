@@ -5,7 +5,6 @@ import configparser
 import os
 
 DEFAULT_SETTINGS = {
-    "EMAIL": "info@mutalyzer.nl",
     "NCBI_GFF3_URL": "https://eutils.ncbi.nlm.nih.gov/sviewer/viewer.cgi",
     "LRG_URL": "http://ftp.ebi.ac.uk/pub/databases/lrgex/",
     "MAX_FILE_SIZE": 10 * 1048576,

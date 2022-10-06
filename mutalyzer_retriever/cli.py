@@ -7,7 +7,7 @@ import json
 import sys
 
 from . import usage, version
-from .annotations import annotations_summary, retrieve_annotations
+from .sources.ncbi_assemblies import Assemblies, annotations_summary
 from .related import get_related
 from .retriever import retrieve_model, retrieve_model_from_file, retrieve_raw
 
@@ -79,23 +79,17 @@ def _parse_args(args):
         default=False,
     )
 
-    parser_annotations = subparsers.add_parser(
-        "annotations", help="retrieve genomic annotations (including history)"
-    )
+    parser_ncbi_assemblies = subparsers.add_parser("ncbi_assemblies", help="retrieve NCBI genomic annotations (including history)")
 
-    parser_annotations.add_argument("--input", help="input directory path")
-    parser_annotations.add_argument("--output", help="output directory path")
-    parser_annotations.add_argument(
-        "--downloaded", help="output directory path", action="store_true"
-    )
-    parser_annotations.add_argument(
-        "--ref_id_start", help="reference id should start with", default=None
-    )
+    parser_ncbi_assemblies.add_argument("--input", help="input (downloaded) directory path")
+    parser_ncbi_assemblies.add_argument("--output", help="output (models) directory path")
+    parser_ncbi_assemblies.add_argument("--downloaded", help="already downloaded", action="store_true")
+    parser_ncbi_assemblies.add_argument("--ref_id_start", help="reference id should start with")
 
-    parser_summary = subparsers.add_parser("summary", help="gather references summary")
+    parser_assemblies_summary = subparsers.add_parser("summary", help="gather references summary")
 
-    parser_summary.add_argument("--directory", help="input directory path")
-    parser_summary.add_argument("--ref_id_start")
+    parser_assemblies_summary.add_argument("--directory", help="models directory path")
+    parser_assemblies_summary.add_argument("--ref_id_start")
 
     return parser.parse_args(args)
 
@@ -105,8 +99,8 @@ def _from_file(args):
     print(json.dumps(model, indent=args.indent))
 
 
-def _retrieve_annotations(args):
-    retrieve_annotations(args.input, args.output, args.downloaded, args.ref_id_start)
+def _retrieve_assemblies(args):
+    Assemblies(args.input, args.output, args.downloaded, args.ref_id_start)
 
 
 def _retrieve_model(args):
@@ -140,7 +134,7 @@ def _retrieve_raw(args):
     print(output[0])
 
 
-def _annotations_summary(args):
+def _assemblies_summary(args):
     annotations_summary(args.directory, args.ref_id_start)
 
 
@@ -148,10 +142,10 @@ def _endpoint(args):
 
     if args.command == "from_file":
         return _from_file
-    elif args.command == "annotations":
-        return _retrieve_annotations
+    elif args.command == "ncbi_assemblies":
+        return _retrieve_assemblies
     elif args.command == "summary":
-        return _annotations_summary
+        return _assemblies_summary
     elif args.parse:
         return _retrieve_model
     elif args.related:

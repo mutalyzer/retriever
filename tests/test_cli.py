@@ -3,7 +3,7 @@ from mutalyzer_retriever.cli import (
     _from_file,
     _parse_args,
     _related,
-    _retrieve_annotations,
+    _retrieve_assemblies,
     _retrieve_model,
     _retrieve_raw,
 )
@@ -119,11 +119,11 @@ def test_from_file_indent():
     assert _endpoint(args) == _from_file
 
 
-def test_annotations():
-    command = "annotations --input downloads --output models"
+def ncbi_assemblies():
+    command = "ncbi_assemblies --input downloads --output models"
     args = _parse_args(command.split())
 
-    assert args.command == "annotations"
+    assert args.command == "ncbi_assemblies"
     assert args.downloaded is False
     assert args.input == "downloads"
     assert args.output == "models"
@@ -137,14 +137,14 @@ def test_annotations():
     assert args.timeout is None
     assert args.type is None
 
-    assert _endpoint(args) == _retrieve_annotations
+    assert _endpoint(args) == _retrieve_assemblies
 
 
-def test_annotations_downloaded():
-    command = "annotations --input downloads --output models --downloaded"
+def test_ncbi_assemblies_downloaded():
+    command = "ncbi_assemblies --input downloads --output models --downloaded"
     args = _parse_args(command.split())
 
-    assert args.command == "annotations"
+    assert args.command == "ncbi_assemblies"
     assert args.downloaded is True
     assert args.input == "downloads"
     assert args.output == "models"
@@ -158,4 +158,4 @@ def test_annotations_downloaded():
     assert args.timeout is None
     assert args.type is None
 
-    assert _endpoint(args) == _retrieve_annotations
+    assert _endpoint(args) == _retrieve_assemblies

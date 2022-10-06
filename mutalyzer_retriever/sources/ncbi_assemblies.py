@@ -94,6 +94,8 @@ def _merge(new, old):
             for i in gene_ts_already_in[::-1]:
                 gene_old["features"].pop(i)
             _gene_added_from(gene_old, old)
+            if new.get("features") is None:
+                new["features"] = []
             new["features"].append(gene_old)
             for t in set(gene_ts) - set(gene_ts_already_in):
                 ts_new[t] = {"i_g": len(new["features"]), "gene_id": gene_old["id"]}
@@ -126,21 +128,22 @@ def group_by_accession(annotations):
     return groups
 
 
-class Annotations:
+class Assemblies:
+    """
+    Retrieve reference models for human chromosomes.
+    """
     def __init__(
         self,
-        path_input="./downloads",
-        path_output="./models",
+        path_input=None,
+        path_output=None,
         downloaded=False,
         ref_id=None,
     ):
         self.ftp_url = "ftp.ncbi.nlm.nih.gov"
-        self.ftp_dir = (
-            "genomes/refseq/vertebrate_mammalian/Homo_sapiens/annotation_releases"
-        )
+        self.ftp_dir = "genomes/refseq/vertebrate_mammalian/Homo_sapiens/annotation_releases"
 
-        self.local_input_dir = path_input
-        self.local_output_dir = path_output
+        self.local_input_dir = path_input if path_input else "./downloads"
+        self.local_output_dir = path_output if path_output else "./models"
 
         self.ref_id_start = ref_id
 
@@ -315,23 +318,25 @@ class Annotations:
                         current_content += s_line
 
         for r_id in out:
-            print(f"- writing {r_id}")
+            print(f"- writing {self.local_output_dir}/{r_id}")
             fasta = retrieve_raw(r_id, "ncbi", "fasta", timeout=10)
             model = {"annotations": out[r_id], "sequence": parse(fasta[0], "fasta")}
-            open(self.local_output_dir + r_id, "w").write(json.dumps(model))
+            open(self.local_output_dir + "/" + r_id, "w").write(json.dumps(model))
         print("\n")
 
 
-def retrieve_annotations(path_input, path_output, downloaded, ref_id_start=None):
-    print(path_input, path_output, downloaded, ref_id_start)
+def annotations_summary(models_directory, ref_id_start=None):
+    """
+    Print information about how many genes and transcripts are present
+    in the models, including how many transcripts were added
+    from older releases.
 
-    Annotations(path_input, path_output, downloaded, ref_id_start)
-
-
-def annotations_summary(directory, ref_id_start=None):
+    :param models_directory: Directory with the reference model files.
+    :param ref_id_start: Limit to specific reference(s) ID.
+    """
     def _per_model():
         output = {}
-        for file in Path(directory).glob(glob):
+        for file in Path(models_directory).glob(glob):
             model = json.load(open(file))["annotations"]
             summary = {"genes": 0, "transcripts": 0, "added": 0}
             if model.get("features"):
@@ -361,31 +366,8 @@ def annotations_summary(directory, ref_id_start=None):
         )
         print(f"{'-' * len(header)}\n{total}\n")
 
-    def _general():
-        summary = {"models": 0, "genes": 0, "transcripts": 0, "added": 0}
-        for file in Path(directory).glob(glob):
-            model = json.load(open(file))["annotations"]
-            summary["models"] += 1
-            if model.get("features"):
-                summary["genes"] += len(model["features"])
-                for gene in model["features"]:
-                    if gene.get("features"):
-                        summary["transcripts"] += len(gene)
-                        for transcript in gene["features"]:
-                            if transcript.get("qualifiers") and transcript[
-                                "qualifiers"
-                            ].get("added_freeze_date_id"):
-                                summary["added"] += 1
-
-        print("Reference models:", summary["models"])
-        print("Total genes:", summary["genes"])
-        print("Total transcripts:", summary["transcripts"])
-        print("Total transcripts added:", summary["added"])
-
     glob = "*"
     if ref_id_start is not None:
         glob = f"{ref_id_start}{glob}"
-
-    # _general()
 
     _per_model()
