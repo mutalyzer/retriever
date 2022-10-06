@@ -106,6 +106,38 @@ For an ``lrg`` file the ``--is_lrg`` flag needs to be added.
     {"annotations": {"type": "record", "id": "LRG_417", "location": ...
 
 
+Retrieve the NCBI reference models from FTP
+-------------------------------------------
+
+Starting from scratch, i.e., connect to the FTP location to retrieve the
+assembly versions and to download the annotations files.
+
+.. code-block:: console
+
+    $ mutalyzer_retriever ncbi_assemblies
+    - local output directory set up to ./models
+      done
+      ...
+
+Restrict only to specific reference ids and assuming that the input files are
+already present in the ``downloads/`` directory.
+
+.. code-block:: console
+
+    $ mutalyzer_retriever ncbi_assemblies  --input downloads/ --ref_id_start NC_000023 --downloaded
+    - local output directory set up to ./models
+      done
+    - processing 109 from 20180213, (GRCh38.p12, GCF_000001405.38)
+      - NC_000023.11
+    ...
+    - processing 105.20220307 from 20220307, (GRCh37.p13, GCF_000001405.25)
+      - NC_000023.10
+    - writing ./models/NC_000023.10
+
+
+
+
+
 Retrieve related reference ids
 ------------------------------
 
