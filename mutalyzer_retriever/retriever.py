@@ -1,5 +1,9 @@
 from . import parser
 from .sources import ensembl, lrg, ncbi
+from .configuration import cache_dir, cache_url
+import json
+from pathlib import Path
+import requests
 
 
 class NoReferenceRetrieved(Exception):
@@ -211,3 +215,38 @@ def retrieve_model_from_file(paths=[], is_lrg=False):
         model["sequence"] = parser.parse(sequence, "fasta")
 
     return model
+
+
+def get_from_api_cache(r_id):
+    api_url = cache_url()
+    cache_path = cache_dir()
+    if api_url:
+        api_annotations = requests.get(api_url + "/reference/" + r_id).text
+        api_annotations = json.loads(api_annotations)
+
+    file_path = Path(cache_path) / (r_id + ".sequence")
+    if cache_path:
+        if file_path.is_file():
+            with open(file_path) as f:
+                sequence = f.read()
+            return {"annotations": api_annotations, "sequence": {"seq": sequence}}
+
+
+def get_from_file_cache(r_id):
+    cache_path = cache_dir()
+    if cache_path and (Path(cache_path) / r_id).is_file():
+        with open(Path(cache_path) / r_id) as json_file:
+            return json.load(json_file)
+
+
+def get_reference_model(r_id):
+    model = get_from_api_cache(r_id)
+    if model:
+        print(f" - from api cache {r_id}")
+        return model
+    model = get_from_file_cache(r_id)
+    if model:
+        print(f" - from file cache {r_id}")
+        return model
+    print(f" - not from cache {r_id}")
+    return retrieve_model(r_id, timeout=10)

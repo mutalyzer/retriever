@@ -43,3 +43,15 @@ def setup_settings():
 
 
 settings = setup_settings()
+
+
+def cache_dir():
+    settings = setup_settings()
+    if settings and settings.get("MUTALYZER_CACHE_DIR"):
+        return eval(settings["MUTALYZER_CACHE_DIR"])
+
+
+def cache_url():
+    settings = setup_settings()
+    if settings and settings.get("MUTALYZER_API_URL"):
+        return eval(settings["MUTALYZER_API_URL"])
