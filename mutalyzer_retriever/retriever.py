@@ -225,20 +225,22 @@ def _get_sequence(file_path):
 
 
 def get_from_api_cache(r_id, s_id):
-
     api_url = cache_url()
     cache_path = cache_dir()
     if api_url:
         url = api_url + "/reference/" + r_id
         if s_id:
             url += f"?selector_id={s_id}"
-        api_annotations = requests.get(url).text
-        api_annotations = json.loads(api_annotations)
+        try:
+            annotations = requests.get(url).text
+        except Exception:
+            return
+        annotations = json.loads(annotations)
 
         file_path = Path(cache_path) / (r_id + ".sequence")
         if cache_path:
             if file_path.is_file():
-                return {"annotations": api_annotations, "sequence": {"seq": _get_sequence(file_path)}}
+                return {"annotations": annotations, "sequence": {"seq": _get_sequence(file_path)}}
 
 
 def get_from_file_cache(r_id):
@@ -250,23 +252,21 @@ def get_from_file_cache(r_id):
 
 def get_overlap_models(r_id, l_min, l_max):
     api_url = cache_url()
-    cache_path = cache_dir()
     if api_url:
         url = f"{api_url}/overlap/{r_id}?min={l_min}&max={l_max}"
-        api_annotations = requests.get(url).text
-        api_annotations = json.loads(api_annotations)
-        return api_annotations
+        try:
+            annotations = requests.get(url).text
+        except Exception:
+            return
+        annotations = json.loads(annotations)
+        return annotations
 
 
 def get_reference_model(r_id, s_id=None):
-    print("\n get_reference_model", r_id, s_id)
     model = get_from_api_cache(r_id, s_id)
     if model:
-        print(f" - from api cache {r_id}")
         return model
     model = get_from_file_cache(r_id)
     if model:
-        print(f" - from file cache {r_id}")
         return model
-    print(f" - not from cache {r_id}")
     return retrieve_model(r_id, timeout=10)
