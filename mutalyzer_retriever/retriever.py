@@ -4,6 +4,7 @@ from .configuration import cache_dir, cache_url
 import json
 from pathlib import Path
 import requests
+from functools import lru_cache
 
 
 class NoReferenceRetrieved(Exception):
@@ -217,19 +218,27 @@ def retrieve_model_from_file(paths=[], is_lrg=False):
     return model
 
 
-def get_from_api_cache(r_id):
+@lru_cache(maxsize=16)
+def _get_sequence(file_path):
+    with open(file_path) as f:
+        return f.read()
+
+
+def get_from_api_cache(r_id, s_id):
+
     api_url = cache_url()
     cache_path = cache_dir()
     if api_url:
-        api_annotations = requests.get(api_url + "/reference/" + r_id).text
+        url = api_url + "/reference/" + r_id
+        if s_id:
+            url += f"?selector_id={s_id}"
+        api_annotations = requests.get(url).text
         api_annotations = json.loads(api_annotations)
 
-    file_path = Path(cache_path) / (r_id + ".sequence")
-    if cache_path:
-        if file_path.is_file():
-            with open(file_path) as f:
-                sequence = f.read()
-            return {"annotations": api_annotations, "sequence": {"seq": sequence}}
+        file_path = Path(cache_path) / (r_id + ".sequence")
+        if cache_path:
+            if file_path.is_file():
+                return {"annotations": api_annotations, "sequence": {"seq": _get_sequence(file_path)}}
 
 
 def get_from_file_cache(r_id):
@@ -239,8 +248,19 @@ def get_from_file_cache(r_id):
             return json.load(json_file)
 
 
-def get_reference_model(r_id):
-    model = get_from_api_cache(r_id)
+def get_overlap_models(r_id, l_min, l_max):
+    api_url = cache_url()
+    cache_path = cache_dir()
+    if api_url:
+        url = f"{api_url}/overlap/{r_id}?min={l_min}&max={l_max}"
+        api_annotations = requests.get(url).text
+        api_annotations = json.loads(api_annotations)
+        return api_annotations
+
+
+def get_reference_model(r_id, s_id=None):
+    print("\n get_reference_model", r_id, s_id)
+    model = get_from_api_cache(r_id, s_id)
     if model:
         print(f" - from api cache {r_id}")
         return model
