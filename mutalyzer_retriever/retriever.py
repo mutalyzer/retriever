@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import requests
 from functools import lru_cache
-
+from copy import deepcopy
 
 class NoReferenceRetrieved(Exception):
     pass
@@ -233,14 +233,15 @@ def get_from_api_cache(r_id, s_id):
             url += f"?selector_id={s_id}"
         try:
             annotations = requests.get(url).text
+            annotations = json.loads(annotations)
         except Exception:
             return
-        annotations = json.loads(annotations)
 
-        file_path = Path(cache_path) / (r_id + ".sequence")
-        if cache_path:
-            if file_path.is_file():
-                return {"annotations": annotations, "sequence": {"seq": _get_sequence(file_path)}}
+        if annotations:
+            file_path = Path(cache_path) / (r_id + ".sequence")
+            if cache_path:
+                if file_path.is_file():
+                    return {"annotations": annotations, "sequence": {"seq": _get_sequence(file_path)}}
 
 
 def get_from_file_cache(r_id):
@@ -255,18 +256,108 @@ def get_overlap_models(r_id, l_min, l_max):
     if api_url:
         url = f"{api_url}/overlap/{r_id}?min={l_min}&max={l_max}"
         try:
+            # print("- get overlap models from api cache")
             annotations = requests.get(url).text
+            annotations = json.loads(annotations)
         except Exception:
             return
-        annotations = json.loads(annotations)
         return annotations
+    model = get_from_file_cache(r_id)
+    if model:
+        return model
 
 
 def get_reference_model(r_id, s_id=None):
     model = get_from_api_cache(r_id, s_id)
+    # print("get reference model")
     if model:
+        model["annotations"]["source"] = "api_cache"
+        # print("- get reference model from api cache")
         return model
     model = get_from_file_cache(r_id)
     if model:
         return model
     return retrieve_model(r_id, timeout=10)
+
+
+def get_reference_model_segmented(
+    reference_id, feature_id=None, siblings=False, ancestors=True, descendants=True
+):
+    def _get_from_api_cache():
+        api_url = cache_url()
+        if api_url:
+            if feature_id is not None:
+                args = f"&feature_ud={descendants}"
+            else:
+                args = ""
+            args += f"&siblings={siblings}&ancestors={ancestors}&descendants={descendants}"
+            url = f"{api_url}/reference_model_segmented/{reference_id}{args}"
+            try:
+                annotations = requests.get(url).text
+                return json.loads(annotations)
+            except Exception:
+                return
+    model = _get_from_api_cache()
+    if model:
+        # print("- get reference model from api cache")
+        return model
+    # print("not from api cache")
+    model = get_from_file_cache(reference_id)
+    if model is None:
+        # print("- not from the cache")
+        model = retrieve_model(reference_id, timeout=10)
+    # else:
+        # print("- get reference model from file cache")
+
+    if feature_id is not None:
+        return extract_feature_model(
+            model["annotations"],
+            feature_id,
+            siblings,
+            ancestors,
+            descendants,
+        )[0]
+    return model
+
+
+def extract_feature_model(
+    feature, feature_id, siblings=False, ancestors=True, descendants=True
+):
+    output_model = None
+    just_found = False
+    if feature.get("id") is not None and feature_id == feature["id"]:
+        output_model = deepcopy(feature)
+        if not descendants:
+            if output_model.get("features"):
+                output_model.pop("features")
+            return output_model, True, True
+        return output_model, True, False
+    elif feature.get("features"):
+        for f in feature["features"]:
+            output_model, just_found, propagate = extract_feature_model(
+                f, feature_id, siblings, ancestors, descendants
+            )
+            if output_model:
+                break
+        if output_model and just_found:
+            if siblings:
+                output_model = deepcopy(feature["features"])
+            if not ancestors:
+                return output_model, False, True
+        elif propagate:
+            return output_model, False, True
+    if output_model is not None:
+        if isinstance(output_model, dict):
+            output_model = [output_model]
+        return (
+            {
+                **{
+                    k: deepcopy(feature[k])
+                    for k in list(set(feature.keys()) - {"features"})
+                },
+                **{"features": output_model},
+            },
+            False,
+            False,
+        )
+    return None, False, False
