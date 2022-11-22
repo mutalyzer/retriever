@@ -282,21 +282,13 @@ def get_overlap_models(r_id, l_min, l_max):
 
 
 def get_reference_model(r_id, s_id=None):
-    import time
-
     model = get_from_api_cache(r_id, s_id)
-    # print("get reference model")
-    t = time.time()
     if model:
         model["annotations"]["source"] = "api_cache"
-        print("- get reference model from api cache", time.time() - t)
         return model
-    t = time.time()
     model = get_from_file_cache(r_id)
     if model:
-        print("- get reference model from file cache", time.time() - t)
         return model
-    print("- get reference model from outside")
     return retrieve_model(r_id, timeout=10)
 
 
