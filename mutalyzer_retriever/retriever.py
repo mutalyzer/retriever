@@ -1,11 +1,14 @@
-from . import parser
-from .sources import ensembl, lrg, ncbi
-from .configuration import cache_dir, cache_url
 import json
-from pathlib import Path
-import requests
-from functools import lru_cache
 from copy import deepcopy
+from functools import lru_cache
+from pathlib import Path
+
+import requests
+
+from . import parser
+from .configuration import cache_dir, cache_url, lru_cache_maxsize
+from .sources import ensembl, lrg, ncbi
+
 
 class NoReferenceRetrieved(Exception):
     pass
@@ -94,6 +97,7 @@ def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1
     _raise_error(status)
 
 
+@lru_cache(maxsize=lru_cache_maxsize())
 def retrieve_raw(
     reference_id,
     reference_source=None,
@@ -218,15 +222,24 @@ def retrieve_model_from_file(paths=[], is_lrg=False):
     return model
 
 
-@lru_cache(maxsize=16)
-def _get_sequence(file_path):
-    with open(file_path) as f:
-        return f.read()
+@lru_cache(maxsize=lru_cache_maxsize())
+def get_annotations_from_file_cache(r_id):
+    cache_path = cache_dir()
+    if cache_path and (Path(cache_path) / (r_id + ".annotations")).is_file():
+        with open(Path(cache_path) / (r_id + ".annotations")) as json_file:
+            return json.load(json_file)
+
+
+@lru_cache(maxsize=lru_cache_maxsize())
+def get_sequence_from_file_cache(r_id):
+    cache_path = cache_dir()
+    if cache_path and (Path(cache_path) / (r_id + ".sequence")).is_file():
+        with open(Path(cache_path) / (r_id + ".sequence")) as seq_file:
+            return {"seq": seq_file.read()}
 
 
 def get_from_api_cache(r_id, s_id):
     api_url = cache_url()
-    cache_path = cache_dir()
     if api_url:
         url = api_url + "/reference/" + r_id
         if s_id:
@@ -234,21 +247,22 @@ def get_from_api_cache(r_id, s_id):
         try:
             annotations = requests.get(url).text
             annotations = json.loads(annotations)
+            sequence = get_sequence_from_file_cache(r_id)
         except Exception:
             return
 
-        if annotations:
-            file_path = Path(cache_path) / (r_id + ".sequence")
-            if cache_path:
-                if file_path.is_file():
-                    return {"annotations": annotations, "sequence": {"seq": _get_sequence(file_path)}}
+        if annotations and sequence:
+            return {
+                "annotations": annotations,
+                "sequence": get_sequence_from_file_cache(r_id),
+            }
 
 
 def get_from_file_cache(r_id):
-    cache_path = cache_dir()
-    if cache_path and (Path(cache_path) / r_id).is_file():
-        with open(Path(cache_path) / r_id) as json_file:
-            return json.load(json_file)
+    annotations = get_annotations_from_file_cache(r_id)
+    sequence = get_sequence_from_file_cache(r_id)
+    if annotations and sequence:
+        return {"annotations": annotations, "sequence": sequence}
 
 
 def get_overlap_models(r_id, l_min, l_max):
@@ -268,15 +282,21 @@ def get_overlap_models(r_id, l_min, l_max):
 
 
 def get_reference_model(r_id, s_id=None):
+    import time
+
     model = get_from_api_cache(r_id, s_id)
     # print("get reference model")
+    t = time.time()
     if model:
         model["annotations"]["source"] = "api_cache"
-        # print("- get reference model from api cache")
+        print("- get reference model from api cache", time.time() - t)
         return model
+    t = time.time()
     model = get_from_file_cache(r_id)
     if model:
+        print("- get reference model from file cache", time.time() - t)
         return model
+    print("- get reference model from outside")
     return retrieve_model(r_id, timeout=10)
 
 
@@ -290,13 +310,16 @@ def get_reference_model_segmented(
                 args = f"&feature_ud={descendants}"
             else:
                 args = ""
-            args += f"&siblings={siblings}&ancestors={ancestors}&descendants={descendants}"
+            args += (
+                f"&siblings={siblings}&ancestors={ancestors}&descendants={descendants}"
+            )
             url = f"{api_url}/reference_model_segmented/{reference_id}{args}"
             try:
                 annotations = requests.get(url).text
                 return json.loads(annotations)
             except Exception:
                 return
+
     model = _get_from_api_cache()
     if model:
         # print("- get reference model from api cache")
@@ -307,7 +330,7 @@ def get_reference_model_segmented(
         # print("- not from the cache")
         model = retrieve_model(reference_id, timeout=10)
     # else:
-        # print("- get reference model from file cache")
+    # print("- get reference model from file cache")
 
     if feature_id is not None:
         return extract_feature_model(
@@ -318,6 +341,17 @@ def get_reference_model_segmented(
             descendants,
         )[0]
     return model
+
+
+def get_chromosome_from_selector(assembly_id, selector_id):
+    api_url = cache_url()
+    if api_url:
+        url = f"{api_url}/chromosome_from_selector/{selector_id}?assembly_id={assembly_id}"
+        try:
+            response = requests.get(url).text
+            return json.loads(response)["id"]
+        except Exception:
+            return
 
 
 def extract_feature_model(

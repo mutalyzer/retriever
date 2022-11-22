@@ -93,6 +93,18 @@ def get_chromosome_accession_from_mrna_model(ref_id, model):
                 return chromosome_accessions
 
 
+def get_assembly_id(assembly_id):
+    if assembly_id is not None:
+        a_id = assembly_id.upper()
+    else:
+        return
+    if a_id in ASSEMBLY_ALIASES:
+        a_id = ASSEMBLY_ALIASES[a_id]
+    if a_id in ASSEMBLIES:
+        return a_id
+    return None
+
+
 def get_assembly_chromosome_accession(r_id, s_id):
     if r_id is not None:
         assembly = r_id.upper()

@@ -55,3 +55,11 @@ def cache_url():
     settings = setup_settings()
     if settings and settings.get("MUTALYZER_API_URL"):
         return eval(settings["MUTALYZER_API_URL"])
+
+
+def lru_cache_maxsize():
+    settings = setup_settings()
+    if settings and settings.get("MUTALYZER_LRU_CACHE_MAXSIZE"):
+        return eval(settings["MUTALYZER_API_URL"])
+    else:
+        return 0
