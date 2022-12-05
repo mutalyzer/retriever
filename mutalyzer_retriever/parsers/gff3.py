@@ -78,6 +78,7 @@ QUALIFIERS = {
     "mRNA": {
         "version": "version",
         "assembly_name": "assembly_name",
+        "tag": "tag",
     },
     "snRNA": {
         "version": "version",
