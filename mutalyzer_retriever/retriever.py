@@ -6,7 +6,7 @@ from pathlib import Path
 import requests
 
 from . import parser
-from .configuration import cache_dir, cache_url, lru_cache_maxsize
+from .configuration import cache_dir, cache_url, lru_cache_maxsize, cache_add
 from .sources import ensembl, lrg, ncbi
 
 
@@ -81,6 +81,10 @@ def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1
         )
     except (NameError, ConnectionError, ValueError) as e:
         status["ncbi"]["errors"].append(e)
+    except Exception as e:
+        print("\n\n\n---\n\n\n")
+        print(e)
+        raise (e)
     else:
         return reference_content, reference_type, "ncbi"
 
@@ -171,13 +175,12 @@ def retrieve_model(
             return model["annotations"]
     elif reference_type == "gff3":
         if model_type == "all":
+            annotations = parser.parse(reference_content, reference_type, reference_source)
             fasta = retrieve_raw(
                 reference_id, reference_source, "fasta", size_off, timeout=timeout
             )
             return {
-                "annotations": parser.parse(
-                    reference_content, reference_type, reference_source
-                ),
+                "annotations": annotations,
                 "sequence": parser.parse(fasta[0], "fasta"),
             }
         elif model_type == "sequence":
@@ -282,18 +285,30 @@ def get_overlap_models(r_id, l_min, l_max):
 
 
 def get_reference_model(r_id, s_id=None):
-    print(r_id, s_id)
+
+    # print(r_id, s_id)
     model = get_from_api_cache(r_id, s_id)
     if model:
-        print(" - from the api cache")
+        # print(" - from the api cache")
         model["annotations"]["source"] = "api_cache"
         return model
     model = get_from_file_cache(r_id)
     if model:
-        print(" - from the file cache")
+        # print(" - from the file cache")
         return model
-    print(" - from outside")
-    return retrieve_model(r_id, timeout=10)
+    # print(" - from outside")
+    model = retrieve_model(r_id, timeout=10)
+
+    cache_path = cache_dir()
+    print(cache_add())
+    if cache_add() and cache_path:
+        # print("cache")
+        if model.get("annotations") and model.get("sequence") and model["sequence"].get("seq"):
+            with open(Path(cache_path) / (r_id + ".annotations"), "w") as f:
+                f.write(json.dumps(model["annotations"]))
+            with open(Path(cache_path) / (r_id + ".sequence"), "w") as f:
+                f.write(model["sequence"]["seq"])
+    return model
 
 
 def get_reference_model_segmented(

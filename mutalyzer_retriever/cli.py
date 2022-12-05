@@ -65,6 +65,8 @@ def _parse_args(args):
 
     parser.add_argument("--split", action="store_true")
 
+    parser.add_argument("--only_annotations", action="store_true")
+
     subparsers = parser.add_subparsers(dest="command")
 
     parser_from_file = subparsers.add_parser(
@@ -134,7 +136,7 @@ def _from_file(args):
 
 
 def _retrieve_assemblies(args):
-    Assemblies(args.input, args.output, args.downloaded, args.ref_id_start)
+    Assemblies(args.input, args.output, args.downloaded, args.ref_id_start, args.split, args.only_annotations)
 
 
 def _retrieve_model(args):
@@ -173,7 +175,6 @@ def _assemblies_summary(args):
 
 
 def _endpoint(args):
-
     if args.command == "from_file":
         return _from_file
     elif args.command == "ncbi_assemblies":

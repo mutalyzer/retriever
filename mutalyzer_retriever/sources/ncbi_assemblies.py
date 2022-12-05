@@ -138,6 +138,8 @@ class Assemblies:
         path_output=None,
         downloaded=False,
         ref_id=None,
+        split=False,
+        only_annotations=False,
     ):
         self.ftp_url = "ftp.ncbi.nlm.nih.gov"
         self.ftp_dir = "genomes/refseq/vertebrate_mammalian/Homo_sapiens/annotation_releases"
@@ -146,6 +148,8 @@ class Assemblies:
         self.local_output_dir = path_output if path_output else "./models"
 
         self.ref_id_start = ref_id
+        self.split = split
+        self.only_annotations = only_annotations
 
         if downloaded:
             self.annotations = json.loads(open(self._metadata_path(), "r").read())
@@ -302,6 +306,7 @@ class Assemblies:
                             or current_id.startswith(self.ref_id_start)
                         ):
                             current_model = parse(current_content, "gff3")
+                            open(f"{self.local_output_dir}/{current_id}.gff3", "w").write(current_content)
                             self._add_annotations_details(current_model, annotation)
                             print(f"  - {current_id}")
                             if current_id not in out:
@@ -318,10 +323,22 @@ class Assemblies:
                         current_content += s_line
 
         for r_id in out:
-            print(f"- writing {self.local_output_dir}/{r_id}")
-            fasta = retrieve_raw(r_id, "ncbi", "fasta", timeout=10)
-            model = {"annotations": out[r_id], "sequence": parse(fasta[0], "fasta")}
-            open(self.local_output_dir + "/" + r_id, "w").write(json.dumps(model))
+            file_path = f"{self.local_output_dir}/{r_id}"
+            if self.only_annotations:
+                print(f"- writing {file_path}.annotations")
+                open(f"{file_path}.annotations", "w").write(json.dumps(out[r_id]))
+            else:
+                fasta = retrieve_raw(r_id, "ncbi", "fasta", timeout=10)
+                seq = parse(fasta[0], "fasta")
+                if self.split:
+                    print(f"- writing {file_path}.annotations")
+                    open(f"{file_path}.annotations", "w").write(json.dumps(out[r_id]))
+                    print(f"- writing {file_path}.sequence")
+                    open(f"{file_path}.sequence", "w").write(seq["seq"])
+                else:
+                    print(f"- writing {self.local_output_dir}/{r_id}")
+                    model = {"annotations": out[r_id], "sequence": seq}
+                    open(file_path, "w").write(json.dumps(model))
         print("\n")
 
 

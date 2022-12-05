@@ -33,33 +33,29 @@ def setup_settings():
             sect: dict(loaded_settings.items(sect))
             for sect in loaded_settings.sections()
         }["config"]
-
+        for k in loaded_settings:
+            if loaded_settings[k] in {"yes", "true", "1"}:
+                loaded_settings[k] = True
+            elif loaded_settings[k] in {"no", "false", "0"}:
+                loaded_settings[k] = False
         settings.update(loaded_settings)
-
-    if settings.get("MAX_FILE_SIZE") and isinstance(settings["MAX_FILE_SIZE"], str):
-        settings["MAX_FILE_SIZE"] = eval(settings["MAX_FILE_SIZE"])
 
     return settings
 
 
 settings = setup_settings()
 
-
 def cache_dir():
-    settings = setup_settings()
-    if settings and settings.get("MUTALYZER_CACHE_DIR"):
-        return eval(settings["MUTALYZER_CACHE_DIR"])
+    return settings.get("MUTALYZER_CACHE_DIR")
 
 
 def cache_url():
-    settings = setup_settings()
-    if settings and settings.get("MUTALYZER_API_URL"):
-        return eval(settings["MUTALYZER_API_URL"])
+   return settings.get("MUTALYZER_API_URL")
 
 
 def lru_cache_maxsize():
-    settings = setup_settings()
-    if settings and settings.get("MUTALYZER_LRU_CACHE_MAXSIZE"):
-        return eval(settings["MUTALYZER_LRU_CACHE_MAXSIZE"])
-    else:
-        return 0
+    return settings.get("MUTALYZER_LRU_CACHE_MAXSIZE")
+
+
+def cache_add():
+    return settings.get("MUTALYZER_FILE_CACHE_ADD")
