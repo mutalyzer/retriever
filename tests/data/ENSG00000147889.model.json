@@ -15,7 +15,6 @@
     },
     "features": [
       {
-        "id": "ENSG00000264545",
         "type": "gene",
         "location": {
           "type": "range",
@@ -29,6 +28,7 @@
           },
           "strand": 1
         },
+        "id": "ENSG00000264545",
         "qualifiers": {
           "name": "AL359922.1",
           "assembly_name": "GRCh38",
@@ -36,7 +36,6 @@
         },
         "features": [
           {
-            "id": "ENST00000404796",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -50,13 +49,14 @@
               },
               "strand": 1
             },
+            "id": "ENST00000404796",
             "qualifiers": {
               "assembly_name": "GRCh38",
+              "tag": "basic",
               "version": "3"
             },
             "features": [
               {
-                "id": "ENSP00000385916",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -69,14 +69,14 @@
                     "position": 22029517
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSP00000385916"
               }
             ]
           }
         ]
       },
       {
-        "id": "ENSG00000147889",
         "type": "gene",
         "location": {
           "type": "range",
@@ -90,6 +90,7 @@
           },
           "strand": -1
         },
+        "id": "ENSG00000147889",
         "qualifiers": {
           "name": "CDKN2A",
           "assembly_name": "GRCh38",
@@ -97,7 +98,6 @@
         },
         "features": [
           {
-            "id": "ENST00000304494",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -111,13 +111,14 @@
               },
               "strand": -1
             },
+            "id": "ENST00000304494",
             "qualifiers": {
               "assembly_name": "GRCh38",
+              "tag": "basic",
               "version": "10"
             },
             "features": [
               {
-                "id": "ENSE00001833804",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -130,10 +131,10 @@
                     "position": 21974857
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001833804"
               },
               {
-                "id": "ENSE00003496053",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -146,10 +147,10 @@
                     "position": 21971208
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00003496053"
               },
               {
-                "id": "ENSE00003529527",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -162,10 +163,10 @@
                     "position": 21968242
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00003529527"
               },
               {
-                "id": "ENSP00000307101",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -178,12 +179,12 @@
                     "position": 21974827
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSP00000307101"
               }
             ]
           },
           {
-            "id": "ENST00000579755",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -197,13 +198,14 @@
               },
               "strand": -1
             },
+            "id": "ENST00000579755",
             "qualifiers": {
               "assembly_name": "GRCh38",
+              "tag": "basic",
               "version": "2"
             },
             "features": [
               {
-                "id": "ENSE00002698483",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -216,10 +218,10 @@
                     "position": 21994392
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00002698483"
               },
               {
-                "id": "ENSE00003513347",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -232,10 +234,10 @@
                     "position": 21971208
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00003513347"
               },
               {
-                "id": "ENSE00003565933",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -248,10 +250,10 @@
                     "position": 21968242
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00003565933"
               },
               {
-                "id": "ENSP00000462950",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -264,12 +266,12 @@
                     "position": 21994331
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSP00000462950"
               }
             ]
           },
           {
-            "id": "ENST00000579122",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -283,13 +285,14 @@
               },
               "strand": -1
             },
+            "id": "ENST00000579122",
             "qualifiers": {
               "assembly_name": "GRCh38",
+              "tag": "basic",
               "version": "1"
             },
             "features": [
               {
-                "id": "ENSE00002732562",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -302,10 +305,10 @@
                     "position": 21974858
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00002732562"
               },
               {
-                "id": "ENSE00003492255",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -318,10 +321,10 @@
                     "position": 21971208
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00003492255"
               },
               {
-                "id": "ENSE00002690503",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -334,10 +337,10 @@
                     "position": 21968242
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00002690503"
               },
               {
-                "id": "ENSP00000464202",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -350,12 +353,12 @@
                     "position": 21974827
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSP00000464202"
               }
             ]
           },
           {
-            "id": "ENST00000578845",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -369,13 +372,14 @@
               },
               "strand": -1
             },
+            "id": "ENST00000578845",
             "qualifiers": {
               "assembly_name": "GRCh38",
+              "tag": "basic",
               "version": "2"
             },
             "features": [
               {
-                "id": "ENSE00003655039",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -388,10 +392,10 @@
                     "position": 21971332
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00003655039"
               },
               {
-                "id": "ENSE00002793208",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -404,10 +408,10 @@
                     "position": 21968242
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00002793208"
               },
               {
-                "id": "ENSP00000467390",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -420,12 +424,12 @@
                     "position": 21971205
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSP00000467390"
               }
             ]
           },
           {
-            "id": "ENST00000530628",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -439,13 +443,14 @@
               },
               "strand": -1
             },
+            "id": "ENST00000530628",
             "qualifiers": {
               "assembly_name": "GRCh38",
+              "tag": "basic",
               "version": "2"
             },
             "features": [
               {
-                "id": "ENSE00002687308",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -458,10 +463,10 @@
                     "position": 21994411
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00002687308"
               },
               {
-                "id": "ENSE00003622025",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -474,10 +479,10 @@
                     "position": 21971208
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00003622025"
               },
               {
-                "id": "ENSE00002700745",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -490,10 +495,10 @@
                     "position": 21968242
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00002700745"
               },
               {
-                "id": "ENSP00000432664",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -506,12 +511,12 @@
                     "position": 21994331
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSP00000432664"
               }
             ]
           },
           {
-            "id": "ENST00000498124",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -525,13 +530,14 @@
               },
               "strand": -1
             },
+            "id": "ENST00000498124",
             "qualifiers": {
               "assembly_name": "GRCh38",
+              "tag": "basic",
               "version": "1"
             },
             "features": [
               {
-                "id": "ENSE00001831262",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -544,10 +550,10 @@
                     "position": 21974866
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001831262"
               },
               {
-                "id": "ENSE00003496053",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -560,10 +566,10 @@
                     "position": 21971208
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00003496053"
               },
               {
-                "id": "ENSE00001908861",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -576,10 +582,10 @@
                     "position": 21968771
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001908861"
               },
               {
-                "id": "ENSE00001885678",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -592,10 +598,10 @@
                     "position": 21968242
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001885678"
               },
               {
-                "id": "ENSP00000418915",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -608,12 +614,12 @@
                     "position": 21974827
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSP00000418915"
               }
             ]
           },
           {
-            "id": "ENST00000498628",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -627,13 +633,14 @@
               },
               "strand": -1
             },
+            "id": "ENST00000498628",
             "qualifiers": {
               "assembly_name": "GRCh38",
+              "tag": "basic",
               "version": "6"
             },
             "features": [
               {
-                "id": "ENSE00001869207",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -646,10 +653,10 @@
                     "position": 21995301
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001869207"
               },
               {
-                "id": "ENSE00003475459",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -662,10 +669,10 @@
                     "position": 21971208
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00003475459"
               },
               {
-                "id": "ENSE00002711598",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -678,10 +685,10 @@
                     "position": 21968242
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00002711598"
               },
               {
-                "id": "ENSP00000467857",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -694,12 +701,12 @@
                     "position": 21971205
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSP00000467857"
               }
             ]
           },
           {
-            "id": "ENST00000380151",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -713,13 +720,13 @@
               },
               "strand": -1
             },
+            "id": "ENST00000380151",
             "qualifiers": {
               "assembly_name": "GRCh38",
               "version": "3"
             },
             "features": [
               {
-                "id": "ENSE00001483879",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -732,10 +739,10 @@
                     "position": 21974827
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001483879"
               },
               {
-                "id": "ENSE00003654153",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -748,10 +755,10 @@
                     "position": 21971208
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00003654153"
               },
               {
-                "id": "ENSE00001938650",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -764,10 +771,10 @@
                     "position": 21968242
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001938650"
               },
               {
-                "id": "ENSP00000369496",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -780,12 +787,12 @@
                     "position": 21974827
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSP00000369496"
               }
             ]
           },
           {
-            "id": "ENST00000494262",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -799,13 +806,14 @@
               },
               "strand": -1
             },
+            "id": "ENST00000494262",
             "qualifiers": {
               "assembly_name": "GRCh38",
+              "tag": "basic",
               "version": "5"
             },
             "features": [
               {
-                "id": "ENSE00001916712",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -818,10 +826,10 @@
                     "position": 21995269
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001916712"
               },
               {
-                "id": "ENSE00001944883",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -834,10 +842,10 @@
                     "position": 21994053
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001944883"
               },
               {
-                "id": "ENSE00003475459",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -850,10 +858,10 @@
                     "position": 21971208
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00003475459"
               },
               {
-                "id": "ENSE00001904663",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -866,10 +874,10 @@
                     "position": 21968242
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001904663"
               },
               {
-                "id": "ENSP00000464952",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -882,12 +890,12 @@
                     "position": 21971205
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSP00000464952"
               }
             ]
           },
           {
-            "id": "ENST00000479692",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -901,13 +909,14 @@
               },
               "strand": -1
             },
+            "id": "ENST00000479692",
             "qualifiers": {
               "assembly_name": "GRCh38",
+              "tag": "basic",
               "version": "2"
             },
             "features": [
               {
-                "id": "ENSE00002738871",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -920,10 +929,10 @@
                     "position": 21971346
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00002738871"
               },
               {
-                "id": "ENSE00003475459",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -936,10 +945,10 @@
                     "position": 21971208
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00003475459"
               },
               {
-                "id": "ENSE00001947937",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -952,10 +961,10 @@
                     "position": 21969793
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001947937"
               },
               {
-                "id": "ENSP00000466887",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -968,12 +977,12 @@
                     "position": 21971205
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSP00000466887"
               }
             ]
           },
           {
-            "id": "ENST00000577854",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -987,9 +996,9 @@
               },
               "strand": -1
             },
+            "id": "ENST00000577854",
             "features": [
               {
-                "id": "ENSE00002698371",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1002,10 +1011,10 @@
                     "position": 21970467
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00002698371"
               },
               {
-                "id": "ENSE00002710477",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1018,12 +1027,12 @@
                     "position": 21969793
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00002710477"
               }
             ]
           },
           {
-            "id": "ENST00000380150",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1037,9 +1046,9 @@
               },
               "strand": -1
             },
+            "id": "ENST00000380150",
             "features": [
               {
-                "id": "ENSE00003662052",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1052,10 +1061,10 @@
                     "position": 21971332
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00003662052"
               },
               {
-                "id": "ENSE00001939805",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1068,12 +1077,12 @@
                     "position": 21970503
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001939805"
               }
             ]
           },
           {
-            "id": "ENST00000497750",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -1087,13 +1096,14 @@
               },
               "strand": -1
             },
+            "id": "ENST00000497750",
             "qualifiers": {
               "assembly_name": "GRCh38",
+              "tag": "basic",
               "version": "1"
             },
             "features": [
               {
-                "id": "ENSE00001907639",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1106,10 +1116,10 @@
                     "position": 21971400
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001907639"
               },
               {
-                "id": "ENSE00001888208",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1122,10 +1132,10 @@
                     "position": 21971208
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001888208"
               },
               {
-                "id": "ENSP00000468510",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -1138,12 +1148,12 @@
                     "position": 21971205
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSP00000468510"
               }
             ]
           },
           {
-            "id": "ENST00000470819",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1157,9 +1167,9 @@
               },
               "strand": -1
             },
+            "id": "ENST00000470819",
             "features": [
               {
-                "id": "ENSE00001925197",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1172,10 +1182,10 @@
                     "position": 21994873
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001925197"
               },
               {
-                "id": "ENSE00001955372",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1188,10 +1198,10 @@
                     "position": 21994068
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001955372"
               },
               {
-                "id": "ENSE00001943092",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1204,14 +1214,14 @@
                     "position": 21989955
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001943092"
               }
             ]
           }
         ]
       },
       {
-        "id": "ENSG00000240498",
         "type": "ncRNA_gene",
         "location": {
           "type": "range",
@@ -1225,6 +1235,7 @@
           },
           "strand": 1
         },
+        "id": "ENSG00000240498",
         "qualifiers": {
           "name": "CDKN2B-AS1",
           "assembly_name": "GRCh38",
@@ -1232,7 +1243,6 @@
         },
         "features": [
           {
-            "id": "ENST00000468603",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1246,9 +1256,9 @@
               },
               "strand": 1
             },
+            "id": "ENST00000468603",
             "features": [
               {
-                "id": "ENSE00003842495",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1261,10 +1271,10 @@
                     "position": 21994390
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00003842495"
               },
               {
-                "id": "ENSE00001839178",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1277,12 +1287,12 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00001839178"
               }
             ]
           },
           {
-            "id": "ENST00000651588",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1296,9 +1306,9 @@
               },
               "strand": 1
             },
+            "id": "ENST00000651588",
             "features": [
               {
-                "id": "ENSE00003845590",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1311,12 +1321,12 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00003845590"
               }
             ]
           },
           {
-            "id": "ENST00000652420",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1330,9 +1340,9 @@
               },
               "strand": 1
             },
+            "id": "ENST00000652420",
             "features": [
               {
-                "id": "ENSE00001884148",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1345,10 +1355,10 @@
                     "position": 21994849
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00001884148"
               },
               {
-                "id": "ENSE00001839178",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1361,12 +1371,46 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00001839178"
               }
             ]
           },
           {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994790
+              },
+              "end": {
+                "type": "point",
+                "position": 22077890
+              },
+              "strand": 1
+            },
             "id": "ENST00000584351",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994790
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00001681245"
+              }
+            ]
+          },
+          {
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1380,27 +1424,27 @@
               },
               "strand": 1
             },
-            "features": [
-              {
-                "id": "ENSE00001681245",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21994790
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
             "id": "ENST00000583719",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994790
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00001681245"
+              }
+            ]
+          },
+          {
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1414,43 +1458,9 @@
               },
               "strand": 1
             },
-            "features": [
-              {
-                "id": "ENSE00001681245",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21994790
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
             "id": "ENST00000580467",
-            "type": "ncRNA",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 21994790
-              },
-              "end": {
-                "type": "point",
-                "position": 22077890
-              },
-              "strand": 1
-            },
             "features": [
               {
-                "id": "ENSE00001681245",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1463,12 +1473,12 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00001681245"
               }
             ]
           },
           {
-            "id": "ENST00000585267",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1482,9 +1492,9 @@
               },
               "strand": 1
             },
+            "id": "ENST00000585267",
             "features": [
               {
-                "id": "ENSE00001681245",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1497,12 +1507,12 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00001681245"
               }
             ]
           },
           {
-            "id": "ENST00000580576",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1516,9 +1526,9 @@
               },
               "strand": 1
             },
+            "id": "ENST00000580576",
             "features": [
               {
-                "id": "ENSE00001681245",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1531,12 +1541,12 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00001681245"
               }
             ]
           },
           {
-            "id": "ENST00000428597",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1550,9 +1560,9 @@
               },
               "strand": 1
             },
+            "id": "ENST00000428597",
             "features": [
               {
-                "id": "ENSE00001681245",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1565,12 +1575,12 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00001681245"
               }
             ]
           },
           {
-            "id": "ENST00000455933",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1584,9 +1594,9 @@
               },
               "strand": 1
             },
+            "id": "ENST00000455933",
             "features": [
               {
-                "id": "ENSE00003850005",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1599,12 +1609,12 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00003850005"
               }
             ]
           },
           {
-            "id": "ENST00000645313",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1618,9 +1628,9 @@
               },
               "strand": 1
             },
+            "id": "ENST00000645313",
             "features": [
               {
-                "id": "ENSE00003819285",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1633,12 +1643,12 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00003819285"
               }
             ]
           },
           {
-            "id": "ENST00000582301",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1652,9 +1662,9 @@
               },
               "strand": 1
             },
+            "id": "ENST00000582301",
             "features": [
               {
-                "id": "ENSE00002701784",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1667,12 +1677,46 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00002701784"
               }
             ]
           },
           {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 21994901
+              },
+              "end": {
+                "type": "point",
+                "position": 22120572
+              },
+              "strand": 1
+            },
             "id": "ENST00000582072",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994901
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00002701784"
+              }
+            ]
+          },
+          {
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1686,27 +1730,27 @@
               },
               "strand": 1
             },
-            "features": [
-              {
-                "id": "ENSE00002701784",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21994901
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
             "id": "ENST00000584816",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994901
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00002701784"
+              }
+            ]
+          },
+          {
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1720,27 +1764,27 @@
               },
               "strand": 1
             },
-            "features": [
-              {
-                "id": "ENSE00002701784",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21994901
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
             "id": "ENST00000584020",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994901
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00002701784"
+              }
+            ]
+          },
+          {
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1754,27 +1798,27 @@
               },
               "strand": 1
             },
-            "features": [
-              {
-                "id": "ENSE00002701784",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21994901
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
             "id": "ENST00000577551",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994901
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00002701784"
+              }
+            ]
+          },
+          {
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1788,27 +1832,27 @@
               },
               "strand": 1
             },
-            "features": [
-              {
-                "id": "ENSE00002701784",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21994901
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
             "id": "ENST00000584637",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21994901
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21995161
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00002701784"
+              }
+            ]
+          },
+          {
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1822,43 +1866,9 @@
               },
               "strand": 1
             },
-            "features": [
-              {
-                "id": "ENSE00002701784",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 21994901
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 21995161
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
             "id": "ENST00000581051",
-            "type": "ncRNA",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 21994901
-              },
-              "end": {
-                "type": "point",
-                "position": 22120572
-              },
-              "strand": 1
-            },
             "features": [
               {
-                "id": "ENSE00002701784",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1871,12 +1881,12 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00002701784"
               }
             ]
           },
           {
-            "id": "ENST00000421632",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1890,9 +1900,9 @@
               },
               "strand": 1
             },
+            "id": "ENST00000421632",
             "features": [
               {
-                "id": "ENSE00002699013",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1905,12 +1915,12 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00002699013"
               }
             ]
           },
           {
-            "id": "ENST00000651904",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1924,9 +1934,9 @@
               },
               "strand": 1
             },
+            "id": "ENST00000651904",
             "features": [
               {
-                "id": "ENSE00003842012",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1939,12 +1949,12 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00003842012"
               }
             ]
           },
           {
-            "id": "ENST00000651784",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1958,9 +1968,9 @@
               },
               "strand": 1
             },
+            "id": "ENST00000651784",
             "features": [
               {
-                "id": "ENSE00003847469",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -1973,12 +1983,12 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00003847469"
               }
             ]
           },
           {
-            "id": "ENST00000650946",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -1992,9 +2002,9 @@
               },
               "strand": 1
             },
+            "id": "ENST00000650946",
             "features": [
               {
-                "id": "ENSE00003846477",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -2007,7 +2017,8 @@
                     "position": 21995161
                   },
                   "strand": 1
-                }
+                },
+                "id": "ENSE00003846477"
               }
             ]
           }
