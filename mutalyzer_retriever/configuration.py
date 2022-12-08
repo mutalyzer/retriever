@@ -38,6 +38,8 @@ def setup_settings():
                 loaded_settings[k] = True
             elif loaded_settings[k] in {"no", "false", "0"}:
                 loaded_settings[k] = False
+            elif loaded_settings[k].isnumeric():
+                loaded_settings[k] = int(loaded_settings[k])
         settings.update(loaded_settings)
 
     return settings
@@ -45,12 +47,13 @@ def setup_settings():
 
 settings = setup_settings()
 
+
 def cache_dir():
     return settings.get("MUTALYZER_CACHE_DIR")
 
 
 def cache_url():
-   return settings.get("MUTALYZER_API_URL")
+    return settings.get("MUTALYZER_API_URL")
 
 
 def lru_cache_maxsize():

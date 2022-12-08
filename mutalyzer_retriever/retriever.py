@@ -6,7 +6,7 @@ from pathlib import Path
 import requests
 
 from . import parser
-from .configuration import cache_dir, cache_url, lru_cache_maxsize, cache_add
+from .configuration import cache_add, cache_dir, cache_url, lru_cache_maxsize
 from .sources import ensembl, lrg, ncbi
 
 
@@ -175,7 +175,9 @@ def retrieve_model(
             return model["annotations"]
     elif reference_type == "gff3":
         if model_type == "all":
-            annotations = parser.parse(reference_content, reference_type, reference_source)
+            annotations = parser.parse(
+                reference_content, reference_type, reference_source
+            )
             fasta = retrieve_raw(
                 reference_id, reference_source, "fasta", size_off, timeout=timeout
             )
@@ -300,10 +302,14 @@ def get_reference_model(r_id, s_id=None):
     model = retrieve_model(r_id, timeout=10)
 
     cache_path = cache_dir()
-    print(cache_add())
+    # print(cache_add())
     if cache_add() and cache_path:
         # print("cache")
-        if model.get("annotations") and model.get("sequence") and model["sequence"].get("seq"):
+        if (
+            model.get("annotations")
+            and model.get("sequence")
+            and model["sequence"].get("seq")
+        ):
             with open(Path(cache_path) / (r_id + ".annotations"), "w") as f:
                 f.write(json.dumps(model["annotations"]))
             with open(Path(cache_path) / (r_id + ".sequence"), "w") as f:
