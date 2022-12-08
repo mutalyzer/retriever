@@ -1,5 +1,8 @@
 import json
 
+import requests
+
+from .configuration import cache_url
 from .request import Http400, RequestErrors, request
 
 
@@ -264,6 +267,43 @@ def _get_related_ensembl(reference_id, timeout=1):
             ):
                 related.add((xref.get("primary_id"),))
         return {"ensembl": related}
+
+
+def get_cds_to_mrna(cds_id, timeout=10):
+    def _get_from_api_cache():
+        api_url = cache_url()
+        if api_url:
+            url = api_url + "/cds_to_mrna/" + cds_id
+            print(url)
+            try:
+                annotations = json.loads(requests.get(url).text)
+            except Exception:
+                return
+            if annotations.get("mrna_id"):
+                return annotations["mrna_id"]
+
+    mrna_id = _get_from_api_cache()
+    if mrna_id:
+        return mrna_id
+
+    ncbi = _fetch_ncbi_datasets_gene_accession(cds_id, timeout)
+    if (
+        ncbi.get("genes")
+        and len(ncbi["genes"]) == 1
+        and ncbi["genes"][0].get("gene")
+        and ncbi["genes"][0]["gene"].get("transcripts")
+    ):
+        transcripts = ncbi["genes"][0]["gene"]["transcripts"]
+        mrna_ids = set()
+        for transcript in transcripts:
+            if (
+                transcript.get("accession_version")
+                and transcript.get("protein")
+                and transcript["protein"].get("accession_version") == cds_id
+            ):
+                print("found", transcript["accession_version"])
+                mrna_ids.add(transcript["accession_version"])
+        return sorted(list(mrna_ids))
 
 
 def get_related(reference_id, timeout=1):

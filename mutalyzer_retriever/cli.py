@@ -7,7 +7,7 @@ import json
 import sys
 
 from . import usage, version
-from .related import get_related
+from .related import get_cds_to_mrna, get_related
 from .retriever import retrieve_model, retrieve_model_from_file, retrieve_raw
 from .sources.ncbi_assemblies import Assemblies, annotations_summary
 
@@ -51,6 +51,10 @@ def _parse_args(args):
 
     parser.add_argument(
         "-r", "--related", help="retrieve related reference ids", action="store_true"
+    )
+
+    parser.add_argument(
+        "--mrna_id", help="retrieve the mrna_id from the cds_id", action="store_true"
     )
 
     parser.add_argument("--timeout", help="timeout", type=int)
@@ -136,7 +140,14 @@ def _from_file(args):
 
 
 def _retrieve_assemblies(args):
-    Assemblies(args.input, args.output, args.downloaded, args.ref_id_start, args.split, args.only_annotations)
+    Assemblies(
+        args.input,
+        args.output,
+        args.downloaded,
+        args.ref_id_start,
+        args.split,
+        args.only_annotations,
+    )
 
 
 def _retrieve_model(args):
@@ -154,6 +165,14 @@ def _retrieve_model(args):
 def _related(args):
     output = get_related(
         reference_id=args.id,
+        timeout=args.timeout,
+    )
+    print(json.dumps(output, indent=args.indent))
+
+
+def _cds_to_mrna(args):
+    output = get_cds_to_mrna(
+        cds_id=args.id,
         timeout=args.timeout,
     )
     print(json.dumps(output, indent=args.indent))
@@ -185,6 +204,8 @@ def _endpoint(args):
         return _retrieve_model
     elif args.related:
         return _related
+    elif args.mrna_id:
+        return _cds_to_mrna
     else:
         return _retrieve_raw
 

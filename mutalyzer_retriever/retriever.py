@@ -288,23 +288,17 @@ def get_overlap_models(r_id, l_min, l_max):
 
 def get_reference_model(r_id, s_id=None):
 
-    # print(r_id, s_id)
     model = get_from_api_cache(r_id, s_id)
     if model:
-        # print(" - from the api cache")
         model["annotations"]["source"] = "api_cache"
         return model
     model = get_from_file_cache(r_id)
     if model:
-        # print(" - from the file cache")
         return model
-    # print(" - from outside")
     model = retrieve_model(r_id, timeout=10)
 
     cache_path = cache_dir()
-    # print(cache_add())
     if cache_add() and cache_path:
-        # print("cache")
         if (
             model.get("annotations")
             and model.get("sequence")
@@ -339,15 +333,10 @@ def get_reference_model_segmented(
 
     model = _get_from_api_cache()
     if model:
-        # print("- get reference model from api cache")
         return model
-    # print("not from api cache")
     model = get_from_file_cache(reference_id)
     if model is None:
-        # print("- not from the cache")
         model = retrieve_model(reference_id, timeout=10)
-    # else:
-    # print("- get reference model from file cache")
 
     if feature_id is not None:
         return extract_feature_model(
