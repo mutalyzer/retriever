@@ -82,9 +82,7 @@ def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1
     except (NameError, ConnectionError, ValueError) as e:
         status["ncbi"]["errors"].append(e)
     except Exception as e:
-        print("\n\n\n---\n\n\n")
-        print(e)
-        raise (e)
+        raise e
     else:
         return reference_content, reference_type, "ncbi"
 

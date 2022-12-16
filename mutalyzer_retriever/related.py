@@ -274,7 +274,6 @@ def get_cds_to_mrna(cds_id, timeout=10):
         api_url = cache_url()
         if api_url:
             url = api_url + "/cds_to_mrna/" + cds_id
-            print(url)
             try:
                 annotations = json.loads(requests.get(url).text)
             except Exception:
