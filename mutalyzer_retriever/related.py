@@ -300,7 +300,6 @@ def get_cds_to_mrna(cds_id, timeout=10):
                 and transcript.get("protein")
                 and transcript["protein"].get("accession_version") == cds_id
             ):
-                print("found", transcript["accession_version"])
                 mrna_ids.add(transcript["accession_version"])
         return sorted(list(mrna_ids))
 
