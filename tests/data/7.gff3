@@ -1,0 +1,8 @@
+##sequence-region X51700.1 1 437
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9913
+X51700.1	EMBL	region	1	437	.	+	.	ID=X51700.1:1..437;Dbxref=taxon:9913;clone=bBGP-3;clone-lib=Zap-bb;gbkey=Src;mol_type=mRNA;tissue-type=bone matrix
+X51700.1	EMBL	CDS	28	330	.	+	0	ID=cds-CAA35997.1;Dbxref=GOA:P02820,InterPro:IPR000294,InterPro:IPR002384,PDB:1Q3M,UniProtKB/Swiss-Prot:P02820,NCBI_GP:CAA35997.1;Name=CAA35997.1;Note=bone Gla precursor (100 AA);gbkey=CDS;product=CAA35997.1;protein_id=CAA35997.1
+X51700.1	EMBL	sequence_feature	420	425	.	+	.	ID=id-X51700.1:420..425;Note=polyadenylation signal;gbkey=misc_feature
+X51700.1	EMBL	polyA_site	437	437	.	+	.	ID=id-X51700.1:437..437;Note=polyadenylation site;gbkey=polyA_site
+
+

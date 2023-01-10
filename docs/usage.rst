@@ -30,6 +30,37 @@ preferred indentation with ``--indent``.
         "type": "record",
     ...
 
+
+Output directory and split the model
+------------------------------------
+
+Specify an output directory with ``--output``.
+
+    $ mutalyzer_retriever --id "NG_012337.1" -p --indent 2 --output .
+    $ less NG_012337.1
+    {
+      "annotations": {
+        "id": "NG_012337.1",
+        "type": "record",
+    ...
+
+
+Split the model between annotations and sequence with ``--split``.
+
+.. code-block:: console
+
+    $ mutalyzer_retriever --id "NG_012337.1" -p --indent 2 --output . --split
+    $ less NG_012337.1.annotations
+    {
+      "id": "NG_012337.1",
+      "type": "record",
+    ...
+    $ less NG_012337.1.sequence
+    GGGCTTGGTTCTACCATATCTCTACTTTGTGTTTATGTTTGTGTATGCATGTACTCCAAAGTCTT
+    ...
+
+
+
 Choose the retrieval source
 ---------------------------
 

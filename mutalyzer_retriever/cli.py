@@ -7,9 +7,9 @@ import json
 import sys
 
 from . import usage, version
-from .sources.ncbi_assemblies import Assemblies, annotations_summary
-from .related import get_related
+from .related import get_cds_to_mrna, get_related
 from .retriever import retrieve_model, retrieve_model_from_file, retrieve_raw
+from .sources.ncbi_assemblies import Assemblies, annotations_summary
 
 
 def _parse_args(args):
@@ -53,6 +53,10 @@ def _parse_args(args):
         "-r", "--related", help="retrieve related reference ids", action="store_true"
     )
 
+    parser.add_argument(
+        "--mrna_id", help="retrieve the mrna_id from the cds_id", action="store_true"
+    )
+
     parser.add_argument("--timeout", help="timeout", type=int)
 
     parser.add_argument("--indent", help="indentation spaces", default=None, type=int)
@@ -60,6 +64,12 @@ def _parse_args(args):
     parser.add_argument(
         "--sizeoff", help="do not consider file size", action="store_true"
     )
+
+    parser.add_argument("--output", help="directory output path")
+
+    parser.add_argument("--split", action="store_true")
+
+    parser.add_argument("--only_annotations", action="store_true")
 
     subparsers = parser.add_subparsers(dest="command")
 
@@ -79,14 +89,26 @@ def _parse_args(args):
         default=False,
     )
 
-    parser_ncbi_assemblies = subparsers.add_parser("ncbi_assemblies", help="retrieve NCBI genomic annotations (including history)")
+    parser_ncbi_assemblies = subparsers.add_parser(
+        "ncbi_assemblies", help="retrieve NCBI genomic annotations (including history)"
+    )
 
-    parser_ncbi_assemblies.add_argument("--input", help="input (downloaded) directory path")
-    parser_ncbi_assemblies.add_argument("--output", help="output (models) directory path")
-    parser_ncbi_assemblies.add_argument("--downloaded", help="already downloaded", action="store_true")
-    parser_ncbi_assemblies.add_argument("--ref_id_start", help="reference id should start with")
+    parser_ncbi_assemblies.add_argument(
+        "--input", help="input (downloaded) directory path"
+    )
+    parser_ncbi_assemblies.add_argument(
+        "--output", help="output (models) directory path"
+    )
+    parser_ncbi_assemblies.add_argument(
+        "--downloaded", help="already downloaded", action="store_true"
+    )
+    parser_ncbi_assemblies.add_argument(
+        "--ref_id_start", help="reference id should start with"
+    )
 
-    parser_assemblies_summary = subparsers.add_parser("summary", help="gather references summary")
+    parser_assemblies_summary = subparsers.add_parser(
+        "summary", help="gather references summary"
+    )
 
     parser_assemblies_summary.add_argument("--directory", help="models directory path")
     parser_assemblies_summary.add_argument("--ref_id_start")
@@ -94,17 +116,42 @@ def _parse_args(args):
     return parser.parse_args(args)
 
 
+def _write_model(model, args):
+    if args.split:
+        with open(f"{args.output}/{args.id}.annotations", "w") as f:
+            f.write(json.dumps(model["annotations"], indent=args.indent))
+        with open(f"{args.output}/{args.id}.sequence", "w") as f:
+            f.write(model["sequence"]["seq"])
+    else:
+        with open(f"{args.output}/{args.id}", "w") as f:
+            f.write(json.dumps(model, indent=args.indent))
+
+
+def _output_model(model, args):
+    if args.output:
+        _write_model(model, args)
+    else:
+        print(json.dumps(model, indent=args.indent))
+
+
 def _from_file(args):
     model = retrieve_model_from_file(paths=args.paths, is_lrg=args.is_lrg)
-    print(json.dumps(model, indent=args.indent))
+    _output_model(model, args)
 
 
 def _retrieve_assemblies(args):
-    Assemblies(args.input, args.output, args.downloaded, args.ref_id_start)
+    Assemblies(
+        args.input,
+        args.output,
+        args.downloaded,
+        args.ref_id_start,
+        args.split,
+        args.only_annotations,
+    )
 
 
 def _retrieve_model(args):
-    output = retrieve_model(
+    model = retrieve_model(
         reference_id=args.id,
         reference_source=args.source,
         reference_type=args.type,
@@ -112,12 +159,20 @@ def _retrieve_model(args):
         size_off=args.sizeoff,
         timeout=args.timeout,
     )
-    print(json.dumps(output, indent=args.indent))
+    _output_model(model, args)
 
 
 def _related(args):
     output = get_related(
         reference_id=args.id,
+        timeout=args.timeout,
+    )
+    print(json.dumps(output, indent=args.indent))
+
+
+def _cds_to_mrna(args):
+    output = get_cds_to_mrna(
+        cds_id=args.id,
         timeout=args.timeout,
     )
     print(json.dumps(output, indent=args.indent))
@@ -139,7 +194,6 @@ def _assemblies_summary(args):
 
 
 def _endpoint(args):
-
     if args.command == "from_file":
         return _from_file
     elif args.command == "ncbi_assemblies":
@@ -150,6 +204,8 @@ def _endpoint(args):
         return _retrieve_model
     elif args.related:
         return _related
+    elif args.mrna_id:
+        return _cds_to_mrna
     else:
         return _retrieve_raw
 

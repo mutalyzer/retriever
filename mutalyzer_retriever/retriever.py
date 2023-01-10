@@ -1,4 +1,12 @@
+import json
+from copy import deepcopy
+from functools import lru_cache
+from pathlib import Path
+
+import requests
+
 from . import parser
+from .configuration import cache_add, cache_dir, cache_url, lru_cache_maxsize
 from .sources import ensembl, lrg, ncbi
 
 
@@ -73,6 +81,8 @@ def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1
         )
     except (NameError, ConnectionError, ValueError) as e:
         status["ncbi"]["errors"].append(e)
+    except Exception as e:
+        raise e
     else:
         return reference_content, reference_type, "ncbi"
 
@@ -89,6 +99,7 @@ def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1
     _raise_error(status)
 
 
+@lru_cache(maxsize=lru_cache_maxsize())
 def retrieve_raw(
     reference_id,
     reference_source=None,
@@ -162,13 +173,14 @@ def retrieve_model(
             return model["annotations"]
     elif reference_type == "gff3":
         if model_type == "all":
+            annotations = parser.parse(
+                reference_content, reference_type, reference_source
+            )
             fasta = retrieve_raw(
                 reference_id, reference_source, "fasta", size_off, timeout=timeout
             )
             return {
-                "annotations": parser.parse(
-                    reference_content, reference_type, reference_source
-                ),
+                "annotations": annotations,
                 "sequence": parser.parse(fasta[0], "fasta"),
             }
         elif model_type == "sequence":
@@ -211,3 +223,179 @@ def retrieve_model_from_file(paths=[], is_lrg=False):
         model["sequence"] = parser.parse(sequence, "fasta")
 
     return model
+
+
+@lru_cache(maxsize=lru_cache_maxsize())
+def get_annotations_from_file_cache(r_id):
+    cache_path = cache_dir()
+    if cache_path and (Path(cache_path) / (r_id + ".annotations")).is_file():
+        with open(Path(cache_path) / (r_id + ".annotations")) as json_file:
+            return json.load(json_file)
+
+
+@lru_cache(maxsize=lru_cache_maxsize())
+def get_sequence_from_file_cache(r_id):
+    cache_path = cache_dir()
+    if cache_path and (Path(cache_path) / (r_id + ".sequence")).is_file():
+        with open(Path(cache_path) / (r_id + ".sequence")) as seq_file:
+            return {"seq": seq_file.read()}
+
+
+def get_from_api_cache(r_id, s_id):
+    api_url = cache_url()
+    if api_url:
+        url = api_url + "/reference/" + r_id
+        if s_id:
+            url += f"?selector_id={s_id}"
+        try:
+            annotations = requests.get(url).text
+            annotations = json.loads(annotations)
+            sequence = get_sequence_from_file_cache(r_id)
+        except Exception:
+            return
+
+        if annotations and sequence:
+            return {
+                "annotations": annotations,
+                "sequence": get_sequence_from_file_cache(r_id),
+            }
+
+
+def get_from_file_cache(r_id):
+    annotations = get_annotations_from_file_cache(r_id)
+    sequence = get_sequence_from_file_cache(r_id)
+    if annotations and sequence:
+        return {"annotations": annotations, "sequence": sequence}
+
+
+def get_overlap_models(r_id, l_min, l_max):
+    api_url = cache_url()
+    if api_url:
+        url = f"{api_url}/overlap/{r_id}?min={l_min}&max={l_max}"
+        try:
+            # print("- get overlap models from api cache")
+            annotations = requests.get(url).text
+            annotations = json.loads(annotations)
+        except Exception:
+            return
+        return annotations
+    model = get_from_file_cache(r_id)
+    if model:
+        return model
+
+
+def get_reference_model(r_id, s_id=None):
+
+    model = get_from_api_cache(r_id, s_id)
+    if model:
+        model["annotations"]["source"] = "api_cache"
+        return model
+    model = get_from_file_cache(r_id)
+    if model:
+        return model
+    model = retrieve_model(r_id, timeout=10)
+
+    cache_path = cache_dir()
+    if cache_add() and cache_path:
+        if (
+            model.get("annotations")
+            and model.get("sequence")
+            and model["sequence"].get("seq")
+        ):
+            with open(Path(cache_path) / (r_id + ".annotations"), "w") as f:
+                f.write(json.dumps(model["annotations"]))
+            with open(Path(cache_path) / (r_id + ".sequence"), "w") as f:
+                f.write(model["sequence"]["seq"])
+    return model
+
+
+def get_reference_model_segmented(
+    reference_id, feature_id=None, siblings=False, ancestors=True, descendants=True
+):
+    def _get_from_api_cache():
+        api_url = cache_url()
+        if api_url:
+            if feature_id is not None:
+                args = f"&feature_ud={descendants}"
+            else:
+                args = ""
+            args += (
+                f"&siblings={siblings}&ancestors={ancestors}&descendants={descendants}"
+            )
+            url = f"{api_url}/reference_model_segmented/{reference_id}{args}"
+            try:
+                annotations = requests.get(url).text
+                return json.loads(annotations)
+            except Exception:
+                return
+
+    model = _get_from_api_cache()
+    if model:
+        return model
+    model = get_from_file_cache(reference_id)
+    if model is None:
+        model = retrieve_model(reference_id, timeout=10)
+
+    if feature_id is not None:
+        return extract_feature_model(
+            model["annotations"],
+            feature_id,
+            siblings,
+            ancestors,
+            descendants,
+        )[0]
+    return model
+
+
+def get_chromosome_from_selector(assembly_id, selector_id):
+    api_url = cache_url()
+    if api_url:
+        url = f"{api_url}/chromosome_from_selector/{selector_id}?assembly_id={assembly_id}"
+        try:
+            response = requests.get(url).text
+            return json.loads(response)["id"]
+        except Exception:
+            return
+
+
+def extract_feature_model(
+    feature, feature_id, siblings=False, ancestors=True, descendants=True
+):
+    output_model = None
+    just_found = False
+    if feature.get("id") is not None and feature_id == feature["id"]:
+        output_model = deepcopy(feature)
+        if not descendants:
+            if output_model.get("features"):
+                output_model.pop("features")
+            return output_model, True, True
+        return output_model, True, False
+    elif feature.get("features"):
+        for f in feature["features"]:
+            output_model, just_found, propagate = extract_feature_model(
+                f, feature_id, siblings, ancestors, descendants
+            )
+            if output_model:
+                break
+        if output_model and just_found:
+            if siblings:
+                output_model = deepcopy(feature["features"])
+            if not ancestors:
+                return output_model, False, True
+        elif propagate:
+            return output_model, False, True
+    if output_model is not None:
+        if isinstance(output_model, dict):
+            output_model = [output_model]
+        return (
+            {
+                **{
+                    k: deepcopy(feature[k])
+                    for k in list(set(feature.keys()) - {"features"})
+                },
+                **{"features": output_model},
+            },
+            False,
+            False,
+        )
+    return None, False, False

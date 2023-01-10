@@ -175,6 +175,8 @@ def fetch_gff3(reference_id, db, timeout=1):
         else:
             raise ConnectionError(f_e("gff3", e))
     else:
+        if response.startswith("Error"):
+            raise NameError(f_e("gff3"))
         return response
 
 

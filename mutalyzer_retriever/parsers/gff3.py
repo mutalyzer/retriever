@@ -78,6 +78,7 @@ QUALIFIERS = {
     "mRNA": {
         "version": "version",
         "assembly_name": "assembly_name",
+        "tag": "tag",
     },
     "snRNA": {
         "version": "version",
@@ -288,10 +289,11 @@ def _get_rna_features(record, mol_type):
 
     if features:
         exon_positions = []
-        for sub_feature in features[0]["features"]:
-            if sub_feature["type"] == "exon":
-                exon_positions.append(sub_feature["location"]["start"]["position"])
-                exon_positions.append(sub_feature["location"]["end"]["position"])
+        if features[0].get("features"):
+            for sub_feature in features[0]["features"]:
+                if sub_feature["type"] == "exon":
+                    exon_positions.append(sub_feature["location"]["start"]["position"])
+                    exon_positions.append(sub_feature["location"]["end"]["position"])
         if exon_positions:
             rna_model["location"] = make_location(
                 sorted(exon_positions)[0], sorted(exon_positions)[-1]
@@ -301,8 +303,9 @@ def _get_rna_features(record, mol_type):
                 record.annotations["sequence-region"][0][1],
                 record.annotations["sequence-region"][0][2],
             )
-        rna_model["features"] = features[0]["features"]
-        features[0]["features"] = [rna_model]
+        if features[0].get("features"):
+            rna_model["features"] = features[0]["features"]
+            features[0]["features"] = [rna_model]
         return features
 
 

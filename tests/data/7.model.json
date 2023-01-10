@@ -1,0 +1,43 @@
+{
+  "annotations": {
+    "id": "X51700.1",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 437
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:9913",
+      "mol_type": "mRNA"
+    },
+    "features": [
+      {
+        "type": "CDS",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 27
+          },
+          "end": {
+            "type": "point",
+            "position": 330
+          },
+          "strand": 1
+        },
+        "id": "CAA35997.1"
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "GTCCACGCAGCCGCTGACAGACACACCATGAGAACCCCCATGCTGCTCGCCCTGCTGGCCCTGGCCACACTCTGCCTCGCTGGCCGGGCAGATGCAAAGCCTGGTGATGCAGAGTCGGGCAAAGGCGCAGCCTTCGTGTCCAAGCAGGAGGGCAGCGAGGTGGTGAAGAGACTCAGGCGCTACCTGGACCACTGGCTGGGAGCCCCAGCCCCCTACCCAGATCCGCTGGAGCCCAAGAGGGAGGTGTGTGAGCTCAACCCTGACTGTGACGAGCTAGCTGACCACATCGGCTTCCAGGAAGCCTATCGGCGCTTCTACGGCCCAGTCTAGAGCTTGCAGCCCTGCCCACCTGGCTGGCAGCCCCCAGCTCTGGCTTCTCTCCAGGACCCCTCCCCTCCCCGTCATCCCCGCTGCTCTAGAATAAACTCCAGAAGAGG",
+    "description": "X51700.1 Bos taurus mRNA for bone Gla protein"
+  }
+}

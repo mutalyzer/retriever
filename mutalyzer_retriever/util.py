@@ -1,5 +1,7 @@
-def f_e(source, e, extra=None):
-    output = f"({source}) ({str(e)})"
+def f_e(source, e=None, extra=None):
+    output = f"({source})"
+    if e is not None:
+        output += f"({str(e)})"
     if extra is not None:
         output += f" ({extra})"
     return output

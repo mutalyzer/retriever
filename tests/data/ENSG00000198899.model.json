@@ -1,0 +1,241 @@
+{
+  "annotations": {
+    "id": "MT",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 8526
+      },
+      "end": {
+        "type": "point",
+        "position": 9207
+      }
+    },
+    "features": [
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 8365
+          },
+          "end": {
+            "type": "point",
+            "position": 8572
+          },
+          "strand": 1
+        },
+        "id": "ENSG00000228253",
+        "qualifiers": {
+          "name": "MT-ATP8",
+          "assembly_name": "GRCh38",
+          "version": "1"
+        },
+        "features": [
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 8365
+              },
+              "end": {
+                "type": "point",
+                "position": 8572
+              },
+              "strand": 1
+            },
+            "id": "ENST00000361851",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "basic",
+              "version": "1"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 8365
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 8572
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00001435286"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 8365
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 8572
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000355265"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 8526
+          },
+          "end": {
+            "type": "point",
+            "position": 9207
+          },
+          "strand": 1
+        },
+        "id": "ENSG00000198899",
+        "qualifiers": {
+          "name": "MT-ATP6",
+          "assembly_name": "GRCh38",
+          "version": "2"
+        },
+        "features": [
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 8526
+              },
+              "end": {
+                "type": "point",
+                "position": 9207
+              },
+              "strand": 1
+            },
+            "id": "ENST00000361899",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 8526
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 9207
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00001727012"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 8526
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 9207
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000354632"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 9206
+          },
+          "end": {
+            "type": "point",
+            "position": 9990
+          },
+          "strand": 1
+        },
+        "id": "ENSG00000198938",
+        "qualifiers": {
+          "name": "MT-CO3",
+          "assembly_name": "GRCh38",
+          "version": "2"
+        },
+        "features": [
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 9206
+              },
+              "end": {
+                "type": "point",
+                "position": 9990
+              },
+              "strand": 1
+            },
+            "id": "ENST00000362079",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 9206
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 9990
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000354982"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "ATGAACGAAAATCTGTTCGCTTCATTCATTGCCCCCACAATCCTAGGCCTACCCGCCGCAGTACTGATCATTCTATTTCCCCCTCTATTGATCCCCACCTCCAAATATCTCATCAACAACCGACTAATCACCACCCAACAATGACTAATCAAACTAACCTCAAAACAAATGATAACCATACACAACACTAAAGGACGAACCTGATCTCTTATACTAGTATCCTTAATCATTTTTATTGCCACAACTAACCTCCTCGGACTCCTGCCTCACTCATTTACACCAACCACCCAACTATCTATAAACCTAGCCATGGCCATCCCCTTATGAGCGGGCACAGTGATTATAGGCTTTCGCTCTAAGATTAAAAATGCCCTAGCCCACTTCTTACCACAAGGCACACCTACACCCCTTATCCCCATACTAGTTATTATCGAAACCATCAGCCTACTCATTCAACCAATAGCCCTGGCCGTACGCCTAACCGCTAACATTACTGCAGGCCACCTACTCATGCACCTAATTGGAAGCGCCACCCTAGCAATATCAACCATTAACCTTCCCTCTACACTTATCATCTTCACAATTCTAATTCTACTGACTATCCTAGAAATCGCTGTCGCCTTAATCCAAGCCTACGTTTTCACACTTCTAGTAAGCCTCTACCTGCACGACAACACATAA",
+    "description": "ENSG00000198899.2 chromosome:GRCh38:MT:8527:9207:1"
+  }
+}

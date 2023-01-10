@@ -23,7 +23,6 @@
     },
     "features": [
       {
-        "id": "SELENON",
         "type": "gene",
         "location": {
           "type": "range",
@@ -37,6 +36,7 @@
           },
           "strand": 1
         },
+        "id": "SELENON",
         "qualifiers": {
           "name": "SELENON",
           "synonym": [
@@ -51,7 +51,6 @@
         },
         "features": [
           {
-            "id": "id-SELENON-1",
             "type": "exon",
             "location": {
               "type": "range",
@@ -64,10 +63,10 @@
                 "position": 5238
               },
               "strand": 1
-            }
+            },
+            "id": "id-SELENON-1"
           },
           {
-            "id": "id-SELENON-2",
             "type": "exon",
             "location": {
               "type": "range",
@@ -80,10 +79,10 @@
                 "position": 5985
               },
               "strand": 1
-            }
+            },
+            "id": "id-SELENON-2"
           },
           {
-            "id": "id-SELENON-3",
             "type": "exon",
             "location": {
               "type": "range",
@@ -96,10 +95,10 @@
                 "position": 6942
               },
               "strand": 1
-            }
+            },
+            "id": "id-SELENON-3"
           },
           {
-            "id": "id-SELENON-4",
             "type": "exon",
             "location": {
               "type": "range",
@@ -112,10 +111,10 @@
                 "position": 10100
               },
               "strand": 1
-            }
+            },
+            "id": "id-SELENON-4"
           },
           {
-            "id": "id-SELENON-5",
             "type": "exon",
             "location": {
               "type": "range",
@@ -128,10 +127,10 @@
                 "position": 13614
               },
               "strand": 1
-            }
+            },
+            "id": "id-SELENON-5"
           },
           {
-            "id": "id-SELENON-6",
             "type": "exon",
             "location": {
               "type": "range",
@@ -144,10 +143,10 @@
                 "position": 13975
               },
               "strand": 1
-            }
+            },
+            "id": "id-SELENON-6"
           },
           {
-            "id": "id-SELENON-7",
             "type": "exon",
             "location": {
               "type": "range",
@@ -160,10 +159,10 @@
                 "position": 14645
               },
               "strand": 1
-            }
+            },
+            "id": "id-SELENON-7"
           },
           {
-            "id": "id-SELENON-8",
             "type": "exon",
             "location": {
               "type": "range",
@@ -176,10 +175,10 @@
                 "position": 16360
               },
               "strand": 1
-            }
+            },
+            "id": "id-SELENON-8"
           },
           {
-            "id": "id-SELENON-9",
             "type": "exon",
             "location": {
               "type": "range",
@@ -192,10 +191,10 @@
                 "position": 16704
               },
               "strand": 1
-            }
+            },
+            "id": "id-SELENON-9"
           },
           {
-            "id": "id-SELENON-10",
             "type": "exon",
             "location": {
               "type": "range",
@@ -208,10 +207,10 @@
                 "position": 17617
               },
               "strand": 1
-            }
+            },
+            "id": "id-SELENON-10"
           },
           {
-            "id": "id-SELENON-11",
             "type": "exon",
             "location": {
               "type": "range",
@@ -224,10 +223,10 @@
                 "position": 18818
               },
               "strand": 1
-            }
+            },
+            "id": "id-SELENON-11"
           },
           {
-            "id": "id-SELENON-12",
             "type": "exon",
             "location": {
               "type": "range",
@@ -240,10 +239,10 @@
                 "position": 19003
               },
               "strand": 1
-            }
+            },
+            "id": "id-SELENON-12"
           },
           {
-            "id": "id-SELENON-13",
             "type": "exon",
             "location": {
               "type": "range",
@@ -256,10 +255,10 @@
                 "position": 23046
               },
               "strand": 1
-            }
+            },
+            "id": "id-SELENON-13"
           },
           {
-            "id": "NM_020451.3",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -273,9 +272,9 @@
               },
               "strand": 1
             },
+            "id": "NM_020451.3",
             "features": [
               {
-                "id": "exon-NM_020451.3-1",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -288,10 +287,10 @@
                     "position": 5238
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_020451.3-1"
               },
               {
-                "id": "exon-NM_020451.3-2",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -304,10 +303,10 @@
                     "position": 5985
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_020451.3-2"
               },
               {
-                "id": "exon-NM_020451.3-3",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -320,10 +319,10 @@
                     "position": 6942
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_020451.3-3"
               },
               {
-                "id": "exon-NM_020451.3-4",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -336,10 +335,10 @@
                     "position": 10100
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_020451.3-4"
               },
               {
-                "id": "exon-NM_020451.3-5",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -352,10 +351,10 @@
                     "position": 13614
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_020451.3-5"
               },
               {
-                "id": "exon-NM_020451.3-6",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -368,10 +367,10 @@
                     "position": 13975
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_020451.3-6"
               },
               {
-                "id": "exon-NM_020451.3-7",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -384,10 +383,10 @@
                     "position": 14645
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_020451.3-7"
               },
               {
-                "id": "exon-NM_020451.3-8",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -400,10 +399,10 @@
                     "position": 16360
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_020451.3-8"
               },
               {
-                "id": "exon-NM_020451.3-9",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -416,10 +415,10 @@
                     "position": 16704
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_020451.3-9"
               },
               {
-                "id": "exon-NM_020451.3-10",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -432,10 +431,10 @@
                     "position": 17617
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_020451.3-10"
               },
               {
-                "id": "exon-NM_020451.3-11",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -448,10 +447,10 @@
                     "position": 18818
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_020451.3-11"
               },
               {
-                "id": "exon-NM_020451.3-12",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -464,10 +463,10 @@
                     "position": 19003
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_020451.3-12"
               },
               {
-                "id": "exon-NM_020451.3-13",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -480,10 +479,10 @@
                     "position": 23046
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_020451.3-13"
               },
               {
-                "id": "NP_065184.2",
                 "type": "CDS",
                 "location": {
                   "type": "range",
@@ -497,6 +496,7 @@
                   },
                   "strand": 1
                 },
+                "id": "NP_065184.2",
                 "qualifiers": {
                   "translation_exception": {
                     "exceptions": [
@@ -539,7 +539,6 @@
         ]
       },
       {
-        "id": "MTFR1L",
         "type": "gene",
         "location": {
           "type": "range",
@@ -553,6 +552,7 @@
           },
           "strand": 1
         },
+        "id": "MTFR1L",
         "qualifiers": {
           "name": "MTFR1L",
           "synonym": [
@@ -565,7 +565,43 @@
         },
         "features": [
           {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 24778
+              },
+              "end": {
+                "type": "point",
+                "position": 24854
+              },
+              "strand": 1
+            },
             "id": "NM_001099625.2",
+            "qualifiers": {
+              "tag": "MANE Select"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 24778
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 24854
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001099625.2-1"
+              }
+            ]
+          },
+          {
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -579,43 +615,9 @@
               },
               "strand": 1
             },
-            "features": [
-              {
-                "id": "exon-NM_001099625.2-1",
-                "type": "exon",
-                "location": {
-                  "type": "range",
-                  "start": {
-                    "type": "point",
-                    "position": 24778
-                  },
-                  "end": {
-                    "type": "point",
-                    "position": 24854
-                  },
-                  "strand": 1
-                }
-              }
-            ]
-          },
-          {
             "id": "NM_001099627.2",
-            "type": "mRNA",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 24778
-              },
-              "end": {
-                "type": "point",
-                "position": 24854
-              },
-              "strand": 1
-            },
             "features": [
               {
-                "id": "exon-NM_001099627.2-1",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -628,12 +630,12 @@
                     "position": 24854
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_001099627.2-1"
               }
             ]
           },
           {
-            "id": "NM_019557.6",
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -647,9 +649,9 @@
               },
               "strand": 1
             },
+            "id": "NM_019557.6",
             "features": [
               {
-                "id": "exon-NM_019557.6-1",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -662,14 +664,14 @@
                     "position": 25047
                   },
                   "strand": 1
-                }
+                },
+                "id": "exon-NM_019557.6-1"
               }
             ]
           }
         ]
       },
       {
-        "id": "LOC646471",
         "type": "gene",
         "location": {
           "type": "range",
@@ -683,12 +685,12 @@
           },
           "strand": -1
         },
+        "id": "LOC646471",
         "qualifiers": {
           "name": "LOC646471"
         },
         "features": [
           {
-            "id": "NR_024498.1",
             "type": "ncRNA",
             "location": {
               "type": "range",
@@ -702,9 +704,9 @@
               },
               "strand": -1
             },
+            "id": "NR_024498.1",
             "features": [
               {
-                "id": "exon-NR_024498.1-1",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -717,7 +719,8 @@
                     "position": 25047
                   },
                   "strand": -1
-                }
+                },
+                "id": "exon-NR_024498.1-1"
               }
             ]
           }
