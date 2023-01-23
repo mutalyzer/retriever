@@ -208,17 +208,13 @@ def _get_feature_type(feature):
 
 
 def _get_feature_model(
-    feature, parent=None, skip=None, considered_types=CONSIDERED_TYPES
+    feature, considered_types=CONSIDERED_TYPES
 ):
     """
-    Recursively get the model for a particular feature. If some sub features
-    do not need to be included, specify them in the `skip` dictionary.
+    Recursively get the model for a particular feature.
 
     The method to combine CDSes into a single feature is also called.
     """
-    if skip and parent and isinstance(parent, SeqFeature):
-        if parent in skip.keys() and skip[parent] == feature.type:
-            return
     if feature.type in considered_types:
         model = {
             "type": _get_feature_type(feature),
@@ -237,8 +233,6 @@ def _get_feature_model(
             for sub_feature in feature.sub_features:
                 sub_feature_model = _get_feature_model(
                     feature=sub_feature,
-                    parent=feature,
-                    skip=skip,
                     considered_types=considered_types,
                 )
                 if sub_feature_model:
@@ -248,14 +242,12 @@ def _get_feature_model(
         return model
 
 
-def _get_record_features_model(record, skip=None, considered_types=CONSIDERED_TYPES):
+def _get_record_features_model(record, considered_types=CONSIDERED_TYPES):
     features = []
     if record.features:
         for feature in record.features:
             feature_model = _get_feature_model(
                 feature=feature,
-                parent=record,
-                skip=skip,
                 considered_types=considered_types,
             )
             if feature_model and feature_model.get("id"):
@@ -284,7 +276,7 @@ def _get_rna_features(record, mol_type):
     rna_model = {"id": record.id, "type": feature_type}
 
     features = _get_record_features_model(
-        record=record, skip={"gene": "exon"}, considered_types=["gene", "exon", "CDS"]
+        record=record, considered_types=["gene", "exon", "CDS"]
     )
 
     if features:
@@ -331,7 +323,7 @@ def _create_record_model(record, source=None):
             if "RNA" in region_model["qualifiers"]["mol_type"].upper():
                 features = _get_rna_features(record, mol_type)
     if features is None:
-        features = _get_record_features_model(record, skip={"gene": "exon"})
+        features = _get_record_features_model(record)
 
     model = {
         "id": record.id,

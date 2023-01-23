@@ -201,3 +201,4 @@ def fetch(reference_id, reference_type, size_on=True, timeout=1):
     raise ValueError(
         "NCBI fetch does not support '{}' reference type.".format(reference_type)
     )
+
