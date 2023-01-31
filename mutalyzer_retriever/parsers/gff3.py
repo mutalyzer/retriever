@@ -35,7 +35,6 @@ Notes:
 import io
 
 from BCBio.GFF import GFFParser
-from Bio.SeqFeature import SeqFeature
 from Bio.SeqUtils import seq1
 
 from ..util import make_location
