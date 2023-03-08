@@ -5,7 +5,7 @@ from ..request import Http400, RequestErrors, request
 from ..util import f_e
 
 
-def fetch_json(feature_id, api_base, timeout=1):
+def fetch_json(feature_id, api_base, timeout=10):
     url = f"{api_base}/lookup/id/{feature_id}"
     params = {"feature": ["gene", "transcript", "cds"], "expand": 1}
     headers = {"Content-Type": "application/json"}
@@ -25,7 +25,7 @@ def fetch_json(feature_id, api_base, timeout=1):
         return response
 
 
-def fetch_fasta(feature_id, api_base, timeout=1):
+def fetch_fasta(feature_id, api_base, timeout=10):
     url = f"{api_base}/sequence/id/{feature_id}"
     params = {"format": "fasta", "type": "genomic"}
     headers = {"Content-Type": "text/x-fasta"}
@@ -46,7 +46,7 @@ def fetch_fasta(feature_id, api_base, timeout=1):
         return response
 
 
-def fetch_gff3(feature_id, api_base, timeout=1):
+def fetch_gff3(feature_id, api_base, timeout=10):
     url = f"{api_base}/overlap/id/{feature_id}"
     params = {"feature": ["gene", "transcript", "cds", "exon"]}
     headers = {"Content-Type": "text/x-gff3"}
@@ -67,11 +67,11 @@ def fetch_gff3(feature_id, api_base, timeout=1):
         return response
 
 
-def _get_most_recent_version(reference_id, api_base, timeout=1):
+def _get_most_recent_version(reference_id, api_base, timeout=10):
     return int(_get_reference_information(reference_id, api_base, timeout)["version"])
 
 
-def _get_reference_information(reference_id, api_base, timeout=1):
+def _get_reference_information(reference_id, api_base, timeout=10):
     url = f"{api_base}/lookup/id/{reference_id}"
     headers = {"Content-Type": "application/json"}
     return json.loads(request(url, headers=headers, timeout=timeout))
@@ -102,7 +102,7 @@ def _in_grch37(r_id, r_version, r_info, timeout):
     return False
 
 
-def fetch(reference_id, reference_type=None, timeout=1):
+def fetch(reference_id, reference_type=None, timeout=10):
     api_base = settings.get("ENSEMBL_API")
     r_id, r_version = _get_id_and_version(reference_id)
 

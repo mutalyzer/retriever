@@ -155,7 +155,7 @@ def fetch_fasta(reference_id, db):
         return raw_data
 
 
-def fetch_gff3(reference_id, db, timeout=1):
+def fetch_gff3(reference_id, db, timeout=10):
     """
     Retrieve the gff3 for the corresponding reference ID.
 
@@ -180,7 +180,7 @@ def fetch_gff3(reference_id, db, timeout=1):
         return response
 
 
-def fetch(reference_id, reference_type, size_on=True, timeout=1):
+def fetch(reference_id, reference_type, size_on=True, timeout=10):
     """
     Fetch the raw annotation for the corresponding reference ID.
 

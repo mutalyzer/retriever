@@ -54,7 +54,7 @@ class NoSizeRetrieved(Exception):
     pass
 
 
-def fetch_lrg(reference_id, size_on=True, timeout=1):
+def fetch_lrg(reference_id, size_on=True, timeout=10):
     """
     Fetch the LRG file content.
 

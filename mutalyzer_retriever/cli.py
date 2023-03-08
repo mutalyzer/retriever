@@ -106,6 +106,10 @@ def _parse_args(args):
         "--ref_id_start", help="reference id should start with"
     )
 
+    parser_ncbi_assemblies.add_argument(
+        "--split", action="store_true"
+    )
+
     parser_assemblies_summary = subparsers.add_parser(
         "summary", help="gather references summary"
     )
