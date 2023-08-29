@@ -36,6 +36,8 @@ Output directory and split the model
 
 Specify an output directory with ``--output``.
 
+.. code-block:: console
+
     $ mutalyzer_retriever --id "NG_012337.1" -p --indent 2 --output .
     $ less NG_012337.1
     {
@@ -58,7 +60,6 @@ Split the model between annotations and sequence with ``--split``.
     $ less NG_012337.1.sequence
     GGGCTTGGTTCTACCATATCTCTACTTTGTGTTTATGTTTGTGTATGCATGTACTCCAAAGTCTT
     ...
-
 
 
 Choose the retrieval source
@@ -164,9 +165,6 @@ already present in the ``downloads/`` directory.
     - processing 105.20220307 from 20220307, (GRCh37.p13, GCF_000001405.25)
       - NC_000023.10
     - writing ./models/NC_000023.10
-
-
-
 
 
 Retrieve related reference ids
