@@ -32,6 +32,7 @@ Notes:
     entries with the same ID are part of the same protein. They are split like
     this in the same manner as the exons are.
 """
+
 import io
 
 from BCBio.GFF import GFFParser
@@ -206,14 +207,13 @@ def _get_feature_type(feature):
         return feature.type
 
 
-def _get_feature_model(
-    feature, considered_types=CONSIDERED_TYPES
-):
+def _get_feature_model(feature, considered_types=CONSIDERED_TYPES):
     """
     Recursively get the model for a particular feature.
 
     The method to combine CDSes into a single feature is also called.
     """
+
     if feature.type in considered_types:
         model = {
             "type": _get_feature_type(feature),
@@ -275,7 +275,7 @@ def _get_rna_features(record, mol_type):
     rna_model = {"id": record.id, "type": feature_type}
 
     features = _get_record_features_model(
-        record=record, considered_types=["gene", "exon", "CDS"]
+        record=record, considered_types=["gene", "exon", "CDS", "mRNA", "lnc_RNA"]
     )
 
     if features:
@@ -295,8 +295,20 @@ def _get_rna_features(record, mol_type):
                 record.annotations["sequence-region"][0][2],
             )
         if features[0].get("features"):
-            rna_model["features"] = features[0]["features"]
-            features[0]["features"] = [rna_model]
+            if len(features[0]["features"]) == 1 and features[0]["features"][0].get(
+                "type"
+            ) in ["ncRNA", "mRNA"]:
+                # e.g., M65131.1, XR_948219.2
+                rna_model["features"] = features[0]["features"][0]["features"]
+                features[0]["features"] = [rna_model]
+            else:
+                # e.g. NR_002196.2
+                features_to_add = []
+                for f in features[0]["features"]:
+                    if f["type"] in ("exon", "CDS"):
+                        features_to_add.append(f)
+                rna_model["features"] = features_to_add
+                features[0]["features"] = [rna_model]
         return features
 
 
@@ -310,6 +322,9 @@ def _create_record_model(record, source=None):
        We observed that for mRNAs (e.g., NMs) the gene children consist of
        only the CDS and exons, while for other RNAs (e.g., NRs) there are
        other features as well (which we do not consider).
+         - There are also examples where the gene-mRNA-(CDS)/exon nesting is
+           present (M65131.1, XR_948219.2) or where gene-exon/lnc_RNA-exon
+           (NR_002196.2).
     - There may be some floating exons attached directly to a gene. We do not
       add them to our model.
     """
@@ -320,8 +335,10 @@ def _create_record_model(record, source=None):
         if region_model["qualifiers"].get("mol_type"):
             mol_type = region_model["qualifiers"]["mol_type"]
             if "RNA" in region_model["qualifiers"]["mol_type"].upper():
+                # e.g., NCBI: NM_/NR_/...
                 features = _get_rna_features(record, mol_type)
     if features is None:
+        # e.g., ENST
         features = _get_record_features_model(record)
 
     model = {

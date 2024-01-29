@@ -1,0 +1,11 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region XR_948219.2 1 2247
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+XR_948219.2	RefSeq	region	1	2247	.	+	.	ID=XR_948219.2:1..2247;Dbxref=taxon:9606;Name=11;chromosome=11;gbkey=Src;genome=chromosome;mol_type=transcribed RNA
+XR_948219.2	Gnomon	gene	1	2247	.	+	.	ID=gene-LINC02717;Dbxref=GeneID:105369588,HGNC:HGNC:54234;Name=LINC02717;gbkey=Gene;gene=LINC02717;model_evidence=Supporting evidence includes similarity to: 1 EST%2C 1 long SRA read%2C and 91%25 coverage of the annotated genomic feature by RNAseq alignments%2C including 2 samples with support for all annotated introns
+XR_948219.2	Gnomon	lnc_RNA	1	2247	.	+	.	ID=rna-LINC02717;Parent=gene-LINC02717;Dbxref=GeneID:105369588,HGNC:HGNC:54234;gbkey=ncRNA;gene=LINC02717;product=long intergenic non-protein coding RNA 2717%2C transcript variant X2
+XR_948219.2	Gnomon	exon	1	2247	.	+	.	ID=exon-LINC02717-1;Parent=rna-LINC02717;Dbxref=GeneID:105369588,HGNC:HGNC:54234;gbkey=ncRNA;gene=LINC02717;product=long intergenic non-protein coding RNA 2717%2C transcript variant X2
+
+

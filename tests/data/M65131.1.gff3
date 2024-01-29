@@ -1,0 +1,14 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region M65131.1 1 2798
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+M65131.1	Genbank	region	1	2798	.	+	.	ID=M65131.1:1..2798;Dbxref=taxon:9606;gbkey=Src;map=6p21;mol_type=mRNA;tissue-type=liver
+M65131.1	Genbank	gene	1	2798	.	+	.	ID=gene-MUT;Name=MUT;gbkey=Gene;gene=MUT
+M65131.1	Genbank	mRNA	1	2770	.	+	.	ID=rna-MUT;Parent=gene-MUT;Note=G00-120-204;gbkey=mRNA;gene=MUT
+M65131.1	Genbank	exon	1	2770	.	+	.	ID=exon-MUT-1;Parent=rna-MUT;Note=G00-120-204;gbkey=mRNA;gene=MUT
+M65131.1	Genbank	CDS	77	2329	.	+	0	ID=cds-AAA59569.1;Parent=rna-MUT;Dbxref=GDB:G00-120-204,NCBI_GP:AAA59569.1;Name=AAA59569.1;gbkey=CDS;gene=MUT;product=methylmalonyl-CoA mutase;protein_id=AAA59569.1
+M65131.1	Genbank	signal_peptide_region_of_CDS	77	172	.	+	.	ID=id-AAA59569.1:1..32;Note=mitochondrial leader%3B G00-120-204;Parent=cds-AAA59569.1;gbkey=Prot;gene=MUT
+M65131.1	Genbank	mature_protein_region_of_CDS	173	2326	.	+	.	ID=id-AAA59569.1:33..750;Note=G00-120-204;Parent=cds-AAA59569.1;ec_number=5.4.99.2;gbkey=Prot;gene=MUT;product=methylmalonyl-CoA mutase
+
+

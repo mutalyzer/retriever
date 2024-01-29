@@ -1,0 +1,12 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NR_023343.1 1 130
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+NR_023343.1	RefSeq	region	1	130	.	+	.	ID=NR_023343.1:1..130;Dbxref=taxon:9606;Name=2;chromosome=2;gbkey=Src;genome=genomic;map=2q14.2;mol_type=transcribed RNA
+NR_023343.1	RefSeq	gene	1	130	.	+	.	ID=gene-RNU4ATAC;Dbxref=GeneID:100151683,HGNC:HGNC:34016,MIM:601428;Name=RNU4ATAC;description=RNA%2C U4atac small nuclear;gbkey=Gene;gene=RNU4ATAC;gene_synonym=LWS,MOPD1,RFMN,RNU4ATAC1,TALS,U4ATAC
+NR_023343.1	RefSeq	exon	1	130	.	+	.	ID=id-RNU4ATAC;Parent=gene-RNU4ATAC;Dbxref=GeneID:100151683,HGNC:HGNC:34016,MIM:601428;gbkey=exon;gene=RNU4ATAC;inference=alignment:Splign:2.1.0
+NR_023343.1	RefSeq	snRNA	1	130	.	+	.	ID=rna-RNU4ATAC;Parent=gene-RNU4ATAC;Dbxref=GeneID:100151683,HGNC:HGNC:34016,MIM:601428;gbkey=ncRNA;gene=RNU4ATAC;product=RNA%2C U4atac small nuclear
+NR_023343.1	RefSeq	exon	1	130	.	+	.	ID=exon-RNU4ATAC-1;Parent=rna-RNU4ATAC;Dbxref=GeneID:100151683,HGNC:HGNC:34016,MIM:601428;gbkey=ncRNA;gene=RNU4ATAC;product=RNA%2C U4atac small nuclear
+
+

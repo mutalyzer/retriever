@@ -1,0 +1,94 @@
+{
+  "annotations": {
+    "id": "NR_023343.1",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 130
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:9606",
+      "name": "2",
+      "chromosome": "2",
+      "genome": "genomic",
+      "map": "2q14.2",
+      "mol_type": "transcribed RNA"
+    },
+    "features": [
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 0
+          },
+          "end": {
+            "type": "point",
+            "position": 130
+          },
+          "strand": 1
+        },
+        "id": "RNU4ATAC",
+        "qualifiers": {
+          "name": "RNU4ATAC",
+          "synonym": [
+            "LWS",
+            "MOPD1",
+            "RFMN",
+            "RNU4ATAC1",
+            "TALS",
+            "U4ATAC"
+          ],
+          "HGNC": "34016"
+        },
+        "features": [
+          {
+            "id": "NR_023343.1",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 0
+              },
+              "end": {
+                "type": "point",
+                "position": 130
+              }
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 0
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 130
+                  },
+                  "strand": 1
+                },
+                "id": "id-RNU4ATAC"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "AACCATCCTTTTCTTGGGGTTGCGCTACTGTCCAATGAGCGCATAGTGAGGGCAGTACTGCTAACGCCTGAACAACACACCCGCATCAACTAGAGCTTTTGCTTTATTTTGGTGCAATTTTTGGAAAAAT",
+    "description": "NR_023343.1 Homo sapiens RNA, U4atac small nuclear (RNU4ATAC), small nuclear RNA"
+  }
+}
