@@ -180,18 +180,25 @@ class Assemblies:
                 for d_d in ftp.nlst():
                     if d_d.endswith("annotation_report.xml"):
                         annotation["annotation_report"] = d_d
-                    if d_d.startswith("GCF_") and "GRCh" in d_d:
-                        annotation["dir"] = d_d
-                        try:
-                            ftp.cwd(d_d)
-                        except error_perm:
-                            continue
-                        for d_f in ftp.nlst():
-                            if d_f.endswith("_genomic.gff.gz"):
-                                annotation["file_gff"] = d_f
-                            elif d_f.endswith("_genomic.fna.gz"):
-                                annotation["file_fasta"] = d_f
-                        ftp.cwd("..")
+                    if d_a.startswith("GCF"):
+                        annotation["dir"] = ""
+                        if d_d.endswith("_genomic.gff.gz"):
+                            annotation["file_gff"] = d_d
+                        elif d_d.endswith("_genomic.fna.gz"):
+                            annotation["file_fasta"] = d_d
+                    else:
+                        if d_d.startswith("GCF_") and "GRCh" in d_d:
+                            annotation["dir"] = d_d
+                            try:
+                                ftp.cwd(d_d)
+                            except error_perm:
+                                continue
+                            for d_f in ftp.nlst():
+                                if d_f.endswith("_genomic.gff.gz"):
+                                    annotation["file_gff"] = d_f
+                                elif d_f.endswith("_genomic.fna.gz"):
+                                    annotation["file_fasta"] = d_f
+                            ftp.cwd("..")
                 ftp.cwd("..")
                 locations.append(annotation)
         print("  done")
@@ -354,7 +361,7 @@ def annotations_summary(models_directory, ref_id_start=None):
     def _per_model():
         output = {}
         for file in Path(models_directory).glob(glob):
-            model = json.load(open(file))["annotations"]
+            model = json.load(open(file))
             summary = {"genes": 0, "transcripts": 0, "added": 0}
             if model.get("features"):
                 summary["genes"] += len(model["features"])

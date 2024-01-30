@@ -118,10 +118,12 @@ def _parse_args(args):
 
 def _write_model(model, args):
     if args.split:
-        with open(f"{args.output}/{args.id}.annotations", "w") as f:
-            f.write(json.dumps(model["annotations"], indent=args.indent))
-        with open(f"{args.output}/{args.id}.sequence", "w") as f:
-            f.write(model["sequence"]["seq"])
+        if model.get("annotations"):
+            with open(f"{args.output}/{args.id}.annotations", "w") as f:
+                f.write(json.dumps(model["annotations"], indent=args.indent))
+        if model.get("sequence"):
+            with open(f"{args.output}/{args.id}.sequence", "w") as f:
+                f.write(model["sequence"]["seq"])
     else:
         with open(f"{args.output}/{args.id}", "w") as f:
             f.write(json.dumps(model, indent=args.indent))
