@@ -2,7 +2,6 @@ import json
 from copy import deepcopy
 from functools import lru_cache
 from pathlib import Path
-
 import requests
 
 from . import parser
@@ -167,7 +166,10 @@ def retrieve_model(
     reference_content, reference_type, reference_source = retrieve_raw(
         reference_id, reference_source, reference_type, size_off, timeout=timeout
     )
-
+    print(reference_content, reference_type, reference_source)
+    print()
+    print()
+    print()
     if reference_type == "lrg":
         model = parser.parse(reference_content, reference_type, reference_source)
         if model_type == "all":
@@ -199,7 +201,10 @@ def retrieve_model(
         return {
             "sequence": parser.parse(reference_content, "fasta"),
         }
-
+    
+    elif reference_type == "json":
+        if reference_source == "ensembl":
+            return parser.parse(reference_content,"json")
 
 def retrieve_model_from_file(paths=[], is_lrg=False):
     """
