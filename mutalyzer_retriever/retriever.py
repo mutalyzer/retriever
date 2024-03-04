@@ -88,7 +88,10 @@ def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1
 
     # Ensembl
     try:
-        reference_content, reference_type = ensembl.fetch(
+        # reference_content, reference_type = ensembl.fetch(
+        #     reference_id, reference_type, timeout
+        # )
+        reference_content, reference_type = ensembl.fetch_tark(
             reference_id, reference_type, timeout
         )
     except (NameError, ConnectionError, ValueError) as e:
@@ -128,10 +131,12 @@ def retrieve_raw(
         reference_content, reference_type = ncbi.fetch(
             reference_id, reference_type, timeout
         )
+    # elif reference_source == "ensembl":
+    #     reference_content, reference_type = ensembl.fetch(
+    #         reference_id, reference_type, timeout
+    #     )
     elif reference_source == "ensembl":
-        reference_content, reference_type = ensembl.fetch(
-            reference_id, reference_type, timeout
-        )
+        reference_content, reference_type = ensembl.fetch_tark(reference_id)
     elif reference_source == "lrg":
         reference_content = lrg.fetch_lrg(reference_id, timeout=timeout)
         if reference_content:

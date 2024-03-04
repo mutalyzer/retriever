@@ -1,5 +1,5 @@
 import json
-
+import requests
 from ..configuration import settings
 from ..request import Http400, RequestErrors, request
 from ..util import f_e
@@ -102,6 +102,19 @@ def _in_grch37(r_id, r_version, r_info, timeout):
     return False
 
 
+
+def fetch_tark(reference_id):
+    endpoint = "transcript"
+    apiUrl = 'https://tark.ensembl.org/api'
+    params = {"stable_id": reference_id,
+            "assembly_name": "GRCh38",
+            "expand": "sequence, translations, genes, exons"}
+    req = requests.request(method="get", url=f"{apiUrl}/{endpoint}", params=params)
+ 
+    return req.json(), "json"
+
+
+               
 def fetch(reference_id, reference_type=None, timeout=1):
     api_base = settings.get("ENSEMBL_API")
     r_id, r_version = _get_id_and_version(reference_id)
