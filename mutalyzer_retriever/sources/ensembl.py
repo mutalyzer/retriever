@@ -106,9 +106,19 @@ def _in_grch37(r_id, r_version, r_info, timeout):
 def fetch_tark(reference_id):
     endpoint = "transcript"
     apiUrl = 'https://tark.ensembl.org/api'
-    params = {"stable_id": reference_id,
-            "assembly_name": "GRCh38",
-            "expand": "sequence, translations, genes, exons"}
+    reference_id, reference_version =  _get_id_and_version(reference_id)
+    
+    if reference_id is None:
+        raise NameError
+    if reference_version:
+        params = {"stable_id": reference_id,
+                "assembly_name": "GRCh38",
+                "stable_id_version":reference_version,
+                "expand": "sequence, translations, genes, exons"}
+    else:
+        params = {"stable_id": reference_id,
+                "assembly_name": "GRCh38",
+                "expand": "sequence, translations, genes, exons"}
     req = requests.request(method="get", url=f"{apiUrl}/{endpoint}", params=params)
  
     return req.json(), "json"

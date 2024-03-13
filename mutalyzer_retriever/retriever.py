@@ -1,4 +1,5 @@
 import json
+import sys
 from copy import deepcopy
 from functools import lru_cache
 from pathlib import Path
@@ -87,10 +88,7 @@ def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1
 
     # Ensembl
     try:
-        # reference_content, reference_type = ensembl.fetch(
-        #     reference_id, reference_type, timeout
-        # )
-        reference_content, reference_type = ensembl.fetch_tark(
+        reference_content, reference_type = ensembl.fetch(
             reference_id, reference_type, timeout
         )
     except (NameError, ConnectionError, ValueError) as e:
@@ -163,13 +161,13 @@ def retrieve_model(
     :returns: Reference model.
     :rtype: dict
     """
+        
+
+
     reference_content, reference_type, reference_source = retrieve_raw(
         reference_id, reference_source, reference_type, size_off, timeout=timeout
     )
-    print(reference_content, reference_type, reference_source)
-    print()
-    print()
-    print()
+ 
     if reference_type == "lrg":
         model = parser.parse(reference_content, reference_type, reference_source)
         if model_type == "all":
