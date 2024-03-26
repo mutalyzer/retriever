@@ -8,9 +8,9 @@ def filter_none(dicts):
 
 
 #Get sequence from rest api
-def seq_from_rest(strand, loc_start, loc_end): 
+def seq_from_rest(strand, region, loc_start, loc_end): 
     server = "https://rest.ensembl.org"
-    ext = f"/sequence/region/human/X:{loc_start}..{loc_end}:{strand}?coord_system_version=GRCh38"   
+    ext = f"/sequence/region/human/{region}:{loc_start}..{loc_end}:{strand}?coord_system_version=GRCh38"  
     r = requests.get(server+ext, headers={ "Content-Type" : "text/plain"})   
     if not r.ok:
         r.raise_for_status()
@@ -36,10 +36,12 @@ def location(start: int, end: int, strand=None):
 
     return loc_dict
 
-def feature(id: str, type: str, location: dict, qualifiers=None, children_features=None):
+def feature(id: str, feature_type: str, location: dict, qualifiers=None, children_features=None):
+    if feature_type == "protein_coding":
+        feature_type = "mRNA"
     feature_dict = {
         "id": id,
-        "type": type,
+        "type": feature_type,
         "location": location,
         "qualifiers": qualifiers,
         "features": children_features,
@@ -125,14 +127,13 @@ def parse(tark_results):
         children_features=[rna]
     )
     description = tark_result["stable_id"]+'.'+str(tark_result['stable_id_version'])+' chromosome:GRCh38:'+str(tark_result['loc_region'])+':'+str(tark_result['loc_start'])+':'+str(tark_result['loc_end'])+':'+str(tark_result['loc_strand'])
-    
+    seq = seq_from_rest(tark_result["loc_strand"],tark_result['loc_region'], tark_result["loc_start"],tark_result["loc_end"])
     return {
         "annotations": annotations(
                 tark_result["loc_region"], 
                 location(tark_result["loc_start"]-1, tark_result["loc_end"]),
                 [gene]
             ),
-        "sequence": sequence(seq_from_rest(tark_result["loc_strand"],
-                                           tark_result["loc_start"],tark_result["loc_end"]), description)
+        "sequence": sequence(seq, description)
 
     }

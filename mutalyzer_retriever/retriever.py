@@ -133,7 +133,7 @@ def retrieve_raw(
     #         reference_id, reference_type, timeout
     #     )
     elif reference_source == "ensembl":
-        reference_content, reference_type = ensembl.fetch_tark(reference_id)
+        reference_content, reference_type = ensembl.fetch(reference_id,reference_type)
     elif reference_source == "lrg":
         reference_content = lrg.fetch_lrg(reference_id, timeout=timeout)
         if reference_content:
