@@ -6,11 +6,13 @@ import pytest
 from mutalyzer_retriever import retrieve_model
 
 
+
 def _get_content(relative_location):
-    data_file = Path(__file__).parent.joinpath(relative_location)
+    data_file = Path(__file__).parent.joinpath(relative_location) 
     with open(str(data_file), "r") as file:
         content = file.read()
     return content
+
 
 
 def _retrieve_raw(
@@ -25,6 +27,8 @@ def _retrieve_raw(
         return _get_content("data/" + reference_id + ".fasta"), "fasta", "ncbi"
     elif reference_id.startswith("LRG_"):
         return _get_content("data/" + reference_id + ".lrg"), "lrg", "lrg"
+    elif reference_type == "json":
+        return json.loads(_get_content("data/" + reference_id + ".tark_raw.json")), "json", "ensembl"
     else:
         return _get_content("data/" + reference_id + ".gff3"), "gff3", "ncbi"
 
@@ -36,9 +40,13 @@ def get_tests(references):
     for r_source in references.keys():
         for r_type in references[r_source].keys():
             for r_id in references[r_source][r_type]:
-                p = Path(Path(__file__).parent) / "data" / str(r_id + ".model.json")
+                if r_type == "json":
+                    p = Path(Path(__file__).parent) / "data" / str(r_id + ".tark.model.json")
+                else:
+                    p = Path(Path(__file__).parent) / "data" / str(r_id + ".model.json")
                 with p.open() as f:
                     r_model = json.loads(f.read())
+                                                                                                    
                 tests.append(
                     pytest.param(
                         r_id,
@@ -86,13 +94,23 @@ def get_tests(references):
                     "ENST00000383925",
                     "ENST00000304494",
                     "ENSG00000198899",
+                ],
+                "json":[
+                    "ENST00000383925.1",
+                    "ENST00000383925",
+                    "ENST00000304494",
+                    "ENST00000304494.10",
                 ]
             },
             "lrg": {"lrg": ["LRG_11", "LRG_417", "LRG_857"]},
         }
     ),
 )
-def test_model(r_id, r_source, r_type, expected_model, monkeypatch):
+def test_model(r_id, r_source, r_type, expected_model, monkeypatch: pytest.MonkeyPatch):
     monkeypatch.setattr("mutalyzer_retriever.retriever.retrieve_raw", _retrieve_raw)
+    if r_type == "json":
+        monkeypatch.setattr("mutalyzer_retriever.parsers.json_ensembl.seq_from_rest", lambda _1, _2, _3, _4: _get_content("data/" + r_id + ".sequence"))
 
-    assert retrieve_model(r_id, r_source) == expected_model
+    assert retrieve_model(r_id, r_source,r_type) == expected_model
+
+
