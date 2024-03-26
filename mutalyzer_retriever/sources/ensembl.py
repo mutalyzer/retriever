@@ -170,22 +170,20 @@ def get_api_base(r_id, r_version, transcript = False):
 
 def fetch(reference_id, reference_type=None, timeout=1):
     r_id, r_version = _get_id_and_version(reference_id)
-
     if r_id is None:
         raise NameError
 
-    if reference_type in [None, "gff3"]:
+    if reference_type == "gff3":
         api_base = get_api_base(r_id, r_version)
         return fetch_gff3(r_id, api_base, timeout), "gff3"
     elif reference_type == "fasta":
         api_base = get_api_base(r_id, r_version)
         return fetch_fasta(r_id,api_base), "fasta"
-    elif reference_type == "json" and "ENST" not in r_id:
+    elif reference_type in [None,"json"] and "ENST" not in r_id:
         api_base = get_api_base(r_id, r_version)
         return fetch_json(r_id,api_base), "json"  
-    elif reference_type == "json" and "ENST" in r_id:
+    elif reference_type in [None,"json"] and "ENST" in r_id:
         api_base, assembly = get_api_base(r_id, r_version, transcript=True)
-        print(api_base, assembly)
         if api_base in [settings.get("ENSEMBL_API"), settings.get("ENSEMBL_API_GRCH37")]:
             return fetch_json(r_id,api_base), "json"
         elif api_base == settings.get("ENSEMBL_TARK_API"):
