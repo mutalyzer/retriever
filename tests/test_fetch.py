@@ -63,7 +63,7 @@ def test_ensembl_fetch_version_grch37(reference_id):
 
 @pytest.mark.parametrize("reference_id", [("ENSG00000147889.15")])
 def test_ensembl_fetch_other_version(reference_id):
-    with pytest.raises(NameError):
+    with pytest.raises(ValueError):
         fetch(reference_id)[0]
 
 

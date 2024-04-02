@@ -123,9 +123,6 @@ def _in_grch37(r_id, r_version, r_info, timeout):
 
 def fetch_tark(reference_id, reference_version, api_base, assembly= "GRCh38"):
     endpoint = "transcript"
-    
-    if reference_id is None:
-        raise NameError
     if reference_version:
         params = {"stable_id": reference_id,
                 "assembly_name": assembly,
@@ -143,12 +140,11 @@ def fetch_tark(reference_id, reference_version, api_base, assembly= "GRCh38"):
 
 
 def get_api_base(r_id, r_version, transcript = False):
-    rest_version_38 = _get_most_recent_version(r_id,settings.get("ENSEMBL_API"))
-    rest_version_37 = _get_most_recent_version(r_id,settings.get("ENSEMBL_API_GRCH37"))
     if not transcript:
+        rest_version_38 = _get_most_recent_version(r_id,settings.get("ENSEMBL_API"))
         if r_version in [None, rest_version_38]:
             return settings.get("ENSEMBL_API")
-        elif r_version == rest_version_37:
+        elif r_version == _get_most_recent_version(r_id,settings.get("ENSEMBL_API_GRCH37")):
             return settings.get("ENSEMBL_API_GRCH37") 
 
         
@@ -164,7 +160,7 @@ def get_api_base(r_id, r_version, transcript = False):
 
 
 
-def fetch(reference_id, reference_type=None, timeout=14):
+def fetch(reference_id, reference_type=None, timeout=20):
     r_id, r_version = _get_id_and_version(reference_id)
     if r_id is None:
         raise NameError
@@ -181,10 +177,16 @@ def fetch(reference_id, reference_type=None, timeout=14):
             api_base = get_api_base(r_id, r_version)
             return fetch_json(r_id,api_base, timeout), "json"             
     elif r_version:
-        if reference_type in [None,"json"] and "ENST" not in r_id:
+        if reference_type in [None, "gff3"]:
+            api_base = get_api_base(r_id, r_version)
+            return fetch_gff3(r_id, api_base, timeout), "gff3"
+        elif reference_type == "fasta":
+            api_base = get_api_base(r_id, r_version)
+            return fetch_fasta(r_id,api_base,timeout), "fasta"        
+        elif reference_type == "json" and "ENST" not in r_id:
             api_base = get_api_base(r_id, r_version)
             return fetch_json(r_id,api_base, timeout), "json"  
-        elif reference_type in [None,"json"] and "ENST" in r_id:
+        elif reference_type == "json" and "ENST" in r_id:
             api_base, assembly = get_api_base(r_id, r_version, transcript=True)
             return fetch_tark(r_id, r_version, api_base,assembly), "json"
    
