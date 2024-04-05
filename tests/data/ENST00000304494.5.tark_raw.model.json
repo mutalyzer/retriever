@@ -1,0 +1,113 @@
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+      {
+        "stable_id": "ENST00000304494",
+        "stable_id_version": 5,
+        "assembly": "GRCh37",
+        "loc_start": 21967752,
+        "loc_end": 21975097,
+        "loc_strand": -1,
+        "loc_region": "9",
+        "loc_checksum": "AF14A7EF08A2D083221C5CBE5A5BDB640DAFE864",
+        "exon_set_checksum": "0DF94634690292BFF3D0BF54F52DE3FB99F961AC",
+        "transcript_checksum": "57E5BEB8F356FD0B891766B34FE69835AE1FA4A7",
+        "sequence": "333B6F94ADA93A896B846BC5C7AEB96E94820586",
+        "biotype": "protein_coding",
+        "three_prime_utr_start": 21968227,
+        "three_prime_utr_end": 21967752,
+        "three_prime_utr_seq": "AAGAACCAGAGAGGCTCTGAGAAACCTCGGGAAACTTAGATCATCAGTCACCGAAGGTCCTACAGGGCCACAACTGCCCCCGCCACAACCCACCCCGCTTTCGTAGTTTTCATTTAGAAAATAGAGCTTTTAAAAATGTCCTGCCTTTTAACGTAGATATATGCCTTCCCCCACTACCGTAAATGTCCATTTATATCATTTTTTATATATTCTTATAAAAATGTAAAAAAGAAAAACACCGCTTCTGCCTTTTCACTGTGTTGGAGTTTTCTGGAGTGAGCACTCACGCCCTAAGCGCACATTCATGTGGGCATTTCTTGCGAGCCTCGCAGCCTCCGGAAGCTGTCGACTTCATGACAAGCATTTTGTGAACTAGGGAAGCTCAGGGGGGTTACTGGCTTCTCTTGAGTCACACTGCTAGCAAATGGCAGAACCAAAGCTCAAATAAAAATAAAATAATTTTCATTCATTCACTC",
+        "three_prime_utr_checksum": "70052E171F9EE5D232FF603466B86D58860234A6",
+        "five_prime_utr_start": 21975097,
+        "five_prime_utr_end": 21974827,
+        "five_prime_utr_seq": "CCCAACCTGGGGCGACTTCAGGGGTGCCACATTCGCTAAGTGCTCGGAGTTAATAGCACCTCCTCCGAGCACTCGCTCACGGCGTCCCCTTGCCTGGAAAGATACCGCGGTCCCTCCAGAGGATTTGAGGGACAGGGTCGGAGGGGGCTCTTCCGCCAGCACCGGAGGAAGAAAGAGGAGGGGCTGGCTGGTCACCAGAGGGTGGGGCGGACCGCGTGCGCTCGGCGGCTGCGGAGAGGGGGAGAGCAGGCAGCGGGCGGCGGGGAGCAGC",
+        "five_prime_utr_checksum": "DFA62E34AC3102492C6D9F0FB409A82BD35936D9",
+        "genes": [
+          {
+            "stable_id": "ENSG00000147889",
+            "stable_id_version": 12,
+            "assembly": "GRCh37",
+            "loc_start": 21967751,
+            "loc_end": 21995300,
+            "loc_strand": -1,
+            "loc_region": "9",
+            "loc_checksum": "58E323587CE57142F1F3B26CBD6346E915A35E8B",
+            "name": "CDKN2A",
+            "gene_checksum": "56F297F48E4337D90960A7AF5639779653D60AF1"
+          }
+        ],
+        "translations": [
+          {
+            "stable_id": "ENSP00000307101",
+            "stable_id_version": 5,
+            "assembly": "GRCh37",
+            "loc_start": 21968228,
+            "loc_end": 21974826,
+            "loc_strand": -1,
+            "loc_region": "9",
+            "loc_checksum": "53ABB47C63DC3808B670BB795618EF59A3C0A556",
+            "translation_id": 42167,
+            "translation_checksum": "067C584C442586AC7AC9A41E97E315F35252A2B7"
+          }
+        ],
+        "exons": [
+          {
+            "exon_id": 529814,
+            "stable_id": "ENSE00001833804",
+            "stable_id_version": 1,
+            "assembly": "GRCh37",
+            "loc_start": 21974677,
+            "loc_end": 21975097,
+            "loc_strand": -1,
+            "loc_region": "9",
+            "loc_checksum": "C255F59467B7CB8DBBFEC1721238AE59672C5111",
+            "exon_checksum": "8BE4D9EC25BE9807A32411548222A935D9E67164",
+            "exon_order": 1
+          },
+          {
+            "exon_id": 529840,
+            "stable_id": "ENSE00003496053",
+            "stable_id_version": 1,
+            "assembly": "GRCh37",
+            "loc_start": 21970901,
+            "loc_end": 21971207,
+            "loc_strand": -1,
+            "loc_region": "9",
+            "loc_checksum": "E030192BDB1208BA52FDC1D5207105CE6D6DBF22",
+            "exon_checksum": "2F7F1BE16B489A003836875E13CCDE09A38A94E9",
+            "exon_order": 2
+          },
+          {
+            "exon_id": 529861,
+            "stable_id": "ENSE00003529527",
+            "stable_id_version": 1,
+            "assembly": "GRCh37",
+            "loc_start": 21967752,
+            "loc_end": 21968241,
+            "loc_strand": -1,
+            "loc_region": "9",
+            "loc_checksum": "D2764CB80F524FAE6C7A3E8DB9291DCFA0CC2777",
+            "exon_checksum": "A084AF11FBED4FC441D2BF67885D2A648680F277",
+            "exon_order": 3
+          }
+        ],
+        "cds_info": {
+          "translation_start": 21968228,
+          "translation_end": 21974826,
+          "three_prime_utr_start": 21968227,
+          "three_prime_utr_end": 21967752,
+          "three_prime_utr_seq": "AAGAACCAGAGAGGCTCTGAGAAACCTCGGGAAACTTAGATCATCAGTCACCGAAGGTCCTACAGGGCCACAACTGCCCCCGCCACAACCCACCCCGCTTTCGTAGTTTTCATTTAGAAAATAGAGCTTTTAAAAATGTCCTGCCTTTTAACGTAGATATATGCCTTCCCCCACTACCGTAAATGTCCATTTATATCATTTTTTATATATTCTTATAAAAATGTAAAAAAGAAAAACACCGCTTCTGCCTTTTCACTGTGTTGGAGTTTTCTGGAGTGAGCACTCACGCCCTAAGCGCACATTCATGTGGGCATTTCTTGCGAGCCTCGCAGCCTCCGGAAGCTGTCGACTTCATGACAAGCATTTTGTGAACTAGGGAAGCTCAGGGGGGTTACTGGCTTCTCTTGAGTCACACTGCTAGCAAATGGCAGAACCAAAGCTCAAATAAAAATAAAATAATTTTCATTCATTCACTC",
+          "three_prime_utr_length": 476,
+          "five_prime_utr_start": 21975097,
+          "five_prime_utr_end": 21974827,
+          "five_prime_utr_seq": "CCCAACCTGGGGCGACTTCAGGGGTGCCACATTCGCTAAGTGCTCGGAGTTAATAGCACCTCCTCCGAGCACTCGCTCACGGCGTCCCCTTGCCTGGAAAGATACCGCGGTCCCTCCAGAGGATTTGAGGGACAGGGTCGGAGGGGGCTCTTCCGCCAGCACCGGAGGAAGAAAGAGGAGGGGCTGGCTGGTCACCAGAGGGTGGGGCGGACCGCGTGCGCTCGGCGGCTGCGGAGAGGGGGAGAGCAGGCAGCGGGCGGCGGGGAGCAGC",
+          "five_prime_utr_length": 271,
+          "loc_region": "9",
+          "loc_strand": -1,
+          "cds_seq": null
+        }
+      }
+    ]
+  }

@@ -7,18 +7,6 @@ def filter_none(dicts):
     return dicts
 
 
-#Get sequence from rest api
-def seq_from_rest(strand, region, loc_start, loc_end): 
-    server = "https://rest.ensembl.org"
-    ext = f"/sequence/region/human/{region}:{loc_start}..{loc_end}:{strand}?coord_system_version=GRCh38"  
-    r = requests.get(server+ext, headers={ "Content-Type" : "text/plain"})   
-    if not r.ok:
-        r.raise_for_status()
-        sys.exit()
-    return r.text
-
-
-
 def point(position: int):
     return {
         "type": "point",
@@ -33,7 +21,6 @@ def location(start: int, end: int, strand=None):
         "strand": strand
         }
     loc_dict = filter_none(loc_dict)
-
     return loc_dict
 
 def feature(id: str, feature_type: str, location: dict, qualifiers=None, children_features=None):
@@ -59,17 +46,6 @@ def annotations(id, location, features):
     annotations_dict = filter_none(annotations_dict)
     return annotations_dict
 
-def sequence(seq, description):
-    return {
-        "seq": seq,
-        "description": description
-    }
-
-def model(annotations, sequence):
-    return {
-        "annotations": annotations, 
-        "sequence": sequence,
-    }
    
 def parse(tark_results):
     tark_results = sorted(tark_results, key=lambda g: (g["stable_id_version"]))
@@ -126,14 +102,10 @@ def parse(tark_results):
         },
         children_features=[rna]
     )
-    description = tark_result["stable_id"]+'.'+str(tark_result['stable_id_version'])+' chromosome:GRCh38:'+str(tark_result['loc_region'])+':'+str(tark_result['loc_start'])+':'+str(tark_result['loc_end'])+':'+str(tark_result['loc_strand'])
-    seq = seq_from_rest(tark_result["loc_strand"],tark_result['loc_region'], tark_result["loc_start"],tark_result["loc_end"])
-    return {
-        "annotations": annotations(
+    return  annotations(
                 tark_result["loc_region"], 
                 location(tark_result["loc_start"]-1, tark_result["loc_end"]),
                 [gene]
-            ),
-        "sequence": sequence(seq, description)
+            )
 
-    }
+    

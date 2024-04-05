@@ -127,14 +127,9 @@ def fetch_tark(reference_id, reference_version, api_base, assembly= "GRCh38"):
         params = {"stable_id": reference_id,
                 "assembly_name": assembly,
                 "stable_id_version":reference_version,
-                "expand": "sequence, translations, genes, exons"}
-    else:
-        params = {"stable_id": reference_id,
-                "assembly_name": assembly,
-                "expand": "sequence, translations, genes, exons"}
-    req = requests.request(method="get", url=f"{api_base}/{endpoint}", params=params)
- 
-    return req.json()
+                "expand": "translations, genes, exons"}
+        req = requests.request(method="get", url=f"{api_base}/{endpoint}", params=params) 
+        return req.json()
 
 
 
@@ -150,9 +145,7 @@ def get_api_base(r_id, r_version, transcript = False):
         
     if transcript:
         tark_versions_38, tark_versions_37 = _get_tark_versions(r_id,settings.get("ENSEMBL_TARK_API"))
-        if not r_version:
-            return settings.get("ENSEMBL_TARK_API"), "GRCh38"
-        elif r_version in tark_versions_38:
+        if r_version in tark_versions_38:
             return settings.get("ENSEMBL_TARK_API"), "GRCh38"
         elif r_version in tark_versions_37:
             return settings.get("ENSEMBL_TARK_API"), "GRCh37"
@@ -163,7 +156,9 @@ def get_api_base(r_id, r_version, transcript = False):
 def fetch(reference_id, reference_type=None, timeout=20):
     r_id, r_version = _get_id_and_version(reference_id)
     if r_id is None:
-        raise NameError
+        raise 
+    
+    print(r_version)
 
 
     if not r_version:

@@ -128,10 +128,6 @@ def retrieve_raw(
         reference_content, reference_type = ncbi.fetch(
             reference_id, reference_type, timeout
         )
-    # elif reference_source == "ensembl":
-    #     reference_content, reference_type = ensembl.fetch(
-    #         reference_id, reference_type, timeout
-    #     )
     elif reference_source == "ensembl":
         reference_content, reference_type = ensembl.fetch(reference_id,reference_type)
     elif reference_source == "lrg":
@@ -202,7 +198,14 @@ def retrieve_model(
     
     elif reference_type == "json":
         if reference_source == "ensembl":
-            return parser.parse(reference_content,"json")
+            fasta = retrieve_raw(
+                reference_id, reference_source, "fasta", size_off, timeout=timeout
+            )
+            annotations = parser.parse(reference_content, "json")
+            return {
+                "annotations": annotations,
+                "sequence": parser.parse(fasta[0], "fasta"),
+            }
 
 def retrieve_model_from_file(paths=[], is_lrg=False):
     """
