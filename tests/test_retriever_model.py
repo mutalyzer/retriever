@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 import pytest
-from .commons import references, _retrieve_raw
+from .commons import references, _retrieve_raw, patch_retriever
 
 from mutalyzer_retriever import retrieve_model
 
@@ -36,6 +36,5 @@ def get_tests(references):
 
 @pytest.mark.parametrize("r_id, r_source, r_type, expected_model",get_tests(references))
 def test_model(r_id, r_source, r_type, expected_model, monkeypatch: pytest.MonkeyPatch):
-    monkeypatch.setattr("mutalyzer_retriever.retriever.retrieve_raw", _retrieve_raw)
     assert retrieve_model(r_id, r_source,r_type) == expected_model
 

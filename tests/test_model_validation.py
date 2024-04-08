@@ -1,55 +1,59 @@
-from pathlib import Path
 import json
+from pathlib import Path
+
 import pytest
-from .commons import references
+
 from mutalyzer_retriever import parser
 from mutalyzer_retriever.schema_validation import validate
 
-#check if schema is right
+from .commons import references
 
 
 
 def get_references_content(references):
-    references_content = []
-    for reference_source in references.keys():
-        for reference_type in references[reference_source]:
-            for reference_id in references[reference_source][reference_type]:
-                if reference_type == "json":
+    '''read raw response from tests data folder'''
+    r_contents = []
+    for r_source in references.keys():
+        for r_type in references[r_source]:
+            for r_id in references[r_source][r_type]:
+                if r_type == "json":
                     path_gb = (
                         Path(Path(__file__).parent)
                         / "data"
-                        / "{}.tark_raw.{}".format(reference_id, reference_type)
+                        / f"{r_id}.tark_raw.{r_type}"
                     )
-                    reference_content = json.loads(path_gb.open().read())
+                    r_content = json.loads(path_gb.open().read())
                 else:
                     path_gb = (
-                                        Path(Path(__file__).parent)
-                                        / "data"
-                                        / "{}.{}".format(reference_id, reference_type)
-                                    )
+                        Path(Path(__file__).parent)
+                        / "data"
+                        / f"{r_id}.{r_type}"
+                    )
                     with path_gb.open() as f:
-                        reference_content = f.read()
-                references_content.append(
+                        r_content = f.read()
+                r_contents.append(
                     pytest.param(
-                        reference_source,
-                        reference_type,
-                        reference_content,
-                        reference_id,
-                        id="{}-{}-{}".format(
-                            reference_source, reference_type, reference_id
-                        ),
+                        r_source,
+                        r_type,
+                        r_content,
+                        id=f"{r_source}-{r_type}-{r_id}",
                     )
                 )
-    return references_content
+    return r_contents
 
-@pytest.mark.parametrize("reference_source, reference_type, reference_content, reference_id",get_references_content(references))
-def test_schema_validation(reference_source, reference_type, reference_content, reference_id):
-    reference_model = parser.parse(
-        reference_content,
-        reference_type=reference_type,
-        reference_source=reference_source,
+
+@pytest.mark.parametrize(
+    "r_source, r_type, r_content",
+    get_references_content(references),
+)
+def test_schema_validation(r_source, r_type, r_content):
+    '''parse raw response and check its output schema'''
+    r_model = parser.parse(
+        reference_content=r_content,
+        reference_type=r_type,
+        reference_source=r_source,
     )
-    if reference_source == "lrg":
-        assert validate(reference_model["annotations"]) is None
+    if r_source == "lrg":
+        assert validate(r_model["annotations"]) is None
     else:
-        assert validate(reference_model) is None
+        assert validate(r_model) is None
