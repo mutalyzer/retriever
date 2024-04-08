@@ -135,17 +135,23 @@ def fetch_tark(reference_id, reference_version, api_base, assembly= "GRCh38"):
 
 
 def get_api_base(r_id, r_version, transcript = False):
-    if not transcript:
-        rest_version_38 = _get_most_recent_version(r_id,settings.get("ENSEMBL_API"))
-        if r_version in [None, rest_version_38]:
-            return settings.get("ENSEMBL_API")
-        elif r_version == _get_most_recent_version(r_id,settings.get("ENSEMBL_API_GRCH37")):
-            return settings.get("ENSEMBL_API_GRCH37") 
+    if "ENST" in r_id:
+        transcript = True
 
-        
+    rest_version_38 = _get_most_recent_version(r_id,settings.get("ENSEMBL_API"))
+    if not transcript:
+        if r_version in [None, rest_version_38]:
+            return settings.get("ENSEMBL_API"), "GRCh38"
+        elif r_version == _get_most_recent_version(r_id,settings.get("ENSEMBL_API_GRCH37")):
+            return settings.get("ENSEMBL_API_GRCH37") , "GRCh37"
+   
     if transcript:
         tark_versions_38, tark_versions_37 = _get_tark_versions(r_id,settings.get("ENSEMBL_TARK_API"))
-        if r_version in tark_versions_38:
+        if r_version in [None, rest_version_38]:
+            return settings.get("ENSEMBL_API"), "GRCh38"
+        elif r_version == _get_most_recent_version(r_id,settings.get("ENSEMBL_API_GRCH37")):
+            return settings.get("ENSEMBL_API_GRCH37"), "GRCh37"
+        elif r_version in tark_versions_38:
             return settings.get("ENSEMBL_TARK_API"), "GRCh38"
         elif r_version in tark_versions_37:
             return settings.get("ENSEMBL_TARK_API"), "GRCh37"
@@ -156,35 +162,21 @@ def get_api_base(r_id, r_version, transcript = False):
 def fetch(reference_id, reference_type=None, timeout=20):
     r_id, r_version = _get_id_and_version(reference_id)
     if r_id is None:
-        raise 
-    
-    print(r_version)
+        raise NameError
+    api_base, assembly = get_api_base(r_id, r_version)
+    print(api_base, assembly)
 
+    if reference_type in [None, "gff3"]:
+        return fetch_gff3(r_id, api_base, timeout), "gff3"
+    elif reference_type == "fasta":
+        return fetch_fasta(r_id,api_base,timeout), "fasta"               
+    elif reference_type == "json":
+        if api_base in [settings.get("ENSEMBL_API"), settings.get("ENSEMBL_API_GRCH37")] :
+            print("!!!!!!!!!!!!!")
+            return fetch_json(r_id,api_base, timeout), "json" 
+        elif api_base == settings.get("ENSEMBL_TARK_API"):
+            return fetch_tark(r_id, r_version, api_base,assembly), "json"    
 
-    if not r_version:
-        if reference_type in [None, "gff3"]:
-            api_base = get_api_base(r_id, r_version)
-            return fetch_gff3(r_id, api_base, timeout), "gff3"
-        elif reference_type == "fasta":
-            api_base = get_api_base(r_id, r_version)
-            return fetch_fasta(r_id,api_base,timeout), "fasta"
-        elif reference_type == "json":
-            api_base = get_api_base(r_id, r_version)
-            return fetch_json(r_id,api_base, timeout), "json"             
-    elif r_version:
-        if reference_type in [None, "gff3"]:
-            api_base = get_api_base(r_id, r_version)
-            return fetch_gff3(r_id, api_base, timeout), "gff3"
-        elif reference_type == "fasta":
-            api_base = get_api_base(r_id, r_version)
-            return fetch_fasta(r_id,api_base,timeout), "fasta"        
-        elif reference_type == "json" and "ENST" not in r_id:
-            api_base = get_api_base(r_id, r_version)
-            return fetch_json(r_id,api_base, timeout), "json"  
-        elif reference_type == "json" and "ENST" in r_id:
-            api_base, assembly = get_api_base(r_id, r_version, transcript=True)
-            return fetch_tark(r_id, r_version, api_base,assembly), "json"
-   
     elif reference_type == "genbank":
         return None, "genbank"
 
