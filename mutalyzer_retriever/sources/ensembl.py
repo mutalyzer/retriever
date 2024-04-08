@@ -69,8 +69,6 @@ def fetch_gff3(feature_id, api_base, timeout=1):
 
 def _get_tark_versions(reference_id, api_base, timeout=4):
     endpoint = "transcript"
-    
-    
     params = {"stable_id": reference_id}
     tark_req = json.loads(request(url=f"{api_base}/{endpoint}", params=params))
     tark_versions_38 = []
@@ -164,7 +162,6 @@ def fetch(reference_id, reference_type=None, timeout=20):
     if r_id is None:
         raise NameError
     api_base, assembly = get_api_base(r_id, r_version)
-    print(api_base, assembly)
 
     if reference_type in [None, "gff3"]:
         return fetch_gff3(r_id, api_base, timeout), "gff3"
@@ -172,7 +169,6 @@ def fetch(reference_id, reference_type=None, timeout=20):
         return fetch_fasta(r_id,api_base,timeout), "fasta"               
     elif reference_type == "json":
         if api_base in [settings.get("ENSEMBL_API"), settings.get("ENSEMBL_API_GRCH37")] :
-            print("!!!!!!!!!!!!!")
             return fetch_json(r_id,api_base, timeout), "json" 
         elif api_base == settings.get("ENSEMBL_TARK_API"):
             return fetch_tark(r_id, r_version, api_base,assembly), "json"    
