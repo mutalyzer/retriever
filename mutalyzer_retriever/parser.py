@@ -21,7 +21,7 @@ def parse(reference_content, reference_type=None, reference_source=None):
         model = fasta.parse(reference_content)
     elif reference_type == "json":
         if reference_content["results"]:
-            model = json_ensembl.parse(reference_content["results"])
+            model = json_ensembl.parse(reference_content["results"][0])
     else:
         return None
 

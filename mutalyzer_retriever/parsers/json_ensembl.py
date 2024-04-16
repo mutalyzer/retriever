@@ -1,40 +1,31 @@
-import requests
 import sys
 
-
-def filter_none(dicts):
-    dicts = {k:v for k,v in dicts.items() if v is not None}
-    return dicts
+import requests
 
 
 def point(position: int):
-    return {
-        "type": "point",
-        "position": position
-    }
+    return {"type": "point", "position": position}
+
 
 def location(start: int, end: int, strand=None):
     loc_dict = {
         "type": "range",
         "start": point(start),
         "end": point(end),
-        "strand": strand
-        }
-    loc_dict = filter_none(loc_dict)
-    return loc_dict
+        "strand": strand,
+    }
+    return {k: v for k, v in loc_dict.items() if v is not None}
 
-def feature(id: str, feature_type: str, location: dict, qualifiers=None, children_features=None):
-    if feature_type == "protein_coding":
-        feature_type = "mRNA"
-    feature_dict = {
-        "id": id,
-        "type": feature_type,
-        "location": location,
-        "qualifiers": qualifiers,
-        "features": children_features,
-        }
-    feature_dict = filter_none(feature_dict)
-    return feature_dict
+
+def _feature(raw_dict):
+    """Converting a general tark sub-dictionary into internal model, only id and location info"""
+    return {
+        "id": raw_dict["stable_id"],
+        "location": location(
+            raw_dict["loc_start"] - 1, raw_dict["loc_end"], raw_dict["loc_strand"]
+        ),
+    }
+
 
 def annotations(id, location, features):
     annotations_dict = {
@@ -42,70 +33,120 @@ def annotations(id, location, features):
         "type": "record",
         "location": location,
         "features": features,
-        }
-    annotations_dict = filter_none(annotations_dict)
+    }
     return annotations_dict
 
-   
-def parse(tark_results):
-    tark_results = sorted(tark_results, key=lambda g: (g["stable_id_version"]))
-    tark_result = tark_results[-1]
-    tark_exons = tark_result["exons"]
-    features = []
+
+def _exons(tark_exons):
+    """converting exons info from tark list into internal exon list"""
+    exons = []
     for tark_exon in tark_exons:
-        exon = feature(
-            tark_exon['stable_id'], 
-            "exon", 
-            location(tark_exon["loc_start"]-1, tark_exon["loc_end"],tark_exon['loc_strand']),
-        )
-        features.append(exon)
+        exon = _feature(tark_exon)
+        exon["type"] = "exon"
+        exons.append(exon)
+    return exons
 
-    #one translations per transcript, somtimes null or 2 (strand -1/1)
-    tark_translations = tark_result["translations"]
-    if tark_translations:
-        for tark_translation in tark_translations:
-            translations = feature(
-                tark_translation["stable_id"],
-                "CDS",
-                location(tark_translation['loc_start']-1, tark_translation['loc_end'],tark_translation['loc_strand']),    
-            )
 
-            features.append(translations)
+def _translation(tark_translations):
+    """Converting translations per transcript from tark list into internal translation list"""
+    translations = []
+    for tark_translation in tark_translations:
+        translation = _feature(tark_translation)
+        translation["type"] = "CDS"
+        translations.append(translation)
+    return translations
 
-    rna = feature(
-        tark_result["stable_id"],
-        tark_result["biotype"],
-        location(tark_result["loc_start"]-1, tark_result["loc_end"],tark_result["loc_strand"]),
-        qualifiers={
-            "assembly_name": tark_result["assembly"],
-            "version": str(tark_result["stable_id_version"]),
-            "tag": "basic"
-        },
-        children_features = features
-    )
 
-    #sometimes multiple gene info with different version or different content (eg. name=null/sth)
+def _transcript(tark_transcript, exon_features, translation_feature):
+    """Converting transcript from tark list into internal transcript list"""
+    transcript = {}
+    transcript = _feature(tark_transcript)
+    transcript["type"] = tark_transcript["biotype"]
+    if transcript["type"] == "protein_coding":
+        transcript["type"] = "mRNA"
+    transcript["qualifiers"] = {
+        "assembly_name": tark_transcript["assembly"],
+        "version": str(tark_transcript["stable_id_version"]),
+        "tag": "basic",
+    }
+    transcript["features"] = exon_features + translation_feature
+    return [transcript]
+
+
+def _gene(tark_gene, gene_feature):
+    gene = {}
+    gene = _feature(tark_gene)
+    gene["type"] = "gene"
+    gene["qualifiers"] = {
+        "assembly_name": tark_gene["assembly"],
+        "version": str(tark_gene["stable_id_version"]),
+        "name": tark_gene["name"],
+    }
+    gene["features"] = gene_feature
+    return [gene]
+
+
+def _seq_from_rest(chr_No, strand, loc_start, loc_end):
+    server = "https://rest.ensembl.org"
+    ext = f"/sequence/region/human/{chr_No}:{loc_start}..{loc_end}:{strand}?coord_system_version=GRCh38"
+    r = requests.get(server + ext, headers={"Content-Type": "text/plain"})
+    if not r.ok:
+        raise NameError
+    return r.text
+
+
+def _sequence(tark_result):
+    return {
+        "seq": _seq_from_rest(
+            tark_result["loc_region"],
+            tark_result["loc_strand"],
+            tark_result["loc_start"],
+            tark_result["loc_end"],
+        ),
+        "description": " ".join(
+            [
+                f"{tark_result['stable_id']}.{str(tark_result['stable_id_version'])}",
+                ":".join(
+                    [
+                        "chromosome",
+                        tark_result["assembly"],
+                        str(tark_result["loc_region"]),
+                        str(tark_result["loc_start"]),
+                        str(tark_result["loc_end"]),
+                        str(tark_result["loc_strand"]),
+                    ]
+                ),
+            ]
+        ),
+    }
+
+
+def parse(tark_result):
+    """convert the tark json response of one transcript into the retriever model json output"""
+
+    exon_features = _exons(tark_result["exons"])
+
+    # TODO: find examples of null or 2
+    # one translations per transcript, somtimes null or 2 (strand -1/1)
+    translation_features = _translation(tark_result["translations"])
+
+    transcript_features = _transcript(tark_result, exon_features, translation_features)
+
+    # sometimes multiple gene info with different version or different content (eg. name=null/sth)
     # sort the genes based on stable_id_version and take the highest version
     # In case of same stable_id_version, the one with "name" field is considered higher.
-    genes = tark_result["genes"]
-    genes = sorted(genes, key=lambda g: (g["stable_id_version"], 0 if g["name"] is None else 1))
-    tark_gene = genes[-1]    
-
-    gene = feature(
-        tark_gene["stable_id"],
-        "gene", 
-        location(tark_gene['loc_start']-1, tark_gene['loc_end'],tark_gene['loc_strand']),
-        qualifiers={
-            "assembly_name": tark_gene["assembly"],
-            "version": str(tark_gene["stable_id_version"]),
-            "name": tark_gene["name"],
-        },
-        children_features=[rna]
+    genes = sorted(
+        tark_result["genes"],
+        key=lambda g: (g["stable_id_version"], 0 if g["name"] is None else 1),
     )
-    return  annotations(
-                tark_result["loc_region"], 
-                location(tark_result["loc_start"]-1, tark_result["loc_end"]),
-                [gene]
-            )
+    tark_gene = genes[-1]
+    gene_feature = _gene(tark_gene, gene_feature=transcript_features)
 
-    
+    return {
+        "annotations": annotations(
+            tark_result["loc_region"],
+            location(tark_result["loc_start"] - 1, tark_result["loc_end"]),
+            gene_feature,
+        ),
+        "sequence": _sequence(tark_result),
+    }

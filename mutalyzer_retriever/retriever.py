@@ -104,6 +104,7 @@ def retrieve_raw(
     reference_id,
     reference_source=None,
     reference_type=None,
+    reference_api=None,
     size_off=True,
     timeout=1,
 ):
@@ -129,7 +130,7 @@ def retrieve_raw(
             reference_id, reference_type, timeout
         )
     elif reference_source == "ensembl":
-        reference_content, reference_type = ensembl.fetch(reference_id,reference_type)
+        reference_content, reference_type = ensembl.fetch(reference_id,reference_type,reference_api)
     elif reference_source == "lrg":
         reference_content = lrg.fetch_lrg(reference_id, timeout=timeout)
         if reference_content:
@@ -142,6 +143,7 @@ def retrieve_model(
     reference_id,
     reference_source=None,
     reference_type=None,
+    reference_api=None,
     size_off=True,
     model_type="all",
     timeout=1,
@@ -161,7 +163,7 @@ def retrieve_model(
 
 
     reference_content, reference_type, reference_source = retrieve_raw(
-        reference_id, reference_source, reference_type, size_off, timeout=timeout
+        reference_id, reference_source, reference_type, reference_api, size_off, timeout=timeout
     )
  
     if reference_type == "lrg":
@@ -198,14 +200,8 @@ def retrieve_model(
     
     elif reference_type == "json":
         if reference_source == "ensembl":
-            fasta = retrieve_raw(
-                reference_id, reference_source, "fasta", size_off, timeout=timeout
-            )
-            annotations = parser.parse(reference_content, "json")
-            return {
-                "annotations": annotations,
-                "sequence": parser.parse(fasta[0], "fasta"),
-            }
+            return parser.parse(reference_content, "json")
+
 
 def retrieve_model_from_file(paths=[], is_lrg=False):
     """

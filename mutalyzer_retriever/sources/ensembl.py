@@ -121,13 +121,12 @@ def _in_grch37(r_id, r_version, r_info, timeout):
 
 def fetch_tark(reference_id, reference_version, api_base, assembly= "GRCh38"):
     endpoint = "transcript"
-    if reference_version:
-        params = {"stable_id": reference_id,
-                "assembly_name": assembly,
-                "stable_id_version":reference_version,
-                "expand": "translations, genes, exons"}
-        req = requests.request(method="get", url=f"{api_base}/{endpoint}", params=params) 
-        return req.json()
+    params = {"stable_id": reference_id,
+            "assembly_name": assembly,
+            "stable_id_version":reference_version,
+            "expand": "translations, genes, exons"}
+    req = requests.request(method="get", url=f"{api_base}/{endpoint}", params=params) 
+    return req.json()
 
 
 
@@ -157,7 +156,7 @@ def get_api_base(r_id, r_version, transcript = False):
 
 
 
-def fetch(reference_id, reference_type=None, timeout=20):
+def fetch(reference_id, reference_type=None, refernce_api=None, timeout=20):
     r_id, r_version = _get_id_and_version(reference_id)
     if r_id is None:
         raise NameError
@@ -168,10 +167,13 @@ def fetch(reference_id, reference_type=None, timeout=20):
     elif reference_type == "fasta":
         return fetch_fasta(r_id,api_base,timeout), "fasta"               
     elif reference_type == "json":
+        # api_base = settings.get("ENSEMBL_TARK_API")
+        # assembly = "GRCh38"
+        # return fetch_tark(r_id, r_version, api_base,assembly), "json"
         if api_base in [settings.get("ENSEMBL_API"), settings.get("ENSEMBL_API_GRCH37")] :
             return fetch_json(r_id,api_base, timeout), "json" 
         elif api_base == settings.get("ENSEMBL_TARK_API"):
-            return fetch_tark(r_id, r_version, api_base,assembly), "json"    
+            return fetch_tark(r_id, r_version, api_base, assembly), "json"    
 
     elif reference_type == "genbank":
         return None, "genbank"

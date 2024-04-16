@@ -28,6 +28,11 @@ def patch_retriever(monkeypatch):
     monkeypatch.setattr("mutalyzer_retriever.sources.ensembl.fetch_tark", _fetch_tark)
     monkeypatch.setattr("mutalyzer_retriever.sources.ensembl.fetch_json", _fetch_json)
     monkeypatch.setattr("mutalyzer_retriever.retriever.retrieve_raw", _retrieve_raw)
+    
+
+
+
+
 
 
 def _get_content(relative_location):

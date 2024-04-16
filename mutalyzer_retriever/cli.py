@@ -50,6 +50,10 @@ def _parse_args(args):
     )
 
     parser.add_argument(
+        "-a", "--api", help="retrieval api", choices=["tark", "rest"]
+    )
+
+    parser.add_argument(
         "-r", "--related", help="retrieve related reference ids", action="store_true"
     )
 
@@ -158,6 +162,7 @@ def _retrieve_model(args):
         reference_source=args.source,
         reference_type=args.type,
         model_type=args.model_type,
+        reference_api=args.api,
         size_off=args.sizeoff,
         timeout=args.timeout,
     )
