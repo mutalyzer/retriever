@@ -3,6 +3,7 @@ import requests
 from ..configuration import settings
 from ..request import Http400, RequestErrors, request
 from ..util import f_e
+import pprint
 
 
 def fetch_json(feature_id, api_base, timeout=1):
@@ -134,7 +135,6 @@ def fetch_tark(reference_id, reference_version, api_base, assembly= "GRCh38"):
 def get_api_base(r_id, r_version, transcript = False):
     if "ENST" in r_id:
         transcript = True
-
     rest_version_38 = _get_most_recent_version(r_id,settings.get("ENSEMBL_API"))
     if not transcript:
         if r_version in [None, rest_version_38]:
@@ -144,41 +144,36 @@ def get_api_base(r_id, r_version, transcript = False):
    
     if transcript:
         tark_versions_38, tark_versions_37 = _get_tark_versions(r_id,settings.get("ENSEMBL_TARK_API"))
-        if r_version in [None, rest_version_38]:
+        print(tark_versions_38)
+        if r_version == rest_version_38:
             return settings.get("ENSEMBL_API"), "GRCh38"
+        elif r_version == None or r_version in tark_versions_38:
+            return settings.get("ENSEMBL_TARK_API"), "GRCh38"
         elif r_version == _get_most_recent_version(r_id,settings.get("ENSEMBL_API_GRCH37")):
             return settings.get("ENSEMBL_API_GRCH37"), "GRCh37"
-        elif r_version in tark_versions_38:
-            return settings.get("ENSEMBL_TARK_API"), "GRCh38"
         elif r_version in tark_versions_37:
             return settings.get("ENSEMBL_TARK_API"), "GRCh37"
     raise ValueError(f"Cannot fetch {r_id} with version {r_version} from Ensembl")
 
 
-
-def fetch(reference_id, reference_type=None, refernce_api=None, timeout=20):
+def fetch(reference_id, reference_type=None, reference_api=None, timeout=20):
     r_id, r_version = _get_id_and_version(reference_id)
     if r_id is None:
         raise NameError
-    api_base, assembly = get_api_base(r_id, r_version)
-
-    if reference_type in [None, "gff3"]:
-        return fetch_gff3(r_id, api_base, timeout), "gff3"
-    elif reference_type == "fasta":
-        return fetch_fasta(r_id,api_base,timeout), "fasta"               
-    elif reference_type == "json":
-        # api_base = settings.get("ENSEMBL_TARK_API")
-        # assembly = "GRCh38"
-        # return fetch_tark(r_id, r_version, api_base,assembly), "json"
-        if api_base in [settings.get("ENSEMBL_API"), settings.get("ENSEMBL_API_GRCH37")] :
-            return fetch_json(r_id,api_base, timeout), "json" 
-        elif api_base == settings.get("ENSEMBL_TARK_API"):
-            return fetch_tark(r_id, r_version, api_base, assembly), "json"    
+    api_base, assembly = get_api_base(r_id, r_version, reference_api)
+    if reference_api in [None, "rest"]:
+        if reference_type in [None, "gff3"]:
+            return fetch_gff3(r_id, api_base, timeout), "gff3"
+        elif reference_type == "fasta":
+            return fetch_fasta(r_id, api_base, timeout), "fasta"      
+    if reference_api in [None, "tark"]:                
+        if reference_type == "json" and api_base == settings.get("ENSEMBL_TARK_API"): 
+            return fetch_tark(r_id, r_version, api_base,assembly), "json"   
 
     elif reference_type == "genbank":
         return None, "genbank"
 
     raise ValueError(
-        "Ensembl fetch does not support '{}' reference type.".format(reference_type)
+        f"Ensembl fetch does not support {reference_type} reference type from {api_base} for {reference_id}."
     )
 

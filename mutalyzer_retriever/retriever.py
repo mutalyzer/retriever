@@ -135,7 +135,7 @@ def retrieve_raw(
         reference_content = lrg.fetch_lrg(reference_id, timeout=timeout)
         if reference_content:
             reference_type = "lrg"
-
+    print(reference_content)
     return reference_content, reference_type, reference_source
 
 

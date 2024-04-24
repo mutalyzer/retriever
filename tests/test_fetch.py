@@ -91,9 +91,8 @@ def test_ensembl_fetch_transcript_rest_38(r_id):
 
 @pytest.mark.parametrize("r_id, r_type", [("ENST00000304494.5", "json")])
 def test_ensembl_fetch_transcript_rest_37(r_id, r_type):
-    assert fetch(r_id, r_type)[0] == _get_content(
-        f"data/{r_id}.rest_raw.model.json"
-    )
+    with pytest.raises(ValueError):
+        assert fetch(r_id, r_type)[0] == None
 
 
 @pytest.mark.parametrize("r_id, r_type", [("ENST00000304494.7", "json")])
