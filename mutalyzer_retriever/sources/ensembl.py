@@ -144,7 +144,6 @@ def get_api_base(r_id, r_version, transcript = False):
    
     if transcript:
         tark_versions_38, tark_versions_37 = _get_tark_versions(r_id,settings.get("ENSEMBL_TARK_API"))
-        print(tark_versions_38)
         if r_version == rest_version_38:
             return settings.get("ENSEMBL_API"), "GRCh38"
         elif r_version == None or r_version in tark_versions_38:
