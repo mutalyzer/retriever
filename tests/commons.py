@@ -12,7 +12,6 @@ def patch_retriever(monkeypatch):
     from .test_fetch import (
         _fetch_gff3,
         _fetch_json,
-        _fetch_tark,
         _get_reference_information,
         _get_tark_versions,
     )
@@ -25,7 +24,6 @@ def patch_retriever(monkeypatch):
     monkeypatch.setattr(
         "mutalyzer_retriever.sources.ensembl._get_tark_versions", _get_tark_versions
     )
-    monkeypatch.setattr("mutalyzer_retriever.sources.ensembl.fetch_tark", _fetch_tark)
     monkeypatch.setattr("mutalyzer_retriever.sources.ensembl.fetch_json", _fetch_json)
     monkeypatch.setattr("mutalyzer_retriever.retriever.retrieve_raw", _retrieve_raw)
     
@@ -58,7 +56,7 @@ def _retrieve_raw(
     elif r_id.startswith("LRG_"):
         return _get_content("data/" + r_id + ".lrg"), "lrg", "lrg"
     elif r_type == "json":
-        return (json.loads(_get_content("data/" + r_id + ".tark_raw.json")),"json","ensembl")
+        return (json.loads(_get_content("data/" + r_id + ".tark_raw.json")),"json","ensembl_tark")
     else:
         return _get_content("data/" + r_id + ".gff3"), "gff3", "ncbi"
 
@@ -88,19 +86,21 @@ references = {
             "NR_023343.1",
         ]
     },
-    "ensembl": {
+    "ensembl_rest": {
         "gff3": [
             "ENSG00000147889",
             "ENST00000383925",
             "ENST00000304494",
             "ENSG00000198899",
-        ],
+        ]
+    },
+    "ensembl_tark":{
         "json": [
             "ENST00000383925.1",
             "ENST00000383925",
             "ENST00000304494",
             "ENST00000304494.10",
-        ],
+        ]
     },
     "lrg": {"lrg": ["LRG_11", "LRG_417", "LRG_857"]},
 }

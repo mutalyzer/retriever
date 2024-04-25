@@ -28,7 +28,7 @@ TARK_API_BASE_MAP = {
 }
 
 
-def _fetch_tark(r_id, r_version, api_base, assembly):
+def _fetch_json(r_id, r_version, api_base, assembly, timeout):
     if api_base == TARK_API_BASE:
         return _get_content(
             f"data/{r_id}.{r_version}.tark_raw.model.json"
@@ -40,17 +40,6 @@ def _get_tark_versions(r_id, api_base, timeout=1):
         return (
             TARK_API_BASE_MAP[r_id]["GRCH38_version"],
             TARK_API_BASE_MAP[r_id]["GRCH37_version"],
-        )
-
-
-def _fetch_json(r_id, api_base, timeout=1):
-    if api_base == API_BASE_GRCH37:
-        return _get_content(
-            f"data/{r_id}.{API_BASE_GRCH37_MAP[r_id]['version']}.rest_raw.model.json"
-        )
-    if api_base == API_BASE_GRCH37_MAP:
-        return _get_content(
-            f"data/{r_id}.{API_BASE[r_id]['version']}.rest_raw.model.json"
         )
 
 
@@ -89,10 +78,10 @@ def test_ensembl_fetch_transcript_rest_38(r_id):
     assert fetch(r_id)[0] == _get_content(f"data/{r_id}.gff3")
 
 
-@pytest.mark.parametrize("r_id, r_type", [("ENST00000304494.5", "json")])
-def test_ensembl_fetch_transcript_rest_37(r_id, r_type):
+@pytest.mark.parametrize("r_id, r_type, r_source", [("ENST00000304494.5", "json", "ensembl_rest")])
+def test_ensembl_fetch_transcript_rest_37(r_id, r_type, r_source):
     with pytest.raises(ValueError):
-        assert fetch(r_id, r_type)[0] == None
+        fetch(r_id, r_type, r_source)
 
 
 @pytest.mark.parametrize("r_id, r_type", [("ENST00000304494.7", "json")])

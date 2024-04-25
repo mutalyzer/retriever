@@ -21,7 +21,7 @@ def get_references_content(references):
                     path_gb = (
                         Path(Path(__file__).parent)
                         / "data"
-                        / f"{r_id}.tark.model.{r_type}"
+                        / f"{r_id}.tark_raw.{r_type}"
                     )
                     r_content = json.loads(path_gb.open().read())
                 else:
@@ -57,7 +57,8 @@ def test_schema_validation(r_source, r_type, r_content, r_id, monkeypatch: pytes
         reference_type=r_type,
         reference_source=r_source,
     )
-    if r_source == "lrg":
+    
+    if r_source in ["ensembl_tark", "lrg"]:
         assert validate(r_model["annotations"]) is None
     else:
         assert validate(r_model) is None

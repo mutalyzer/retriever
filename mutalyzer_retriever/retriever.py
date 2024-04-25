@@ -89,7 +89,7 @@ def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1
     # Ensembl
     try:
         reference_content, reference_type = ensembl.fetch(
-            reference_id, reference_type, timeout
+            reference_id, reference_type, None, timeout
         )
     except (NameError, ConnectionError, ValueError) as e:
         status["ensembl"]["errors"].append(e)
@@ -104,7 +104,6 @@ def retrieve_raw(
     reference_id,
     reference_source=None,
     reference_type=None,
-    reference_api=None,
     size_off=True,
     timeout=1,
 ):
@@ -128,14 +127,13 @@ def retrieve_raw(
     elif reference_source == "ncbi":
         reference_content, reference_type = ncbi.fetch(
             reference_id, reference_type, timeout
-        )
-    elif reference_source == "ensembl":
-        reference_content, reference_type = ensembl.fetch(reference_id,reference_type,reference_api)
+        )  
+    elif reference_source in ["ensembl","ensembl_tark", "ensembl_rest"]:
+        reference_content, reference_type = ensembl.fetch(reference_id,reference_type,reference_source,timeout)
     elif reference_source == "lrg":
         reference_content = lrg.fetch_lrg(reference_id, timeout=timeout)
         if reference_content:
             reference_type = "lrg"
-    print(reference_content)
     return reference_content, reference_type, reference_source
 
 
@@ -143,7 +141,6 @@ def retrieve_model(
     reference_id,
     reference_source=None,
     reference_type=None,
-    reference_api=None,
     size_off=True,
     model_type="all",
     timeout=1,
@@ -163,7 +160,7 @@ def retrieve_model(
 
 
     reference_content, reference_type, reference_source = retrieve_raw(
-        reference_id, reference_source, reference_type, reference_api, size_off, timeout=timeout
+        reference_id, reference_source, reference_type, size_off, timeout=timeout
     )
  
     if reference_type == "lrg":
@@ -199,7 +196,7 @@ def retrieve_model(
         }
     
     elif reference_type == "json":
-        if reference_source == "ensembl":
+        if "ensembl" in reference_source:
             return parser.parse(reference_content, "json")
 
 

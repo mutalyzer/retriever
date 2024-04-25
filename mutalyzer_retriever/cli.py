@@ -27,7 +27,7 @@ def _parse_args(args):
     parser.add_argument("--id", help="the reference id")
 
     parser.add_argument(
-        "-s", "--source", help="retrieval source", choices=["ncbi", "ensembl", "lrg"]
+        "-s", "--source", help="retrieval source", choices=["ncbi", "ensembl_tark", "ensembl_rest", "lrg"]
     )
 
     parser.add_argument(
@@ -47,10 +47,6 @@ def _parse_args(args):
         help="include the complete model or parts of it",
         choices=["all", "sequence", "annotations"],
         default="all",
-    )
-
-    parser.add_argument(
-        "-a", "--api", help="retrieval api", choices=["tark", "rest"]
     )
 
     parser.add_argument(
@@ -162,7 +158,6 @@ def _retrieve_model(args):
         reference_source=args.source,
         reference_type=args.type,
         model_type=args.model_type,
-        reference_api=args.api,
         size_off=args.sizeoff,
         timeout=args.timeout,
     )

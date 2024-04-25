@@ -126,8 +126,7 @@ def parse(tark_result):
 
     exon_features = _exons(tark_result["exons"])
 
-    # TODO: find examples of null or 2
-    # one translations per transcript, somtimes null or 2 (strand -1/1)
+    # one translations per transcript, null for non-coding, rarely 2 for different version
     translation_features = _translation(tark_result["translations"])
 
     transcript_features = _transcript(tark_result, exon_features, translation_features)
