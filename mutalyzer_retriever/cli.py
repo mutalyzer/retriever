@@ -27,7 +27,7 @@ def _parse_args(args):
     parser.add_argument("--id", help="the reference id")
 
     parser.add_argument(
-        "-s", "--source", help="retrieval source", choices=["ncbi", "ensembl_tark", "ensembl_rest", "lrg"]
+        "-s", "--source", help="retrieval source", choices=["ncbi", "ensembl", "ensembl_tark", "ensembl_rest", "lrg"]
     )
 
     parser.add_argument(
