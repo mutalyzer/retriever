@@ -1,5 +1,4 @@
 import json
-import sys
 from copy import deepcopy
 from functools import lru_cache
 from pathlib import Path
@@ -55,7 +54,7 @@ def _raise_error(status):
     raise NoReferenceError(status, uncertain_sources)
 
 
-def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1):
+def _fetch_unknown_source(reference_id, reference_type, reference_source, size_off=True, timeout=1):
 
     status = {"lrg": {"errors": []}, "ncbi": {"errors": []}, "ensembl": {"errors": []}}
 
@@ -89,7 +88,7 @@ def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1
     # Ensembl
     try:
         reference_content, reference_type = ensembl.fetch(
-            reference_id, reference_type, None, timeout
+            reference_id, reference_type, reference_source, timeout
         )
     except (NameError, ConnectionError, ValueError) as e:
         status["ensembl"]["errors"].append(e)
@@ -122,14 +121,16 @@ def retrieve_raw(
 
     if reference_source is None:
         reference_content, reference_type, reference_source = _fetch_unknown_source(
-            reference_id, reference_type, size_off, timeout
+            reference_id, reference_type, reference_source, size_off, timeout
         )
     elif reference_source == "ncbi":
         reference_content, reference_type = ncbi.fetch(
             reference_id, reference_type, timeout
         )  
-    elif reference_source in ["ensembl","ensembl_tark", "ensembl_rest"]:
-        reference_content, reference_type = ensembl.fetch(reference_id,reference_type,reference_source,timeout)
+    elif reference_source in ["ensembl", "ensembl_tark", "ensembl_rest"]:
+        reference_content, reference_type = ensembl.fetch(
+            reference_id,reference_type,reference_source,timeout
+            )
     elif reference_source == "lrg":
         reference_content = lrg.fetch_lrg(reference_id, timeout=timeout)
         if reference_content:
@@ -156,9 +157,6 @@ def retrieve_model(
     :returns: Reference model.
     :rtype: dict
     """
-        
-
-
     reference_content, reference_type, reference_source = retrieve_raw(
         reference_id, reference_source, reference_type, size_off, timeout=timeout
     )
@@ -197,8 +195,13 @@ def retrieve_model(
     
     elif reference_type == "json":
         if "ensembl" in reference_source:
-            return parser.parse(reference_content, "json")
-
+            json_model = parser.parse(reference_content, "json")
+            if model_type == "all":
+                return json_model
+            elif model_type == "annotations":
+                return json_model["annotations"]
+            elif model_type == "sequence":
+                return json_model["sequence"]["seq"]
 
 def retrieve_model_from_file(paths=[], is_lrg=False):
     """
