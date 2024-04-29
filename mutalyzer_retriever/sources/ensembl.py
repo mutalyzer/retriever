@@ -99,9 +99,7 @@ def fetch_json(reference_id, reference_version, api_base, assembly="GRCh38", tim
         "stable_id_version": reference_version,
         "expand": "translations, genes, exons",
     }
-    req = requests.request(
-        method="get", url=f"{api_base}/{endpoint}", params=params, timeout=timeout
-    )
+    req = requests.request(method="get", url=f"{api_base}/{endpoint}", params=params, timeout=timeout)
     return req.json()
 
 
@@ -111,7 +109,7 @@ def get_rest_api_base(r_id, r_version):
         return settings.get("ENSEMBL_API"), "GRCh38"
     elif r_version == _get_most_recent_version(r_id, settings.get("ENSEMBL_API_GRCH37")):
         return settings.get("ENSEMBL_API_GRCH37"), "GRCh37"
-    raise ValueError(f"Cannot fetch {r_id}.{r_version} from Ensembl REST")
+    raise NameError(f"Cannot fetch {r_id}.{r_version} from Ensembl REST")
 
 
 def get_transcript_api_base(r_id, r_version, r_source):
@@ -123,7 +121,7 @@ def get_transcript_api_base(r_id, r_version, r_source):
         return settings.get("ENSEMBL_TARK_API"), "GRCh38"
     elif r_version in tark_versions_37:
         return settings.get("ENSEMBL_TARK_API"), "GRCh37"
-    raise ValueError(f"Cannot fetch {r_id} from Ensembl Tark")
+    raise NameError(f"Cannot fetch {r_id} from Ensembl Tark")
 
 
 def fetch(reference_id, reference_type=None, reference_source=None, timeout=1):
@@ -146,7 +144,7 @@ def fetch(reference_id, reference_type=None, reference_source=None, timeout=1):
     elif reference_type == "fasta":
         return fetch_fasta(r_id, api_base, timeout), "fasta"
     elif reference_type == "json":
-        if reference_source in [None, "ensembl_tark"]:
+        if reference_source in [None, "ensembl", "ensembl_tark"]:
             return fetch_json(r_id, r_version, api_base, assembly, timeout), "json"
 
     elif reference_type == "genbank":

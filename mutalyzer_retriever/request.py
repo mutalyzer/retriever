@@ -14,7 +14,7 @@ class Http400(Exception):
         self.response = error.response
 
 
-def request(url, params=None, headers=None, timeout=1, max_retries=1, sleep=1):
+def request(url, params=None, headers=None, timeout=20, max_retries=1, sleep=1):
     retries = 0
     errors = []
     while retries < max_retries:
