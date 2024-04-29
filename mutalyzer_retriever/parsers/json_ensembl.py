@@ -1,44 +1,31 @@
-import sys
-
 import requests
-
-
-def point(position: int):
-    return {"type": "point", "position": position}
-
-
-def location(start: int, end: int, strand=None):
-    loc_dict = {
-        "type": "range",
-        "start": point(start),
-        "end": point(end),
-        "strand": strand,
-    }
-    return {k: v for k, v in loc_dict.items() if v is not None}
+from ..util import make_location, f_e
 
 
 def _feature(raw_dict):
-    """Converting a general tark sub-dictionary into internal model, only id and location info"""
+    """Convert a general tark sub-dictionary into our internal model.
+       - only id and location info;
+       - Tark locations are 1-based, our model is 0-based.
+    """
     return {
         "id": raw_dict["stable_id"],
-        "location": location(
-            raw_dict["loc_start"] - 1, raw_dict["loc_end"], raw_dict["loc_strand"]
+        "location": make_location(
+            raw_dict["loc_start"] - 1, raw_dict["loc_end"], raw_dict.get("loc_strand")
         ),
     }
 
 
-def annotations(id, location, features):
-    annotations_dict = {
+def _annotations(id, location, features):
+    return {
         "id": id,
         "type": "record",
         "location": location,
         "features": features,
     }
-    return annotations_dict
 
 
 def _exons(tark_exons):
-    """converting exons info from tark list into internal exon list"""
+    """Convert exons info from tark response list into internal exon list."""
     exons = []
     for tark_exon in tark_exons:
         exon = _feature(tark_exon)
@@ -48,7 +35,12 @@ def _exons(tark_exons):
 
 
 def _translation(tark_translations):
-    """Converting translations per transcript from tark list into internal translation list"""
+    """Convert translations per transcript from tark list into internal translation list.
+       - null for non-coding RNA in input, return an empty list;
+       - one value for coding RNA in input, return a list of one item;
+       - rarely multiple values for coding RNA in input with different versions,
+         return a list of multiple items.
+    """
     translations = []
     for tark_translation in tark_translations:
         translation = _feature(tark_translation)
@@ -58,7 +50,9 @@ def _translation(tark_translations):
 
 
 def _transcript(tark_transcript, exon_features, translation_feature):
-    """Converting transcript from tark list into internal transcript list"""
+    """Convert transcript from tark list into internal transcript list.
+       - Tark has RNA type as protein_coding, change to internal RNA type mRNA.
+    """
     transcript = {}
     transcript = _feature(tark_transcript)
     transcript["type"] = tark_transcript["biotype"]
@@ -74,6 +68,7 @@ def _transcript(tark_transcript, exon_features, translation_feature):
 
 
 def _gene(tark_gene, gene_feature):
+    """Convert gene info from tark list into internal gene list."""
     gene = {}
     gene = _feature(tark_gene)
     gene["type"] = "gene"
@@ -86,10 +81,18 @@ def _gene(tark_gene, gene_feature):
     return [gene]
 
 
-def _seq_from_rest(chr_No, strand, loc_start, loc_end):
-    server = "https://rest.ensembl.org"
-    ext = f"/sequence/region/human/{chr_No}:{loc_start}..{loc_end}:{strand}?coord_system_version=GRCh38"
-    r = requests.get(server + ext, headers={"Content-Type": "text/plain"})
+def _seq_from_rest(assembly, chr_idx, strand, loc_start, loc_end, timeout=1):
+    """Retrieve sequence from ensembl Rest API."""
+    if assembly == "GRCh38":
+        server = "https://rest.ensembl.org"
+    elif assembly == "GRCh37":
+        server = "https://grch37.rest.ensembl.org"
+    else:
+        raise NameError("Unsupported assembly {assembly}")
+    ext = f"/sequence/region/human/{chr_idx}:{loc_start}..{loc_end}:{strand}?"
+    r = requests.get(
+        server + ext, headers={"Content-Type": "text/plain"}, timeout=timeout
+    )
     if not r.ok:
         raise NameError
     return r.text
@@ -98,6 +101,7 @@ def _seq_from_rest(chr_No, strand, loc_start, loc_end):
 def _sequence(tark_result):
     return {
         "seq": _seq_from_rest(
+            tark_result["assembly"],
             tark_result["loc_region"],
             tark_result["loc_strand"],
             tark_result["loc_start"],
@@ -121,19 +125,23 @@ def _sequence(tark_result):
     }
 
 
-def parse(tark_result):
-    """convert the tark json response of one transcript into the retriever model json output"""
+def parse(tark_results):
+    """Convert the Tark json response into the retriever model json output.
+       - take the latest version from Tark response if no specific version required;
+       - for genes, take the latest version with "name" field in case of same stable ID
+    """
+    tark_results = tark_results.get("results")
+    if tark_results:
+        tark_result = tark_results[-1]
+    else:
+        raise NameError(f_e("ensembl tark", e=None, extra="returns no results"))
 
     exon_features = _exons(tark_result["exons"])
 
-    # one translations per transcript, null for non-coding, rarely 2 for different version
     translation_features = _translation(tark_result["translations"])
 
     transcript_features = _transcript(tark_result, exon_features, translation_features)
 
-    # sometimes multiple gene info with different version or different content (eg. name=null/sth)
-    # sort the genes based on stable_id_version and take the highest version
-    # In case of same stable_id_version, the one with "name" field is considered higher.
     genes = sorted(
         tark_result["genes"],
         key=lambda g: (g["stable_id_version"], 0 if g["name"] is None else 1),
@@ -142,9 +150,9 @@ def parse(tark_result):
     gene_feature = _gene(tark_gene, gene_feature=transcript_features)
 
     return {
-        "annotations": annotations(
+        "annotations": _annotations(
             tark_result["loc_region"],
-            location(tark_result["loc_start"] - 1, tark_result["loc_end"]),
+            make_location(tark_result["loc_start"] - 1, tark_result["loc_end"]),
             gene_feature,
         ),
         "sequence": _sequence(tark_result),
