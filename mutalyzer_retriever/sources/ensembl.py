@@ -52,7 +52,9 @@ def fetch_gff3(feature_id, api_base, timeout=1):
 def _get_tark_versions(reference_id, api_base, timeout=1):
     endpoint = "transcript"
     params = {"stable_id": reference_id}
-    tark_req = json.loads(request(url=f"{api_base}/{endpoint}", params=params, timeout=timeout))
+    tark_req = json.loads(
+        request(url=f"{api_base}/{endpoint}", params=params, timeout=timeout)
+    )
     tark_versions_38 = []
     tark_versions_37 = []
     if tark_req["results"]:
@@ -99,7 +101,9 @@ def fetch_json(reference_id, reference_version, api_base, assembly="GRCh38", tim
         "stable_id_version": reference_version,
         "expand": "translations, genes, exons",
     }
-    req = requests.request(method="get", url=f"{api_base}/{endpoint}", params=params, timeout=timeout)
+    req = requests.request(
+        method="get", url=f"{api_base}/{endpoint}", params=params, timeout=timeout
+    )
     return req.json()
 
 
@@ -150,4 +154,6 @@ def fetch(reference_id, reference_type=None, reference_source=None, timeout=1):
     elif reference_type == "genbank":
         return None, "genbank"
 
-    raise ValueError(f"{reference_source} fetch does not support {reference_type} reference type.")
+    raise ValueError(
+        f"{reference_source} fetch does not support {reference_type} reference type."
+    )

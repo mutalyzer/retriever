@@ -1,14 +1,12 @@
 import json
 from pathlib import Path
-
 import pytest
-
 from mutalyzer_retriever.retriever import NoReferenceError
 
 
 @pytest.fixture(autouse=True)
 def patch_retriever(monkeypatch):
-    '''retrieve all monkeypath'''
+    """retrieve all monkeypath"""
     from .test_fetch import (
         _fetch_gff3,
         _fetch_json,
@@ -26,11 +24,6 @@ def patch_retriever(monkeypatch):
     )
     monkeypatch.setattr("mutalyzer_retriever.sources.ensembl.fetch_json", _fetch_json)
     monkeypatch.setattr("mutalyzer_retriever.retriever.retrieve_raw", _retrieve_raw)
-    
-
-
-
-
 
 
 def _get_content(relative_location):
@@ -56,7 +49,11 @@ def _retrieve_raw(
     elif r_id.startswith("LRG_"):
         return _get_content("data/" + r_id + ".lrg"), "lrg", "lrg"
     elif r_type == "json":
-        return (json.loads(_get_content("data/" + r_id + ".tark_raw.json")),"json","ensembl_tark")
+        return (
+            json.loads(_get_content("data/" + r_id + ".tark_raw.json")),
+            "json",
+            "ensembl_tark",
+        )
     else:
         return _get_content("data/" + r_id + ".gff3"), "gff3", "ncbi"
 
@@ -94,7 +91,7 @@ references = {
             "ENSG00000198899",
         ]
     },
-    "ensembl_tark":{
+    "ensembl_tark": {
         "json": [
             "ENST00000383925.1",
             "ENST00000383925",

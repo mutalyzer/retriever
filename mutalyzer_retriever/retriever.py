@@ -69,7 +69,7 @@ def _fetch_unknown_source(reference_id, reference_type, reference_source, size_o
     else:
         status["lrg"]["errors"].append(
             ValueError(
-                "Lrg fetch does not support '{}' reference type.".format(reference_type)
+                f"Lrg fetch does not support '{reference_type}' reference type."
             )
         )
 

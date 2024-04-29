@@ -1,8 +1,6 @@
 import pytest
-
 from mutalyzer_retriever.configuration import settings
 from mutalyzer_retriever.sources.ensembl import fetch
-
 from .commons import _get_content, patch_retriever
 
 API_BASE = settings["ENSEMBL_API"]
