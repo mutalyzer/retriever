@@ -51,7 +51,7 @@ def get_references_content(references):
 def test_schema_validation(r_source, r_type, r_content, r_id, monkeypatch: pytest.MonkeyPatch):
     '''parse raw response and check its output schema'''
     monkeypatch.setattr("mutalyzer_retriever.parsers.json_ensembl._seq_from_rest", 
-                        lambda _1, _2, _3, _4: _seq_from_rest(r_id))
+                        lambda _0,_1, _2, _3, _4: _seq_from_rest(r_id))
     r_model = parser.parse(
         reference_content=r_content,
         reference_type=r_type,

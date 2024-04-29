@@ -105,7 +105,7 @@ def test_ensembl_fetch_version_grch37(r_id):
 
 @pytest.mark.parametrize("r_id", [("ENSG00000147889.15")])
 def test_ensembl_fetch_other_version(r_id):
-    with pytest.raises(ValueError):
+    with pytest.raises(NameError):
         assert fetch(r_id)[0] == None
 
 
