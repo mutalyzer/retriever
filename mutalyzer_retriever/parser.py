@@ -1,4 +1,4 @@
-from .parsers import fasta, gff3, lrg
+from .parsers import fasta, gff3, json_ensembl, lrg
 
 
 def _get_reference_type(content):
@@ -19,6 +19,8 @@ def parse(reference_content, reference_type=None, reference_source=None):
         model = gff3.parse(reference_content, reference_source)
     elif reference_type == "fasta":
         model = fasta.parse(reference_content)
+    elif reference_type == "json":
+        model = json_ensembl.parse(reference_content)
     else:
         return None
 

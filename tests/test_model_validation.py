@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 import pytest
@@ -5,79 +6,56 @@ import pytest
 from mutalyzer_retriever import parser
 from mutalyzer_retriever.schema_validation import validate
 
+from .commons import patch_retriever, references
+from .test_retriever_model import _seq_from_rest
+
 
 def get_references_content(references):
-    references_content = []
-    for reference_source in references.keys():
-        for reference_type in references[reference_source]:
-            for reference_id in references[reference_source][reference_type]:
-                path_gb = (
-                    Path(Path(__file__).parent)
-                    / "data"
-                    / "{}.{}".format(reference_id, reference_type)
-                )
-                with path_gb.open() as f:
-                    reference_content = f.read()
-                references_content.append(
+    """Read raw response from tests data folder"""
+    r_contents = []
+    for r_source in references.keys():
+        for r_type in references[r_source]:
+            for r_id in references[r_source][r_type]:
+                if r_type == "json":
+                    path_gb = (
+                        Path(Path(__file__).parent)
+                        / "data"
+                        / f"{r_id}.tark_raw.{r_type}"
+                    )
+                    r_content = json.loads(path_gb.open().read())
+                else:
+                    path_gb = Path(Path(__file__).parent) / "data" / f"{r_id}.{r_type}"
+                    with path_gb.open() as f:
+                        r_content = f.read()
+                r_contents.append(
                     pytest.param(
-                        reference_source,
-                        reference_type,
-                        reference_content,
-                        id="{}-{}-{}".format(
-                            reference_source, reference_type, reference_id
-                        ),
+                        r_source,
+                        r_type,
+                        r_content,
+                        r_id,
+                        id=f"{r_source}-{r_type}-{r_id}",
                     )
                 )
-    return references_content
+    return r_contents
 
 
 @pytest.mark.parametrize(
-    "reference_source, reference_type, reference_content",
-    get_references_content(
-        {
-            "ncbi": {
-                "gff3": [
-                    "NM_078467.2",
-                    "NM_152263.2",
-                    "NM_152263.3",
-                    "NM_000077.4",
-                    "NM_002001.2",
-                    "NG_012337.1",
-                    "NR_002196.2",
-                    "L41870.1",
-                    "NG_007485.1",
-                    "NC_012920.1",
-                    "NG_009930.1",
-                    "AA010203.1",
-                    "NP_060665.3",
-                    "D64137.1",
-                    "AB006684.1",
-                    "NM_004152.3",
-                    "7",
-                    "M65131.1",
-                    "XR_948219.2",
-                    "NR_023343.1",
-                ]
-            },
-            "ensembl": {
-                "gff3": [
-                    "ENSG00000147889",
-                    "ENST00000383925",
-                    "ENST00000304494",
-                    "ENSG00000198899",
-                ]
-            },
-            "lrg": {"lrg": ["LRG_11", "LRG_417", "LRG_857"]},
-        }
-    ),
+    "r_source, r_type, r_content, r_id", get_references_content(references)
 )
-def test_schema_validation(reference_source, reference_type, reference_content):
-    reference_model = parser.parse(
-        reference_content,
-        reference_type=reference_type,
-        reference_source=reference_source,
+def test_schema_validation(
+    r_source, r_type, r_content, r_id, monkeypatch: pytest.MonkeyPatch
+):
+    """Parse raw response and check its output schema"""
+    monkeypatch.setattr(
+        "mutalyzer_retriever.parsers.json_ensembl._seq_from_rest",
+        lambda _0, _1, _2, _3, _4: _seq_from_rest(r_id),
     )
-    if reference_source == "lrg":
-        assert validate(reference_model["annotations"]) is None
+    r_model = parser.parse(
+        reference_content=r_content,
+        reference_type=r_type,
+        reference_source=r_source,
+    )
+    if r_source in ["ensembl_tark", "lrg"]:
+        assert validate(r_model["annotations"]) is None
     else:
-        assert validate(reference_model) is None
+        assert validate(r_model) is None

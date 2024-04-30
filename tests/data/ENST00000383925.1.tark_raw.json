@@ -1,0 +1,75 @@
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "stable_id": "ENST00000383925",
+            "stable_id_version": 1,
+            "assembly": "GRCh38",
+            "loc_start": 16514122,
+            "loc_end": 16514285,
+            "loc_strand": -1,
+            "loc_region": "1",
+            "loc_checksum": "038F34CB0196112C9FEB85595F0EF66CEA231E87",
+            "exon_set_checksum": "E4F0A73FB88745A75017E2CEF1F5806DA67E559A",
+            "transcript_checksum": "B29859A7C558F2A19CD3EBAAFE24855E6FEC8299",
+            "sequence": {
+                "sequence": "ATACTTACCTGGCAGGGGAGATACCATGATCACGAAGGTGGTTTTCCCAGGGCGAGGCTTATCCATTGCACTCCGGATGTGCTGACCCCTGCGATTTCCCCAAATGTGGGAAACTCGACTGCATAATTTGTGGTAGTGGGGGACTGCGTTCGCGCTTTCCCCTG",
+                "seq_checksum": "107154F0C6B845AFEDDE5E4343C8B0A770D88439"
+            },
+            "biotype": "snRNA",
+            "three_prime_utr_start": null,
+            "three_prime_utr_end": null,
+            "three_prime_utr_seq": null,
+            "three_prime_utr_checksum": null,
+            "five_prime_utr_start": null,
+            "five_prime_utr_end": null,
+            "five_prime_utr_seq": null,
+            "five_prime_utr_checksum": null,
+            "translations": [],
+            "genes": [
+                {
+                    "stable_id": "ENSG00000206652",
+                    "stable_id_version": 1,
+                    "assembly": "GRCh38",
+                    "loc_start": 16514122,
+                    "loc_end": 16514285,
+                    "loc_strand": -1,
+                    "loc_region": "1",
+                    "loc_checksum": "038F34CB0196112C9FEB85595F0EF66CEA231E87",
+                    "name": "RNU1-1",
+                    "gene_checksum": "FB75ECC5191A095BA7BA1D23EB5DDCB3AF32B792"
+                },
+                {
+                    "stable_id": "ENSG00000206652",
+                    "stable_id_version": 1,
+                    "assembly": "GRCh38",
+                    "loc_start": 16514122,
+                    "loc_end": 16514285,
+                    "loc_strand": -1,
+                    "loc_region": "1",
+                    "loc_checksum": "038F34CB0196112C9FEB85595F0EF66CEA231E87",
+                    "name": null,
+                    "gene_checksum": "F78320EE4D946C3EADF35CACA4BEECB4CC8501A5"
+                }
+            ],
+            "exons": [
+                {
+                    "exon_id": 1712127,
+                    "stable_id": "ENSE00001808303",
+                    "stable_id_version": 1,
+                    "assembly": "GRCh38",
+                    "loc_start": 16514122,
+                    "loc_end": 16514285,
+                    "loc_strand": -1,
+                    "loc_region": "1",
+                    "loc_checksum": "038F34CB0196112C9FEB85595F0EF66CEA231E87",
+                    "exon_checksum": "97B0B82AB8E9C6A87AAFFE8C4B1C5807D580045F",
+                    "exon_order": 1
+                }
+            ],
+            "cds_info": {}
+        }
+    ]
+}

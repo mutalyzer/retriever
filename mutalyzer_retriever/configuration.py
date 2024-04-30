@@ -10,6 +10,7 @@ DEFAULT_SETTINGS = {
     "MAX_FILE_SIZE": 10 * 1048576,
     "ENSEMBL_API": "https://rest.ensembl.org",
     "ENSEMBL_API_GRCH37": "https://grch37.rest.ensembl.org",
+    "ENSEMBL_TARK_API":"https://tark.ensembl.org/api",
 }
 
 

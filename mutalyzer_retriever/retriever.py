@@ -18,7 +18,7 @@ class NoReferenceError(Exception):
     def __init__(self, status, uncertain_sources):
         self.uncertain_sources = uncertain_sources
         message = ""
-        if uncertain_sources is not []:
+        if uncertain_sources != []:
             message = f"\n\nUncertain sources: {', '.join(uncertain_sources)}\n"
 
         for source in status.keys():
@@ -50,12 +50,14 @@ def _raise_error(status):
             and isinstance(status[source]["errors"][0], NameError)
         ):
             uncertain_sources.append(source)
-    if uncertain_sources is []:
+    if uncertain_sources == []:
         raise NoReferenceRetrieved
     raise NoReferenceError(status, uncertain_sources)
 
 
-def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1):
+def _fetch_unknown_source(
+    reference_id, reference_type, reference_source, size_off=True, timeout=1
+):
 
     status = {"lrg": {"errors": []}, "ncbi": {"errors": []}, "ensembl": {"errors": []}}
 
@@ -69,9 +71,7 @@ def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1
             return reference_content, "lrg", "lrg"
     else:
         status["lrg"]["errors"].append(
-            ValueError(
-                "Lrg fetch does not support '{}' reference type.".format(reference_type)
-            )
+            ValueError(f"Lrg fetch does not support '{reference_type}' reference type.")
         )
 
     # NCBI
@@ -89,7 +89,7 @@ def _fetch_unknown_source(reference_id, reference_type, size_off=True, timeout=1
     # Ensembl
     try:
         reference_content, reference_type = ensembl.fetch(
-            reference_id, reference_type, timeout
+            reference_id, reference_type, reference_source, timeout
         )
     except (NameError, ConnectionError, ValueError) as e:
         status["ensembl"]["errors"].append(e)
@@ -122,21 +122,20 @@ def retrieve_raw(
 
     if reference_source is None:
         reference_content, reference_type, reference_source = _fetch_unknown_source(
-            reference_id, reference_type, size_off, timeout
+            reference_id, reference_type, reference_source, size_off, timeout
         )
     elif reference_source == "ncbi":
         reference_content, reference_type = ncbi.fetch(
             reference_id, reference_type, timeout
         )
-    elif reference_source == "ensembl":
+    elif reference_source in ["ensembl", "ensembl_tark", "ensembl_rest"]:
         reference_content, reference_type = ensembl.fetch(
-            reference_id, reference_type, timeout
+            reference_id, reference_type, reference_source, timeout
         )
     elif reference_source == "lrg":
         reference_content = lrg.fetch_lrg(reference_id, timeout=timeout)
         if reference_content:
             reference_type = "lrg"
-
     return reference_content, reference_type, reference_source
 
 
@@ -167,9 +166,9 @@ def retrieve_model(
         model = parser.parse(reference_content, reference_type, reference_source)
         if model_type == "all":
             return model
-        elif model_type == "sequence":
+        if model_type == "sequence":
             return model["sequence"]
-        elif model_type == "annotations":
+        if model_type == "annotations":
             return model["annotations"]
     elif reference_type == "gff3":
         if model_type == "all":
@@ -194,6 +193,16 @@ def retrieve_model(
         return {
             "sequence": parser.parse(reference_content, "fasta"),
         }
+
+    elif reference_type == "json":
+        if "ensembl" in reference_source:
+            json_model = parser.parse(reference_content, "json")
+            if model_type == "all":
+                return json_model
+            elif model_type == "annotations":
+                return json_model["annotations"]
+            elif model_type == "sequence":
+                return json_model["sequence"]["seq"]
 
 
 def retrieve_model_from_file(paths=[], is_lrg=False):
