@@ -5,9 +5,9 @@ import pytest
 
 from mutalyzer_retriever import parser
 from mutalyzer_retriever.schema_validation import validate
-from .test_retriever_model import _seq_from_rest
 
-from .commons import references, patch_retriever
+from .commons import patch_retriever, references
+from .test_retriever_model import _seq_from_rest
 
 
 def get_references_content(references):
@@ -39,8 +39,12 @@ def get_references_content(references):
     return r_contents
 
 
-@pytest.mark.parametrize("r_source, r_type, r_content, r_id", get_references_content(references))
-def test_schema_validation(r_source, r_type, r_content, r_id, monkeypatch: pytest.MonkeyPatch):
+@pytest.mark.parametrize(
+    "r_source, r_type, r_content, r_id", get_references_content(references)
+)
+def test_schema_validation(
+    r_source, r_type, r_content, r_id, monkeypatch: pytest.MonkeyPatch
+):
     """Parse raw response and check its output schema"""
     monkeypatch.setattr(
         "mutalyzer_retriever.parsers.json_ensembl._seq_from_rest",

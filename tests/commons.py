@@ -1,19 +1,37 @@
 import json
 from pathlib import Path
+
 import pytest
+
+from mutalyzer_retriever.configuration import settings
 from mutalyzer_retriever.retriever import NoReferenceError
+
+API_BASE = settings["ENSEMBL_API"]
+API_BASE_GRCH37 = settings["ENSEMBL_API_GRCH37"]
+TARK_API_BASE = settings["ENSEMBL_TARK_API"]
+
+
+API_BASE_MAP = {
+    "ENSG00000147889": {"version": 18, "species": "homo_sapiens"},
+    "ENSMUSG00000022346": {"version": 18, "species": "mus_musculus"},
+    "ENST00000304494": {"version": 10, "species": "homo_sapiens"},
+    "ENST00000000000": {"version": 20, "species": "homo_sapiens"},
+}
+API_BASE_GRCH37_MAP = {
+    "ENSG00000147889": {"version": 12, "species": "homo_sapiens"},
+    "ENST00000304494": {"version": 5, "species": "homo_sapiens"},
+    "ENST00000000000": {"version": 6, "species": "homo_sapiens"},
+}
+
+TARK_API_BASE_MAP = {
+    "ENST00000304494": {"GRCH38_version": [10, 9, 8, 7, 6], "GRCH37_version": [5]},
+    "ENST00000000000": {"GRCH38_version": [20, 19, 18], "GRCH37_version": [6, 5]},
+}
 
 
 @pytest.fixture(autouse=True)
 def patch_retriever(monkeypatch):
     """retrieve all monkeypath"""
-    from .test_fetch import (
-        _fetch_gff3,
-        _fetch_json,
-        _get_reference_information,
-        _get_tark_versions,
-    )
-
     monkeypatch.setattr("mutalyzer_retriever.sources.ensembl.fetch_gff3", _fetch_gff3)
     monkeypatch.setattr(
         "mutalyzer_retriever.sources.ensembl._get_reference_information",
@@ -24,6 +42,34 @@ def patch_retriever(monkeypatch):
     )
     monkeypatch.setattr("mutalyzer_retriever.sources.ensembl.fetch_json", _fetch_json)
     monkeypatch.setattr("mutalyzer_retriever.retriever.retrieve_raw", _retrieve_raw)
+
+
+def _fetch_json(r_id, r_version, api_base, assembly, timeout):
+    if api_base == TARK_API_BASE:
+        return _get_content(f"data/{r_id}.{r_version}.tark_raw.model.json")
+
+
+def _get_tark_versions(r_id, api_base, timeout=1):
+    if api_base == TARK_API_BASE and r_id in TARK_API_BASE_MAP:
+        return (
+            TARK_API_BASE_MAP[r_id]["GRCH38_version"],
+            TARK_API_BASE_MAP[r_id]["GRCH37_version"],
+        )
+
+
+def _fetch_gff3(feature_id, api_base, timeout=1):
+    if api_base == API_BASE_GRCH37:
+        return _get_content(
+            f"data/{feature_id}.{API_BASE_GRCH37_MAP[feature_id]['version']}.gff3"
+        )
+    return _get_content(f"data/{feature_id}.gff3")
+
+
+def _get_reference_information(r_id, api_base, timeout=1):
+    if api_base == API_BASE and r_id in API_BASE_MAP:
+        return API_BASE_MAP[r_id]
+    if api_base == API_BASE_GRCH37 and r_id in API_BASE_GRCH37_MAP:
+        return API_BASE_GRCH37_MAP[r_id]
 
 
 def _get_content(relative_location):

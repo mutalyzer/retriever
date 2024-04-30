@@ -18,14 +18,10 @@ def fetch_fasta(feature_id, api_base, timeout=1):
         raise ConnectionError(f_e("gff3", e))
     except Http400 as e:
         response_json = e.response.json()
-        if response_json and response_json.get("error") == "ID '{}' not found".format(
-            feature_id
-        ):
+        if response_json and response_json.get("error") == f"ID '{feature_id}' not found":
             raise NameError(f_e("fasta", e, response_json.get("error")))
-        else:
-            raise e
-    else:
-        return response
+        raise e
+    return response
 
 
 def fetch_gff3(feature_id, api_base, timeout=1):
@@ -39,14 +35,10 @@ def fetch_gff3(feature_id, api_base, timeout=1):
         raise ConnectionError(f_e("gff3", e))
     except Http400 as e:
         response_json = e.response.json()
-        if response_json and response_json.get("error") == "ID '{}' not found".format(
-            feature_id
-        ):
+        if response_json and response_json.get("error") == f"ID '{feature_id}' not found":
             raise NameError(f_e("gff3", e, response_json.get("error")))
-        else:
-            raise e
-    else:
-        return response
+        raise e
+    return response
 
 
 def _get_tark_versions(reference_id, api_base, timeout=1):
@@ -111,7 +103,7 @@ def get_rest_api_base(r_id, r_version):
     rest_version_38 = _get_most_recent_version(r_id, settings.get("ENSEMBL_API"))
     if r_version in [None, rest_version_38]:
         return settings.get("ENSEMBL_API"), "GRCh38"
-    elif r_version == _get_most_recent_version(r_id, settings.get("ENSEMBL_API_GRCH37")):
+    if r_version == _get_most_recent_version(r_id, settings.get("ENSEMBL_API_GRCH37")):
         return settings.get("ENSEMBL_API_GRCH37"), "GRCh37"
     raise NameError(f"Cannot fetch {r_id}.{r_version} from Ensembl REST")
 
@@ -123,7 +115,7 @@ def get_transcript_api_base(r_id, r_version, r_source):
     tark_versions_38, tark_versions_37 = _get_tark_versions(r_id, settings.get("ENSEMBL_TARK_API"))
     if r_version is None or r_version in tark_versions_38:
         return settings.get("ENSEMBL_TARK_API"), "GRCh38"
-    elif r_version in tark_versions_37:
+    if r_version in tark_versions_37:
         return settings.get("ENSEMBL_TARK_API"), "GRCh37"
     raise NameError(f"Cannot fetch {r_id} from Ensembl Tark")
 

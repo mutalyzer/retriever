@@ -15,9 +15,9 @@ def _feature(raw_dict):
     }
 
 
-def _annotations(id, location, features):
+def _annotations(ref_id, location, features):
     return {
-        "id": id,
+        "id": ref_id,
         "type": "record",
         "location": location,
         "features": features,
