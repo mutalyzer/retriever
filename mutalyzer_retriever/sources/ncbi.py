@@ -190,7 +190,21 @@ def fetch(reference_id, reference_type, size_on=True, timeout=1):
 
     :returns tuple: raw annotations, type ("gff3" or "genbank")
     """
-    db = _get_database(reference_id)
+    db = "nuccore"
+    # https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4702849/
+    # https://support.nlm.nih.gov/knowledgebase/article/KA-03437/
+    # https://support.nlm.nih.gov/knowledgebase/article/KA-03434/
+    # https://support.nlm.nih.gov/knowledgebase/article/KA-03389/
+    # https://www.ncbi.nlm.nih.gov/books/NBK21091/table/ch18.T.refseq_accession_numbers_and_mole/
+    if (
+        reference_id.startswith("AP_")
+        or reference_id.startswith("NP_")
+        or reference_id.startswith("WP_")
+        or reference_id.startswith("XP_")
+        or reference_id.startswith("YP_")
+        or reference_id.startswith("ZP_")
+    ):
+        db = "protein"
     if reference_type in [None, "gff3"]:
         return fetch_gff3(reference_id, db, timeout), "gff3"
     elif reference_type == "fasta":
