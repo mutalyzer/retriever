@@ -12,9 +12,9 @@ from .retriever import retrieve_model, retrieve_model_from_file, retrieve_raw
 from .sources.ncbi_assemblies import Assemblies, annotations_summary
 
 
-def _parse_args(args):
+def _args_parser():
     """
-    Command line argument parsing.
+    Command line argument parser.
     """
     parser = argparse.ArgumentParser(
         description=usage[0],
@@ -27,7 +27,10 @@ def _parse_args(args):
     parser.add_argument("--id", help="the reference id")
 
     parser.add_argument(
-        "-s", "--source", help="retrieval source", choices=["ncbi", "ensembl", "ensembl_tark", "ensembl_rest", "lrg"]
+        "-s",
+        "--source",
+        help="retrieval source",
+        choices=["ncbi", "ensembl", "ensembl_tark", "ensembl_rest", "lrg"],
     )
 
     parser.add_argument(
@@ -113,7 +116,11 @@ def _parse_args(args):
     parser_assemblies_summary.add_argument("--directory", help="models directory path")
     parser_assemblies_summary.add_argument("--ref_id_start")
 
-    return parser.parse_args(args)
+    return parser
+
+
+def parse_args(args=None):
+    return _args_parser().parse_args(args)
 
 
 def _write_model(model, args):
@@ -216,5 +223,11 @@ def main():
     """
     Main entry point.
     """
-    args = _parse_args(sys.argv[1:])
+    args_parser = _args_parser()
+
+    if len(sys.argv) == 1:
+        args_parser.print_help(sys.stderr)
+        sys.exit(1)
+
+    args = args_parser.parse_args()
     _endpoint(args)(args)
