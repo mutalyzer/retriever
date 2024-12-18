@@ -9,7 +9,7 @@ import sys
 from . import usage, version
 from .related import get_cds_to_mrna, get_related
 from .retriever import retrieve_model, retrieve_model_from_file, retrieve_raw
-from .sources.ncbi_assemblies import Assemblies, annotations_summary
+from .sources.ncbi_assemblies import annotations_summary, retrieve_assemblies
 
 
 def _args_parser():
@@ -106,6 +106,9 @@ def _args_parser():
         "--downloaded", help="already downloaded", action="store_true"
     )
     parser_ncbi_assemblies.add_argument(
+        "--assembly_id_start", help="assembly id should start with"
+    )
+    parser_ncbi_assemblies.add_argument(
         "--ref_id_start", help="reference id should start with"
     )
 
@@ -149,13 +152,12 @@ def _from_file(args):
 
 
 def _retrieve_assemblies(args):
-    Assemblies(
-        args.input,
-        args.output,
-        args.downloaded,
-        args.ref_id_start,
-        args.split,
-        args.only_annotations,
+    retrieve_assemblies(
+        directory_input=args.input,
+        directory_output=args.output,
+        assembly_id_start=args.assembly_id_start,
+        ref_id_start=args.ref_id_start,
+        downloaded=args.downloaded,
     )
 
 

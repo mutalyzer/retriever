@@ -1,15 +1,159 @@
 import gzip
-import io
 import json
 import xml.etree.ElementTree as ET
 from copy import deepcopy
-from ftplib import FTP, error_perm
 from pathlib import Path
 
 import requests
 
 from mutalyzer_retriever.parser import parse
-from mutalyzer_retriever.retriever import retrieve_raw
+
+
+def _annotations_urls():
+    common = "https://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/annotation_releases/"
+    annotations_urls = {
+        "GRCh37": [
+            [
+                common + "105.20190906/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.gff.gz",
+                common + "105.20190906/Homo_sapiens_AR105_annotation_report.xml",
+            ],
+            [
+                common + "105.20220307/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.gff.gz",
+                common + "105.20220307/Homo_sapiens_AR105.20220307_annotation_report.xml",
+            ],
+            [
+                common + "GCF_000001405.25-RS_2024_09/GCF_000001405.25_GRCh37.p13_genomic.gff.gz",
+                common + "GCF_000001405.25-RS_2024_09/GCF_000001405.25-RS_2024_09_annotation_report.xml",
+            ],
+        ],
+        "GRCh38": [
+            [
+                common + "109/GCF_000001405.38_GRCh38.p12/GCF_000001405.38_GRCh38.p12_genomic.gff.gz",
+                common + "109/GCF_000001405.38_GRCh38.p12/Homo_sapiens_AR109_annotation_report.xml"
+            ],
+            [
+                common + "109.20190607/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.gff.gz",
+                common + "109.20190607/GCF_000001405.39_GRCh38.p13/Homo_sapiens_AR109.20190607_annotation_report.xml"
+            ],
+            [
+                common + "109.20190905/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.gff.gz",
+                common + "109.20190905/GCF_000001405.39_GRCh38.p13/Homo_sapiens_AR109.20190905_annotation_report.xml"
+            ],
+            [
+                common + "109.20191205/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.gff.gz",
+                common + "109.20191205/GCF_000001405.39_GRCh38.p13/Homo_sapiens_AR109.20191205_annotation_report.xml"
+            ],
+            [
+                common + "109.20200228/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.gff.gz",
+                common + "109.20200228/GCF_000001405.39_GRCh38.p13/Homo_sapiens_AR109.20200228_annotation_report.xml"
+            ],
+            [
+                common + "109.20200522/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.gff.gz",
+                common + "109.20200522/GCF_000001405.39_GRCh38.p13/Homo_sapiens_AR109.20200522_annotation_report.xml"
+            ],
+            [
+                common + "109.20200815/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.gff.gz",
+                common + "109.20200815/GCF_000001405.39_GRCh38.p13/Homo_sapiens_AR109.20200815_annotation_report.xml"
+            ],
+            [
+                common + "109.20201120/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.gff.gz",
+                common + "109.20201120/GCF_000001405.39_GRCh38.p13/Homo_sapiens_AR109.20201120_annotation_report.xml"
+            ],
+            [
+                common + "109.20210226/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.gff.gz",
+                common + "109.20210226/GCF_000001405.39_GRCh38.p13/Homo_sapiens_AR109.20210226_annotation_report.xml"
+            ],
+            [
+                common + "109.20210514/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.gff.gz",
+                common + "109.20210514/GCF_000001405.39_GRCh38.p13/Homo_sapiens_AR109.20210514_annotation_report.xml"
+            ],
+            [
+                common + "109.20211119/GCF_000001405.39_GRCh38.p13/GCF_000001405.39_GRCh38.p13_genomic.gff.gz",
+                common + "109.20211119/GCF_000001405.39_GRCh38.p13/Homo_sapiens_AR109.20211119_annotation_report.xml"
+            ],
+            [
+                common + "110/GCF_000001405.40_GRCh38.p14/GCF_000001405.40_GRCh38.p14_genomic.gff.gz",
+                common + "110/Homo_sapiens_AR110_annotation_report.xml"
+            ],
+            [
+                common + "GCF_000001405.40-RS_2023_03/GCF_000001405.40_GRCh38.p14_genomic.gff.gz",
+                common + "GCF_000001405.40-RS_2023_03/GCF_000001405.40-RS_2023_03_annotation_report.xml"
+            ],
+            [
+                common + "GCF_000001405.40-RS_2023_10/GCF_000001405.40_GRCh38.p14_genomic.gff.gz",
+                common + "GCF_000001405.40-RS_2023_10/GCF_000001405.40-RS_2023_10_annotation_report.xml"
+            ],
+            [
+                common + "GCF_000001405.40-RS_2024_08/GCF_000001405.40_GRCh38.p14_genomic.gff.gz",
+                common + "GCF_000001405.40-RS_2024_08/GCF_000001405.40-RS_2024_08_annotation_report.xml"
+            ]
+        ],
+        "T2T-CHM13v2": [
+            [
+                common + "GCF_009914755.1-RS_2023_03/GCF_009914755.1_T2T-CHM13v2.0_genomic.gff.gz",
+                common + "GCF_009914755.1-RS_2023_03/GCF_009914755.1-RS_2023_03_annotation_report.xml"
+            ],
+            [
+                common + "GCF_009914755.1-RS_2023_10/GCF_009914755.1_T2T-CHM13v2.0_genomic.gff.gz",
+                common + "GCF_009914755.1-RS_2023_10/GCF_009914755.1-RS_2023_10_annotation_report.xml"
+            ],
+            [
+                common + "GCF_009914755.1-RS_2024_08/GCF_009914755.1_T2T-CHM13v2.0_genomic.gff.gz",
+                common + "GCF_009914755.1-RS_2024_08/GCF_009914755.1-RS_2024_08_annotation_report.xml"
+            ]
+        ]
+    }
+    return annotations_urls
+
+
+def _report_info(xml_content):
+    tree = ET.ElementTree(ET.fromstring(xml_content))
+    root = tree.getroot()
+    return {
+        "freeze_date_id": root.find("./BuildInfo/FreezeDateId").text,
+        "full_assembly_name": root.find("./AssembliesReport/FullAssembly/Name").text,
+        "full_assembly_accession": root.find(
+            "./AssembliesReport/FullAssembly/Accession"
+        ).text,
+    }
+
+
+def download_annotation_releases(urls, directory="./ncbi_annotation_releases"):
+    """
+    Download the annotations (GFF3) report (XML) files in the provided directory.
+    """
+    path_dir = Path(directory)
+    path_dir.mkdir(parents=True, exist_ok=True)
+
+    m = {}
+
+    for assembly in urls:
+        print(f"assembly: {assembly}")
+        m[assembly] = {}
+        for url_gff3, url_report in urls[assembly]:
+            response_xml = requests.get(url_report)
+            if response_xml.status_code == 200:
+                freeze_date_id = _report_info(response_xml.content)["freeze_date_id"]
+                response_gff3 = requests.get(url_gff3)
+                if response_gff3.status_code == 200:
+                    path_dir = Path(directory) / assembly / freeze_date_id
+                    print(f" - dir: {path_dir}")
+
+                    file_name_gff3 = url_gff3.split("/")[-1]
+                    file_name_report = url_report.split("/")[-1]
+                    path_dir.mkdir(parents=True, exist_ok=True)
+
+                    path_file_xml = path_dir / file_name_report
+                    open(path_file_xml, "wb").write(response_xml.content)
+
+                    path_file_gff3 = path_dir / file_name_gff3
+                    open(path_file_gff3, "wb").write(response_gff3.content)
+
+                    m[assembly][freeze_date_id] = {
+                        "xml": str(path_file_xml),
+                        "gff3": str(path_file_gff3),
+                    }
+    return m
 
 
 def _get_gene(g_id, model):
@@ -40,7 +184,9 @@ def _get_transcripts_mappings(model):
         for i_g, gene in enumerate(model["features"]):
             if gene.get("features"):
                 for i_t, transcript in enumerate(gene["features"]):
-                    if transcript["id"] in transcripts:
+                    if transcript.get("id") is None:
+                        continue
+                    elif transcript["id"] in transcripts:
                         raise Exception(
                             f"Multiple transcripts with same id ({transcript['id']}) in model."
                         )
@@ -56,15 +202,24 @@ def _get_transcripts_mappings(model):
 
 def _added_from(feature, model):
     if feature.get("qualifiers") is None:
-        feature["qualifiers"] = {}
-    if feature["qualifiers"].get("added_freeze_date_id") is None:
-        feature["qualifiers"]["added_freeze_date_id"] = model["qualifiers"][
-            "freeze_date_id"
-        ]
-    if feature["qualifiers"].get("added_annotation_id") is None:
-        feature["qualifiers"]["added_annotation_id"] = model["qualifiers"][
-            "annotation_id"
-        ]
+        feature["qualifiers"] = {"annotation_details": {}}
+    if feature.get("qualifiers").get("annotation_details") is None:
+        feature["qualifiers"]["annotation_details"] = {}
+    if feature["qualifiers"]["annotation_details"].get("freeze_date_id") is None:
+        feature["qualifiers"]["annotation_details"]["freeze_date_id"] = model[
+            "qualifiers"
+        ]["annotations"]["freeze_date_id"]
+    if feature["qualifiers"]["annotation_details"].get("full_assembly_name") is None:
+        feature["qualifiers"]["annotation_details"]["full_assembly_name"] = model[
+            "qualifiers"
+        ]["annotations"]["full_assembly_name"]
+    if (
+        feature["qualifiers"]["annotation_details"].get("full_assembly_accession")
+        is None
+    ):
+        feature["qualifiers"]["annotation_details"]["full_assembly_accession"] = model[
+            "qualifiers"
+        ]["annotations"]["full_assembly_accession"]
 
 
 def _gene_added_from(gene, model):
@@ -117,189 +272,42 @@ def _merge(new, old):
         raise Exception("Not all the transcripts were added.")
 
 
-def group_by_accession(annotations):
-    groups = {}
-    sorted_annotations = sorted(annotations, key=lambda d: d["freeze_date_id"])
-    for annotation in sorted_annotations:
-        assembly = annotation["assembly_name"].split(".")[0]
-        if assembly not in groups:
-            groups[assembly] = []
-        groups[assembly].append(annotation)
-    return groups
+def _directory_metadata(directory="./ncbi_annotation_releases"):
+    m = {}
+    for path_assembly in Path(directory).iterdir():
+        assembly = str(path_assembly).split("/")[-1]
+        m[assembly] = {}
+        for path_date in Path(path_assembly).iterdir():
+            date = str(path_date).split("/")[-1]
+            m[assembly][date] = {}
+            for path_file in Path(path_date).iterdir():
+                f = str(path_file).split("/")[-1]
+                if f.endswith(".gff.gz"):
+                    m[assembly][date]["gff3"] = str(path_file)
+                elif f.endswith(".xml"):
+                    m[assembly][date]["xml"] = str(path_file)
+    return m
 
 
-class Assemblies:
-    """
-    Retrieve reference models for human chromosomes.
-    """
-    def __init__(
-        self,
-        path_input=None,
-        path_output=None,
-        downloaded=False,
-        ref_id=None,
-        split=False,
-        only_annotations=False,
-    ):
-        self.ftp_url = "ftp.ncbi.nlm.nih.gov"
-        self.ftp_dir = "genomes/refseq/vertebrate_mammalian/Homo_sapiens/annotation_releases"
-
-        self.local_input_dir = path_input if path_input else "./downloads"
-        self.local_output_dir = path_output if path_output else "./models"
-
-        self.ref_id_start = ref_id
-        self.split = split
-        self.only_annotations = only_annotations
-
-        if downloaded:
-            self.annotations = json.loads(open(self._metadata_path(), "r").read())
-        else:
-            self._raw_start()
-
-        self._get_models()
-
-    def _raw_start(self):
-        self.annotations = self._get_ftp_locations()
-        self._input_directory_setup()
-        self._retrieve_gff_files()
-        self._update_dates()
-        open(self._metadata_path(), "w").write(json.dumps(self.annotations, indent=2))
-
-    def _get_ftp_locations(self):
-        print("- get ftp locations")
-        locations = []
-        with FTP(self.ftp_url) as ftp:
-            ftp.login()
-            ftp.cwd(self.ftp_dir)
-            for d_a in ftp.nlst():
-                try:
-                    ftp.cwd(d_a)
-                except error_perm:
-                    continue
-                annotation = {"id": d_a}
-                for d_d in ftp.nlst():
-                    if d_d.endswith("annotation_report.xml"):
-                        annotation["annotation_report"] = d_d
-                    if d_a.startswith("GCF"):
-                        annotation["dir"] = ""
-                        if d_d.endswith("_genomic.gff.gz"):
-                            annotation["file_gff"] = d_d
-                        elif d_d.endswith("_genomic.fna.gz"):
-                            annotation["file_fasta"] = d_d
-                    else:
-                        if d_d.startswith("GCF_") and "GRCh" in d_d:
-                            annotation["dir"] = d_d
-                            try:
-                                ftp.cwd(d_d)
-                            except error_perm:
-                                continue
-                            for d_f in ftp.nlst():
-                                if d_f.endswith("_genomic.gff.gz"):
-                                    annotation["file_gff"] = d_f
-                                elif d_f.endswith("_genomic.fna.gz"):
-                                    annotation["file_fasta"] = d_f
-                            ftp.cwd("..")
-                ftp.cwd("..")
-                locations.append(annotation)
-        print("  done")
-        return locations
-
-    def _input_directory_setup(self):
-        print(f"- local input directory set up to {self.local_input_dir}")
-        local_dir_path = Path(self.local_input_dir)
-
-        if not local_dir_path.is_dir():
-            print("  created")
-            local_dir_path.mkdir()
-        print("  done")
-
-    def _output_directory_setup(self):
-        print(f"- local output directory set up to {self.local_output_dir}")
-        local_dir_path = Path(self.local_output_dir)
-
-        if not local_dir_path.is_dir():
-            print("  created")
-            local_dir_path.mkdir()
-        print("  done")
-
-    def _retrieve_gff_files(self):
-        print("- retrieve gff files")
-
-        common_url = "https://" + self.ftp_url + "/" + self.ftp_dir
-        for annotation in self.annotations:
-            url = f"{common_url}/{annotation['id']}/{annotation['dir']}/{annotation['file_gff']}"
-            # print(url)
-            r = requests.get(url)
-            open(self._file_name_gff(annotation), "wb").write(r.content)
-
-            url = f"{common_url}/{annotation['id']}/{annotation['annotation_report']}"
-            # print(url)
-            r = requests.get(url)
-            open(self._file_name_report(annotation), "wb").write(r.content)
-        print("  done")
-
-    def _file_name_gff(self, location):
-        return self.local_input_dir + "/" + location["id"] + "_" + location["file_gff"]
-
-    def _file_name_fasta(self, location):
-        return (
-            self.local_input_dir + "/" + location["id"] + "_" + location["file_fasta"]
-        )
-
-    def _file_name_report(self, location):
-        return (
-            self.local_input_dir
-            + "/"
-            + location["id"]
-            + "_"
-            + location["annotation_report"]
-        )
-
-    def _metadata_path(self):
-        return self.local_input_dir + "/" + "metadata.json"
-
-    def _update_dates(self):
-        print("- update dates")
-        for annotation in self.annotations:
-            annotation.update(self._report_info(self._file_name_report(annotation)))
-        print("  done")
-
-    @staticmethod
-    def _report_info(report_file):
-        tree = ET.parse(report_file)
-        root = tree.getroot()
-        return {
-            "freeze_date_id": root.find("./BuildInfo/FreezeDateId").text,
-            "assembly_name": root.find("./AssembliesReport/FullAssembly/Name").text,
-            "assembly_accession": root.find(
-                "./AssembliesReport/FullAssembly/Accession"
-            ).text,
-        }
-
-    def _get_models(self):
-        self._output_directory_setup()
-
-        assemblies = group_by_accession(self.annotations)
-        for assembly in assemblies:
-            self.get_assembly_model(assemblies[assembly])
-
-    @staticmethod
-    def _add_annotations_details(model, annotation):
-        if model.get("qualifiers") is None:
-            model["qualifiers"] = {}
-        model["qualifiers"]["freeze_date_id"] = annotation["freeze_date_id"]
-        model["qualifiers"]["annotation_id"] = annotation["id"]
-        model["qualifiers"]["assembly_name"] = annotation["assembly_name"]
-        model["qualifiers"]["assembly_accession"] = annotation["assembly_accession"]
-
-    def get_assembly_model(self, annotations):
+def get_models(
+    directory_input="./ncbi_annotation_releases",
+    directory_output="./ncbi_annotation_models",
+    assembly_id_start=None,
+    ref_id_start=None,
+):
+    m = _directory_metadata(directory_input)
+    for assembly in m:
         out = {}
-        for annotation in annotations:
-            print(
-                f"- processing {annotation['id']} from {annotation['freeze_date_id']}, ({annotation['assembly_name']}, {annotation['assembly_accession']})"
-            )
+        assemblies = []
+        ref_ids = []
+        if assembly_id_start is not None and not assembly.startswith(assembly_id_start):
+            continue
+        for freeze_date_id in sorted(m[assembly]):
+            print(f"- processing {assembly} from {freeze_date_id}")
+            assembly_details = _report_info(open(m[assembly][freeze_date_id]["xml"]).read().strip())
+            assemblies.append(assembly_details)
 
-            with gzip.open(self._file_name_gff(annotation), "rb") as f:
+            with gzip.open(m[assembly][freeze_date_id]["gff3"], "rb") as f:
                 current_id = ""
                 current_content = ""
                 extras = ""
@@ -308,19 +316,16 @@ class Assemblies:
                     if s_line.startswith("#!"):
                         extras += s_line
                     elif s_line.startswith("##sequence-region"):
-                        if current_id and (
-                            self.ref_id_start is None
-                            or current_id.startswith(self.ref_id_start)
-                        ):
+                        if current_id and (ref_id_start is None or current_id.startswith(ref_id_start)):
                             current_model = parse(current_content, "gff3")
-                            open(f"{self.local_output_dir}/{current_id}.gff3", "w").write(current_content)
-                            self._add_annotations_details(current_model, annotation)
+                            current_model["qualifiers"] = {"annotations": assembly_details}
                             print(f"  - {current_id}")
                             if current_id not in out:
                                 out[current_id] = current_model
                             else:
                                 _merge(current_model, out[current_id])
                                 out[current_id] = current_model
+                            ref_ids.append(current_id)
 
                         current_id = s_line.split(" ")[1]
                         current_content = f"##gff-version 3\n{extras}{s_line}"
@@ -328,26 +333,15 @@ class Assemblies:
                         current_id
                     ):
                         current_content += s_line
+        for ref_id in ref_ids:
+            out[ref_id]["qualifiers"] = {"annotations": assemblies}
 
+        Path(directory_output).mkdir(parents=True, exist_ok=True)
         for r_id in out:
-            file_path = f"{self.local_output_dir}/{r_id}"
-            if self.only_annotations:
-                print(f"- writing {file_path}.annotations")
-                open(f"{file_path}.annotations", "w").write(json.dumps(out[r_id]))
-            else:
-                fasta = retrieve_raw(r_id, "ncbi", "fasta", timeout=10)
-                seq = parse(fasta[0], "fasta")
-                if self.split:
-                    print(f"- writing {file_path}.annotations")
-                    open(f"{file_path}.annotations", "w").write(json.dumps(out[r_id]))
-                    print(f"- writing {file_path}.sequence")
-                    open(f"{file_path}.sequence", "w").write(seq["seq"])
-                else:
-                    print(f"- writing {self.local_output_dir}/{r_id}")
-                    model = {"annotations": out[r_id], "sequence": seq}
-                    open(file_path, "w").write(json.dumps(model))
+            file_path = f"{directory_output}/{r_id}"
+            print(f"- writing {file_path}.annotations")
+            open(f"{file_path}.annotations", "w").write(json.dumps(out[r_id], indent=2))
         print("\n")
-
 
 def annotations_summary(models_directory, ref_id_start=None):
     """
@@ -369,9 +363,7 @@ def annotations_summary(models_directory, ref_id_start=None):
                     if gene.get("features"):
                         summary["transcripts"] += len(gene)
                         for transcript in gene["features"]:
-                            if transcript.get("qualifiers") and transcript[
-                                "qualifiers"
-                            ].get("added_freeze_date_id"):
+                            if transcript.get("qualifiers") and transcript["qualifiers"].get("annotation_details"):
                                 summary["added"] += 1
             output[model["id"]] = summary
         total_genes = sum([output[ref_id]["genes"] for ref_id in output])
@@ -395,3 +387,20 @@ def annotations_summary(models_directory, ref_id_start=None):
         glob = f"{ref_id_start}{glob}"
 
     _per_model()
+
+
+def retrieve_assemblies(
+    directory_input="./ncbi_annotation_releases",
+    directory_output="./ncbi_annotation_models",
+    assembly_id_start=None,
+    ref_id_start=None,
+    downloaded=False,
+):
+    if not downloaded:
+        download_annotation_releases(_annotations_urls(), directory_input)
+    get_models(
+        directory_input=directory_input,
+        directory_output=directory_output,
+        assembly_id_start=assembly_id_start,
+        ref_id_start=ref_id_start,
+    )
