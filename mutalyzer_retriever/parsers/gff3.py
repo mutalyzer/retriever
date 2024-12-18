@@ -74,7 +74,10 @@ QUALIFIERS = {
         "Name": "name",
         "genome": "genome",
     },
-    "CDS": {"transl_except": "translation_exception", "exception": "exception"},
+    "CDS": {
+        "transl_except": "translation_exception",
+        "exception": "exception",
+    },
     "mRNA": {
         "version": "version",
         "assembly_name": "assembly_name",
@@ -188,6 +191,11 @@ def _get_qualifiers(feature):
                 for dbxref_entry in q["Dbxref"]:
                     if "HGNC" in dbxref_entry:
                         qs["HGNC"] = dbxref_entry.split(":")[-1]
+        if t in ["mRNA", "CDS"]:
+            if q.get("Dbxref"):
+                for dbxref_entry in q["Dbxref"]:
+                    if "Ensembl" in dbxref_entry:
+                        qs["Ensembl"] = dbxref_entry.split(":")[-1]
         _extract_special_qualifiers(qs)
         return qs
 
