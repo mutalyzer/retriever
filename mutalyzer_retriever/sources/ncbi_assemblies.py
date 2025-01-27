@@ -8,9 +8,16 @@ import requests
 
 from mutalyzer_retriever.parser import parse
 
+from ..parser import parse
+from .ncbi import fetch
+
+
+def _common_url():
+    return "https://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/annotation_releases/"
+
 
 def _annotations_urls():
-    common = "https://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/annotation_releases/"
+    common = _common_url()
     annotations_urls = {
         "GRCh37": [
             [
@@ -118,42 +125,44 @@ def _report_info(xml_content):
     }
 
 
-def download_annotation_releases(urls, directory="./ncbi_annotation_releases"):
+def download_annotation_releases(urls, directory="./ncbi_annotation_releases", assembly_id_start=None):
     """
     Download the annotations (GFF3) report (XML) files in the provided directory.
     """
+    print("Downloading assembly releases:")
     path_dir = Path(directory)
     path_dir.mkdir(parents=True, exist_ok=True)
 
-    m = {}
+    metadata = {}
 
-    for assembly in urls:
-        print(f"assembly: {assembly}")
-        m[assembly] = {}
-        for url_gff3, url_report in urls[assembly]:
-            response_xml = requests.get(url_report)
-            if response_xml.status_code == 200:
-                freeze_date_id = _report_info(response_xml.content)["freeze_date_id"]
-                response_gff3 = requests.get(url_gff3)
-                if response_gff3.status_code == 200:
-                    path_dir = Path(directory) / assembly / freeze_date_id
-                    print(f" - dir: {path_dir}")
+    for assembly_id in urls:
+        if assembly_id.startswith(assembly_id_start):
+            print(f" - assembly: {assembly_id}")
+            metadata[assembly_id] = {}
+            for url_gff3, url_report in urls[assembly_id]:
+                response_xml = requests.get(url_report)
+                if response_xml.status_code == 200:
+                    freeze_date_id = _report_info(response_xml.content)["freeze_date_id"]
+                    response_gff3 = requests.get(url_gff3)
+                    if response_gff3.status_code == 200:
+                        path_dir = Path(directory) / assembly_id / freeze_date_id
+                        print(f"   - dir: {path_dir}")
 
-                    file_name_gff3 = url_gff3.split("/")[-1]
-                    file_name_report = url_report.split("/")[-1]
-                    path_dir.mkdir(parents=True, exist_ok=True)
+                        file_name_gff3 = url_gff3.split("/")[-1]
+                        file_name_report = url_report.split("/")[-1]
+                        path_dir.mkdir(parents=True, exist_ok=True)
 
-                    path_file_xml = path_dir / file_name_report
-                    open(path_file_xml, "wb").write(response_xml.content)
+                        path_file_xml = path_dir / file_name_report
+                        open(path_file_xml, "wb").write(response_xml.content)
 
-                    path_file_gff3 = path_dir / file_name_gff3
-                    open(path_file_gff3, "wb").write(response_gff3.content)
+                        path_file_gff3 = path_dir / file_name_gff3
+                        open(path_file_gff3, "wb").write(response_gff3.content)
 
-                    m[assembly][freeze_date_id] = {
-                        "xml": str(path_file_xml),
-                        "gff3": str(path_file_gff3),
-                    }
-    return m
+                        metadata[assembly_id][freeze_date_id] = {
+                            "xml": str(path_file_xml),
+                            "gff3": str(path_file_gff3),
+                        }
+    return metadata
 
 
 def _get_gene(g_id, model):
@@ -202,24 +211,24 @@ def _get_transcripts_mappings(model):
 
 def _added_from(feature, model):
     if feature.get("qualifiers") is None:
-        feature["qualifiers"] = {"annotation_details": {}}
-    if feature.get("qualifiers").get("annotation_details") is None:
-        feature["qualifiers"]["annotation_details"] = {}
-    if feature["qualifiers"]["annotation_details"].get("freeze_date_id") is None:
-        feature["qualifiers"]["annotation_details"]["freeze_date_id"] = model[
+        feature["qualifiers"] = {"annotation_added_from": {}}
+    if feature.get("qualifiers").get("annotation_added_from") is None:
+        feature["qualifiers"]["annotation_added_from"] = {}
+    if feature["qualifiers"]["annotation_added_from"].get("freeze_date_id") is None:
+        feature["qualifiers"]["annotation_added_from"]["freeze_date_id"] = model[
             "qualifiers"
         ]["annotations"]["freeze_date_id"]
-    if feature["qualifiers"]["annotation_details"].get("full_assembly_name") is None:
-        feature["qualifiers"]["annotation_details"]["full_assembly_name"] = model[
+    if feature["qualifiers"]["annotation_added_from"].get("full_assembly_name") is None:
+        feature["qualifiers"]["annotation_added_from"]["full_assembly_name"] = model[
             "qualifiers"
         ]["annotations"]["full_assembly_name"]
     if (
-        feature["qualifiers"]["annotation_details"].get("full_assembly_accession")
+        feature["qualifiers"]["annotation_added_from"].get("full_assembly_accession")
         is None
     ):
-        feature["qualifiers"]["annotation_details"]["full_assembly_accession"] = model[
-            "qualifiers"
-        ]["annotations"]["full_assembly_accession"]
+        feature["qualifiers"]["annotation_added_from"]["full_assembly_accession"] = (
+            model["qualifiers"]["annotations"]["full_assembly_accession"]
+        )
 
 
 def _gene_added_from(gene, model):
@@ -289,25 +298,26 @@ def _directory_metadata(directory="./ncbi_annotation_releases"):
     return m
 
 
-def get_models(
+def get_annotation_models(
     directory_input="./ncbi_annotation_releases",
-    directory_output="./ncbi_annotation_models",
     assembly_id_start=None,
     ref_id_start=None,
 ):
-    m = _directory_metadata(directory_input)
-    for assembly in m:
-        out = {}
+    print("Get annotation models:")
+    metadata = _directory_metadata(directory_input)
+    out = {}
+    for assembly in metadata:
+        models = {}
         assemblies = []
         ref_ids = []
         if assembly_id_start is not None and not assembly.startswith(assembly_id_start):
             continue
-        for freeze_date_id in sorted(m[assembly]):
-            print(f"- processing {assembly} from {freeze_date_id}")
-            assembly_details = _report_info(open(m[assembly][freeze_date_id]["xml"]).read().strip())
+        for freeze_date_id in sorted(metadata[assembly]):
+            print(f"- get from: {assembly}, date: {freeze_date_id}")
+            assembly_details = _report_info(open(metadata[assembly][freeze_date_id]["xml"]).read().strip())
             assemblies.append(assembly_details)
 
-            with gzip.open(m[assembly][freeze_date_id]["gff3"], "rb") as f:
+            with gzip.open(metadata[assembly][freeze_date_id]["gff3"], "rb") as f:
                 current_id = ""
                 current_content = ""
                 extras = ""
@@ -320,11 +330,11 @@ def get_models(
                             current_model = parse(current_content, "gff3")
                             current_model["qualifiers"] = {"annotations": assembly_details}
                             print(f"  - {current_id}")
-                            if current_id not in out:
-                                out[current_id] = current_model
+                            if current_id not in models:
+                                models[current_id] = current_model
                             else:
-                                _merge(current_model, out[current_id])
-                                out[current_id] = current_model
+                                _merge(current_model, models[current_id])
+                                models[current_id] = current_model
                             ref_ids.append(current_id)
 
                         current_id = s_line.split(" ")[1]
@@ -334,14 +344,12 @@ def get_models(
                     ):
                         current_content += s_line
         for ref_id in ref_ids:
-            out[ref_id]["qualifiers"] = {"annotations": assemblies}
+            models[ref_id]["qualifiers"] = {"annotations": assemblies}
 
-        Path(directory_output).mkdir(parents=True, exist_ok=True)
-        for r_id in out:
-            file_path = f"{directory_output}/{r_id}"
-            print(f"- writing {file_path}.annotations")
-            open(f"{file_path}.annotations", "w").write(json.dumps(out[r_id], indent=2))
-        print("\n")
+        out[assembly] = models
+
+    return out
+
 
 def annotations_summary(models_directory, ref_id_start=None):
     """
@@ -352,6 +360,7 @@ def annotations_summary(models_directory, ref_id_start=None):
     :param models_directory: Directory with the reference model files.
     :param ref_id_start: Limit to specific reference(s) ID.
     """
+
     def _per_model():
         output = {}
         for file in Path(models_directory).glob(glob):
@@ -363,7 +372,7 @@ def annotations_summary(models_directory, ref_id_start=None):
                     if gene.get("features"):
                         summary["transcripts"] += len(gene)
                         for transcript in gene["features"]:
-                            if transcript.get("qualifiers") and transcript["qualifiers"].get("annotation_details"):
+                            if transcript.get("qualifiers") and transcript["qualifiers"].get("annotation_added_from"):
                                 summary["added"] += 1
             output[model["id"]] = summary
         total_genes = sum([output[ref_id]["genes"] for ref_id in output])
@@ -395,12 +404,33 @@ def retrieve_assemblies(
     assembly_id_start=None,
     ref_id_start=None,
     downloaded=False,
+    include_sequence=False,
 ):
     if not downloaded:
-        download_annotation_releases(_annotations_urls(), directory_input)
-    get_models(
+        download_annotation_releases(_annotations_urls(), directory_input, assembly_id_start)
+    else:
+        print(f"Using downloaded releases from:\n ./{directory_input}")
+    models = get_annotation_models(
         directory_input=directory_input,
-        directory_output=directory_output,
         assembly_id_start=assembly_id_start,
         ref_id_start=ref_id_start,
     )
+
+    Path(directory_output).mkdir(parents=True, exist_ok=True)
+    for assembly_id in models:
+        for r_id in models[assembly_id]:
+            file_path = f"{directory_output}/{r_id}"
+            print(f"- writing {file_path}.annotations")
+            open(f"{file_path}.annotations", "w").write(json.dumps(models[assembly_id][r_id]))
+
+    if include_sequence:
+        print("Downloading the sequences:")
+        for assembly_id in models:
+            for r_id in models[assembly_id]:
+                file_path = f"{directory_output}/{r_id}"
+                print(f"- get the sequence for {r_id}")
+                seq = parse(fetch(r_id, "fasta")[0], "fasta")["seq"]
+                print(f"- writing {file_path}.sequence")
+                open(f"{file_path}.sequence", "w").write(seq)
+
+    print("\n")

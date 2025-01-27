@@ -112,6 +112,10 @@ def _args_parser():
         "--ref_id_start", help="reference id should start with"
     )
 
+    parser_ncbi_assemblies.add_argument(
+        "--include_sequence", help="download also the sequence", action="store_true"
+    )
+
     parser_assemblies_summary = subparsers.add_parser(
         "summary", help="gather references summary"
     )
@@ -158,6 +162,7 @@ def _retrieve_assemblies(args):
         assembly_id_start=args.assembly_id_start,
         ref_id_start=args.ref_id_start,
         downloaded=args.downloaded,
+        include_sequence=args.include_sequence,
     )
 
 
