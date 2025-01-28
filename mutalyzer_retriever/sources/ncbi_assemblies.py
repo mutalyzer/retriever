@@ -136,32 +136,33 @@ def download_annotation_releases(urls, directory="./ncbi_annotation_releases", a
     metadata = {}
 
     for assembly_id in urls:
-        if assembly_id.startswith(assembly_id_start):
-            print(f" - assembly: {assembly_id}")
-            metadata[assembly_id] = {}
-            for url_gff3, url_report in urls[assembly_id]:
-                response_xml = requests.get(url_report)
-                if response_xml.status_code == 200:
-                    freeze_date_id = _report_info(response_xml.content)["freeze_date_id"]
-                    response_gff3 = requests.get(url_gff3)
-                    if response_gff3.status_code == 200:
-                        path_dir = Path(directory) / assembly_id / freeze_date_id
-                        print(f"   - dir: {path_dir}")
+        if assembly_id_start is not None and not assembly_id.startswith(assembly_id_start):
+            continue
+        print(f" - assembly: {assembly_id}")
+        metadata[assembly_id] = {}
+        for url_gff3, url_report in urls[assembly_id]:
+            response_xml = requests.get(url_report)
+            if response_xml.status_code == 200:
+                freeze_date_id = _report_info(response_xml.content)["freeze_date_id"]
+                response_gff3 = requests.get(url_gff3)
+                if response_gff3.status_code == 200:
+                    path_dir = Path(directory) / assembly_id / freeze_date_id
+                    print(f"   - dir: {path_dir}")
 
-                        file_name_gff3 = url_gff3.split("/")[-1]
-                        file_name_report = url_report.split("/")[-1]
-                        path_dir.mkdir(parents=True, exist_ok=True)
+                    file_name_gff3 = url_gff3.split("/")[-1]
+                    file_name_report = url_report.split("/")[-1]
+                    path_dir.mkdir(parents=True, exist_ok=True)
 
-                        path_file_xml = path_dir / file_name_report
-                        open(path_file_xml, "wb").write(response_xml.content)
+                    path_file_xml = path_dir / file_name_report
+                    open(path_file_xml, "wb").write(response_xml.content)
 
-                        path_file_gff3 = path_dir / file_name_gff3
-                        open(path_file_gff3, "wb").write(response_gff3.content)
+                    path_file_gff3 = path_dir / file_name_gff3
+                    open(path_file_gff3, "wb").write(response_gff3.content)
 
-                        metadata[assembly_id][freeze_date_id] = {
-                            "xml": str(path_file_xml),
-                            "gff3": str(path_file_gff3),
-                        }
+                    metadata[assembly_id][freeze_date_id] = {
+                        "xml": str(path_file_xml),
+                        "gff3": str(path_file_gff3),
+                    }
     return metadata
 
 
@@ -409,7 +410,7 @@ def retrieve_assemblies(
     if not downloaded:
         download_annotation_releases(_annotations_urls(), directory_input, assembly_id_start)
     else:
-        print(f"Using downloaded releases from:\n ./{directory_input}")
+        print(f"Using downloaded releases from:\n {directory_input}")
     models = get_annotation_models(
         directory_input=directory_input,
         assembly_id_start=assembly_id_start,

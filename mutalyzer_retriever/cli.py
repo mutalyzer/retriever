@@ -97,10 +97,10 @@ def _args_parser():
     )
 
     parser_ncbi_assemblies.add_argument(
-        "--input", help="input (downloaded) directory path"
+        "--input", default="./ncbi_annotation_releases", help="input (downloaded) directory path"
     )
     parser_ncbi_assemblies.add_argument(
-        "--output", help="output (models) directory path"
+        "--output", default="./ncbi_annotation_models", help="output (models) directory path"
     )
     parser_ncbi_assemblies.add_argument(
         "--downloaded", help="already downloaded", action="store_true"

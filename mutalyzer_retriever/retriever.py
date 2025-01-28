@@ -18,7 +18,7 @@ class NoReferenceError(Exception):
     def __init__(self, status, uncertain_sources):
         self.uncertain_sources = uncertain_sources
         message = ""
-        if uncertain_sources != []:
+        if uncertain_sources:
             message = f"\n\nUncertain sources: {', '.join(uncertain_sources)}\n"
 
         for source in status.keys():
