@@ -329,7 +329,7 @@ def get_annotation_models(
                     elif s_line.startswith("##sequence-region"):
                         if current_id and (ref_id_start is None or current_id.startswith(ref_id_start)):
                             current_model = parse(current_content, "gff3")
-                            current_model["qualifiers"] = {"annotations": assembly_details}
+                            current_model["qualifiers"]["annotations"] = assembly_details
                             print(f"  - {current_id}")
                             if current_id not in models:
                                 models[current_id] = current_model
@@ -345,7 +345,7 @@ def get_annotation_models(
                     ):
                         current_content += s_line
         for ref_id in ref_ids:
-            models[ref_id]["qualifiers"] = {"annotations": assemblies}
+            models[ref_id]["qualifiers"]["annotations"] = assemblies
 
         out[assembly] = models
 
