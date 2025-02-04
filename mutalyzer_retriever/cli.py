@@ -106,6 +106,9 @@ def _args_parser():
         "--downloaded", help="already downloaded", action="store_true"
     )
     parser_ncbi_assemblies.add_argument(
+        "--write_downloaded", help="write the downloaded files", action="store_true"
+    )
+    parser_ncbi_assemblies.add_argument(
         "--assembly_id_start", help="assembly id should start with"
     )
     parser_ncbi_assemblies.add_argument(
@@ -133,7 +136,7 @@ def parse_args(args=None):
 def _write_model(model, args):
     if args.split:
         if model.get("annotations"):
-            with open(f"{args.output}/{args.id}.annotations", "w") as f:
+            with open(f"{args.output}/{args.id}.annotations", "w", encoding="utf-8") as f:
                 f.write(json.dumps(model["annotations"], indent=args.indent))
         if model.get("sequence"):
             with open(f"{args.output}/{args.id}.sequence", "w") as f:
@@ -162,6 +165,7 @@ def _retrieve_assemblies(args):
         assembly_id_start=args.assembly_id_start,
         ref_id_start=args.ref_id_start,
         downloaded=args.downloaded,
+        write_downloaded=args.write_downloaded,
         include_sequence=args.include_sequence,
     )
 

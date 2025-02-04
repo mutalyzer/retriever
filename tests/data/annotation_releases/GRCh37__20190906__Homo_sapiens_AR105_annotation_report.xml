@@ -1,0 +1,3211 @@
+<?xml version="1.0"?>
+<AnnotationReports>
+  <AssembliesReport target_set_accession="GCF_000001405.25">
+  <FullAssembly>
+    <Name>GRCh37.p13</Name>
+    <Accession>GCF_000001405.25</Accession>
+    <IsReference>Yes</IsReference>
+    <SubmitterOrganization>Genome Reference Consortium</SubmitterOrganization>
+    <SubmitterDate>06-28-2013</SubmitterDate>
+    <AssemblyContents>
+      <Chromosomes>25</Chromosomes>
+      <AlternateLoci/>
+      <AssemblyPatches/>
+      <UnlocalizedScaffolds/>
+      <UnplacedScaffolds/>
+    </AssemblyContents>
+    <Units>
+      <AssemblyUnit>
+        <Name>Primary Assembly</Name>
+        <Accession>GCF_000001305.13</Accession>
+        <IsPrimary>Yes</IsPrimary>
+        <Type>HaploidUnit</Type>
+      </AssemblyUnit>
+      <AssemblyUnit>
+        <Name>PATCHES</Name>
+        <Accession>GCF_000005045.12</Accession>
+        <IsPrimary>No</IsPrimary>
+        <Type>AssemblyPatches</Type>
+      </AssemblyUnit>
+      <AssemblyUnit>
+        <Name>ALT_REF_LOCI_1</Name>
+        <Accession>GCF_000001315.1</Accession>
+        <IsPrimary>No</IsPrimary>
+        <Type>AlternateLoci</Type>
+      </AssemblyUnit>
+      <AssemblyUnit>
+        <Name>ALT_REF_LOCI_2</Name>
+        <Accession>GCF_000001325.2</Accession>
+        <IsPrimary>No</IsPrimary>
+        <Type>AlternateLoci</Type>
+      </AssemblyUnit>
+      <AssemblyUnit>
+        <Name>ALT_REF_LOCI_3</Name>
+        <Accession>GCF_000001335.1</Accession>
+        <IsPrimary>No</IsPrimary>
+        <Type>AlternateLoci</Type>
+      </AssemblyUnit>
+      <AssemblyUnit>
+        <Name>ALT_REF_LOCI_4</Name>
+        <Accession>GCF_000001345.1</Accession>
+        <IsPrimary>No</IsPrimary>
+        <Type>AlternateLoci</Type>
+      </AssemblyUnit>
+      <AssemblyUnit>
+        <Name>ALT_REF_LOCI_5</Name>
+        <Accession>GCF_000001355.1</Accession>
+        <IsPrimary>No</IsPrimary>
+        <Type>AlternateLoci</Type>
+      </AssemblyUnit>
+      <AssemblyUnit>
+        <Name>ALT_REF_LOCI_6</Name>
+        <Accession>GCF_000001365.2</Accession>
+        <IsPrimary>No</IsPrimary>
+        <Type>AlternateLoci</Type>
+      </AssemblyUnit>
+      <AssemblyUnit>
+        <Name>ALT_REF_LOCI_7</Name>
+        <Accession>GCF_000001375.1</Accession>
+        <IsPrimary>No</IsPrimary>
+        <Type>AlternateLoci</Type>
+      </AssemblyUnit>
+      <AssemblyUnit>
+        <Name>ALT_REF_LOCI_8</Name>
+        <Accession>GCF_000001385.1</Accession>
+        <IsPrimary>No</IsPrimary>
+        <Type>AlternateLoci</Type>
+      </AssemblyUnit>
+      <AssemblyUnit>
+        <Name>ALT_REF_LOCI_9</Name>
+        <Accession>GCF_000001395.1</Accession>
+        <IsPrimary>No</IsPrimary>
+        <Type>AlternateLoci</Type>
+      </AssemblyUnit>
+      <AssemblyUnit>
+        <Name>non-nuclear</Name>
+        <Accession>GCF_000006015.1</Accession>
+        <IsPrimary>No</IsPrimary>
+        <Type>HaploidUnit</Type>
+      </AssemblyUnit>
+    </Units>
+  </FullAssembly>
+</AssembliesReport>
+  <BuildInfo>
+  <Taxid>9606</Taxid>
+  <ScientificName>Homo sapiens</ScientificName>
+  <AnnotationReleaseId>105</AnnotationReleaseId>
+  <FreezeDate>Sep 6 2019</FreezeDate>
+  <FreezeDateId>20190906</FreezeDateId>
+  <IdLoadDate>Oct 21 2019</IdLoadDate>
+  <SoftwareMajorVersion>8</SoftwareMajorVersion>
+  <SoftwareMinorVersion>2</SoftwareMinorVersion>
+  <MaskingSoftware>repeatmasker</MaskingSoftware>
+  <FtpSite>ftp://ftp.ncbi.nlm.nih.gov/genomes/all/annotation_releases/9606/105</FtpSite>
+</BuildInfo>
+  <FeatureCounts>
+  <OverallCounts>
+    <Counts feature_type="genes">
+      <Total>43519</Total>
+      <Subcount subtype="other">22</Subcount>
+      <Subcount subtype="non-transcribed pseudo">14515</Subcount>
+      <Subcount subtype="transcribed pseudo">1065</Subcount>
+      <Subcount subtype="has variants">12446</Subcount>
+      <Subcount subtype="partial">392</Subcount>
+      <Subcount subtype="Ig TCR segment">384</Subcount>
+      <Subcount subtype="non coding">8155</Subcount>
+      <Subcount subtype="protein coding">19378</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>53985</Total>
+      <Subcount subtype="exon &lt;= 3nt">39</Subcount>
+      <Subcount subtype="partial">59</Subcount>
+      <Subcount subtype="correction">3212</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">53985</Subcount>
+      <Subcount subtype="known RefSeq with correction">3212</Subcount>
+      <Subcount subtype="fully supported">53985</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>17196</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">29</Subcount>
+      <Subcount subtype="correction">514</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">15255</Subcount>
+      <Subcount subtype="known RefSeq with correction">516</Subcount>
+      <Subcount subtype="fully supported">15255</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>1311</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">9</Subcount>
+      <Subcount subtype="correction">129</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">1311</Subcount>
+      <Subcount subtype="known RefSeq with correction">129</Subcount>
+      <Subcount subtype="fully supported">1311</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>54510</Total>
+      <Subcount subtype="exon &lt;= 3nt">1185</Subcount>
+      <Subcount subtype="partial">494</Subcount>
+      <Subcount subtype="correction">1773</Subcount>
+      <Subcount subtype="model RefSeq">13</Subcount>
+      <Subcount subtype="known RefSeq">53985</Subcount>
+      <Subcount subtype="known RefSeq with correction">1261</Subcount>
+      <Subcount subtype="fully supported">53985</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">384</Subcount>
+      <Subcount subtype="minor correction">1245</Subcount>
+      <Subcount subtype="premature stop">261</Subcount>
+      <Subcount subtype="has frameshifts">214</Subcount>
+    </Counts>
+  </OverallCounts>
+  <AssemblyCounts Accession="GCF_000001405.25" Type="full assembly">
+    <Counts feature_type="genes">
+      <Total>43519</Total>
+      <Subcount subtype="other">22</Subcount>
+      <Subcount subtype="non-transcribed pseudo">14515</Subcount>
+      <Subcount subtype="transcribed pseudo">1065</Subcount>
+      <Subcount subtype="has variants">12446</Subcount>
+      <Subcount subtype="partial">392</Subcount>
+      <Subcount subtype="Ig TCR segment">384</Subcount>
+      <Subcount subtype="non coding">8155</Subcount>
+      <Subcount subtype="protein coding">19378</Subcount>
+      <Subcount subtype="multiply placed">2785</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>53985</Total>
+      <Subcount subtype="exon &lt;= 3nt">39</Subcount>
+      <Subcount subtype="partial">59</Subcount>
+      <Subcount subtype="correction">3212</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">53985</Subcount>
+      <Subcount subtype="known RefSeq with correction">3212</Subcount>
+      <Subcount subtype="fully supported">53985</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="multiply placed">3011</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>17196</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">29</Subcount>
+      <Subcount subtype="correction">514</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">15255</Subcount>
+      <Subcount subtype="known RefSeq with correction">516</Subcount>
+      <Subcount subtype="fully supported">15255</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="multiply placed">647</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>1311</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">9</Subcount>
+      <Subcount subtype="correction">129</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">1311</Subcount>
+      <Subcount subtype="known RefSeq with correction">129</Subcount>
+      <Subcount subtype="fully supported">1311</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="multiply placed">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>54510</Total>
+      <Subcount subtype="exon &lt;= 3nt">1185</Subcount>
+      <Subcount subtype="partial">494</Subcount>
+      <Subcount subtype="correction">1773</Subcount>
+      <Subcount subtype="model RefSeq">13</Subcount>
+      <Subcount subtype="known RefSeq">53985</Subcount>
+      <Subcount subtype="known RefSeq with correction">1261</Subcount>
+      <Subcount subtype="fully supported">53985</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">384</Subcount>
+      <Subcount subtype="minor correction">1245</Subcount>
+      <Subcount subtype="premature stop">261</Subcount>
+      <Subcount subtype="has frameshifts">214</Subcount>
+    </Counts>
+  </AssemblyCounts>
+  <AssemblyCounts Accession="GCF_000001305.13" Type="assembly unit">
+    <Counts feature_type="genes">
+      <Total>43308</Total>
+      <Subcount subtype="other">24</Subcount>
+      <Subcount subtype="non-transcribed pseudo">14454</Subcount>
+      <Subcount subtype="transcribed pseudo">1052</Subcount>
+      <Subcount subtype="has variants">12416</Subcount>
+      <Subcount subtype="partial">396</Subcount>
+      <Subcount subtype="Ig TCR segment">354</Subcount>
+      <Subcount subtype="non coding">8116</Subcount>
+      <Subcount subtype="protein coding">19308</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>53873</Total>
+      <Subcount subtype="exon &lt;= 3nt">39</Subcount>
+      <Subcount subtype="partial">99</Subcount>
+      <Subcount subtype="correction">3745</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">53873</Subcount>
+      <Subcount subtype="known RefSeq with correction">3745</Subcount>
+      <Subcount subtype="fully supported">53873</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>16577</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">35</Subcount>
+      <Subcount subtype="correction">608</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">15200</Subcount>
+      <Subcount subtype="known RefSeq with correction">612</Subcount>
+      <Subcount subtype="fully supported">15200</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>1293</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">16</Subcount>
+      <Subcount subtype="correction">182</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">1293</Subcount>
+      <Subcount subtype="known RefSeq with correction">182</Subcount>
+      <Subcount subtype="fully supported">1293</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>54226</Total>
+      <Subcount subtype="exon &lt;= 3nt">1202</Subcount>
+      <Subcount subtype="partial">381</Subcount>
+      <Subcount subtype="correction">1923</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">53871</Subcount>
+      <Subcount subtype="known RefSeq with correction">1568</Subcount>
+      <Subcount subtype="fully supported">53873</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">381</Subcount>
+      <Subcount subtype="minor correction">1223</Subcount>
+      <Subcount subtype="premature stop">334</Subcount>
+      <Subcount subtype="has frameshifts">297</Subcount>
+    </Counts>
+  </AssemblyCounts>
+  <AssemblyCounts Accession="GCF_000001405.25" Type="grouped alt loci">
+    <Counts feature_type="genes">
+      <Total>425</Total>
+      <Subcount subtype="other">0</Subcount>
+      <Subcount subtype="non-transcribed pseudo">112</Subcount>
+      <Subcount subtype="transcribed pseudo">11</Subcount>
+      <Subcount subtype="has variants">118</Subcount>
+      <Subcount subtype="partial">2</Subcount>
+      <Subcount subtype="Ig TCR segment">0</Subcount>
+      <Subcount subtype="non coding">111</Subcount>
+      <Subcount subtype="protein coding">191</Subcount>
+      <Subcount subtype="multiply placed">354</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>428</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">2</Subcount>
+      <Subcount subtype="correction">168</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">428</Subcount>
+      <Subcount subtype="known RefSeq with correction">168</Subcount>
+      <Subcount subtype="fully supported">428</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="multiply placed">361</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>432</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">1</Subcount>
+      <Subcount subtype="correction">54</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">143</Subcount>
+      <Subcount subtype="known RefSeq with correction">54</Subcount>
+      <Subcount subtype="fully supported">143</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="multiply placed">114</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>17</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">0</Subcount>
+      <Subcount subtype="correction">12</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">17</Subcount>
+      <Subcount subtype="known RefSeq with correction">12</Subcount>
+      <Subcount subtype="fully supported">17</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="multiply placed">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>428</Total>
+      <Subcount subtype="exon &lt;= 3nt">3</Subcount>
+      <Subcount subtype="partial">2</Subcount>
+      <Subcount subtype="correction">71</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">428</Subcount>
+      <Subcount subtype="known RefSeq with correction">71</Subcount>
+      <Subcount subtype="fully supported">428</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">11</Subcount>
+      <Subcount subtype="minor correction">147</Subcount>
+      <Subcount subtype="premature stop">1</Subcount>
+      <Subcount subtype="has frameshifts">0</Subcount>
+    </Counts>
+  </AssemblyCounts>
+  <AssemblyCounts Accession="GCF_000001315.1" Type="assembly unit">
+    <Counts feature_type="genes">
+      <Total>179</Total>
+      <Subcount subtype="other">0</Subcount>
+      <Subcount subtype="non-transcribed pseudo">42</Subcount>
+      <Subcount subtype="transcribed pseudo">6</Subcount>
+      <Subcount subtype="has variants">51</Subcount>
+      <Subcount subtype="partial">18</Subcount>
+      <Subcount subtype="Ig TCR segment">0</Subcount>
+      <Subcount subtype="non coding">51</Subcount>
+      <Subcount subtype="protein coding">80</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>180</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">31</Subcount>
+      <Subcount subtype="correction">117</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">180</Subcount>
+      <Subcount subtype="known RefSeq with correction">117</Subcount>
+      <Subcount subtype="fully supported">180</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>91</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">14</Subcount>
+      <Subcount subtype="correction">36</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">69</Subcount>
+      <Subcount subtype="known RefSeq with correction">36</Subcount>
+      <Subcount subtype="fully supported">69</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>10</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">0</Subcount>
+      <Subcount subtype="correction">9</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">10</Subcount>
+      <Subcount subtype="known RefSeq with correction">9</Subcount>
+      <Subcount subtype="fully supported">10</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>180</Total>
+      <Subcount subtype="exon &lt;= 3nt">2</Subcount>
+      <Subcount subtype="partial">31</Subcount>
+      <Subcount subtype="correction">79</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">180</Subcount>
+      <Subcount subtype="known RefSeq with correction">79</Subcount>
+      <Subcount subtype="fully supported">180</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">16</Subcount>
+      <Subcount subtype="minor correction">63</Subcount>
+      <Subcount subtype="premature stop">2</Subcount>
+      <Subcount subtype="has frameshifts">15</Subcount>
+    </Counts>
+  </AssemblyCounts>
+  <AssemblyCounts Accession="GCF_000001325.2" Type="assembly unit">
+    <Counts feature_type="genes">
+      <Total>351</Total>
+      <Subcount subtype="other">0</Subcount>
+      <Subcount subtype="non-transcribed pseudo">76</Subcount>
+      <Subcount subtype="transcribed pseudo">9</Subcount>
+      <Subcount subtype="has variants">100</Subcount>
+      <Subcount subtype="partial">1</Subcount>
+      <Subcount subtype="Ig TCR segment">0</Subcount>
+      <Subcount subtype="non coding">102</Subcount>
+      <Subcount subtype="protein coding">164</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>361</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">1</Subcount>
+      <Subcount subtype="correction">223</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">361</Subcount>
+      <Subcount subtype="known RefSeq with correction">223</Subcount>
+      <Subcount subtype="fully supported">361</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>173</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">0</Subcount>
+      <Subcount subtype="correction">67</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">124</Subcount>
+      <Subcount subtype="known RefSeq with correction">67</Subcount>
+      <Subcount subtype="fully supported">124</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>14</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">0</Subcount>
+      <Subcount subtype="correction">12</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">14</Subcount>
+      <Subcount subtype="known RefSeq with correction">12</Subcount>
+      <Subcount subtype="fully supported">14</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>361</Total>
+      <Subcount subtype="exon &lt;= 3nt">3</Subcount>
+      <Subcount subtype="partial">1</Subcount>
+      <Subcount subtype="correction">91</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">361</Subcount>
+      <Subcount subtype="known RefSeq with correction">91</Subcount>
+      <Subcount subtype="fully supported">361</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">4</Subcount>
+      <Subcount subtype="minor correction">87</Subcount>
+      <Subcount subtype="premature stop">4</Subcount>
+      <Subcount subtype="has frameshifts">1</Subcount>
+    </Counts>
+  </AssemblyCounts>
+  <AssemblyCounts Accession="GCF_000001335.1" Type="assembly unit">
+    <Counts feature_type="genes">
+      <Total>310</Total>
+      <Subcount subtype="other">0</Subcount>
+      <Subcount subtype="non-transcribed pseudo">73</Subcount>
+      <Subcount subtype="transcribed pseudo">11</Subcount>
+      <Subcount subtype="has variants">91</Subcount>
+      <Subcount subtype="partial">5</Subcount>
+      <Subcount subtype="Ig TCR segment">0</Subcount>
+      <Subcount subtype="non coding">76</Subcount>
+      <Subcount subtype="protein coding">150</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>328</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">9</Subcount>
+      <Subcount subtype="correction">185</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">328</Subcount>
+      <Subcount subtype="known RefSeq with correction">185</Subcount>
+      <Subcount subtype="fully supported">328</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>140</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">1</Subcount>
+      <Subcount subtype="correction">60</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">112</Subcount>
+      <Subcount subtype="known RefSeq with correction">61</Subcount>
+      <Subcount subtype="fully supported">112</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>16</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">1</Subcount>
+      <Subcount subtype="correction">14</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">16</Subcount>
+      <Subcount subtype="known RefSeq with correction">14</Subcount>
+      <Subcount subtype="fully supported">16</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>328</Total>
+      <Subcount subtype="exon &lt;= 3nt">2</Subcount>
+      <Subcount subtype="partial">9</Subcount>
+      <Subcount subtype="correction">105</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">328</Subcount>
+      <Subcount subtype="known RefSeq with correction">105</Subcount>
+      <Subcount subtype="fully supported">328</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">5</Subcount>
+      <Subcount subtype="minor correction">100</Subcount>
+      <Subcount subtype="premature stop">4</Subcount>
+      <Subcount subtype="has frameshifts">2</Subcount>
+    </Counts>
+  </AssemblyCounts>
+  <AssemblyCounts Accession="GCF_000001345.1" Type="assembly unit">
+    <Counts feature_type="genes">
+      <Total>288</Total>
+      <Subcount subtype="other">0</Subcount>
+      <Subcount subtype="non-transcribed pseudo">73</Subcount>
+      <Subcount subtype="transcribed pseudo">9</Subcount>
+      <Subcount subtype="has variants">84</Subcount>
+      <Subcount subtype="partial">10</Subcount>
+      <Subcount subtype="Ig TCR segment">0</Subcount>
+      <Subcount subtype="non coding">76</Subcount>
+      <Subcount subtype="protein coding">130</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>297</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">22</Subcount>
+      <Subcount subtype="correction">180</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">297</Subcount>
+      <Subcount subtype="known RefSeq with correction">180</Subcount>
+      <Subcount subtype="fully supported">297</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>134</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">1</Subcount>
+      <Subcount subtype="correction">56</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">101</Subcount>
+      <Subcount subtype="known RefSeq with correction">58</Subcount>
+      <Subcount subtype="fully supported">101</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>14</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">0</Subcount>
+      <Subcount subtype="correction">11</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">14</Subcount>
+      <Subcount subtype="known RefSeq with correction">11</Subcount>
+      <Subcount subtype="fully supported">14</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>297</Total>
+      <Subcount subtype="exon &lt;= 3nt">3</Subcount>
+      <Subcount subtype="partial">17</Subcount>
+      <Subcount subtype="correction">106</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">297</Subcount>
+      <Subcount subtype="known RefSeq with correction">106</Subcount>
+      <Subcount subtype="fully supported">297</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">12</Subcount>
+      <Subcount subtype="minor correction">94</Subcount>
+      <Subcount subtype="premature stop">6</Subcount>
+      <Subcount subtype="has frameshifts">7</Subcount>
+    </Counts>
+  </AssemblyCounts>
+  <AssemblyCounts Accession="GCF_000001355.1" Type="assembly unit">
+    <Counts feature_type="genes">
+      <Total>293</Total>
+      <Subcount subtype="other">0</Subcount>
+      <Subcount subtype="non-transcribed pseudo">61</Subcount>
+      <Subcount subtype="transcribed pseudo">9</Subcount>
+      <Subcount subtype="has variants">88</Subcount>
+      <Subcount subtype="partial">16</Subcount>
+      <Subcount subtype="Ig TCR segment">0</Subcount>
+      <Subcount subtype="non coding">73</Subcount>
+      <Subcount subtype="protein coding">150</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>332</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">28</Subcount>
+      <Subcount subtype="correction">199</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">332</Subcount>
+      <Subcount subtype="known RefSeq with correction">199</Subcount>
+      <Subcount subtype="fully supported">332</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>128</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">7</Subcount>
+      <Subcount subtype="correction">60</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">95</Subcount>
+      <Subcount subtype="known RefSeq with correction">61</Subcount>
+      <Subcount subtype="fully supported">95</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>14</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">1</Subcount>
+      <Subcount subtype="correction">11</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">14</Subcount>
+      <Subcount subtype="known RefSeq with correction">11</Subcount>
+      <Subcount subtype="fully supported">14</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>332</Total>
+      <Subcount subtype="exon &lt;= 3nt">3</Subcount>
+      <Subcount subtype="partial">26</Subcount>
+      <Subcount subtype="correction">126</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">332</Subcount>
+      <Subcount subtype="known RefSeq with correction">126</Subcount>
+      <Subcount subtype="fully supported">332</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">15</Subcount>
+      <Subcount subtype="minor correction">111</Subcount>
+      <Subcount subtype="premature stop">13</Subcount>
+      <Subcount subtype="has frameshifts">13</Subcount>
+    </Counts>
+  </AssemblyCounts>
+  <AssemblyCounts Accession="GCF_000001365.2" Type="assembly unit">
+    <Counts feature_type="genes">
+      <Total>309</Total>
+      <Subcount subtype="other">0</Subcount>
+      <Subcount subtype="non-transcribed pseudo">65</Subcount>
+      <Subcount subtype="transcribed pseudo">8</Subcount>
+      <Subcount subtype="has variants">95</Subcount>
+      <Subcount subtype="partial">5</Subcount>
+      <Subcount subtype="Ig TCR segment">0</Subcount>
+      <Subcount subtype="non coding">85</Subcount>
+      <Subcount subtype="protein coding">151</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>338</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">7</Subcount>
+      <Subcount subtype="correction">241</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">338</Subcount>
+      <Subcount subtype="known RefSeq with correction">241</Subcount>
+      <Subcount subtype="fully supported">338</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>154</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">2</Subcount>
+      <Subcount subtype="correction">69</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">118</Subcount>
+      <Subcount subtype="known RefSeq with correction">70</Subcount>
+      <Subcount subtype="fully supported">118</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>12</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">0</Subcount>
+      <Subcount subtype="correction">10</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">12</Subcount>
+      <Subcount subtype="known RefSeq with correction">10</Subcount>
+      <Subcount subtype="fully supported">12</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>338</Total>
+      <Subcount subtype="exon &lt;= 3nt">3</Subcount>
+      <Subcount subtype="partial">7</Subcount>
+      <Subcount subtype="correction">110</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">338</Subcount>
+      <Subcount subtype="known RefSeq with correction">110</Subcount>
+      <Subcount subtype="fully supported">338</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">6</Subcount>
+      <Subcount subtype="minor correction">104</Subcount>
+      <Subcount subtype="premature stop">3</Subcount>
+      <Subcount subtype="has frameshifts">5</Subcount>
+    </Counts>
+  </AssemblyCounts>
+  <AssemblyCounts Accession="GCF_000001375.1" Type="assembly unit">
+    <Counts feature_type="genes">
+      <Total>292</Total>
+      <Subcount subtype="other">1</Subcount>
+      <Subcount subtype="non-transcribed pseudo">64</Subcount>
+      <Subcount subtype="transcribed pseudo">10</Subcount>
+      <Subcount subtype="has variants">86</Subcount>
+      <Subcount subtype="partial">11</Subcount>
+      <Subcount subtype="Ig TCR segment">0</Subcount>
+      <Subcount subtype="non coding">83</Subcount>
+      <Subcount subtype="protein coding">134</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>299</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">21</Subcount>
+      <Subcount subtype="correction">190</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">299</Subcount>
+      <Subcount subtype="known RefSeq with correction">190</Subcount>
+      <Subcount subtype="fully supported">299</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>141</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">2</Subcount>
+      <Subcount subtype="correction">63</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">103</Subcount>
+      <Subcount subtype="known RefSeq with correction">64</Subcount>
+      <Subcount subtype="fully supported">103</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>14</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">0</Subcount>
+      <Subcount subtype="correction">11</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">14</Subcount>
+      <Subcount subtype="known RefSeq with correction">11</Subcount>
+      <Subcount subtype="fully supported">14</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>298</Total>
+      <Subcount subtype="exon &lt;= 3nt">2</Subcount>
+      <Subcount subtype="partial">18</Subcount>
+      <Subcount subtype="correction">107</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">298</Subcount>
+      <Subcount subtype="known RefSeq with correction">107</Subcount>
+      <Subcount subtype="fully supported">299</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">9</Subcount>
+      <Subcount subtype="minor correction">98</Subcount>
+      <Subcount subtype="premature stop">5</Subcount>
+      <Subcount subtype="has frameshifts">4</Subcount>
+    </Counts>
+  </AssemblyCounts>
+  <AssemblyCounts Accession="GCF_000001385.1" Type="assembly unit">
+    <Counts feature_type="genes">
+      <Total>13</Total>
+      <Subcount subtype="other">0</Subcount>
+      <Subcount subtype="non-transcribed pseudo">8</Subcount>
+      <Subcount subtype="transcribed pseudo">0</Subcount>
+      <Subcount subtype="has variants">3</Subcount>
+      <Subcount subtype="partial">0</Subcount>
+      <Subcount subtype="Ig TCR segment">0</Subcount>
+      <Subcount subtype="non coding">0</Subcount>
+      <Subcount subtype="protein coding">5</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>9</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">0</Subcount>
+      <Subcount subtype="correction">2</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">9</Subcount>
+      <Subcount subtype="known RefSeq with correction">2</Subcount>
+      <Subcount subtype="fully supported">9</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>1</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">0</Subcount>
+      <Subcount subtype="correction">0</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">1</Subcount>
+      <Subcount subtype="known RefSeq with correction">0</Subcount>
+      <Subcount subtype="fully supported">1</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>0</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">0</Subcount>
+      <Subcount subtype="correction">0</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq with correction">0</Subcount>
+      <Subcount subtype="fully supported">0</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>9</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">0</Subcount>
+      <Subcount subtype="correction">2</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">9</Subcount>
+      <Subcount subtype="known RefSeq with correction">2</Subcount>
+      <Subcount subtype="fully supported">9</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">0</Subcount>
+      <Subcount subtype="minor correction">2</Subcount>
+      <Subcount subtype="premature stop">0</Subcount>
+      <Subcount subtype="has frameshifts">0</Subcount>
+    </Counts>
+  </AssemblyCounts>
+  <AssemblyCounts Accession="GCF_000001395.1" Type="assembly unit">
+    <Counts feature_type="genes">
+      <Total>24</Total>
+      <Subcount subtype="other">0</Subcount>
+      <Subcount subtype="non-transcribed pseudo">6</Subcount>
+      <Subcount subtype="transcribed pseudo">1</Subcount>
+      <Subcount subtype="has variants">9</Subcount>
+      <Subcount subtype="partial">1</Subcount>
+      <Subcount subtype="Ig TCR segment">0</Subcount>
+      <Subcount subtype="non coding">5</Subcount>
+      <Subcount subtype="protein coding">12</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>35</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">1</Subcount>
+      <Subcount subtype="correction">34</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">35</Subcount>
+      <Subcount subtype="known RefSeq with correction">34</Subcount>
+      <Subcount subtype="fully supported">35</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>13</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">1</Subcount>
+      <Subcount subtype="correction">11</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">13</Subcount>
+      <Subcount subtype="known RefSeq with correction">11</Subcount>
+      <Subcount subtype="fully supported">13</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>1</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">0</Subcount>
+      <Subcount subtype="correction">1</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">1</Subcount>
+      <Subcount subtype="known RefSeq with correction">1</Subcount>
+      <Subcount subtype="fully supported">1</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>35</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">1</Subcount>
+      <Subcount subtype="correction">19</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">35</Subcount>
+      <Subcount subtype="known RefSeq with correction">19</Subcount>
+      <Subcount subtype="fully supported">35</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">1</Subcount>
+      <Subcount subtype="minor correction">18</Subcount>
+      <Subcount subtype="premature stop">1</Subcount>
+      <Subcount subtype="has frameshifts">0</Subcount>
+    </Counts>
+  </AssemblyCounts>
+  <AssemblyCounts Accession="GCF_000005045.12" Type="assembly unit">
+    <Counts feature_type="genes">
+      <Total>2546</Total>
+      <Subcount subtype="other">9</Subcount>
+      <Subcount subtype="non-transcribed pseudo">784</Subcount>
+      <Subcount subtype="transcribed pseudo">126</Subcount>
+      <Subcount subtype="has variants">642</Subcount>
+      <Subcount subtype="partial">295</Subcount>
+      <Subcount subtype="Ig TCR segment">156</Subcount>
+      <Subcount subtype="non coding">371</Subcount>
+      <Subcount subtype="protein coding">1100</Subcount>
+    </Counts>
+    <Counts feature_type="mRNAs">
+      <Total>2697</Total>
+      <Subcount subtype="exon &lt;= 3nt">5</Subcount>
+      <Subcount subtype="partial">335</Subcount>
+      <Subcount subtype="correction">505</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">2697</Subcount>
+      <Subcount subtype="known RefSeq with correction">505</Subcount>
+      <Subcount subtype="fully supported">2697</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+    </Counts>
+    <Counts feature_type="non-coding RNAs">
+      <Total>818</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">76</Subcount>
+      <Subcount subtype="correction">103</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">701</Subcount>
+      <Subcount subtype="known RefSeq with correction">105</Subcount>
+      <Subcount subtype="fully supported">701</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="pseudo transcripts">
+      <Total>159</Total>
+      <Subcount subtype="exon &lt;= 3nt">0</Subcount>
+      <Subcount subtype="partial">6</Subcount>
+      <Subcount subtype="correction">25</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">159</Subcount>
+      <Subcount subtype="known RefSeq with correction">25</Subcount>
+      <Subcount subtype="fully supported">159</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="has gaps">0</Subcount>
+    </Counts>
+    <Counts feature_type="CDSs">
+      <Total>2822</Total>
+      <Subcount subtype="exon &lt;= 3nt">64</Subcount>
+      <Subcount subtype="partial">422</Subcount>
+      <Subcount subtype="correction">527</Subcount>
+      <Subcount subtype="model RefSeq">0</Subcount>
+      <Subcount subtype="known RefSeq">2665</Subcount>
+      <Subcount subtype="known RefSeq with correction">370</Subcount>
+      <Subcount subtype="fully supported">2697</Subcount>
+      <Subcount subtype="ab initio &gt; 5%">0</Subcount>
+      <Subcount subtype="model RefSeq with correction">0</Subcount>
+      <Subcount subtype="major correction">97</Subcount>
+      <Subcount subtype="minor correction">341</Subcount>
+      <Subcount subtype="premature stop">71</Subcount>
+      <Subcount subtype="has frameshifts">64</Subcount>
+    </Counts>
+  </AssemblyCounts>
+</FeatureCounts>
+  <FeatureStats>
+  <OverallStats>
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>82</Max>
+      <Mean>2.55617</Mean>
+      <Median>1</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>1</Min>
+      <Max>363</Max>
+      <Mean>10.176</Mean>
+      <Median>8</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All transcripts">
+      <Count>71181</Count>
+      <Min>16</Min>
+      <Max>109224</Max>
+      <Mean>3284.81</Mean>
+      <Median>2659</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>53998</Count>
+      <Min>75</Min>
+      <Max>107976</Max>
+      <Mean>1664.97</Mean>
+      <Median>1302</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>27555</Count>
+      <Min>23</Min>
+      <Max>2304198</Max>
+      <Mean>50453.9</Mean>
+      <Median>15818</Median>
+    </LengthStats>
+    <LengthStats category="RNase_MRP_RNA">
+      <Count>1</Count>
+      <Min>277</Min>
+      <Max>277</Max>
+      <Mean>277</Mean>
+      <Median>277</Median>
+    </LengthStats>
+    <LengthStats category="RNase_P_RNA">
+      <Count>1</Count>
+      <Min>341</Min>
+      <Max>341</Max>
+      <Mean>341</Mean>
+      <Median>341</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts">
+      <Count>1711</Count>
+      <Min>180</Min>
+      <Max>91671</Max>
+      <Mean>2019.12</Mean>
+      <Median>1413</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in coding models">
+      <Count>1334</Count>
+      <Min>180</Min>
+      <Max>12344</Max>
+      <Mean>1830.85</Mean>
+      <Median>1187</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in non-coding models">
+      <Count>377</Count>
+      <Min>200</Min>
+      <Max>91671</Max>
+      <Mean>2685.29</Mean>
+      <Median>2051</Median>
+    </LengthStats>
+    <LengthStats category="Y_RNA">
+      <Count>4</Count>
+      <Min>84</Min>
+      <Max>113</Max>
+      <Mean>98.75</Mean>
+      <Median>102</Median>
+    </LengthStats>
+    <LengthStats category="antisense_RNA">
+      <Count>22</Count>
+      <Min>255</Min>
+      <Max>37027</Max>
+      <Mean>4169.59</Mean>
+      <Median>1662</Median>
+    </LengthStats>
+    <LengthStats category="guide_RNA">
+      <Count>29</Count>
+      <Min>125</Min>
+      <Max>421</Max>
+      <Mean>206.793</Mean>
+      <Median>148</Median>
+    </LengthStats>
+    <LengthStats category="lncRNA">
+      <Count>6999</Count>
+      <Min>106</Min>
+      <Max>91671</Max>
+      <Mean>1671.32</Mean>
+      <Median>1241</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>53985</Count>
+      <Min>180</Min>
+      <Max>109224</Max>
+      <Mean>3761.13</Mean>
+      <Median>3067</Median>
+    </LengthStats>
+    <LengthStats category="miRNA">
+      <Count>3171</Count>
+      <Min>16</Min>
+      <Max>28</Max>
+      <Mean>21.6295</Mean>
+      <Median>22</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>5668</Count>
+      <Min>213</Min>
+      <Max>25390</Max>
+      <Mean>3310.65</Mean>
+      <Median>2777</Median>
+    </LengthStats>
+    <LengthStats category="premsg">
+      <Count>1898</Count>
+      <Min>41</Min>
+      <Max>164</Max>
+      <Mean>81.8393</Mean>
+      <Median>80</Median>
+    </LengthStats>
+    <LengthStats category="rRNA">
+      <Count>23</Count>
+      <Min>121</Min>
+      <Max>13357</Max>
+      <Mean>1087.96</Mean>
+      <Median>121</Median>
+    </LengthStats>
+    <LengthStats category="scRNA">
+      <Count>4</Count>
+      <Min>58</Min>
+      <Max>299</Max>
+      <Mean>238.75</Mean>
+      <Median>299</Median>
+    </LengthStats>
+    <LengthStats category="snRNA">
+      <Count>62</Count>
+      <Min>63</Min>
+      <Max>332</Max>
+      <Mean>134.065</Mean>
+      <Median>121</Median>
+    </LengthStats>
+    <LengthStats category="snoRNA">
+      <Count>541</Count>
+      <Min>33</Min>
+      <Max>250</Max>
+      <Mean>105.649</Mean>
+      <Median>94</Median>
+    </LengthStats>
+    <LengthStats category="tRNA">
+      <Count>666</Count>
+      <Min>59</Min>
+      <Max>86</Max>
+      <Mean>73.5781</Mean>
+      <Median>73</Median>
+    </LengthStats>
+    <LengthStats category="telomerase_RNA">
+      <Count>1</Count>
+      <Min>451</Min>
+      <Max>451</Max>
+      <Mean>451</Mean>
+      <Median>451</Median>
+    </LengthStats>
+    <LengthStats category="vault_RNA">
+      <Count>4</Count>
+      <Min>88</Min>
+      <Max>108</Max>
+      <Mean>95.5</Mean>
+      <Median>98</Median>
+    </LengthStats>
+  </OverallStats>
+  <AssemblyStats Accession="GCF_000001405.25" Type="full assembly">
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>82</Max>
+      <Mean>2.55617</Mean>
+      <Median>1</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>1</Min>
+      <Max>363</Max>
+      <Mean>10.176</Mean>
+      <Median>8</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All exons">
+      <Count>282773</Count>
+      <Min>2</Min>
+      <Max>91671</Max>
+      <Mean>368.664</Mean>
+      <Median>139</Median>
+    </LengthStats>
+    <LengthStats category="All introns">
+      <Count>262479</Count>
+      <Min>25</Min>
+      <Max>1160411</Max>
+      <Mean>7393.59</Mean>
+      <Median>1675</Median>
+    </LengthStats>
+    <LengthStats category="All transcripts">
+      <Count>71181</Count>
+      <Min>16</Min>
+      <Max>109224</Max>
+      <Mean>3284.81</Mean>
+      <Median>2659</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>53998</Count>
+      <Min>75</Min>
+      <Max>107976</Max>
+      <Mean>1664.97</Mean>
+      <Median>1302</Median>
+    </LengthStats>
+    <LengthStats category="Exons in coding models">
+      <Count>255631</Count>
+      <Min>2</Min>
+      <Max>33290</Max>
+      <Mean>361.018</Mean>
+      <Median>137</Median>
+    </LengthStats>
+    <LengthStats category="Exons in non-coding models">
+      <Count>57904</Count>
+      <Min>4</Min>
+      <Max>91671</Max>
+      <Mean>362.627</Mean>
+      <Median>141</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>27555</Count>
+      <Min>23</Min>
+      <Max>2304198</Max>
+      <Mean>50453.9</Mean>
+      <Median>15818</Median>
+    </LengthStats>
+    <LengthStats category="Introns in coding models">
+      <Count>238480</Count>
+      <Min>25</Min>
+      <Max>1160411</Max>
+      <Mean>6944.42</Mean>
+      <Median>1614</Median>
+    </LengthStats>
+    <LengthStats category="Introns in non-coding models">
+      <Count>51194</Count>
+      <Min>28</Min>
+      <Max>773192</Max>
+      <Mean>8583.87</Mean>
+      <Median>1956</Median>
+    </LengthStats>
+    <LengthStats category="RNase_MRP_RNA">
+      <Count>1</Count>
+      <Min>277</Min>
+      <Max>277</Max>
+      <Mean>277</Mean>
+      <Median>277</Median>
+    </LengthStats>
+    <LengthStats category="RNase_P_RNA">
+      <Count>1</Count>
+      <Min>341</Min>
+      <Max>341</Max>
+      <Mean>341</Mean>
+      <Median>341</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts">
+      <Count>1711</Count>
+      <Min>180</Min>
+      <Max>91671</Max>
+      <Mean>2019.12</Mean>
+      <Median>1413</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in coding models">
+      <Count>1334</Count>
+      <Min>180</Min>
+      <Max>12344</Max>
+      <Mean>1830.85</Mean>
+      <Median>1187</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in non-coding models">
+      <Count>377</Count>
+      <Min>200</Min>
+      <Max>91671</Max>
+      <Mean>2685.29</Mean>
+      <Median>2051</Median>
+    </LengthStats>
+    <LengthStats category="Y_RNA">
+      <Count>4</Count>
+      <Min>84</Min>
+      <Max>113</Max>
+      <Mean>98.75</Mean>
+      <Median>102</Median>
+    </LengthStats>
+    <LengthStats category="antisense_RNA">
+      <Count>22</Count>
+      <Min>255</Min>
+      <Max>37027</Max>
+      <Mean>4169.59</Mean>
+      <Median>1662</Median>
+    </LengthStats>
+    <LengthStats category="guide_RNA">
+      <Count>29</Count>
+      <Min>125</Min>
+      <Max>421</Max>
+      <Mean>206.793</Mean>
+      <Median>148</Median>
+    </LengthStats>
+    <LengthStats category="lncRNA">
+      <Count>6999</Count>
+      <Min>106</Min>
+      <Max>91671</Max>
+      <Mean>1671.32</Mean>
+      <Median>1241</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>53985</Count>
+      <Min>180</Min>
+      <Max>109224</Max>
+      <Mean>3761.13</Mean>
+      <Median>3067</Median>
+    </LengthStats>
+    <LengthStats category="miRNA">
+      <Count>3171</Count>
+      <Min>16</Min>
+      <Max>28</Max>
+      <Mean>21.6295</Mean>
+      <Median>22</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>5668</Count>
+      <Min>213</Min>
+      <Max>25390</Max>
+      <Mean>3310.65</Mean>
+      <Median>2777</Median>
+    </LengthStats>
+    <LengthStats category="premsg">
+      <Count>1898</Count>
+      <Min>41</Min>
+      <Max>164</Max>
+      <Mean>81.8393</Mean>
+      <Median>80</Median>
+    </LengthStats>
+    <LengthStats category="rRNA">
+      <Count>23</Count>
+      <Min>121</Min>
+      <Max>13357</Max>
+      <Mean>1087.96</Mean>
+      <Median>121</Median>
+    </LengthStats>
+    <LengthStats category="scRNA">
+      <Count>4</Count>
+      <Min>58</Min>
+      <Max>299</Max>
+      <Mean>238.75</Mean>
+      <Median>299</Median>
+    </LengthStats>
+    <LengthStats category="snRNA">
+      <Count>62</Count>
+      <Min>63</Min>
+      <Max>332</Max>
+      <Mean>134.065</Mean>
+      <Median>121</Median>
+    </LengthStats>
+    <LengthStats category="snoRNA">
+      <Count>541</Count>
+      <Min>33</Min>
+      <Max>250</Max>
+      <Mean>105.649</Mean>
+      <Median>94</Median>
+    </LengthStats>
+    <LengthStats category="tRNA">
+      <Count>666</Count>
+      <Min>59</Min>
+      <Max>86</Max>
+      <Mean>73.5781</Mean>
+      <Median>73</Median>
+    </LengthStats>
+    <LengthStats category="telomerase_RNA">
+      <Count>1</Count>
+      <Min>451</Min>
+      <Max>451</Max>
+      <Mean>451</Mean>
+      <Median>451</Median>
+    </LengthStats>
+    <LengthStats category="vault_RNA">
+      <Count>4</Count>
+      <Min>88</Min>
+      <Max>108</Max>
+      <Mean>95.5</Mean>
+      <Median>98</Median>
+    </LengthStats>
+  </AssemblyStats>
+  <AssemblyStats Accession="GCF_000001305.13" Type="assembly unit">
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>82</Max>
+      <Mean>2.55687</Mean>
+      <Median>1</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>1</Min>
+      <Max>363</Max>
+      <Mean>10.2023</Mean>
+      <Median>8</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All exons">
+      <Count>257908</Count>
+      <Min>2</Min>
+      <Max>91671</Max>
+      <Mean>373.61</Mean>
+      <Median>139</Median>
+    </LengthStats>
+    <LengthStats category="All introns">
+      <Count>240261</Count>
+      <Min>26</Min>
+      <Max>1160411</Max>
+      <Mean>7790.5</Mean>
+      <Median>1806</Median>
+    </LengthStats>
+    <LengthStats category="All transcripts">
+      <Count>70450</Count>
+      <Min>16</Min>
+      <Max>109224</Max>
+      <Mean>3312.24</Mean>
+      <Median>2682</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>53873</Count>
+      <Min>75</Min>
+      <Max>107976</Max>
+      <Mean>1665.66</Mean>
+      <Median>1305</Median>
+    </LengthStats>
+    <LengthStats category="Exons in coding models">
+      <Count>232859</Count>
+      <Min>2</Min>
+      <Max>33290</Max>
+      <Mean>366.648</Mean>
+      <Median>137</Median>
+    </LengthStats>
+    <LengthStats category="Exons in non-coding models">
+      <Count>53022</Count>
+      <Min>4</Min>
+      <Max>91671</Max>
+      <Mean>365.79</Mean>
+      <Median>140</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>27448</Count>
+      <Min>23</Min>
+      <Max>2304198</Max>
+      <Mean>50805.1</Mean>
+      <Median>15897</Median>
+    </LengthStats>
+    <LengthStats category="Introns in coding models">
+      <Count>218045</Count>
+      <Min>26</Min>
+      <Max>1160411</Max>
+      <Mean>7346.82</Mean>
+      <Median>1743</Median>
+    </LengthStats>
+    <LengthStats category="Introns in non-coding models">
+      <Count>46987</Count>
+      <Min>28</Min>
+      <Max>773192</Max>
+      <Mean>8918.06</Mean>
+      <Median>2071</Median>
+    </LengthStats>
+    <LengthStats category="RNase_MRP_RNA">
+      <Count>1</Count>
+      <Min>277</Min>
+      <Max>277</Max>
+      <Mean>277</Mean>
+      <Median>277</Median>
+    </LengthStats>
+    <LengthStats category="RNase_P_RNA">
+      <Count>1</Count>
+      <Min>341</Min>
+      <Max>341</Max>
+      <Mean>341</Mean>
+      <Median>341</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts">
+      <Count>1701</Count>
+      <Min>180</Min>
+      <Max>91671</Max>
+      <Mean>2025.56</Mean>
+      <Median>1415</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in coding models">
+      <Count>1328</Count>
+      <Min>180</Min>
+      <Max>12344</Max>
+      <Mean>1837.28</Mean>
+      <Median>1190</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in non-coding models">
+      <Count>373</Count>
+      <Min>200</Min>
+      <Max>91671</Max>
+      <Mean>2695.9</Mean>
+      <Median>2054</Median>
+    </LengthStats>
+    <LengthStats category="Y_RNA">
+      <Count>4</Count>
+      <Min>84</Min>
+      <Max>113</Max>
+      <Mean>98.75</Mean>
+      <Median>102</Median>
+    </LengthStats>
+    <LengthStats category="antisense_RNA">
+      <Count>22</Count>
+      <Min>255</Min>
+      <Max>37027</Max>
+      <Mean>4169.59</Mean>
+      <Median>1662</Median>
+    </LengthStats>
+    <LengthStats category="guide_RNA">
+      <Count>29</Count>
+      <Min>125</Min>
+      <Max>421</Max>
+      <Mean>206.793</Mean>
+      <Median>148</Median>
+    </LengthStats>
+    <LengthStats category="lncRNA">
+      <Count>6975</Count>
+      <Min>106</Min>
+      <Max>91671</Max>
+      <Mean>1667.01</Mean>
+      <Median>1237</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>53873</Count>
+      <Min>180</Min>
+      <Max>109224</Max>
+      <Mean>3763.48</Mean>
+      <Median>3070</Median>
+    </LengthStats>
+    <LengthStats category="miRNA">
+      <Count>2855</Count>
+      <Min>16</Min>
+      <Max>28</Max>
+      <Mean>21.6277</Mean>
+      <Median>22</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>5644</Count>
+      <Min>213</Min>
+      <Max>25390</Max>
+      <Mean>3311.37</Mean>
+      <Median>2777</Median>
+    </LengthStats>
+    <LengthStats category="premsg">
+      <Count>1895</Count>
+      <Min>41</Min>
+      <Max>164</Max>
+      <Mean>81.8338</Mean>
+      <Median>80</Median>
+    </LengthStats>
+    <LengthStats category="rRNA">
+      <Count>21</Count>
+      <Min>121</Min>
+      <Max>13357</Max>
+      <Mean>1071.9</Mean>
+      <Median>121</Median>
+    </LengthStats>
+    <LengthStats category="scRNA">
+      <Count>4</Count>
+      <Min>58</Min>
+      <Max>299</Max>
+      <Mean>238.75</Mean>
+      <Median>299</Median>
+    </LengthStats>
+    <LengthStats category="snRNA">
+      <Count>59</Count>
+      <Min>63</Min>
+      <Max>332</Max>
+      <Mean>132.475</Mean>
+      <Median>121</Median>
+    </LengthStats>
+    <LengthStats category="snoRNA">
+      <Count>540</Count>
+      <Min>33</Min>
+      <Max>250</Max>
+      <Mean>105.467</Mean>
+      <Median>94</Median>
+    </LengthStats>
+    <LengthStats category="tRNA">
+      <Count>417</Count>
+      <Min>71</Min>
+      <Max>86</Max>
+      <Mean>73.9688</Mean>
+      <Median>73</Median>
+    </LengthStats>
+    <LengthStats category="telomerase_RNA">
+      <Count>1</Count>
+      <Min>451</Min>
+      <Max>451</Max>
+      <Mean>451</Mean>
+      <Median>451</Median>
+    </LengthStats>
+    <LengthStats category="vault_RNA">
+      <Count>4</Count>
+      <Min>88</Min>
+      <Max>108</Max>
+      <Mean>95.5</Mean>
+      <Median>98</Median>
+    </LengthStats>
+  </AssemblyStats>
+  <AssemblyStats Accession="GCF_000001405.25" Type="grouped alt loci">
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>13</Max>
+      <Mean>2.16412</Mean>
+      <Median>1</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>1</Min>
+      <Max>65</Max>
+      <Mean>8.3479</Mean>
+      <Median>6</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All exons">
+      <Count>10714</Count>
+      <Min>6</Min>
+      <Max>7568</Max>
+      <Mean>294.461</Mean>
+      <Median>141</Median>
+    </LengthStats>
+    <LengthStats category="All introns">
+      <Count>9427</Count>
+      <Min>30</Min>
+      <Max>176607</Max>
+      <Mean>1660.98</Mean>
+      <Median>382</Median>
+    </LengthStats>
+    <LengthStats category="All transcripts">
+      <Count>860</Count>
+      <Min>18</Min>
+      <Max>13097</Max>
+      <Mean>1511.62</Mean>
+      <Median>1118</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>428</Count>
+      <Min>180</Min>
+      <Max>12735</Max>
+      <Mean>1542.68</Mean>
+      <Median>1098</Median>
+    </LengthStats>
+    <LengthStats category="Exons in coding models">
+      <Count>9662</Count>
+      <Min>6</Min>
+      <Max>4937</Max>
+      <Mean>270.7</Mean>
+      <Median>137</Median>
+    </LengthStats>
+    <LengthStats category="Exons in non-coding models">
+      <Count>2158</Count>
+      <Min>11</Min>
+      <Max>7568</Max>
+      <Mean>344.982</Mean>
+      <Median>145</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>302</Count>
+      <Min>61</Min>
+      <Max>216137</Max>
+      <Mean>11515</Mean>
+      <Median>4686</Median>
+    </LengthStats>
+    <LengthStats category="Introns in coding models">
+      <Count>8589</Count>
+      <Min>68</Min>
+      <Max>176607</Max>
+      <Mean>1176.96</Mean>
+      <Median>338</Median>
+    </LengthStats>
+    <LengthStats category="Introns in non-coding models">
+      <Count>1822</Count>
+      <Min>30</Min>
+      <Max>110356</Max>
+      <Mean>3528.01</Mean>
+      <Median>598</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts">
+      <Count>27</Count>
+      <Min>445</Min>
+      <Max>3024</Max>
+      <Mean>1548.56</Mean>
+      <Median>1260</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in coding models">
+      <Count>20</Count>
+      <Min>445</Min>
+      <Max>2517</Max>
+      <Mean>1445.45</Mean>
+      <Median>1136</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in non-coding models">
+      <Count>7</Count>
+      <Min>770</Min>
+      <Max>3024</Max>
+      <Mean>1843.14</Mean>
+      <Median>1889</Median>
+    </LengthStats>
+    <LengthStats category="lncRNA">
+      <Count>95</Count>
+      <Min>407</Min>
+      <Max>8477</Max>
+      <Mean>1517.95</Mean>
+      <Median>955</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>428</Count>
+      <Min>402</Min>
+      <Max>13097</Max>
+      <Mean>2505.55</Mean>
+      <Median>2134</Median>
+    </LengthStats>
+    <LengthStats category="miRNA">
+      <Count>114</Count>
+      <Min>18</Min>
+      <Max>23</Max>
+      <Mean>21.5263</Mean>
+      <Median>22</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>28</Count>
+      <Min>505</Min>
+      <Max>6314</Max>
+      <Mean>2378.36</Mean>
+      <Median>1805</Median>
+    </LengthStats>
+    <LengthStats category="premsg">
+      <Count>14</Count>
+      <Min>61</Min>
+      <Max>110</Max>
+      <Mean>82.5714</Mean>
+      <Median>86</Median>
+    </LengthStats>
+    <LengthStats category="snoRNA">
+      <Count>6</Count>
+      <Min>63</Min>
+      <Max>132</Max>
+      <Mean>81.6667</Mean>
+      <Median>77</Median>
+    </LengthStats>
+    <LengthStats category="tRNA">
+      <Count>189</Count>
+      <Min>71</Min>
+      <Max>83</Max>
+      <Mean>73.418</Mean>
+      <Median>73</Median>
+    </LengthStats>
+  </AssemblyStats>
+  <AssemblyStats Accession="GCF_000001315.1" Type="assembly unit">
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>10</Max>
+      <Mean>2.26364</Mean>
+      <Median>1</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>1</Min>
+      <Max>30</Max>
+      <Mean>6.52209</Mean>
+      <Median>5</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All exons">
+      <Count>734</Count>
+      <Min>6</Min>
+      <Max>7568</Max>
+      <Mean>347.496</Mean>
+      <Median>149</Median>
+    </LengthStats>
+    <LengthStats category="All introns">
+      <Count>608</Count>
+      <Min>68</Min>
+      <Max>39602</Max>
+      <Mean>1402.6</Mean>
+      <Median>495</Median>
+    </LengthStats>
+    <LengthStats category="All transcripts">
+      <Count>271</Count>
+      <Min>21</Min>
+      <Max>13097</Max>
+      <Mean>2043.24</Mean>
+      <Median>1687</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>180</Count>
+      <Min>180</Min>
+      <Max>12735</Max>
+      <Mean>1508.95</Mean>
+      <Median>1098</Median>
+    </LengthStats>
+    <LengthStats category="Exons in coding models">
+      <Count>634</Count>
+      <Min>6</Min>
+      <Max>4937</Max>
+      <Mean>310.17</Mean>
+      <Median>144</Median>
+    </LengthStats>
+    <LengthStats category="Exons in non-coding models">
+      <Count>181</Count>
+      <Min>13</Min>
+      <Max>7568</Max>
+      <Mean>422.735</Mean>
+      <Median>154</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>131</Count>
+      <Min>61</Min>
+      <Max>71248</Max>
+      <Mean>7007.94</Mean>
+      <Median>3688</Median>
+    </LengthStats>
+    <LengthStats category="Introns in coding models">
+      <Count>546</Count>
+      <Min>68</Min>
+      <Max>15033</Max>
+      <Mean>1176.8</Mean>
+      <Median>451</Median>
+    </LengthStats>
+    <LengthStats category="Introns in non-coding models">
+      <Count>130</Count>
+      <Min>73</Min>
+      <Max>39602</Max>
+      <Mean>1900.39</Mean>
+      <Median>504</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts">
+      <Count>18</Count>
+      <Min>478</Min>
+      <Max>2624</Max>
+      <Mean>1540.5</Mean>
+      <Median>1260</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in coding models">
+      <Count>14</Count>
+      <Min>963</Min>
+      <Max>2517</Max>
+      <Mean>1475.36</Mean>
+      <Median>1136</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in non-coding models">
+      <Count>4</Count>
+      <Min>478</Min>
+      <Max>2624</Max>
+      <Mean>1768.5</Mean>
+      <Median>2083</Median>
+    </LengthStats>
+    <LengthStats category="lncRNA">
+      <Count>47</Count>
+      <Min>407</Min>
+      <Max>8477</Max>
+      <Mean>1825.68</Mean>
+      <Median>1143</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>180</Count>
+      <Min>560</Min>
+      <Max>13097</Max>
+      <Mean>2411.43</Mean>
+      <Median>2038</Median>
+    </LengthStats>
+    <LengthStats category="miRNA">
+      <Count>4</Count>
+      <Min>21</Min>
+      <Max>23</Max>
+      <Mean>22</Mean>
+      <Median>22</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>15</Count>
+      <Min>505</Min>
+      <Max>6314</Max>
+      <Mean>2130.2</Mean>
+      <Median>1460</Median>
+    </LengthStats>
+    <LengthStats category="premsg">
+      <Count>3</Count>
+      <Min>61</Min>
+      <Max>87</Max>
+      <Mean>72</Mean>
+      <Median>68</Median>
+    </LengthStats>
+    <LengthStats category="snoRNA">
+      <Count>4</Count>
+      <Min>63</Min>
+      <Max>77</Max>
+      <Mean>70</Mean>
+      <Median>76</Median>
+    </LengthStats>
+    <LengthStats category="tRNA">
+      <Count>21</Count>
+      <Min>71</Min>
+      <Max>82</Max>
+      <Mean>72.9524</Mean>
+      <Median>72</Median>
+    </LengthStats>
+  </AssemblyStats>
+  <AssemblyStats Accession="GCF_000001325.2" Type="assembly unit">
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>13</Max>
+      <Mean>2.14602</Mean>
+      <Median>1</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>1</Min>
+      <Max>66</Max>
+      <Mean>8.4268</Mean>
+      <Median>6</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All exons">
+      <Count>1820</Count>
+      <Min>6</Min>
+      <Max>7568</Max>
+      <Mean>293.138</Mean>
+      <Median>141</Median>
+    </LengthStats>
+    <LengthStats category="All introns">
+      <Count>1607</Count>
+      <Min>68</Min>
+      <Max>110080</Max>
+      <Mean>1586.83</Mean>
+      <Median>363</Median>
+    </LengthStats>
+    <LengthStats category="All transcripts">
+      <Count>534</Count>
+      <Min>19</Min>
+      <Max>13097</Max>
+      <Mean>1915.69</Mean>
+      <Median>1587</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>361</Count>
+      <Min>180</Min>
+      <Max>12735</Max>
+      <Mean>1499.3</Mean>
+      <Median>1071</Median>
+    </LengthStats>
+    <LengthStats category="Exons in coding models">
+      <Count>1644</Count>
+      <Min>6</Min>
+      <Max>4937</Max>
+      <Mean>269.803</Mean>
+      <Median>138</Median>
+    </LengthStats>
+    <LengthStats category="Exons in non-coding models">
+      <Count>358</Count>
+      <Min>23</Min>
+      <Max>7568</Max>
+      <Mean>347.472</Mean>
+      <Median>147</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>266</Count>
+      <Min>61</Min>
+      <Max>152255</Max>
+      <Mean>8448.49</Mean>
+      <Median>4163</Median>
+    </LengthStats>
+    <LengthStats category="Introns in coding models">
+      <Count>1462</Count>
+      <Min>68</Min>
+      <Max>35669</Max>
+      <Mean>1041.85</Mean>
+      <Median>320</Median>
+    </LengthStats>
+    <LengthStats category="Introns in non-coding models">
+      <Count>308</Count>
+      <Min>73</Min>
+      <Max>110080</Max>
+      <Mean>3776.23</Mean>
+      <Median>652</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts">
+      <Count>24</Count>
+      <Min>770</Min>
+      <Max>2624</Max>
+      <Mean>1506.46</Mean>
+      <Median>1260</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in coding models">
+      <Count>18</Count>
+      <Min>963</Min>
+      <Max>2517</Max>
+      <Mean>1459.83</Mean>
+      <Median>1136</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in non-coding models">
+      <Count>6</Count>
+      <Min>770</Min>
+      <Max>2624</Max>
+      <Mean>1646.33</Mean>
+      <Median>1889</Median>
+    </LengthStats>
+    <LengthStats category="lncRNA">
+      <Count>84</Count>
+      <Min>407</Min>
+      <Max>8477</Max>
+      <Mean>1497.62</Mean>
+      <Median>955</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>361</Count>
+      <Min>402</Min>
+      <Max>13097</Max>
+      <Mean>2343.1</Mean>
+      <Median>2033</Median>
+    </LengthStats>
+    <LengthStats category="miRNA">
+      <Count>20</Count>
+      <Min>19</Min>
+      <Max>23</Max>
+      <Mean>21.45</Mean>
+      <Median>22</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>23</Count>
+      <Min>505</Min>
+      <Max>6314</Max>
+      <Mean>2063.39</Mean>
+      <Median>1571</Median>
+    </LengthStats>
+    <LengthStats category="premsg">
+      <Count>11</Count>
+      <Min>61</Min>
+      <Max>110</Max>
+      <Mean>79.4545</Mean>
+      <Median>81</Median>
+    </LengthStats>
+    <LengthStats category="snoRNA">
+      <Count>6</Count>
+      <Min>63</Min>
+      <Max>132</Max>
+      <Mean>81.6667</Mean>
+      <Median>77</Median>
+    </LengthStats>
+    <LengthStats category="tRNA">
+      <Count>40</Count>
+      <Min>72</Min>
+      <Max>83</Max>
+      <Mean>73.55</Mean>
+      <Median>73</Median>
+    </LengthStats>
+  </AssemblyStats>
+  <AssemblyStats Accession="GCF_000001335.1" Type="assembly unit">
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>13</Max>
+      <Mean>2.13592</Mean>
+      <Median>1</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>1</Min>
+      <Max>66</Max>
+      <Mean>8.53409</Mean>
+      <Median>5</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All exons">
+      <Count>1696</Count>
+      <Min>6</Min>
+      <Max>7568</Max>
+      <Mean>286.488</Mean>
+      <Median>140</Median>
+    </LengthStats>
+    <LengthStats category="All introns">
+      <Count>1500</Count>
+      <Min>68</Min>
+      <Max>110063</Max>
+      <Mean>1565.29</Mean>
+      <Median>348</Median>
+    </LengthStats>
+    <LengthStats category="All transcripts">
+      <Count>468</Count>
+      <Min>20</Min>
+      <Max>13097</Max>
+      <Mean>1986.89</Mean>
+      <Median>1703</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>328</Count>
+      <Min>180</Min>
+      <Max>12735</Max>
+      <Mean>1526.12</Mean>
+      <Median>1086</Median>
+    </LengthStats>
+    <LengthStats category="Exons in coding models">
+      <Count>1535</Count>
+      <Min>6</Min>
+      <Max>4937</Max>
+      <Mean>263.756</Mean>
+      <Median>136</Median>
+    </LengthStats>
+    <LengthStats category="Exons in non-coding models">
+      <Count>294</Count>
+      <Min>23</Min>
+      <Max>7568</Max>
+      <Mean>359.061</Mean>
+      <Median>143</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>226</Count>
+      <Min>63</Min>
+      <Max>152246</Max>
+      <Mean>9481.36</Mean>
+      <Median>4686</Median>
+    </LengthStats>
+    <LengthStats category="Introns in coding models">
+      <Count>1365</Count>
+      <Min>68</Min>
+      <Max>35672</Max>
+      <Mean>980.451</Mean>
+      <Median>300</Median>
+    </LengthStats>
+    <LengthStats category="Introns in non-coding models">
+      <Count>252</Count>
+      <Min>76</Min>
+      <Max>110063</Max>
+      <Mean>4413.69</Mean>
+      <Median>733</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts">
+      <Count>22</Count>
+      <Min>963</Min>
+      <Max>2624</Max>
+      <Mean>1560.77</Mean>
+      <Median>1332</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in coding models">
+      <Count>17</Count>
+      <Min>963</Min>
+      <Max>2517</Max>
+      <Mean>1484.06</Mean>
+      <Median>1136</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in non-coding models">
+      <Count>5</Count>
+      <Min>1180</Min>
+      <Max>2624</Max>
+      <Mean>1821.6</Mean>
+      <Median>1889</Median>
+    </LengthStats>
+    <LengthStats category="lncRNA">
+      <Count>79</Count>
+      <Min>407</Min>
+      <Max>8477</Max>
+      <Mean>1489.44</Mean>
+      <Median>893</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>328</Count>
+      <Min>402</Min>
+      <Max>13097</Max>
+      <Mean>2376.22</Mean>
+      <Median>2075</Median>
+    </LengthStats>
+    <LengthStats category="miRNA">
+      <Count>17</Count>
+      <Min>20</Min>
+      <Max>23</Max>
+      <Mean>21.5882</Mean>
+      <Median>22</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>18</Count>
+      <Min>505</Min>
+      <Max>4543</Max>
+      <Mean>1693.56</Mean>
+      <Median>1571</Median>
+    </LengthStats>
+    <LengthStats category="premsg">
+      <Count>9</Count>
+      <Min>63</Min>
+      <Max>110</Max>
+      <Mean>81.6667</Mean>
+      <Median>81</Median>
+    </LengthStats>
+    <LengthStats category="snoRNA">
+      <Count>6</Count>
+      <Min>63</Min>
+      <Max>132</Max>
+      <Mean>81.6667</Mean>
+      <Median>77</Median>
+    </LengthStats>
+    <LengthStats category="tRNA">
+      <Count>20</Count>
+      <Min>71</Min>
+      <Max>82</Max>
+      <Mean>72.95</Mean>
+      <Median>72</Median>
+    </LengthStats>
+  </AssemblyStats>
+  <AssemblyStats Accession="GCF_000001345.1" Type="assembly unit">
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>13</Max>
+      <Mean>2.21111</Mean>
+      <Median>1</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>1</Min>
+      <Max>66</Max>
+      <Mean>7.88442</Mean>
+      <Median>5</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All exons">
+      <Count>1349</Count>
+      <Min>6</Min>
+      <Max>7568</Max>
+      <Mean>307.58</Mean>
+      <Median>147</Median>
+    </LengthStats>
+    <LengthStats category="All introns">
+      <Count>1182</Count>
+      <Min>68</Min>
+      <Max>110356</Max>
+      <Mean>1834.32</Mean>
+      <Median>435</Median>
+    </LengthStats>
+    <LengthStats category="All transcripts">
+      <Count>431</Count>
+      <Min>19</Min>
+      <Max>13097</Max>
+      <Mean>1962.74</Mean>
+      <Median>1589</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>297</Count>
+      <Min>180</Min>
+      <Max>12735</Max>
+      <Mean>1446.82</Mean>
+      <Median>1038</Median>
+    </LengthStats>
+    <LengthStats category="Exons in coding models">
+      <Count>1201</Count>
+      <Min>6</Min>
+      <Max>4937</Max>
+      <Mean>281.263</Mean>
+      <Median>141</Median>
+    </LengthStats>
+    <LengthStats category="Exons in non-coding models">
+      <Count>301</Count>
+      <Min>23</Min>
+      <Max>7568</Max>
+      <Mean>344.116</Mean>
+      <Median>148</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>206</Count>
+      <Min>61</Min>
+      <Max>152594</Max>
+      <Mean>8898.15</Mean>
+      <Median>4217</Median>
+    </LengthStats>
+    <LengthStats category="Introns in coding models">
+      <Count>1057</Count>
+      <Min>68</Min>
+      <Max>53017</Max>
+      <Mean>1118.09</Mean>
+      <Median>392</Median>
+    </LengthStats>
+    <LengthStats category="Introns in non-coding models">
+      <Count>260</Count>
+      <Min>73</Min>
+      <Max>110356</Max>
+      <Mean>4214.52</Mean>
+      <Median>726</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts">
+      <Count>20</Count>
+      <Min>770</Min>
+      <Max>2624</Max>
+      <Mean>1417.75</Mean>
+      <Median>1136</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in coding models">
+      <Count>15</Count>
+      <Min>963</Min>
+      <Max>2481</Max>
+      <Mean>1310.47</Mean>
+      <Median>1075</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in non-coding models">
+      <Count>5</Count>
+      <Min>770</Min>
+      <Max>2624</Max>
+      <Mean>1739.6</Mean>
+      <Median>1889</Median>
+    </LengthStats>
+    <LengthStats category="lncRNA">
+      <Count>68</Count>
+      <Min>407</Min>
+      <Max>8477</Max>
+      <Mean>1617.65</Mean>
+      <Median>1119</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>297</Count>
+      <Min>402</Min>
+      <Max>13097</Max>
+      <Mean>2333.28</Mean>
+      <Median>1973</Median>
+    </LengthStats>
+    <LengthStats category="miRNA">
+      <Count>16</Count>
+      <Min>19</Min>
+      <Max>23</Max>
+      <Mean>21.4375</Mean>
+      <Median>22</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>20</Count>
+      <Min>505</Min>
+      <Max>6314</Max>
+      <Mean>2016.85</Mean>
+      <Median>1571</Median>
+    </LengthStats>
+    <LengthStats category="premsg">
+      <Count>9</Count>
+      <Min>61</Min>
+      <Max>110</Max>
+      <Mean>81.1111</Mean>
+      <Median>86</Median>
+    </LengthStats>
+    <LengthStats category="snoRNA">
+      <Count>4</Count>
+      <Min>76</Min>
+      <Max>132</Max>
+      <Mean>90.75</Mean>
+      <Median>78</Median>
+    </LengthStats>
+    <LengthStats category="tRNA">
+      <Count>26</Count>
+      <Min>71</Min>
+      <Max>83</Max>
+      <Mean>73.6538</Mean>
+      <Median>73</Median>
+    </LengthStats>
+  </AssemblyStats>
+  <AssemblyStats Accession="GCF_000001355.1" Type="assembly unit">
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>13</Max>
+      <Mean>2.14573</Mean>
+      <Median>1</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>1</Min>
+      <Max>66</Max>
+      <Mean>8.71429</Mean>
+      <Median>6</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All exons">
+      <Count>1665</Count>
+      <Min>11</Min>
+      <Max>4937</Max>
+      <Mean>271.15</Mean>
+      <Median>138</Median>
+    </LengthStats>
+    <LengthStats category="All introns">
+      <Count>1456</Count>
+      <Min>30</Min>
+      <Max>39615</Max>
+      <Mean>1102.29</Mean>
+      <Median>333</Median>
+    </LengthStats>
+    <LengthStats category="All transcripts">
+      <Count>460</Count>
+      <Min>20</Min>
+      <Max>13097</Max>
+      <Mean>1966.94</Mean>
+      <Median>1675</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>332</Count>
+      <Min>180</Min>
+      <Max>12735</Max>
+      <Mean>1511.85</Mean>
+      <Median>1071</Median>
+    </LengthStats>
+    <LengthStats category="Exons in coding models">
+      <Count>1538</Count>
+      <Min>12</Min>
+      <Max>4937</Max>
+      <Mean>259.047</Mean>
+      <Median>136</Median>
+    </LengthStats>
+    <LengthStats category="Exons in non-coding models">
+      <Count>306</Count>
+      <Min>11</Min>
+      <Max>2839</Max>
+      <Mean>281.83</Mean>
+      <Median>131</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>223</Count>
+      <Min>61</Min>
+      <Max>152244</Max>
+      <Mean>8545.21</Mean>
+      <Median>4191</Median>
+    </LengthStats>
+    <LengthStats category="Introns in coding models">
+      <Count>1364</Count>
+      <Min>71</Min>
+      <Max>35631</Max>
+      <Mean>956.119</Mean>
+      <Median>296</Median>
+    </LengthStats>
+    <LengthStats category="Introns in non-coding models">
+      <Count>253</Count>
+      <Min>30</Min>
+      <Max>39615</Max>
+      <Mean>1710.76</Mean>
+      <Median>481</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts">
+      <Count>24</Count>
+      <Min>407</Min>
+      <Max>2547</Max>
+      <Mean>1351</Mean>
+      <Median>1136</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in coding models">
+      <Count>16</Count>
+      <Min>963</Min>
+      <Max>2481</Max>
+      <Mean>1335</Mean>
+      <Median>1106</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in non-coding models">
+      <Count>8</Count>
+      <Min>407</Min>
+      <Max>2547</Max>
+      <Mean>1383</Mean>
+      <Median>1332</Median>
+    </LengthStats>
+    <LengthStats category="lncRNA">
+      <Count>58</Count>
+      <Min>407</Min>
+      <Max>4070</Max>
+      <Mean>1313.97</Mean>
+      <Median>1069</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>332</Count>
+      <Min>402</Min>
+      <Max>13097</Max>
+      <Mean>2349.67</Mean>
+      <Median>2033</Median>
+    </LengthStats>
+    <LengthStats category="miRNA">
+      <Count>20</Count>
+      <Min>20</Min>
+      <Max>23</Max>
+      <Mean>21.65</Mean>
+      <Median>22</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>22</Count>
+      <Min>505</Min>
+      <Max>6314</Max>
+      <Mean>2087.95</Mean>
+      <Median>1603</Median>
+    </LengthStats>
+    <LengthStats category="premsg">
+      <Count>11</Count>
+      <Min>61</Min>
+      <Max>110</Max>
+      <Mean>80.2727</Mean>
+      <Median>81</Median>
+    </LengthStats>
+    <LengthStats category="snoRNA">
+      <Count>4</Count>
+      <Min>76</Min>
+      <Max>132</Max>
+      <Mean>90.75</Mean>
+      <Median>78</Median>
+    </LengthStats>
+    <LengthStats category="tRNA">
+      <Count>24</Count>
+      <Min>71</Min>
+      <Max>83</Max>
+      <Mean>73.375</Mean>
+      <Median>73</Median>
+    </LengthStats>
+  </AssemblyStats>
+  <AssemblyStats Accession="GCF_000001365.2" Type="assembly unit">
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>13</Max>
+      <Mean>2.18182</Mean>
+      <Median>1</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>1</Min>
+      <Max>66</Max>
+      <Mean>8.57675</Mean>
+      <Median>6</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All exons">
+      <Count>1694</Count>
+      <Min>6</Min>
+      <Max>7568</Max>
+      <Mean>290.805</Mean>
+      <Median>141</Median>
+    </LengthStats>
+    <LengthStats category="All introns">
+      <Count>1501</Count>
+      <Min>68</Min>
+      <Max>110042</Max>
+      <Mean>1531.11</Mean>
+      <Median>364</Median>
+    </LengthStats>
+    <LengthStats category="All transcripts">
+      <Count>492</Count>
+      <Min>20</Min>
+      <Max>13097</Max>
+      <Mean>1968.59</Mean>
+      <Median>1644</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>338</Count>
+      <Min>180</Min>
+      <Max>12735</Max>
+      <Mean>1523.33</Mean>
+      <Median>1083</Median>
+    </LengthStats>
+    <LengthStats category="Exons in coding models">
+      <Count>1528</Count>
+      <Min>6</Min>
+      <Max>4937</Max>
+      <Mean>267.548</Mean>
+      <Median>137</Median>
+    </LengthStats>
+    <LengthStats category="Exons in non-coding models">
+      <Count>339</Count>
+      <Min>23</Min>
+      <Max>7568</Max>
+      <Mean>334.136</Mean>
+      <Median>145</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>236</Count>
+      <Min>61</Min>
+      <Max>152236</Max>
+      <Mean>8608.28</Mean>
+      <Median>4483</Median>
+    </LengthStats>
+    <LengthStats category="Introns in coding models">
+      <Count>1363</Count>
+      <Min>68</Min>
+      <Max>35669</Max>
+      <Mean>1016.56</Mean>
+      <Median>322</Median>
+    </LengthStats>
+    <LengthStats category="Introns in non-coding models">
+      <Count>293</Count>
+      <Min>73</Min>
+      <Max>110042</Max>
+      <Mean>3569.31</Mean>
+      <Median>647</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts">
+      <Count>20</Count>
+      <Min>770</Min>
+      <Max>2624</Max>
+      <Mean>1561.95</Mean>
+      <Median>1332</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in coding models">
+      <Count>14</Count>
+      <Min>963</Min>
+      <Max>2517</Max>
+      <Mean>1525.79</Mean>
+      <Median>1260</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in non-coding models">
+      <Count>6</Count>
+      <Min>770</Min>
+      <Max>2624</Max>
+      <Mean>1646.33</Mean>
+      <Median>1889</Median>
+    </LengthStats>
+    <LengthStats category="lncRNA">
+      <Count>79</Count>
+      <Min>411</Min>
+      <Max>8477</Max>
+      <Mean>1512.8</Mean>
+      <Median>955</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>338</Count>
+      <Min>402</Min>
+      <Max>13097</Max>
+      <Mean>2372.19</Mean>
+      <Median>2059</Median>
+    </LengthStats>
+    <LengthStats category="miRNA">
+      <Count>20</Count>
+      <Min>20</Min>
+      <Max>23</Max>
+      <Mean>21.65</Mean>
+      <Median>22</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>22</Count>
+      <Min>505</Min>
+      <Max>6314</Max>
+      <Mean>2014.77</Mean>
+      <Median>1603</Median>
+    </LengthStats>
+    <LengthStats category="premsg">
+      <Count>11</Count>
+      <Min>61</Min>
+      <Max>110</Max>
+      <Mean>80.2727</Mean>
+      <Median>81</Median>
+    </LengthStats>
+    <LengthStats category="snoRNA">
+      <Count>6</Count>
+      <Min>63</Min>
+      <Max>132</Max>
+      <Mean>81.6667</Mean>
+      <Median>77</Median>
+    </LengthStats>
+    <LengthStats category="tRNA">
+      <Count>27</Count>
+      <Min>71</Min>
+      <Max>83</Max>
+      <Mean>73.6296</Mean>
+      <Median>73</Median>
+    </LengthStats>
+  </AssemblyStats>
+  <AssemblyStats Accession="GCF_000001375.1" Type="assembly unit">
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>13</Max>
+      <Mean>2.14973</Mean>
+      <Median>1</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>1</Min>
+      <Max>65</Max>
+      <Mean>8.33831</Mean>
+      <Median>6</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All exons">
+      <Count>1552</Count>
+      <Min>6</Min>
+      <Max>7568</Max>
+      <Mean>283.043</Mean>
+      <Median>142</Median>
+    </LengthStats>
+    <LengthStats category="All introns">
+      <Count>1376</Count>
+      <Min>30</Min>
+      <Max>110010</Max>
+      <Mean>1629.19</Mean>
+      <Median>342</Median>
+    </LengthStats>
+    <LengthStats category="All transcripts">
+      <Count>440</Count>
+      <Min>19</Min>
+      <Max>13097</Max>
+      <Mean>1927.21</Mean>
+      <Median>1571</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>299</Count>
+      <Min>180</Min>
+      <Max>12735</Max>
+      <Mean>1460.67</Mean>
+      <Median>1032</Median>
+    </LengthStats>
+    <LengthStats category="Exons in coding models">
+      <Count>1396</Count>
+      <Min>6</Min>
+      <Max>4937</Max>
+      <Mean>254.866</Mean>
+      <Median>138</Median>
+    </LengthStats>
+    <LengthStats category="Exons in non-coding models">
+      <Count>334</Count>
+      <Min>23</Min>
+      <Max>7568</Max>
+      <Mean>338.293</Mean>
+      <Median>146</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>218</Count>
+      <Min>61</Min>
+      <Max>152236</Max>
+      <Mean>9062.66</Mean>
+      <Median>4158</Median>
+    </LengthStats>
+    <LengthStats category="Introns in coding models">
+      <Count>1252</Count>
+      <Min>68</Min>
+      <Max>52905</Max>
+      <Mean>1028</Mean>
+      <Median>300</Median>
+    </LengthStats>
+    <LengthStats category="Introns in non-coding models">
+      <Count>287</Count>
+      <Min>30</Min>
+      <Max>110010</Max>
+      <Mean>3743.95</Mean>
+      <Median>503</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts">
+      <Count>22</Count>
+      <Min>590</Min>
+      <Max>4525</Max>
+      <Mean>1526.68</Mean>
+      <Median>1180</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in coding models">
+      <Count>16</Count>
+      <Min>590</Min>
+      <Max>4525</Max>
+      <Mean>1481.81</Mean>
+      <Median>1106</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in non-coding models">
+      <Count>6</Count>
+      <Min>770</Min>
+      <Max>2624</Max>
+      <Mean>1646.33</Mean>
+      <Median>1889</Median>
+    </LengthStats>
+    <LengthStats category="lncRNA">
+      <Count>71</Count>
+      <Min>407</Min>
+      <Max>8477</Max>
+      <Mean>1601.59</Mean>
+      <Median>1119</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>299</Count>
+      <Min>402</Min>
+      <Max>13097</Max>
+      <Mean>2303.2</Mean>
+      <Median>1909</Median>
+    </LengthStats>
+    <LengthStats category="miRNA">
+      <Count>16</Count>
+      <Min>19</Min>
+      <Max>23</Max>
+      <Mean>21.4375</Mean>
+      <Median>22</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>20</Count>
+      <Min>505</Min>
+      <Max>6314</Max>
+      <Mean>2134.7</Mean>
+      <Median>1805</Median>
+    </LengthStats>
+    <LengthStats category="premsg">
+      <Count>9</Count>
+      <Min>61</Min>
+      <Max>107</Max>
+      <Mean>82.1111</Mean>
+      <Median>86</Median>
+    </LengthStats>
+    <LengthStats category="snoRNA">
+      <Count>3</Count>
+      <Min>76</Min>
+      <Max>132</Max>
+      <Mean>95.3333</Mean>
+      <Median>78</Median>
+    </LengthStats>
+    <LengthStats category="tRNA">
+      <Count>31</Count>
+      <Min>72</Min>
+      <Max>83</Max>
+      <Mean>73.5161</Mean>
+      <Median>73</Median>
+    </LengthStats>
+  </AssemblyStats>
+  <AssemblyStats Accession="GCF_000001385.1" Type="assembly unit">
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>3</Max>
+      <Mean>2</Mean>
+      <Median>2</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>6</Min>
+      <Max>17</Max>
+      <Mean>9.7</Mean>
+      <Median>7</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All exons">
+      <Count>49</Count>
+      <Min>37</Min>
+      <Max>3937</Max>
+      <Mean>348.122</Mean>
+      <Median>135</Median>
+    </LengthStats>
+    <LengthStats category="All introns">
+      <Count>46</Count>
+      <Min>72</Min>
+      <Max>17646</Max>
+      <Mean>3349.2</Mean>
+      <Median>1856</Median>
+    </LengthStats>
+    <LengthStats category="All transcripts">
+      <Count>10</Count>
+      <Min>2122</Min>
+      <Max>6257</Max>
+      <Mean>3643.2</Mean>
+      <Median>2978</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>9</Count>
+      <Min>843</Min>
+      <Max>2208</Max>
+      <Mean>1637.33</Mean>
+      <Median>1587</Median>
+    </LengthStats>
+    <LengthStats category="Exons in coding models">
+      <Count>48</Count>
+      <Min>37</Min>
+      <Max>3937</Max>
+      <Mean>353.354</Mean>
+      <Median>143</Median>
+    </LengthStats>
+    <LengthStats category="Exons in non-coding models">
+      <Count>7</Count>
+      <Min>88</Min>
+      <Max>1630</Max>
+      <Mean>439.286</Mean>
+      <Median>149</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>5</Count>
+      <Min>16030</Min>
+      <Max>50139</Max>
+      <Mean>30651.8</Mean>
+      <Median>24044</Median>
+    </LengthStats>
+    <LengthStats category="Introns in coding models">
+      <Count>44</Count>
+      <Min>72</Min>
+      <Max>17646</Max>
+      <Mean>3218.5</Mean>
+      <Median>1792</Median>
+    </LengthStats>
+    <LengthStats category="Introns in non-coding models">
+      <Count>6</Count>
+      <Min>389</Min>
+      <Max>10522</Max>
+      <Mean>3377.83</Mean>
+      <Median>1927</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>9</Count>
+      <Min>2122</Min>
+      <Max>6257</Max>
+      <Mean>3706.33</Mean>
+      <Median>2757</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>1</Count>
+      <Min>3075</Min>
+      <Max>3075</Max>
+      <Mean>3075</Mean>
+      <Median>3075</Median>
+    </LengthStats>
+  </AssemblyStats>
+  <AssemblyStats Accession="GCF_000001395.1" Type="assembly unit">
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>8</Max>
+      <Mean>2.82353</Mean>
+      <Median>2</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>1</Min>
+      <Max>17</Max>
+      <Mean>8.91667</Mean>
+      <Median>10</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All exons">
+      <Count>155</Count>
+      <Min>27</Min>
+      <Max>4870</Max>
+      <Mean>419.606</Mean>
+      <Median>122</Median>
+    </LengthStats>
+    <LengthStats category="All introns">
+      <Count>151</Count>
+      <Min>72</Min>
+      <Max>176607</Max>
+      <Mean>9537.69</Mean>
+      <Median>2778</Median>
+    </LengthStats>
+    <LengthStats category="All transcripts">
+      <Count>48</Count>
+      <Min>18</Min>
+      <Max>6816</Max>
+      <Mean>3357.02</Mean>
+      <Median>3024</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>35</Count>
+      <Min>267</Min>
+      <Max>5103</Max>
+      <Mean>1653.6</Mean>
+      <Median>1233</Median>
+    </LengthStats>
+    <LengthStats category="Exons in coding models">
+      <Count>138</Count>
+      <Min>27</Min>
+      <Max>4870</Max>
+      <Mean>381.572</Mean>
+      <Median>120</Median>
+    </LengthStats>
+    <LengthStats category="Exons in non-coding models">
+      <Count>38</Count>
+      <Min>34</Min>
+      <Max>2991</Max>
+      <Mean>495.842</Mean>
+      <Median>175</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>17</Count>
+      <Min>73</Min>
+      <Max>216137</Max>
+      <Mean>58208.7</Mean>
+      <Median>42981</Median>
+    </LengthStats>
+    <LengthStats category="Introns in coding models">
+      <Count>136</Count>
+      <Min>72</Min>
+      <Max>176607</Max>
+      <Mean>9593.17</Mean>
+      <Median>2778</Median>
+    </LengthStats>
+    <LengthStats category="Introns in non-coding models">
+      <Count>33</Count>
+      <Min>87</Min>
+      <Max>51285</Max>
+      <Mean>7165.73</Mean>
+      <Median>3897</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts">
+      <Count>3</Count>
+      <Min>445</Min>
+      <Max>3024</Max>
+      <Mean>1885.33</Mean>
+      <Median>2187</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in coding models">
+      <Count>2</Count>
+      <Min>445</Min>
+      <Max>2187</Max>
+      <Mean>1316</Mean>
+      <Median>2187</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in non-coding models">
+      <Count>1</Count>
+      <Min>3024</Min>
+      <Max>3024</Max>
+      <Mean>3024</Mean>
+      <Median>3024</Median>
+    </LengthStats>
+    <LengthStats category="lncRNA">
+      <Count>9</Count>
+      <Min>538</Min>
+      <Max>4075</Max>
+      <Mean>1924.67</Mean>
+      <Median>2127</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>35</Count>
+      <Min>445</Min>
+      <Max>6816</Max>
+      <Mean>3713.94</Mean>
+      <Median>3631</Median>
+    </LengthStats>
+    <LengthStats category="miRNA">
+      <Count>1</Count>
+      <Min>18</Min>
+      <Max>18</Max>
+      <Mean>18</Mean>
+      <Median>18</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>3</Count>
+      <Min>3962</Min>
+      <Max>4992</Max>
+      <Mean>4603</Mean>
+      <Median>4855</Median>
+    </LengthStats>
+    <LengthStats category="premsg">
+      <Count>1</Count>
+      <Min>73</Min>
+      <Max>73</Max>
+      <Mean>73</Mean>
+      <Median>73</Median>
+    </LengthStats>
+  </AssemblyStats>
+  <AssemblyStats Accession="GCF_000005045.12" Type="assembly unit">
+    <TranscriptsPerGene>
+      <Min>1</Min>
+      <Max>58</Max>
+      <Mean>2.35808</Mean>
+      <Median>1</Median>
+    </TranscriptsPerGene>
+    <ExonsPerTranscript>
+      <Min>1</Min>
+      <Max>138</Max>
+      <Mean>8.61948</Mean>
+      <Median>6</Median>
+    </ExonsPerTranscript>
+    <LengthStats category="All exons">
+      <Count>14151</Count>
+      <Min>3</Min>
+      <Max>15975</Max>
+      <Mean>334.701</Mean>
+      <Median>140</Median>
+    </LengthStats>
+    <LengthStats category="All introns">
+      <Count>12791</Count>
+      <Min>25</Min>
+      <Max>355558</Max>
+      <Mean>4163.18</Mean>
+      <Median>937</Median>
+    </LengthStats>
+    <LengthStats category="All transcripts">
+      <Count>3515</Count>
+      <Min>17</Min>
+      <Max>18450</Max>
+      <Mean>2759.97</Mean>
+      <Median>2208</Median>
+    </LengthStats>
+    <LengthStats category="CDSs">
+      <Count>2697</Count>
+      <Min>75</Min>
+      <Max>15624</Max>
+      <Mean>1585.63</Mean>
+      <Median>1200</Median>
+    </LengthStats>
+    <LengthStats category="Exons in coding models">
+      <Count>13110</Count>
+      <Min>3</Min>
+      <Max>15975</Max>
+      <Mean>327.579</Mean>
+      <Median>138</Median>
+    </LengthStats>
+    <LengthStats category="Exons in non-coding models">
+      <Count>2724</Count>
+      <Min>9</Min>
+      <Max>10345</Max>
+      <Mean>315.036</Mean>
+      <Median>144</Median>
+    </LengthStats>
+    <LengthStats category="Genes">
+      <Count>1480</Count>
+      <Min>52</Min>
+      <Max>1273783</Max>
+      <Mean>27082.5</Mean>
+      <Median>8265</Median>
+    </LengthStats>
+    <LengthStats category="Introns in coding models">
+      <Count>11846</Count>
+      <Min>25</Min>
+      <Max>240714</Max>
+      <Mean>3719.27</Mean>
+      <Median>910</Median>
+    </LengthStats>
+    <LengthStats category="Introns in non-coding models">
+      <Count>2385</Count>
+      <Min>51</Min>
+      <Max>355558</Max>
+      <Mean>5862.42</Mean>
+      <Median>1110</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts">
+      <Count>251</Count>
+      <Min>180</Min>
+      <Max>12344</Max>
+      <Mean>2151.77</Mean>
+      <Median>1578</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in coding models">
+      <Count>219</Count>
+      <Min>180</Min>
+      <Max>12344</Max>
+      <Mean>2204.92</Mean>
+      <Median>1620</Median>
+    </LengthStats>
+    <LengthStats category="Single-exon transcripts in non-coding models">
+      <Count>32</Count>
+      <Min>464</Min>
+      <Max>5022</Max>
+      <Mean>1788.06</Mean>
+      <Median>1233</Median>
+    </LengthStats>
+    <LengthStats category="guide_RNA">
+      <Count>2</Count>
+      <Min>194</Min>
+      <Max>270</Max>
+      <Mean>232</Mean>
+      <Median>270</Median>
+    </LengthStats>
+    <LengthStats category="lncRNA">
+      <Count>265</Count>
+      <Min>106</Min>
+      <Max>11210</Max>
+      <Mean>1820.58</Mean>
+      <Median>1374</Median>
+    </LengthStats>
+    <LengthStats category="mRNA">
+      <Count>2697</Count>
+      <Min>180</Min>
+      <Max>18450</Max>
+      <Mean>3146.19</Mean>
+      <Median>2437</Median>
+    </LengthStats>
+    <LengthStats category="miRNA">
+      <Count>202</Count>
+      <Min>17</Min>
+      <Max>27</Max>
+      <Mean>21.7129</Mean>
+      <Median>22</Median>
+    </LengthStats>
+    <LengthStats category="misc_RNA">
+      <Count>277</Count>
+      <Min>458</Min>
+      <Max>7937</Max>
+      <Mean>2604.39</Mean>
+      <Median>2263</Median>
+    </LengthStats>
+    <LengthStats category="premsg">
+      <Count>123</Count>
+      <Min>52</Min>
+      <Max>129</Max>
+      <Mean>82.8211</Mean>
+      <Median>80</Median>
+    </LengthStats>
+    <LengthStats category="snRNA">
+      <Count>14</Count>
+      <Min>63</Min>
+      <Max>167</Max>
+      <Mean>152.5</Mean>
+      <Median>164</Median>
+    </LengthStats>
+    <LengthStats category="snoRNA">
+      <Count>20</Count>
+      <Min>67</Min>
+      <Max>204</Max>
+      <Mean>119.05</Mean>
+      <Median>127</Median>
+    </LengthStats>
+    <LengthStats category="tRNA">
+      <Count>38</Count>
+      <Min>71</Min>
+      <Max>74</Max>
+      <Mean>73</Mean>
+      <Median>73</Median>
+    </LengthStats>
+  </AssemblyStats>
+</FeatureStats>
+</AnnotationReports>
