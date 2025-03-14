@@ -150,12 +150,22 @@ def _extract_translation_exception(translation_exception):
 
         if "complement" in pos:
             strand = -1
-            pos_start, pos_end = pos.split("(")[1].strip(")").split("..")
+            if ".." in pos:
+                pos_start, pos_end = pos.split("(")[1].strip(")").split("..")
+            else:
+                pos_start = pos.split("(")[1].strip(")")
+                pos_end = None
         else:
             strand = 1
-            pos_start, pos_end = pos.split(":")[1].split("..")
+            if ".." in pos:
+                pos_start, pos_end = pos.split(":")[1].split("..")
+            else:
+                pos_start = pos.split(":")[1]
+                pos_end = None
+
         pos_start = int(pos_start) - 1
-        pos_end = int(pos_end)
+        if pos_end is not None:
+            pos_end = int(pos_end)
 
         if ":" in aa:
             aa = aa.split(":")[1]
