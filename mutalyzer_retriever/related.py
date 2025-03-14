@@ -25,7 +25,7 @@ def _fetch_ncbi_elink(db, dbfrom, query_id, timeout=10):
 
 
 def _fetch_ncbi_datasets_gene_accession(accession_id, timeout=1):
-    url = f"https://api.ncbi.nlm.nih.gov/datasets/v1/gene/accession/{accession_id}"
+    url = f"https://api.ncbi.nlm.nih.gov/datasets/v2/gene/accession/{accession_id}/product_report"
     return json.loads(request(url=url, timeout=timeout))
 
 
