@@ -1,44 +1,36 @@
-from schema import Schema, And, Or, Use
+from schema import Schema, And, Or
 
-# Allow dict with string keys and non-empty string values
 assembly_accession_schema = {str: And(str, len)}
 
-gene_reference_standard_schema = {
-    "Gene_Reference": Or(And(str, len), None)
+transcript_product_feature_schema = {
+    'NCBI_accession': Or(And(str, len), None),
+    'ENSEMBL_accession': Or(And(str, len), None)
 }
 
-product_feature_schema = {
-    "transcript": Or(And(str, len), None),
-    "ensembl_transcript": Or(And(str, len), None),
-    "protein": Or(And(str, len), None),
-    "ensembl_protein": Or(And(str, len), None),
-    "tag": Or(And(str, len), None)
+transcript_feature_schema = {
+    'NCBI_accession': Or(And(str, len), None),
+    'ENSEMBL_accession': Or(And(str, len), None),
+    'Products': Or([transcript_product_feature_schema], None),
+    'Tag' : Or(And(str, len), None)
+}
+
+gene_product_feature_schema = {
+    'Transcripts':Or([transcript_feature_schema], None)
 }
 
 gene_feature_schema = {
-    'Gene_Reference': Or([gene_reference_standard_schema], None),
-    'Products': Or([product_feature_schema], None)
+    'Gene_name': Or(And(str, len), None),
+    'RefSeqGene': Or(And(str, len), None),
+    'Products': Or([gene_product_feature_schema], None)
 }
 
 related_sequence_schema = Schema({
-    'query': And(str, len),
-    'organism': And(str, len),
-    'moltype': And(str, len),
-    "current_accession": And(str, len),
-    'new_related': Or([{
+    'Query': And(str, len),
+    'Organism': And(str, len),
+    'Moltype': And(str, len),
+    'Current_accession': And(str, len),
+    'New_related': Or([{
         'Assemblies': assembly_accession_schema,
-        "Genes": gene_feature_schema,
+        'Genes': Or([gene_feature_schema],None),
     }], None)
 })
-
-
-
-
-
-
-
-
-
-
-
-
