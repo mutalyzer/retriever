@@ -47,7 +47,7 @@ To retrieve the related reference IDs the following steps are performed:
 - If the reference id is from a transcript we make use of the `NCBI Datasets
   REST API <https://api.ncbi.nlm.nih.gov/datasets/docs/reference-docs/rest-api
   />`_ to obtain further related references (see `NM_003002.2 <https://api.ncb
-  i.nlm.nih.gov/datasets/v1/gene/accession/NM_003002.2>`_).
+  i.nlm.nih.gov/datasets/v2/gene/accession/NM_003002.2/product_report>`_).
 
 - We query the `Ensembl REST API <https://rest.ensembl.org/>`_ to obtain their
   related references (see `LRG_303 <https://rest.ensembl.org/xrefs/id/LRG_303?

@@ -3,6 +3,29 @@ Usage
 
 This package provides a :doc:`command line interface <cli>`.
 
+Configuration
+-------------
+
+If you plan to retrieve NCBI references, then create a configuration file where you
+include the email address used to communicate with the NCBI:
+
+.. code-block:: console
+
+    $ echo EMAIL = your.email@address.com > config.txt
+
+Optionally, include the NCBI API key:
+
+.. code-block:: console
+
+    $ echo NCBI_API_KEY = your_NCBI_key >> config.txt
+
+Finally:
+
+.. code-block:: console
+
+    export MUTALYZER_SETTINGS="$(pwd)/config.txt"
+
+
 Retrieve a reference
 --------------------
 
@@ -141,30 +164,91 @@ For an ``lrg`` file the ``--is_lrg`` flag needs to be added.
 Retrieve the NCBI reference models from FTP
 -------------------------------------------
 
-Starting from scratch, i.e., connect to the FTP location to retrieve the
-assembly versions and to download the annotations files.
+Starting from scratch, i.e., connect to the FTP location to retrieve the assembly
+versions and to download the annotations files. Please note that the following
+command will retrieve, besides the chromosomes (``NC_``), also the contigs
+(``NT_``) and the scaffolds (``NW_``).
 
 .. code-block:: console
 
     $ mutalyzer_retriever ncbi_assemblies
-    - local output directory set up to ./models
-      done
+    Downloading assembly releases:
+     - assembly: GRCh37
+       - dir: ncbi_annotation_releases/GRCh37/20190906
+       - dir: ncbi_annotation_releases/GRCh37/20220307
+       - dir: ncbi_annotation_releases/GRCh37/20240902
+     - assembly: GRCh38
+       - dir: ncbi_annotation_releases/GRCh38/20180213
+       ...
+       - dir: ncbi_annotation_releases/GRCh38/20240823
+     - assembly: T2T-CHM13v2
+       - dir: ncbi_annotation_releases/T2T-CHM13v2/20230315
+       - dir: ncbi_annotation_releases/T2T-CHM13v2/20231002
+       - dir: ncbi_annotation_releases/T2T-CHM13v2/20240823
+    Get annotation models:
+    - get from: GRCh38, date: 20180213
+      - NC_000001.11
+      - NT_187361.1
       ...
 
-Restrict only to specific reference ids and assuming that the input files are
-already present in the ``downloads/`` directory.
+To restrict only to specific reference ids and assuming that the input files are
+already present in the ``./ncbi_annotation_releases`` (default) directory:
 
 .. code-block:: console
 
-    $ mutalyzer_retriever ncbi_assemblies  --input downloads/ --ref_id_start NC_000023 --downloaded
-    - local output directory set up to ./models
-      done
-    - processing 109 from 20180213, (GRCh38.p12, GCF_000001405.38)
+    $ mutalyzer_retriever ncbi_assemblies --input ncbi_annotation_releases --ref_id_start NC_000023 --downloaded
+    Using downloaded releases from:
+     ./ncbi_annotation_releases
+    Get annotation models:
+    - get from: GRCh38, date: 20180213
       - NC_000023.11
     ...
-    - processing 105.20220307 from 20220307, (GRCh37.p13, GCF_000001405.25)
+    - get from: GRCh38, date: 20240823
+      - NC_000023.11
+    - get from: GRCh37, date: 20190906
       - NC_000023.10
-    - writing ./models/NC_000023.10
+    - get from: GRCh37, date: 20220307
+      - NC_000023.10
+    - get from: GRCh37, date: 20240902
+      - NC_000023.10
+    - get from: T2T-CHM13v2, date: 20230315
+    - get from: T2T-CHM13v2, date: 20231002
+    - get from: T2T-CHM13v2, date: 20240823
+    - writing ./ncbi_annotation_models/NC_000023.11.annotations
+    - writing ./ncbi_annotation_models/NC_000023.10.annotations
+
+
+To restrict only to a specific reference id and an assembly id, with the input
+files already present in the ``./ncbi_annotation_releases`` directory, and to
+download also the sequences (``--include_sequence``) in the same directory:
+
+.. code-block:: console
+
+    $ mutalyzer_retriever ncbi_assemblies --ref_id_start NC_0 --assembly_id_start GRCh37 --downloaded --include_sequence
+    Using downloaded releases from:
+     ./ncbi_annotation_releases
+    Get annotation models:
+    - get from: GRCh37, date: 20190906
+      - NC_000001.10
+      ...
+      - NC_000024.9
+    - get from: GRCh37, date: 20220307
+      - NC_000001.10
+      ...
+      - NC_000024.9
+    - get from: GRCh37, date: 20240902
+      - NC_000001.10
+      ...
+      - NC_000024.9
+    - writing ./ncbi_annotation_models/NC_000001.10.annotations
+      ...
+    - writing ./ncbi_annotation_models/NC_000024.9.annotations
+    Downloading the sequences:
+    - get the sequence for NC_000001.10
+    - writing ./ncbi_annotation_models/NC_000023.10.sequence
+    ...
+    - get the sequence for NC_000023.10
+    - writing ./ncbi_annotation_models/NC_000023.10.sequence
 
 
 Retrieve related reference ids

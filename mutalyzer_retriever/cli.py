@@ -9,12 +9,12 @@ import sys
 from . import usage, version
 from .related import get_cds_to_mrna, get_related
 from .retriever import retrieve_model, retrieve_model_from_file, retrieve_raw
-from .sources.ncbi_assemblies import Assemblies, annotations_summary
+from .sources.ncbi_assemblies import annotations_summary, retrieve_assemblies
 
 
-def _parse_args(args):
+def _args_parser():
     """
-    Command line argument parsing.
+    Command line argument parser.
     """
     parser = argparse.ArgumentParser(
         description=usage[0],
@@ -27,7 +27,10 @@ def _parse_args(args):
     parser.add_argument("--id", help="the reference id")
 
     parser.add_argument(
-        "-s", "--source", help="retrieval source", choices=["ncbi", "ensembl", "ensembl_tark", "ensembl_rest", "lrg"]
+        "-s",
+        "--source",
+        help="retrieval source",
+        choices=["ncbi", "ensembl", "ensembl_tark", "ensembl_rest", "lrg"],
     )
 
     parser.add_argument(
@@ -94,16 +97,26 @@ def _parse_args(args):
     )
 
     parser_ncbi_assemblies.add_argument(
-        "--input", help="input (downloaded) directory path"
+        "--input", default="./ncbi_annotation_releases", help="input (downloaded) directory path"
     )
     parser_ncbi_assemblies.add_argument(
-        "--output", help="output (models) directory path"
+        "--output", default="./ncbi_annotation_models", help="output (models) directory path"
     )
     parser_ncbi_assemblies.add_argument(
         "--downloaded", help="already downloaded", action="store_true"
     )
     parser_ncbi_assemblies.add_argument(
+        "--write_downloaded", help="write the downloaded files", action="store_true"
+    )
+    parser_ncbi_assemblies.add_argument(
+        "--assembly_id_start", help="assembly id should start with"
+    )
+    parser_ncbi_assemblies.add_argument(
         "--ref_id_start", help="reference id should start with"
+    )
+
+    parser_ncbi_assemblies.add_argument(
+        "--include_sequence", help="download also the sequence", action="store_true"
     )
 
     parser_assemblies_summary = subparsers.add_parser(
@@ -113,13 +126,17 @@ def _parse_args(args):
     parser_assemblies_summary.add_argument("--directory", help="models directory path")
     parser_assemblies_summary.add_argument("--ref_id_start")
 
-    return parser.parse_args(args)
+    return parser
+
+
+def parse_args(args=None):
+    return _args_parser().parse_args(args)
 
 
 def _write_model(model, args):
     if args.split:
         if model.get("annotations"):
-            with open(f"{args.output}/{args.id}.annotations", "w") as f:
+            with open(f"{args.output}/{args.id}.annotations", "w", encoding="utf-8") as f:
                 f.write(json.dumps(model["annotations"], indent=args.indent))
         if model.get("sequence"):
             with open(f"{args.output}/{args.id}.sequence", "w") as f:
@@ -142,13 +159,14 @@ def _from_file(args):
 
 
 def _retrieve_assemblies(args):
-    Assemblies(
-        args.input,
-        args.output,
-        args.downloaded,
-        args.ref_id_start,
-        args.split,
-        args.only_annotations,
+    retrieve_assemblies(
+        directory_input=args.input,
+        directory_output=args.output,
+        assembly_id_start=args.assembly_id_start,
+        ref_id_start=args.ref_id_start,
+        downloaded=args.downloaded,
+        write_downloaded=args.write_downloaded,
+        include_sequence=args.include_sequence,
     )
 
 
@@ -216,5 +234,11 @@ def main():
     """
     Main entry point.
     """
-    args = _parse_args(sys.argv[1:])
+    args_parser = _args_parser()
+
+    if len(sys.argv) == 1:
+        args_parser.print_help(sys.stderr)
+        sys.exit(1)
+
+    args = args_parser.parse_args()
     _endpoint(args)(args)

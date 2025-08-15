@@ -1,17 +1,17 @@
 from mutalyzer_retriever.cli import (
     _endpoint,
     _from_file,
-    _parse_args,
     _related,
     _retrieve_assemblies,
     _retrieve_model,
     _retrieve_raw,
+    parse_args,
 )
 
 
 def test_retrieve_raw():
     command = "--id ref_id"
-    args = _parse_args(command.split())
+    args = parse_args(command.split())
 
     assert args.id == "ref_id"
     assert args.parse is False
@@ -29,7 +29,7 @@ def test_retrieve_raw():
 
 def test_retrieve_model():
     command = "--id ref_id --parse"
-    args = _parse_args(command.split())
+    args = parse_args(command.split())
 
     assert args.id == "ref_id"
     assert args.parse is True
@@ -47,7 +47,7 @@ def test_retrieve_model():
 
 def test_retrieve_model_indent():
     command = "--id ref_id --parse --indent 2"
-    args = _parse_args(command.split())
+    args = parse_args(command.split())
 
     assert args.id == "ref_id"
     assert args.parse is True
@@ -65,7 +65,7 @@ def test_retrieve_model_indent():
 
 def test_related():
     command = "--id ref_id --related"
-    args = _parse_args(command.split())
+    args = parse_args(command.split())
 
     assert args.id == "ref_id"
     assert args.related is True
@@ -83,7 +83,7 @@ def test_related():
 
 def test_from_file():
     command = "from_file --paths some.gff3 some.fasta"
-    args = _parse_args(command.split())
+    args = parse_args(command.split())
 
     assert args.command == "from_file"
     assert args.paths == ["some.gff3", "some.fasta"]
@@ -102,7 +102,7 @@ def test_from_file():
 
 def test_from_file_indent():
     command = "--indent 2 from_file --paths some.gff3 some.fasta"
-    args = _parse_args(command.split())
+    args = parse_args(command.split())
 
     assert args.command == "from_file"
     assert args.paths == ["some.gff3", "some.fasta"]
@@ -121,7 +121,7 @@ def test_from_file_indent():
 
 def ncbi_assemblies():
     command = "ncbi_assemblies --input downloads --output models"
-    args = _parse_args(command.split())
+    args = parse_args(command.split())
 
     assert args.command == "ncbi_assemblies"
     assert args.downloaded is False
@@ -142,7 +142,7 @@ def ncbi_assemblies():
 
 def test_ncbi_assemblies_downloaded():
     command = "ncbi_assemblies --input downloads --output models --downloaded"
-    args = _parse_args(command.split())
+    args = parse_args(command.split())
 
     assert args.command == "ncbi_assemblies"
     assert args.downloaded is True

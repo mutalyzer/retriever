@@ -74,7 +74,10 @@ QUALIFIERS = {
         "Name": "name",
         "genome": "genome",
     },
-    "CDS": {"transl_except": "translation_exception", "exception": "exception"},
+    "CDS": {
+        "transl_except": "translation_exception",
+        "exception": "exception",
+    },
     "mRNA": {
         "version": "version",
         "assembly_name": "assembly_name",
@@ -147,12 +150,22 @@ def _extract_translation_exception(translation_exception):
 
         if "complement" in pos:
             strand = -1
-            pos_start, pos_end = pos.split("(")[1].strip(")").split("..")
+            if ".." in pos:
+                pos_start, pos_end = pos.split("(")[1].strip(")").split("..")
+            else:
+                pos_start = pos.split("(")[1].strip(")")
+                pos_end = None
         else:
             strand = 1
-            pos_start, pos_end = pos.split(":")[1].split("..")
+            if ".." in pos:
+                pos_start, pos_end = pos.split(":")[1].split("..")
+            else:
+                pos_start = pos.split(":")[1]
+                pos_end = None
+
         pos_start = int(pos_start) - 1
-        pos_end = int(pos_end)
+        if pos_end is not None:
+            pos_end = int(pos_end)
 
         if ":" in aa:
             aa = aa.split(":")[1]
@@ -188,6 +201,11 @@ def _get_qualifiers(feature):
                 for dbxref_entry in q["Dbxref"]:
                     if "HGNC" in dbxref_entry:
                         qs["HGNC"] = dbxref_entry.split(":")[-1]
+        if t in ["mRNA", "CDS"]:
+            if q.get("Dbxref"):
+                for dbxref_entry in q["Dbxref"]:
+                    if "Ensembl" in dbxref_entry:
+                        qs["Ensembl"] = dbxref_entry.split(":")[-1]
         _extract_special_qualifiers(qs)
         return qs
 

@@ -1,0 +1,750 @@
+{
+  "id": "NT_167208.1",
+  "type": "record",
+  "location": {
+    "type": "range",
+    "start": {
+      "type": "point",
+      "position": 0
+    },
+    "end": {
+      "type": "point",
+      "position": 164239
+    }
+  },
+  "qualifiers": {
+    "dbxref": "taxon:9606",
+    "name": "Unknown",
+    "chromosome": "Unknown",
+    "genome": "genomic",
+    "mol_type": "genomic DNA",
+    "annotations": [
+      {
+        "freeze_date_id": "20190906",
+        "full_assembly_name": "GRCh37.p13",
+        "full_assembly_accession": "GCF_000001405.25"
+      },
+      {
+        "freeze_date_id": "20220307",
+        "full_assembly_name": "GRCh37.p13",
+        "full_assembly_accession": "GCF_000001405.25"
+      },
+      {
+        "freeze_date_id": "20240902",
+        "full_assembly_name": "GRCh37.p13",
+        "full_assembly_accession": "GCF_000001405.25"
+      }
+    ]
+  },
+  "features": [
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 0
+        },
+        "end": {
+          "type": "point",
+          "position": 26089
+        },
+        "strand": -1
+      },
+      "id": "LOC110091777",
+      "qualifiers": {
+        "name": "LOC110091777"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 0
+            },
+            "end": {
+              "type": "point",
+              "position": 26089
+            },
+            "strand": -1
+          },
+          "id": "NR_146655.1",
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 25837
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26089
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_146655.1-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 25322
+                },
+                "end": {
+                  "type": "point",
+                  "position": 25501
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_146655.1-2"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 1313
+                },
+                "end": {
+                  "type": "point",
+                  "position": 1407
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_146655.1-3"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 0
+                },
+                "end": {
+                  "type": "point",
+                  "position": 59
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_146655.1-4"
+            }
+          ]
+        },
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 0
+            },
+            "end": {
+              "type": "point",
+              "position": 26089
+            },
+            "strand": -1
+          },
+          "id": "NR_146656.1",
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 25837
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26089
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_146656.1-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 25322
+                },
+                "end": {
+                  "type": "point",
+                  "position": 25501
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_146656.1-2"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 24438
+                },
+                "end": {
+                  "type": "point",
+                  "position": 24533
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_146656.1-3"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 1313
+                },
+                "end": {
+                  "type": "point",
+                  "position": 1407
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_146656.1-4"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 0
+                },
+                "end": {
+                  "type": "point",
+                  "position": 59
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_146656.1-5"
+            }
+          ]
+        },
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 25322
+            },
+            "end": {
+              "type": "point",
+              "position": 26089
+            },
+            "strand": -1
+          },
+          "id": "NR_146657.1",
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 25895
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26089
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_146657.1-2-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 25322
+                },
+                "end": {
+                  "type": "point",
+                  "position": 25501
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_146657.1-2-2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 103808
+        },
+        "end": {
+          "type": "point",
+          "position": 139339
+        },
+        "strand": -1
+      },
+      "id": "LOC100288966",
+      "qualifiers": {
+        "name": "LOC100288966",
+        "synonym": [
+          "A26B3",
+          "ANKRD21",
+          "POTE",
+          "POTED"
+        ]
+      },
+      "features": [
+        {
+          "type": "mRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 103808
+            },
+            "end": {
+              "type": "point",
+              "position": 139339
+            },
+            "strand": -1
+          },
+          "id": "NM_001257362.3",
+          "qualifiers": {
+            "tag": "RefSeq Select"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 138766
+                },
+                "end": {
+                  "type": "point",
+                  "position": 139339
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.3-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 134275
+                },
+                "end": {
+                  "type": "point",
+                  "position": 134390
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.3-2"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 133942
+                },
+                "end": {
+                  "type": "point",
+                  "position": 134116
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.3-3"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 131063
+                },
+                "end": {
+                  "type": "point",
+                  "position": 131170
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.3-4"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 129227
+                },
+                "end": {
+                  "type": "point",
+                  "position": 129365
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.3-5"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 126647
+                },
+                "end": {
+                  "type": "point",
+                  "position": 126718
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.3-6"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 121072
+                },
+                "end": {
+                  "type": "point",
+                  "position": 121143
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.3-7"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 119628
+                },
+                "end": {
+                  "type": "point",
+                  "position": 119673
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.3-8"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 118421
+                },
+                "end": {
+                  "type": "point",
+                  "position": 118588
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.3-9"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 109883
+                },
+                "end": {
+                  "type": "point",
+                  "position": 110007
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.3-10"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 103808
+                },
+                "end": {
+                  "type": "point",
+                  "position": 108247
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.3-11"
+            },
+            {
+              "type": "CDS",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 108025
+                },
+                "end": {
+                  "type": "point",
+                  "position": 139287
+                },
+                "strand": -1
+              },
+              "id": "NP_001244291.1"
+            }
+          ]
+        },
+        {
+          "type": "mRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 108003
+            },
+            "end": {
+              "type": "point",
+              "position": 139339
+            },
+            "strand": -1
+          },
+          "id": "NM_001257362.2",
+          "qualifiers": {
+            "tag": "RefSeq Select",
+            "annotation_added_from": {
+              "freeze_date_id": "20190906",
+              "full_assembly_name": "GRCh37.p13",
+              "full_assembly_accession": "GCF_000001405.25"
+            }
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 138766
+                },
+                "end": {
+                  "type": "point",
+                  "position": 139339
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.2-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 134275
+                },
+                "end": {
+                  "type": "point",
+                  "position": 134390
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.2-2"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 133942
+                },
+                "end": {
+                  "type": "point",
+                  "position": 134116
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.2-3"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 131063
+                },
+                "end": {
+                  "type": "point",
+                  "position": 131170
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.2-4"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 129227
+                },
+                "end": {
+                  "type": "point",
+                  "position": 129365
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.2-5"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 126647
+                },
+                "end": {
+                  "type": "point",
+                  "position": 126718
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.2-6"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 121072
+                },
+                "end": {
+                  "type": "point",
+                  "position": 121143
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.2-7"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 119628
+                },
+                "end": {
+                  "type": "point",
+                  "position": 119673
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.2-8"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 118421
+                },
+                "end": {
+                  "type": "point",
+                  "position": 118588
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.2-9"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 109883
+                },
+                "end": {
+                  "type": "point",
+                  "position": 110007
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.2-10"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 108003
+                },
+                "end": {
+                  "type": "point",
+                  "position": 108247
+                },
+                "strand": -1
+              },
+              "id": "exon-NM_001257362.2-11"
+            },
+            {
+              "type": "CDS",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 108025
+                },
+                "end": {
+                  "type": "point",
+                  "position": 139287
+                },
+                "strand": -1
+              },
+              "id": "NP_001244291.1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
