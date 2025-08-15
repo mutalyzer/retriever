@@ -1,33 +1,43 @@
-from schema import Schema, And, Or, Optional
+from schema import Schema, And, Optional
 
-assembly_accession_schema = {str: And(str, len)}
-
-transcript_product_feature_schema = {
-    'NCBI_accession': Or(And(str, len), None),
-    'ENSEMBL_accession': Or(And(str, len), None)
-}
-
-genes_product_feature_schema = {
-    'NCBI_accession': Or(And(str, len), None),
-    'ENSEMBL_accession': Or(And(str, len), None),
-    'Products': Or([transcript_product_feature_schema], None),
-     Optional('Tag') : Or(And(str, len), None)
-}
-
-genes_feature_schema = {
-    'Gene_name': Or(And(str, len), None),
-    'RefSeqGene': Or(And(str, len), None),
-    'Products': Or([genes_product_feature_schema], None)
-}
-
-related_sequence_schema = Schema({
-    'Query': And(str, len),
-    'Organism': And(str, len),
-    'Moltype': And(str, len),
-    'Current_accession': And(str, len),
-    'New_related': Or({
-        'Assemblies': assembly_accession_schema,
-        'Genes': Or([genes_feature_schema],None),
-    }, None)
+gene_provider_schema = Schema({
+    "name": And(str, lambda s: s.strip() != ""),
+    Optional("accession"): And(str, lambda s: s.strip() != "")
 })
 
+transcript_provider_schema = Schema({
+    "name": And(str, lambda s: s.strip() != ""),
+    "transcript_id": And(str, lambda s: s.strip() != ""),
+    "protein_id": And(str, lambda s: s.strip() != "")
+})
+
+transcript_schema = Schema({
+    Optional("tag"): str,
+    "providers": [transcript_provider_schema]
+})
+
+gene_schema = Schema({
+    "hgnc_id": And(str, lambda s: s.strip() != ""),
+    "name": And(str, lambda s: s.strip() != ""),
+    "providers": [gene_provider_schema],
+    "transcripts": [transcript_schema],
+    Optional("comment"): And(str, lambda s: s.strip() != ""),
+})
+
+assembly_schema = Schema({
+    "assembly_name": And(str, lambda s: s.strip() != ""),
+    "accession": And(str, lambda s: s.strip() != "")
+})
+
+related_schema = Schema({
+    "assemblies": [assembly_schema],
+    "genes": [gene_schema]
+})
+
+query_schema = Schema({
+    "query": And(str, lambda s: s.strip() != ""),
+    "organism": And(str, lambda s: s.strip() != ""),
+    "moltype": And(str, lambda s: s.strip() != ""),
+    "accession": And(str, lambda s: s.strip() != ""),
+    "related": related_schema
+})
