@@ -1,0 +1,427 @@
+{
+  "reports": [
+    {
+      "annotation": {
+        "gene_id": "53942",
+        "symbol": "CNTN5",
+        "name": "contactin 5",
+        "gene_type": "protein-coding",
+        "genomic_regions": [
+          {
+            "gene_range": {
+              "accession_version": "NC_000011.10",
+              "range": [
+                {
+                  "begin": "99020949",
+                  "end": "100358885",
+                  "orientation": "plus"
+                }
+              ]
+            }
+          }
+        ],
+        "transcripts": [
+          {
+            "accession_version": "NM_014361.4",
+            "name": "contactin 5, transcript variant 1",
+            "cds": {
+              "accession_version": "NM_014361.4"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100358885",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_055176.1",
+              "name": "contactin-5 isoform 1 precursor",
+              "length": 1100
+            }
+          },
+          {
+            "accession_version": "NM_175566.2",
+            "name": "contactin 5, transcript variant 3",
+            "cds": {
+              "accession_version": "NM_175566.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "99556145",
+                  "end": "100358885",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_780775.1",
+              "name": "contactin-5 isoform 2 precursor",
+              "length": 1026
+            }
+          },
+          {
+            "accession_version": "NM_001243270.2",
+            "name": "contactin 5, transcript variant 2",
+            "cds": {
+              "accession_version": "NM_001243270.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100358885",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001230199.1",
+              "name": "contactin-5 isoform 1 precursor",
+              "length": 1100
+            }
+          },
+          {
+            "accession_version": "NM_001243271.2",
+            "name": "contactin 5, transcript variant 4",
+            "cds": {
+              "accession_version": "NM_001243271.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100309702",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001230200.1",
+              "name": "contactin-5 isoform 3 precursor",
+              "length": 911
+            }
+          },
+          {
+            "accession_version": "XM_011542871.2",
+            "name": "contactin 5, transcript variant X2",
+            "cds": {
+              "accession_version": "XM_011542871.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100358885",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_011541173.1",
+              "name": "contactin-5 isoform X2",
+              "length": 1026
+            }
+          },
+          {
+            "accession_version": "XM_011542873.2",
+            "name": "contactin 5, transcript variant X4",
+            "cds": {
+              "accession_version": "XM_011542873.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100203267",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_011541175.1",
+              "name": "contactin-5 isoform X3",
+              "length": 647
+            }
+          },
+          {
+            "accession_version": "XM_017017926.2",
+            "name": "contactin 5, transcript variant X1",
+            "cds": {
+              "accession_version": "XM_017017926.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100358885",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_016873415.1",
+              "name": "contactin-5 isoform X1",
+              "length": 1100
+            }
+          },
+          {
+            "accession_version": "XM_017017927.2",
+            "name": "contactin 5, transcript variant X5",
+            "cds": {
+              "accession_version": "XM_017017927.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100203267",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_016873416.1",
+              "name": "contactin-5 isoform X3",
+              "length": 647
+            }
+          },
+          {
+            "accession_version": "XM_017017928.2",
+            "name": "contactin 5, transcript variant X6",
+            "cds": {
+              "accession_version": "XM_017017928.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100203267",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_016873417.1",
+              "name": "contactin-5 isoform X3",
+              "length": 647
+            }
+          },
+          {
+            "accession_version": "XM_017017929.2",
+            "name": "contactin 5, transcript variant X8",
+            "cds": {
+              "accession_version": "XM_017017929.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100203267",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_016873418.1",
+              "name": "contactin-5 isoform X5",
+              "length": 573
+            }
+          },
+          {
+            "accession_version": "XM_047427130.1",
+            "name": "contactin 5, transcript variant X3",
+            "cds": {
+              "accession_version": "XM_047427130.1"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100358885",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_047283086.1",
+              "name": "contactin-5 isoform X2",
+              "length": 1026
+            }
+          },
+          {
+            "accession_version": "XM_047427131.1",
+            "name": "contactin 5, transcript variant X7",
+            "cds": {
+              "accession_version": "XM_047427131.1"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100255884",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_047283087.1",
+              "name": "contactin-5 isoform X4",
+              "length": 635
+            }
+          }
+        ],
+        "chromosomes": [
+          "11"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_000001405.40"
+          }
+        ]
+      },
+      "row_id": "34913"
+    },
+    {
+      "annotation": {
+        "gene_id": "6392",
+        "symbol": "SDHD",
+        "name": "succinate dehydrogenase complex subunit D",
+        "gene_type": "protein-coding",
+        "genomic_regions": [
+          {
+            "gene_range": {
+              "accession_version": "NC_000011.10",
+              "range": [
+                {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                }
+              ]
+            }
+          }
+        ],
+        "transcripts": [
+          {
+            "accession_version": "NM_003002.4",
+            "name": "succinate dehydrogenase complex subunit D, transcript variant 1",
+            "cds": {
+              "accession_version": "NM_003002.4"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_002993.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial isoform a precursor",
+              "length": 159
+            }
+          },
+          {
+            "accession_version": "NM_001276503.2",
+            "name": "succinate dehydrogenase complex subunit D, transcript variant 2",
+            "cds": {
+              "accession_version": "NM_001276503.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001263432.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial isoform b precursor",
+              "length": 85
+            }
+          },
+          {
+            "accession_version": "NM_001276504.2",
+            "name": "succinate dehydrogenase complex subunit D, transcript variant 3",
+            "cds": {
+              "accession_version": "NM_001276504.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001263433.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial isoform c precursor",
+              "length": 120
+            }
+          },
+          {
+            "accession_version": "NM_001276506.2",
+            "name": "succinate dehydrogenase complex subunit D, transcript variant 4",
+            "cds": {
+              "accession_version": "NM_001276506.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001263435.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial isoform d precursor",
+              "length": 143
+            }
+          },
+          {
+            "accession_version": "NR_077060.2",
+            "name": "succinate dehydrogenase complex subunit D, transcript variant 5"
+          }
+        ],
+        "chromosomes": [
+          "11"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_000001405.40"
+          }
+        ]
+      },
+      "row_id": "35124"
+    }
+  ],
+  "total_count": 2
+}

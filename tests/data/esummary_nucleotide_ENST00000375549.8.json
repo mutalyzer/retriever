@@ -1,0 +1,10 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "error": "Invalid uid ENST00000375549.8 at position= 0",
+  "result": {
+    "uids": []
+  }
+}

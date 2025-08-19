@@ -1,0 +1,4206 @@
+{
+  "reports": [
+    {
+      "product": {
+        "gene_id": "6392",
+        "symbol": "SDHD",
+        "description": "succinate dehydrogenase complex subunit D",
+        "tax_id": "9606",
+        "taxname": "Homo sapiens",
+        "common_name": "human",
+        "type": "PROTEIN_CODING",
+        "transcripts": [
+          {
+            "accession_version": "NM_001276503.2",
+            "name": "transcript variant 2",
+            "length": 1194,
+            "cds": {
+              "accession_version": "NM_001276503.2",
+              "range": [
+                {
+                  "begin": "36",
+                  "end": "293",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "112086873",
+                    "end": "112086959",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "112087857",
+                    "end": "112087973",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "112094805",
+                    "end": "112095794",
+                    "orientation": "plus",
+                    "order": 3
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "112097127",
+                  "end": "112106049",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "112097127",
+                    "end": "112097213",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "112098111",
+                    "end": "112098227",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "112105060",
+                    "end": "112106049",
+                    "orientation": "plus",
+                    "order": 3
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000528048.5",
+            "protein": {
+              "accession_version": "NP_001263432.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial",
+              "length": 85,
+              "isoform_name": "isoform b precursor",
+              "ensembl_protein": "ENSP00000436217.1"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001276504.2",
+            "name": "transcript variant 3",
+            "length": 1222,
+            "cds": {
+              "accession_version": "NM_001276504.2",
+              "range": [
+                {
+                  "begin": "36",
+                  "end": "398",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "112086873",
+                    "end": "112086959",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "112088867",
+                    "end": "112089011",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "112094805",
+                    "end": "112095794",
+                    "orientation": "plus",
+                    "order": 3
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "112097127",
+                  "end": "112106049",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "112097127",
+                    "end": "112097213",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "112099121",
+                    "end": "112099265",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "112105060",
+                    "end": "112106049",
+                    "orientation": "plus",
+                    "order": 3
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000525291.5",
+            "protein": {
+              "accession_version": "NP_001263433.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial",
+              "length": 120,
+              "isoform_name": "isoform c precursor",
+              "ensembl_protein": "ENSP00000436669.1"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001276506.2",
+            "name": "transcript variant 4",
+            "length": 1469,
+            "cds": {
+              "accession_version": "NM_001276506.2",
+              "range": [
+                {
+                  "begin": "36",
+                  "end": "467",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "112086873",
+                    "end": "112086959",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "112087857",
+                    "end": "112087973",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "112088867",
+                    "end": "112089011",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "112093080",
+                    "end": "112093209",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "112094805",
+                    "end": "112095794",
+                    "orientation": "plus",
+                    "order": 5
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "112097127",
+                  "end": "112106049",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "112097127",
+                    "end": "112097213",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "112098111",
+                    "end": "112098227",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "112099121",
+                    "end": "112099265",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "112103335",
+                    "end": "112103464",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "112105060",
+                    "end": "112106049",
+                    "orientation": "plus",
+                    "order": 5
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000526592.5",
+            "protein": {
+              "accession_version": "NP_001263435.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial",
+              "length": 143,
+              "isoform_name": "isoform d precursor",
+              "ensembl_protein": "ENSP00000432005.1"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_003002.4",
+            "name": "transcript variant 1",
+            "length": 1339,
+            "cds": {
+              "accession_version": "NM_003002.4",
+              "range": [
+                {
+                  "begin": "36",
+                  "end": "515",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "112086873",
+                    "end": "112086959",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "112087857",
+                    "end": "112087973",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "112088867",
+                    "end": "112089011",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "112094805",
+                    "end": "112095794",
+                    "orientation": "plus",
+                    "order": 4
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "112097127",
+                  "end": "112106049",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "112097127",
+                    "end": "112097213",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "112098111",
+                    "end": "112098227",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "112099121",
+                    "end": "112099265",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "112105060",
+                    "end": "112106049",
+                    "orientation": "plus",
+                    "order": 4
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000375549.8",
+            "protein": {
+              "accession_version": "NP_002993.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial",
+              "length": 159,
+              "isoform_name": "isoform a precursor",
+              "ensembl_protein": "ENSP00000364699.3"
+            },
+            "type": "PROTEIN_CODING",
+            "select_category": "MANE_SELECT"
+          },
+          {
+            "accession_version": "NR_077060.2",
+            "name": "transcript variant 5",
+            "length": 1393,
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "112086873",
+                    "end": "112086959",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "112087857",
+                    "end": "112087973",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "112088867",
+                    "end": "112089011",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "112091079",
+                    "end": "112091132",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "112094805",
+                    "end": "112095794",
+                    "orientation": "plus",
+                    "order": 5
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "112097127",
+                  "end": "112106049",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "112097127",
+                    "end": "112097213",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "112098111",
+                    "end": "112098227",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "112099121",
+                    "end": "112099265",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "112101334",
+                    "end": "112101387",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "112105060",
+                    "end": "112106049",
+                    "orientation": "plus",
+                    "order": 5
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000714090.1",
+            "type": "NON_CODING"
+          }
+        ],
+        "transcript_count": 5,
+        "protein_count": 4,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 4
+          },
+          {
+            "type": "NON_CODING",
+            "count": 1
+          }
+        ]
+      },
+      "query": [
+        "6392"
+      ]
+    },
+    {
+      "product": {
+        "gene_id": "53942",
+        "symbol": "CNTN5",
+        "description": "contactin 5",
+        "tax_id": "9606",
+        "taxname": "Homo sapiens",
+        "common_name": "human",
+        "type": "PROTEIN_CODING",
+        "transcripts": [
+          {
+            "accession_version": "NM_001243270.2",
+            "name": "transcript variant 2",
+            "length": 6360,
+            "cds": {
+              "accession_version": "NM_001243270.2",
+              "range": [
+                {
+                  "begin": "393",
+                  "end": "3695",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100358885",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99020949",
+                    "end": "99021270",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99556145",
+                    "end": "99556269",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99819544",
+                    "end": "99819765",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99844852",
+                    "end": "99844975",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99845087",
+                    "end": "99845262",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99916054",
+                    "end": "99916149",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99956806",
+                    "end": "99957009",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "100002034",
+                    "end": "100002136",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100061212",
+                    "end": "100061393",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100070424",
+                    "end": "100070560",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100071705",
+                    "end": "100071834",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100074144",
+                    "end": "100074294",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100191126",
+                    "end": "100191253",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100193488",
+                    "end": "100193663",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100224692",
+                    "end": "100224812",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100255760",
+                    "end": "100255918",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100271092",
+                    "end": "100271241",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100297625",
+                    "end": "100297695",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100299162",
+                    "end": "100299396",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100308359",
+                    "end": "100308468",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100340463",
+                    "end": "100340649",
+                    "orientation": "plus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "100341093",
+                    "end": "100341205",
+                    "orientation": "plus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "100350702",
+                    "end": "100350870",
+                    "orientation": "plus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "100356117",
+                    "end": "100358885",
+                    "orientation": "plus",
+                    "order": 24
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99027636",
+                  "end": "100368160",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99027636",
+                    "end": "99027957",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99562475",
+                    "end": "99562599",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99828802",
+                    "end": "99829023",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99854088",
+                    "end": "99854211",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99854323",
+                    "end": "99854498",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99925281",
+                    "end": "99925376",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99966050",
+                    "end": "99966253",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "100011297",
+                    "end": "100011399",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100070475",
+                    "end": "100070656",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100079686",
+                    "end": "100079822",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100080967",
+                    "end": "100081096",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100083406",
+                    "end": "100083556",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100200391",
+                    "end": "100200518",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100202753",
+                    "end": "100202928",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100233981",
+                    "end": "100234101",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100265043",
+                    "end": "100265201",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100280374",
+                    "end": "100280523",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100306907",
+                    "end": "100306977",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100308444",
+                    "end": "100308678",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100317634",
+                    "end": "100317743",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100349738",
+                    "end": "100349924",
+                    "orientation": "plus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "100350368",
+                    "end": "100350480",
+                    "orientation": "plus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "100359977",
+                    "end": "100360145",
+                    "orientation": "plus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "100365392",
+                    "end": "100368160",
+                    "orientation": "plus",
+                    "order": 24
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000528682.5",
+            "protein": {
+              "accession_version": "NP_001230199.1",
+              "name": "contactin-5",
+              "length": 1100,
+              "isoform_name": "isoform 1 precursor",
+              "ensembl_protein": "ENSP00000436185.1"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001243271.2",
+            "name": "transcript variant 4",
+            "length": 4495,
+            "cds": {
+              "accession_version": "NM_001243271.2",
+              "range": [
+                {
+                  "begin": "532",
+                  "end": "3267",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100309702",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99020949",
+                    "end": "99021270",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99325346",
+                    "end": "99325484",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99556145",
+                    "end": "99556269",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99819544",
+                    "end": "99819765",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99844852",
+                    "end": "99844975",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99845087",
+                    "end": "99845262",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99916054",
+                    "end": "99916149",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99956806",
+                    "end": "99957009",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100002034",
+                    "end": "100002136",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100061212",
+                    "end": "100061393",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100070424",
+                    "end": "100070560",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100071705",
+                    "end": "100071834",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100074144",
+                    "end": "100074294",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100191126",
+                    "end": "100191253",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100193488",
+                    "end": "100193663",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100224692",
+                    "end": "100224812",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100255760",
+                    "end": "100255918",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100271092",
+                    "end": "100271241",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100297625",
+                    "end": "100297695",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100299162",
+                    "end": "100299396",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100308359",
+                    "end": "100309702",
+                    "orientation": "plus",
+                    "order": 21
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99027636",
+                  "end": "100318977",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99027636",
+                    "end": "99027957",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99332044",
+                    "end": "99332182",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99562475",
+                    "end": "99562599",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99828802",
+                    "end": "99829023",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99854088",
+                    "end": "99854211",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99854323",
+                    "end": "99854498",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99925281",
+                    "end": "99925376",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99966050",
+                    "end": "99966253",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100011297",
+                    "end": "100011399",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100070475",
+                    "end": "100070656",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100079686",
+                    "end": "100079822",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100080967",
+                    "end": "100081096",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100083406",
+                    "end": "100083556",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100200391",
+                    "end": "100200518",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100202753",
+                    "end": "100202928",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100233981",
+                    "end": "100234101",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100265043",
+                    "end": "100265201",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100280374",
+                    "end": "100280523",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100306907",
+                    "end": "100306977",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100308444",
+                    "end": "100308678",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100317634",
+                    "end": "100318977",
+                    "orientation": "plus",
+                    "order": 21
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000527185.5",
+            "protein": {
+              "accession_version": "NP_001230200.1",
+              "name": "contactin-5",
+              "length": 911,
+              "isoform_name": "isoform 3 precursor",
+              "ensembl_protein": "ENSP00000433575.1"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_014361.4",
+            "name": "transcript variant 1",
+            "length": 6499,
+            "cds": {
+              "accession_version": "NM_014361.4",
+              "range": [
+                {
+                  "begin": "532",
+                  "end": "3834",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100358885",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99020949",
+                    "end": "99021270",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99325346",
+                    "end": "99325484",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99556145",
+                    "end": "99556269",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99819544",
+                    "end": "99819765",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99844852",
+                    "end": "99844975",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99845087",
+                    "end": "99845262",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99916054",
+                    "end": "99916149",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99956806",
+                    "end": "99957009",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100002034",
+                    "end": "100002136",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100061212",
+                    "end": "100061393",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100070424",
+                    "end": "100070560",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100071705",
+                    "end": "100071834",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100074144",
+                    "end": "100074294",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100191126",
+                    "end": "100191253",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100193488",
+                    "end": "100193663",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100224692",
+                    "end": "100224812",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100255760",
+                    "end": "100255918",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100271092",
+                    "end": "100271241",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100297625",
+                    "end": "100297695",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100299162",
+                    "end": "100299396",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100308359",
+                    "end": "100308468",
+                    "orientation": "plus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "100340463",
+                    "end": "100340649",
+                    "orientation": "plus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "100341093",
+                    "end": "100341205",
+                    "orientation": "plus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "100350702",
+                    "end": "100350870",
+                    "orientation": "plus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "100356117",
+                    "end": "100358885",
+                    "orientation": "plus",
+                    "order": 25
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99027636",
+                  "end": "100368160",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99027636",
+                    "end": "99027957",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99332044",
+                    "end": "99332182",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99562475",
+                    "end": "99562599",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99828802",
+                    "end": "99829023",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99854088",
+                    "end": "99854211",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99854323",
+                    "end": "99854498",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99925281",
+                    "end": "99925376",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99966050",
+                    "end": "99966253",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100011297",
+                    "end": "100011399",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100070475",
+                    "end": "100070656",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100079686",
+                    "end": "100079822",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100080967",
+                    "end": "100081096",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100083406",
+                    "end": "100083556",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100200391",
+                    "end": "100200518",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100202753",
+                    "end": "100202928",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100233981",
+                    "end": "100234101",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100265043",
+                    "end": "100265201",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100280374",
+                    "end": "100280523",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100306907",
+                    "end": "100306977",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100308444",
+                    "end": "100308678",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100317634",
+                    "end": "100317743",
+                    "orientation": "plus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "100349738",
+                    "end": "100349924",
+                    "orientation": "plus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "100350368",
+                    "end": "100350480",
+                    "orientation": "plus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "100359977",
+                    "end": "100360145",
+                    "orientation": "plus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "100365392",
+                    "end": "100368160",
+                    "orientation": "plus",
+                    "order": 25
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000524871.6",
+            "protein": {
+              "accession_version": "NP_055176.1",
+              "name": "contactin-5",
+              "length": 1100,
+              "isoform_name": "isoform 1 precursor",
+              "ensembl_protein": "ENSP00000435637.1"
+            },
+            "type": "PROTEIN_CODING",
+            "select_category": "MANE_SELECT"
+          },
+          {
+            "accession_version": "NM_175566.2",
+            "name": "transcript variant 3",
+            "length": 5816,
+            "cds": {
+              "accession_version": "NM_175566.2",
+              "range": [
+                {
+                  "begin": "71",
+                  "end": "3151",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "99556145",
+                  "end": "100358885",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99556145",
+                    "end": "99556269",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99844852",
+                    "end": "99844975",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99845087",
+                    "end": "99845262",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99916054",
+                    "end": "99916149",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99956806",
+                    "end": "99957009",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "100002034",
+                    "end": "100002136",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "100061212",
+                    "end": "100061393",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "100070424",
+                    "end": "100070560",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100071705",
+                    "end": "100071834",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100074144",
+                    "end": "100074294",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100191126",
+                    "end": "100191253",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100193488",
+                    "end": "100193663",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100224692",
+                    "end": "100224812",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100255760",
+                    "end": "100255918",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100271092",
+                    "end": "100271241",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100297625",
+                    "end": "100297695",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100299162",
+                    "end": "100299396",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100308359",
+                    "end": "100308468",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100340463",
+                    "end": "100340649",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100341093",
+                    "end": "100341205",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100350702",
+                    "end": "100350870",
+                    "orientation": "plus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "100356117",
+                    "end": "100358885",
+                    "orientation": "plus",
+                    "order": 22
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99562475",
+                  "end": "100368160",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99562475",
+                    "end": "99562599",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99854088",
+                    "end": "99854211",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99854323",
+                    "end": "99854498",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99925281",
+                    "end": "99925376",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99966050",
+                    "end": "99966253",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "100011297",
+                    "end": "100011399",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "100070475",
+                    "end": "100070656",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "100079686",
+                    "end": "100079822",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100080967",
+                    "end": "100081096",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100083406",
+                    "end": "100083556",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100200391",
+                    "end": "100200518",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100202753",
+                    "end": "100202928",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100233981",
+                    "end": "100234101",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100265043",
+                    "end": "100265201",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100280374",
+                    "end": "100280523",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100306907",
+                    "end": "100306977",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100308444",
+                    "end": "100308678",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100317634",
+                    "end": "100317743",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100349738",
+                    "end": "100349924",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100350368",
+                    "end": "100350480",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100359977",
+                    "end": "100360145",
+                    "orientation": "plus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "100365392",
+                    "end": "100368160",
+                    "orientation": "plus",
+                    "order": 22
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000418526.6",
+            "protein": {
+              "accession_version": "NP_780775.1",
+              "name": "contactin-5",
+              "length": 1026,
+              "isoform_name": "isoform 2 precursor",
+              "ensembl_protein": "ENSP00000393229.2"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "XM_011542871.2",
+            "name": "transcript variant X2",
+            "length": 6277,
+            "cds": {
+              "accession_version": "XM_011542871.2",
+              "range": [
+                {
+                  "begin": "532",
+                  "end": "3612",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100358885",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99020949",
+                    "end": "99021270",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99325346",
+                    "end": "99325484",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99556145",
+                    "end": "99556269",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99844852",
+                    "end": "99844975",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99845087",
+                    "end": "99845262",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99916054",
+                    "end": "99916149",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99956806",
+                    "end": "99957009",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "100002034",
+                    "end": "100002136",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100061212",
+                    "end": "100061393",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100070424",
+                    "end": "100070560",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100071705",
+                    "end": "100071834",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100074144",
+                    "end": "100074294",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100191126",
+                    "end": "100191253",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100193488",
+                    "end": "100193663",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100224692",
+                    "end": "100224812",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100255760",
+                    "end": "100255918",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100271092",
+                    "end": "100271241",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100297625",
+                    "end": "100297695",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100299162",
+                    "end": "100299396",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100308359",
+                    "end": "100308468",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100340463",
+                    "end": "100340649",
+                    "orientation": "plus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "100341093",
+                    "end": "100341205",
+                    "orientation": "plus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "100350702",
+                    "end": "100350870",
+                    "orientation": "plus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "100356117",
+                    "end": "100358885",
+                    "orientation": "plus",
+                    "order": 24
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_011541173.1",
+              "name": "contactin-5",
+              "length": 1026,
+              "isoform_name": "isoform X2"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_011542873.2",
+            "name": "transcript variant X4",
+            "length": 2966,
+            "cds": {
+              "accession_version": "XM_011542873.2",
+              "range": [
+                {
+                  "begin": "532",
+                  "end": "2475",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100203267",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99020949",
+                    "end": "99021270",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99325346",
+                    "end": "99325484",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99556145",
+                    "end": "99556269",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99819544",
+                    "end": "99819765",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99844852",
+                    "end": "99844975",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99845087",
+                    "end": "99845262",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99916054",
+                    "end": "99916149",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99956806",
+                    "end": "99957009",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100002034",
+                    "end": "100002136",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100061212",
+                    "end": "100061393",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100070424",
+                    "end": "100070560",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100071705",
+                    "end": "100071834",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100074144",
+                    "end": "100074294",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100191126",
+                    "end": "100191253",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100193488",
+                    "end": "100193663",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100202717",
+                    "end": "100203267",
+                    "orientation": "plus",
+                    "order": 16
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_011541175.1",
+              "name": "contactin-5",
+              "length": 647,
+              "isoform_name": "isoform X3"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_017017926.2",
+            "name": "transcript variant X1",
+            "length": 6595,
+            "cds": {
+              "accession_version": "XM_017017926.2",
+              "range": [
+                {
+                  "begin": "628",
+                  "end": "3930",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100358885",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99020949",
+                    "end": "99021270",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99312832",
+                    "end": "99312927",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99325346",
+                    "end": "99325484",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99556145",
+                    "end": "99556269",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99819544",
+                    "end": "99819765",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99844852",
+                    "end": "99844975",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99845087",
+                    "end": "99845262",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99916054",
+                    "end": "99916149",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99956806",
+                    "end": "99957009",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100002034",
+                    "end": "100002136",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100061212",
+                    "end": "100061393",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100070424",
+                    "end": "100070560",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100071705",
+                    "end": "100071834",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100074144",
+                    "end": "100074294",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100191126",
+                    "end": "100191253",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100193488",
+                    "end": "100193663",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100224692",
+                    "end": "100224812",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100255760",
+                    "end": "100255918",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100271092",
+                    "end": "100271241",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100297625",
+                    "end": "100297695",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100299162",
+                    "end": "100299396",
+                    "orientation": "plus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "100308359",
+                    "end": "100308468",
+                    "orientation": "plus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "100340463",
+                    "end": "100340649",
+                    "orientation": "plus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "100341093",
+                    "end": "100341205",
+                    "orientation": "plus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "100350702",
+                    "end": "100350870",
+                    "orientation": "plus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "100356117",
+                    "end": "100358885",
+                    "orientation": "plus",
+                    "order": 26
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_016873415.1",
+              "name": "contactin-5",
+              "length": 1100,
+              "isoform_name": "isoform X1"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_017017927.2",
+            "name": "transcript variant X5",
+            "length": 3062,
+            "cds": {
+              "accession_version": "XM_017017927.2",
+              "range": [
+                {
+                  "begin": "628",
+                  "end": "2571",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100203267",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99020949",
+                    "end": "99021270",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99312832",
+                    "end": "99312927",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99325346",
+                    "end": "99325484",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99556145",
+                    "end": "99556269",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99819544",
+                    "end": "99819765",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99844852",
+                    "end": "99844975",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99845087",
+                    "end": "99845262",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99916054",
+                    "end": "99916149",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99956806",
+                    "end": "99957009",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100002034",
+                    "end": "100002136",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100061212",
+                    "end": "100061393",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100070424",
+                    "end": "100070560",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100071705",
+                    "end": "100071834",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100074144",
+                    "end": "100074294",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100191126",
+                    "end": "100191253",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100193488",
+                    "end": "100193663",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100202717",
+                    "end": "100203267",
+                    "orientation": "plus",
+                    "order": 17
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_016873416.1",
+              "name": "contactin-5",
+              "length": 647,
+              "isoform_name": "isoform X3"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_017017928.2",
+            "name": "transcript variant X6",
+            "length": 2827,
+            "cds": {
+              "accession_version": "XM_017017928.2",
+              "range": [
+                {
+                  "begin": "393",
+                  "end": "2336",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100203267",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99020949",
+                    "end": "99021270",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99556145",
+                    "end": "99556269",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99819544",
+                    "end": "99819765",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99844852",
+                    "end": "99844975",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99845087",
+                    "end": "99845262",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99916054",
+                    "end": "99916149",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99956806",
+                    "end": "99957009",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "100002034",
+                    "end": "100002136",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100061212",
+                    "end": "100061393",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100070424",
+                    "end": "100070560",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100071705",
+                    "end": "100071834",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100074144",
+                    "end": "100074294",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100191126",
+                    "end": "100191253",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100193488",
+                    "end": "100193663",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100202717",
+                    "end": "100203267",
+                    "orientation": "plus",
+                    "order": 15
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_016873417.1",
+              "name": "contactin-5",
+              "length": 647,
+              "isoform_name": "isoform X3"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_017017929.2",
+            "name": "transcript variant X8",
+            "length": 2744,
+            "cds": {
+              "accession_version": "XM_017017929.2",
+              "range": [
+                {
+                  "begin": "532",
+                  "end": "2253",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100203267",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99020949",
+                    "end": "99021270",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99325346",
+                    "end": "99325484",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99556145",
+                    "end": "99556269",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99844852",
+                    "end": "99844975",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99845087",
+                    "end": "99845262",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99916054",
+                    "end": "99916149",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99956806",
+                    "end": "99957009",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "100002034",
+                    "end": "100002136",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100061212",
+                    "end": "100061393",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100070424",
+                    "end": "100070560",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100071705",
+                    "end": "100071834",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100074144",
+                    "end": "100074294",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100191126",
+                    "end": "100191253",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100193488",
+                    "end": "100193663",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100202717",
+                    "end": "100203267",
+                    "orientation": "plus",
+                    "order": 15
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_016873418.1",
+              "name": "contactin-5",
+              "length": 573,
+              "isoform_name": "isoform X5"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_047427130.1",
+            "name": "transcript variant X3",
+            "length": 6138,
+            "cds": {
+              "accession_version": "XM_047427130.1",
+              "range": [
+                {
+                  "begin": "393",
+                  "end": "3473",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100358885",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99020949",
+                    "end": "99021270",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99556145",
+                    "end": "99556269",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99844852",
+                    "end": "99844975",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99845087",
+                    "end": "99845262",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99916054",
+                    "end": "99916149",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99956806",
+                    "end": "99957009",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "100002034",
+                    "end": "100002136",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "100061212",
+                    "end": "100061393",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100070424",
+                    "end": "100070560",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100071705",
+                    "end": "100071834",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100074144",
+                    "end": "100074294",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100191126",
+                    "end": "100191253",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100193488",
+                    "end": "100193663",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100224692",
+                    "end": "100224812",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100255760",
+                    "end": "100255918",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100271092",
+                    "end": "100271241",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100297625",
+                    "end": "100297695",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100299162",
+                    "end": "100299396",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100308359",
+                    "end": "100308468",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100340463",
+                    "end": "100340649",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100341093",
+                    "end": "100341205",
+                    "orientation": "plus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "100350702",
+                    "end": "100350870",
+                    "orientation": "plus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "100356117",
+                    "end": "100358885",
+                    "orientation": "plus",
+                    "order": 23
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_047283086.1",
+              "name": "contactin-5",
+              "length": 1026,
+              "isoform_name": "isoform X2"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_047427131.1",
+            "name": "transcript variant X7",
+            "length": 2540,
+            "cds": {
+              "accession_version": "XM_047427131.1",
+              "range": [
+                {
+                  "begin": "532",
+                  "end": "2439",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100255884",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99020949",
+                    "end": "99021270",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99325346",
+                    "end": "99325484",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99556145",
+                    "end": "99556269",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99819544",
+                    "end": "99819765",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99844852",
+                    "end": "99844975",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99845087",
+                    "end": "99845262",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99916054",
+                    "end": "99916149",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99956806",
+                    "end": "99957009",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100002034",
+                    "end": "100002136",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100061212",
+                    "end": "100061393",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100070424",
+                    "end": "100070560",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100071705",
+                    "end": "100071834",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100074144",
+                    "end": "100074294",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100191126",
+                    "end": "100191253",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100193488",
+                    "end": "100193663",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100255760",
+                    "end": "100255884",
+                    "orientation": "plus",
+                    "order": 16
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_047283087.1",
+              "name": "contactin-5",
+              "length": 635,
+              "isoform_name": "isoform X4"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054369144.1",
+            "name": "transcript variant X1",
+            "length": 6595,
+            "cds": {
+              "accession_version": "XM_054369144.1",
+              "range": [
+                {
+                  "begin": "628",
+                  "end": "3930",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99027636",
+                  "end": "100368160",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99027636",
+                    "end": "99027957",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99319540",
+                    "end": "99319635",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99332044",
+                    "end": "99332182",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99562475",
+                    "end": "99562599",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99828802",
+                    "end": "99829023",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99854088",
+                    "end": "99854211",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99854323",
+                    "end": "99854498",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99925281",
+                    "end": "99925376",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99966050",
+                    "end": "99966253",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100011297",
+                    "end": "100011399",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100070475",
+                    "end": "100070656",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100079686",
+                    "end": "100079822",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100080967",
+                    "end": "100081096",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100083406",
+                    "end": "100083556",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100200391",
+                    "end": "100200518",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100202753",
+                    "end": "100202928",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100233981",
+                    "end": "100234101",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100265043",
+                    "end": "100265201",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100280374",
+                    "end": "100280523",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100306907",
+                    "end": "100306977",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100308444",
+                    "end": "100308678",
+                    "orientation": "plus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "100317634",
+                    "end": "100317743",
+                    "orientation": "plus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "100349738",
+                    "end": "100349924",
+                    "orientation": "plus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "100350368",
+                    "end": "100350480",
+                    "orientation": "plus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "100359977",
+                    "end": "100360145",
+                    "orientation": "plus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "100365392",
+                    "end": "100368160",
+                    "orientation": "plus",
+                    "order": 26
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054225119.1",
+              "name": "contactin-5",
+              "length": 1100,
+              "isoform_name": "isoform X1"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054369145.1",
+            "name": "transcript variant X2",
+            "length": 6277,
+            "cds": {
+              "accession_version": "XM_054369145.1",
+              "range": [
+                {
+                  "begin": "532",
+                  "end": "3612",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99027636",
+                  "end": "100368160",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99027636",
+                    "end": "99027957",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99332044",
+                    "end": "99332182",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99562475",
+                    "end": "99562599",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99854088",
+                    "end": "99854211",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99854323",
+                    "end": "99854498",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99925281",
+                    "end": "99925376",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99966050",
+                    "end": "99966253",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "100011297",
+                    "end": "100011399",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100070475",
+                    "end": "100070656",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100079686",
+                    "end": "100079822",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100080967",
+                    "end": "100081096",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100083406",
+                    "end": "100083556",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100200391",
+                    "end": "100200518",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100202753",
+                    "end": "100202928",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100233981",
+                    "end": "100234101",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100265043",
+                    "end": "100265201",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100280374",
+                    "end": "100280523",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100306907",
+                    "end": "100306977",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100308444",
+                    "end": "100308678",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100317634",
+                    "end": "100317743",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100349738",
+                    "end": "100349924",
+                    "orientation": "plus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "100350368",
+                    "end": "100350480",
+                    "orientation": "plus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "100359977",
+                    "end": "100360145",
+                    "orientation": "plus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "100365392",
+                    "end": "100368160",
+                    "orientation": "plus",
+                    "order": 24
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054225120.1",
+              "name": "contactin-5",
+              "length": 1026,
+              "isoform_name": "isoform X2"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054369146.1",
+            "name": "transcript variant X3",
+            "length": 6138,
+            "cds": {
+              "accession_version": "XM_054369146.1",
+              "range": [
+                {
+                  "begin": "393",
+                  "end": "3473",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99027636",
+                  "end": "100368160",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99027636",
+                    "end": "99027957",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99562475",
+                    "end": "99562599",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99854088",
+                    "end": "99854211",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99854323",
+                    "end": "99854498",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99925281",
+                    "end": "99925376",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99966050",
+                    "end": "99966253",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "100011297",
+                    "end": "100011399",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "100070475",
+                    "end": "100070656",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100079686",
+                    "end": "100079822",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100080967",
+                    "end": "100081096",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100083406",
+                    "end": "100083556",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100200391",
+                    "end": "100200518",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100202753",
+                    "end": "100202928",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100233981",
+                    "end": "100234101",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100265043",
+                    "end": "100265201",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100280374",
+                    "end": "100280523",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100306907",
+                    "end": "100306977",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "100308444",
+                    "end": "100308678",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "100317634",
+                    "end": "100317743",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "100349738",
+                    "end": "100349924",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "100350368",
+                    "end": "100350480",
+                    "orientation": "plus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "100359977",
+                    "end": "100360145",
+                    "orientation": "plus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "100365392",
+                    "end": "100368160",
+                    "orientation": "plus",
+                    "order": 23
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054225121.1",
+              "name": "contactin-5",
+              "length": 1026,
+              "isoform_name": "isoform X2"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054369147.1",
+            "name": "transcript variant X4",
+            "length": 2965,
+            "cds": {
+              "accession_version": "XM_054369147.1",
+              "range": [
+                {
+                  "begin": "532",
+                  "end": "2475",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99027636",
+                  "end": "100212523",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99027636",
+                    "end": "99027957",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99332044",
+                    "end": "99332182",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99562475",
+                    "end": "99562599",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99828802",
+                    "end": "99829023",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99854088",
+                    "end": "99854211",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99854323",
+                    "end": "99854498",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99925281",
+                    "end": "99925376",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99966050",
+                    "end": "99966253",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100011297",
+                    "end": "100011399",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100070475",
+                    "end": "100070656",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100079686",
+                    "end": "100079822",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100080967",
+                    "end": "100081096",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100083406",
+                    "end": "100083556",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100200391",
+                    "end": "100200518",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100202753",
+                    "end": "100202928",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100211974",
+                    "end": "100212523",
+                    "orientation": "plus",
+                    "order": 16
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054225122.1",
+              "name": "contactin-5",
+              "length": 647,
+              "isoform_name": "isoform X3"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054369148.1",
+            "name": "transcript variant X5",
+            "length": 3061,
+            "cds": {
+              "accession_version": "XM_054369148.1",
+              "range": [
+                {
+                  "begin": "628",
+                  "end": "2571",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99027636",
+                  "end": "100212523",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99027636",
+                    "end": "99027957",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99319540",
+                    "end": "99319635",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99332044",
+                    "end": "99332182",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99562475",
+                    "end": "99562599",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99828802",
+                    "end": "99829023",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99854088",
+                    "end": "99854211",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99854323",
+                    "end": "99854498",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99925281",
+                    "end": "99925376",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99966050",
+                    "end": "99966253",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100011297",
+                    "end": "100011399",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100070475",
+                    "end": "100070656",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100079686",
+                    "end": "100079822",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100080967",
+                    "end": "100081096",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100083406",
+                    "end": "100083556",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100200391",
+                    "end": "100200518",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100202753",
+                    "end": "100202928",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "100211974",
+                    "end": "100212523",
+                    "orientation": "plus",
+                    "order": 17
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054225123.1",
+              "name": "contactin-5",
+              "length": 647,
+              "isoform_name": "isoform X3"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054369149.1",
+            "name": "transcript variant X6",
+            "length": 2826,
+            "cds": {
+              "accession_version": "XM_054369149.1",
+              "range": [
+                {
+                  "begin": "393",
+                  "end": "2336",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99027636",
+                  "end": "100212523",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99027636",
+                    "end": "99027957",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99562475",
+                    "end": "99562599",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99828802",
+                    "end": "99829023",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99854088",
+                    "end": "99854211",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99854323",
+                    "end": "99854498",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99925281",
+                    "end": "99925376",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99966050",
+                    "end": "99966253",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "100011297",
+                    "end": "100011399",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100070475",
+                    "end": "100070656",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100079686",
+                    "end": "100079822",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100080967",
+                    "end": "100081096",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100083406",
+                    "end": "100083556",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100200391",
+                    "end": "100200518",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100202753",
+                    "end": "100202928",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100211974",
+                    "end": "100212523",
+                    "orientation": "plus",
+                    "order": 15
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054225124.1",
+              "name": "contactin-5",
+              "length": 647,
+              "isoform_name": "isoform X3"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054369150.1",
+            "name": "transcript variant X7",
+            "length": 2540,
+            "cds": {
+              "accession_version": "XM_054369150.1",
+              "range": [
+                {
+                  "begin": "532",
+                  "end": "2439",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99027636",
+                  "end": "100265167",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99027636",
+                    "end": "99027957",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99332044",
+                    "end": "99332182",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99562475",
+                    "end": "99562599",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99828802",
+                    "end": "99829023",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99854088",
+                    "end": "99854211",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99854323",
+                    "end": "99854498",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99925281",
+                    "end": "99925376",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99966050",
+                    "end": "99966253",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100011297",
+                    "end": "100011399",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100070475",
+                    "end": "100070656",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100079686",
+                    "end": "100079822",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100080967",
+                    "end": "100081096",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100083406",
+                    "end": "100083556",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100200391",
+                    "end": "100200518",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100202753",
+                    "end": "100202928",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "100265043",
+                    "end": "100265167",
+                    "orientation": "plus",
+                    "order": 16
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054225125.1",
+              "name": "contactin-5",
+              "length": 635,
+              "isoform_name": "isoform X4"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054369151.1",
+            "name": "transcript variant X8",
+            "length": 2743,
+            "cds": {
+              "accession_version": "XM_054369151.1",
+              "range": [
+                {
+                  "begin": "532",
+                  "end": "2253",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99027636",
+                  "end": "100212523",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "99027636",
+                    "end": "99027957",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99332044",
+                    "end": "99332182",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99562475",
+                    "end": "99562599",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99854088",
+                    "end": "99854211",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99854323",
+                    "end": "99854498",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99925281",
+                    "end": "99925376",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99966050",
+                    "end": "99966253",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "100011297",
+                    "end": "100011399",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "100070475",
+                    "end": "100070656",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "100079686",
+                    "end": "100079822",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "100080967",
+                    "end": "100081096",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "100083406",
+                    "end": "100083556",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "100200391",
+                    "end": "100200518",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "100202753",
+                    "end": "100202928",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "100211974",
+                    "end": "100212523",
+                    "orientation": "plus",
+                    "order": 15
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054225126.1",
+              "name": "contactin-5",
+              "length": 573,
+              "isoform_name": "isoform X5"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          }
+        ],
+        "transcript_count": 20,
+        "protein_count": 20,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 4
+          },
+          {
+            "type": "PROTEIN_CODING_MODEL",
+            "count": 16
+          }
+        ]
+      },
+      "query": [
+        "53942"
+      ]
+    }
+  ],
+  "total_count": 2
+}

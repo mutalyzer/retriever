@@ -1,0 +1,615 @@
+{
+  "reports": [
+    {
+      "gene": {
+        "gene_id": "83875",
+        "symbol": "BCO2",
+        "description": "beta-carotene oxygenase 2",
+        "tax_id": "9606",
+        "taxname": "Homo sapiens",
+        "common_name": "human",
+        "type": "PROTEIN_CODING",
+        "orientation": "plus",
+        "chromosomes": [
+          "11"
+        ],
+        "nomenclature_authority": {
+          "authority": "HGNC",
+          "identifier": "HGNC:18503"
+        },
+        "swiss_prot_accessions": [
+          "Q9BYV7"
+        ],
+        "ensembl_gene_ids": [
+          "ENSG00000197580"
+        ],
+        "omim_ids": [
+          "611740"
+        ],
+        "synonyms": [
+          "BCDO2",
+          "B-DIOX-II"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_000001405.40",
+            "assembly_name": "GRCh38.p14",
+            "annotation_name": "GCF_000001405.40-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "11",
+                "genomic_range": {
+                  "begin": "112175512",
+                  "end": "112218946",
+                  "orientation": "plus"
+                }
+              }
+            ]
+          },
+          {
+            "assembly_accession": "GCF_009914755.1",
+            "assembly_name": "T2T-CHM13v2.0",
+            "annotation_name": "GCF_009914755.1-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "11",
+                "genomic_range": {
+                  "begin": "112185841",
+                  "end": "112229285",
+                  "orientation": "plus"
+                }
+              }
+            ]
+          }
+        ],
+        "transcript_count": 5,
+        "protein_count": 5,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 5
+          }
+        ],
+        "gene_groups": [
+          {
+            "id": "83875",
+            "method": "NCBI Ortholog"
+          }
+        ],
+        "summary": [
+          {
+            "description": "This gene encodes an enzyme which oxidizes carotenoids such as beta-carotene during the biosynthesis of vitamin A. Multiple transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, Jan 2012]"
+          }
+        ],
+        "gene_ontology": {
+          "molecular_functions": [
+            {
+              "name": "9,10 (9', 10')-carotenoid-cleaving dioxygenase activity",
+              "go_id": "GO:0010437",
+              "evidence_code": "ISS",
+              "qualifier": "enables"
+            },
+            {
+              "name": "beta,beta-carotene-9',10'-cleaving oxygenase activity",
+              "go_id": "GO:0102076",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "beta,beta-carotene-9',10'-cleaving oxygenase activity",
+              "go_id": "GO:0102076",
+              "evidence_code": "ISS",
+              "qualifier": "enables"
+            },
+            {
+              "name": "beta-carotene 15,15'-dioxygenase activity",
+              "go_id": "GO:0003834",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "carotenoid dioxygenase activity",
+              "go_id": "GO:0010436",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "dioxygenase activity",
+              "go_id": "GO:0051213",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "metal ion binding",
+              "go_id": "GO:0046872",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "oxidoreductase activity",
+              "go_id": "GO:0016491",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "oxidoreductase activity, acting on single donors with incorporation of molecular oxygen, incorporation of two atoms of oxygen",
+              "go_id": "GO:0016702",
+              "evidence_code": "IDA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "oxidoreductase activity, acting on single donors with incorporation of molecular oxygen, incorporation of two atoms of oxygen",
+              "go_id": "GO:0016702",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            }
+          ],
+          "biological_processes": [
+            {
+              "name": "carotene catabolic process",
+              "go_id": "GO:0016121",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "carotene catabolic process",
+              "go_id": "GO:0016121",
+              "evidence_code": "IDA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "carotene catabolic process",
+              "go_id": "GO:0016121",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "carotene metabolic process",
+              "go_id": "GO:0016119",
+              "evidence_code": "IDA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "carotene metabolic process",
+              "go_id": "GO:0016119",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "carotenoid metabolic process",
+              "go_id": "GO:0016116",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "carotenoid metabolic process",
+              "go_id": "GO:0016116",
+              "evidence_code": "ISS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "lipid metabolic process",
+              "go_id": "GO:0006629",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "lutein catabolic process",
+              "go_id": "GO:0062172",
+              "evidence_code": "ISS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "lycopene catabolic process",
+              "go_id": "GO:1901176",
+              "evidence_code": "ISS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "regulation of mitochondrial membrane potential",
+              "go_id": "GO:0051881",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "regulation of mitochondrial membrane potential",
+              "go_id": "GO:0051881",
+              "evidence_code": "ISS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "regulation of reactive oxygen species metabolic process",
+              "go_id": "GO:2000377",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "regulation of reactive oxygen species metabolic process",
+              "go_id": "GO:2000377",
+              "evidence_code": "ISS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "retinal metabolic process",
+              "go_id": "GO:0042574",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "retinal metabolic process",
+              "go_id": "GO:0042574",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "retinal metabolic process",
+              "go_id": "GO:0042574",
+              "evidence_code": "NAS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "retinoic acid metabolic process",
+              "go_id": "GO:0042573",
+              "evidence_code": "NAS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "xanthophyll catabolic process",
+              "go_id": "GO:0016124",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "xanthophyll catabolic process",
+              "go_id": "GO:0016124",
+              "evidence_code": "ISS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "xanthophyll metabolic process",
+              "go_id": "GO:0016122",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "zeaxanthin catabolic process",
+              "go_id": "GO:1901826",
+              "evidence_code": "ISS",
+              "qualifier": "involved_in"
+            }
+          ],
+          "cellular_components": [
+            {
+              "name": "mitochondrial matrix",
+              "go_id": "GO:0005759",
+              "evidence_code": "TAS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "IBA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "ISS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "TAS",
+              "qualifier": "located_in"
+            }
+          ]
+        }
+      },
+      "query": [
+        "83875"
+      ]
+    },
+    {
+      "gene": {
+        "gene_id": "53942",
+        "symbol": "CNTN5",
+        "description": "contactin 5",
+        "tax_id": "9606",
+        "taxname": "Homo sapiens",
+        "common_name": "human",
+        "type": "PROTEIN_CODING",
+        "orientation": "plus",
+        "reference_standards": [
+          {
+            "gene_range": {
+              "accession_version": "NG_047156.1",
+              "range": [
+                {
+                  "begin": "4974",
+                  "end": "1342910",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "type": "REFSEQ_GENE"
+          }
+        ],
+        "chromosomes": [
+          "11"
+        ],
+        "nomenclature_authority": {
+          "authority": "HGNC",
+          "identifier": "HGNC:2175"
+        },
+        "swiss_prot_accessions": [
+          "O94779"
+        ],
+        "ensembl_gene_ids": [
+          "ENSG00000149972"
+        ],
+        "omim_ids": [
+          "607219"
+        ],
+        "synonyms": [
+          "NB-2",
+          "HNB-2s"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_000001405.40",
+            "assembly_name": "GRCh38.p14",
+            "annotation_name": "GCF_000001405.40-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "11",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100358885",
+                  "orientation": "plus"
+                }
+              }
+            ]
+          },
+          {
+            "assembly_accession": "GCF_009914755.1",
+            "assembly_name": "T2T-CHM13v2.0",
+            "annotation_name": "GCF_009914755.1-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "11",
+                "genomic_range": {
+                  "begin": "99027636",
+                  "end": "100368160",
+                  "orientation": "plus"
+                }
+              }
+            ]
+          }
+        ],
+        "transcript_count": 20,
+        "protein_count": 20,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 4
+          },
+          {
+            "type": "PROTEIN_CODING_MODEL",
+            "count": 16
+          }
+        ],
+        "gene_groups": [
+          {
+            "id": "53942",
+            "method": "NCBI Ortholog"
+          }
+        ],
+        "summary": [
+          {
+            "description": "The protein encoded by this gene is a member of the immunoglobulin superfamily, and contactin family, which mediate cell surface interactions during nervous system development. This protein is a glycosylphosphatidylinositol (GPI)-anchored neuronal membrane protein that functions as a cell adhesion molecule. It may play a role in the formation of axon connections in the developing nervous system. Alternatively spliced transcript variants encoding different isoforms have been described for this gene. [provided by RefSeq, Aug 2011]"
+          }
+        ],
+        "gene_ontology": {
+          "molecular_functions": [
+            {
+              "name": "cell-cell adhesion mediator activity",
+              "go_id": "GO:0098632",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            }
+          ],
+          "biological_processes": [
+            {
+              "name": "axon guidance",
+              "go_id": "GO:0007411",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "brain development",
+              "go_id": "GO:0007420",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "cell adhesion",
+              "go_id": "GO:0007155",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "cell-cell adhesion",
+              "go_id": "GO:0098609",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "presynapse assembly",
+              "go_id": "GO:0099054",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "sensory perception of sound",
+              "go_id": "GO:0007605",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            }
+          ],
+          "cellular_components": [
+            {
+              "name": "GABA-ergic synapse",
+              "go_id": "GO:0098982",
+              "evidence_code": "IEA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "axon",
+              "go_id": "GO:0030424",
+              "evidence_code": "IBA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "extracellular region",
+              "go_id": "GO:0005576",
+              "evidence_code": "TAS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "membrane",
+              "go_id": "GO:0016020",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "plasma membrane",
+              "go_id": "GO:0005886",
+              "evidence_code": "IBA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "plasma membrane",
+              "go_id": "GO:0005886",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "plasma membrane",
+              "go_id": "GO:0005886",
+              "evidence_code": "TAS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "presynaptic membrane",
+              "go_id": "GO:0042734",
+              "evidence_code": "IEA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "side of membrane",
+              "go_id": "GO:0098552",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            }
+          ]
+        }
+      },
+      "query": [
+        "53942"
+      ]
+    },
+    {
+      "gene": {
+        "gene_id": "100271550",
+        "symbol": "RPS12P21",
+        "description": "ribosomal protein S12 pseudogene 21",
+        "tax_id": "9606",
+        "taxname": "Homo sapiens",
+        "common_name": "human",
+        "type": "PSEUDO",
+        "orientation": "plus",
+        "genomic_regions": [
+          {
+            "gene_range": {
+              "accession_version": "NG_010980.3",
+              "range": [
+                {
+                  "begin": "101",
+                  "end": "599",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "type": "PSEUDOGENE"
+          }
+        ],
+        "chromosomes": [
+          "11"
+        ],
+        "nomenclature_authority": {
+          "authority": "HGNC",
+          "identifier": "HGNC:36464"
+        },
+        "synonyms": [
+          "RPS12_11_1175"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_000001405.40",
+            "assembly_name": "GRCh38.p14",
+            "annotation_name": "GCF_000001405.40-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "11",
+                "genomic_range": {
+                  "begin": "112218244",
+                  "end": "112218742",
+                  "orientation": "plus"
+                }
+              }
+            ]
+          },
+          {
+            "assembly_accession": "GCF_009914755.1",
+            "assembly_name": "T2T-CHM13v2.0",
+            "annotation_name": "GCF_009914755.1-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "11",
+                "genomic_range": {
+                  "begin": "112228583",
+                  "end": "112229081",
+                  "orientation": "plus"
+                }
+              }
+            ]
+          }
+        ],
+        "gene_ontology": {}
+      },
+      "query": [
+        "100271550"
+      ]
+    }
+  ],
+  "total_count": 3
+}

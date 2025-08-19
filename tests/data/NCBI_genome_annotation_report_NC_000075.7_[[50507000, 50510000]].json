@@ -1,0 +1,60 @@
+{
+  "reports": [
+    {
+      "annotation": {
+        "gene_id": "66925",
+        "symbol": "Sdhd",
+        "name": "succinate dehydrogenase complex, subunit D, integral membrane protein",
+        "gene_type": "protein-coding",
+        "genomic_regions": [
+          {
+            "gene_range": {
+              "accession_version": "NC_000075.7",
+              "range": [
+                {
+                  "begin": "50507640",
+                  "end": "50515149",
+                  "orientation": "minus"
+                }
+              ]
+            }
+          }
+        ],
+        "transcripts": [
+          {
+            "accession_version": "NM_025848.3",
+            "name": "succinate dehydrogenase complex, subunit D, integral membrane protein",
+            "cds": {
+              "accession_version": "NM_025848.3"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000075.7",
+                "genomic_range": {
+                  "begin": "50507640",
+                  "end": "50515149",
+                  "orientation": "minus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_080124.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial",
+              "length": 159
+            }
+          }
+        ],
+        "chromosomes": [
+          "9"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_000001635.27"
+          }
+        ]
+      },
+      "row_id": "25667"
+    }
+  ],
+  "total_count": 1
+}

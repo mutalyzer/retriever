@@ -1,0 +1,49 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "224589802"
+    ],
+    "224589802": {
+      "uid": "224589802",
+      "term": "224589802",
+      "caption": "NC_000011",
+      "title": "Homo sapiens chromosome 11, GRCh37.p13 Primary Assembly",
+      "extra": "gi|224589802|gnl|ASM:GCF_000001305|11|ref|NC_000011.9||gpp|GPC_000000035.1||gnl|NCBI_GENOMES|11",
+      "gi": 224589802,
+      "createdate": "2002/08/29",
+      "updatedate": "2013/08/13",
+      "taxid": 9606,
+      "slen": 135006516,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "projectid": "PRJNA168",
+      "genome": "chromosome",
+      "subtype": "chromosome",
+      "subname": "11",
+      "assemblygi": 224384758,
+      "assemblyacc": "CM000673.1",
+      "geneticcode": "1",
+      "organism": "Homo sapiens",
+      "statistics": "",
+      "comment": "This sequence has been updated.",
+      "status": "replaced",
+      "replacedby": "NC_000011.10",
+      "flags": 512,
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": false,
+        "value": "NC_000011.9"
+      },
+      "accessionversion": "NC_000011.9"
+    }
+  }
+}

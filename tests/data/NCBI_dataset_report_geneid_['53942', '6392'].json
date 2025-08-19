@@ -1,0 +1,535 @@
+{
+  "reports": [
+    {
+      "gene": {
+        "gene_id": "6392",
+        "symbol": "SDHD",
+        "description": "succinate dehydrogenase complex subunit D",
+        "tax_id": "9606",
+        "taxname": "Homo sapiens",
+        "common_name": "human",
+        "type": "PROTEIN_CODING",
+        "orientation": "plus",
+        "reference_standards": [
+          {
+            "gene_range": {
+              "accession_version": "NG_012337.3",
+              "range": [
+                {
+                  "begin": "5027",
+                  "end": "13948",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "type": "REFSEQ_GENE"
+          }
+        ],
+        "chromosomes": [
+          "11"
+        ],
+        "nomenclature_authority": {
+          "authority": "HGNC",
+          "identifier": "HGNC:10683"
+        },
+        "swiss_prot_accessions": [
+          "O14521"
+        ],
+        "ensembl_gene_ids": [
+          "ENSG00000204370"
+        ],
+        "omim_ids": [
+          "602690"
+        ],
+        "synonyms": [
+          "PGL",
+          "CBT1",
+          "CWS3",
+          "PGL1",
+          "QPs3",
+          "SDH4",
+          "cybS",
+          "CII-4",
+          "PPGL1",
+          "MC2DN3"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_000001405.40",
+            "assembly_name": "GRCh38.p14",
+            "annotation_name": "GCF_000001405.40-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "11",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                }
+              }
+            ]
+          },
+          {
+            "assembly_accession": "GCF_009914755.1",
+            "assembly_name": "T2T-CHM13v2.0",
+            "annotation_name": "GCF_009914755.1-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "11",
+                "genomic_range": {
+                  "begin": "112097127",
+                  "end": "112106049",
+                  "orientation": "plus"
+                }
+              }
+            ]
+          }
+        ],
+        "transcript_count": 5,
+        "protein_count": 4,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 4
+          },
+          {
+            "type": "NON_CODING",
+            "count": 1
+          }
+        ],
+        "gene_groups": [
+          {
+            "id": "6392",
+            "method": "NCBI Ortholog"
+          }
+        ],
+        "summary": [
+          {
+            "description": "This gene encodes a member of complex II of the respiratory chain, which is responsible for the oxidation of succinate. The encoded protein is one of two integral membrane proteins anchoring the complex to the matrix side of the mitochondrial inner membrane. Mutations in this gene are associated with the formation of tumors, including hereditary paraganglioma. Transmission of disease occurs almost exclusively through the paternal allele, suggesting that this locus may be maternally imprinted. There are pseudogenes for this gene on chromosomes 1, 2, 3, 7, and 18. Alternative splicing results in multiple transcript variants. [provided by RefSeq, Feb 2013]"
+          }
+        ],
+        "gene_ontology": {
+          "molecular_functions": [
+            {
+              "name": "electron transfer activity",
+              "go_id": "GO:0009055",
+              "evidence_code": "TAS",
+              "qualifier": "enables"
+            },
+            {
+              "name": "heme binding",
+              "go_id": "GO:0020037",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "heme binding",
+              "go_id": "GO:0020037",
+              "evidence_code": "ISS",
+              "qualifier": "enables"
+            },
+            {
+              "name": "metal ion binding",
+              "go_id": "GO:0046872",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "protein binding",
+              "go_id": "GO:0005515",
+              "evidence_code": "IPI",
+              "qualifier": "enables"
+            },
+            {
+              "name": "succinate dehydrogenase (quinone) activity",
+              "go_id": "GO:0008177",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "ubiquinone binding",
+              "go_id": "GO:0048039",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "ubiquinone binding",
+              "go_id": "GO:0048039",
+              "evidence_code": "ISS",
+              "qualifier": "enables"
+            }
+          ],
+          "biological_processes": [
+            {
+              "name": "cellular response to hypoxia",
+              "go_id": "GO:0071456",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "mitochondrial electron transport, succinate to ubiquinone",
+              "go_id": "GO:0006121",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "mitochondrial electron transport, succinate to ubiquinone",
+              "go_id": "GO:0006121",
+              "evidence_code": "NAS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "proton motive force-driven mitochondrial ATP synthesis",
+              "go_id": "GO:0042776",
+              "evidence_code": "NAS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "regulation of catecholamine secretion",
+              "go_id": "GO:0050433",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "tricarboxylic acid cycle",
+              "go_id": "GO:0006099",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "tricarboxylic acid cycle",
+              "go_id": "GO:0006099",
+              "evidence_code": "IDA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "tricarboxylic acid cycle",
+              "go_id": "GO:0006099",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "tricarboxylic acid cycle",
+              "go_id": "GO:0006099",
+              "evidence_code": "NAS",
+              "qualifier": "involved_in"
+            }
+          ],
+          "cellular_components": [
+            {
+              "name": "membrane",
+              "go_id": "GO:0016020",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrial envelope",
+              "go_id": "GO:0005740",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrial envelope",
+              "go_id": "GO:0005740",
+              "evidence_code": "TAS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrial inner membrane",
+              "go_id": "GO:0005743",
+              "evidence_code": "IDA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrial inner membrane",
+              "go_id": "GO:0005743",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrial inner membrane",
+              "go_id": "GO:0005743",
+              "evidence_code": "ISS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrial inner membrane",
+              "go_id": "GO:0005743",
+              "evidence_code": "NAS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrial inner membrane",
+              "go_id": "GO:0005743",
+              "evidence_code": "TAS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "HTP",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "TAS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "respiratory chain complex II (succinate dehydrogenase)",
+              "go_id": "GO:0045273",
+              "evidence_code": "IBA",
+              "qualifier": "part_of"
+            },
+            {
+              "name": "respiratory chain complex II (succinate dehydrogenase)",
+              "go_id": "GO:0045273",
+              "evidence_code": "IDA",
+              "qualifier": "part_of"
+            },
+            {
+              "name": "respiratory chain complex II (succinate dehydrogenase)",
+              "go_id": "GO:0045273",
+              "evidence_code": "ISS",
+              "qualifier": "part_of"
+            },
+            {
+              "name": "respiratory chain complex II (succinate dehydrogenase)",
+              "go_id": "GO:0045273",
+              "evidence_code": "TAS",
+              "qualifier": "part_of"
+            }
+          ]
+        }
+      },
+      "query": [
+        "6392"
+      ]
+    },
+    {
+      "gene": {
+        "gene_id": "53942",
+        "symbol": "CNTN5",
+        "description": "contactin 5",
+        "tax_id": "9606",
+        "taxname": "Homo sapiens",
+        "common_name": "human",
+        "type": "PROTEIN_CODING",
+        "orientation": "plus",
+        "reference_standards": [
+          {
+            "gene_range": {
+              "accession_version": "NG_047156.1",
+              "range": [
+                {
+                  "begin": "4974",
+                  "end": "1342910",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "type": "REFSEQ_GENE"
+          }
+        ],
+        "chromosomes": [
+          "11"
+        ],
+        "nomenclature_authority": {
+          "authority": "HGNC",
+          "identifier": "HGNC:2175"
+        },
+        "swiss_prot_accessions": [
+          "O94779"
+        ],
+        "ensembl_gene_ids": [
+          "ENSG00000149972"
+        ],
+        "omim_ids": [
+          "607219"
+        ],
+        "synonyms": [
+          "NB-2",
+          "HNB-2s"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_000001405.40",
+            "assembly_name": "GRCh38.p14",
+            "annotation_name": "GCF_000001405.40-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "sequence_name": "11",
+                "genomic_range": {
+                  "begin": "99020949",
+                  "end": "100358885",
+                  "orientation": "plus"
+                }
+              }
+            ]
+          },
+          {
+            "assembly_accession": "GCF_009914755.1",
+            "assembly_name": "T2T-CHM13v2.0",
+            "annotation_name": "GCF_009914755.1-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060935.1",
+                "sequence_name": "11",
+                "genomic_range": {
+                  "begin": "99027636",
+                  "end": "100368160",
+                  "orientation": "plus"
+                }
+              }
+            ]
+          }
+        ],
+        "transcript_count": 20,
+        "protein_count": 20,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 4
+          },
+          {
+            "type": "PROTEIN_CODING_MODEL",
+            "count": 16
+          }
+        ],
+        "gene_groups": [
+          {
+            "id": "53942",
+            "method": "NCBI Ortholog"
+          }
+        ],
+        "summary": [
+          {
+            "description": "The protein encoded by this gene is a member of the immunoglobulin superfamily, and contactin family, which mediate cell surface interactions during nervous system development. This protein is a glycosylphosphatidylinositol (GPI)-anchored neuronal membrane protein that functions as a cell adhesion molecule. It may play a role in the formation of axon connections in the developing nervous system. Alternatively spliced transcript variants encoding different isoforms have been described for this gene. [provided by RefSeq, Aug 2011]"
+          }
+        ],
+        "gene_ontology": {
+          "molecular_functions": [
+            {
+              "name": "cell-cell adhesion mediator activity",
+              "go_id": "GO:0098632",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            }
+          ],
+          "biological_processes": [
+            {
+              "name": "axon guidance",
+              "go_id": "GO:0007411",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "brain development",
+              "go_id": "GO:0007420",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "cell adhesion",
+              "go_id": "GO:0007155",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "cell-cell adhesion",
+              "go_id": "GO:0098609",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "presynapse assembly",
+              "go_id": "GO:0099054",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "sensory perception of sound",
+              "go_id": "GO:0007605",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            }
+          ],
+          "cellular_components": [
+            {
+              "name": "GABA-ergic synapse",
+              "go_id": "GO:0098982",
+              "evidence_code": "IEA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "axon",
+              "go_id": "GO:0030424",
+              "evidence_code": "IBA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "extracellular region",
+              "go_id": "GO:0005576",
+              "evidence_code": "TAS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "membrane",
+              "go_id": "GO:0016020",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "plasma membrane",
+              "go_id": "GO:0005886",
+              "evidence_code": "IBA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "plasma membrane",
+              "go_id": "GO:0005886",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "plasma membrane",
+              "go_id": "GO:0005886",
+              "evidence_code": "TAS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "presynaptic membrane",
+              "go_id": "GO:0042734",
+              "evidence_code": "IEA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "side of membrane",
+              "go_id": "GO:0098552",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            }
+          ]
+        }
+      },
+      "query": [
+        "53942"
+      ]
+    }
+  ],
+  "total_count": 2
+}
