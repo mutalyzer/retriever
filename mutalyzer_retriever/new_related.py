@@ -57,7 +57,7 @@ def get_uids(linkset:dict):
 
 
 def _get_grch37_chr_accession(chr, timeout):
-    url = f"{NCBI_URLs("Datasets_genome")}/accession/GCF_000001405.25/sequence_reports?chromosomes={chr}&role_filters=assembled-molecule" 
+    url = f"{NCBI_URLs('Datasets_genome')}/accession/GCF_000001405.25/sequence_reports?chromosomes={chr}&role_filters=assembled-molecule" 
     response = json.loads(request(url=url, timeout=timeout))
     return response.get("reports", [{}])[0].get("refseq_accession")
 
@@ -334,7 +334,7 @@ def _get_related_by_gene_symbol(gene_symbol, timeout):
 
 
 def _get_assembly_accession(accession, timeout):
-    url = f"{NCBI_URLs("Datasets_genome")}/sequence_accession/{accession}/sequence_assemblies"
+    url = f"{NCBI_URLs('Datasets_genome')}/sequence_accession/{accession}/sequence_assemblies"
     assembly_json = json.loads(request(url=url, timeout=timeout))
     accessions = assembly_json.get("accessions")
     if isinstance(accessions, list) and accessions:
