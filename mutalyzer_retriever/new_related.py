@@ -35,7 +35,7 @@ def _get_current_EBI_version(accessions_without_version, timeout=10):
     url = f"https://rest.ensembl.org/lookup/id/{accessions_without_version}?content-type=application/json"
     response = json.loads(request(url=url, timeout=timeout))
     if response:
-        return f"{accessions_without_version}.{response.get("version")}"
+        return f"{accessions_without_version}.{response.get('version')}"
 
 
 def NCBI_URLs(endpoint: str):
