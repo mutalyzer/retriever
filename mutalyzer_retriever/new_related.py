@@ -1,18 +1,314 @@
-# A script to get related references using Datasets or Entrez
+# A script to get related references from NCBI and EBI
 
 import json
 import requests
 import jsonschema
+import argparse
 from urllib.parse import quote
 from jsonschema import validate
 from mutalyzer_retriever.related import _get_summary_result_one
 from mutalyzer_retriever.request import Http400, RequestErrors, request
 
 
+def NCBI_URLs(endpoint: str):
+    URLs = {
+        "ELink": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi",
+        "ESummary": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi",
+        "EFetch": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
+        "Datasets_gene": "https://api.ncbi.nlm.nih.gov/datasets/v2/gene",
+        "Datasets_genome": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome"
+    }
+    return URLs.get(endpoint)
 
-def _get_current_NCBI_version(summary):
-    if summary.get("accessionversion"):
-        return summary.get("accessionversion")
+def clean_dict(d):
+    """Remove keys with None, empty string, or empty list values."""
+    return {k: v for k, v in d.items() if v not in (None, "", [])}
+
+
+def merge_ncbi_ebi(ebi_related, ncbi_related):
+    related = {
+        "assemblies": [],
+        "genes": [],
+    }
+
+    if ncbi_related:
+        related = {
+            "assemblies": ncbi_related["assemblies"],
+            "genes": ncbi_related["genes"],
+        }
+
+        if not related["genes"]:
+            return related 
+        # Build a mapping from Ensembl transcript_accession to transcript entry
+        ncbi_transcripts = ncbi_related["genes"][0]["transcripts"]
+        transcript_index = {}
+        for transcript in ncbi_transcripts:
+            for provider in transcript.get("providers", []):
+                tid = provider.get("transcript_accession")
+                provider_name = provider.get("name")
+                if tid and provider_name == "ENSEMBL":
+                    transcript_index[tid] = transcript
+        
+        for ebi_transcript in ebi_related:
+            ebi_tid = ebi_transcript.get('transcript_accession')
+            if not ebi_tid:
+                continue
+            provider_entry = clean_dict({
+                "name": "ENSEMBL",
+                "transcript_accession": ebi_tid,
+                "protein_accession": ebi_transcript.get("protein_accession"),
+                "description": ebi_transcript.get("description")
+            })
+            
+            if ebi_tid in transcript_index:
+                existing = transcript_index[ebi_tid]
+                providers = existing.get("providers", [])
+
+                replaced = False
+                for i, p in enumerate(providers):
+                    if p.get("name") == "ENSEMBL":
+                        providers[i] = provider_entry
+                        replaced = True
+                        break
+                if not replaced:
+                    providers.append(provider_entry)
+            else:
+                new_transcript = clean_dict({
+                    "providers": [provider_entry],
+                    "tag": ebi_transcript.get("tag")
+                })
+                ncbi_transcripts.append(new_transcript)
+    return related
+
+
+
+
+def _get_grch37_chr_accession(chr, timeout=10):
+    url = f"{NCBI_URLs('Datasets_genome')}/accession/GCF_000001405.25/sequence_reports?chromosomes={chr}&role_filters=assembled-molecule" 
+    response = json.loads(request(url=url, timeout=timeout))
+    return response.get("reports", [{}])[0].get("refseq_accession")
+
+
+def _parse_dataset_report(json_report):
+    """
+    Parses NCBI gene dataset report and returns taxname and cleaned data for assemblies and genes.
+    Args:
+        data (dict): JSON data from NCBI dataset API.
+
+    Returns:
+        taxname,
+        dict: {"assemblies": list, "genes": list}    
+    """
+    assemblies = []
+    genes = []
+    ensembl_genes = []
+    taxname = None
+
+    for report in json_report.get("reports", []):
+        gene = report.get("gene", {})
+        symbol = gene.get("symbol", [])
+        ref_accession = None
+        gene_description = gene.get("description", [])
+        ensembl_gene = gene.get("ensembl_gene_ids")
+        
+        # Extract taxname (only once)
+        if not taxname:
+            taxname = gene.get("taxname", "Unknown")
+
+        sequence_name = None
+
+        for annotation in gene.get("annotations", []):
+            for loc in annotation.get("genomic_locations", []):
+                genomic_acc = loc.get("genomic_accession_version")
+                sequence_name = loc.get("sequence_name")
+                assembly_name = annotation.get("assembly_name")
+
+                clean_assembly = clean_dict({
+                    "assembly_name": assembly_name,
+                    "accession": genomic_acc
+                })
+                if clean_assembly:
+                    assemblies.append(clean_assembly)
+
+        # Add GRCh37 chromosome accession
+        if taxname == "Homo sapiens":
+            grch37_acc = _get_grch37_chr_accession(sequence_name)
+            grch37_entry = clean_dict({
+                "accession": grch37_acc,
+                "accession_name": "GRCh37.p13"
+            })
+
+            if grch37_entry:
+                assemblies.append(grch37_entry)
+
+        # Handle reference standard accessions
+        ref_acc = gene.get("reference_standards", [])
+        hgnc_id_str = gene.get("nomenclature_authority", {}).get("identifier")
+        hgnc_id = hgnc_id_str.split(':')[1] if hgnc_id_str else None
+
+        ensembl_gene_id = ensembl_gene[0] if ensembl_gene else None
+        ncbi_gene_id = gene.get("gene_id", [])
+
+        # Build provider dicts, removing empty fields
+        ncbi = clean_dict({
+            "name": "NCBI",
+            "accession": ncbi_gene_id,
+        })
+
+        ensembl = clean_dict({
+            "name": "ENSEMBL",
+            "accession": ensembl_gene_id,
+        })
+
+        providers = [p for p in (ncbi, ensembl) if len(p) > 1]
+        if not providers:
+            continue  # skip if both are empty        
+
+        for ref in ref_acc:
+            ref_accession = ref.get("gene_range", {}).get("accession_version")
+
+        gene_entry = clean_dict({
+            "name": symbol,
+            "refseqgene": ref_accession,
+            "hgnc_id": hgnc_id,
+            "description": gene_description,
+            "providers": providers
+        })
+        if gene_entry:
+            genes.append(gene_entry)
+    return taxname, {"assemblies": assemblies, "genes": genes}
+
+
+def _parse_product_report(data):
+    """
+    Parse NCBI product report json into a dict:
+    Args:
+        data (dict): JSON data from NCBI product API.
+
+    Returns:
+        dict: Mapping gene_symbol -> list of transcript info dicts
+    """
+    genes_dict = {}
+
+    for report in data.get("reports", []):
+        product = report.get("product", {})
+        transcripts = product.get("transcripts", [])
+        symbol = product.get("symbol", "UNKNOWN")
+        gene_products = []
+
+        transcripts = product.get("transcripts", [])
+
+        for transcript in transcripts:          
+            ncbi_transcript_acc = transcript.get("accession_version")
+            ncbi_trancript_description = transcript.get("name")
+            ncbi_protein = transcript.get("protein", {})
+            ncbi_protein_acc = ncbi_protein.get("accession_version")
+            ensembl_transcript_acc = transcript.get("ensembl_transcript")
+            ensembl_protein_acc = ncbi_protein.get("ensembl_protein")
+
+            # Build provider dicts, removing empty fields
+            ncbi = clean_dict({
+                "name": "NCBI",
+                "transcript_accession": ncbi_transcript_acc,
+                "protein_accession": ncbi_protein_acc,
+                "description": ncbi_trancript_description
+            })
+
+            ensembl = clean_dict({
+                "name": "ENSEMBL",
+                "transcript_accession": ensembl_transcript_acc,
+                "protein_accession": ensembl_protein_acc
+            })
+
+            providers = [p for p in (ncbi, ensembl) if len(p) > 1]
+            if not providers:
+                continue  # skip if both are empty
+
+            product_entry = clean_dict({
+                "providers": providers,
+                "tag": transcript.get("select_category")
+            })
+
+            gene_products.append(product_entry)
+
+        if gene_products:
+            genes_dict[symbol] = gene_products
+
+    return genes_dict
+
+
+def _merge_related(genomic_related, product_related):
+    """
+    Merges genomic and product-related gene data.
+    """
+    related = {
+        "assemblies": [clean_dict(a) for a in genomic_related.get("assemblies", []) if clean_dict(a)],
+        "genes": []
+    }
+ 
+    for gene in genomic_related.get("genes", []):
+        symbol = gene.get("name")
+  
+
+        transcripts = product_related.get(symbol, [])
+ 
+        if not transcripts:
+            continue  
+
+        gene_info = clean_dict({
+            "name": symbol,
+            "hgnc_id": gene.get("hgnc_id"),
+            "refseqgene": gene.get("refseqgene"),
+            "description": gene.get("description"),
+            "transcripts": transcripts
+        })
+
+        if gene_info:
+            related["genes"].append(gene_info)
+
+    # Sort genes alphabetically by name
+    related["genes"].sort(key=lambda g: g.get("name", ""))
+
+    return related
+
+
+def _get_related_by_gene_symbol(gene_symbol,taxname="Homo Sapiens", timeout=10):
+    """
+    Given a gene symbol, return a set of related sequence accessions (genomic and/or products).
+    Returns (taxname, related_dict), or (None, None) if nothing found.
+    """
+    if not gene_symbol:
+        return None, None
+    related = dict()
+    genomic_related = None
+    product_related = None
+
+    base_url = NCBI_URLs("Datasets_gene")
+    taxname_url_str = quote(taxname, safe="")
+    dataset_report_url = f"{base_url}/symbol/{gene_symbol}/taxon/{taxname_url_str}/dataset_report"
+
+    # Fetch and parse genomic related data
+    dataset_json = json.loads(request(url=dataset_report_url, timeout=timeout))
+    _, genomic_related = _parse_dataset_report(dataset_json) if dataset_json else (None, None)
+
+
+    # Fetch and parse product related data
+    product_url = f"{base_url}/symbol/{gene_symbol}/taxon/{taxname_url_str}/product_report"
+    product_json = json.loads(request(url=product_url, timeout=timeout))
+    product_related = _parse_product_report(product_json) if product_json else (None, None)
+
+    if product_related or genomic_related:     
+        related = _merge_related(genomic_related, product_related)
+        return "Homo sapiens", related   
+    return None, None
+
+
+
+def get_uids(linkset:dict):
+    uids_from_linkset = []
+    for linksetdb in linkset["linksetdbs"]:
+        uids_from_linkset.extend(linksetdb["links"])
+    return uids_from_linkset
 
 
 def _fetch_ncbi_esummary(db, query_id, timeout=10):
@@ -31,140 +327,119 @@ def _get_summary_result_one(summary):
     return summary["result"][summary["result"]["uids"][0]]
 
 
-def _get_current_EBI_version(accessions_without_version, timeout=10):
-    url = f"https://rest.ensembl.org/lookup/id/{accessions_without_version}?content-type=application/json"
-    response = json.loads(request(url=url, timeout=timeout))
-    if response:
-        return f"{accessions_without_version}.{response.get('version')}"
+def _fetch_ebi_lookup_grch38(accession_base: str, expand= 1, timeout=10):
+    if not accession_base:
+        return
+    url = f"https://rest.ensembl.org/lookup/id/{accession_base}?content-type=application/json;expand={expand}"
+    return json.loads(request(url=url, timeout=timeout))
 
 
-def NCBI_URLs(endpoint: str):
-    URLs = {
-        "ELink": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi",
-        "ESummary": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi",
-        "EFetch": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
-        "Datasets_gene": "https://api.ncbi.nlm.nih.gov/datasets/v2/gene",
-        "Datasets_genome": "https://api.ncbi.nlm.nih.gov/datasets/v2/genome"
-    }
-    return URLs.get(endpoint)
+def _parse_ebi_gene_lookup_json(ebi_gene_json):
+    ebi_related_transcripts = []
+    gene_symbol = ebi_gene_json.get("display_name")
+    taxname = ebi_gene_json.get("species").replace("_", " ")
+    
+    for transcript in ebi_gene_json.get("Transcript", []):
+        translation = transcript.get("Translation", {})
+
+        transcript_id = transcript.get("id")
+        transcript_version = transcript.get("version")
+        protein_id = translation.get("id")
+        protein_version = translation.get("version")
+
+        if not transcript_id or not transcript_version:
+            continue
+        if protein_id and protein_version:
+            protein_accession = f"{protein_id}.{protein_version}"
+        else:
+            protein_accession = None
+
+        ebi_related_transcripts.append({
+            "name": "ENSEMBL",
+            "transcript_accession": f"{transcript_id}.{transcript_version}",
+            "protein_accession": protein_accession,
+            "description": transcript.get("display_name")
+        })
+
+    return taxname, gene_symbol, ebi_related_transcripts    
 
 
-def get_uids(linkset:dict):
-    uids_from_linkset = []
-    for linksetdb in linkset["linksetdbs"]:
-        uids_from_linkset.extend(linksetdb["links"])
-    return uids_from_linkset
+def _parse_ebi_transcript_lookup_json(ebi_transcript_json):
+    ebi_gene_json = _fetch_ebi_lookup_grch38(ebi_transcript_json.get("Parent"))
+    taxname, gene_symbol, ebi_related_transcripts = _parse_ebi_lookup_json(ebi_gene_json)
+    return taxname, gene_symbol, ebi_related_transcripts
+
+def _parse_ebi_protein_lookup_json(ebi_protein_json):
+    ebi_transcript_json = _fetch_ebi_lookup_grch38(ebi_protein_json.get("Parent"))
+    taxname, gene_symbol, ebi_related_transcripts = _parse_ebi_transcript_lookup_json(ebi_transcript_json)
+    return taxname, gene_symbol, ebi_related_transcripts
+                                                   
+
+def _parse_ebi_lookup_json(ebi_json):
+    if ebi_json.get("object_type") == "Gene" and ebi_json.get("Transcript"):
+        return _parse_ebi_gene_lookup_json(ebi_json)
+    elif ebi_json.get("object_type") == "Transcript" and ebi_json.get("Parent"):
+        return _parse_ebi_transcript_lookup_json(ebi_json)
+    elif ebi_json.get("object_type") == "Translation" and ebi_json.get("Parent"):
+        return _parse_ebi_protein_lookup_json(ebi_json)
 
 
-def _get_grch37_chr_accession(chr, timeout):
-    url = f"{NCBI_URLs('Datasets_genome')}/accession/GCF_000001405.25/sequence_reports?chromosomes={chr}&role_filters=assembled-molecule" 
-    response = json.loads(request(url=url, timeout=timeout))
-    return response.get("reports", [{}])[0].get("refseq_accession")
-
-
-def _parse_dataset_report(json_report):
-    """
-    Groups unique genomic_accession_version and reference standard accession_version values by gene symbol.
-    Converts genomic accession versions into a list of dicts with 'assembly_name' and 'accession'.
-    Also returns the taxname as a dictionary with an 'organism' key.
-
-    Args:
-        json_report (dict): JSON data returned from the NCBI API.
-
-    Returns:
-        dict: A dictionary with 'taxname' as a dictionary and 'assemblies' as a list of dicts.
-    """
-    assemblies = []
-    refseqgenes = []
+def _get_related_by_accession_from_EBI(accession_base: str):
+    gene = None
+    ebi_related_transcripts = []
     taxname = None
 
-    # Iterate through the reports to extract assembly and accession version information
-    for report in json_report.get("reports", []):
-        gene = report.get("gene", {})
-        symbol = gene.get("symbol", [])
-        
-        # Extract taxname (organism name)
-        if not taxname:
-            taxname = gene.get("taxname", "Unknown")
+    try:
+        ebi_lookup_json = _fetch_ebi_lookup_grch38(accession_base)
+    except Http400 as e:
+        try:
+            error_json = e.response.json()
+            if error_json.get("error") == "Expand option only available for Genes and Transcripts":
+                ebi_lookup_json = _fetch_ebi_lookup_grch38(accession_base, expand=0)
+                parsed = _parse_ebi_lookup_json(ebi_lookup_json)
+                if parsed:
+                    taxname, gene, ebi_related_transcripts = parsed
+                    return taxname, gene, ebi_related_transcripts
+            else:
+                raise
+        except Exception as e:
+            raise RuntimeError("Failed to parse error : {e}")
 
-        # Get genomic accessions and convert them into the desired format
-        for annotation in gene.get("annotations", []):
-            for loc in annotation.get("genomic_locations", []):
-                genomic_acc = loc.get("genomic_accession_version")
-                if genomic_acc:
-                    assembly_name = annotation.get("assembly_name")
-                    assemblies.append({
-                        "assembly_name": assembly_name,
-                        "accession": genomic_acc
-                    })
-
-        # Optionally, handle reference standard accessions if needed (for completeness)
-        ref_acc = gene.get("reference_standards", [])
-        hgnc_id_str = gene.get('nomenclature_authority', {}).get('identifier', None)
-        hgnc_id = hgnc_id_str.split(':')[1] if hgnc_id_str else None
-        for ref in ref_acc:
-            ref_accession = ref.get("gene_range", {}).get("accession_version", None)
-            
-            if ref_accession:
-                refseqgenes.append({
-                    "name": symbol,
-                    "accession": ref_accession,
-                    "hgnc_id": hgnc_id
-                })
-
-    return taxname, {"assemblies":assemblies, "refseqgene":refseqgenes}
+    if ebi_lookup_json and not ebi_lookup_json.get("error"):
+        parsed = _parse_ebi_lookup_json(ebi_lookup_json)
+        if parsed:
+            taxname, gene, ebi_related_transcripts = parsed
+        else:
+            raise ValueError(f"Failed to retrieve related data from ENSEMBL for {accession_base}")
+    return taxname, gene, ebi_related_transcripts
 
 
+def filter_related(ID_base, related):
+    filtered_genes = []
 
+    for gene in related.get("genes", []):
+        filtered_transcripts = []
+        for transcript in gene.get("transcripts", []):
+            has_tag = "tag" in transcript
+            matching_providers = [
+                provider for provider in transcript.get("providers", [])
+                if ID_base == (provider.get("transcript_accession") or "").split(".")[0]
+                or ID_base == (provider.get("protein_accession") or "").split(".")[0]
+            ]
 
-def _parse_product_report(data):
-    """
-    Returns a dictionary mapping gene symbol to a list of transcript mappings:
-    Each transcript mapping is a dictionary:
-    {
-        "transcript": transcript_acc,
-        "ensembl_transcript": ensembl_transcript,
-        "protein": protein_acc,
-        "ensembl_protein": ensembl_protein,
-        "Tag": "mane_select" (if present)
-    }
+            if has_tag or matching_providers:
+                filtered_transcript = dict(transcript) # shallow copy
+                if has_tag:
+                    filtered_transcript["providers"] = transcript.get("providers", [])
+                else:
+                    filtered_transcript["providers"] = matching_providers
+                filtered_transcripts.append(filtered_transcript)
+        if filtered_transcripts:
+            filtered_gene = dict(gene)
+            filtered_gene["transcripts"] = filtered_transcripts
+            filtered_genes.append(filtered_gene)
 
-    Args:
-        data (dict): JSON data from NCBI API.
-
-    Returns:
-        dict: Mapping gene_symbol -> list of transcript info dicts
-    """
-    genes_dict = {}
-
-    for report in data.get("reports", []):
-        product = report.get("product", {})
-        transcripts = product.get("transcripts", [])
-        symbol = product.get("symbol", "UNKNOWN")
-        gene_products = []
-
-        for transcript in transcripts:
-            
-            gene_transcript = []
-            transcript_acc = transcript.get("accession_version")
-            protein = transcript.get("protein", {})
-
-            if not transcript_acc:
-                break
-
-            # if transcript.get("select_category") == "MANE_SELECT":
-            #     gene_product["tag"] = "mane_select"
-
-            gene_transcript.append({"name":"NCBI", "transcript_id":transcript.get("accession_version"), "protein_id":protein.get("accession_version")})
-            gene_transcript.append({"name":"ENSEMBL", "transcript_id":transcript.get("ensembl_transcript"), "protein_id":protein.get("ensembl_protein")})
-            # gene_product["providers"] = gene_transcript
-            gene_products.append({"providers":gene_transcript, "tag":transcript.get("select_category")})
-
-
-        genes_dict[symbol] = gene_products
-
-
-    return genes_dict
+    return {"assemblies": related.get("assemblies"), "genes": filtered_genes}
 
 
 
@@ -173,8 +448,8 @@ def _fetch_related_from_ncbi_dataset_report(gene_ids, timeout):
     gene_id_str = quote(",".join(map(str, gene_ids)))
     url = f"{base_url}/id/{gene_id_str}/dataset_report"
     genes_dataset_report_json = json.loads(request(url=url, timeout=timeout))
-    taxname, dataset_relted = _parse_dataset_report(genes_dataset_report_json)
-    return taxname, dataset_relted
+    taxname, dataset_related = _parse_dataset_report(genes_dataset_report_json)
+    return taxname, dataset_related
 
 
 def _fetch_related_from_ncbi_product_report(gene_ids, taxname, timeout):
@@ -183,7 +458,7 @@ def _fetch_related_from_ncbi_product_report(gene_ids, taxname, timeout):
     url = f"{base_url}/id/{gene_id_str}/product_report"
     genes_product_report_json = json.loads(request(url=url, timeout=timeout))
     if genes_product_report_json:
-        return _get_closest_products(_parse_product_report(genes_product_report_json),None, taxname=="Homo sapiens")   
+        return _parse_product_report(genes_product_report_json)
 
 
 def _get_gene_related(gene_ids, timeout):
@@ -193,156 +468,7 @@ def _get_gene_related(gene_ids, timeout):
     return genomic_related, product_related
 
 
-def _get_closest_products(product_related, accession_without_version, human):
-
-    """
-    Filters product data for each gene to include only entries where:
-    - the transcript matches the given accession (ignoring version), or
-    - the product is marked as "mane_select".
-
-    Removes duplicate product entries.
-
-    Args:
-        product_related (dict): Mapping of gene -> list of product dicts.
-        accession_without_version (str): Transcript accession without version (e.g., "NM_003002").
-
-    Returns:
-        dict: Filtered mapping with only relevant, deduplicated product entries.
-    """
-    if not human:
-        return product_related
-    else:
-        closest_related = {}
- 
-        for gene, products in product_related.items():
-            filtered_products = []
-
-            for product in products:
-                transcript_ids = [item['transcript_id'].split(".")[0] for item in product.get("providers") if item.get('transcript_id') is not None]
-
-                select = product.get("tag")
-                filters = (
-                    select != "None" or
-                    (transcript_ids and accession_without_version in transcript_ids)
-                )
-
-                if filters:
-                    filtered_products.append(product)
-            if filtered_products:
-                closest_related[gene] = filtered_products
-
-
-    return closest_related
-
-
-def sort_related(related):
-    #TODO:  sort by key gene_name
-    assemblies = related.pop("Assemblies")
-    sorted_related = {"Assemblies": assemblies}
-    for key in sorted(related.keys()):
-        sorted_related[key] = related[key]
-    return sorted_related
-
-
-
-def _merge_related(genomic_related, product_related):
-    related = {}
-
-    related["assemblies"] = genomic_related["assemblies"]
-    related["genes"] = []
-
-    # Add gene-related info and corresponding products
-    for gene in genomic_related["refseqgene"]:
-        # Prepare the gene information for the final result
-        gene_info = {
-            "name": gene["name"],
-            "hgnc_id": gene["hgnc_id"],
-            "transcripts": product_related[gene["name"]],
-            "providers": [{"name":"NCBI", "accession": gene.get("accession")}]
-        }
-        related["genes"].append(gene_info)
-
-    # Add taxname (if it exists in genomic data)
-    taxname = genomic_related.get("taxname", None)
-    if taxname:
-        related["taxname"] = {"organism": taxname}
-    return related
-    # Sort the final dictionary (if needed)
-    return sort_related(related)
-
-
-
-
-def _get_related_by_accession(accessions, timeout):
-    """
-    Input: A sequence (transcripts or proteins) accession.
-    Output: A set of related sequence accessions.
-    """
-    related = dict()
-    genomic_related = None
-    product_related = None
-
-
-
-    base_url = NCBI_URLs("Datasets_gene")
-    accessions_without_versions = accessions.split(".")[0]
-    dataset_report_url = f"{base_url}/accession/{accessions_without_versions}/dataset_report"
-
-
-    dataset_json = json.loads(request(url=dataset_report_url, timeout=timeout))
-    if dataset_json:
-        taxname, genomic_related = _parse_dataset_report(dataset_json)
-
-    product_related_url = f"{base_url}/accession/{accessions_without_versions}/product_report"
-    product_json = json.loads(request(url=product_related_url, timeout=timeout))
-    if product_json:
-        product_related = _get_closest_products(_parse_product_report(product_json), accessions_without_versions, taxname=="Homo sapiens")
-    if genomic_related or product_related:
-        related = _merge_related(genomic_related, product_related)
-        return taxname, related
-    return None, None
-
-
-def _get_related_by_gene_symbol(gene_symbol, timeout):
-    """
-    Input: A sequence (transcripts or proteins) accession.
-    Output: A set of related sequence accessions.
-    """
-    related = dict()
-    genomic_related = None
-    product_related = None
-
-
-    # Build request to NCBI ELink
-    base_url = NCBI_URLs("Datasets_gene")
-    
-    dataset_report_url = f"{base_url}/symbol/{gene_symbol.upper()}/taxon/9606/dataset_report"
-
-
-    dataset_json = json.loads(request(url=dataset_report_url, timeout=timeout))
-    if dataset_json:
-        taxname, genomic_related = _parse_dataset_report(dataset_json)
-
-    product_related_url = f"{base_url}/symbol/{gene_symbol.upper()}/taxon/9606/product_report"
-    product_json = json.loads(request(url=product_related_url, timeout=timeout))
-    if product_json:
-        product_related = _get_closest_products(_parse_product_report(product_json), None, human=True)
-    if product_related or genomic_related:
-        related = _merge_related(genomic_related, product_related)
-        return taxname, related   
-    return None, None
-
-
-def _get_assembly_accession(accession, timeout):
-    url = f"{NCBI_URLs('Datasets_genome')}/sequence_accession/{accession}/sequence_assemblies"
-    assembly_json = json.loads(request(url=url, timeout=timeout))
-    accessions = assembly_json.get("accessions")
-    if isinstance(accessions, list) and accessions:
-        return accessions[0]
-    return None
-
-
-def _get_related_by_accession_and_location(accession, locations, timeout):
+def _get_related_by_chr_location(accession, locations, timeout):
     gene_ids = list()
     related = dict()
     assembly_accession = _get_assembly_accession(accession, timeout=timeout)
@@ -367,100 +493,95 @@ def _get_related_by_accession_and_location(accession, locations, timeout):
     return taxname, related
 
 
-from schema import SchemaError
-from mutalyzer_retriever.new_related_schema import query_schema
+def _get_related_by_accession_from_NCBI(accessions, timeout):
+    """
+    Input: A sequence (transcripts or proteins) accession.
+    Output: A set of related sequence accessions.
+    """
+    related = dict()
+    genomic_related = None
+    product_related = None
 
-def get_new_related(accession, locations=None, timeout=30):
-    if locations is None:
-        locations = [0, 0]
+    base_url = NCBI_URLs("Datasets_gene")
+    accessions_without_versions = accessions.split(".")[0]
+    dataset_report_url = f"{base_url}/accession/{accessions_without_versions}/dataset_report"
 
-    accession_base = accession.split(".")[0]
+    dataset_json = json.loads(request(url=dataset_report_url, timeout=timeout))
+    if dataset_json:
+        taxname, genomic_related = _parse_dataset_report(dataset_json)
 
-    query_output = {
-        "query": f"{accession}+{locations}",
-        "organism": "Unknown",
-        "moltype": "Unknown",
-        "accession": accession,
-        "related": {
-            "assemblies": [],
-            "genes": []
-        }
-    }
+    product_related_url = f"{base_url}/accession/{accessions_without_versions}/product_report"
+    product_json = json.loads(request(url=product_related_url, timeout=timeout))
+    if product_json:
+        product_related = _parse_product_report(product_json)
+    if genomic_related or product_related:
+        related = _merge_related(genomic_related, product_related)
+        return taxname,  related
+    return None, None, None
 
-    summary = _get_summary_result_one(
-        _fetch_ncbi_esummary("nucleotide", accession_base, timeout)
-    )
+def get_new_related(ID, locations=[0,0], timeout=30):
+    """
+    Input: A refseq identifier or human gene name.
+    Output: A dictionary of related.
+    """
 
+    ID_base = ID.split(".")[0]
+
+    related = {}   
+
+    # Ensembl declares its identifiers should be in the form of 
+    # ENS[species prefix][feature type prefix][a unique eleven digit number]
+    # See at https://www.ensembl.org/info/genome/stable_ids/index.html
+    if ID.startswith("ENS"):
+        taxname, gene_sysmbol, genes_ebi = _get_related_by_accession_from_EBI(ID_base)
+        print(taxname)
+        _, related_ncbi = _get_related_by_gene_symbol(gene_sysmbol, taxname)
+        if genes_ebi:
+            related = merge_ncbi_ebi(genes_ebi, related_ncbi)
+            if taxname.upper() == "HOMO SAPIENS":
+                related = filter_related(ID_base, related)
+
+        import pprint
+        pprint.pprint(related)
+        return related
+
+
+    for db in ["nucleotide", "protein"]:
+        summary = _get_summary_result_one(_fetch_ncbi_esummary(db, ID_base, timeout))
+        if summary:
+            break
+    
     if summary:
         moltype = summary.get("moltype", "")
-        organism = summary.get("organism", "Unknown")
-
-        query_output["moltype"] = moltype
-        query_output["organism"] = organism
-        query_output["accession"] = summary.get("accessionversion", accession)
-
-        try:
-            if "RNA" in moltype.upper():
-                _, related = _get_related_by_accession(accession, timeout=timeout)
-            elif "DNA" in moltype.upper() and "NC_" in accession:
-                _, related = _get_related_by_accession_and_location(accession, locations, timeout)
+        try: 
+            if "RNA" or "AA" in moltype.upper():
+                taxname, related = _get_related_by_accession_from_NCBI(ID, timeout)
+            elif "DNA" in moltype.upper() and "NC_" in ID:
+                taxname, related = _get_related_by_chr_location(ID, locations, timeout)
             else:
-                raise NameError(f"Could not retrieve related accessions for {accession}")
+                raise NameError(f"Could not retrieve related for {ID}.")
+        except Exception as e:
+            raise RuntimeError(f"Error fetching related accessions: {e}")            
+    else:
+        # not a valid NCBI/EBI accession , try with gene name
+        try:
+            _, related = _get_related_by_gene_symbol(ID, timeout)
+            if not related:
+                raise NameError(f"Could not retrieve related accessions for {ID}")
         except Exception as e:
             raise RuntimeError(f"Error fetching related accessions: {e}")
-    else:
-        # Fallbacks: EBI or gene symbol search
-        organism, related = _get_related_by_accession(accession, timeout=timeout)
-        if related:
-            query_output["organism"] = organism
-            query_output["accession"] = _get_current_EBI_version(accession_base, timeout=timeout)
-        else:
-            organism, related = _get_related_by_gene_symbol(accession, timeout)
-            if related:
-                query_output["organism"] = organism
-                query_output["accession"] = accession
-            else:
-                raise NameError(f"Could not retrieve related accessions for {accession}")
-
-    query_output["related"] = related
+        
+  
 
 
-    # Validate against schema
-    try:
-        query_schema.validate(query_output)
-    except SchemaError as e:
-        print("Schema validation error:", e)
-        raise NameError("Output did not conform to schema")
 
-    return query_output
 
-            
+
 
 
 if __name__ == "__main__":
-    # parser = argparse.ArgumentParser(description="Get related from Entrez or Datasets")
-    # parser.add_argument("accession", help="Sequence ID")
-    # parser.add_argument("location", help="Location")
+    parser = argparse.ArgumentParser(description="Get related sequences")
+    parser.add_argument("ID", help="A sequence ID, support gene name, NCBI or EBI accession.")
+    parser.add_argument("locations", nargs="?", help="A lis of locations")
 
-    # args = parser.parse_args
-    test_list = [
-        ["NC_000011.10",  [[112088970, 112088970], [100000000, 100000006]]], # hg38, t2t; two sets of mane select accessions
-        ["NC_000011.9",  [[112088970, 112088970], [100000000, 100000006]]],  # hg38, t2t; two sets of mane select accessions
-        # ["NC_000011.8",  [[112088970, 112088970], [100000000, 100000006]]],  # hg38, t2t; two sets of mane select accessions
-        # # # ["NG_012337.3",  [[274, 277]]], # NG_ itself, since no way to retrieve for NG_, NW_, NT
-        # # ["NT_033899.8",  [[1000, 1010]]], # current version, NT_033899.9
-        # ["NM_003002.2", [[200, 202], [100, 110]]], # NC_ from hg38, T2T; two sets of Mane select of current versions
-        # ["NM_003002.4", [[200, 202], [100, 110]]], # NC_ from hg38, T2T; one set of Mane select of current version
-        ["NM_001276506.2", [[200, 202], [100, 110]]], # NC_ from hg38, T2T; two sets: one Mane select, one of NM_001276506
-        ["SDHD", [[200, 202], [100, 110]]], # NC_ from hg38, T2T; one set of Mane select of current versions
-        ["Sdhd", [[200, 202], [100, 110]]],  # NC_ from hg38, T2T; one set of Mane select of current versions     
-        ["ENST00000375549.8", [[200, 202], [100, 110]]], # NC_ from hg38, T2T; one set of Mane select of current version
-        ["ENST00000375549.7", [[200, 202], [100, 110]]], # NC_ from hg38, T2T; one set of Mane select of current version
-        ["ENST00000375549", [[200, 202], [100, 110]]], # NC_ from hg38, T2T; one set of Mane select of current version
-        ["ENSP00000364699.3", [[200, 202], [100, 110]]], # NC_ from hg38, T2T; one set of Mane select of current version
-        ["NC_000075.7",  [[50507000,50510000]]], # mouse model, related 
-    ]
-    import pprint
-
-    for test_sample in test_list:
-        pprint.pprint(get_new_related(test_sample[0], test_sample[1]))
+    args = parser.parse_args()
