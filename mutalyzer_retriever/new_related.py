@@ -519,6 +519,17 @@ def _get_related_by_accession_from_NCBI(accessions, timeout):
         return taxname,  related
     return None, None, None
 
+
+def _get_related_ensembl(accession_base):
+    taxname, gene_sysmbol, genes_ebi = _get_related_by_accession_from_EBI(accession_base)
+    _, related_ncbi = _get_related_by_gene_symbol(gene_sysmbol, taxname)
+    if genes_ebi:
+        related = merge_ncbi_ebi(genes_ebi, related_ncbi)
+        if taxname.upper() == "HOMO SAPIENS":
+            related = filter_related(accession_base, related)
+        return related
+
+
 def get_new_related(ID, locations=[0,0], timeout=30):
     """
     Input: A refseq identifier or human gene name.
@@ -533,17 +544,7 @@ def get_new_related(ID, locations=[0,0], timeout=30):
     # ENS[species prefix][feature type prefix][a unique eleven digit number]
     # See at https://www.ensembl.org/info/genome/stable_ids/index.html
     if ID.startswith("ENS"):
-        taxname, gene_sysmbol, genes_ebi = _get_related_by_accession_from_EBI(ID_base)
-        print(taxname)
-        _, related_ncbi = _get_related_by_gene_symbol(gene_sysmbol, taxname)
-        if genes_ebi:
-            related = merge_ncbi_ebi(genes_ebi, related_ncbi)
-            if taxname.upper() == "HOMO SAPIENS":
-                related = filter_related(ID_base, related)
-
-        import pprint
-        pprint.pprint(related)
-        return related
+        related = _get_related_ensembl(ID_base)
 
 
     for db in ["nucleotide", "protein"]:
@@ -572,8 +573,6 @@ def get_new_related(ID, locations=[0,0], timeout=30):
             raise RuntimeError(f"Error fetching related accessions: {e}")
         
   
-
-
 
 
 
