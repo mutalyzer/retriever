@@ -1,0 +1,33 @@
+{
+  "assemblies": [
+    {
+      "assembly_name": "GRCm39",
+      "accession": "NC_000075.7"
+    }
+  ],
+  "genes": [
+    {
+      "name": "Sdhd",
+      "hgnc_id": "1914175",
+      "description": "succinate dehydrogenase complex, subunit D, integral membrane protein",
+      "transcripts": [
+        {
+          "providers": [
+            {
+              "name": "NCBI",
+              "transcript_accession": "NM_025848.3",
+              "protein_accession": "NP_080124.1"
+            },
+            {
+              "name": "ENSEMBL",
+              "transcript_accession": "ENSMUST00000000175.6",
+              "protein_accession": "ENSMUSP00000000175.5",
+              "description": "Sdhd-201"
+            }
+          ],
+          "tag": "REFSEQ_SELECT"
+        }
+      ]
+    }
+  ]
+}
