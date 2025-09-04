@@ -12,14 +12,9 @@ def _get_content(relative_location):
         content = file.read()
     return content
 
-def _get_json_output(relative_location):
-    data_file = Path(__file__).parent.joinpath(relative_location)
-    with open(str(data_file), "r") as file:
-        content = json.load(file)
-    return content
 
-# def _fetch_ncbi_esummary(db, query_id, timeout=10):
-#     return json.loads(_get_content(f"data/esummary_{db}_{query_id}.json"))
+def _fetch_ncbi_esummary(db, query_id, timeout=10):
+    return json.loads(_get_content(f"data/esummary_{db}_{query_id}.json"))
 
 
 def _get_grch37_chr_accession(chr, timeout=10):
@@ -51,12 +46,13 @@ def _get_related_by_gene_symbol(gene_symbol, timeout):
     return taxname, _merge_related(genomic_related, product_related) 
 
 
-def _fetch_ebi_lookup_grch38(accession_base: str, timeout=10):
-    return json.loads(_get_content(f"data/EBI_lookup_{accession_base}.json"))
+def _fetch_ebi_lookup_grch38(accession_base: str, expand= 1, timeout=10):
+    return json.loads(_get_content(f"data/EBI_lookup_expand_{expand}_{accession_base}.json"))
+
 
 @pytest.fixture
 def monkeypatch_offline(monkeypatch):
-    # monkeypatch.setattr("mutalyzer_retriever.new_related._fetch_ncbi_esummary", _fetch_ncbi_esummary)
+    monkeypatch.setattr("mutalyzer_retriever.new_related._fetch_ncbi_esummary", _fetch_ncbi_esummary)
     monkeypatch.setattr("mutalyzer_retriever.new_related._get_grch37_chr_accession", _get_grch37_chr_accession)
     # monkeypatch.setattr("mutalyzer_retriever.new_related._fetch_related_from_ncbi_product_report", _fetch_related_from_ncbi_product_report)
     # monkeypatch.setattr("mutalyzer_retriever.new_related._fetch_related_from_ncbi_dataset_report", _fetch_related_from_ncbi_dataset_report)
@@ -75,58 +71,58 @@ def test_ensembl_mane_select_transcript(accession, monkeypatch_offline):
     One is itself, also MANE Select.
     """    
     related = get_new_related(accession)
-    assert related == json.loads(_get_content(f"related_{accession}.json"))
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
 
 
 @pytest.mark.parametrize("accession", ["ENST00000646730.1"])
-def test_ensembl_protein(accession, monkeypatch_offline):
+def test_ensembl_mane_plus_clinical_transcript(accession, monkeypatch_offline):
     """
     A MANE Plus Clinical ENSEMBL transcript with a NCBI match.
     Expect chr accessions on three assemblies and multiple sets of transcripts:
     One is itself and the other ones are from MANE Select.
     """
     related = get_new_related(accession)    
-    assert related == json.loads(_get_content(f"related_{accession}.json"))
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
 @pytest.mark.parametrize("accession", ["ENST00000714087.1"])
-def test_ensembl_transcript_no_ncbi_match_accession(accession, monkeypatch_offline):
+def test_ensembl_transcript_no_ncbi_match_transcript(accession, monkeypatch_offline):
     """
     Not a MANE select ENSEMBL transcript, without NCBI match.
     Expect chr accessions on three assemblies and multiple sets of transcripts:
     One is itself (from ENSEMBL) and the other ones are from MANE Select.
     """
     related = get_new_related(accession)
-    assert related == json.loads(_get_content(f"related_{accession}.json"))
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
 @pytest.mark.parametrize("accession", ["ENST00000528048.8"])
-def test_ensembl_transcript_no_ncbi_match_accession(accession, monkeypatch_offline):
+def test_ensembl_transcript_with_ncbi_match_transcript(accession, monkeypatch_offline):
     """
     Not a MANE select ENSEMBL transcript, with a NCBI match.
     Expect chr accessions on three assemblies and multiple sets of transcripts:
     One is itself (from ENSEMBL and NCBI) and the other ones are from MANE Select.
     """
     related = get_new_related(accession)
-    assert related == json.loads(_get_content(f"related_{accession}.json"))
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
 
 @pytest.mark.parametrize("accession", ["ENSMUST00000000175.6"])
-def test_ensembl_transcript_no_ncbi_match_accession(accession, monkeypatch_offline):
+def test_ensembl_mouse_transcript_with_ncbi_match_accession(accession, monkeypatch_offline):
     """
     An ENSEMBL mouse transcript, with a NCBI match.
     Expect a chr accessions on this mouse assemblies and one set of transcripts:
     From ENSEMBL and NCBI.
     """
     related = get_new_related(accession)
-    assert related == json.loads(_get_content(f"related_{accession}.json"))
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
 @pytest.mark.parametrize("accession", ["ENST00000530923.6"])
-def test_ensembl_transcript_no_ncbi_match_accession(accession, monkeypatch_offline):
+def test_ensembl_non_coding_transcript_with_ncbi_match_accession(accession, monkeypatch_offline):
     """
     Not a MANE select ENSEMBL transcript, non-coding, with a NCBI match.
     Expect chr accessions on three assemblies and multiple sets of transcripts:
@@ -138,14 +134,14 @@ def test_ensembl_transcript_no_ncbi_match_accession(accession, monkeypatch_offli
 
 
 @pytest.mark.parametrize("accession", ["ENST00000714091.5"])
-def test_ensembl_transcript_no_ncbi_match_accession(accession, monkeypatch_offline):
+def test_ensembl_non_coding_transcript_without_ncbi_match_accession(accession, monkeypatch_offline):
     """
     Not a MANE select ENSEMBL transcript, non-coding, without a NCBI match.
     Expect chr accessions on three assemblies and multiple sets of transcripts:
     One is itself (from ENSEMBL) and the other ones are from MANE Select.
     """
     related = get_new_related(accession)
-    assert related == json.loads(_get_content(f"related_{accession}.json"))
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
 @pytest.mark.parametrize("accession", ["ENSG00000204370.14"])
@@ -156,11 +152,11 @@ def test_ensembl_gene(accession, monkeypatch_offline):
     One is MANE select from NCBI and ENSEMBL
     """
     related = get_new_related(accession)
-    assert related == json.loads(_get_content(f"related_{accession}.json"))
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
 @pytest.mark.parametrize("accession", ["ENSMUSG00000000171.6"])
-def test_ensembl_gene(accession, monkeypatch_offline):
+def test_ensembl_mouse_gene(accession, monkeypatch_offline):
     """
     An ENSEMBL mouse gene,
     Expect chr accessions on one mouse assembly and one set of transcripts:
@@ -169,7 +165,7 @@ def test_ensembl_gene(accession, monkeypatch_offline):
     related = get_new_related(accession)
 
 @pytest.mark.parametrize("accession", ["ENSP00000364699.3"])
-def test_ensembl_protein(accession, monkeypatch_offline):
+def test_ensembl_mane_select_protein(accession, monkeypatch_offline):
     """
     An ENSEMBL protein ID, MANE Select
     Expect chr accessions on three assemblies and one set of transcripts:
@@ -180,15 +176,13 @@ def test_ensembl_protein(accession, monkeypatch_offline):
 
 
 @pytest.mark.parametrize("accession", ["ENSP00000519382.1"])
-def test_ensembl_protein(accession, monkeypatch_offline):
+def test_ensembl_not_mane_select_protein(accession, monkeypatch_offline):
     """
-    An ENSEMBL protein ID, MANE Select
+    An ENSEMBL protein ID, non_MANE Select
     Expect chr accessions on three assemblies and two sets of transcripts:
     One is MANE Select from NCBI and ENSEMBL, the other one is itself
     """    
     related = get_new_related(accession)
-
-
 
 
 @pytest.mark.parametrize("accession", ["ENSE00003479002.1"])
