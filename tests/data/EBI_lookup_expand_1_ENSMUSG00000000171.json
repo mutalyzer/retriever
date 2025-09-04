@@ -1,0 +1,101 @@
+{
+  "Transcript": [
+    {
+      "length": 1231,
+      "Exon": [
+        {
+          "id": "ENSMUSE00000285370",
+          "start": 50515038,
+          "end": 50515112,
+          "db_type": "core",
+          "version": 4,
+          "species": "mus_musculus",
+          "strand": -1,
+          "assembly_name": "GRCm39",
+          "object_type": "Exon",
+          "seq_region_name": "9"
+        },
+        {
+          "object_type": "Exon",
+          "seq_region_name": "9",
+          "version": 2,
+          "strand": -1,
+          "species": "mus_musculus",
+          "assembly_name": "GRCm39",
+          "start": 50511848,
+          "db_type": "core",
+          "end": 50511964,
+          "id": "ENSMUSE00000216226"
+        },
+        {
+          "end": 50510205,
+          "db_type": "core",
+          "start": 50510061,
+          "id": "ENSMUSE00000216224",
+          "seq_region_name": "9",
+          "object_type": "Exon",
+          "assembly_name": "GRCm39",
+          "species": "mus_musculus",
+          "strand": -1,
+          "version": 4
+        },
+        {
+          "db_type": "core",
+          "end": 50508550,
+          "start": 50507657,
+          "id": "ENSMUSE00000382814",
+          "object_type": "Exon",
+          "seq_region_name": "9",
+          "assembly_name": "GRCm39",
+          "version": 4,
+          "species": "mus_musculus",
+          "strand": -1
+        }
+      ],
+      "source": "ensembl_havana",
+      "Translation": {
+        "id": "ENSMUSP00000000175",
+        "length": 159,
+        "start": 50508385,
+        "db_type": "core",
+        "end": 50515089,
+        "species": "mus_musculus",
+        "version": 5,
+        "Parent": "ENSMUST00000000175",
+        "object_type": "Translation"
+      },
+      "end": 50515112,
+      "version": 6,
+      "biotype": "protein_coding",
+      "Parent": "ENSMUSG00000000171",
+      "object_type": "Transcript",
+      "gencode_primary": 1,
+      "id": "ENSMUST00000000175",
+      "is_canonical": 1,
+      "start": 50507657,
+      "db_type": "core",
+      "display_name": "Sdhd-201",
+      "strand": -1,
+      "species": "mus_musculus",
+      "logic_name": "ensembl_havana_transcript_mus_musculus",
+      "assembly_name": "GRCm39",
+      "seq_region_name": "9"
+    }
+  ],
+  "source": "ensembl_havana",
+  "end": 50515112,
+  "version": 6,
+  "biotype": "protein_coding",
+  "object_type": "Gene",
+  "description": "succinate dehydrogenase complex, subunit D, integral membrane protein [Source:MGI Symbol;Acc:MGI:1914175]",
+  "canonical_transcript": "ENSMUST00000000175.6",
+  "id": "ENSMUSG00000000171",
+  "start": 50507657,
+  "db_type": "core",
+  "strand": -1,
+  "species": "mus_musculus",
+  "display_name": "Sdhd",
+  "logic_name": "ensembl_havana_gene_mus_musculus",
+  "assembly_name": "GRCm39",
+  "seq_region_name": "9"
+}

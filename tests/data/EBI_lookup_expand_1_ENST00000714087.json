@@ -1,0 +1,81 @@
+{
+  "is_canonical": 0,
+  "id": "ENST00000714087",
+  "db_type": "core",
+  "start": 112086892,
+  "logic_name": "havana_homo_sapiens",
+  "assembly_name": "GRCh38",
+  "display_name": "SDHD-210",
+  "strand": 1,
+  "species": "homo_sapiens",
+  "seq_region_name": "11",
+  "length": 1456,
+  "Exon": [
+    {
+      "id": "ENSE00004022749",
+      "db_type": "core",
+      "end": 112087122,
+      "start": 112086892,
+      "assembly_name": "GRCh38",
+      "version": 2,
+      "strand": 1,
+      "species": "homo_sapiens",
+      "object_type": "Exon",
+      "seq_region_name": "11"
+    },
+    {
+      "end": 112087973,
+      "db_type": "core",
+      "start": 112087857,
+      "id": "ENSE00004022750",
+      "seq_region_name": "11",
+      "object_type": "Exon",
+      "assembly_name": "GRCh38",
+      "species": "homo_sapiens",
+      "strand": 1,
+      "version": 2
+    },
+    {
+      "seq_region_name": "11",
+      "object_type": "Exon",
+      "assembly_name": "GRCh38",
+      "strand": 1,
+      "species": "homo_sapiens",
+      "version": 2,
+      "db_type": "core",
+      "end": 112089011,
+      "start": 112088867,
+      "id": "ENSE00004022748"
+    },
+    {
+      "start": 112094805,
+      "db_type": "core",
+      "end": 112095767,
+      "id": "ENSE00004022751",
+      "object_type": "Exon",
+      "seq_region_name": "11",
+      "version": 2,
+      "strand": 1,
+      "species": "homo_sapiens",
+      "assembly_name": "GRCh38"
+    }
+  ],
+  "end": 112095767,
+  "Translation": {
+    "length": 38,
+    "id": "ENSP00000519378",
+    "db_type": "core",
+    "end": 112087024,
+    "start": 112086908,
+    "version": 1,
+    "species": "homo_sapiens",
+    "object_type": "Translation",
+    "Parent": "ENST00000714087"
+  },
+  "source": "havana",
+  "version": 1,
+  "object_type": "Transcript",
+  "gencode_primary": 0,
+  "biotype": "nonsense_mediated_decay",
+  "Parent": "ENSG00000204370"
+}
