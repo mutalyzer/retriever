@@ -530,6 +530,33 @@ def _get_related_ensembl(accession_base):
         return related
 
 
+def _get_related_ncbi(accession, locations=[0,0], timeout=10):
+    for db in ["nucleotide", "protein"]:
+        summary = _get_summary_result_one(_fetch_ncbi_esummary(db, accession, timeout=10))
+        if summary:
+            break
+    
+    if summary:
+        moltype = summary.get("moltype", "")
+        try: 
+            if "RNA" or "AA" in moltype.upper():
+                taxname, related = _get_related_by_accession_from_NCBI(accession, timeout=10)
+            elif "DNA" in moltype.upper() and "NC_" in accession:
+                taxname, related = _get_related_by_chr_location(accession, locations, timeout)
+            else:
+                raise NameError(f"Could not retrieve related for {accession}.")
+        except Exception as e:
+            raise RuntimeError(f"Error fetching related accessions: {e}")            
+    else:
+        # not a valid NCBI/EBI accession , try with gene name
+        try:
+            _, related = _get_related_by_gene_symbol(accession, timeout)
+            if not related:
+                raise NameError(f"Could not retrieve related accessions for {accession}")
+        except Exception as e:
+            raise RuntimeError(f"Error fetching related accessions: {e}")    
+    return related
+
 def get_new_related(ID, locations=[0,0], timeout=30):
     """
     Input: A refseq identifier or human gene name.
@@ -546,37 +573,10 @@ def get_new_related(ID, locations=[0,0], timeout=30):
     if ID.startswith("ENS"):
         related = _get_related_ensembl(ID_base)
 
-
-    for db in ["nucleotide", "protein"]:
-        summary = _get_summary_result_one(_fetch_ncbi_esummary(db, ID_base, timeout))
-        if summary:
-            break
-    
-    if summary:
-        moltype = summary.get("moltype", "")
-        try: 
-            if "RNA" or "AA" in moltype.upper():
-                taxname, related = _get_related_by_accession_from_NCBI(ID, timeout)
-            elif "DNA" in moltype.upper() and "NC_" in ID:
-                taxname, related = _get_related_by_chr_location(ID, locations, timeout)
-            else:
-                raise NameError(f"Could not retrieve related for {ID}.")
-        except Exception as e:
-            raise RuntimeError(f"Error fetching related accessions: {e}")            
     else:
-        # not a valid NCBI/EBI accession , try with gene name
-        try:
-            _, related = _get_related_by_gene_symbol(ID, timeout)
-            if not related:
-                raise NameError(f"Could not retrieve related accessions for {ID}")
-        except Exception as e:
-            raise RuntimeError(f"Error fetching related accessions: {e}")
-        
-  
-
-
-
-
+        related = _get_related_ncbi(ID)
+    return related
+    
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Get related sequences")
