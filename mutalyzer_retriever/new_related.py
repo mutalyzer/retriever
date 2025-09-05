@@ -101,7 +101,6 @@ def _parse_dataset_report(json_report):
     """
     assemblies = []
     genes = []
-    ensembl_genes = []
     taxname = None
 
     for report in json_report.get("reports", []):
@@ -165,7 +164,9 @@ def _parse_dataset_report(json_report):
             continue  # skip if both are empty        
 
         for ref in ref_acc:
+            print(ref)
             ref_accession = ref.get("gene_range", {}).get("accession_version")
+            print(ref_accession)
 
         gene_entry = clean_dict({
             "name": symbol,
@@ -241,35 +242,37 @@ def _merge_related(genomic_related, product_related):
     """
     Merges genomic and product-related gene data.
     """
-    related = {
-        "assemblies": [clean_dict(a) for a in genomic_related.get("assemblies", []) if clean_dict(a)],
-        "genes": []
-    }
- 
-    for gene in genomic_related.get("genes", []):
-        symbol = gene.get("name")
-  
+    if genomic_related:
+        related = {
+            "assemblies": [clean_dict(a) for a in genomic_related.get("assemblies", []) if clean_dict(a)],
+            "genes": []
+        }
+    
+        for gene in genomic_related.get("genes", []):
+            symbol = gene.get("name")
+    
 
-        transcripts = product_related.get(symbol, [])
- 
-        if not transcripts:
-            continue  
+            transcripts = product_related.get(symbol, [])
+    
+            if not transcripts:
+                continue  
 
-        gene_info = clean_dict({
-            "name": symbol,
-            "hgnc_id": gene.get("hgnc_id"),
-            "refseqgene": gene.get("refseqgene"),
-            "description": gene.get("description"),
-            "transcripts": transcripts
-        })
+            gene_info = clean_dict({
+                "name": symbol,
+                "hgnc_id": gene.get("hgnc_id"),
+                "refseqgene": gene.get("refseqgene"),
+                "description": gene.get("description"),
+                "transcripts": transcripts,
+                "providers":gene.get("providers")
+            })
 
-        if gene_info:
-            related["genes"].append(gene_info)
+            if gene_info:
+                related["genes"].append(gene_info)
 
-    # Sort genes alphabetically by name
-    related["genes"].sort(key=lambda g: g.get("name", ""))
+        # Sort genes alphabetically by name
+        related["genes"].sort(key=lambda g: g.get("name", ""))
 
-    return related
+        return related
 
 
 def _get_related_by_gene_symbol(gene_symbol,taxname="Homo Sapiens", timeout=10):
@@ -403,9 +406,9 @@ def _get_related_by_accession_from_EBI(accession_base: str):
             else:
                 raise
         except Exception as e:
-            raise RuntimeError("Failed to parse error : {e}")
+            raise RuntimeError(f"Failed to parse error : {e}")
 
-    if ebi_lookup_json and not ebi_lookup_json.get("error"):
+    if ebi_lookup_json:
         parsed = _parse_ebi_lookup_json(ebi_lookup_json)
         if parsed:
             taxname, gene, ebi_related_transcripts = parsed
@@ -550,7 +553,7 @@ def _get_related_ncbi(accession, locations=[0,0], timeout=10):
     else:
         # not a valid NCBI/EBI accession , try with gene name
         try:
-            _, related = _get_related_by_gene_symbol(accession, timeout)
+            _, related = _get_related_by_gene_symbol(accession)
             if not related:
                 raise NameError(f"Could not retrieve related accessions for {accession}")
         except Exception as e:
@@ -573,6 +576,7 @@ def get_new_related(ID, locations=[0,0], timeout=30):
     if ID.startswith("ENS"):
         related = _get_related_ensembl(ID_base)
 
+
     else:
         related = _get_related_ncbi(ID)
     return related
@@ -584,3 +588,6 @@ if __name__ == "__main__":
     parser.add_argument("locations", nargs="?", help="A lis of locations")
 
     args = parser.parse_args()
+    
+    import pprint
+    pprint.pprint(get_new_related(args.ID, args.locations))
