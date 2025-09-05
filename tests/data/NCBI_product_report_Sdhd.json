@@ -2,494 +2,86 @@
   "reports": [
     {
       "product": {
-        "gene_id": "6392",
-        "symbol": "SDHD",
-        "description": "succinate dehydrogenase complex subunit D",
-        "tax_id": "9606",
-        "taxname": "Homo sapiens",
-        "common_name": "human",
+        "gene_id": "66925",
+        "symbol": "Sdhd",
+        "description": "succinate dehydrogenase complex, subunit D, integral membrane protein",
+        "tax_id": "10090",
+        "taxname": "Mus musculus",
+        "common_name": "house mouse",
         "type": "PROTEIN_CODING",
         "transcripts": [
           {
-            "accession_version": "NM_001276503.2",
-            "name": "transcript variant 2",
-            "length": 1194,
+            "accession_version": "NM_025848.3",
+            "length": 1287,
             "cds": {
-              "accession_version": "NM_001276503.2",
+              "accession_version": "NM_025848.3",
               "range": [
                 {
-                  "begin": "36",
-                  "end": "293",
+                  "begin": "61",
+                  "end": "540",
                   "orientation": "plus"
                 }
               ]
             },
             "genomic_locations": [
               {
-                "genomic_accession_version": "NC_000011.10",
-                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
+                "genomic_accession_version": "NC_000075.7",
+                "sequence_name": "Chromosome 9 Reference GRCm39 C57BL/6J",
                 "genomic_range": {
-                  "begin": "112086873",
-                  "end": "112095794",
-                  "orientation": "plus"
+                  "begin": "50507640",
+                  "end": "50515149",
+                  "orientation": "minus"
                 },
                 "exons": [
                   {
-                    "begin": "112086873",
-                    "end": "112086959",
-                    "orientation": "plus",
+                    "begin": "50515038",
+                    "end": "50515149",
+                    "orientation": "minus",
                     "order": 1
                   },
                   {
-                    "begin": "112087857",
-                    "end": "112087973",
-                    "orientation": "plus",
+                    "begin": "50511848",
+                    "end": "50511964",
+                    "orientation": "minus",
                     "order": 2
                   },
                   {
-                    "begin": "112094805",
-                    "end": "112095794",
-                    "orientation": "plus",
-                    "order": 3
-                  }
-                ]
-              },
-              {
-                "genomic_accession_version": "NC_060935.1",
-                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
-                "genomic_range": {
-                  "begin": "112097127",
-                  "end": "112106049",
-                  "orientation": "plus"
-                },
-                "exons": [
-                  {
-                    "begin": "112097127",
-                    "end": "112097213",
-                    "orientation": "plus",
-                    "order": 1
-                  },
-                  {
-                    "begin": "112098111",
-                    "end": "112098227",
-                    "orientation": "plus",
-                    "order": 2
-                  },
-                  {
-                    "begin": "112105060",
-                    "end": "112106049",
-                    "orientation": "plus",
-                    "order": 3
-                  }
-                ]
-              }
-            ],
-            "ensembl_transcript": "ENST00000528048.5",
-            "protein": {
-              "accession_version": "NP_001263432.1",
-              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial",
-              "length": 85,
-              "isoform_name": "isoform b precursor",
-              "ensembl_protein": "ENSP00000436217.1"
-            },
-            "type": "PROTEIN_CODING"
-          },
-          {
-            "accession_version": "NM_001276504.2",
-            "name": "transcript variant 3",
-            "length": 1222,
-            "cds": {
-              "accession_version": "NM_001276504.2",
-              "range": [
-                {
-                  "begin": "36",
-                  "end": "398",
-                  "orientation": "plus"
-                }
-              ]
-            },
-            "genomic_locations": [
-              {
-                "genomic_accession_version": "NC_000011.10",
-                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
-                "genomic_range": {
-                  "begin": "112086873",
-                  "end": "112095794",
-                  "orientation": "plus"
-                },
-                "exons": [
-                  {
-                    "begin": "112086873",
-                    "end": "112086959",
-                    "orientation": "plus",
-                    "order": 1
-                  },
-                  {
-                    "begin": "112088867",
-                    "end": "112089011",
-                    "orientation": "plus",
-                    "order": 2
-                  },
-                  {
-                    "begin": "112094805",
-                    "end": "112095794",
-                    "orientation": "plus",
-                    "order": 3
-                  }
-                ]
-              },
-              {
-                "genomic_accession_version": "NC_060935.1",
-                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
-                "genomic_range": {
-                  "begin": "112097127",
-                  "end": "112106049",
-                  "orientation": "plus"
-                },
-                "exons": [
-                  {
-                    "begin": "112097127",
-                    "end": "112097213",
-                    "orientation": "plus",
-                    "order": 1
-                  },
-                  {
-                    "begin": "112099121",
-                    "end": "112099265",
-                    "orientation": "plus",
-                    "order": 2
-                  },
-                  {
-                    "begin": "112105060",
-                    "end": "112106049",
-                    "orientation": "plus",
-                    "order": 3
-                  }
-                ]
-              }
-            ],
-            "ensembl_transcript": "ENST00000525291.5",
-            "protein": {
-              "accession_version": "NP_001263433.1",
-              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial",
-              "length": 120,
-              "isoform_name": "isoform c precursor",
-              "ensembl_protein": "ENSP00000436669.1"
-            },
-            "type": "PROTEIN_CODING"
-          },
-          {
-            "accession_version": "NM_001276506.2",
-            "name": "transcript variant 4",
-            "length": 1469,
-            "cds": {
-              "accession_version": "NM_001276506.2",
-              "range": [
-                {
-                  "begin": "36",
-                  "end": "467",
-                  "orientation": "plus"
-                }
-              ]
-            },
-            "genomic_locations": [
-              {
-                "genomic_accession_version": "NC_000011.10",
-                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
-                "genomic_range": {
-                  "begin": "112086873",
-                  "end": "112095794",
-                  "orientation": "plus"
-                },
-                "exons": [
-                  {
-                    "begin": "112086873",
-                    "end": "112086959",
-                    "orientation": "plus",
-                    "order": 1
-                  },
-                  {
-                    "begin": "112087857",
-                    "end": "112087973",
-                    "orientation": "plus",
-                    "order": 2
-                  },
-                  {
-                    "begin": "112088867",
-                    "end": "112089011",
-                    "orientation": "plus",
+                    "begin": "50510061",
+                    "end": "50510205",
+                    "orientation": "minus",
                     "order": 3
                   },
                   {
-                    "begin": "112093080",
-                    "end": "112093209",
-                    "orientation": "plus",
-                    "order": 4
-                  },
-                  {
-                    "begin": "112094805",
-                    "end": "112095794",
-                    "orientation": "plus",
-                    "order": 5
-                  }
-                ]
-              },
-              {
-                "genomic_accession_version": "NC_060935.1",
-                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
-                "genomic_range": {
-                  "begin": "112097127",
-                  "end": "112106049",
-                  "orientation": "plus"
-                },
-                "exons": [
-                  {
-                    "begin": "112097127",
-                    "end": "112097213",
-                    "orientation": "plus",
-                    "order": 1
-                  },
-                  {
-                    "begin": "112098111",
-                    "end": "112098227",
-                    "orientation": "plus",
-                    "order": 2
-                  },
-                  {
-                    "begin": "112099121",
-                    "end": "112099265",
-                    "orientation": "plus",
-                    "order": 3
-                  },
-                  {
-                    "begin": "112103335",
-                    "end": "112103464",
-                    "orientation": "plus",
-                    "order": 4
-                  },
-                  {
-                    "begin": "112105060",
-                    "end": "112106049",
-                    "orientation": "plus",
-                    "order": 5
-                  }
-                ]
-              }
-            ],
-            "ensembl_transcript": "ENST00000526592.5",
-            "protein": {
-              "accession_version": "NP_001263435.1",
-              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial",
-              "length": 143,
-              "isoform_name": "isoform d precursor",
-              "ensembl_protein": "ENSP00000432005.1"
-            },
-            "type": "PROTEIN_CODING"
-          },
-          {
-            "accession_version": "NM_003002.4",
-            "name": "transcript variant 1",
-            "length": 1339,
-            "cds": {
-              "accession_version": "NM_003002.4",
-              "range": [
-                {
-                  "begin": "36",
-                  "end": "515",
-                  "orientation": "plus"
-                }
-              ]
-            },
-            "genomic_locations": [
-              {
-                "genomic_accession_version": "NC_000011.10",
-                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
-                "genomic_range": {
-                  "begin": "112086873",
-                  "end": "112095794",
-                  "orientation": "plus"
-                },
-                "exons": [
-                  {
-                    "begin": "112086873",
-                    "end": "112086959",
-                    "orientation": "plus",
-                    "order": 1
-                  },
-                  {
-                    "begin": "112087857",
-                    "end": "112087973",
-                    "orientation": "plus",
-                    "order": 2
-                  },
-                  {
-                    "begin": "112088867",
-                    "end": "112089011",
-                    "orientation": "plus",
-                    "order": 3
-                  },
-                  {
-                    "begin": "112094805",
-                    "end": "112095794",
-                    "orientation": "plus",
-                    "order": 4
-                  }
-                ]
-              },
-              {
-                "genomic_accession_version": "NC_060935.1",
-                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
-                "genomic_range": {
-                  "begin": "112097127",
-                  "end": "112106049",
-                  "orientation": "plus"
-                },
-                "exons": [
-                  {
-                    "begin": "112097127",
-                    "end": "112097213",
-                    "orientation": "plus",
-                    "order": 1
-                  },
-                  {
-                    "begin": "112098111",
-                    "end": "112098227",
-                    "orientation": "plus",
-                    "order": 2
-                  },
-                  {
-                    "begin": "112099121",
-                    "end": "112099265",
-                    "orientation": "plus",
-                    "order": 3
-                  },
-                  {
-                    "begin": "112105060",
-                    "end": "112106049",
-                    "orientation": "plus",
+                    "begin": "50507640",
+                    "end": "50508550",
+                    "orientation": "minus",
                     "order": 4
                   }
                 ]
               }
             ],
-            "ensembl_transcript": "ENST00000375549.8",
+            "ensembl_transcript": "ENSMUST00000000175.6",
             "protein": {
-              "accession_version": "NP_002993.1",
+              "accession_version": "NP_080124.1",
               "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial",
               "length": 159,
-              "isoform_name": "isoform a precursor",
-              "ensembl_protein": "ENSP00000364699.3"
+              "ensembl_protein": "ENSMUSP00000000175.5"
             },
             "type": "PROTEIN_CODING",
-            "select_category": "MANE_SELECT"
-          },
-          {
-            "accession_version": "NR_077060.2",
-            "name": "transcript variant 5",
-            "length": 1393,
-            "genomic_locations": [
-              {
-                "genomic_accession_version": "NC_000011.10",
-                "sequence_name": "Chromosome 11 Reference GRCh38.p14 Primary Assembly",
-                "genomic_range": {
-                  "begin": "112086873",
-                  "end": "112095794",
-                  "orientation": "plus"
-                },
-                "exons": [
-                  {
-                    "begin": "112086873",
-                    "end": "112086959",
-                    "orientation": "plus",
-                    "order": 1
-                  },
-                  {
-                    "begin": "112087857",
-                    "end": "112087973",
-                    "orientation": "plus",
-                    "order": 2
-                  },
-                  {
-                    "begin": "112088867",
-                    "end": "112089011",
-                    "orientation": "plus",
-                    "order": 3
-                  },
-                  {
-                    "begin": "112091079",
-                    "end": "112091132",
-                    "orientation": "plus",
-                    "order": 4
-                  },
-                  {
-                    "begin": "112094805",
-                    "end": "112095794",
-                    "orientation": "plus",
-                    "order": 5
-                  }
-                ]
-              },
-              {
-                "genomic_accession_version": "NC_060935.1",
-                "sequence_name": "Chromosome 11 Alternate T2T-CHM13v2.0",
-                "genomic_range": {
-                  "begin": "112097127",
-                  "end": "112106049",
-                  "orientation": "plus"
-                },
-                "exons": [
-                  {
-                    "begin": "112097127",
-                    "end": "112097213",
-                    "orientation": "plus",
-                    "order": 1
-                  },
-                  {
-                    "begin": "112098111",
-                    "end": "112098227",
-                    "orientation": "plus",
-                    "order": 2
-                  },
-                  {
-                    "begin": "112099121",
-                    "end": "112099265",
-                    "orientation": "plus",
-                    "order": 3
-                  },
-                  {
-                    "begin": "112101334",
-                    "end": "112101387",
-                    "orientation": "plus",
-                    "order": 4
-                  },
-                  {
-                    "begin": "112105060",
-                    "end": "112106049",
-                    "orientation": "plus",
-                    "order": 5
-                  }
-                ]
-              }
-            ],
-            "ensembl_transcript": "ENST00000714090.1",
-            "type": "NON_CODING"
+            "select_category": "REFSEQ_SELECT"
           }
         ],
-        "transcript_count": 5,
-        "protein_count": 4,
+        "transcript_count": 1,
+        "protein_count": 1,
         "transcript_type_counts": [
           {
             "type": "PROTEIN_CODING",
-            "count": 4
-          },
-          {
-            "type": "NON_CODING",
             "count": 1
           }
         ]
       },
       "query": [
-        "SDHD"
+        "Sdhd"
       ]
     }
   ],

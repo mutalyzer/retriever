@@ -64,6 +64,16 @@
             }
           ]
         }
+      ],
+      "providers": [
+        {
+          "name": "NCBI",
+          "accession": "673"
+        },
+        {
+          "name": "ENSEMBL",
+          "accession": "ENSG00000157764"
+        }
       ]
     }
   ]

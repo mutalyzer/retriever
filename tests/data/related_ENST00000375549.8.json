@@ -37,6 +37,16 @@
           ],
           "tag": "MANE_SELECT"
         }
+      ],
+      "providers": [
+        {
+          "name": "NCBI",
+          "accession": "6392"
+        },
+        {
+          "name": "ENSEMBL",
+          "accession": "ENSG00000204370"
+        }
       ]
     }
   ]

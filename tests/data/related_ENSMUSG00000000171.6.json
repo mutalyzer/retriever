@@ -27,6 +27,16 @@
           ],
           "tag": "REFSEQ_SELECT"
         }
+      ],
+      "providers": [
+        {
+          "name": "NCBI",
+          "accession": "66925"
+        },
+        {
+          "name": "ENSEMBL",
+          "accession": "ENSMUSG00000000171"
+        }
       ]
     }
   ]
