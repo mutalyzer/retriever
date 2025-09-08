@@ -115,9 +115,8 @@ def test_ensembl_mane_select_transcript(accession, monkeypatch_expand_success):
     One is itself, also MANE Select.
     """    
     related = get_new_related(accession)
+    assert related_schema.validate(related)
     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
-
-
 
 
 @pytest.mark.parametrize("accession", ["ENST00000646730.1"])
@@ -127,7 +126,8 @@ def test_ensembl_mane_plus_clinical_transcript(accession, monkeypatch_expand_suc
     Expect chr accessions on three assemblies and multiple sets of transcripts:
     One is itself and the other ones are from MANE Select.
     """
-    related = get_new_related(accession)    
+    related = get_new_related(accession)
+    assert related_schema.validate(related)
     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
@@ -139,6 +139,7 @@ def test_ensembl_transcript_no_ncbi_match_transcript(accession, monkeypatch_expa
     One is itself (from ENSEMBL) and the other ones are from MANE Select.
     """
     related = get_new_related(accession)
+    assert related_schema.validate(related)
     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
@@ -150,6 +151,7 @@ def test_ensembl_transcript_with_ncbi_match_transcript(accession, monkeypatch_ex
     One is itself (from ENSEMBL and NCBI) and the other ones are from MANE Select.
     """
     related = get_new_related(accession)
+    assert related_schema.validate(related)
     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
@@ -162,6 +164,7 @@ def test_ensembl_mouse_transcript_with_ncbi_match_accession(accession, monkeypat
     From ENSEMBL and NCBI.
     """
     related = get_new_related(accession)
+    assert related_schema.validate(related)
     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
@@ -173,6 +176,7 @@ def test_ensembl_non_coding_transcript_with_ncbi_match_accession(accession, monk
     One is itself (from ENSEMBL and NCBI) and the other ones are from MANE Select.
     """
     related = get_new_related(accession)
+    assert related_schema.validate(related)
     #TODO: this matched up information is not the same from two sources
 
 
@@ -185,6 +189,7 @@ def test_ensembl_non_coding_transcript_without_ncbi_match_accession(accession, m
     One is itself (from ENSEMBL) and the other ones are from MANE Select.
     """
     related = get_new_related(accession)
+    assert related_schema.validate(related)
     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
@@ -196,6 +201,7 @@ def test_ensembl_gene(accession, monkeypatch_expand_success):
     One is MANE select from NCBI and ENSEMBL
     """
     related = get_new_related(accession)
+    assert related_schema.validate(related)
     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
@@ -207,6 +213,7 @@ def test_ensembl_gene_older_version(accession, monkeypatch_expand_success):
     One is MANE select from NCBI and ENSEMBL. The same as with the latest version.
     """
     related = get_new_related(accession)
+    assert related_schema.validate(related)
     assert related == json.loads(_get_content(f"data/related_ENSG00000204370.14.json"))
 
 
@@ -218,7 +225,9 @@ def test_ensembl_mouse_gene(accession, monkeypatch_expand_success):
     From NCBI and ENSEMBL
     """
     related = get_new_related(accession)
+    assert related_schema.validate(related)
     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession", ["ENSP00000364699.3"])
 def test_ensembl_mane_select_protein(accession, monkeypatch_expand_fail):
@@ -228,8 +237,8 @@ def test_ensembl_mane_select_protein(accession, monkeypatch_expand_fail):
     From NCBI and ENSEMBL
     """    
     related = get_new_related(accession)
+    assert related_schema.validate(related)    
     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
-
 
 
 @pytest.mark.parametrize("accession", ["ENSP00000519382.1"])
@@ -240,6 +249,7 @@ def test_ensembl_not_mane_select_protein(accession, monkeypatch_expand_fail):
     One is MANE Select from NCBI and ENSEMBL, the other one is itself
     """    
     related = get_new_related(accession)
+    assert related_schema.validate(related)
     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
