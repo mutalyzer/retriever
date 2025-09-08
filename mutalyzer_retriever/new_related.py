@@ -134,7 +134,7 @@ def _parse_dataset_report(json_report):
             grch37_acc = _get_grch37_chr_accession(sequence_name)
             grch37_entry = clean_dict({
                 "accession": grch37_acc,
-                "accession_name": "GRCh37.p13"
+                "assembly_name": "GRCh37.p13"
             })
 
             if grch37_entry:
@@ -147,11 +147,14 @@ def _parse_dataset_report(json_report):
 
         ensembl_gene_id = ensembl_gene[0] if ensembl_gene else None
         ncbi_gene_id = gene.get("gene_id", [])
+        for ref in ref_acc:
+            ref_accession = ref.get("gene_range", {}).get("accession_version")
 
         # Build provider dicts, removing empty fields
         ncbi = clean_dict({
             "name": "NCBI",
-            "accession": ncbi_gene_id,
+            "id": ncbi_gene_id,
+            "accession":ref_accession
         })
 
         ensembl = clean_dict({
@@ -163,14 +166,9 @@ def _parse_dataset_report(json_report):
         if not providers:
             continue  # skip if both are empty        
 
-        for ref in ref_acc:
-            print(ref)
-            ref_accession = ref.get("gene_range", {}).get("accession_version")
-            print(ref_accession)
 
         gene_entry = clean_dict({
             "name": symbol,
-            "refseqgene": ref_accession,
             "hgnc_id": hgnc_id,
             "description": gene_description,
             "providers": providers
