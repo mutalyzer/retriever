@@ -494,6 +494,15 @@ def _get_related_by_chr_location(accession, locations, timeout):
     return taxname, related
 
 
+def _get_assembly_accession(accession, timeout):
+    url = f"{NCBI_URLs("Datasets_genome")}/sequence_accession/{accession}/sequence_assemblies"
+    assembly_json = json.loads(request(url=url, timeout=timeout))
+    accessions = assembly_json.get("accessions")
+    if isinstance(accessions, list) and accessions:
+        return accessions[0]
+    return None
+
+
 def _get_related_by_accession_from_NCBI(accessions, timeout):
     """
     Input: A sequence (transcripts or proteins) accession.
@@ -558,14 +567,13 @@ def _get_related_ncbi(accession, locations=[0,0], timeout=10):
             raise RuntimeError(f"Error fetching related accessions: {e}")    
     return related
 
+
 def get_new_related(ID, locations=[0,0], timeout=30):
     """
     Input: A refseq identifier or human gene name.
     Output: A dictionary of related.
     """
-
     ID_base = ID.split(".")[0]
-
     related = {}   
 
     # Ensembl declares its identifiers should be in the form of 
@@ -573,8 +581,6 @@ def get_new_related(ID, locations=[0,0], timeout=30):
     # See at https://www.ensembl.org/info/genome/stable_ids/index.html
     if ID.startswith("ENS"):
         related = _get_related_ensembl(ID_base)
-
-
     else:
         related = _get_related_ncbi(ID)
     return related
@@ -588,4 +594,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     import pprint
-    pprint.pprint(get_new_related(args.ID, args.locations))
+    print(json.dumps(get_new_related(args.ID, args.locations),indent=2))
