@@ -8,18 +8,18 @@ transcript_provider_schema = Schema({
 })
 
 transcript_schema = Schema({
-    Optional("tag"): [And(str, lambda s: s.strip() != "")],
+    Optional("tag"): And(str, lambda s: s.strip() != ""),
     "providers": [transcript_provider_schema],
 })
 
 gene_provider_schema = Schema({
     "name": And(str, lambda s: s.strip() != ""),
+    Optional("id"): And(str, lambda s: s.strip() != ""),
     "accession": And(str, lambda s: s.strip() != "")
 })
 
 gene_schema = Schema({
     Optional("hgnc_id"): And(str, lambda s: s.strip() != ""),
-    Optional("refseqgene"): And(str, lambda s: s.strip() != ""),
     "name": And(str, lambda s: s.strip() != ""),
     Optional("providers"): [gene_provider_schema],
     Optional("transcripts"): [transcript_schema],
@@ -27,7 +27,7 @@ gene_schema = Schema({
 })
 
 assembly_schema = Schema({
-    "name": And(str, lambda s: s.strip() != ""),
+    "assembly_name": And(str, lambda s: s.strip() != ""),
     "accession": And(str, lambda s: s.strip() != ""),
     Optional("description"): And(str, lambda s: s.strip() != "")
 })
