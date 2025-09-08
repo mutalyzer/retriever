@@ -17,7 +17,6 @@
     {
       "name": "SDHD",
       "hgnc_id": "10683",
-      "refseqgene": "NG_012337.3",
       "description": "succinate dehydrogenase complex subunit D",
       "transcripts": [
         {
@@ -51,7 +50,8 @@
       "providers": [
         {
           "name": "NCBI",
-          "accession": "6392"
+          "id": "6392",
+          "accession": "NG_012337.3"
         },
         {
           "name": "ENSEMBL",

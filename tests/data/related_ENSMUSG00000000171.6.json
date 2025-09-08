@@ -31,7 +31,7 @@
       "providers": [
         {
           "name": "NCBI",
-          "accession": "66925"
+          "id": "66925"
         },
         {
           "name": "ENSEMBL",

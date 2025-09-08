@@ -17,7 +17,6 @@
     {
       "name": "BRAF",
       "hgnc_id": "1097",
-      "refseqgene": "NG_007873.3",
       "description": "B-Raf proto-oncogene, serine/threonine kinase",
       "transcripts": [
         {
@@ -68,7 +67,8 @@
       "providers": [
         {
           "name": "NCBI",
-          "accession": "673"
+          "id": "673",
+          "accession": "NG_007873.3"
         },
         {
           "name": "ENSEMBL",
