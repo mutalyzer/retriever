@@ -127,7 +127,7 @@ def _parse_dataset_report(json_report):
                     "assembly_name": assembly_name,
                     "accession": genomic_acc
                 })
-                if clean_assembly:
+                if clean_assembly and clean_assembly not in assemblies:
                     assemblies.append(clean_assembly)
 
         # Add GRCh37 chromosome accession
@@ -138,7 +138,7 @@ def _parse_dataset_report(json_report):
                 "assembly_name": "GRCh37.p13"
             })
 
-            if grch37_entry:
+            if grch37_entry and grch37_entry not in assemblies:
                 assemblies.append(grch37_entry)
 
         # Handle reference standard accessions
