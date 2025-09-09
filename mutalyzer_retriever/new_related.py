@@ -38,48 +38,50 @@ def merge_ncbi_ebi(ebi_related, ncbi_related):
         if not related["genes"]:
             return related
         # Build a mapping from Ensembl transcript_accession to transcript entry
-        ncbi_transcripts = ncbi_related["genes"][0]["transcripts"]
-        transcript_index = {}
-        for transcript in ncbi_transcripts:
-            for provider in transcript.get("providers", []):
-                tid = provider.get("transcript_accession")
-                provider_name = provider.get("name")
-                if tid and provider_name == "ENSEMBL":
-                    transcript_index[tid] = transcript
+        for gene in ncbi_related["genes"]:
+            gene_symbol = gene.get("name")
+            ncbi_transcripts_from_one_gene = gene.get("transcripts")
+            transcript_index = {}
+            for transcript in ncbi_transcripts_from_one_gene:
+                for provider in transcript.get("providers", []):
+                    tid = provider.get("transcript_accession")
+                    provider_name = provider.get("name")
+                    if tid and provider_name == "ENSEMBL":
+                        transcript_index[tid] = transcript
+            if gene_symbol in ebi_related:
+                for ebi_transcripts_from_one_gene in ebi_related[gene_symbol]:
+                    ebi_tid = ebi_transcripts_from_one_gene.get("transcript_accession")
+                    if not ebi_tid:
+                        continue
+                    provider_entry = clean_dict(
+                        {
+                            "name": "ENSEMBL",
+                            "transcript_accession": ebi_tid,
+                            "protein_accession": ebi_transcripts_from_one_gene.get("protein_accession"),
+                            "description": ebi_transcripts_from_one_gene.get("description"),
+                        }
+                    )
 
-        for ebi_gene in ebi_related:
-            ebi_tid = ebi_transcript.get("transcript_accession")
-            if not ebi_tid:
-                continue
-            provider_entry = clean_dict(
-                {
-                    "name": "ENSEMBL",
-                    "transcript_accession": ebi_tid,
-                    "protein_accession": ebi_transcript.get("protein_accession"),
-                    "description": ebi_transcript.get("description"),
-                }
-            )
+                    if ebi_tid in transcript_index:
+                        existing = transcript_index[ebi_tid]
+                        providers = existing.get("providers", [])
 
-            if ebi_tid in transcript_index:
-                existing = transcript_index[ebi_tid]
-                providers = existing.get("providers", [])
-
-                replaced = False
-                for i, p in enumerate(providers):
-                    if p.get("name") == "ENSEMBL":
-                        providers[i] = provider_entry
-                        replaced = True
-                        break
-                if not replaced:
-                    providers.append(provider_entry)
-            else:
-                new_transcript = clean_dict(
-                    {
-                        "providers": [provider_entry],
-                        "tag": ebi_transcript.get("tag"),
-                    }
-                )
-                ncbi_transcripts.append(new_transcript)
+                        replaced = False
+                        for i, p in enumerate(providers):
+                            if p.get("name") == "ENSEMBL":
+                                providers[i] = provider_entry
+                                replaced = True
+                                break
+                        if not replaced:
+                            providers.append(provider_entry)
+                    else:
+                        new_transcript = clean_dict(
+                            {
+                                "providers": [provider_entry],
+                                "tag": ebi_transcripts_from_one_gene.get("tag"),
+                            }
+                        )
+                        ncbi_transcripts_from_one_gene.append(new_transcript)
     return related
 
 
@@ -417,7 +419,7 @@ def _get_related_by_accession_from_ebi(accession_base: str):
                 parsed = _parse_ebi_lookup_json(ebi_lookup_json)
                 if parsed:
                     taxname, gene, ebi_related_transcripts = parsed
-                    return taxname, gene, ebi_related_transcripts
+                    return taxname, {gene: ebi_related_transcripts}
             else:
                 raise
         except Exception as parse_e:
@@ -565,11 +567,10 @@ def _get_related_by_accession_from_ncbi(accessions, timeout):
 
 
 def _get_related_ensembl(accession_base):
-    taxname, ebi_gene = _get_related_by_accession_from_ebi(accession_base)
-    gene_symbol = next(iter(ebi_gene))
+    taxname, ebi_related = _get_related_by_accession_from_ebi(accession_base)
+    gene_symbol = next(iter(ebi_related))
     _, ncbi_related = _get_related_by_gene_symbol(gene_symbol, taxname)
-    if ebi_gene:
-        ebi_related = {"ebi_related": ebi_gene}
+    if ebi_related:
         related = merge_ncbi_ebi(ebi_related, ncbi_related)
         if taxname.upper() == "HOMO SAPIENS":
             related = filter_related(accession_base, related)
@@ -591,9 +592,8 @@ def _get_related_ncbi(accession, moltype, locations=[0, 0], timeout=30):
             raise NameError(f"Could not retrieve related for {accession}.")
     except Exception as e:
         raise RuntimeError(f"Error fetching related accessions: {e}") from e
-    
     if ncbi_related:
-        ebi_related = []
+        ebi_related = {}
         ensembl_genes_id = [
             provider["accession"]
             for gene in ncbi_related.get("genes", [])
@@ -603,12 +603,11 @@ def _get_related_ncbi(accession, moltype, locations=[0, 0], timeout=30):
 
         for ensembl_gene in ensembl_genes_id:
             _, ebi_gene_related = _get_related_by_accession_from_ebi(ensembl_gene)
-            ebi_related.append(ebi_gene_related)
+            ebi_related.update(ebi_gene_related)
         if ebi_related:
             related = merge_ncbi_ebi(ebi_related, ncbi_related)
-        if taxname.upper() == "HOMO SAPIENS":
+        if taxname and taxname.upper() == "HOMO SAPIENS":
             related = filter_related(accession_base, related)
-        print(related)
 
     return related
 
@@ -626,7 +625,7 @@ def detect_sequence_source(seq_id: str):
     # Ensembl declares its identifiers should be in the form of
     # ENS[species prefix][feature type prefix][a unique eleven digit number]
     # See at https://www.ensembl.org/info/genome/stable_ids/index.html
-    if re.match(r"^ENS[A-Z0-9]+$", seq_id):
+    if re.match(r"^ENS[A-Z0-9]+(?:\.\d+)?$", seq_id):
         return "ensembl", "unknown"
 
     # ncbi archived historical references for refseq prefix at
@@ -663,7 +662,7 @@ def detect_sequence_source(seq_id: str):
     return "other", "unknown"
 
 
-def get_new_related(accession, locations=[0, 0], timeout=30):
+def get_new_related(accession, locations=[0, 0]):
     """
     Input: A refseq identifier or human gene name.
     Output: A dictionary of related.
@@ -678,7 +677,7 @@ def get_new_related(accession, locations=[0, 0], timeout=30):
     elif source == "ncbi" and moltype != "unknown":
         related = _get_related_ncbi(accession, moltype, locations=locations)
     elif source == "other":
-        related = _get_related_by_gene_symbol(accession)
+        _, related = _get_related_by_gene_symbol(accession)
     else:
         raise NameError(f"Could not retrieve related for {accession}.")
 
