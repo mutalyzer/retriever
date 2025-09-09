@@ -1,5 +1,6 @@
 # A script to get related references from NCBI and EBI
-
+import ast
+import re
 import json
 import requests
 import jsonschema
@@ -475,7 +476,6 @@ def _get_related_by_chr_location(accession, locations, timeout):
     assembly_accession = _get_assembly_accession(accession, timeout=timeout)
     if not assembly_accession:
         raise ValueError(f"Assembly accession could not be determined for {accession}")
-
     location_params = [f"{accession}:{start}-{end}" for start, end in locations]
     encoded_locations = [quote(loc) for loc in location_params]
     location_string = "&".join([f"locations={loc}" for loc in encoded_locations])
@@ -540,56 +540,93 @@ def _get_related_ensembl(accession_base):
         return related
 
 
-def _get_related_ncbi(accession, locations=[0,0], timeout=10):
-    for db in ["nucleotide", "protein"]:
-        summary = _get_summary_result_one(_fetch_ncbi_esummary(db, accession, timeout=10))
-        if summary:
-            break
-    
-    if summary:
-        moltype = summary.get("moltype", "")
-        try: 
-            if "RNA" or "AA" in moltype.upper():
-                taxname, related = _get_related_by_accession_from_NCBI(accession, timeout=10)
-            elif "DNA" in moltype.upper() and "NC_" in accession:
-                taxname, related = _get_related_by_chr_location(accession, locations, timeout)
-            else:
-                raise NameError(f"Could not retrieve related for {accession}.")
-        except Exception as e:
-            raise RuntimeError(f"Error fetching related accessions: {e}")            
-    else:
-        # not a valid NCBI/EBI accession , try with gene name
-        try:
-            _, related = _get_related_by_gene_symbol(accession)
-            if not related:
-                raise NameError(f"Could not retrieve related accessions for {accession}")
-        except Exception as e:
-            raise RuntimeError(f"Error fetching related accessions: {e}")    
+def _get_related_ncbi(accession, moltype, locations=[0,0], timeout=10):
+    try:
+        if moltype.upper() in ["RNA", "PROTEIN"]:
+            taxname, related = _get_related_by_accession_from_NCBI(accession, timeout=10)
+        elif moltype.upper() == "DNA" and "NC_" in accession:
+            taxname, related = _get_related_by_chr_location(accession, locations, timeout)
+        else:
+            raise NameError(f"Could not retrieve related for {accession}.")
+    except Exception as e:
+        raise RuntimeError(f"Error fetching related accessions: {e}")    
     return related
 
 
-def get_new_related(ID, locations=[0,0], timeout=30):
+
+def detect_sequence_source(seq_id: str):
     """
-    Input: A refseq identifier or human gene name.
-    Output: A dictionary of related.
+    Detects whether the input string is an Ensembl ID or a RefSeq accession.
+    Input: seq_id (str): The sequence ID string to evaluate.
+    Returns: tuple: (source: str, moltype: str)
+            source: "ensembl", "ncbi", or "other"
+            moltype: "dna", "rna", "protein" or "unknown"    
     """
-    ID_base = ID.split(".")[0]
-    related = {}   
+    seq_id = seq_id.strip()
 
     # Ensembl declares its identifiers should be in the form of 
     # ENS[species prefix][feature type prefix][a unique eleven digit number]
     # See at https://www.ensembl.org/info/genome/stable_ids/index.html
-    if ID.startswith("ENS"):
-        related = _get_related_ensembl(ID_base)
+    if re.match(r'^ENS[A-Z0-9]+$', seq_id):
+        return "ensembl", "unknown"
+    
+    # NCBI archived historical references for refseq prefix at
+    #https://www.ncbi.nlm.nih.gov/books/NBK21091/table/ch18.T.refseq_accession_numbers_and_mole/?report=objectonly
+    
+    # Maybe here only gives refseq supported type?
+    refseq_moltype_map = {
+        # DNA
+        'AC': 'dna', 'NC': 'dna', 'NG': 'dna',
+        'NT': 'dna', 'NW': 'dna', 'NZ': 'dna',
+        # RNA
+        'NM': 'rna', 'XM': 'rna',
+        'NR': 'rna', 'XR': 'rna',
+        # Protein
+        'NP': 'protein', 'YP': 'protein', 'XP': 'protein', 'WP': 'protein',
+        'AP': 'protein',
+    }
+
+    match = re.match(r'^([A-Z]{2})_\d+(\.\d+)?$', seq_id)
+    if match:
+        prefix = match.group(1)
+        moltype = refseq_moltype_map.get(prefix, 'unknown')
+        return "ncbi", moltype
+
+    return "other", "unknown"
+
+
+
+def get_new_related(accession, locations=[0,0], timeout=30):
+    """
+    Input: A refseq identifier or human gene name.
+    Output: A dictionary of related.
+    """
+    accession_base = accession.split(".")[0]
+    related = {}   
+
+    source, moltype = detect_sequence_source(accession)
+
+    if source == "ensembl":
+        related = _get_related_ensembl(accession_base)
+    elif source == "ncbi" and moltype != "unknown":
+        related = _get_related_ncbi(accession, moltype, locations=locations)
+    elif source == "other":
+        related = _get_related_by_gene_symbol(accession)
     else:
-        related = _get_related_ncbi(ID)
+        raise NameError(f"Could not retrieve related for {accession}.")
+
     return related
     
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Get related sequences")
     parser.add_argument("ID", help="A sequence ID, support gene name, NCBI or EBI accession.")
-    parser.add_argument("locations", nargs="?", help="A lis of locations")
+    parser.add_argument(
+        "locations",
+        nargs="?",
+        type=ast.literal_eval,  # ← safe parsing of Python literals
+        help="A list of locations, e.g. [[112088000, 112088000]]"
+    )
 
     args = parser.parse_args()
     
