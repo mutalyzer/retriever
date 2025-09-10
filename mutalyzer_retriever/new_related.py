@@ -136,12 +136,11 @@ def _parse_dataset_report(json_report):
                 )
                 if clean_assembly and clean_assembly not in assemblies:
                     assemblies.append(clean_assembly)
-
         # Add GRCh37 chromosome accession
         if taxname == "Homo sapiens":
             grch37_acc = _get_grch37_chr_accession(sequence_name)
             grch37_entry = clean_dict(
-                {"accession": grch37_acc, "assembly_name": "GRCh37.p13"}
+                {"assembly_name": "GRCh37.p13", "accession": grch37_acc}
             )
 
             if grch37_entry and grch37_entry not in assemblies:
@@ -295,6 +294,18 @@ def _merge_related(genomic_related, product_related):
     return None
 
 
+def filter_report_from_other_genes(gene_symbol: str, reports:dict):
+    # NCBI datasets would return related genes when query by gene name
+    # e.g, query with CYP2D6 would get info of CYP2D7
+    # https://api.ncbi.nlm.nih.gov/datasets/v2/gene/symbol/CYP2D6D%2CCYP2D6/taxon/9606/product_report
+    if not reports:
+        return
+    for report in reports.get("reports"):
+        for key, value in report.items():
+            if value.get("symbol") == gene_symbol.upper():
+                return {"reports":[{key:value}]} 
+
+
 def _get_related_by_gene_symbol(gene_symbol, taxname="Homo Sapiens", timeout=10):
     """
     Given a gene symbol, return a set of related sequence accessions (genomic and/or products).
@@ -314,6 +325,7 @@ def _get_related_by_gene_symbol(gene_symbol, taxname="Homo Sapiens", timeout=10)
 
     # Fetch and parse genomic related data
     dataset_json = json.loads(request(url=dataset_report_url, timeout=timeout))
+    dataset_json = filter_report_from_other_genes(gene_symbol, dataset_json)
     _, genomic_related = (
         _parse_dataset_report(dataset_json) if dataset_json else (None, None)
     )
@@ -323,6 +335,7 @@ def _get_related_by_gene_symbol(gene_symbol, taxname="Homo Sapiens", timeout=10)
         f"{base_url}/symbol/{gene_symbol}/taxon/{taxname_url_str}/product_report"
     )
     product_json = json.loads(request(url=product_url, timeout=timeout))
+    product_json = filter_report_from_other_genes(gene_symbol, product_json)
     product_related = (
         _parse_product_report(product_json) if product_json else (None, None)
     )
@@ -678,6 +691,10 @@ def get_new_related(accession, locations=[0, 0]):
         related = _get_related_ncbi(accession, moltype, locations=locations)
     elif source == "other":
         _, related = _get_related_by_gene_symbol(accession)
+        for gene in related.get("genes"):
+            for provider in gene.get("providers"):
+                if provider.get("name")== "ENSEMBL":
+                    related = _get_related_ensembl(provider.get("accession"))
     else:
         raise NameError(f"Could not retrieve related for {accession}.")
 
@@ -693,7 +710,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "locations",
         nargs="?",
-        type=ast.literal_eval,  # ← safe parsing of Python literals
+        type=ast.literal_eval,
         help="A list of locations, e.g. [[112088000, 112088000]]",
     )
 
