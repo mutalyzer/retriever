@@ -186,10 +186,12 @@ def _parse_product_report(data):
         dict: Mapping gene_symbol -> list of transcript info dicts
     """
     genes_dict = {}
+    taxname = None
 
     for report in data.get("reports", []):
+        taxname = report.get("taxname", "unknown")
         product = report.get("product", {})
-        symbol = product.get("symbol", "UNKNOWN")
+        symbol = product.get("symbol", "unknown")
         gene_products = []
 
         for transcript in product.get("transcripts", []):
@@ -232,7 +234,7 @@ def _parse_product_report(data):
         if gene_products:
             genes_dict[symbol] = gene_products
 
-    return genes_dict
+    return taxname, genes_dict
 
 
 def _merge_genome_products(genomic_related, product_related):
@@ -320,7 +322,7 @@ def _get_related_by_gene_symbol_from_ncbi(
     )
     product_json = json.loads(request(url=product_url, timeout=timeout))
     product_json = filter_report_from_other_genes(gene_symbol, product_json)
-    product_related = (
+    _, product_related = (
         _parse_product_report(product_json)
         if product_json
         else (None, None)
@@ -618,11 +620,36 @@ def _get_assembly_accession(accession, timeout):
         return accessions[0]
     return None
 
+def _get_genomic_related_from_ncbi(dataset_report_url, timeout):
+    try:
+        dataset_json = json.loads(
+            request(url=dataset_report_url, timeout=timeout)
+        )
+        if dataset_json:
+            taxname, genomic_related = _parse_dataset_report(dataset_json)
+            return taxname, genomic_related
+    except Exception as e:
+        raise RuntimeError(f"Error fetching related accessions: {e}") from e
+    return None, None
 
-def _get_related_by_accession_from_ncbi(accessions, timeout):
+
+def _get_product_related_from_ncbi(product_report_url, timeout):
+    try:
+        product_json = json.loads(
+            request(url=product_report_url, timeout=timeout)
+        )
+        if product_json:
+            taxname, product_related = _parse_product_report(product_json)
+            return taxname, product_related
+    except Exception as e:
+        raise RuntimeError(f"Error fetching related accessions: {e}") from e
+    return None, None
+
+
+def _get_related_by_accession_from_ncbi(accession, timeout):
     """
     Input: A sequence (transcripts or proteins) accession.
-    Output: A set of related sequence accessions.
+    Output: A set of related sequence accession.
     """
     related = {}
     genomic_related = None
@@ -630,25 +657,16 @@ def _get_related_by_accession_from_ncbi(accessions, timeout):
     taxname = None
 
     base_url = ncbi_urls("Datasets_gene")
-    accessions_without_versions = accessions.split(".")[0]
+
+    accession_without_versions = accession.split(".")[0]
     dataset_report_url = (
-        f"{base_url}/accession/{accessions_without_versions}/dataset_report"
+        f"{base_url}/accession/{accession_without_versions}/dataset_report"
     )
-
-    dataset_json = json.loads(
-        request(url=dataset_report_url, timeout=timeout)
-    )
-    if dataset_json:
-        taxname, genomic_related = _parse_dataset_report(dataset_json)
-
     product_related_url = (
-        f"{base_url}/accession/{accessions_without_versions}/product_report"
-    )
-    product_json = json.loads(
-        request(url=product_related_url, timeout=timeout)
-    )
-    if product_json:
-        product_related = _parse_product_report(product_json)
+        f"{base_url}/accession/{accession_without_versions}/product_report"
+    )    
+    taxname, genomic_related = _get_genomic_related_from_ncbi(dataset_report_url, timeout)
+    taxname, product_related = _get_product_related_from_ncbi(product_related_url, timeout)
     if genomic_related or product_related:
         related = _merge_genome_products(genomic_related, product_related)
         return taxname, related
@@ -671,6 +689,7 @@ def _get_related_by_ensembl_id(accession_base):
 def _get_related_by_ncbi_id(
     accession, moltype, locations=[0, 0], timeout=30
 ):
+    related = {}
     accession_base = accession.split(".")[0]
     try:
         if moltype.upper() in ["RNA", "PROTEIN"]:
@@ -686,7 +705,6 @@ def _get_related_by_ncbi_id(
     except Exception as e:
         raise RuntimeError(f"Error fetching related accessions: {e}") from e
     if ncbi_related:
-        ebi_related = {}
         ensembl_genes_id = [
             provider["accession"]
             for gene in ncbi_related.get("genes", [])
