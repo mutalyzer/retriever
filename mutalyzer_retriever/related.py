@@ -298,39 +298,21 @@ def _get_related_by_gene_symbol_from_ncbi(
     if not gene_symbol:
         return None, None
     related = {}
+    taxname
     genomic_related = None
     product_related = None
 
     base_url = ncbi_urls("Datasets_gene")
     taxname_url_str = quote(taxname, safe="")
     dataset_report_url = f"{base_url}/symbol/{gene_symbol}/taxon/{taxname_url_str}/dataset_report"
+    product_report_url = f"{base_url}/symbol/{gene_symbol}/taxon/{taxname_url_str}/product_report"
 
-    # Fetch and parse genomic related data
-    dataset_json = json.loads(
-        request(url=dataset_report_url, timeout=timeout)
-    )
-    dataset_json = filter_report_from_other_genes(gene_symbol, dataset_json)
-    _, genomic_related = (
-        _parse_dataset_report(dataset_json)
-        if dataset_json
-        else (None, None)
-    )
-
-    # Fetch and parse product related data
-    product_url = (
-        f"{base_url}/symbol/{gene_symbol}/taxon/9606/product_report"
-    )
-    product_json = json.loads(request(url=product_url, timeout=timeout))
-    product_json = filter_report_from_other_genes(gene_symbol, product_json)
-    _, product_related = (
-        _parse_product_report(product_json)
-        if product_json
-        else (None, None)
-    )
+    taxname, genomic_related = _get_genomic_related_from_ncbi(dataset_report_url, timeout=10)
+    taxname, product_related = _get_product_related_from_ncbi(product_report_url,timeout=10)
 
     if product_related or genomic_related:
         related = _merge_genome_products(genomic_related, product_related)
-        return "Homo sapiens", related
+        return taxname, related
     return None, None
 
 
@@ -743,7 +725,6 @@ def detect_sequence_source(seq_id: str):
     # NCBI RefSeq prefix history:
     # https://www.ncbi.nlm.nih.gov/books/NBK21091/table/
     # ch18.T.refseq_accession_numbers_and_mole/?report=objectonly
-
     refseq_moltype_map = {
         # DNA
         "AC": "dna",
