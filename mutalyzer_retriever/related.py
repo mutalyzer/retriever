@@ -495,15 +495,19 @@ def fetch_ensembl_gene_info(accession_base: str):
     return taxname, {gene: ebi_related_transcripts}
 
 
-def filter_related(ID_base, related):
-    filtered_genes = []
+def filter_assemblies(related_assemblies:list):
     filtered_assemblies = []
 
-    for assembly in related.get("assemblies"):
+    for assembly in related_assemblies:
         if assembly.get("accession", "Unknown").startswith("NC_"):
-            filtered_assemblies.append(assembly)
+            filtered_assemblies.append(clean_dict(assembly))
+    return filtered_assemblies
 
-    for gene in related.get("genes", []):
+
+def filter_gene_products(ID_base, related_genes:list):
+    filtered_genes = []
+
+    for gene in related_genes:
         filtered_transcripts = []
         for transcript in gene.get("transcripts", []):
             matching_providers = [
@@ -525,10 +529,13 @@ def filter_related(ID_base, related):
 
         gene["transcripts"] = filtered_transcripts
         filtered_genes.append(clean_dict(gene))
+    return filtered_genes
 
+
+def filter_related(ID_base, related):
     return {
-        "assemblies": filtered_assemblies,
-        "genes": filtered_genes,
+        "assemblies": filter_assemblies(related.get("assemblies", [])),
+        "genes": filter_gene_products(ID_base, related.get("genes", []))
     }
 
 
