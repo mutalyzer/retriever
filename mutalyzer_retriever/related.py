@@ -235,7 +235,7 @@ def _parse_product_report(data):
     return genes_dict
 
 
-def _merge_related(genomic_related, product_related):
+def _merge_genome_products(genomic_related, product_related):
     """
     Merges genomic and product-related gene data.
     """
@@ -327,7 +327,7 @@ def _get_related_by_gene_symbol_from_ncbi(
     )
 
     if product_related or genomic_related:
-        related = _merge_related(genomic_related, product_related)
+        related = _merge_genome_products(genomic_related, product_related)
         return "Homo sapiens", related
     return None, None
 
@@ -511,14 +511,11 @@ def filter_related(ID_base, related):
                 == (provider.get("protein_accession") or "").split(".")[0]
             ]
             filtered_transcript = {}
-            if "tag" in transcript:
+            if "tag" in transcript or matching_providers:
                 filtered_transcript["providers"] = transcript.get(
                     "providers", []
                 )
-                filtered_transcripts.append(filtered_transcript)
-            if matching_providers:
-                filtered_transcript["providers"] = matching_providers
-                filtered_transcripts.append(filtered_transcript)
+                filtered_transcripts.append(transcript)
 
         gene["transcripts"] = filtered_transcripts
         filtered_genes.append(clean_dict(gene))
@@ -596,7 +593,7 @@ def _get_related_by_chr_location(accession, locations, timeout):
         genomic_related, product_related = _get_gene_related(
             gene_ids, timeout=timeout
         )
-        related = _merge_related(genomic_related, product_related)
+        related = _merge_genome_products(genomic_related, product_related)
     return taxname, related
 
 
@@ -640,7 +637,7 @@ def _get_related_by_accession_from_ncbi(accessions, timeout):
     if product_json:
         product_related = _parse_product_report(product_json)
     if genomic_related or product_related:
-        related = _merge_related(genomic_related, product_related)
+        related = _merge_genome_products(genomic_related, product_related)
         return taxname, related
     return None, None
 
