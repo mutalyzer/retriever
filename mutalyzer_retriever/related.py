@@ -149,7 +149,7 @@ def _parse_dataset_report(json_report):
             ref_accession = ref.get("gene_range", {}).get("accession_version")
 
         ncbi = clean_dict({
-            "name": "ncbi",
+            "name": "NCBI",
             "id": ncbi_id,
             "accession": ref_accession,
         })
@@ -202,7 +202,7 @@ def _parse_product_report(data):
 
             ncbi = clean_dict(
                 {
-                    "name": "ncbi",
+                    "name": "NCBI",
                     "transcript_accession": ncbi_transcript,
                     "protein_accession": ncbi_protein_acc,
                     "description": ncbi_desc,
@@ -351,7 +351,7 @@ def _get_related_by_gene_symbol_ensembl(
         )
     return taxname, {
         gene: ebi_related_transcripts,
-        "providers": {"name": "ENSMEBL", "accession": ensembl_id},
+        "providers": {"name": "ENSEMBL", "accession": ensembl_id},
     }
 
 
