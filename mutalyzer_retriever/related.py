@@ -42,7 +42,7 @@ def _merge_transcripts(ebi_transcripts, ncbi_transcripts):
                     transcript["providers"][i] = ebi_t
                     matched = True
         if not matched:
-            ncbi_transcripts.append({"providers": [ebi_t]})
+            ncbi_transcripts.append({"providers": [clean_dict(ebi_t)]})
     return ncbi_transcripts
 
 
@@ -341,18 +341,19 @@ def _get_related_by_gene_symbol_ensembl(
         f"https://rest.ensembl.org/lookup/symbol/homo_sapiens/{gene_symbol}"
         f"?content-type=application/json;expand=1"
     )
-    ensembl_gene_lookup_json = json.loads(request(url=url, timeout=timeout))
-    parsed = _parse_ebi_lookup_json(ensembl_gene_lookup_json)
-    if parsed:
-        taxname, ensembl_id, gene, ebi_related_transcripts = parsed
-    else:
-        raise ValueError(
-            f"Failed to retrieve related data from ENSEMBL for {gene_symbol}"
-        )
-    return taxname, {
-        gene: ebi_related_transcripts,
-        "providers": {"name": "ENSEMBL", "accession": ensembl_id},
-    }
+    try:
+        ensembl_gene_lookup_json = json.loads(request(url=url, timeout=timeout))
+        parsed = _parse_ebi_lookup_json(ensembl_gene_lookup_json)
+        if parsed:
+            taxname, ensembl_id, gene, ebi_related_transcripts = parsed
+            return taxname, {
+                gene: ebi_related_transcripts,
+                "providers": {"name": "ENSEMBL", "accession": ensembl_id},
+            }        
+    except Http400 as e:
+        if e.status_code == 400:
+            raise ValueError(f"Cannot fetch: invalid gene symbol '{gene_symbol}'") from e 
+
 
 
 def _get_related_by_gene_symbol(gene_symbol, timeout=10):
