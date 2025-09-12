@@ -497,6 +497,11 @@ def fetch_ensembl_gene_info(accession_base: str):
 
 def filter_related(ID_base, related):
     filtered_genes = []
+    filtered_assemblies = []
+
+    for assembly in related.get("assemblies"):
+        if assembly.get("accession", "Unknown").startswith("NC_"):
+            filtered_assemblies.append(assembly)
 
     for gene in related.get("genes", []):
         filtered_transcripts = []
@@ -522,7 +527,7 @@ def filter_related(ID_base, related):
         filtered_genes.append(clean_dict(gene))
 
     return {
-        "assemblies": related.get("assemblies"),
+        "assemblies": filtered_assemblies,
         "genes": filtered_genes,
     }
 
