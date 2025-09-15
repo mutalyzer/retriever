@@ -1,0 +1,62 @@
+{
+  "assemblies": [
+    {
+      "assembly_name": "GRCh38.p14",
+      "accession": "NC_000005.10"
+    },
+    {
+      "assembly_name": "T2T-CHM13v2.0",
+      "accession": "NC_060929.1"
+    },
+    {
+      "assembly_name": "GRCh37.p13",
+      "accession": "NC_000005.9"
+    }
+  ],
+  "genes": [
+    {
+      "name": "CHD1",
+      "hgnc_id": "1915",
+      "description": "chromodomain helicase DNA binding protein 1",
+      "transcripts": [
+        {
+          "providers": [
+            {
+              "name": "NCBI",
+              "transcript_accession": "NM_001270.4",
+              "protein_accession": "NP_001261.2",
+              "description": "transcript variant 2"
+            },
+            {
+              "name": "ENSEMBL",
+              "transcript_accession": "ENST00000614616.5",
+              "protein_accession": "ENSP00000483667.1",
+              "description": "CHD1-211"
+            }
+          ],
+          "tag": "MANE_SELECT"
+        },
+        {
+          "providers": [
+            {
+              "name": "NCBI",
+              "transcript_accession": "XM_024454345.2",
+              "protein_accession": "XP_024310113.1",
+              "description": "transcript variant X3"
+            }
+          ]
+        }
+      ],
+      "providers": [
+        {
+          "name": "NCBI",
+          "id": "1105"
+        },
+        {
+          "name": "ENSEMBL",
+          "accession": "ENSG00000153922"
+        }
+      ]
+    }
+  ]
+}

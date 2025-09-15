@@ -1,0 +1,68 @@
+{
+  "assemblies": [
+    {
+      "assembly_name": "GRCh38.p14",
+      "accession": "NC_000011.10"
+    },
+    {
+      "assembly_name": "T2T-CHM13v2.0",
+      "accession": "NC_060935.1"
+    },
+    {
+      "assembly_name": "GRCh37.p13",
+      "accession": "NC_000011.9"
+    }
+  ],
+  "genes": [
+    {
+      "name": "SDHD",
+      "hgnc_id": "10683",
+      "description": "succinate dehydrogenase complex subunit D",
+      "transcripts": [
+        {
+          "providers": [
+            {
+              "name": "NCBI",
+              "transcript_accession": "NM_003002.4",
+              "protein_accession": "NP_002993.1",
+              "description": "transcript variant 1"
+            },
+            {
+              "name": "ENSEMBL",
+              "transcript_accession": "ENST00000375549.8",
+              "protein_accession": "ENSP00000364699.3",
+              "description": "SDHD-201"
+            }
+          ],
+          "tag": "MANE_SELECT"
+        },
+        {
+          "providers": [
+            {
+              "name": "NCBI",
+              "transcript_accession": "NR_077060.2",
+              "description": "transcript variant 5"
+            },
+            {
+              "name": "ENSEMBL",
+              "transcript_accession": "ENST00000714090.1",
+              "protein_accession": "ENSP00000519381.1",
+              "description": "SDHD-211"
+            }
+          ]
+        }
+      ],
+      "providers": [
+        {
+          "name": "NCBI",
+          "id": "6392",
+          "accession": "NG_012337.3"
+        },
+        {
+          "name": "ENSEMBL",
+          "accession": "ENSG00000204370"
+        }
+      ]
+    }
+  ]
+}

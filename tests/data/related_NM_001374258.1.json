@@ -1,0 +1,70 @@
+{
+  "assemblies": [
+    {
+      "assembly_name": "GRCh38.p14",
+      "accession": "NC_000007.14"
+    },
+    {
+      "assembly_name": "T2T-CHM13v2.0",
+      "accession": "NC_060931.1"
+    },
+    {
+      "assembly_name": "GRCh37.p13",
+      "accession": "NC_000007.13"
+    }
+  ],
+  "genes": [
+    {
+      "name": "BRAF",
+      "hgnc_id": "1097",
+      "description": "B-Raf proto-oncogene, serine/threonine kinase",
+      "transcripts": [
+        {
+          "providers": [
+            {
+              "name": "NCBI",
+              "transcript_accession": "NM_001374258.1",
+              "protein_accession": "NP_001361187.1",
+              "description": "transcript variant 5"
+            },
+            {
+              "name": "ENSEMBL",
+              "transcript_accession": "ENST00000644969.2",
+              "protein_accession": "ENSP00000496776.1",
+              "description": "BRAF-215"
+            }
+          ],
+          "tag": "MANE_PLUS_CLINICAL"
+        },
+        {
+          "providers": [
+            {
+              "name": "NCBI",
+              "transcript_accession": "NM_004333.6",
+              "protein_accession": "NP_004324.2",
+              "description": "transcript variant 1"
+            },
+            {
+              "name": "ENSEMBL",
+              "transcript_accession": "ENST00000646891.2",
+              "protein_accession": "ENSP00000493543.1",
+              "description": "BRAF-220"
+            }
+          ],
+          "tag": "MANE_SELECT"
+        }
+      ],
+      "providers": [
+        {
+          "name": "NCBI",
+          "id": "673",
+          "accession": "NG_007873.3"
+        },
+        {
+          "name": "ENSEMBL",
+          "accession": "ENSG00000157764"
+        }
+      ]
+    }
+  ]
+}
