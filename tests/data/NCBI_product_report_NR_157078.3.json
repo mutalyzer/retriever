@@ -1,0 +1,5258 @@
+{
+  "reports": [
+    {
+      "product": {
+        "gene_id": "1105",
+        "symbol": "CHD1",
+        "description": "chromodomain helicase DNA binding protein 1",
+        "tax_id": "9606",
+        "taxname": "Homo sapiens",
+        "common_name": "human",
+        "type": "PROTEIN_CODING",
+        "transcripts": [
+          {
+            "accession_version": "NM_001270.4",
+            "name": "transcript variant 2",
+            "length": 8145,
+            "cds": {
+              "accession_version": "NM_001270.4",
+              "range": [
+                {
+                  "begin": "618",
+                  "end": "5750",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000005.10",
+                "sequence_name": "Chromosome 5 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "98853985",
+                  "end": "98929007",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "98928539",
+                    "end": "98929007",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "98926334",
+                    "end": "98926534",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "98904897",
+                    "end": "98905098",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "98903792",
+                    "end": "98903908",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "98902900",
+                    "end": "98902964",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "98901186",
+                    "end": "98901335",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "98900811",
+                    "end": "98901082",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "98899480",
+                    "end": "98899705",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "98898664",
+                    "end": "98898764",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "98898256",
+                    "end": "98898434",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "98897193",
+                    "end": "98897320",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "98896226",
+                    "end": "98896442",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "98894597",
+                    "end": "98894686",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "98893416",
+                    "end": "98893606",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "98892525",
+                    "end": "98892713",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "98889076",
+                    "end": "98889238",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "98888088",
+                    "end": "98888240",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "98885578",
+                    "end": "98885649",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "98883088",
+                    "end": "98883237",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "98881975",
+                    "end": "98882123",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "98881279",
+                    "end": "98881375",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "98881076",
+                    "end": "98881171",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "98879552",
+                    "end": "98879728",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "98876398",
+                    "end": "98876558",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "98875072",
+                    "end": "98875113",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "98873593",
+                    "end": "98873723",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "98872417",
+                    "end": "98872555",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "98872051",
+                    "end": "98872201",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "98870687",
+                    "end": "98870803",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "98869754",
+                    "end": "98869882",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "98868495",
+                    "end": "98868635",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "98863408",
+                    "end": "98863586",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "98859972",
+                    "end": "98860068",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "98858964",
+                    "end": "98859015",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "98858180",
+                    "end": "98858390",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "98853985",
+                    "end": "98856725",
+                    "orientation": "minus",
+                    "order": 36
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060929.1",
+                "sequence_name": "Chromosome 5 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99357270",
+                  "end": "99432327",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "99431859",
+                    "end": "99432327",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99429654",
+                    "end": "99429854",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99408181",
+                    "end": "99408382",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99407076",
+                    "end": "99407192",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99406184",
+                    "end": "99406248",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99404470",
+                    "end": "99404619",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99404095",
+                    "end": "99404366",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99402764",
+                    "end": "99402989",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99401948",
+                    "end": "99402048",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "99401540",
+                    "end": "99401718",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "99400477",
+                    "end": "99400604",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "99399509",
+                    "end": "99399725",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "99397880",
+                    "end": "99397969",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "99396699",
+                    "end": "99396889",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "99395808",
+                    "end": "99395996",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "99392359",
+                    "end": "99392521",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "99391371",
+                    "end": "99391523",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "99388861",
+                    "end": "99388932",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "99386375",
+                    "end": "99386524",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "99385262",
+                    "end": "99385410",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "99384566",
+                    "end": "99384662",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "99384363",
+                    "end": "99384458",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "99382839",
+                    "end": "99383015",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "99379685",
+                    "end": "99379845",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "99378359",
+                    "end": "99378400",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "99376878",
+                    "end": "99377008",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "99375702",
+                    "end": "99375840",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "99375336",
+                    "end": "99375486",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "99373973",
+                    "end": "99374089",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "99373040",
+                    "end": "99373168",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "99371779",
+                    "end": "99371919",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "99366693",
+                    "end": "99366871",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "99363257",
+                    "end": "99363353",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "99362249",
+                    "end": "99362300",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "99361465",
+                    "end": "99361675",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "99357270",
+                    "end": "99360010",
+                    "orientation": "minus",
+                    "order": 36
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000614616.5",
+            "protein": {
+              "accession_version": "NP_001261.2",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1710,
+              "isoform_name": "isoform 2",
+              "ensembl_protein": "ENSP00000483667.1"
+            },
+            "type": "PROTEIN_CODING",
+            "select_category": "MANE_SELECT"
+          },
+          {
+            "accession_version": "NM_001364113.3",
+            "name": "transcript variant 1",
+            "length": 8409,
+            "cds": {
+              "accession_version": "NM_001364113.3",
+              "range": [
+                {
+                  "begin": "618",
+                  "end": "6014",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000005.10",
+                "sequence_name": "Chromosome 5 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "98853985",
+                  "end": "98929007",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "98928539",
+                    "end": "98929007",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "98926334",
+                    "end": "98926534",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "98904897",
+                    "end": "98905098",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "98903792",
+                    "end": "98903908",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "98902900",
+                    "end": "98902964",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "98901186",
+                    "end": "98901335",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "98900811",
+                    "end": "98901082",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "98899480",
+                    "end": "98899705",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "98898664",
+                    "end": "98898764",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "98898256",
+                    "end": "98898434",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "98897193",
+                    "end": "98897320",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "98896226",
+                    "end": "98896442",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "98894597",
+                    "end": "98894686",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "98893416",
+                    "end": "98893606",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "98892525",
+                    "end": "98892713",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "98889076",
+                    "end": "98889238",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "98888088",
+                    "end": "98888240",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "98885578",
+                    "end": "98885649",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "98883088",
+                    "end": "98883237",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "98881975",
+                    "end": "98882123",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "98881279",
+                    "end": "98881375",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "98881076",
+                    "end": "98881171",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "98879552",
+                    "end": "98879728",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "98876398",
+                    "end": "98876558",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "98875072",
+                    "end": "98875113",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "98873593",
+                    "end": "98873723",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "98872417",
+                    "end": "98872555",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "98872051",
+                    "end": "98872201",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "98870687",
+                    "end": "98870803",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "98869754",
+                    "end": "98869882",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "98869014",
+                    "end": "98869277",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "98868495",
+                    "end": "98868635",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "98863408",
+                    "end": "98863586",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "98859972",
+                    "end": "98860068",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "98858964",
+                    "end": "98859015",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "98858180",
+                    "end": "98858390",
+                    "orientation": "minus",
+                    "order": 36
+                  },
+                  {
+                    "begin": "98853985",
+                    "end": "98856725",
+                    "orientation": "minus",
+                    "order": 37
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060929.1",
+                "sequence_name": "Chromosome 5 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99357270",
+                  "end": "99432327",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "99431859",
+                    "end": "99432327",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99429654",
+                    "end": "99429854",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99408181",
+                    "end": "99408382",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99407076",
+                    "end": "99407192",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99406184",
+                    "end": "99406248",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99404470",
+                    "end": "99404619",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99404095",
+                    "end": "99404366",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99402764",
+                    "end": "99402989",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99401948",
+                    "end": "99402048",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "99401540",
+                    "end": "99401718",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "99400477",
+                    "end": "99400604",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "99399509",
+                    "end": "99399725",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "99397880",
+                    "end": "99397969",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "99396699",
+                    "end": "99396889",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "99395808",
+                    "end": "99395996",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "99392359",
+                    "end": "99392521",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "99391371",
+                    "end": "99391523",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "99388861",
+                    "end": "99388932",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "99386375",
+                    "end": "99386524",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "99385262",
+                    "end": "99385410",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "99384566",
+                    "end": "99384662",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "99384363",
+                    "end": "99384458",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "99382839",
+                    "end": "99383015",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "99379685",
+                    "end": "99379845",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "99378359",
+                    "end": "99378400",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "99376878",
+                    "end": "99377008",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "99375702",
+                    "end": "99375840",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "99375336",
+                    "end": "99375486",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "99373973",
+                    "end": "99374089",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "99373040",
+                    "end": "99373168",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "99372298",
+                    "end": "99372561",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "99371779",
+                    "end": "99371919",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "99366693",
+                    "end": "99366871",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "99363257",
+                    "end": "99363353",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "99362249",
+                    "end": "99362300",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "99361465",
+                    "end": "99361675",
+                    "orientation": "minus",
+                    "order": 36
+                  },
+                  {
+                    "begin": "99357270",
+                    "end": "99360010",
+                    "orientation": "minus",
+                    "order": 37
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000511067.3",
+            "protein": {
+              "accession_version": "NP_001351042.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1798,
+              "isoform_name": "isoform 1",
+              "ensembl_protein": "ENSP00000479403.2"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001376194.2",
+            "name": "transcript variant 5",
+            "length": 7916,
+            "cds": {
+              "accession_version": "NM_001376194.2",
+              "range": [
+                {
+                  "begin": "389",
+                  "end": "5521",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000005.10",
+                "sequence_name": "Chromosome 5 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "98853985",
+                  "end": "98929007",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "98928768",
+                    "end": "98929007",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "98926334",
+                    "end": "98926534",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "98904897",
+                    "end": "98905098",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "98903792",
+                    "end": "98903908",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "98902900",
+                    "end": "98902964",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "98901186",
+                    "end": "98901335",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "98900811",
+                    "end": "98901082",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "98899480",
+                    "end": "98899705",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "98898664",
+                    "end": "98898764",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "98898256",
+                    "end": "98898434",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "98897193",
+                    "end": "98897320",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "98896226",
+                    "end": "98896442",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "98894597",
+                    "end": "98894686",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "98893416",
+                    "end": "98893606",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "98892525",
+                    "end": "98892713",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "98889076",
+                    "end": "98889238",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "98888088",
+                    "end": "98888240",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "98885578",
+                    "end": "98885649",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "98883088",
+                    "end": "98883237",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "98881975",
+                    "end": "98882123",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "98881279",
+                    "end": "98881375",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "98881076",
+                    "end": "98881171",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "98879552",
+                    "end": "98879728",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "98876398",
+                    "end": "98876558",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "98875072",
+                    "end": "98875113",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "98873593",
+                    "end": "98873723",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "98872417",
+                    "end": "98872555",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "98872051",
+                    "end": "98872201",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "98870687",
+                    "end": "98870803",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "98869754",
+                    "end": "98869882",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "98868495",
+                    "end": "98868635",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "98863408",
+                    "end": "98863586",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "98859972",
+                    "end": "98860068",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "98858964",
+                    "end": "98859015",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "98858180",
+                    "end": "98858390",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "98853985",
+                    "end": "98856725",
+                    "orientation": "minus",
+                    "order": 36
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060929.1",
+                "sequence_name": "Chromosome 5 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99357270",
+                  "end": "99432327",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "99432088",
+                    "end": "99432327",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99429654",
+                    "end": "99429854",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99408181",
+                    "end": "99408382",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99407076",
+                    "end": "99407192",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99406184",
+                    "end": "99406248",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99404470",
+                    "end": "99404619",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99404095",
+                    "end": "99404366",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99402764",
+                    "end": "99402989",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99401948",
+                    "end": "99402048",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "99401540",
+                    "end": "99401718",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "99400477",
+                    "end": "99400604",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "99399509",
+                    "end": "99399725",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "99397880",
+                    "end": "99397969",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "99396699",
+                    "end": "99396889",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "99395808",
+                    "end": "99395996",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "99392359",
+                    "end": "99392521",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "99391371",
+                    "end": "99391523",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "99388861",
+                    "end": "99388932",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "99386375",
+                    "end": "99386524",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "99385262",
+                    "end": "99385410",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "99384566",
+                    "end": "99384662",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "99384363",
+                    "end": "99384458",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "99382839",
+                    "end": "99383015",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "99379685",
+                    "end": "99379845",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "99378359",
+                    "end": "99378400",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "99376878",
+                    "end": "99377008",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "99375702",
+                    "end": "99375840",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "99375336",
+                    "end": "99375486",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "99373973",
+                    "end": "99374089",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "99373040",
+                    "end": "99373168",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "99371779",
+                    "end": "99371919",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "99366693",
+                    "end": "99366871",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "99363257",
+                    "end": "99363353",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "99362249",
+                    "end": "99362300",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "99361465",
+                    "end": "99361675",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "99357270",
+                    "end": "99360010",
+                    "orientation": "minus",
+                    "order": 36
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001363123.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1710,
+              "isoform_name": "isoform 2"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NR_157078.3",
+            "name": "transcript variant 3",
+            "length": 8175,
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000005.10",
+                "sequence_name": "Chromosome 5 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "98853985",
+                  "end": "98929007",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "98928539",
+                    "end": "98929007",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "98926334",
+                    "end": "98926534",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "98904897",
+                    "end": "98905098",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "98903792",
+                    "end": "98903908",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "98902900",
+                    "end": "98902964",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "98901186",
+                    "end": "98901335",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "98900811",
+                    "end": "98901082",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "98899480",
+                    "end": "98899705",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "98898664",
+                    "end": "98898764",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "98898256",
+                    "end": "98898434",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "98897193",
+                    "end": "98897320",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "98896226",
+                    "end": "98896442",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "98894597",
+                    "end": "98894686",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "98893416",
+                    "end": "98893606",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "98892525",
+                    "end": "98892713",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "98889076",
+                    "end": "98889238",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "98888088",
+                    "end": "98888240",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "98886597",
+                    "end": "98886626",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "98885578",
+                    "end": "98885649",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "98883088",
+                    "end": "98883237",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "98881975",
+                    "end": "98882123",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "98881279",
+                    "end": "98881375",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "98881076",
+                    "end": "98881171",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "98879552",
+                    "end": "98879728",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "98876398",
+                    "end": "98876558",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "98875072",
+                    "end": "98875113",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "98873593",
+                    "end": "98873723",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "98872417",
+                    "end": "98872555",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "98872051",
+                    "end": "98872201",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "98870687",
+                    "end": "98870803",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "98869754",
+                    "end": "98869882",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "98868495",
+                    "end": "98868635",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "98863408",
+                    "end": "98863586",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "98859972",
+                    "end": "98860068",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "98858964",
+                    "end": "98859015",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "98858180",
+                    "end": "98858390",
+                    "orientation": "minus",
+                    "order": 36
+                  },
+                  {
+                    "begin": "98853985",
+                    "end": "98856725",
+                    "orientation": "minus",
+                    "order": 37
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060929.1",
+                "sequence_name": "Chromosome 5 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99357270",
+                  "end": "99432327",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "99431859",
+                    "end": "99432327",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99429654",
+                    "end": "99429854",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99408181",
+                    "end": "99408382",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99407076",
+                    "end": "99407192",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99406184",
+                    "end": "99406248",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99404470",
+                    "end": "99404619",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99404095",
+                    "end": "99404366",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99402764",
+                    "end": "99402989",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99401948",
+                    "end": "99402048",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "99401540",
+                    "end": "99401718",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "99400477",
+                    "end": "99400604",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "99399509",
+                    "end": "99399725",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "99397880",
+                    "end": "99397969",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "99396699",
+                    "end": "99396889",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "99395808",
+                    "end": "99395996",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "99392359",
+                    "end": "99392521",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "99391371",
+                    "end": "99391523",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "99389880",
+                    "end": "99389909",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "99388861",
+                    "end": "99388932",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "99386375",
+                    "end": "99386524",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "99385262",
+                    "end": "99385410",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "99384566",
+                    "end": "99384662",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "99384363",
+                    "end": "99384458",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "99382839",
+                    "end": "99383015",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "99379685",
+                    "end": "99379845",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "99378359",
+                    "end": "99378400",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "99376878",
+                    "end": "99377008",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "99375702",
+                    "end": "99375840",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "99375336",
+                    "end": "99375486",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "99373973",
+                    "end": "99374089",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "99373040",
+                    "end": "99373168",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "99371779",
+                    "end": "99371919",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "99366693",
+                    "end": "99366871",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "99363257",
+                    "end": "99363353",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "99362249",
+                    "end": "99362300",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "99361465",
+                    "end": "99361675",
+                    "orientation": "minus",
+                    "order": 36
+                  },
+                  {
+                    "begin": "99357270",
+                    "end": "99360010",
+                    "orientation": "minus",
+                    "order": 37
+                  }
+                ]
+              }
+            ],
+            "type": "NON_CODING"
+          },
+          {
+            "accession_version": "NR_157079.3",
+            "name": "transcript variant 4",
+            "length": 7966,
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000005.10",
+                "sequence_name": "Chromosome 5 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "98853985",
+                  "end": "98929007",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "98928539",
+                    "end": "98929007",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "98926334",
+                    "end": "98926534",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "98904897",
+                    "end": "98905098",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "98903792",
+                    "end": "98903908",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "98902900",
+                    "end": "98902964",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "98901186",
+                    "end": "98901335",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "98900811",
+                    "end": "98901082",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "98899480",
+                    "end": "98899705",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "98898664",
+                    "end": "98898764",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "98898256",
+                    "end": "98898434",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "98897193",
+                    "end": "98897320",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "98896226",
+                    "end": "98896442",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "98894597",
+                    "end": "98894686",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "98893416",
+                    "end": "98893606",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "98892525",
+                    "end": "98892713",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "98889076",
+                    "end": "98889238",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "98888088",
+                    "end": "98888240",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "98885578",
+                    "end": "98885649",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "98883088",
+                    "end": "98883237",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "98881975",
+                    "end": "98882123",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "98881279",
+                    "end": "98881375",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "98881076",
+                    "end": "98881171",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "98879552",
+                    "end": "98879728",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "98876398",
+                    "end": "98876558",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "98875072",
+                    "end": "98875113",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "98873593",
+                    "end": "98873723",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "98872417",
+                    "end": "98872555",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "98872051",
+                    "end": "98872201",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "98870687",
+                    "end": "98870803",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "98869754",
+                    "end": "98869882",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "98868495",
+                    "end": "98868635",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "98859972",
+                    "end": "98860068",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "98858964",
+                    "end": "98859015",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "98858180",
+                    "end": "98858390",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "98853985",
+                    "end": "98856725",
+                    "orientation": "minus",
+                    "order": 35
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060929.1",
+                "sequence_name": "Chromosome 5 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99357270",
+                  "end": "99432327",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "99431859",
+                    "end": "99432327",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99429654",
+                    "end": "99429854",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99408181",
+                    "end": "99408382",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99407076",
+                    "end": "99407192",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99406184",
+                    "end": "99406248",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99404470",
+                    "end": "99404619",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99404095",
+                    "end": "99404366",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99402764",
+                    "end": "99402989",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99401948",
+                    "end": "99402048",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "99401540",
+                    "end": "99401718",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "99400477",
+                    "end": "99400604",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "99399509",
+                    "end": "99399725",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "99397880",
+                    "end": "99397969",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "99396699",
+                    "end": "99396889",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "99395808",
+                    "end": "99395996",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "99392359",
+                    "end": "99392521",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "99391371",
+                    "end": "99391523",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "99388861",
+                    "end": "99388932",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "99386375",
+                    "end": "99386524",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "99385262",
+                    "end": "99385410",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "99384566",
+                    "end": "99384662",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "99384363",
+                    "end": "99384458",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "99382839",
+                    "end": "99383015",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "99379685",
+                    "end": "99379845",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "99378359",
+                    "end": "99378400",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "99376878",
+                    "end": "99377008",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "99375702",
+                    "end": "99375840",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "99375336",
+                    "end": "99375486",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "99373973",
+                    "end": "99374089",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "99373040",
+                    "end": "99373168",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "99371779",
+                    "end": "99371919",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "99363257",
+                    "end": "99363353",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "99362249",
+                    "end": "99362300",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "99361465",
+                    "end": "99361675",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "99357270",
+                    "end": "99360010",
+                    "orientation": "minus",
+                    "order": 35
+                  }
+                ]
+              }
+            ],
+            "type": "NON_CODING"
+          },
+          {
+            "accession_version": "XM_024454344.2",
+            "name": "transcript variant X1",
+            "length": 8232,
+            "cds": {
+              "accession_version": "XM_024454344.2",
+              "range": [
+                {
+                  "begin": "441",
+                  "end": "5837",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000005.10",
+                "sequence_name": "Chromosome 5 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "98853985",
+                  "end": "98928531",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "98928240",
+                    "end": "98928531",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "98926334",
+                    "end": "98926534",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "98904897",
+                    "end": "98905098",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "98903792",
+                    "end": "98903908",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "98902900",
+                    "end": "98902964",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "98901186",
+                    "end": "98901335",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "98900811",
+                    "end": "98901082",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "98899480",
+                    "end": "98899705",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "98898664",
+                    "end": "98898764",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "98898256",
+                    "end": "98898434",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "98897193",
+                    "end": "98897320",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "98896226",
+                    "end": "98896442",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "98894597",
+                    "end": "98894686",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "98893416",
+                    "end": "98893606",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "98892525",
+                    "end": "98892713",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "98889076",
+                    "end": "98889238",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "98888088",
+                    "end": "98888240",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "98885578",
+                    "end": "98885649",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "98883088",
+                    "end": "98883237",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "98881975",
+                    "end": "98882123",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "98881279",
+                    "end": "98881375",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "98881076",
+                    "end": "98881171",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "98879552",
+                    "end": "98879728",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "98876398",
+                    "end": "98876558",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "98875072",
+                    "end": "98875113",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "98873593",
+                    "end": "98873723",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "98872417",
+                    "end": "98872555",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "98872051",
+                    "end": "98872201",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "98870687",
+                    "end": "98870803",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "98869754",
+                    "end": "98869882",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "98869014",
+                    "end": "98869277",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "98868495",
+                    "end": "98868635",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "98863408",
+                    "end": "98863586",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "98859972",
+                    "end": "98860068",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "98858964",
+                    "end": "98859015",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "98858180",
+                    "end": "98858390",
+                    "orientation": "minus",
+                    "order": 36
+                  },
+                  {
+                    "begin": "98853985",
+                    "end": "98856725",
+                    "orientation": "minus",
+                    "order": 37
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_024310112.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1798,
+              "isoform_name": "isoform X1"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_024454345.2",
+            "name": "transcript variant X3",
+            "length": 8198,
+            "cds": {
+              "accession_version": "XM_024454345.2",
+              "range": [
+                {
+                  "begin": "618",
+                  "end": "5540",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000005.10",
+                "sequence_name": "Chromosome 5 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "98853985",
+                  "end": "98929007",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "98928539",
+                    "end": "98929007",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "98926334",
+                    "end": "98926534",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "98904897",
+                    "end": "98905098",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "98903792",
+                    "end": "98903908",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "98902900",
+                    "end": "98902964",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "98901186",
+                    "end": "98901335",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "98900811",
+                    "end": "98901082",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "98899480",
+                    "end": "98899705",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "98898664",
+                    "end": "98898764",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "98898256",
+                    "end": "98898434",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "98897193",
+                    "end": "98897320",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "98896226",
+                    "end": "98896442",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "98894597",
+                    "end": "98894686",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "98893416",
+                    "end": "98893606",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "98892525",
+                    "end": "98892713",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "98889076",
+                    "end": "98889238",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "98888088",
+                    "end": "98888240",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "98885578",
+                    "end": "98885649",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "98883088",
+                    "end": "98883237",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "98881975",
+                    "end": "98882123",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "98881279",
+                    "end": "98881375",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "98881076",
+                    "end": "98881171",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "98879552",
+                    "end": "98879728",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "98876398",
+                    "end": "98876558",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "98875072",
+                    "end": "98875113",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "98873593",
+                    "end": "98873723",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "98872417",
+                    "end": "98872555",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "98872051",
+                    "end": "98872201",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "98870687",
+                    "end": "98870803",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "98869754",
+                    "end": "98869882",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "98869014",
+                    "end": "98869277",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "98868495",
+                    "end": "98868635",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "98863408",
+                    "end": "98863586",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "98859972",
+                    "end": "98860068",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "98858964",
+                    "end": "98859015",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "98853985",
+                    "end": "98856725",
+                    "orientation": "minus",
+                    "order": 36
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_024310113.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1640,
+              "isoform_name": "isoform X3"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_047416669.1",
+            "name": "transcript variant X2",
+            "length": 7860,
+            "cds": {
+              "accession_version": "XM_047416669.1",
+              "range": [
+                {
+                  "begin": "333",
+                  "end": "5465",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000005.10",
+                "sequence_name": "Chromosome 5 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "98853985",
+                  "end": "98928423",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "98928240",
+                    "end": "98928423",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "98926334",
+                    "end": "98926534",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "98904897",
+                    "end": "98905098",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "98903792",
+                    "end": "98903908",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "98902900",
+                    "end": "98902964",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "98901186",
+                    "end": "98901335",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "98900811",
+                    "end": "98901082",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "98899480",
+                    "end": "98899705",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "98898664",
+                    "end": "98898764",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "98898256",
+                    "end": "98898434",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "98897193",
+                    "end": "98897320",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "98896226",
+                    "end": "98896442",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "98894597",
+                    "end": "98894686",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "98893416",
+                    "end": "98893606",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "98892525",
+                    "end": "98892713",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "98889076",
+                    "end": "98889238",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "98888088",
+                    "end": "98888240",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "98885578",
+                    "end": "98885649",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "98883088",
+                    "end": "98883237",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "98881975",
+                    "end": "98882123",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "98881279",
+                    "end": "98881375",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "98881076",
+                    "end": "98881171",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "98879552",
+                    "end": "98879728",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "98876398",
+                    "end": "98876558",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "98875072",
+                    "end": "98875113",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "98873593",
+                    "end": "98873723",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "98872417",
+                    "end": "98872555",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "98872051",
+                    "end": "98872201",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "98870687",
+                    "end": "98870803",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "98869754",
+                    "end": "98869882",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "98868495",
+                    "end": "98868635",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "98863408",
+                    "end": "98863586",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "98859972",
+                    "end": "98860068",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "98858964",
+                    "end": "98859015",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "98858180",
+                    "end": "98858390",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "98853985",
+                    "end": "98856725",
+                    "orientation": "minus",
+                    "order": 36
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000926040.1",
+            "protein": {
+              "accession_version": "XP_047272625.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1710,
+              "isoform_name": "isoform X2",
+              "ensembl_protein": "ENSP00000596099.1"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_047416670.1",
+            "name": "transcript variant X4",
+            "length": 7934,
+            "cds": {
+              "accession_version": "XM_047416670.1",
+              "range": [
+                {
+                  "begin": "618",
+                  "end": "5276",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000005.10",
+                "sequence_name": "Chromosome 5 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "98853985",
+                  "end": "98929007",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "98928539",
+                    "end": "98929007",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "98926334",
+                    "end": "98926534",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "98904897",
+                    "end": "98905098",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "98903792",
+                    "end": "98903908",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "98902900",
+                    "end": "98902964",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "98901186",
+                    "end": "98901335",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "98900811",
+                    "end": "98901082",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "98899480",
+                    "end": "98899705",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "98898664",
+                    "end": "98898764",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "98898256",
+                    "end": "98898434",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "98897193",
+                    "end": "98897320",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "98896226",
+                    "end": "98896442",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "98894597",
+                    "end": "98894686",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "98893416",
+                    "end": "98893606",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "98892525",
+                    "end": "98892713",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "98889076",
+                    "end": "98889238",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "98888088",
+                    "end": "98888240",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "98885578",
+                    "end": "98885649",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "98883088",
+                    "end": "98883237",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "98881975",
+                    "end": "98882123",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "98881279",
+                    "end": "98881375",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "98881076",
+                    "end": "98881171",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "98879552",
+                    "end": "98879728",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "98876398",
+                    "end": "98876558",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "98875072",
+                    "end": "98875113",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "98873593",
+                    "end": "98873723",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "98872417",
+                    "end": "98872555",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "98872051",
+                    "end": "98872201",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "98870687",
+                    "end": "98870803",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "98869754",
+                    "end": "98869882",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "98868495",
+                    "end": "98868635",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "98863408",
+                    "end": "98863586",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "98859972",
+                    "end": "98860068",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "98858964",
+                    "end": "98859015",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "98853985",
+                    "end": "98856725",
+                    "orientation": "minus",
+                    "order": 35
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_047272626.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1552,
+              "isoform_name": "isoform X4"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_047416672.1",
+            "name": "transcript variant X5",
+            "length": 5226,
+            "cds": {
+              "accession_version": "XM_047416672.1",
+              "range": [
+                {
+                  "begin": "618",
+                  "end": "5153",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000005.10",
+                "sequence_name": "Chromosome 5 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "98859972",
+                  "end": "98929007",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "98928539",
+                    "end": "98929007",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "98926334",
+                    "end": "98926534",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "98904897",
+                    "end": "98905098",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "98903792",
+                    "end": "98903908",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "98902900",
+                    "end": "98902964",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "98901186",
+                    "end": "98901335",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "98900811",
+                    "end": "98901082",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "98899480",
+                    "end": "98899705",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "98898664",
+                    "end": "98898764",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "98898256",
+                    "end": "98898434",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "98897193",
+                    "end": "98897320",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "98896226",
+                    "end": "98896442",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "98894597",
+                    "end": "98894686",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "98893416",
+                    "end": "98893606",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "98892525",
+                    "end": "98892713",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "98889076",
+                    "end": "98889238",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "98888088",
+                    "end": "98888240",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "98885578",
+                    "end": "98885649",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "98883088",
+                    "end": "98883237",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "98881975",
+                    "end": "98882123",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "98881279",
+                    "end": "98881375",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "98881076",
+                    "end": "98881171",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "98879552",
+                    "end": "98879728",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "98876398",
+                    "end": "98876558",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "98875072",
+                    "end": "98875113",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "98873593",
+                    "end": "98873723",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "98872417",
+                    "end": "98872555",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "98872051",
+                    "end": "98872201",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "98870687",
+                    "end": "98870803",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "98869754",
+                    "end": "98869882",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "98869014",
+                    "end": "98869277",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "98868495",
+                    "end": "98868635",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "98859972",
+                    "end": "98860068",
+                    "orientation": "minus",
+                    "order": 33
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_047272628.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1511,
+              "isoform_name": "isoform X5"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_047416673.1",
+            "name": "transcript variant X6",
+            "length": 3974,
+            "cds": {
+              "accession_version": "XM_047416673.1",
+              "range": [
+                {
+                  "begin": "618",
+                  "end": "3872",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000005.10",
+                "sequence_name": "Chromosome 5 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "98873646",
+                  "end": "98929007",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "98928539",
+                    "end": "98929007",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "98926334",
+                    "end": "98926534",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "98904897",
+                    "end": "98905098",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "98903792",
+                    "end": "98903908",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "98902900",
+                    "end": "98902964",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "98901186",
+                    "end": "98901335",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "98900811",
+                    "end": "98901082",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "98899480",
+                    "end": "98899705",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "98898664",
+                    "end": "98898764",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "98898256",
+                    "end": "98898434",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "98897193",
+                    "end": "98897320",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "98896226",
+                    "end": "98896442",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "98894597",
+                    "end": "98894686",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "98893416",
+                    "end": "98893606",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "98892525",
+                    "end": "98892713",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "98889076",
+                    "end": "98889238",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "98888088",
+                    "end": "98888240",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "98885578",
+                    "end": "98885649",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "98883088",
+                    "end": "98883237",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "98881975",
+                    "end": "98882123",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "98881279",
+                    "end": "98881375",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "98881076",
+                    "end": "98881171",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "98879552",
+                    "end": "98879728",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "98875072",
+                    "end": "98875113",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "98873646",
+                    "end": "98873723",
+                    "orientation": "minus",
+                    "order": 25
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_047272629.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1084,
+              "isoform_name": "isoform X6"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054351506.1",
+            "name": "transcript variant X1",
+            "length": 8232,
+            "cds": {
+              "accession_version": "XM_054351506.1",
+              "range": [
+                {
+                  "begin": "441",
+                  "end": "5837",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060929.1",
+                "sequence_name": "Chromosome 5 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99357270",
+                  "end": "99431851",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "99431560",
+                    "end": "99431851",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99429654",
+                    "end": "99429854",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99408181",
+                    "end": "99408382",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99407076",
+                    "end": "99407192",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99406184",
+                    "end": "99406248",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99404470",
+                    "end": "99404619",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99404095",
+                    "end": "99404366",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99402764",
+                    "end": "99402989",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99401948",
+                    "end": "99402048",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "99401540",
+                    "end": "99401718",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "99400477",
+                    "end": "99400604",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "99399509",
+                    "end": "99399725",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "99397880",
+                    "end": "99397969",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "99396699",
+                    "end": "99396889",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "99395808",
+                    "end": "99395996",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "99392359",
+                    "end": "99392521",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "99391371",
+                    "end": "99391523",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "99388861",
+                    "end": "99388932",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "99386375",
+                    "end": "99386524",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "99385262",
+                    "end": "99385410",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "99384566",
+                    "end": "99384662",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "99384363",
+                    "end": "99384458",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "99382839",
+                    "end": "99383015",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "99379685",
+                    "end": "99379845",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "99378359",
+                    "end": "99378400",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "99376878",
+                    "end": "99377008",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "99375702",
+                    "end": "99375840",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "99375336",
+                    "end": "99375486",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "99373973",
+                    "end": "99374089",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "99373040",
+                    "end": "99373168",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "99372298",
+                    "end": "99372561",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "99371779",
+                    "end": "99371919",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "99366693",
+                    "end": "99366871",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "99363257",
+                    "end": "99363353",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "99362249",
+                    "end": "99362300",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "99361465",
+                    "end": "99361675",
+                    "orientation": "minus",
+                    "order": 36
+                  },
+                  {
+                    "begin": "99357270",
+                    "end": "99360010",
+                    "orientation": "minus",
+                    "order": 37
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054207481.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1798,
+              "isoform_name": "isoform X1"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054351507.1",
+            "name": "transcript variant X2",
+            "length": 7860,
+            "cds": {
+              "accession_version": "XM_054351507.1",
+              "range": [
+                {
+                  "begin": "333",
+                  "end": "5465",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060929.1",
+                "sequence_name": "Chromosome 5 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99357270",
+                  "end": "99431743",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "99431560",
+                    "end": "99431743",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99429654",
+                    "end": "99429854",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99408181",
+                    "end": "99408382",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99407076",
+                    "end": "99407192",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99406184",
+                    "end": "99406248",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99404470",
+                    "end": "99404619",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99404095",
+                    "end": "99404366",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99402764",
+                    "end": "99402989",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99401948",
+                    "end": "99402048",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "99401540",
+                    "end": "99401718",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "99400477",
+                    "end": "99400604",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "99399509",
+                    "end": "99399725",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "99397880",
+                    "end": "99397969",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "99396699",
+                    "end": "99396889",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "99395808",
+                    "end": "99395996",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "99392359",
+                    "end": "99392521",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "99391371",
+                    "end": "99391523",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "99388861",
+                    "end": "99388932",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "99386375",
+                    "end": "99386524",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "99385262",
+                    "end": "99385410",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "99384566",
+                    "end": "99384662",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "99384363",
+                    "end": "99384458",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "99382839",
+                    "end": "99383015",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "99379685",
+                    "end": "99379845",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "99378359",
+                    "end": "99378400",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "99376878",
+                    "end": "99377008",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "99375702",
+                    "end": "99375840",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "99375336",
+                    "end": "99375486",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "99373973",
+                    "end": "99374089",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "99373040",
+                    "end": "99373168",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "99371779",
+                    "end": "99371919",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "99366693",
+                    "end": "99366871",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "99363257",
+                    "end": "99363353",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "99362249",
+                    "end": "99362300",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "99361465",
+                    "end": "99361675",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "99357270",
+                    "end": "99360010",
+                    "orientation": "minus",
+                    "order": 36
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054207482.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1710,
+              "isoform_name": "isoform X2"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054351508.1",
+            "name": "transcript variant X3",
+            "length": 8198,
+            "cds": {
+              "accession_version": "XM_054351508.1",
+              "range": [
+                {
+                  "begin": "618",
+                  "end": "5540",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060929.1",
+                "sequence_name": "Chromosome 5 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99357270",
+                  "end": "99432327",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "99431859",
+                    "end": "99432327",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99429654",
+                    "end": "99429854",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99408181",
+                    "end": "99408382",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99407076",
+                    "end": "99407192",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99406184",
+                    "end": "99406248",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99404470",
+                    "end": "99404619",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99404095",
+                    "end": "99404366",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99402764",
+                    "end": "99402989",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99401948",
+                    "end": "99402048",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "99401540",
+                    "end": "99401718",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "99400477",
+                    "end": "99400604",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "99399509",
+                    "end": "99399725",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "99397880",
+                    "end": "99397969",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "99396699",
+                    "end": "99396889",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "99395808",
+                    "end": "99395996",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "99392359",
+                    "end": "99392521",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "99391371",
+                    "end": "99391523",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "99388861",
+                    "end": "99388932",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "99386375",
+                    "end": "99386524",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "99385262",
+                    "end": "99385410",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "99384566",
+                    "end": "99384662",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "99384363",
+                    "end": "99384458",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "99382839",
+                    "end": "99383015",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "99379685",
+                    "end": "99379845",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "99378359",
+                    "end": "99378400",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "99376878",
+                    "end": "99377008",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "99375702",
+                    "end": "99375840",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "99375336",
+                    "end": "99375486",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "99373973",
+                    "end": "99374089",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "99373040",
+                    "end": "99373168",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "99372298",
+                    "end": "99372561",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "99371779",
+                    "end": "99371919",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "99366693",
+                    "end": "99366871",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "99363257",
+                    "end": "99363353",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "99362249",
+                    "end": "99362300",
+                    "orientation": "minus",
+                    "order": 35
+                  },
+                  {
+                    "begin": "99357270",
+                    "end": "99360010",
+                    "orientation": "minus",
+                    "order": 36
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054207483.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1640,
+              "isoform_name": "isoform X3"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054351509.1",
+            "name": "transcript variant X4",
+            "length": 7934,
+            "cds": {
+              "accession_version": "XM_054351509.1",
+              "range": [
+                {
+                  "begin": "618",
+                  "end": "5276",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060929.1",
+                "sequence_name": "Chromosome 5 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99357270",
+                  "end": "99432327",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "99431859",
+                    "end": "99432327",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99429654",
+                    "end": "99429854",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99408181",
+                    "end": "99408382",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99407076",
+                    "end": "99407192",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99406184",
+                    "end": "99406248",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99404470",
+                    "end": "99404619",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99404095",
+                    "end": "99404366",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99402764",
+                    "end": "99402989",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99401948",
+                    "end": "99402048",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "99401540",
+                    "end": "99401718",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "99400477",
+                    "end": "99400604",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "99399509",
+                    "end": "99399725",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "99397880",
+                    "end": "99397969",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "99396699",
+                    "end": "99396889",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "99395808",
+                    "end": "99395996",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "99392359",
+                    "end": "99392521",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "99391371",
+                    "end": "99391523",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "99388861",
+                    "end": "99388932",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "99386375",
+                    "end": "99386524",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "99385262",
+                    "end": "99385410",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "99384566",
+                    "end": "99384662",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "99384363",
+                    "end": "99384458",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "99382839",
+                    "end": "99383015",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "99379685",
+                    "end": "99379845",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "99378359",
+                    "end": "99378400",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "99376878",
+                    "end": "99377008",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "99375702",
+                    "end": "99375840",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "99375336",
+                    "end": "99375486",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "99373973",
+                    "end": "99374089",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "99373040",
+                    "end": "99373168",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "99371779",
+                    "end": "99371919",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "99366693",
+                    "end": "99366871",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "99363257",
+                    "end": "99363353",
+                    "orientation": "minus",
+                    "order": 33
+                  },
+                  {
+                    "begin": "99362249",
+                    "end": "99362300",
+                    "orientation": "minus",
+                    "order": 34
+                  },
+                  {
+                    "begin": "99357270",
+                    "end": "99360010",
+                    "orientation": "minus",
+                    "order": 35
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054207484.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1552,
+              "isoform_name": "isoform X4"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054351510.1",
+            "name": "transcript variant X5",
+            "length": 5226,
+            "cds": {
+              "accession_version": "XM_054351510.1",
+              "range": [
+                {
+                  "begin": "618",
+                  "end": "5153",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060929.1",
+                "sequence_name": "Chromosome 5 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99363257",
+                  "end": "99432327",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "99431859",
+                    "end": "99432327",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99429654",
+                    "end": "99429854",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99408181",
+                    "end": "99408382",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99407076",
+                    "end": "99407192",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99406184",
+                    "end": "99406248",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99404470",
+                    "end": "99404619",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99404095",
+                    "end": "99404366",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99402764",
+                    "end": "99402989",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99401948",
+                    "end": "99402048",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "99401540",
+                    "end": "99401718",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "99400477",
+                    "end": "99400604",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "99399509",
+                    "end": "99399725",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "99397880",
+                    "end": "99397969",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "99396699",
+                    "end": "99396889",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "99395808",
+                    "end": "99395996",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "99392359",
+                    "end": "99392521",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "99391371",
+                    "end": "99391523",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "99388861",
+                    "end": "99388932",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "99386375",
+                    "end": "99386524",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "99385262",
+                    "end": "99385410",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "99384566",
+                    "end": "99384662",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "99384363",
+                    "end": "99384458",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "99382839",
+                    "end": "99383015",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "99379685",
+                    "end": "99379845",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "99378359",
+                    "end": "99378400",
+                    "orientation": "minus",
+                    "order": 25
+                  },
+                  {
+                    "begin": "99376878",
+                    "end": "99377008",
+                    "orientation": "minus",
+                    "order": 26
+                  },
+                  {
+                    "begin": "99375702",
+                    "end": "99375840",
+                    "orientation": "minus",
+                    "order": 27
+                  },
+                  {
+                    "begin": "99375336",
+                    "end": "99375486",
+                    "orientation": "minus",
+                    "order": 28
+                  },
+                  {
+                    "begin": "99373973",
+                    "end": "99374089",
+                    "orientation": "minus",
+                    "order": 29
+                  },
+                  {
+                    "begin": "99373040",
+                    "end": "99373168",
+                    "orientation": "minus",
+                    "order": 30
+                  },
+                  {
+                    "begin": "99372298",
+                    "end": "99372561",
+                    "orientation": "minus",
+                    "order": 31
+                  },
+                  {
+                    "begin": "99371779",
+                    "end": "99371919",
+                    "orientation": "minus",
+                    "order": 32
+                  },
+                  {
+                    "begin": "99363257",
+                    "end": "99363353",
+                    "orientation": "minus",
+                    "order": 33
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054207485.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1511,
+              "isoform_name": "isoform X5"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054351511.1",
+            "name": "transcript variant X6",
+            "length": 3974,
+            "cds": {
+              "accession_version": "XM_054351511.1",
+              "range": [
+                {
+                  "begin": "618",
+                  "end": "3872",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060929.1",
+                "sequence_name": "Chromosome 5 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "99376931",
+                  "end": "99432327",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "99431859",
+                    "end": "99432327",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "99429654",
+                    "end": "99429854",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "99408181",
+                    "end": "99408382",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "99407076",
+                    "end": "99407192",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "99406184",
+                    "end": "99406248",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "99404470",
+                    "end": "99404619",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "99404095",
+                    "end": "99404366",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "99402764",
+                    "end": "99402989",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "99401948",
+                    "end": "99402048",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "99401540",
+                    "end": "99401718",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "99400477",
+                    "end": "99400604",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "99399509",
+                    "end": "99399725",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "99397880",
+                    "end": "99397969",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "99396699",
+                    "end": "99396889",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "99395808",
+                    "end": "99395996",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "99392359",
+                    "end": "99392521",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "99391371",
+                    "end": "99391523",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "99388861",
+                    "end": "99388932",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "99386375",
+                    "end": "99386524",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "99385262",
+                    "end": "99385410",
+                    "orientation": "minus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "99384566",
+                    "end": "99384662",
+                    "orientation": "minus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "99384363",
+                    "end": "99384458",
+                    "orientation": "minus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "99382839",
+                    "end": "99383015",
+                    "orientation": "minus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "99378359",
+                    "end": "99378400",
+                    "orientation": "minus",
+                    "order": 24
+                  },
+                  {
+                    "begin": "99376931",
+                    "end": "99377008",
+                    "orientation": "minus",
+                    "order": 25
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054207486.1",
+              "name": "chromodomain-helicase-DNA-binding protein 1",
+              "length": 1084,
+              "isoform_name": "isoform X6"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          }
+        ],
+        "transcript_count": 17,
+        "protein_count": 15,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 3
+          },
+          {
+            "type": "NON_CODING",
+            "count": 2
+          },
+          {
+            "type": "PROTEIN_CODING_MODEL",
+            "count": 12
+          }
+        ]
+      },
+      "query": [
+        "NR_157078.3"
+      ]
+    }
+  ],
+  "total_count": 1
+}

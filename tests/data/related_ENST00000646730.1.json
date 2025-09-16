@@ -9,8 +9,8 @@
       "accession": "NC_060931.1"
     },
     {
-      "accession": "NC_000007.13",
-      "assembly_name": "GRCh37.p13"
+      "assembly_name": "GRCh37.p13",
+      "accession": "NC_000007.13"
     }
   ],
   "genes": [
@@ -55,6 +55,12 @@
         },
         {
           "providers": [
+            {
+              "name": "NCBI",
+              "transcript_accession": "XM_047420769.1",
+              "protein_accession": "XP_047276725.1",
+              "description": "transcript variant X5"
+            },
             {
               "name": "ENSEMBL",
               "transcript_accession": "ENST00000646730.1",

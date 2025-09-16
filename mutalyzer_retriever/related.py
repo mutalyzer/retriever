@@ -66,7 +66,8 @@ def _merge(ebi_related, ncbi_related):
     return related
 
 
-def _get_grch37_chr_accession(chrid, api_base):
+def _get_grch37_chr_accession(chrid):
+    api_base = settings.get("NCBI_DATASETS_API")
     endpoint = "genome/accession/GCF_000001405.25/sequence_reports"
     params = {"chromosomes": chrid}
     response = json.loads(
@@ -106,7 +107,7 @@ def _parse_assemblies(dataset_report):
     # Add GRCh37 assembly if human
     if taxname == "Homo sapiens" and sequence_name:
         grch37_acc = _get_grch37_chr_accession(
-            sequence_name, settings.get("NCBI_DATASETS_API")
+            sequence_name
         )
         grch37_entry = clean_dict(
             {
