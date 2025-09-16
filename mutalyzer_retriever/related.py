@@ -70,7 +70,11 @@ def _get_grch37_chr_accession(chrid, api_base):
     endpoint = "genome/accession/GCF_000001405.25/sequence_reports"
     params = {"chromosomes": chrid}
     response = json.loads(
-        request(url=f"{api_base}/{endpoint}", params=params, timeout=DEFAULT_TIMEOUT)
+        request(
+            url=f"{api_base}/{endpoint}",
+            params=params,
+            timeout=DEFAULT_TIMEOUT,
+        )
     )
     return response.get("reports", [{}])[0].get("refseq_accession")
 
@@ -82,7 +86,7 @@ def _parse_assemblies(dataset_report):
     gene = dataset_report.get("gene", {})
     taxname = taxname or gene.get("taxname", "Unknown")
     sequence_name = None
-    
+
     for annotation in gene.get("annotations", []):
         for loc in annotation.get("genomic_locations", []):
             accession = loc.get("genomic_accession_version")
@@ -99,18 +103,19 @@ def _parse_assemblies(dataset_report):
             if assembly_entry and assembly_entry not in assemblies:
                 assemblies.append(assembly_entry)
 
-    # Add GRCh37 assembly if human                
+    # Add GRCh37 assembly if human
     if taxname == "Homo sapiens" and sequence_name:
-        grch37_acc = _get_grch37_chr_accession(sequence_name, settings.get("NCBI_DATASETS_API"))
+        grch37_acc = _get_grch37_chr_accession(
+            sequence_name, settings.get("NCBI_DATASETS_API")
+        )
         grch37_entry = clean_dict(
             {
                 "assembly_name": "GRCh37.p13",
                 "accession": grch37_acc,
             }
         )
-
         if grch37_entry and grch37_entry not in assemblies:
-            assemblies.append(grch37_entry)                
+            assemblies.append(grch37_entry)
     return assemblies
 
 
@@ -187,7 +192,9 @@ def _parse_transcripts(product_report):
             }
         )
 
-        providers = [p for p in (ncbi_transcript, ensembl_transcript) if len(p) > 1]
+        providers = [
+            p for p in (ncbi_transcript, ensembl_transcript) if len(p) > 1
+        ]
         if not providers:
             continue
 
@@ -302,9 +309,7 @@ def filter_report_from_other_genes(gene_symbol: str, reports: dict):
     return
 
 
-def _get_related_by_gene_symbol_from_ncbi(
-    gene_symbol, taxname="Homo Sapiens"
-):
+def _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxname="Homo Sapiens"):
     """
     Given a gene symbol, return a set of related sequence accessions (genomic and/or products).
     Returns (taxname, related_dict), or (None, None) if nothing found.
@@ -315,7 +320,7 @@ def _get_related_by_gene_symbol_from_ncbi(
     genomic_related = None
     product_related = None
 
-    base_api = settings.get("NCBI_DATASETS")
+    base_api = settings.get("NCBI_DATASETS_API")
     taxname_url_str = quote(taxname, safe="")
     dataset_report_url = f"{base_api}/gene/symbol/{gene_symbol}/taxon/{taxname_url_str}/dataset_report"
     product_report_url = f"{base_api}/gene/symbol/{gene_symbol}/taxon/{taxname_url_str}/product_report"
@@ -454,20 +459,18 @@ def fetch_ensembl_gene_info(accession_base: str):
     Fetch an ensemble accession's gene information.
     Args:
         str: an ensembl accession base string
-    Returns: 
+    Returns:
         tuple: (taxname: str, ensembl_related: dict)
     Raises:
         ValueError: if the accession base cannot be found from ENSEMBL lookup endpoint.
-        RuntimeError: if 
+        RuntimeError: if
 
     """
     gene = None
     ebi_related_transcripts = []
     taxname = None
     try:
-        ebi_lookup_json = _fetch_ebi_lookup_grch38(
-            accession_base
-        )
+        ebi_lookup_json = _fetch_ebi_lookup_grch38(accession_base)
     except Http400 as http_e:
         try:
             error_json = http_e.response.json()
@@ -531,8 +534,8 @@ def filter_gene_products(accession_base, related_genes: list):
     """
     Filter out accessions from every gene's products (transcripts and proteins).
     Keep the products with MANE Select tag or the same as the queried accession.
-    Args: 
-        accession_base (str): 
+    Args:
+        accession_base (str):
         related_genes (list): related genes
     Returns: A list of related genes of filtered products
     """
@@ -567,19 +570,23 @@ def filter_related(accession_base, related):
 
 
 def _fetch_related_from_ncbi_dataset_report(gene_ids):
-    base_api = settings.get("NCBI_DATASETS")
+    base_api = settings.get("NCBI_DATASETS_API")
     gene_id_str = quote(",".join(map(str, gene_ids)))
     url = f"{base_api}/gene/id/{gene_id_str}/dataset_report"
-    genes_dataset_report_json = json.loads(request(url=url, timeout=DEFAULT_TIMEOUT))
+    genes_dataset_report_json = json.loads(
+        request(url=url, timeout=DEFAULT_TIMEOUT)
+    )
     taxname, dataset_related = _parse_dataset_report(genes_dataset_report_json)
     return taxname, dataset_related
 
 
 def _fetch_related_from_ncbi_product_report(gene_ids, taxname):
-    base_api = settings.get("NCBI_DATASETS")
+    base_api = settings.get("NCBI_DATASETS_API")
     gene_id_str = quote(",".join(map(str, gene_ids)))
     url = f"{base_api}/gene/id/{gene_id_str}/product_report"
-    genes_product_report_json = json.loads(request(url=url, timeout=DEFAULT_TIMEOUT))
+    genes_product_report_json = json.loads(
+        request(url=url, timeout=DEFAULT_TIMEOUT)
+    )
     if genes_product_report_json:
         return _parse_product_report(genes_product_report_json)
 
@@ -603,9 +610,7 @@ def _parse_genome_annotation_report(genome_annotation_report):
         if gene_id is not None:
             gene_ids.append(gene_id)
     if gene_ids:
-        genomic_related, product_related = _get_gene_related(
-            gene_ids
-        )
+        genomic_related, product_related = _get_gene_related(gene_ids)
         related = _merge_datasets(genomic_related, product_related)
         return taxname, related
     return None, {}
@@ -619,24 +624,31 @@ def _get_related_by_chr_location(accession, locations):
         raise ValueError(
             f"Assembly accession could not be determined for {accession}"
         )
-    
-    api_base = settings.get("NCBI_DATASETS")
-    location_params = [
+
+    api_base = settings.get("NCBI_DATASETS_API")
+    locations_param = [
         f"{accession}:{start}-{end}" for start, end in locations
     ]
-    encoded_locations = [quote(loc) for loc in location_params]
     endpoint = f"genome/accession/{assembly_accession}/annotation_report"
-    params = {"locations": encoded_locations}
-    genome_response = json.loads(request(url=f"{api_base}/{endpoint}", params=params, timeout=DEFAULT_TIMEOUT))
+    params = {"locations": locations_param}
+    genome_response = json.loads(
+        request(
+            url=f"{api_base}/{endpoint}",
+            params=params,
+            timeout=DEFAULT_TIMEOUT,
+        )
+    )
     taxname, related = _parse_genome_annotation_report(genome_response)
 
     return taxname, related
 
 
 def _get_assembly_accession(accession):
-    api_base = settings.get("NCBI_DATASETS")
+    api_base = settings.get("NCBI_DATASETS_API")
     endpoint = f"genome/sequence_accession/{accession}/sequence_assemblies"
-    assembly_json = json.loads(request(url=f"{api_base}/{endpoint}", timeout=DEFAULT_TIMEOUT))
+    assembly_json = json.loads(
+        request(url=f"{api_base}/{endpoint}", timeout=DEFAULT_TIMEOUT)
+    )
     accessions = assembly_json.get("accessions")
     if isinstance(accessions, list) and accessions:
         return accessions[0]
@@ -658,9 +670,7 @@ def _get_genomic_related_from_datasets(dataset_report_url):
 
 def _get_product_related_from_datasets(url):
     try:
-        product_json = json.loads(
-            request(url=url, timeout=DEFAULT_TIMEOUT)
-        )
+        product_json = json.loads(request(url=url, timeout=DEFAULT_TIMEOUT))
         if product_json:
             taxname, product_related = _parse_product_report(product_json)
             return taxname, product_related
@@ -671,10 +681,10 @@ def _get_product_related_from_datasets(url):
 
 def _get_related_by_accession_from_ncbi(accession):
     """
-    Args: 
+    Args:
         str: A Refseq sequence (transcripts or proteins) accession.
         int: Timeout
-    Returns: 
+    Returns:
         str: Taxname
         dict: Related sequences gatheres from NCBI Datasets.
     """
@@ -683,14 +693,14 @@ def _get_related_by_accession_from_ncbi(accession):
     product_related = None
     taxname = None
 
-    base_url = settings.get("NCBI_DATASETS")
+    base_url = settings.get("NCBI_DATASETS_API")
 
     accession_without_versions = accession.split(".")[0]
     dataset_report_url = (
-        f"{base_url}/accession/{accession_without_versions}/dataset_report"
+        f"{base_url}/gene/accession/{accession_without_versions}/dataset_report"
     )
     product_related_url = (
-        f"{base_url}/accession/{accession_without_versions}/product_report"
+        f"{base_url}/gene/accession/{accession_without_versions}/product_report"
     )
     taxname, genomic_related = _get_genomic_related_from_datasets(
         dataset_report_url
@@ -704,20 +714,18 @@ def _get_related_by_accession_from_ncbi(accession):
     return None, None
 
 
-def _get_related_by_ensembl_id(accession_base:str):
+def _get_related_by_ensembl_id(accession_base: str):
     """
     Given an ensembl accession, return filtered related from Ensembl and NCBI
-    Args: 
+    Args:
         accession_base (str): An ensembl accession base.
 
-    Returns: 
+    Returns:
         related (dict): A dictionary containing related sequences from Ensembl, NCBI
     """
     related = {}
     # Get taxname and related from ensembl
-    taxname, ebi_related = fetch_ensembl_gene_info(
-        accession_base
-    )
+    taxname, ebi_related = fetch_ensembl_gene_info(accession_base)
     # Get related from ncbi using gene symbol and taxname
     gene_symbol = next(iter(ebi_related))
     _, ncbi_related = _get_related_by_gene_symbol_from_ncbi(
@@ -758,9 +766,7 @@ def _get_related_by_ncbi_id(accession, moltype, locations=[0, 0]):
         ]
 
         for ensembl_gene in ensembl_genes_id:
-            taxname, ebi_gene_related = fetch_ensembl_gene_info(
-                ensembl_gene
-            )
+            taxname, ebi_gene_related = fetch_ensembl_gene_info(ensembl_gene)
             if ebi_gene_related:
                 related = _merge(ebi_gene_related, ncbi_related)
         if taxname and taxname.upper() == "HOMO SAPIENS":
@@ -772,7 +778,7 @@ def _get_related_by_ncbi_id(accession, moltype, locations=[0, 0]):
 def detect_sequence_source(seq_id: str):
     """
     Detects if the input string is an Ensembl ID or a RefSeq accession or other.
-    Args: 
+    Args:
         seq_id (str): The sequence ID string to evaluate.
     Returns: (source: str, moltype: str):
                 source: "ensembl", "ncbi", or "other"
@@ -868,6 +874,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    print(
-        json.dumps(get_related(args.accession, args.locations), indent=2)
-    )
+    print(json.dumps(get_related(args.accession, args.locations), indent=2))
