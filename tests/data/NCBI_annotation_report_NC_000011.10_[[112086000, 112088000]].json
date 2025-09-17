@@ -1,0 +1,193 @@
+{
+  "reports": [
+    {
+      "annotation": {
+        "gene_id": "26521",
+        "symbol": "TIMM8B",
+        "name": "translocase of inner mitochondrial membrane 8 homolog B",
+        "gene_type": "protein-coding",
+        "genomic_regions": [
+          {
+            "gene_range": {
+              "accession_version": "NC_000011.10",
+              "range": [
+                {
+                  "begin": "112084800",
+                  "end": "112086756",
+                  "orientation": "minus"
+                }
+              ]
+            }
+          }
+        ],
+        "transcripts": [
+          {
+            "accession_version": "NM_012459.4",
+            "name": "translocase of inner mitochondrial membrane 8 homolog B, transcript variant 1",
+            "cds": {
+              "accession_version": "NM_012459.4"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "112084800",
+                  "end": "112086756",
+                  "orientation": "minus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_036591.3",
+              "name": "mitochondrial import inner membrane translocase subunit Tim8 B",
+              "length": 83
+            }
+          },
+          {
+            "accession_version": "NR_028383.2",
+            "name": "translocase of inner mitochondrial membrane 8 homolog B, transcript variant 2"
+          },
+          {
+            "accession_version": "NR_160400.1",
+            "name": "translocase of inner mitochondrial membrane 8 homolog B, transcript variant 3"
+          }
+        ],
+        "chromosomes": [
+          "11"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_000001405.40"
+          }
+        ]
+      },
+      "row_id": "35123"
+    },
+    {
+      "annotation": {
+        "gene_id": "6392",
+        "symbol": "SDHD",
+        "name": "succinate dehydrogenase complex subunit D",
+        "gene_type": "protein-coding",
+        "genomic_regions": [
+          {
+            "gene_range": {
+              "accession_version": "NC_000011.10",
+              "range": [
+                {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                }
+              ]
+            }
+          }
+        ],
+        "transcripts": [
+          {
+            "accession_version": "NM_003002.4",
+            "name": "succinate dehydrogenase complex subunit D, transcript variant 1",
+            "cds": {
+              "accession_version": "NM_003002.4"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_002993.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial isoform a precursor",
+              "length": 159
+            }
+          },
+          {
+            "accession_version": "NM_001276503.2",
+            "name": "succinate dehydrogenase complex subunit D, transcript variant 2",
+            "cds": {
+              "accession_version": "NM_001276503.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001263432.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial isoform b precursor",
+              "length": 85
+            }
+          },
+          {
+            "accession_version": "NM_001276504.2",
+            "name": "succinate dehydrogenase complex subunit D, transcript variant 3",
+            "cds": {
+              "accession_version": "NM_001276504.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001263433.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial isoform c precursor",
+              "length": 120
+            }
+          },
+          {
+            "accession_version": "NM_001276506.2",
+            "name": "succinate dehydrogenase complex subunit D, transcript variant 4",
+            "cds": {
+              "accession_version": "NM_001276506.2"
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000011.10",
+                "genomic_range": {
+                  "begin": "112086873",
+                  "end": "112095794",
+                  "orientation": "plus"
+                }
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001263435.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial isoform d precursor",
+              "length": 143
+            }
+          },
+          {
+            "accession_version": "NR_077060.2",
+            "name": "succinate dehydrogenase complex subunit D, transcript variant 5"
+          }
+        ],
+        "chromosomes": [
+          "11"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_000001405.40"
+          }
+        ]
+      },
+      "row_id": "35124"
+    }
+  ],
+  "total_count": 2
+}

@@ -1,6 +1,6 @@
 import pytest
 import json
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, Mock
 import json
 import pytest
 from pathlib import Path
@@ -8,7 +8,7 @@ from unittest.mock import MagicMock
 from mutalyzer_retriever.request import Http400
 from mutalyzer_retriever.reference import GRCH37
 from mutalyzer_retriever.related_schema import related_schema
-from mutalyzer_retriever.related import get_related, _merge_datasets, _parse_dataset_report, _parse_product_report
+from mutalyzer_retriever.related import get_related, _merge_datasets, _parse_dataset_report, _parse_product_report, _parse_genome_annotation_report
 
 class MockHttp400(Exception):
     def __init__(self, response):
@@ -28,14 +28,42 @@ def _get_grch37_chr_accession(chr):
     return GRCH37[chr]
 
 
+def _get_assembly_accession(chr):
+    asssembly_map = {
+        "NC_000011.10": "GCF_000001405.40",
+        "NC_000011.9" : "GCF_000001405.25",
+        "NC_060935.1" : "GCF_009914755.1"
+    }
+    return asssembly_map.get(chr)
+
+
+def _get_related_by_chr_location(accession, locations):
+    taxname = None
+    related = {}
+    genome_annotation_json = json.loads(_get_content(f"data/NCBI_annotation_report_{accession}_{locations}.json"))
+    taxname, related = _parse_genome_annotation_report(genome_annotation_json)
+    return taxname, related
+
+
+def _fetch_related_from_ncbi_product_report(gene_ids):
+    genes_product_report_json = json.loads(_get_content(f"data/NCBI_product_report_{gene_ids}.json"))
+    taxname, product_related = _parse_product_report(genes_product_report_json)
+    return taxname, product_related
+
+
+def _fetch_related_from_ncbi_dataset_report(gene_ids):
+    genes_dataset_report_json = json.loads(_get_content(f"data/NCBI_dataset_report_{gene_ids}.json"))
+    taxname, dataset_related = _parse_dataset_report(genes_dataset_report_json)
+    return taxname, dataset_related
+
 def _get_genomic_related_from_datasets(gene_ids):
-    genes_dataset_report_json = json.loads(_get_content(f"data/NCBI_dataset_report_gene/id_{gene_ids}.json"))
+    genes_dataset_report_json = json.loads(_get_content(f"data/NCBI_dataset_report_gene_id_{gene_ids}.json"))
     taxname, dataset_related = _parse_dataset_report(genes_dataset_report_json)
     return taxname, dataset_related    
 
 
 def _get_product_related_from_datasets(gene_ids):
-    genes_product_report_json = json.loads(_get_content(f"data/NCBI_product_report_gene/id_{gene_ids}.json"))
+    genes_product_report_json = json.loads(_get_content(f"data/NCBI_product_report_gene_id_{gene_ids}.json"))
     taxname, product_related = _parse_product_report(genes_product_report_json)
     return taxname, product_related
 
@@ -76,6 +104,9 @@ def monkeypatch_expand_fail(monkeypatch):
         else:
             raise ValueError(f"Unsupported expand value {expand}")
         
+    monkeypatch.setattr("mutalyzer_retriever.related._get_assembly_accession", _get_assembly_accession)
+    monkeypatch.setattr("mutalyzer_retriever.related._fetch_related_from_ncbi_dataset_report", _fetch_related_from_ncbi_dataset_report)            
+    monkeypatch.setattr("mutalyzer_retriever.related._fetch_related_from_ncbi_product_report", _fetch_related_from_ncbi_product_report)            
     monkeypatch.setattr("mutalyzer_retriever.related._get_grch37_chr_accession", _get_grch37_chr_accession)
     monkeypatch.setattr("mutalyzer_retriever.related._get_product_related_from_datasets", _get_product_related_from_datasets)
     monkeypatch.setattr("mutalyzer_retriever.related._get_genomic_related_from_datasets", _get_genomic_related_from_datasets)
@@ -91,11 +122,16 @@ def monkeypatch_expand_fail(monkeypatch):
 def monkeypatch_expand_success(monkeypatch):
     def _fetch_ebi_lookup_grch38(accession_base, expand=1):
         return json.loads(_get_content(f"data/EBI_lookup_expand_{expand}_{accession_base}.json"))
+
+    monkeypatch.setattr("mutalyzer_retriever.related._get_assembly_accession", _get_assembly_accession)
+    monkeypatch.setattr("mutalyzer_retriever.related._fetch_related_from_ncbi_dataset_report", _fetch_related_from_ncbi_dataset_report)
+    monkeypatch.setattr("mutalyzer_retriever.related._fetch_related_from_ncbi_product_report", _fetch_related_from_ncbi_product_report)            
     monkeypatch.setattr("mutalyzer_retriever.related._get_grch37_chr_accession", _get_grch37_chr_accession)
     monkeypatch.setattr("mutalyzer_retriever.related._get_product_related_from_datasets", _get_product_related_from_datasets)
     monkeypatch.setattr("mutalyzer_retriever.related._get_genomic_related_from_datasets", _get_genomic_related_from_datasets)
     monkeypatch.setattr("mutalyzer_retriever.related._get_related_by_accession_from_ncbi", _get_related_by_accession_from_ncbi)
     monkeypatch.setattr("mutalyzer_retriever.related._get_related_by_gene_symbol_from_ncbi", _get_related_by_gene_symbol_from_ncbi)
+    monkeypatch.setattr("mutalyzer_retriever.related._get_related_by_chr_location", _get_related_by_chr_location)
     monkeypatch.setattr("mutalyzer_retriever.related._fetch_ebi_lookup_grch38", _fetch_ebi_lookup_grch38)
 
     yield
@@ -255,265 +291,177 @@ def test_ensembl_invalid_exon_id_raises(accession, monkeypatch_expand_success):
         get_related(accession)
 
 
-# @pytest.mark.parametrize("accession", ["NM_003002.4"])
-# def test_ncbi_mane_select_transcript(accession, monkeypatch_expand_success):
-#     """
-#     A MANE select ncbi transcript, with a EBI match.
-#     Expect chr accessions on three assemblies and one set of transcripts
-#     One is itself, also MANE Select.
-#     """    
-#     related = get_related(accession)
-#     assert related_schema.validate(related)
-#     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
-
-
-# @pytest.mark.parametrize("accession", ["NM_001374258.1"])
-# def test_ncbi_mane_plus_clinical_transcript(accession, monkeypatch_expand_success):
-#     """
-#     A MANE Plus Clinical ncbi transcript with a EBI match.
-#     Expect chr accessions on three assemblies and multiple sets of transcripts:
-#     One is itself and the other ones are from MANE Select.
-#     """
-#     related = get_related(accession)
-#     assert related_schema.validate(related)
-#     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
-
-
-# @pytest.mark.parametrize("accession", ["XM_024454345.2"])
-# def test_ncbi_transcript_no_ensembl_match_transcript(accession, monkeypatch_expand_success):
-#     """
-#     Not a MANE select ncbi transcript, without EBI match.
-#     Expect chr accessions on three assemblies and multiple sets of transcripts:
-#     One is itself (from ncbi) and the other ones are from MANE Select.
-#     """
-#     related = get_related(accession)
-#     assert related_schema.validate(related)
-#     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
-
-
-# @pytest.mark.parametrize("accession", ["NM_001276506.2"])
-# def test_ncbi_transcript_with_ensembl_match_transcript(accession, monkeypatch_expand_success):
-#     """
-#     Not a MANE select ncbi transcript, with a EBI match.
-#     Expect chr accessions on three assemblies and multiple sets of transcripts:
-#     One is itself (from ncbi and EBI) and the other ones are from MANE Select.
-#     """
-#     related = get_related(accession)
-#     assert related_schema.validate(related)
-#     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
-
-
-# @pytest.mark.parametrize("accession", ["NM_025848.3"])
-# def test_ncbi_mouse_transcript_with_ensembl_match_accession(accession, monkeypatch_expand_success):
-#     """
-#     An ncbi mouse transcript, with a EBI match.
-#     Expect a chr accessions on this mouse assemblies and one set of transcripts:
-#     From ncbi and EBI.
-#     """
-#     related = get_related(accession)
-#     assert related_schema.validate(related)
-#     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
-
-
-
-
-# @pytest.mark.parametrize("accession, locations", [
-#     ("NC_000011.10", [[112086000, 112088000]]),
-# ])
-# def test_ncbi_two_genes_at_hg38_chr_location(accession, locations):
-#     """
-#     A genomic range covers two genes .
-#     Expect chr accessions on three assemblies and two sets of MANE Select
-#     transcripts from NCBI and EBI.
-#     """
-#     related = get_related(accession, locations)
-#     assert related_schema.validate(related)
-
-
-# @pytest.mark.parametrize("accession, locations", [
-#     ("NC_000011.10", [[112088000, 112088100]]),
-# ])
-# def test_ncbi_one_gene_at_hg38_chr_location(accession, locations):
-#     """
-#     A genomic range covers two genes .
-#     Expect chr accessions on three assemblies and one set of MANE Select
-#     transcripts from NCBI and EBI.
-#     """
-#     related = get_related(accession, locations)
-#     assert related_schema.validate(related)
-
-
-# @pytest.mark.parametrize("accession, locations", [
-#     ("NC_000011.10", [[112096000, 112100000]]),
-# ])
-# def test_ncbi_no_gene_at_hg38_chr_location(accession, locations):
-#     """
-#     A genomic range covers no genes .
-#     Expect chr accessions on three assemblies.
-#     """
-#     related = get_related(accession, locations)
-#     assert related_schema.validate(related)
-
-
-# @pytest.mark.parametrize("accession, locations", [
-#     ("NC_060935.1", [[112097000, 112100000]]),
-# ])
-# def test_ncbi_two_genes_at_t2t_chr_location(accession, locations):
-#     """
-#     A genomic range covers two genes .
-#     Expect chr accessions on three assemblies and two sets of MANE Select
-#     transcripts from NCBI and EBI.
-#     """
-#     related = get_related(accession, locations)
-#     assert related_schema.validate(related)
-
-
-# @pytest.mark.parametrize("accession, locations", [
-#     ("NC_000011.9", [[111960000, 111966000]]),
-# ])
-# def test_ncbi_one_gene_at_hg37_chr_location(accession, locations):
-#     """
-#     A genomic range covers two genes on hg37.
-#     Expect chr accessions on three assemblies and one set of MANE Select
-#     transcripts from NCBI and EBI.
-#     """
-#     related = get_related(accession, locations)
-#     assert related_schema.validate(related)
-
-
-# @pytest.mark.parametrize("accession, locations", [
-#     ("NC_000011.9", [[111960000, 111966000]]),
-# ])
-# def test_ncbi_one_gene_at_hg37_chr_location_older_version(accession, locations):
-#     """
-#     A genomic range covers one gene on hg37 with a previous version .
-#     Expect chr accessions on three assemblies and one set of MANE Select
-#     transcripts from NCBI and EBI.
-#     """
-#     related = get_related(accession, locations)
-#     assert related_schema.validate(related)
-
-
-# @pytest.mark.parametrize("accession", ["NR_077060.2"])
-# def test_ncbi_non_coding_transcript_with_ensembl_match_accession(accession, monkeypatch_expand_success):
-#     """
-#     Not a MANE select ncbi transcript, non-coding, with a EBI match.
-#     Expect chr accessions on three assemblies and multiple sets of transcripts:
-#     One is itself (from ncbi and EBI) and the other ones are from MANE Select.
-#     """
-#     related = get_related(accession)
-#     assert related_schema.validate(related)
-#     #TODO: this matched up information is not the same from two sources
-
-
-# @pytest.mark.parametrize("accession", ["NR_157078.3"])
-# def test_ncbi_non_coding_transcript_without_ensembl_match_accession(accession, monkeypatch_expand_success):
-#     """
-#     Not a MANE select ncbi transcript, non-coding, without a EBI match.
-#     Expect chr accessions on three assemblies and multiple sets of transcripts:
-#     One is itself (from ncbi) and the other ones are from MANE Select.
-#     """
-#     related = get_related(accession)
-#     assert related_schema.validate(related)
-#     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
-
-
-# @pytest.mark.parametrize("accession", ["NP_002993.1"])
-# def test_ncbi_mane_select_protein(accession, monkeypatch_expand_fail):
-#     """
-#     An ncbi protein ID, MANE Select
-#     Expect chr accessions on three assemblies and one set of transcripts:
-#     From EBI and ncbi
-#     """    
-#     related = get_related(accession)
-#     assert related_schema.validate(related)    
-#     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
-
-
-# @pytest.mark.parametrize("accession", ["NP_001263435.1"])
-# def test_ncbi_not_mane_select_protein(accession, monkeypatch_expand_fail):
-#     """
-#     An ncbi protein ID, non_MANE Select
-#     Expect chr accessions on three assemblies and two sets of transcripts:
-#     One is MANE Select from EBI and ncbi, the other one is itself
-#     """    
-#     related = get_related(accession)
-#     assert related_schema.validate(related)
-#     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
-
-
-
-# @pytest.mark.parametrize("accession, locations", [
-#     ("NC_000011.10", [[112088970, 112088970], [100000000, 100000006]]),
-# ])
-# def test_current_genomic_accessions_with_hg38(accession, locations):
-#     related = get_related(accession, locations)
-#     #check schema
-#     assert related_schema.validate(related)
-#     #check assemblies
-#     assert "assemblies" in related, "Missing 'assemblies' key"
-#     assert len({a["accession"] for a in related.get("assemblies", [])}) == 3
-#     #check related genes and also the order
-#     assert related["genes"][0]["name"] == "CNTN5"
-#     assert related["genes"][1]["name"] == "SDHD"
-
-
-# @pytest.mark.parametrize("accession, locations", [
-#     ("NC_000011.9", [[112088970, 112088970], [100000000, 100000006]]),
-# ])
-# def test_hg19_current_genomic_accesions(accession, locations):
-#     related = get_related(accession, locations)
-#     assert related_schema.validate(related)
-
-
-
-# def test_t2t_current_genomic_accessions(accession, locations):
-
-
-# def test_genomic_accession_without_version(accession, locations):
-
-
-# def test_hg19_older_genomic_accessions(accession, locations):
-
-
-# def test_mouse_genomic_accesions(accession, locations):
-
-
-# def test_unsupported_accessions(accession, locations):
-
-
-# def test_older_unsupported_accesions(accession, locations):
-
-
-# def test_mane_select_transcript_accessions(accession):
-#     # here should be accession from a gene has mane select 
-#     # and mane plus clinical transcripts. e,g. BRAF
-
-
-# def test_mane_plus
-
-
-# def test_not_mane_select_transcript_accessions(accession):
-
-
-# def test_older_transcript_aebi_json.get("Parent")ccessions(accesion):
-
-
-# def test_mouse_transcript_accessions(accesion):
-
-
-# def test_protein_accessions(accession):
-
-
-# def test_gene_name(gene_name):
-
-
-# def test_ensembl_transcript_accession(accesion):
-
-
-# def test_older_ensembl_transcript_accession(accession):
-    
-
-# def test_ensembl_transcript_no_ncbi_match_accession(accession):
-
-
+@pytest.mark.parametrize("accession", ["NM_003002.4"])
+def test_ncbi_mane_select_transcript(accession, monkeypatch_expand_success):
+    """
+    A MANE select ncbi transcript, with a EBI match.
+    Expect chr accessions on three assemblies and one set of transcripts
+    One is itself, also MANE Select.
+    """    
+    related = get_related(accession)
+    assert related_schema.validate(related)
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
+
+
+@pytest.mark.parametrize("accession", ["NM_001374258.1"])
+def test_ncbi_mane_plus_clinical_transcript(accession, monkeypatch_expand_success):
+    """
+    A MANE Plus Clinical ncbi transcript with a EBI match.
+    Expect chr accessions on three assemblies and multiple sets of transcripts:
+    One is itself and the other ones are from MANE Select.
+    """
+    related = get_related(accession)
+    assert related_schema.validate(related)
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
+
+
+@pytest.mark.parametrize("accession", ["XM_024454345.2"])
+def test_ncbi_transcript_no_ensembl_match_transcript(accession, monkeypatch_expand_success):
+    """
+    Not a MANE select ncbi transcript, without EBI match.
+    Expect chr accessions on three assemblies and multiple sets of transcripts:
+    One is itself (from ncbi) and the other ones are from MANE Select.
+    """
+    related = get_related(accession)
+    assert related_schema.validate(related)
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
+
+
+@pytest.mark.parametrize("accession", ["NM_001276506.2"])
+def test_ncbi_transcript_with_ensembl_match_transcript(accession, monkeypatch_expand_success):
+    """
+    Not a MANE select ncbi transcript, with a EBI match.
+    Expect chr accessions on three assemblies and multiple sets of transcripts:
+    One is itself (from ncbi and EBI) and the other ones are from MANE Select.
+    """
+    related = get_related(accession)
+    assert related_schema.validate(related)
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
+
+
+@pytest.mark.parametrize("accession", ["NM_025848.3"])
+def test_ncbi_mouse_transcript_with_ensembl_match_accession(accession, monkeypatch_expand_success):
+    """
+    An ncbi mouse transcript, with a EBI match.
+    Expect a chr accessions on this mouse assemblies and one set of transcripts:
+    From ncbi and EBI.
+    """
+    related = get_related(accession)
+    assert related_schema.validate(related)
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
+
+
+@pytest.mark.parametrize("accession, locations", [
+    ("NC_000011.10", [[112086000, 112088000]]),
+])
+def test_ncbi_two_genes_at_hg38_chr_location(accession, locations, monkeypatch_expand_success):
+    """
+    A genomic range covers two genes .
+    Expect chr accessions on three assemblies and two sets of MANE Select
+    transcripts from NCBI and EBI.
+    """
+    related = get_related(accession, locations)
+    assert related_schema.validate(related)
+    assert related == json.loads(_get_content(f"data/related_{accession}_{locations}.json"))
+
+
+@pytest.mark.parametrize("accession, locations", [
+    ("NC_000011.10", [[112088000, 112088100]]),
+])
+def test_ncbi_one_gene_at_hg38_chr_location(accession, locations, monkeypatch_expand_success):
+    """
+    A genomic range covers two genes .
+    Expect chr accessions on three assemblies and one set of MANE Select
+    transcripts from NCBI and EBI.
+    """
+    related = get_related(accession, locations)
+    assert related == json.loads(_get_content(f"data/related_{accession}_{locations}.json"))    
+
+
+@pytest.mark.parametrize("accession, locations", [
+    ("NC_000011.10", [[112096000, 112100000]]),
+])
+def test_ncbi_no_gene_at_hg38_chr_location(accession, locations, monkeypatch_expand_success):
+    """
+    A genomic range covers no genes .
+    Expect chr accessions on three assemblies.
+    """
+    related = get_related(accession, locations)
+    assert related == {}
+
+
+
+@pytest.mark.parametrize("accession, locations", [
+    ("NC_060935.1", [[112097000, 112100000]]),
+])
+def test_ncbi_two_genes_at_t2t_chr_location(accession, locations, monkeypatch_expand_success):
+    """
+    A genomic range covers two genes .
+    Expect chr accessions on three assemblies and two sets of MANE Select
+    transcripts from NCBI and EBI.
+    """
+    related = get_related(accession, locations)
+    assert related_schema.validate(related)
+    assert related == json.loads(_get_content(f"data/related_{accession}_{locations}.json"))
+
+
+@pytest.mark.parametrize("accession, locations", [
+    ("NC_000011.9", [[111960000, 111966000]]),
+])
+def test_ncbi_one_gene_at_hg37_chr_location(accession, locations, monkeypatch_expand_success):
+    """
+    A genomic range covers two genes on hg37.
+    Expect chr accessions on three assemblies and one set of MANE Select
+    transcripts from NCBI and EBI.
+    """
+    related = get_related(accession, locations)
+    assert related_schema.validate(related)
+    assert related == json.loads(_get_content(f"data/related_{accession}_{locations}.json"))
+
+
+@pytest.mark.parametrize("accession", ["NR_077060.2"])
+def test_ncbi_non_coding_transcript_with_ensembl_match_accession(accession, monkeypatch_expand_success):
+    """
+    Not a MANE select ncbi transcript, non-coding, with a EBI match.
+    Expect chr accessions on three assemblies and multiple sets of transcripts:
+    One is itself (from ncbi and EBI) and the other ones are from MANE Select.
+    """
+    related = get_related(accession)
+    assert related_schema.validate(related)
+    #TODO: this matched up information is not the same from two sources
+
+
+@pytest.mark.parametrize("accession", ["NR_157078.3"])
+def test_ncbi_non_coding_transcript_without_ensembl_match_accession(accession, monkeypatch_expand_success):
+    """
+    Not a MANE select ncbi transcript, non-coding, without a EBI match.
+    Expect chr accessions on three assemblies and multiple sets of transcripts:
+    One is itself (from ncbi) and the other ones are from MANE Select.
+    """
+    related = get_related(accession)
+    assert related_schema.validate(related)
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
+
+
+@pytest.mark.parametrize("accession", ["NP_002993.1"])
+def test_ncbi_mane_select_protein(accession, monkeypatch_expand_fail):
+    """
+    An ncbi protein ID, MANE Select
+    Expect chr accessions on three assemblies and one set of transcripts:
+    From EBI and ncbi
+    """    
+    related = get_related(accession)
+    assert related_schema.validate(related)    
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
+
+
+@pytest.mark.parametrize("accession", ["NP_001263435.1"])
+def test_ncbi_not_mane_select_protein(accession, monkeypatch_expand_fail):
+    """
+    An ncbi protein ID, non_MANE Select
+    Expect chr accessions on three assemblies and two sets of transcripts:
+    One is MANE Select from EBI and ncbi, the other one is itself
+    """    
+    related = get_related(accession)
+    assert related_schema.validate(related)
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
