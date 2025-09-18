@@ -3,11 +3,52 @@ import argparse
 import ast
 import json
 import re
+import requests
 from urllib.parse import quote
 from mutalyzer_retriever.request import Http400, request
-from mutalyzer_retriever.configuration import settings
+from mutalyzer_retriever.configuration import settings, cache_url
 
 DEFAULT_TIMEOUT = 10
+
+
+def get_cds_to_mrna(cds_id, timeout=10):
+    def _get_from_api_cache():
+        api_url = cache_url()
+        if api_url:
+            url = api_url + "/cds_to_mrna/" + cds_id
+            try:
+                annotations = json.loads(requests.get(url).text)
+            except Exception:
+                return
+            if annotations.get("mrna_id"):
+                return annotations["mrna_id"]
+
+    mrna_id = _get_from_api_cache()
+    if mrna_id:
+        return mrna_id
+
+    ncbi = _fetch_ncbi_datasets_gene_accession(cds_id, timeout)
+    if (
+        ncbi.get("genes")
+        and len(ncbi["genes"]) == 1
+        and ncbi["genes"][0].get("gene")
+        and ncbi["genes"][0]["gene"].get("transcripts")
+    ):
+        transcripts = ncbi["genes"][0]["gene"]["transcripts"]
+        mrna_ids = set()
+        for transcript in transcripts:
+            if (
+                transcript.get("accession_version")
+                and transcript.get("protein")
+                and transcript["protein"].get("accession_version") == cds_id
+            ):
+                mrna_ids.add(transcript["accession_version"])
+        return sorted(list(mrna_ids))
+    
+
+def _fetch_ncbi_datasets_gene_accession(accession_id, timeout=TimeoutError):
+    url = f"https://api.ncbi.nlm.nih.gov/datasets/v2/gene/accession/{accession_id}/product_report"
+    return json.loads(request(url=url, timeout=timeout))    
 
 
 def clean_dict(d):
@@ -581,7 +622,7 @@ def _fetch_related_from_ncbi_dataset_report(gene_ids):
     return taxname, dataset_related
 
 
-def _fetch_related_from_ncbi_product_report(gene_ids, taxname):
+def _fetch_related_from_ncbi_product_report(gene_ids):
     base_api = settings.get("NCBI_DATASETS_API")
     gene_id_str = quote(",".join(map(str, gene_ids)))
     url = f"{base_api}/gene/id/{gene_id_str}/product_report"
@@ -597,7 +638,7 @@ def _get_gene_related(gene_ids):
         gene_ids
     )
     taxname, product_related = _fetch_related_from_ncbi_product_report(
-        gene_ids, taxname
+        gene_ids
     )
     return genomic_related, product_related
 
