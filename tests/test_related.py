@@ -352,7 +352,7 @@ def test_ncbi_mouse_transcript_with_ensembl_match_accession(accession, monkeypat
 
 
 @pytest.mark.parametrize("accession, locations", [
-    ("NC_000011.10", [[112086000, 112088000]]),
+    ("NC_000011.10", "112086000-112088000"),
 ])
 def test_ncbi_two_genes_at_hg38_chr_location(accession, locations, monkeypatch_expand_success):
     """
@@ -366,7 +366,7 @@ def test_ncbi_two_genes_at_hg38_chr_location(accession, locations, monkeypatch_e
 
 
 @pytest.mark.parametrize("accession, locations", [
-    ("NC_000011.10", [[112088000, 112088100]]),
+    ("NC_000011.10", "112088000-112088100"),
 ])
 def test_ncbi_one_gene_at_hg38_chr_location(accession, locations, monkeypatch_expand_success):
     """
@@ -379,7 +379,7 @@ def test_ncbi_one_gene_at_hg38_chr_location(accession, locations, monkeypatch_ex
 
 
 @pytest.mark.parametrize("accession, locations", [
-    ("NC_000011.10", [[112096000, 112100000]]),
+    ("NC_000011.10", "112096000-112100000"),
 ])
 def test_ncbi_no_gene_at_hg38_chr_location(accession, locations, monkeypatch_expand_success):
     """
@@ -392,7 +392,7 @@ def test_ncbi_no_gene_at_hg38_chr_location(accession, locations, monkeypatch_exp
 
 
 @pytest.mark.parametrize("accession, locations", [
-    ("NC_060935.1", [[112097000, 112100000]]),
+    ("NC_060935.1", "112097000-112100000"),
 ])
 def test_ncbi_two_genes_at_t2t_chr_location(accession, locations, monkeypatch_expand_success):
     """
@@ -406,7 +406,7 @@ def test_ncbi_two_genes_at_t2t_chr_location(accession, locations, monkeypatch_ex
 
 
 @pytest.mark.parametrize("accession, locations", [
-    ("NC_000011.9", [[111960000, 111966000]]),
+    ("NC_000011.9", "111960000-111966000"),
 ])
 def test_ncbi_one_gene_at_hg37_chr_location(accession, locations, monkeypatch_expand_success):
     """
