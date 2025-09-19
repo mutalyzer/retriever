@@ -54,7 +54,7 @@ def _args_parser():
 
     parser.add_argument(
         "-r", "--related", help="retrieve related reference ids", action="store_true"
-    )
+    )   
 
     parser.add_argument(
         "--mrna_id", help="retrieve the mrna_id from the cds_id", action="store_true"
@@ -73,6 +73,16 @@ def _args_parser():
     parser.add_argument("--split", action="store_true")
 
     parser.add_argument("--only_annotations", action="store_true")
+
+    parser.add_argument(
+        "-loc", "--locations",
+        default="0",
+        help=(
+            "location ranges on reference assemblies (used when retrieving related). "
+            "multiple ranges in the format start_end;start_end (e.g. 0_1;100_200)."
+        )
+    )
+
 
     subparsers = parser.add_subparsers(dest="command")
 
@@ -184,7 +194,8 @@ def _retrieve_model(args):
 
 def _related(args):
     output = get_related(
-        reference_id=args.id,
+        accession=args.id,
+        locations=args.locations if args.locations else None,
         timeout=args.timeout,
     )
     print(json.dumps(output, indent=args.indent))

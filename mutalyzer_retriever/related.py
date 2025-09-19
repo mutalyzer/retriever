@@ -1,17 +1,15 @@
-# A script to get related references from ncbi and ebi
-import argparse
-import ast
 import json
 import re
-import requests
 from urllib.parse import quote
+import requests
+from mutalyzer_retriever.configuration import cache_url, settings
 from mutalyzer_retriever.request import Http400, request
-from mutalyzer_retriever.configuration import settings, cache_url
+
 
 DEFAULT_TIMEOUT = 10
 
 
-def get_cds_to_mrna(cds_id, timeout=10):
+def get_cds_to_mrna(cds_id, timeout=DEFAULT_TIMEOUT):
     def _get_from_api_cache():
         api_url = cache_url()
         if api_url:
@@ -44,16 +42,48 @@ def get_cds_to_mrna(cds_id, timeout=10):
             ):
                 mrna_ids.add(transcript["accession_version"])
         return sorted(list(mrna_ids))
-    
+
 
 def _fetch_ncbi_datasets_gene_accession(accession_id, timeout=TimeoutError):
     url = f"https://api.ncbi.nlm.nih.gov/datasets/v2/gene/accession/{accession_id}/product_report"
-    return json.loads(request(url=url, timeout=timeout))    
+    return json.loads(request(url=url, timeout=timeout))
 
 
 def clean_dict(d):
     """Remove keys with None, empty string, or empty list values."""
     return {k: v for k, v in d.items() if v not in (None, "", [])}
+
+
+def _valid_locations(accession:str, locations: str):
+    """
+    Check if input locations are in the format of 'start-end' or single points,
+    and return a normalized string like: accession:start-end;accession:start-end
+    """
+    pattern_range = re.compile(r'^\d+-\d+$')
+    pattern_point = re.compile(r'^\d+$')
+
+    valid_locations = []
+
+    for item in locations.split(';'):
+        item = item.strip()
+        if pattern_range.match(item):
+            start, end = map(int, item.split('-'))
+        elif pattern_point.match(item):
+            start = int(item)
+            end = start + 1
+        else:
+            raise NameError(
+                f"Invalid location format: '{item}'. Expected format: point or start-end"
+            )
+
+        if start > end:
+            raise NameError(
+                f"Invalid range: start ({start}) cannot be greater than end ({end})"
+            )
+
+        valid_locations.append(f"{accession}:{start}-{end}")
+
+    return valid_locations
 
 
 def _merge_assemblies(ebi_assemblies, ncbi_assemblies):
@@ -343,12 +373,12 @@ def filter_report_from_other_genes(gene_symbol: str, reports: dict):
     # e.g, query with CYP2D6 would get info of CYP2D7
     # https://api.ncbi.nlm.nih.gov/datasets/v2/gene/symbol/CYP2D6D%2CCYP2D6/taxon/9606/product_report
     if not reports:
-        return
+        return None
     for report in reports.get("reports"):
         for key, value in report.items():
             if value.get("symbol") == gene_symbol.upper():
                 return {"reports": [{key: value}]}
-    return
+    return None
 
 
 def _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxname="Homo Sapiens"):
@@ -364,8 +394,16 @@ def _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxname="Homo Sapiens"):
 
     base_api = settings.get("NCBI_DATASETS_API")
     taxname_url_str = quote(taxname, safe="")
-    dataset_report_url = f"{base_api}/gene/symbol/{gene_symbol}/taxon/{taxname_url_str}/dataset_report"
-    product_report_url = f"{base_api}/gene/symbol/{gene_symbol}/taxon/{taxname_url_str}/product_report"
+    dataset_report_url = (
+        f"{base_api}/gene/symbol/{gene_symbol}/taxon/"
+        f"{taxname_url_str}/dataset_report"
+    )
+
+    product_report_url = (
+        f"{base_api}/gene/symbol/{gene_symbol}/taxon/"
+        f"{taxname_url_str}/product_report"
+    )
+
 
     taxname, genomic_related = _get_genomic_related_from_datasets(
         dataset_report_url
@@ -384,7 +422,7 @@ def _get_related_by_gene_symbol_from_ensembl(
     gene_symbol, taxname="homo Sapiens"
 ):
     if not gene_symbol:
-        return
+        return None
     url = (
         f"https://rest.ensembl.org/lookup/symbol/homo_sapiens/{gene_symbol}"
         f"?content-type=application/json;expand=1"
@@ -589,10 +627,11 @@ def filter_gene_products(accession_base, related_genes: list):
             matching_providers = [
                 provider
                 for provider in transcript.get("providers", [])
-                if accession_base
-                == (provider.get("transcript_accession") or "").split(".")[0]
-                or accession_base
-                == (provider.get("protein_accession") or "").split(".")[0]
+                if accession_base in {
+                    (provider.get("transcript_accession") or "").split(".")[0],
+                    (provider.get("protein_accession") or "").split(".")[0]
+                }
+
             ]
             if "tag" in transcript or matching_providers:
                 filtered_transcripts.append(transcript)
@@ -634,10 +673,10 @@ def _fetch_related_from_ncbi_product_report(gene_ids):
 
 
 def _get_gene_related(gene_ids):
-    taxname, genomic_related = _fetch_related_from_ncbi_dataset_report(
+    _, genomic_related = _fetch_related_from_ncbi_dataset_report(
         gene_ids
     )
-    taxname, product_related = _fetch_related_from_ncbi_product_report(
+    _, product_related = _fetch_related_from_ncbi_product_report(
         gene_ids
     )
     return genomic_related, product_related
@@ -668,11 +707,8 @@ def _get_related_by_chr_location(accession, locations):
         )
 
     api_base = settings.get("NCBI_DATASETS_API")
-    locations_param = [
-        f"{accession}:{start}-{end}" for start, end in locations
-    ]
     endpoint = f"genome/accession/{assembly_accession}/annotation_report"
-    params = {"locations": locations_param}
+    params = [("locations", loc) for loc in _valid_locations(accession, locations)]
     genome_response = json.loads(
         request(
             url=f"{api_base}/{endpoint}",
@@ -710,9 +746,9 @@ def _get_genomic_related_from_datasets(dataset_report_url):
     return None, None
 
 
-def _get_product_related_from_datasets(url):
+def _get_product_related_from_datasets(product_report_url):
     try:
-        product_json = json.loads(request(url=url, timeout=DEFAULT_TIMEOUT))
+        product_json = json.loads(request(url=product_report_url, timeout=DEFAULT_TIMEOUT))
         if product_json:
             taxname, product_related = _parse_product_report(product_json)
             return taxname, product_related
@@ -723,13 +759,21 @@ def _get_product_related_from_datasets(url):
 
 def _get_related_by_accession_from_ncbi(accession):
     """
+    Fetch related genomic and product sequences from NCBI endpoint using a RefSeq accession.
+    This function contacts the NCBI Datasets API to gather both genomic and product-level
+    annotations for a given transcript or protein accession.
+
     Args:
-        str: A Refseq sequence (transcripts or proteins) accession.
-        int: Timeout
+        accession (str): A RefSeq accession.
+        timeout (int, optional): Timeout, defaults to DEFAULT_TIMEOUT.
     Returns:
-        str: Taxname
-        dict: Related sequences gatheres from NCBI Datasets.
+        tuple:
+            - taxname (str or None): The organism name associated with the accession.
+            - related (dict or None): A dictionary of related sequences; otherwise None.
+    Raises:
+        RuntimeError: If the NCBI Datasets API is unavailable or returns an invalid response.
     """
+
     related = {}
     genomic_related = None
     product_related = None
@@ -781,9 +825,10 @@ def _get_related_by_ensembl_id(accession_base: str):
     return related
 
 
-def _get_related_by_ncbi_id(accession, moltype, locations=[0, 0]):
+def _get_related_by_ncbi_id(accession, moltype, locations):
     related = {}
     accession_base = accession.split(".")[0]
+
     # Try to get taxname and related from ncbi datasets
     try:
         if moltype.upper() in ["RNA", "PROTEIN"]:
@@ -867,20 +912,23 @@ def detect_sequence_source(seq_id: str):
     return "other", "unknown"
 
 
-def get_related(accession, locations=[[0, 0]]):
+def get_related(accession, locations=None, timeout=DEFAULT_TIMEOUT):
     """
     Retrieve related assembly/gene/transcript/protein information based
     on accession or gene symbol
     Args:
         accession (str): A sequence accession (e.g., RefSeq, Ensembl ID) or a human gene symbol.
         locations (list of list[int, int], optional): Genomic location ranges
-            in the form [[start, end], ...]. Defaults to [[0, 0]].
+            in the form [[start, end], ...]. Defaults to '0'.
     Returns:
         related (dict): A dictionary containing related information retrieved from Ensembl, NCBI,
 
     Raises:
         NameError: If the given accession is not from NCBI RefSeq or ENSEMBL.
     """
+
+    if locations is None:
+        locations = "0"
     accession = accession.upper()
     accession_base = accession.split(".")[0]
     related = {}
@@ -899,21 +947,3 @@ def get_related(accession, locations=[[0, 0]]):
         raise NameError(f"Could not retrieve related for {accession}.")
 
     return related
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Get related sequences")
-    parser.add_argument(
-        "accession",
-        help="A sequence accession, support inputs are gene name, ncbi or ebi accession.",
-    )
-    parser.add_argument(
-        "locations",
-        nargs="?",
-        type=ast.literal_eval,
-        help="A list of locations, e.g. [[112088000, 112088000]]",
-    )
-
-    args = parser.parse_args()
-
-    print(json.dumps(get_related(args.accession, args.locations), indent=2))
