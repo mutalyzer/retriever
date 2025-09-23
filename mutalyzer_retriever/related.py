@@ -531,67 +531,52 @@ def _parse_ebi_lookup_json(ebi_json):
         return _parse_ebi_protein_lookup_json(ebi_json)
 
 
-def fetch_ensembl_gene_info(accession_base: str):
+def fetch_ensembl_gene_info(accession_base: str, moltype: str) -> tuple[str, dict]:
     """
-    Fetch an ensemble accession's gene information.
+    Fetch gene-related information for a given Ensembl accession.
+
     Args:
-        str: an ensembl accession base string
+        accession_base (str): Ensembl accession, support for gene, transcript, protein.
+        moltype (str): Molecule type — one of "dna", "rna", "protein" or other
+
     Returns:
-        tuple: (taxname: str, ensembl_related: dict)
+        tuple: (taxname, related_info_dict)
+            - taxname (str): Taxonomic name (e.g., "Homo sapiens")
+            - related_info_dict (dict): Dictionary including gene and its products.
+
     Raises:
-        ValueError: if the accession base cannot be found from ENSEMBL lookup endpoint.
-        RuntimeError: if
-
+        ValueError: If the Ensembl lookup fails or returns nothing.
     """
-    gene = None
-    ebi_related_transcripts = []
-    taxname = None
+    if moltype not in {"dna", "rna", "protein"}:
+        raise ValueError(f"Unsupported molecule type: {moltype}")
+
     try:
-        ebi_lookup_json = _fetch_ebi_lookup_grch38(accession_base)
-    except Http400 as http_e:
-        try:
-            error_json = http_e.response.json()
-            if (
-                error_json.get("error")
-                == "Expand option only available for Genes and Transcripts"
-            ):
-                ebi_lookup_json = _fetch_ebi_lookup_grch38(
-                    accession_base, expand=0
-                )
-                parsed = _parse_ebi_lookup_json(ebi_lookup_json)
-                if parsed:
-                    (
-                        taxname,
-                        ensembl_id,
-                        gene,
-                        ebi_related_transcripts,
-                    ) = parsed
-                    return taxname, {
-                        gene: ebi_related_transcripts,
-                        "providers": {
-                            "name": "ENSEMBL",
-                            "accession": ensembl_id,
-                        },
-                    }
-            else:
-                raise
-        except Exception as parse_e:
-            raise RuntimeError(
-                f"Failed to parse error : {parse_e}"
-            ) from parse_e
-
-    if ebi_lookup_json:
-        parsed = _parse_ebi_lookup_json(ebi_lookup_json)
-        if parsed:
-            taxname, ensembl_id, gene, ebi_related_transcripts = parsed
-            return taxname, {
-                gene: ebi_related_transcripts,
-                "providers": {"name": "ENSEMBL", "accession": ensembl_id},
-            }
-
-        raise ValueError(
-            f"Failed to retrieve related data from ENSEMBL for {accession_base}"
+        # Fetch data from EBI for this accession
+        ebi_lookup_json = _fetch_ebi_lookup_grch38(
+            accession_base,
+            expand=0 if moltype == "protein" else 1
         )
+
+        if not ebi_lookup_json:
+            raise ValueError(f"No data returned for {accession_base} from ENSEMBL.")
+
+        parsed = _parse_ebi_lookup_json(ebi_lookup_json)
+        if not parsed:
+            raise ValueError(f"Failed to parse response for {accession_base}.")
+
+        taxname, ensembl_id, gene, related_transcripts = parsed
+
+        return taxname, {
+            gene: related_transcripts,
+            "providers": {
+                "name": "ENSEMBL",
+                "accession": ensembl_id
+            }
+        }
+
+    except Exception as e:
+        raise RuntimeError(f"Error fetching data for {accession_base} from ENSEMBL: {e}")
+
 
 
 def filter_assemblies(related_assemblies: list):
@@ -797,7 +782,7 @@ def _get_related_by_accession_from_ncbi(accession):
     return None, None
 
 
-def _get_related_by_ensembl_id(accession_base: str):
+def _get_related_by_ensembl_id(accession_base: str, moltype:str):
     """
     Given an ensembl accession, return filtered related from Ensembl and NCBI
     Args:
@@ -808,7 +793,7 @@ def _get_related_by_ensembl_id(accession_base: str):
     """
     related = {}
     # Get taxname and related from ensembl
-    taxname, ebi_related = fetch_ensembl_gene_info(accession_base)
+    taxname, ebi_related = fetch_ensembl_gene_info(accession_base, moltype)
     # Get related from ncbi using gene symbol and taxname
     gene_symbol = next(iter(ebi_related))
     _, ncbi_related = _get_related_by_gene_symbol_from_ncbi(
@@ -850,7 +835,7 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
         ]
 
         for ensembl_gene in ensembl_genes_id:
-            taxname, ebi_gene_related = fetch_ensembl_gene_info(ensembl_gene)
+            taxname, ebi_gene_related = fetch_ensembl_gene_info(ensembl_gene, moltype="dna")
             if ebi_gene_related:
                 related = _merge(ebi_gene_related, ncbi_related)
         if taxname and taxname.upper() == "HOMO SAPIENS":
@@ -859,9 +844,9 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
     return related
 
 
-def detect_sequence_source(seq_id: str):
+def detect_sequence_source(seq_id: str) -> tuple[str, str]:
     """
-    Detects if the input string is an Ensembl ID or a RefSeq accession or other.
+    Detects the source and molecular type of a sequence ID.
     Args:
         seq_id (str): The sequence ID string to evaluate.
     Returns: (source: str, moltype: str):
@@ -873,8 +858,21 @@ def detect_sequence_source(seq_id: str):
     # Ensembl declares its identifiers should be in the form of
     # ENS[species prefix][feature type prefix][a unique eleven digit number]
     # See at https://www.ensembl.org/info/genome/stable_ids/index.html
-    if re.match(r"^ENS[A-Z0-9]+(?:\.\d+)?$", seq_id):
-        return "ensembl", "unknown"
+    ensembl_feature_map = {
+        "E": "exon",
+        "FM": "Ensembl protein family",
+        "G": "dna",
+        "GT": "gene tree",
+        "P": "protein",
+        "R": "regulatory feature",
+        "T": "rna",
+    }
+    ensembl_pattern = re.compile(r"^ENS[A-Z]*?(FM|GT|G|T|P|R|E)\d{11}(?:\.\d+)?$")
+    match = ensembl_pattern.match(seq_id)
+    if match:
+        prefix = match.group(1)
+        moltype = ensembl_feature_map.get(prefix, "unknown")
+        return "ensembl", moltype
 
     # NCBI RefSeq prefix history:
     # https://www.ncbi.nlm.nih.gov/books/NBK21091/table/
@@ -899,8 +897,8 @@ def detect_sequence_source(seq_id: str):
         "WP": "protein",
         "AP": "protein",
     }
-
-    match = re.match(r"^([A-Z]{2})_\d+(\.\d+)?$", seq_id)
+    refseq_pattern = re.compile(r"^([A-Z]{2})_\d+(?:\.\d+)?$")
+    match = refseq_pattern.match(seq_id)
     if match:
         prefix = match.group(1)
         moltype = refseq_moltype_map.get(prefix, "unknown")
@@ -931,9 +929,8 @@ def get_related(accession, locations=None, timeout=DEFAULT_TIMEOUT):
     related = {}
 
     source, moltype = detect_sequence_source(accession)
-
-    if source == "ensembl":
-        related = _get_related_by_ensembl_id(accession_base)
+    if source == "ensembl" and moltype != "unkown":
+        related = _get_related_by_ensembl_id(accession_base, moltype)
     elif source == "ncbi" and moltype != "unknown":
         related = _get_related_by_ncbi_id(
             accession, moltype, locations=locations
