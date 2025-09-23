@@ -4,6 +4,7 @@ from urllib.parse import quote
 import requests
 from mutalyzer_retriever.configuration import cache_url, settings
 from mutalyzer_retriever.request import Http400, request
+from mutalyzer_retriever.reference import GRCH37
 
 
 DEFAULT_TIMEOUT = 10
@@ -56,29 +57,33 @@ def clean_dict(d):
 
 def _valid_locations(accession:str, locations: str):
     """
-    Check if input locations are in the format of 'start-end' or single points,
-    and return a normalized string like: accession:start-end;accession:start-end
+    Check if input locations are in the format of 'start_end' or single points,
+    and return a normalized string like: accession:start_end;accession:start_end
     """
-    pattern_range = re.compile(r'^\d+-\d+$')
+    pattern_range = re.compile(r'^\d+_\d+$')
     pattern_point = re.compile(r'^\d+$')
 
     valid_locations = []
 
+    if locations == "0":
+        raise ValueError(f"Unkown location on chromosomes.")
+
     for item in locations.split(';'):
         item = item.strip()
         if pattern_range.match(item):
-            start, end = map(int, item.split('-'))
+            try:
+                raw_start, raw_end = map(int, item.split('_'))
+                start, end = sorted([raw_start, raw_end])
+            except (ValueError, TypeError):
+                raise NameError(
+                    f"Invalid range format: '{item}'. Expected numeric values like '100_200'."
+                )
         elif pattern_point.match(item):
             start = int(item)
             end = start + 1
         else:
             raise NameError(
-                f"Invalid location format: '{item}'. Expected format: point or start-end"
-            )
-
-        if start > end:
-            raise NameError(
-                f"Invalid range: start ({start}) cannot be greater than end ({end})"
+                f"Invalid location format: '{item}'. Expected format: porint or range 'start_end'."
             )
 
         valid_locations.append(f"{accession}:{start}-{end}")
@@ -86,14 +91,14 @@ def _valid_locations(accession:str, locations: str):
     return valid_locations
 
 
-def _merge_assemblies(ebi_assemblies, ncbi_assemblies):
-    assemblies = []
-    assemblies.extend(ebi_assemblies)
-    assemblies.extend(ncbi_assemblies)
-    return list({frozenset(a.items()): a for a in assemblies}.values())
+
+def _merge_assemblies(ebi_assemblies: list, ncbi_assemblies: list):
+    "Merge two lists of assemblies gathered from ensembl and ncbi"
+    return ebi_assemblies + ncbi_assemblies
 
 
-def _merge_transcripts(ebi_transcripts, ncbi_transcripts):
+def _merge_transcripts(ebi_transcripts: list, ncbi_transcripts: list):
+    "Merge two lists of transcripts gathered from ensembl and ncbi"
     for ebi_t in ebi_transcripts:
         matched = False
         for transcript in ncbi_transcripts:
@@ -109,6 +114,7 @@ def _merge_transcripts(ebi_transcripts, ncbi_transcripts):
 
 
 def _merge_gene(ebi_gene, ncbi_genes):
+    "Merge two lists of related genes gathered from ensembl and ncbi"
     genes = []
     for gene in ncbi_genes:
         gene_name = gene.get("name", "")
@@ -126,7 +132,7 @@ def _merge_gene(ebi_gene, ncbi_genes):
 
 
 def _merge(ebi_related, ncbi_related):
-    # Merge gene sets related from ENSEMBL into NCBI
+    # Merge gene sets related from ENSEMBL and NCBI
     related = {
         "assemblies": _merge_assemblies(
             ebi_related.get("assemblies", []),
@@ -138,17 +144,8 @@ def _merge(ebi_related, ncbi_related):
 
 
 def _get_grch37_chr_accession(chrid):
-    api_base = settings.get("NCBI_DATASETS_API")
-    endpoint = "genome/accession/GCF_000001405.25/sequence_reports"
-    params = {"chromosomes": chrid}
-    response = json.loads(
-        request(
-            url=f"{api_base}/{endpoint}",
-            params=params,
-            timeout=DEFAULT_TIMEOUT,
-        )
-    )
-    return response.get("reports", [{}])[0].get("refseq_accession")
+    # Use info from reference
+    return GRCH37.get(chrid)
 
 
 def _parse_assemblies(dataset_report):
@@ -167,7 +164,7 @@ def _parse_assemblies(dataset_report):
 
             assembly_entry = clean_dict(
                 {
-                    "assembly_name": assembly_name,
+                    "name": assembly_name,
                     "accession": accession,
                 }
             )
@@ -182,7 +179,7 @@ def _parse_assemblies(dataset_report):
         )
         grch37_entry = clean_dict(
             {
-                "assembly_name": "GRCh37.p13",
+                "name": "GRCh37.p13",
                 "accession": grch37_acc,
             }
         )
