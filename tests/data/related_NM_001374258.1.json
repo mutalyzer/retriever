@@ -1,15 +1,15 @@
 {
   "assemblies": [
     {
-      "assembly_name": "GRCh38.p14",
+      "name": "GRCh38.p14",
       "accession": "NC_000007.14"
     },
     {
-      "assembly_name": "T2T-CHM13v2.0",
+      "name": "T2T-CHM13v2.0",
       "accession": "NC_060931.1"
     },
     {
-      "assembly_name": "GRCh37.p13",
+      "name": "GRCh37.p13",
       "accession": "NC_000007.13"
     }
   ],

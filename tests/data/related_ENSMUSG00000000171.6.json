@@ -1,7 +1,7 @@
 {
   "assemblies": [
     {
-      "assembly_name": "GRCm39",
+      "name": "GRCm39",
       "accession": "NC_000075.7"
     }
   ],

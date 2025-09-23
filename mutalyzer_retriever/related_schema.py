@@ -27,7 +27,7 @@ gene_schema = Schema({
 })
 
 assembly_schema = Schema({
-    "assembly_name": And(str, lambda s: s.strip() != ""),
+    "name": And(str, lambda s: s.strip() != ""),
     "accession": And(str, lambda s: s.strip() != ""),
     Optional("description"): And(str, lambda s: s.strip() != "")
 })
