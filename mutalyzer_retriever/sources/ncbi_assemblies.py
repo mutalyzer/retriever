@@ -241,6 +241,12 @@ def _annotations_urls():
                 common
                 + "GCF_000001405.40-RS_2024_08/GCF_000001405.40-RS_2024_08_annotation_report.xml",
             ],
+            [
+                common
+                + "GCF_000001405.40-RS_2025_08/GCF_000001405.40_GRCh38.p14_genomic.gff.gz",
+                common
+                + "GCF_000001405.40-RS_2025_08/GCF_000001405.40-RS_2025_08_annotation_report.xml",
+            ],
         ],
         "T2T-CHM13v2": [
             [
@@ -260,6 +266,12 @@ def _annotations_urls():
                 + "GCF_009914755.1-RS_2024_08/GCF_009914755.1_T2T-CHM13v2.0_genomic.gff.gz",
                 common
                 + "GCF_009914755.1-RS_2024_08/GCF_009914755.1-RS_2024_08_annotation_report.xml",
+            ],
+            [
+                common
+                + "GCF_009914755.1-RS_2025_08/GCF_009914755.1_T2T-CHM13v2.0_genomic.gff.gz",
+                common
+                + "GCF_009914755.1-RS_2025_08/GCF_009914755.1-RS_2025_08_annotation_report.xml",
             ],
         ],
     }
@@ -334,30 +346,19 @@ def write_annotations_releases(metadata, directory="./ncbi_annotation_releases")
             with open(path_xml, "wb") as xml_file:
                 xml_file.write(file_data["xml"])
             print(f" - writing gff3: {path_gff3}")
-            with open(path_xml, "wb") as gff3_file:
+            with open(path_gff3, "wb") as gff3_file:
                 gff3_file.write(file_data["gff3"])
 
 
 def get_annotation_models(metadata, ref_id_start=None):
-    def _parse_gff3_content():
-        if current_id and (ref_id_start is None or current_id.startswith(ref_id_start)):
-            current_model = parse(current_content, "gff3")
-            current_model["qualifiers"]["annotations"] = assembly_details
-            print(f"   - reference id: {current_id}")
-            if current_id not in models:
-                models[current_id] = current_model
-            else:
-                _merge(current_model, models[current_id])
-                models[current_id] = current_model
-            ref_ids.append(current_id)
 
     print("\nParse and extract the annotation models:")
     out = {}
     for assembly in metadata:
+        print(f"- assembly: {assembly}")
         models = {}
         assemblies = []
         ref_ids = []
-        print(f" - assembly: {assembly}")
         for freeze_date_id in sorted(metadata[assembly]):
             print(f"  - freeze date: {freeze_date_id}")
             assembly_details = _report_info(metadata[assembly][freeze_date_id]["xml"])
@@ -373,14 +374,23 @@ def get_annotation_models(metadata, ref_id_start=None):
                     if s_line.startswith("#!"):
                         extras += s_line
                     elif s_line.startswith("##sequence-region"):
-                        _parse_gff3_content()
+                        if current_id and (ref_id_start is None or current_id.startswith(ref_id_start)):
+                            print(f"   - parsing reference id: {current_id}")
+                            current_model = parse(current_content, "gff3")
+                            current_model["qualifiers"]["annotations"] = assembly_details
+                            if current_id not in models:
+                                models[current_id] = current_model
+                            else:
+                                print(f"   - merging: {current_id}")
+                                _merge(current_model, models[current_id])
+                                models[current_id] = current_model
+                            ref_ids.append(current_id)
                         current_id = s_line.split(" ")[1]
                         current_content = f"##gff-version 3\n{extras}{s_line}"
                     elif s_line.startswith("##species") or s_line.startswith(
                         current_id
                     ):
                         current_content += s_line
-            _parse_gff3_content()
         for ref_id in ref_ids:
             models[ref_id]["qualifiers"]["annotations"] = assemblies
         out[assembly] = models
