@@ -8,9 +8,9 @@ EMPTY_VALUES = (None, "", [])
 
 class DataSource(StrEnum):
     """Data source enumeration"""
-    ENSEMBL = "ensembl"
-    NCBI = "ncbi"
-    OTHER = "other"
+    ENSEMBL = "ENSEMBL"
+    NCBI = "NCBI"
+    OTHER = "OTHER"
 
 class MoleculeType(StrEnum):
     """Molecule type enumeration"""
@@ -18,6 +18,7 @@ class MoleculeType(StrEnum):
     RNA = "rna"
     PROTEIN = "protein"
     UNKNOWN = "unknown"
+    OTHER = "other"
 
 
 def f_e(source, e=None, extra=None):

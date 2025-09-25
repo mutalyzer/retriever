@@ -48,13 +48,12 @@ class NCBIClient(BaseAPIClient):
     
     def get_gene_symbol_dataset_report(self, gene_symbol: str, taxon_name: str = HUMAN_TAXON):
         """Fetch dataset report for gene symbol"""
-        taxon_name_url_str = quote(taxon_name, safe="")
+        taxon_name_url_str = quote(str(taxon_name), safe="")
         url = f"{self.base_url}/gene/symbol/{gene_symbol}/taxon/{taxon_name_url_str}/dataset_report"
         return self._make_request(url)
     
     def get_gene_symbol_product_report(self, gene_symbol: str, taxon_name: str = HUMAN_TAXON):
         """Fetch product report for gene symbol"""
-        print(taxon_name)
         taxon_name_url_str = quote(taxon_name, safe="")
         url = f"{self.base_url}/gene/symbol/{gene_symbol}/taxon/{taxon_name_url_str}/product_report"
         return self._make_request(url)
