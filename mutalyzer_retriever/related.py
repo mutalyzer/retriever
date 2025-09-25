@@ -1,97 +1,10 @@
 import json
 import re
-from urllib.parse import quote
 import requests
 from mutalyzer_retriever.util import DataSource, MoleculeType, HUMAN_TAXON, DEFAULT_TIMEOUT
 from mutalyzer_retriever.configuration import cache_url, settings
 from mutalyzer_retriever.request import Http400, request
 from mutalyzer_retriever.reference import GRCH37
-
-class BaseAPIClient:
-    """Base class for API clients"""
-    
-    def __init__(self, base_url: str, timeout: int = DEFAULT_TIMEOUT):
-        self.base_url = base_url
-        self.timeout = timeout
-    
-    def _make_request(self, url: str, params: dict | None = None):
-        """Make HTTP request"""
-        response = request(url=url, params=params, timeout=self.timeout)
-        return json.loads(response)
-
-class NCBIClient(BaseAPIClient):
-    """Client for NCBI API operations"""
-    
-    def __init__(self, timeout: int = DEFAULT_TIMEOUT):
-        base_url = settings.get("NCBI_DATASETS_API")
-        super().__init__(base_url, timeout)
-    
-    def get_accession_dataset_report(self, accession: str):
-        """Fetch dataset report for given accession"""
-        url = f"{self.base_url}/gene/accession/{accession}/dataset_report"
-        return self._make_request(url)
-    
-    def get_accession_product_report(self, accession: str):
-        """Fetch product report for given accession"""
-        url = f"{self.base_url}/gene/accession/{accession}/product_report"
-        return self._make_request(url)
-    
-    def get_gene_id_dataset_report(self, gene_ids: list[str]):
-        """Fetch dataset report for gene IDs"""
-        gene_id_str = quote(",".join(map(str, gene_ids)))
-        url = f"{self.base_url}/gene/id/{gene_id_str}/dataset_report"
-        return self._make_request(url)
-    
-    def get_gene_id_product_report(self, gene_ids: list[str]):
-        """Fetch product report for gene IDs"""
-        gene_id_str = quote(",".join(map(str, gene_ids)))
-        url = f"{self.base_url}/gene/id/{gene_id_str}/product_report"
-        return self._make_request(url)
-    
-    def get_gene_symbol_dataset_report(self, gene_symbol: str, taxon_name: str = HUMAN_TAXON):
-        """Fetch dataset report for gene symbol"""
-        taxon_name_url_str = quote(taxon_name, safe="")
-        url = f"{self.base_url}/gene/symbol/{gene_symbol}/taxon/{taxon_name_url_str}/dataset_report"
-        return self._make_request(url)
-    
-    def get_gene_symbol_product_report(self, gene_symbol: str, taxon_name: str = HUMAN_TAXON):
-        """Fetch product report for gene symbol"""
-        print(taxon_name)
-        taxon_name_url_str = quote(taxon_name, safe="")
-        url = f"{self.base_url}/gene/symbol/{gene_symbol}/taxon/{taxon_name_url_str}/product_report"
-        return self._make_request(url)
-    
-    def get_assembly_accession(self, accession: str):
-        """Get assembly accession for sequence accession"""
-        url = f"{self.base_url}/genome/sequence_accession/{accession}/sequence_assemblies"
-        response = self._make_request(url)
-        accessions = response.get("accessions")
-        if isinstance(accessions, list) and accessions:
-            return accessions[0]
-        return None
-    
-    def get_genome_annotation_report(self, assembly_accession: str, locations: list[str]):
-        """Get genome annotation report for assembly and locations"""
-        url = f"{self.base_url}/genome/accession/{assembly_accession}/annotation_report"
-        params = [("locations", loc) for loc in locations]
-        return self._make_request(url, params)
-
-
-class EnsemblClient(BaseAPIClient):
-    """Client for Ensembl API operations"""
-    
-    def __init__(self, timeout: int = DEFAULT_TIMEOUT):
-        super().__init__(settings.get("ENSEMBL_API"), timeout)
-    
-    def lookup_symbol(self, gene_symbol: str, species: str = "homo_sapiens"):
-        """Lookup gene by symbol"""
-        url = f"{self.base_url}/lookup/symbol/{species}/{gene_symbol}?content-type=application/json;expand=1"
-        return self._make_request(url)
-    
-    def lookup_id(self, accession_base: str, expand: int = 1):
-        """Lookup by Ensembl ID"""
-        url = f"{self.base_url}/lookup/id/{accession_base}?content-type=application/json;expand={expand}"
-        return self._make_request(url)
 
 
 def get_cds_to_mrna(cds_id, timeout=DEFAULT_TIMEOUT):
@@ -818,22 +731,8 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
 
     return related
 
-# split into two functions, 
-def detect_sequence_source(seq_id: str):
-    """
-    Detects the source and molecular type of a sequence ID.
-    Args:
-        seq_id (str): The sequence ID string to evaluate.
-    Returns: (source: str, moltype: str):
-                source: "ensembl", "ncbi", or "other"
-                moltype: "dna", "rna", "protein", "unknown" and others
-    """
-   
-    seq_id = seq_id.strip()
-    print(seq_id)
-    # Ensembl declares its identifiers should be in the form of
-    # ENS[species prefix][feature type prefix][a unique eleven digit number]
-    # See at https://www.ensembl.org/info/genome/stable_ids/index.html
+
+def parse_ensembl_id(seq_id):
     ensembl_feature_map = {
         "E": "exon",
         "FM": "protein family",
@@ -845,15 +744,14 @@ def detect_sequence_source(seq_id: str):
     }
     ensembl_pattern = re.compile(r"^ENS[A-Z]*?(FM|GT|G|T|P|R|E)\d{11}(?:\.\d+)?$")
     match = ensembl_pattern.match(seq_id)
-    print(match)
     if match:
         prefix = match.group(1)
         moltype = ensembl_feature_map.get(prefix, "unknown")
         return "ensembl", moltype
+    return None, None
 
-    # NCBI RefSeq prefix history:
-    # https://www.ncbi.nlm.nih.gov/books/NBK21091/table/
-    # ch18.T.refseq_accession_numbers_and_mole/?report=objectonly
+
+def parse_ncbi_id(seq_id):
     refseq_moltype_map = {
         # DNA
         "AC": "dna",
@@ -880,8 +778,30 @@ def detect_sequence_source(seq_id: str):
         prefix = match.group(1)
         moltype = refseq_moltype_map.get(prefix, "unknown")
         return "ncbi", moltype
+    return None, None 
+
+
+def detect_sequence_source(seq_id: str):
+    """
+    Detects the source and molecular type of a sequence ID.
+    Args:
+        seq_id (str): The sequence ID string to evaluate.
+    Returns: (source: str, moltype: str):
+                source: "ensembl", "ncbi", or "other"
+                moltype: "dna", "rna", "protein", "unknown" and others
+    """
+    seq_id = seq_id.strip()
+
+    source, moltype = parse_ensembl_id(seq_id)
+    if source:
+        return source, moltype
+
+    source, moltype = parse_ncbi_id(seq_id)
+    if source:
+        return source, moltype
 
     return "other", "unknown"
+
 
 # get rid of timeout
 def get_related(accession, locations=None):
