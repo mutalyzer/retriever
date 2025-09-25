@@ -48,16 +48,17 @@ class NCBIClient(BaseAPIClient):
         url = f"{self.base_url}/gene/id/{gene_id_str}/product_report"
         return self._make_request(url)
     
-    def get_gene_symbol_dataset_report(self, gene_symbol: str, taxname: str = HUMAN_TAXON):
+    def get_gene_symbol_dataset_report(self, gene_symbol: str, taxon_name: str = HUMAN_TAXON):
         """Fetch dataset report for gene symbol"""
-        taxname_url_str = quote(taxname, safe="")
-        url = f"{self.base_url}/gene/symbol/{gene_symbol}/taxon/{taxname_url_str}/dataset_report"
+        taxon_name_url_str = quote(taxon_name, safe="")
+        url = f"{self.base_url}/gene/symbol/{gene_symbol}/taxon/{taxon_name_url_str}/dataset_report"
         return self._make_request(url)
     
-    def get_gene_symbol_product_report(self, gene_symbol: str, taxname: str = HUMAN_TAXON):
+    def get_gene_symbol_product_report(self, gene_symbol: str, taxon_name: str = HUMAN_TAXON):
         """Fetch product report for gene symbol"""
-        taxname_url_str = quote(taxname, safe="")
-        url = f"{self.base_url}/gene/symbol/{gene_symbol}/taxon/{taxname_url_str}/product_report"
+        print(taxon_name)
+        taxon_name_url_str = quote(taxon_name, safe="")
+        url = f"{self.base_url}/gene/symbol/{gene_symbol}/taxon/{taxon_name_url_str}/product_report"
         return self._make_request(url)
     
     def get_assembly_accession(self, accession: str):
@@ -175,9 +176,9 @@ def _validate_locations(accession:str, locations: str):
 
 
 
-def _merge_assemblies(ensembl_assemblies: list, ncbi_assemblies: list):
+def _merge_assemblies(ensembl_related, ncbi_related):
     "Merge two lists of assemblies gathered from ensembl and ncbi"
-    return ensembl_assemblies + ncbi_assemblies
+    return ensembl_related.get("assemblies", []) + ncbi_related.get("assemblies", [])
 
 
 def _merge_transcripts(ensembl_transcripts: list, ncbi_transcripts: list):
@@ -207,8 +208,9 @@ def _merge_transcripts(ensembl_transcripts: list, ncbi_transcripts: list):
     return merged_transcripts
 
 
-def _merge_gene(ensembl_gene, ncbi_genes):
+def _merge_gene(ensembl_gene, ncbi_related):
     "Merge two lists of related genes gathered from ensembl and ncbi"
+    ncbi_genes = ncbi_related.get("genes", [])
     genes = []
     for gene in ncbi_genes:
         gene_name = gene.get("name", "")
@@ -227,22 +229,18 @@ def _merge_gene(ensembl_gene, ncbi_genes):
 
 def _merge(ensembl_related, ncbi_related):
     # Merge gene sets related from ENSEMBL and NCBI
-    related = {
-        "assemblies": _merge_assemblies(
-            ensembl_related.get("assemblies", []),
-            ncbi_related.get("assemblies", []),
-        ),
-        "genes": _merge_gene(ensembl_related, ncbi_related.get("genes", [])),
+    return {
+        "assemblies": _merge_assemblies(ensembl_related, ncbi_related),
+        "genes": _merge_gene(ensembl_related, ncbi_related),
     }
-    return related
 
 
 def _parse_assemblies(dataset_report):
-    taxname = None
+    taxon_name = None
     assemblies = []
 
     gene = dataset_report.get("gene", {})
-    taxname = taxname or gene.get("taxname")
+    taxon_name = taxon_name or gene.get("taxon_name")
     sequence_name = None
 
     for annotation in gene.get("annotations", []):
@@ -260,7 +258,7 @@ def _parse_assemblies(dataset_report):
                 assemblies.append(assembly_entry)
 
     # Add GRCh37 assembly if human
-    if taxname == "Homo sapiens" and sequence_name:
+    if taxon_name == "Homo sapiens" and sequence_name:
         grch37_acc = GRCH37.get(sequence_name)
         if grch37_acc:
             grch37_entry = {
@@ -371,23 +369,23 @@ def _parse_dataset_report(dataset_report):
 
     Returns:
         tuple:
-            - taxname (str): The scientific name of the organism (e.g., "Homo sapiens").
+            - taxon_name (str): The scientific name of the organism (e.g., "Homo sapiens").
             - data (dict): A dictionary containing:
                 - "assemblies" (list): A list of assembly dictionaries.
                 - "genes" (list): A list of gene dictionaries.
     """
     assemblies = []
     genes = []
-    taxname = None
+    taxon_name = None
 
     for report in dataset_report.get("reports", []):
-        taxname = taxname or report.get("gene", {}).get("taxname", "unknown")
+        taxon_name = taxon_name or report.get("gene", {}).get("taxon_name", "unknown")
         # Extract genomic assemblies and genes
         assemblies = _parse_assemblies(report)
         gene = _parse_genes(report)
         if gene:
             genes.append(gene)
-    return taxname, {"assemblies": assemblies, "genes": genes}
+    return taxon_name, {"assemblies": assemblies, "genes": genes}
 
 
 def _parse_product_report(product_report):
@@ -399,17 +397,17 @@ def _parse_product_report(product_report):
         dict: Mapping gene_symbol -> list of transcript info dicts
     """
     genes_dict = {}
-    taxname = None
+    taxon_name = None
 
     for report in product_report.get("reports", []):
-        taxname = report.get("taxname")
+        taxon_name = report.get("taxon_name")
         product = report.get("product", {})
         symbol = product.get("symbol")
         gene_products = _parse_transcripts(report)
         if gene_products:
             genes_dict[symbol] = gene_products
 
-    return taxname, genes_dict
+    return taxon_name, genes_dict
 
 
 def _merge_datasets(genomic_related, product_related):
@@ -465,10 +463,10 @@ def filter_report_from_other_genes(gene_symbol: str, reports: dict):
     return None
 
 
-def _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxname="Homo Sapiens"):
+def _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxon_name="Homo Sapiens"):
     """
     Given a gene symbol, return a set of related sequence accessions (genomic and/or products).
-    Returns (taxname, related_dict), or (None, None) if nothing found.
+    Returns (taxon_name, related_dict), or (None, None) if nothing found.
     """
     if not gene_symbol:
         return None, None
@@ -478,28 +476,28 @@ def _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxname="Homo Sapiens"):
 
     client = NCBIClient(timeout=DEFAULT_TIMEOUT)
 
-    dataset_response = client.get_gene_symbol_dataset_report(gene_symbol, taxname)
-    taxname, assemblies = _parse_dataset_report(
+    dataset_response = client.get_gene_symbol_dataset_report(gene_symbol, taxon_name)
+    taxon_name, assemblies = _parse_dataset_report(
         dataset_response
     )
-    product_response = client.get_gene_symbol_product_report(gene_symbol, taxname)
-    taxname, products = _parse_product_report(
+    product_response = client.get_gene_symbol_product_report(gene_symbol, taxon_name)
+    taxon_name, products = _parse_product_report(
         product_response
     )
 
     related = _merge_datasets(assemblies, products)
-    return taxname, related
+    return taxon_name, related
 
 
 def _get_related_by_gene_symbol_from_ensembl(
-    gene_symbol, taxname=HUMAN_TAXON
+    gene_symbol, taxon_name=HUMAN_TAXON
 ):
     if not gene_symbol:
         return None
     client = EnsemblClient(timeout=DEFAULT_TIMEOUT)
     gene_lookup_response = client.lookup_symbol(gene_symbol)
-    taxname, ensembl_gene_id, gene_name, ensemble_transcripts = _parse_ensembl_lookup_json(gene_lookup_response)
-    return taxname, {
+    taxon_name, ensembl_gene_id, gene_name, ensemble_transcripts = _parse_ensembl_lookup_json(gene_lookup_response)
+    return taxon_name, {
         gene_name: ensemble_transcripts,
         "providers": {"name": "ENSEMBL", "accession": ensembl_gene_id},
     }
@@ -507,10 +505,10 @@ def _get_related_by_gene_symbol_from_ensembl(
 
 def _get_related_by_gene_symbol(gene_symbol):
     _, ncbi_related = _get_related_by_gene_symbol_from_ncbi(
-        gene_symbol, taxname=HUMAN_TAXON
+        gene_symbol, taxon_name=HUMAN_TAXON
     )
     _, ensembl_related = _get_related_by_gene_symbol_from_ensembl(
-        gene_symbol, taxname=HUMAN_TAXON
+        gene_symbol, taxon_name=HUMAN_TAXON
     )
     related = _merge(ensembl_related, ncbi_related)
     related = filter_related(gene_symbol, related)
@@ -521,7 +519,7 @@ def _parse_ensembl_gene_lookup_json(ensembl_gene_json):
     ensembl_related_transcripts = []
     gene_symbol = ensembl_gene_json.get("display_name")
     gene_id = ensembl_gene_json.get("id")
-    taxname = ensembl_gene_json.get("species").replace("_", " ")
+    taxon_name = ensembl_gene_json.get("species").replace("_", " ")
 
     for transcript in ensembl_gene_json.get("Transcript", []):
         translation = transcript.get("Translation", {})
@@ -547,7 +545,7 @@ def _parse_ensembl_gene_lookup_json(ensembl_gene_json):
             }
         )
 
-    return taxname, gene_id, gene_symbol, ensembl_related_transcripts
+    return taxon_name, gene_id, gene_symbol, ensembl_related_transcripts
 
 
 def _parse_ensembl_transcript_lookup_json(ensembl_transcript_json):
@@ -594,8 +592,8 @@ def fetch_ensembl_gene_info(accession_base: str, moltype: str) -> tuple[str, dic
         moltype (str): Molecule type — features parsed from ensembl accession prefix.
 
     Returns:
-        tuple: (taxname, related_info_dict)
-            - taxname (str): Taxonomic name (e.g., "Homo sapiens")
+        tuple: (taxon_name, related_info_dict)
+            - taxon_name (str): Taxonomic name (e.g., "Homo sapiens")
             - related_info_dict (dict): Dictionary including gene and its products.
 
     Raises:
@@ -617,17 +615,15 @@ def fetch_ensembl_gene_info(accession_base: str, moltype: str) -> tuple[str, dic
     if not parsed:
         raise ValueError(f"Failed to parse response for {accession_base}.")
 
-    taxname, ensembl_id, gene, related_transcripts = parsed
+    taxon_name, ensembl_id, gene, related_transcripts = parsed
 
-    return taxname, {
+    return taxon_name, {
         gene: related_transcripts,
         "providers": {
             "name": "ENSEMBL",
             "accession": ensembl_id
         }
     }
-
-
 
 
 def filter_assemblies(related_assemblies: list):
@@ -686,10 +682,10 @@ def filter_related(accession_base, related):
 def _get_gene_related(gene_ids):
     client = NCBIClient(timeout=DEFAULT_TIMEOUT)
     product_response = client.get_gene_id_product_report(gene_ids)
-    taxname, products = _parse_product_report(product_response)
+    taxon_name, products = _parse_product_report(product_response)
     dataset_response = client.get_gene_id_dataset_report(gene_ids)
-    taxname, assemblies = _parse_dataset_report(dataset_response)
-    return taxname, _merge_datasets(assemblies, products)
+    taxon_name, assemblies = _parse_dataset_report(dataset_response)
+    return taxon_name, _merge_datasets(assemblies, products)
 
 
 def _parse_genome_annotation_report(genome_annotation_report):
@@ -697,17 +693,17 @@ def _parse_genome_annotation_report(genome_annotation_report):
     for report in genome_annotation_report.get("reports", []):
         annotation = report.get("annotation", {})
         gene_id = annotation.get("gene_id")
-        taxname = annotation.get("taxname")
+        taxon_name = annotation.get("taxon_name")
         if gene_id is not None:
             gene_ids.append(gene_id)
     if gene_ids:
-        taxname, related = _get_gene_related(gene_ids)
-        return taxname, related
+        taxon_name, related = _get_gene_related(gene_ids)
+        return taxon_name, related
     return None, {}
 
 
 def _get_related_by_chr_location(accession, locations):
-    taxname = None
+    taxon_name = None
     related = {}
     assembly_accession = _get_assembly_accession(accession)
     if not assembly_accession:
@@ -717,9 +713,9 @@ def _get_related_by_chr_location(accession, locations):
 
     client = NCBIClient(timeout=DEFAULT_TIMEOUT)
     annotation_response = client.get_genome_annotation_report(assembly_accession, _validate_locations(accession, locations))
-    taxname, related = _parse_genome_annotation_report(annotation_response)
+    taxon_name, related = _parse_genome_annotation_report(annotation_response)
 
-    return taxname, related
+    return taxon_name, related
 
 
 def _get_assembly_accession(accession):
@@ -738,7 +734,7 @@ def _get_related_by_accession_from_ncbi(accession):
         timeout (int, optional): Timeout, defaults to DEFAULT_TIMEOUT.
     Returns:
         tuple:
-            - taxname (str or None): The organism name associated with the accession.
+            - taxon_name (str or None): The organism name associated with the accession.
             - related (dict or None): A dictionary of related sequences; otherwise None.
     Raises:
         RuntimeError: If the NCBI Datasets API is unavailable or returns an invalid response.
@@ -747,40 +743,43 @@ def _get_related_by_accession_from_ncbi(accession):
     related = {}
     products = None
     assemblies = None
-    taxname = None
+    taxon_name = None
 
     client = NCBIClient(timeout=DEFAULT_TIMEOUT)
     product_report = client.get_accession_product_report(accession)
     dataset_report = client.get_accession_dataset_report(accession)
 
     products = _parse_product_report(product_report)
-    taxname, assemblies = _parse_dataset_report(dataset_report)
+    taxon_name, assemblies = _parse_dataset_report(dataset_report)
 
     related = _merge_datasets(assemblies, products)
-    return taxname, related
+    return taxon_name, related
 
-
-def _get_related_by_ensembl_id(accession_base: str, moltype:str):
+# choose between ensembl/ENSEMBL/EBI
+# taxon_name -> taxon_name
+# consider raise 
+def _get_related_by_ensembl_id(accession: str, moltype:str):
     """
     Given an ensembl accession, return filtered related from Ensembl and NCBI
     Args:
-        accession_base (str): An ensembl accession base.
+        accession (str): An ensembl accession.
 
     Returns:
         related (dict): A dictionary containing related sequences from Ensembl, NCBI
     """
-    
-    # Get taxname and related from ensembl
-    taxname, ensembl_related = fetch_ensembl_gene_info(accession_base, moltype)
-    # Get related from ncbi using gene symbol and taxname
+    accession_base = accession.split(".")[0]
+    # Get taxon_name and related from ensembl
+    taxon_name, ensembl_related = fetch_ensembl_gene_info(accession_base, moltype)
+    print(type(ensembl_related))
+    # Get related from ncbi using gene symbol and taxon_name
     gene_symbol = next(iter(ensembl_related))
     _, ncbi_related = _get_related_by_gene_symbol_from_ncbi(
-        gene_symbol, taxname
+        gene_symbol, taxon_name
     )
     # Merge and filter related from two sources
     if ensembl_related or ncbi_related:
         related = _merge(ensembl_related, ncbi_related)
-        if taxname.upper() == HUMAN_TAXON:
+        if taxon_name.upper() == HUMAN_TAXON:
             return filter_related(accession_base, related)
         return related
 
@@ -789,13 +788,13 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
     related = {}
     accession_base = accession.split(".")[0]
 
-    # Try to get taxname and related from ncbi datasets
+    # Try to get taxon_name and related from ncbi datasets
     if moltype in [MoleculeType.RNA, MoleculeType.PROTEIN]:
-        taxname, ncbi_related = _get_related_by_accession_from_ncbi(
+        taxon_name, ncbi_related = _get_related_by_accession_from_ncbi(
             accession
         )
     elif moltype == MoleculeType.DNA and "NC_" in accession:
-        taxname, ncbi_related = _get_related_by_chr_location(
+        taxon_name, ncbi_related = _get_related_by_chr_location(
             accession, locations
         )
     else:
@@ -811,16 +810,16 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
         ]
 
         for ensembl_gene in ensembl_genes_id:
-            taxname, ensembl_gene_related = fetch_ensembl_gene_info(ensembl_gene, moltype="dna")
+            taxon_name, ensembl_gene_related = fetch_ensembl_gene_info(ensembl_gene, moltype="dna")
             if ensembl_gene_related:
                 related = _merge(ensembl_gene_related, ncbi_related)
-        if taxname and taxname.upper() == "HOMO SAPIENS":
+        if taxon_name and taxon_name.upper() == "HOMO SAPIENS":
             related = filter_related(accession_base, related)
 
     return related
 
-
-def detect_sequence_source(seq_id: str) -> tuple[str, str]:
+# split into two functions, 
+def detect_sequence_source(seq_id: str):
     """
     Detects the source and molecular type of a sequence ID.
     Args:
@@ -829,8 +828,9 @@ def detect_sequence_source(seq_id: str) -> tuple[str, str]:
                 source: "ensembl", "ncbi", or "other"
                 moltype: "dna", "rna", "protein", "unknown" and others
     """
+   
     seq_id = seq_id.strip()
-
+    print(seq_id)
     # Ensembl declares its identifiers should be in the form of
     # ENS[species prefix][feature type prefix][a unique eleven digit number]
     # See at https://www.ensembl.org/info/genome/stable_ids/index.html
@@ -845,6 +845,7 @@ def detect_sequence_source(seq_id: str) -> tuple[str, str]:
     }
     ensembl_pattern = re.compile(r"^ENS[A-Z]*?(FM|GT|G|T|P|R|E)\d{11}(?:\.\d+)?$")
     match = ensembl_pattern.match(seq_id)
+    print(match)
     if match:
         prefix = match.group(1)
         moltype = ensembl_feature_map.get(prefix, "unknown")
@@ -882,8 +883,8 @@ def detect_sequence_source(seq_id: str) -> tuple[str, str]:
 
     return "other", "unknown"
 
-
-def get_related(accession, locations=None, timeout=DEFAULT_TIMEOUT):
+# get rid of timeout
+def get_related(accession, locations=None):
     """
     Retrieve related assembly/gene/transcript/protein information based
     on accession or gene symbol
@@ -901,16 +902,18 @@ def get_related(accession, locations=None, timeout=DEFAULT_TIMEOUT):
     if locations is None:
         locations = "0"
     accession = accession.upper()
-    accession_base = accession.split(".")[0]
+ 
 
     source, moltype = detect_sequence_source(accession)
+   
+    print(source)
+    print(moltype)
     if source == "ensembl" and moltype != "unkown":
-        return _get_related_by_ensembl_id(accession_base, moltype)
-    elif source == "ncbi" and moltype != "unknown":
+        return _get_related_by_ensembl_id(accession, moltype)
+    if source == "ncbi" and moltype != "unknown":
         return _get_related_by_ncbi_id(
             accession, moltype, locations=locations
         )
-    elif source == "other":
+    if source == "other":
         return _get_related_by_gene_symbol(accession)
-    else:
-        raise NameError(f"Could not retrieve related for {accession}.")
+    raise NameError(f"Could not retrieve related for {accession}.")
