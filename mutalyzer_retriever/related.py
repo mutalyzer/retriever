@@ -102,17 +102,18 @@ def _validate_locations(accession:str, locations):
 
     return valid_locations
 
-def merge_helper(d1, d2):
-    merged = d1.copy()
-    for k, v in d2.items():
-        if k in merged and isinstance(merged[k], dict) and isinstance(v, dict):
-            merged[k] = merge_helper(merged[k], v)
-        else:
-            merged[k] = v
-    return merged
+def merge_provider(ensembl_provider, ncbi_provider):
+    if not ncbi_provider:
+        return ensembl_provider
+    else:
+        providers = deepcopy(ncbi_provider)
+        for i, p in enumerate(ncbi_provider):
+            if p.get("name") == DataSource.ENSEMBL:
+                providers[i] = ensembl_provider
+        return providers
 
 
-def find_ncbi_match(ncbi_data, ensembl_id):
+def ncbi_match(ncbi_data, ensembl_id):
     providers = ncbi_data.get("providers", [])
     for p in providers:
         if p.get("name") == DataSource.ENSEMBL and (
@@ -131,52 +132,27 @@ def _merge_transcripts(ensembl_related, ncbi_gene):
     ensembl_transcripts = ensembl_related.get("transcripts", [])
     ncbi_transcripts = ncbi_gene.get("transcripts", [])
 
+    if ensembl_transcripts is None:
+        return ncbi_transcripts
+
     merged = []
 
-    for ebi_transcript in ensembl_transcripts:
-        ensembl_acc = ebi_transcript.get("transcript_accession")
+    ensembl_transcripts = ensembl_related.get("transcripts", [])
+    for ensembl_t in ensembl_transcripts:
+        ensembl_accession = ensembl_t.get("transcript_accession")
         matched = False
-        ebi_transcript_copy = deepcopy(ebi_transcript)
-        ebi_transcript_copy["name"] = DataSource.ENSEMBL
-
-        for ncbi_transcript in ncbi_transcripts:
-            matched_provider = find_ncbi_match(ncbi_transcript, ensembl_acc)
-            if matched_provider:
-                merged.append(merge_helper(ebi_transcript,ncbi_transcript))
-        return merged
-
-        #     matched_provider = find_ncbi_match(transcript, ensembl_acc)
-        #     if matched_provider:
-        #         if len(transcript.get("providers")) > 1:
-        #             transcript["providers"][1] = matched_provider | ebi_transcript_copy
-        #     else:
-        #         transcript["providers"].append(ebi_transcript_copy)
-
-
-        #     if  and find_ncbi_match(transcript, ensembl_acc):
-        #         merged_transcript = ebi
-        #         transcript["providers"][1] = ebi_transcript_copy
-        #         break
-        #     elif len(transcript.get("providers")) == 1 and not find_ncbi_match(transcript, ensembl_acc):
-        #         transcript["provider"].append(ebi_transcript_copy)
-        #         for i, match in enumerate(transcript.get("providers", []):
-        #             if match.get("name") == DataSource.ENSEMBL:
-        #                 transcript
-        #     for i, provider in enumerate(transcript.get("providers", [])):
-        #         if (
-        #             str(provider.get("name")) == "ENSEMBL" and
-        #             provider.get("transcript_accession") == ensembl_acc
-        #         ):
-        #             transcript["providers"][i] = ebi_transcript_copy
-        #             matched = True
-        #             break
-        #     if matched:
-        #         break
-
-        # if not matched:
-        #     ncbi_transcripts.append({"providers": ebi_transcript_copy})
-
-    return ncbi_transcripts
+        ensembl_entry = {**ensembl_t, "name": DataSource.ENSEMBL}
+                
+        for ncbi_t in ncbi_transcripts:
+            if ncbi_match(ncbi_t, ensembl_accession):
+                merged.append({"providers": merge_provider(ensembl_entry, ncbi_t.get("providers"))})
+                matched = True
+                break
+        if not matched:
+            merged.append([{"providers":ensembl_entry}])
+    import pprint
+    pprint.pprint(merged, indent=2)
+    return merged
 
 
 def _merge_gene(ensembl_related, ncbi_related):
@@ -188,10 +164,12 @@ def _merge_gene(ensembl_related, ncbi_related):
         return ncbi_related.get("genes", {})
     
     for ncbi_gene in ncbi_related.get("genes", []):
-        if ncbi_gene.get("name") == ensembl_gene_name and not find_ncbi_match(ncbi_gene, ensembl_gene_accession):
-            ncbi_gene["providers"].append({"name": DataSource.ENSEMBL, "accession": ensembl_gene_accession})
-
-        ncbi_gene["transcripts"] = _merge_transcripts(ensembl_related, ncbi_gene)
+        if ncbi_gene.get("name") == ensembl_gene_name:
+            gene = deepcopy(ncbi_gene)
+            ensembl_entry = [{"accession": ensembl_gene_accession,
+                              "name": DataSource.ENSEMBL}]
+            gene["providers"] = merge_provider(ensembl_entry, ncbi_gene.get("providers"))
+            gene["transcript"] = _merge_transcripts(ensembl_related, ncbi_gene)
         genes.append(ncbi_gene)
     return genes
 
@@ -553,9 +531,7 @@ def fetch_ensembl_gene_info(accession_base, moltype):
         moltype (str): Molecule type — features parsed from ensembl accession prefix.
 
     Returns:
-        tuple: (taxon_name, related_info_dict)
-            - taxon_name (str): Taxonomic name (e.g., "Homo sapiens")
-            - related_info_dict (dict): Dictionary including gene and its products.
+        dict:
 
     Raises:
         ValueError: If the Ensembl lookup fails or returns nothing.
@@ -722,13 +698,14 @@ def _get_related_by_ensembl_id(accession, moltype):
     accession_base = accession.split(".")[0]
 
     # Get taxon_name and related from ensembl
-    taxon_name, ensembl_related = fetch_ensembl_gene_info(accession_base, moltype)
+    ensembl_related = fetch_ensembl_gene_info(accession_base, moltype)
+    taxname = ensembl_related.get("taxon_name")
     ncbi_related = {}
     # Get related from ncbi using gene symbol and taxname
     genes = ensembl_related.get("genes")
     if genes and isinstance(genes, list) and genes[0].get("name"):
         gene_symbol = genes[0]["name"]
-        _, ncbi_related = _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxon_name)
+        _, ncbi_related = _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxname)
 
     # Merge data from Ensembl and NCBI if available
     if not (ensembl_related or ncbi_related):
@@ -737,7 +714,7 @@ def _get_related_by_ensembl_id(accession, moltype):
     related = _merge(ensembl_related, ncbi_related)
     related = clean_dict(related)
 
-    if taxon_name and taxon_name.upper() == HUMAN_TAXON:
+    if taxname and taxname.upper() == HUMAN_TAXON:
         return filter_related(accession_base, related)
     
     return related
