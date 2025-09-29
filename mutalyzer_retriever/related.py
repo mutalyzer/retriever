@@ -144,14 +144,14 @@ def _merge_transcripts(ensembl_related, ncbi_gene):
         ensembl_entry = {**ensembl_t, "name": DataSource.ENSEMBL}
                 
         for ncbi_t in ncbi_transcripts:
+            transcript = deepcopy(ncbi_t)
             if ncbi_match(ncbi_t, ensembl_accession):
-                merged.append({"providers": merge_provider(ensembl_entry, ncbi_t.get("providers"))})
+                transcript["providers"] = merge_provider(ensembl_entry, ncbi_t.get("providers"))
+                merged.append(transcript)
                 matched = True
                 break
         if not matched:
-            merged.append([{"providers":ensembl_entry}])
-    import pprint
-    pprint.pprint(merged, indent=2)
+            merged.append({"providers":[ensembl_entry]})
     return merged
 
 
@@ -169,8 +169,8 @@ def _merge_gene(ensembl_related, ncbi_related):
             ensembl_entry = [{"accession": ensembl_gene_accession,
                               "name": DataSource.ENSEMBL}]
             gene["providers"] = merge_provider(ensembl_entry, ncbi_gene.get("providers"))
-            gene["transcript"] = _merge_transcripts(ensembl_related, ncbi_gene)
-        genes.append(ncbi_gene)
+            gene["transcripts"] = _merge_transcripts(ensembl_related, ncbi_gene)
+            genes.append(gene)
     return genes
 
 
@@ -449,8 +449,9 @@ def _get_related_by_gene_symbol(gene_symbol):
         gene_symbol
     )
     related = _merge(ensembl_related, ncbi_related)
-    related = clean_dict(related)
-    related = filter_related(gene_symbol, related)
+    
+    # related = clean_dict(related)
+    # related = filter_related(gene_symbol, related)
     return related
 
 
