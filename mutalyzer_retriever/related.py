@@ -50,23 +50,6 @@ def _fetch_ncbi_datasets_gene_accession(accession_id, timeout=TimeoutError):
     return json.loads(request(url=url, timeout=timeout))
 
 
-def clean_dict(d):
-    """Recursively remove keys with None, empty string, or empty list values from dict."""
-    if not isinstance(d, dict):
-        return d
-    cleaned = {}
-    for k, v in d.items():
-        if isinstance(v, dict):
-            v = clean_dict(v) 
-        elif isinstance(v, list):
-            v = [clean_dict(i) if isinstance(i, dict) else i for i in v]
-            v = [i for i in v if i not in (None, "", [], {})]
-        if v not in (None, "", [], {}):
-            cleaned[k] = v
-    return cleaned
-
-
-
 def _validate_locations(accession:str, locations):
     """
     Check if input locations are in the format of 'start_end' or single points,
@@ -141,6 +124,7 @@ def _merge_transcripts(ensembl_related, ncbi_gene):
     for ensembl_t in ensembl_transcripts:
         ensembl_accession = ensembl_t.get("transcript_accession")
         matched = False
+       # shape ensembl gene data and merge gene info from two sources
         ensembl_entry = {**ensembl_t, "name": DataSource.ENSEMBL}
                 
         for ncbi_t in ncbi_transcripts:
@@ -157,21 +141,23 @@ def _merge_transcripts(ensembl_related, ncbi_gene):
 
 def _merge_gene(ensembl_related, ncbi_related):
     "Merge two lists of related genes gathered from ensembl and ncbi"
-    genes = []
     ensembl_gene_name = ensembl_related.get("name")
     ensembl_gene_accession = ensembl_related.get("accession")
     if not (ensembl_gene_name and ensembl_gene_accession):
-        return ncbi_related.get("genes", {})
-    
+        return ncbi_related.get("genes", [])
+
+    merged = []
     for ncbi_gene in ncbi_related.get("genes", []):
         if ncbi_gene.get("name") == ensembl_gene_name:
+            # shape ensembl gene data and merge gene info from two sources
             gene = deepcopy(ncbi_gene)
-            ensembl_entry = [{"accession": ensembl_gene_accession,
-                              "name": DataSource.ENSEMBL}]
+            ensembl_entry = {"accession": ensembl_gene_accession,
+                              "name": DataSource.ENSEMBL}
             gene["providers"] = merge_provider(ensembl_entry, ncbi_gene.get("providers"))
+            # merge transcripts
             gene["transcripts"] = _merge_transcripts(ensembl_related, ncbi_gene)
-            genes.append(gene)
-    return genes
+            merged.append(gene)
+    return merged
 
 
 def _merge(ensembl_related, ncbi_related):
@@ -450,10 +436,8 @@ def _get_related_by_gene_symbol(gene_symbol):
     )
     related = _merge(ensembl_related, ncbi_related)
     
-    # related = clean_dict(related)
-    # related = filter_related(gene_symbol, related)
+    related = filter_related(gene_symbol, related)
     return related
-
 
 
 def _parse_ensembl_gene_lookup_json(response):
@@ -511,7 +495,6 @@ def _parse_ensembl_lookup_json(ensembl_json):
     Dispatch parsing based on Ensembl object type.
     """
     obj_type = ensembl_json.get("object_type")
- 
     if obj_type == "Gene" and ensembl_json.get("Transcript"):
         return _parse_ensembl_gene_lookup_json(ensembl_json)
     if obj_type == "Transcript" and ensembl_json.get("Parent"):
@@ -599,13 +582,14 @@ def filter_gene_products(accession_base, related_genes):
 
 
 def filter_related(accession_base, related):
-    return related
-    return {
-        "assemblies": filter_assemblies(related.get("assemblies", [])),
-        "genes": filter_gene_products(
-            accession_base, related.get("genes", [])
-        ),
-    }
+    filtered = {}
+    filtered_assemblies = filter_assemblies(related.get("assemblies", []))
+    if filtered_assemblies:
+        filtered["assemblies"] = filtered_assemblies
+    filterd_gene_products = filter_gene_products(accession_base, related.get("genes", []))
+    if filterd_gene_products:
+        filtered["genes"] = filterd_gene_products
+    return filtered
 
 
 def _get_gene_related(gene_ids):
@@ -685,8 +669,7 @@ def _get_related_by_accession_from_ncbi(accession):
     related = _merge_datasets(assemblies, products)
     return taxon_name, related
 
-# choose between ensembl/ENSEMBL/EBI
-# consider raise 
+
 def _get_related_by_ensembl_id(accession, moltype):
     """
     Given an Ensembl accession, return filtered related from Ensembl and NCBI
@@ -708,13 +691,7 @@ def _get_related_by_ensembl_id(accession, moltype):
         gene_symbol = genes[0]["name"]
         _, ncbi_related = _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxname)
 
-    # Merge data from Ensembl and NCBI if available
-    if not (ensembl_related or ncbi_related):
-        return {}
-
     related = _merge(ensembl_related, ncbi_related)
-    related = clean_dict(related)
-
     if taxname and taxname.upper() == HUMAN_TAXON:
         return filter_related(accession_base, related)
     
@@ -751,7 +728,6 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
             ensembl_gene_related = fetch_ensembl_gene_info(ensembl_gene, moltype="dna")
             if ensembl_gene_related:
                 related = _merge(ensembl_gene_related, ncbi_related)
-                related = clean_dict(related)
         if taxon_name and taxon_name.upper() == HUMAN_TAXON:
             related = filter_related(accession_base, related)
 
