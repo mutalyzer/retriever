@@ -10,7 +10,6 @@ from mutalyzer_retriever.reference import GRCH37
 from mutalyzer_retriever.related_schema import related_schema
 from mutalyzer_retriever.related import  get_related
 from mutalyzer_retriever.util import DataSource
-from deepdiff import DeepDiff
 
 class MockHttp400(Exception):
     def __init__(self, response):
@@ -118,9 +117,7 @@ def test_ensembl_mane_select_transcript(accession, mock_ncbi_client, mock_ensemb
     """    
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected = json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
 @pytest.mark.parametrize("accession", ["ENST00000646730.1"])
@@ -132,9 +129,7 @@ def test_ensembl_mane_plus_clinical_transcript(accession, mock_ncbi_client, mock
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected = json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}    
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
 
 
 @pytest.mark.parametrize("accession", ["ENST00000714087.1"])
@@ -146,9 +141,8 @@ def test_ensembl_transcript_no_ncbi_match_transcript(accession, mock_ncbi_client
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected = json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession", ["ENST00000528048.5"])
 def test_ensembl_transcript_with_ncbi_match_transcript(accession, mock_ncbi_client, mock_ensembl_client):
@@ -159,9 +153,8 @@ def test_ensembl_transcript_with_ncbi_match_transcript(accession, mock_ncbi_clie
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+ 
 
 @pytest.mark.parametrize("accession", ["ENSMUST00000000175.6"])
 def test_ensembl_mouse_transcript_with_ncbi_match_accession(accession, mock_ncbi_client, mock_ensembl_client):
@@ -172,9 +165,8 @@ def test_ensembl_mouse_transcript_with_ncbi_match_accession(accession, mock_ncbi
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+ 
 
 @pytest.mark.parametrize("accession", ["ENST00000530923.6"])
 def test_ensembl_non_coding_transcript_with_ncbi_match_accession(accession, mock_ncbi_client, mock_ensembl_client):
@@ -198,9 +190,8 @@ def test_ensembl_non_coding_transcript_without_ncbi_match_accession(accession, m
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession", ["ENSG00000204370.14"])
 def test_ensembl_gene(accession, mock_ncbi_client, mock_ensembl_client):
@@ -211,9 +202,8 @@ def test_ensembl_gene(accession, mock_ncbi_client, mock_ensembl_client):
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession", ["ENSG00000204370.10"])
 def test_ensembl_gene_older_version(accession, mock_ncbi_client, mock_ensembl_client):
@@ -224,9 +214,8 @@ def test_ensembl_gene_older_version(accession, mock_ncbi_client, mock_ensembl_cl
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_ENSG00000204370.14.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_ENSG00000204370.14.json"))
+
 
 @pytest.mark.parametrize("accession", ["ENSMUSG00000000171.6"])
 def test_ensembl_mouse_gene(accession, mock_ncbi_client, mock_ensembl_client):
@@ -237,9 +226,8 @@ def test_ensembl_mouse_gene(accession, mock_ncbi_client, mock_ensembl_client):
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession", ["ENSDARG00000017744.10"])
 def test_ensembl_zebrafish_gene(accession, mock_ncbi_client, mock_ensembl_client):
@@ -250,9 +238,8 @@ def test_ensembl_zebrafish_gene(accession, mock_ncbi_client, mock_ensembl_client
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession", ["ENSP00000364699.3"])
 def test_ensembl_mane_select_protein(accession, mock_ncbi_client, mock_ensembl_client):
@@ -263,9 +250,8 @@ def test_ensembl_mane_select_protein(accession, mock_ncbi_client, mock_ensembl_c
     """    
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)    
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession", ["ENSP00000519382.1"])
 def test_ensembl_not_mane_select_protein(accession, mock_ncbi_client, mock_ensembl_client):
@@ -276,9 +262,8 @@ def test_ensembl_not_mane_select_protein(accession, mock_ncbi_client, mock_ensem
     """    
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession", ["ENSE00003479002.1"])
 def test_ensembl_invalid_exon_id_raises(accession, mock_ncbi_client, mock_ensembl_client):
@@ -298,9 +283,8 @@ def test_ncbi_mane_select_transcript(accession, mock_ncbi_client, mock_ensembl_c
     """    
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession", ["NM_001374258.1"])
 def test_ncbi_mane_plus_clinical_transcript(accession, mock_ncbi_client, mock_ensembl_client):
@@ -311,9 +295,8 @@ def test_ncbi_mane_plus_clinical_transcript(accession, mock_ncbi_client, mock_en
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession", ["XM_024454345.2"])
 def test_ncbi_transcript_no_ensembl_match_transcript(accession, mock_ncbi_client, mock_ensembl_client):
@@ -324,9 +307,8 @@ def test_ncbi_transcript_no_ensembl_match_transcript(accession, mock_ncbi_client
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession", ["NM_001276506.2"])
 def test_ncbi_transcript_with_ensembl_match_transcript(accession, mock_ncbi_client, mock_ensembl_client):
@@ -337,9 +319,8 @@ def test_ncbi_transcript_with_ensembl_match_transcript(accession, mock_ncbi_clie
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession", ["NM_025848.3"])
 def test_ncbi_mouse_transcript_with_ensembl_match_accession(accession, mock_ncbi_client, mock_ensembl_client):
@@ -350,9 +331,8 @@ def test_ncbi_mouse_transcript_with_ensembl_match_accession(accession, mock_ncbi
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession, locations", [
     ("NC_000011.10", "112086000_112088000"),
@@ -365,9 +345,8 @@ def test_ncbi_two_genes_at_hg38_chr_location(accession, locations, mock_ncbi_cli
     """
     related = get_related(accession, locations)
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}_{locations}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}_{locations}.json"))
+
 
 @pytest.mark.parametrize("accession, locations", [
     ("NC_000011.10", "112088000_112088100"),
@@ -379,9 +358,8 @@ def test_ncbi_one_gene_at_hg38_chr_location(accession, locations, mock_ncbi_clie
     transcripts from NCBI and EBI.
     """
     related = get_related(accession, locations)
-    expected =  json.loads(_get_content(f"data/related_{accession}_{locations}.json"))    
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}_{locations}.json"))    
+
 
 @pytest.mark.parametrize("accession, locations", [
     ("NC_000011.10", "112096000_112100000"),
@@ -392,7 +370,7 @@ def test_ncbi_no_gene_at_hg38_chr_location(accession, locations, mock_ncbi_clien
     Expect chr accessions on three assemblies.
     """
     related = get_related(accession, locations)
-    expected =  {}
+    assert related ==  {}
 
 @pytest.mark.parametrize("accession, locations", [
     ("NC_060935.1", "112097000_112100000"),
@@ -405,9 +383,8 @@ def test_ncbi_two_genes_at_t2t_chr_location(accession, locations, mock_ncbi_clie
     """
     related = get_related(accession, locations)
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}_{locations}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}_{locations}.json"))
+
 
 @pytest.mark.parametrize("accession, locations", [
     ("NC_000011.9", "111960000_111966000"),
@@ -420,9 +397,8 @@ def test_ncbi_one_gene_at_hg37_chr_location(accession, locations, mock_ncbi_clie
     """
     related = get_related(accession, locations)
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}_{locations}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}_{locations}.json"))
+
 
 @pytest.mark.parametrize("accession", ["NR_077060.2"])
 def test_ncbi_non_coding_transcript_with_ensembl_match_accession(accession, mock_ncbi_client, mock_ensembl_client):
@@ -445,9 +421,8 @@ def test_ncbi_non_coding_transcript_without_ensembl_match_accession(accession, m
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
+  
 
 @pytest.mark.parametrize("accession", ["NP_002993.1"])
 def test_ncbi_mane_select_protein(accession, mock_ncbi_client, mock_ensembl_client):
@@ -457,10 +432,9 @@ def test_ncbi_mane_select_protein(accession, mock_ncbi_client, mock_ensembl_clie
     From EBI and ncbi
     """    
     related = normalize_enums(get_related(accession))
-    assert related_schema.validate(related)    
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related_schema.validate(related)
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))   
+ 
 
 @pytest.mark.parametrize("accession", ["NP_001263435.1"])
 def test_ncbi_not_mane_select_protein(accession, mock_ncbi_client, mock_ensembl_client):
@@ -471,6 +445,4 @@ def test_ncbi_not_mane_select_protein(accession, mock_ncbi_client, mock_ensembl_
     """    
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    expected =  json.loads(_get_content(f"data/related_{accession}.json"))
-    diff = DeepDiff(expected, related, ignore_order=True)
-    assert diff == {}
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))

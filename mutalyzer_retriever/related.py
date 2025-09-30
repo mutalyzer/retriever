@@ -132,7 +132,7 @@ def _merge_transcripts(ensembl_related, ncbi_gene):
                 merged.append(transcript)
                 matched = True
                 break
-            if transcript.get("providers") and len(transcript["providers"]) == 1 and {"providers": [transcript]} not in merged:
+            if transcript.get("providers") and len(transcript["providers"]) == 1 and {"providers": transcript.get("providers")} not in merged:
                 merged.append({"providers":transcript.get("providers")})
                 
         if not matched:
