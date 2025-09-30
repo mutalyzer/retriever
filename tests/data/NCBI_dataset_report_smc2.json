@@ -1,0 +1,207 @@
+{
+  "reports": [
+    {
+      "gene": {
+        "gene_id": "321452",
+        "symbol": "smc2",
+        "description": "structural maintenance of chromosomes 2",
+        "tax_id": "7955",
+        "taxname": "Danio rerio",
+        "common_name": "zebrafish",
+        "type": "PROTEIN_CODING",
+        "orientation": "plus",
+        "chromosomes": [
+          "1"
+        ],
+        "nomenclature_authority": {
+          "authority": "ZFIN",
+          "identifier": "ZDB-GENE-030131-105"
+        },
+        "ensembl_gene_ids": [
+          "ENSDARG00000017744"
+        ],
+        "synonyms": [
+          "SMC2L1",
+          "fb92e05",
+          "zeh1628",
+          "zgc:55326",
+          "wu:fb92e05"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_049306965.1",
+            "assembly_name": "GRCz12tu",
+            "annotation_name": "GCF_049306965.1-RS_2025_04",
+            "annotation_release_date": "2025-04-11",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_133176.1",
+                "sequence_name": "1",
+                "genomic_range": {
+                  "begin": "21041431",
+                  "end": "21065953",
+                  "orientation": "plus"
+                }
+              }
+            ]
+          }
+        ],
+        "transcript_count": 3,
+        "protein_count": 1,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 1
+          },
+          {
+            "type": "NON_CODING_MODEL",
+            "count": 2
+          }
+        ],
+        "gene_groups": [
+          {
+            "id": "10592",
+            "method": "NCBI Ortholog"
+          }
+        ],
+        "summary": [
+          {
+            "description": "Predicted to enable chromatin binding activity. Acts upstream of or within DNA damage response and liver development. Predicted to be located in chromosome and nucleus. Predicted to be part of condensin complex. Predicted to be active in chromatin and condensed chromosome. Is expressed in several structures, including blood vessel; digestive system; nervous system; optic vesicle; and pectoral fin. Human ortholog(s) of this gene implicated in colon adenocarcinoma. Orthologous to human SMC2 (structural maintenance of chromosomes 2). [provided by Alliance of Genome Resources, Apr 2025]"
+          }
+        ],
+        "gene_ontology": {
+          "molecular_functions": [
+            {
+              "name": "ATP binding",
+              "go_id": "GO:0005524",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "ATP hydrolysis activity",
+              "go_id": "GO:0016887",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "chromatin binding",
+              "go_id": "GO:0003682",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            }
+          ],
+          "biological_processes": [
+            {
+              "name": "DNA damage response",
+              "go_id": "GO:0006974",
+              "evidence_code": "IMP",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "cell division",
+              "go_id": "GO:0051301",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "chromosome condensation",
+              "go_id": "GO:0030261",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "chromosome condensation",
+              "go_id": "GO:0030261",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "chromosome organization",
+              "go_id": "GO:0051276",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "liver development",
+              "go_id": "GO:0001889",
+              "evidence_code": "IMP",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "mitotic chromosome condensation",
+              "go_id": "GO:0007076",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "nuclear chromosome segregation",
+              "go_id": "GO:0098813",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "nuclear division",
+              "go_id": "GO:0000280",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            }
+          ],
+          "cellular_components": [
+            {
+              "name": "chromatin",
+              "go_id": "GO:0000785",
+              "evidence_code": "IBA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "chromosome",
+              "go_id": "GO:0005694",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "condensed chromosome",
+              "go_id": "GO:0000793",
+              "evidence_code": "IBA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "condensed chromosome",
+              "go_id": "GO:0000793",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "condensin complex",
+              "go_id": "GO:0000796",
+              "evidence_code": "IBA",
+              "qualifier": "part_of"
+            },
+            {
+              "name": "condensin complex",
+              "go_id": "GO:0000796",
+              "evidence_code": "IEA",
+              "qualifier": "part_of"
+            },
+            {
+              "name": "nuclear lumen",
+              "go_id": "GO:0031981",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "nucleus",
+              "go_id": "GO:0005634",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            }
+          ]
+        }
+      },
+      "query": [
+        "smc2"
+      ]
+    }
+  ],
+  "total_count": 1
+}
