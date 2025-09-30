@@ -195,8 +195,7 @@ def _retrieve_model(args):
 def _related(args):
     output = get_related(
         accession=args.id,
-        locations=args.locations if args.locations else None,
-        timeout=args.timeout,
+        locations=args.locations if args.locations else None
     )
     print(json.dumps(output, indent=args.indent))
 

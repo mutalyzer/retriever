@@ -7,7 +7,6 @@ from mutalyzer_retriever.configuration import cache_url, settings
 from mutalyzer_retriever.request import Http400, request
 from mutalyzer_retriever.reference import GRCH37
 from mutalyzer_retriever.client import NCBIClient, EnsemblClient
-from mutalyzer_retriever.parsers.ensembl_lookup import _parse_ensembl_gene_lookup_json
 
 
 def get_cds_to_mrna(cds_id, timeout=DEFAULT_TIMEOUT):
