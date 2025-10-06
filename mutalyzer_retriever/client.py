@@ -83,9 +83,15 @@ class EnsemblClient(BaseAPIClient):
     def lookup_symbol(self, gene_symbol: str, taxon_name: str = "homo_sapiens"):
         """Lookup gene by symbol"""
         url = f"{self.base_url}/lookup/symbol/{taxon_name}/{gene_symbol}?content-type=application/json;expand=1"
-        return self._make_request(url)
+        try:
+            return self._make_request(url)
+        except Http400:
+            return {}
     
     def lookup_id(self, accession_base: str, expand: int = 1):
         """Lookup by Ensembl ID"""
         url = f"{self.base_url}/lookup/id/{accession_base}?content-type=application/json;expand={expand}"
-        return self._make_request(url)
+        try:
+            return self._make_request(url)
+        except Http400:
+            return {}

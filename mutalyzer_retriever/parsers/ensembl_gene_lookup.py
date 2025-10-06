@@ -28,7 +28,7 @@ def _parse_ensembl_gene_lookup_json(response):
         transcripts.append(t)
 
     gene_symbol = response.get("display_name")
-    taxon_name = response.get("species").replace("_", " ").upper()    
+    taxon_name = response.get("species", "").replace("_", " ").upper()    
     output = {
         "taxon_name": taxon_name,
         "name":gene_symbol

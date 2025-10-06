@@ -41,7 +41,7 @@ def _parse_assemblies(report):
 
 def _parse_genes(dataset_report):
     if not dataset_report.get("gene"):
-        return
+        return {}
     
     gene_entry = {}
 
@@ -154,7 +154,7 @@ def _parse_dataset_report(dataset_report):
             - genes (list):
     """
     if not empty_reports(dataset_report):
-        return
+        return {}
     
     output = {}
     taxname = dataset_report.get("reports")[0].get("taxname")
@@ -185,7 +185,7 @@ def _parse_product_report(product_report):
         dict: Mapping gene_symbol -> list of transcript info dicts
     """
     if not empty_reports(product_report):
-        return
+        return {}
 
     output = {}
     taxname = product_report.get("reports")[0].get("taxname")
@@ -215,7 +215,7 @@ def _merge_datasets(genomic_related, product_related):
     related = {}
     taxnme = None
     if genomic_related is None and product_related is None:
-        return None, None
+        return None, {}
 
     if genomic_related:
         merged_genes = []
@@ -240,4 +240,4 @@ def _merge_datasets(genomic_related, product_related):
         related["genes"].sort(key=lambda g: g.get("name", ""))
 
         return taxnme, related
-    return None, None
+    return None, {}

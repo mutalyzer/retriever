@@ -181,7 +181,7 @@ def _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxon_name=HUMAN_TAXON):
     Returns related_dict, or (None, None) if nothing found.
     """
     if not gene_symbol:
-        return None, None
+        return None, {}
     related = {}
 
     client = NCBIClient(timeout=DEFAULT_TIMEOUT)
@@ -201,7 +201,7 @@ def _get_related_by_gene_symbol_from_ensembl(
     gene_symbol
 ):
     if not gene_symbol:
-        return None
+        return {}
     client = EnsemblClient(timeout=DEFAULT_TIMEOUT)
     gene_lookup_response = client.lookup_symbol(gene_symbol)
     return ensembl_gene_lookup._parse_ensembl_gene_lookup_json(gene_lookup_response)
@@ -269,13 +269,11 @@ def fetch_ensembl_gene_info(accession_base, moltype):
     client = EnsemblClient(timeout=DEFAULT_TIMEOUT)
     expand_flag = 0 if moltype == MoleculeType.PROTEIN else 1
 
-    try:
-        ensembl_lookup_json = client.lookup_id(
-            accession_base,
-            expand=expand_flag
-        )
-    except Http400:
-        return {}
+    ensembl_lookup_json = client.lookup_id(
+        accession_base,
+        expand=expand_flag
+    )
+
 
     return _parse_ensembl(ensembl_lookup_json)
 
@@ -321,7 +319,6 @@ def filter_gene_products(accession_base, related_genes):
                 filtered_transcripts.append(transcript)
 
         gene["transcripts"] = filtered_transcripts
-        # exit()
         filtered_genes.append(gene)
     return filtered_genes
 
@@ -347,7 +344,6 @@ def _get_gene_related(gene_ids):
     return datasets._merge_datasets(parsed_dataset, parsed_product)
 
 
-
 def _parse_genome_annotation_report(genome_annotation_report):
     gene_ids = []
     for report in genome_annotation_report.get("reports", []):
@@ -359,9 +355,8 @@ def _parse_genome_annotation_report(genome_annotation_report):
     if gene_ids:
         taxon_name, related = _get_gene_related(gene_ids)
         return taxon_name, related
-        
+   
     return None, {}
-
 
 
 def _get_related_by_chr_location(accession, locations):
@@ -444,12 +439,11 @@ def _get_related_by_ensembl_id(accession, moltype):
     return related
 
 
-
 def _get_related_by_ncbi_id(accession, moltype, locations):
     related = {}
     accession_base = accession.split(".")[0]
 
-    # Try to get taxon_name and related from ncbi datasets
+    # Get taxon_name and related from ncbi datasets
     if moltype in [MoleculeType.RNA, MoleculeType.PROTEIN]:
         taxon_name, ncbi_related = _get_related_by_accession_from_ncbi(
             accession
@@ -470,7 +464,7 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
             if provider.get("name") == DataSource.ENSEMBL
         ]
         all_genes = []
-        all_assemblies = []        
+        all_assemblies = []      
         for ensembl_gene in ensembl_genes_id:
             ensembl_gene_related = fetch_ensembl_gene_info(ensembl_gene, moltype="dna")
             if not taxon_name:
@@ -495,9 +489,7 @@ def parse_ensembl_id(seq_id):
     # Ensembl declares its identifiers should be in the form of
     # ENS[species prefix][feature type prefix][a unique eleven digit number]
     # See at https://www.ensembl.org/info/genome/stable_ids/index.html  
-    # 
 
-    # have a dict for supported moltype  
     if not seq_id.startswith("ENS"):
         return None, None
     ensembl_feature_map = {
@@ -550,7 +542,7 @@ def parse_ncbi_id(seq_id):
         prefix = match.group(1)
         moltype = refseq_moltype_map.get(prefix, "unknown")
         return DataSource.NCBI, moltype
-    return None, None 
+    return None, None
 
 
 def detect_sequence_source(seq_id):
