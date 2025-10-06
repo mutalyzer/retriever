@@ -446,3 +446,25 @@ def test_ncbi_not_mane_select_protein(accession, mock_ncbi_client, mock_ensembl_
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
+
+
+@pytest.mark.parametrize("accession", ["NP_000000.0"])
+def test_invalid_ncbi_accession(accession, mock_ncbi_client, mock_ensembl_client):
+    assert get_related(accession) == {}
+
+
+@pytest.mark.parametrize("accession", ["ENSG00000000000.0"])
+def test_invalid_ensembl_accession(accession, mock_ncbi_client, mock_ensembl_client):
+    assert get_related(accession) == {}
+
+
+@pytest.mark.parametrize("accession", ["abcde"])
+def test_invalid_gene_symbol(accession, mock_ncbi_client, mock_ensembl_client):
+    with pytest.raises(NameError, value = f"Could not retrieve related for {accession}."):
+        get_related(accession)
+
+
+@pytest.mark.parametrize("accession, locations", [("NC_060935.1", "112097000_112100000_112100000")])
+def test_invalid_chr_range(accession, locations, mock_ncbi_client, mock_ensembl_client):
+    with pytest.raises(NameError, value =f"Invalid range format: '{locations}'. Expected numeric values like '100_200'."):
+        get_related(accession, locations)
