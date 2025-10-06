@@ -85,7 +85,7 @@ def _validate_locations(accession:str, locations):
 
     return valid_locations
 
-def merge_provider(ensembl_provider, ncbi_provider):
+def _merge_provider(ensembl_provider, ncbi_provider):
     if not ncbi_provider:
         return ensembl_provider
     providers = deepcopy(ncbi_provider)
@@ -129,7 +129,7 @@ def _merge_transcripts(ensembl_related, ncbi_gene):
         for ncbi_t in ncbi_transcripts:
             transcript = deepcopy(ncbi_t)
             if len(transcript.get("providers")) > 1 and ncbi_match(ncbi_t, ensembl_accession):
-                transcript["providers"] = merge_provider(ensembl_entry, ncbi_t.get("providers"))
+                transcript["providers"] = _merge_provider(ensembl_entry, ncbi_t.get("providers"))
                 merged.append(transcript)
                 matched = True
                 break
@@ -142,10 +142,6 @@ def _merge_transcripts(ensembl_related, ncbi_gene):
 
 
 def _merge_gene(ensembl_related, ncbi_related):
-    import pprint
-    pprint.pprint(ensembl_related)
-    print()
-    pprint.pprint(ncbi_related)
     # Add checks for empty 
     "Merge two lists of related genes gathered from ensembl and ncbi"
     ensembl_gene_name = ensembl_related.get("name")
@@ -156,22 +152,27 @@ def _merge_gene(ensembl_related, ncbi_related):
     for ncbi_gene in ncbi_related.get("genes", []):
         if ncbi_gene.get("name") == ensembl_gene_name:
             # shape ensembl gene data and merge gene info from two sources
-            gene = deepcopy(ncbi_gene)
-            #gene = []
             ensembl_entry = {"accession": ensembl_gene_accession,
                               "name": DataSource.ENSEMBL}
-            gene["providers"] = merge_provider(ensembl_entry, ncbi_gene.get("providers"))
-            # merge transcripts
-            gene["transcripts"] = _merge_transcripts(ensembl_related, ncbi_gene)
+            gene = {}
+            for key, value in ncbi_gene.items():
+                if key == "providers":
+                    gene["providers"] = _merge_provider(ensembl_entry, ncbi_gene["providers"])              
+                elif key == "transcripts":
+                    gene["transcripts"] = _merge_transcripts(ensembl_related, ncbi_gene)
+                else:
+                    gene[key] = value
             return [gene]
     return []
 
 
 def _merge(ensembl_related, ncbi_related):
-    return {
-        "assemblies": _merge_assemblies(ensembl_related, ncbi_related),
-        "genes": _merge_gene(ensembl_related, ncbi_related),
-    }
+    merged = {}
+    if _merge_assemblies(ensembl_related, ncbi_related):
+        merged["assemblies"] = _merge_assemblies(ensembl_related, ncbi_related)
+    if _merge_gene(ensembl_related, ncbi_related):
+        merged["genes"] = _merge_gene(ensembl_related, ncbi_related)
+    return merged
 
 
 def _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxon_name=HUMAN_TAXON):
@@ -222,17 +223,17 @@ def _parse_ensembl_transcript_lookup_json(ensembl_transcript_json):
     ensembl_gene_id = ensembl_transcript_json.get("Parent")
     client = EnsemblClient(timeout=DEFAULT_TIMEOUT)
     ensembl_gene_json = client.lookup_id(ensembl_gene_id, expand=1)
-    return _parse_ensembl_lookup_json(ensembl_gene_json)
+    return _parse_ensembl(ensembl_gene_json)
 
 
 def _parse_ensembl_protein_lookup_json(ensembl_protein_json):
     ensembl_transcript_id = ensembl_protein_json.get("Parent")
     client = EnsemblClient(timeout=DEFAULT_TIMEOUT)
     ensembl_transcript_json = client.lookup_id(ensembl_transcript_id, expand=1)
-    return _parse_ensembl_lookup_json(ensembl_transcript_json)
+    return _parse_ensembl(ensembl_transcript_json)
 
 
-def _parse_ensembl_lookup_json(ensembl_json):
+def _parse_ensembl(ensembl_json):
     """
     Dispatch parsing based on Ensembl object type.
     """
@@ -244,7 +245,7 @@ def _parse_ensembl_lookup_json(ensembl_json):
     if obj_type == "Translation" and ensembl_json.get("Parent"):
         return _parse_ensembl_protein_lookup_json(ensembl_json)
 
-    raise ValueError(f"Unsupported or malformed Ensembl object: {obj_type}")
+    raise ValueError(f"Unsupported Ensembl object: {obj_type}")
 
 
 
@@ -268,12 +269,15 @@ def fetch_ensembl_gene_info(accession_base, moltype):
     client = EnsemblClient(timeout=DEFAULT_TIMEOUT)
     expand_flag = 0 if moltype == MoleculeType.PROTEIN else 1
 
-    ensembl_lookup_json = client.lookup_id(
-        accession_base,
-        expand=expand_flag
-    )
+    try:
+        ensembl_lookup_json = client.lookup_id(
+            accession_base,
+            expand=expand_flag
+        )
+    except Http400:
+        return {}
 
-    return _parse_ensembl_lookup_json(ensembl_lookup_json)
+    return _parse_ensembl(ensembl_lookup_json)
 
 
 def filter_assemblies(related_assemblies):
@@ -317,6 +321,7 @@ def filter_gene_products(accession_base, related_genes):
                 filtered_transcripts.append(transcript)
 
         gene["transcripts"] = filtered_transcripts
+        # exit()
         filtered_genes.append(gene)
     return filtered_genes
 
@@ -570,7 +575,6 @@ def detect_sequence_source(seq_id):
     return DataSource.OTHER, MoleculeType.UNKNOWN
 
 
-# get rid of timeout
 def get_related(accession, locations=None):
     """
     Retrieve related assembly/gene/transcript/protein information based
