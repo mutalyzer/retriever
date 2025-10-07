@@ -266,6 +266,8 @@ def _parse_ensembl(ensembl_json):
     Dispatch parsing based on Ensembl object type.
     """
     obj_type = ensembl_json.get("object_type")
+    if not obj_type:
+        return {}
     if obj_type == "Gene" and ensembl_json.get("Transcript"):
         return ensembl_gene_lookup._parse_ensembl_gene_lookup_json(
             ensembl_json
@@ -616,9 +618,9 @@ def get_related(accession, locations="0"):
     on accession or gene symbol
     Args:
         accession (str): A sequence accession (e.g., RefSeq, Ensembl ID) or a human gene symbol.
-        locations, optional (str): A point or a range on chromosome, in the format of 
+        locations, optional (str): A point or a range on chromosome, in the format of
             '10000;120000_130000'. Defaults to '0'.
-            
+
     Returns:
         related (dict): A dictionary containing related information retrieved from Ensembl, NCBI,
 

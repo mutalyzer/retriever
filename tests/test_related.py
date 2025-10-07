@@ -9,7 +9,7 @@ from mutalyzer_retriever.request import Http400
 from mutalyzer_retriever.reference import GRCH37
 from mutalyzer_retriever.related_schema import related_schema
 from mutalyzer_retriever.related import  get_related
-from mutalyzer_retriever.util import DataSource
+from mutalyzer_retriever.util import DataSource, HUMAN_TAXON
 
 class MockHttp400(Exception):
     def __init__(self, response):
@@ -71,8 +71,8 @@ def mock_get_assembly_accession(chr):
     }
     return asssembly_map.get(chr)
 
-def mock_lookup_symbol(gene_symbol, taxon_name):
-    return json.loads(_get_content(f"data/EBI_lookup_expand_1_{taxon_name}_{gene_symbol}.json"))
+def mock_lookup_symbol(gene_symbol, taxon_name=HUMAN_TAXON):
+    return json.loads(_get_content(f"data/EBI_lookup_expand_1_{gene_symbol}.json"))
 
 def mock_lookup_id(accession, expand):
     return json.loads(_get_content(f"data/EBI_lookup_expand_{expand}_{accession}.json"))
@@ -114,7 +114,7 @@ def test_ensembl_mane_select_transcript(accession, mock_ncbi_client, mock_ensemb
     A MANE select ENSEMBL transcript, with a NCBI match.
     Expect chr accessions on three assemblies and one set of transcripts
     One is itself, also MANE Select.
-    """    
+    """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
@@ -154,7 +154,7 @@ def test_ensembl_transcript_with_ncbi_match_transcript(accession, mock_ncbi_clie
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
     assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
- 
+
 
 @pytest.mark.parametrize("accession", ["ENSMUST00000000175.6"])
 def test_ensembl_mouse_transcript_with_ncbi_match_accession(accession, mock_ncbi_client, mock_ensembl_client):
@@ -166,7 +166,7 @@ def test_ensembl_mouse_transcript_with_ncbi_match_accession(accession, mock_ncbi
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
     assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
- 
+
 
 @pytest.mark.parametrize("accession", ["ENST00000530923.6"])
 def test_ensembl_non_coding_transcript_with_ncbi_match_accession(accession, mock_ncbi_client, mock_ensembl_client):
@@ -208,7 +208,7 @@ def test_ensembl_gene(accession, mock_ncbi_client, mock_ensembl_client):
 @pytest.mark.parametrize("accession", ["ENSG00000204370.10"])
 def test_ensembl_gene_older_version(accession, mock_ncbi_client, mock_ensembl_client):
     """
-    An ENSEMBL gene of an older version, 
+    An ENSEMBL gene of an older version,
     Expect chr accessions on three assemblies and one set of transcripts:
     One is MANE select from NCBI and ENSEMBL. The same as with the latest version.
     """
@@ -247,9 +247,9 @@ def test_ensembl_mane_select_protein(accession, mock_ncbi_client, mock_ensembl_c
     An ENSEMBL protein ID, MANE Select
     Expect chr accessions on three assemblies and one set of transcripts:
     From NCBI and ENSEMBL
-    """    
+    """
     related = normalize_enums(get_related(accession))
-    assert related_schema.validate(related)    
+    assert related_schema.validate(related)
     assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
 
 
@@ -259,7 +259,7 @@ def test_ensembl_not_mane_select_protein(accession, mock_ncbi_client, mock_ensem
     An ENSEMBL protein ID, non_MANE Select
     Expect chr accessions on three assemblies and two sets of transcripts:
     One is MANE Select from NCBI and ENSEMBL, the other one is itself
-    """    
+    """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
     assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
@@ -280,7 +280,7 @@ def test_ncbi_mane_select_transcript(accession, mock_ncbi_client, mock_ensembl_c
     A MANE select ncbi transcript, with a EBI match.
     Expect chr accessions on three assemblies and one set of transcripts
     One is itself, also MANE Select.
-    """    
+    """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
     assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
@@ -358,7 +358,7 @@ def test_ncbi_one_gene_at_hg38_chr_location(accession, locations, mock_ncbi_clie
     transcripts from NCBI and EBI.
     """
     related = get_related(accession, locations)
-    assert related ==  json.loads(_get_content(f"data/related_{accession}_{locations}.json"))    
+    assert related ==  json.loads(_get_content(f"data/related_{accession}_{locations}.json"))
 
 
 @pytest.mark.parametrize("accession, locations", [
@@ -422,7 +422,7 @@ def test_ncbi_non_coding_transcript_without_ensembl_match_accession(accession, m
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
     assert related ==  json.loads(_get_content(f"data/related_{accession}.json"))
-  
+
 
 @pytest.mark.parametrize("accession", ["NP_002993.1"])
 def test_ncbi_mane_select_protein(accession, mock_ncbi_client, mock_ensembl_client):
@@ -430,11 +430,11 @@ def test_ncbi_mane_select_protein(accession, mock_ncbi_client, mock_ensembl_clie
     An ncbi protein ID, MANE Select
     Expect chr accessions on three assemblies and one set of transcripts:
     From EBI and ncbi
-    """    
+    """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    assert related == json.loads(_get_content(f"data/related_{accession}.json"))   
- 
+    assert related == json.loads(_get_content(f"data/related_{accession}.json"))
+
 
 @pytest.mark.parametrize("accession", ["NP_001263435.1"])
 def test_ncbi_not_mane_select_protein(accession, mock_ncbi_client, mock_ensembl_client):
@@ -442,7 +442,7 @@ def test_ncbi_not_mane_select_protein(accession, mock_ncbi_client, mock_ensembl_
     An ncbi protein ID, non_MANE Select
     Expect chr accessions on three assemblies and two sets of transcripts:
     One is MANE Select from EBI and ncbi, the other one is itself
-    """    
+    """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
     assert related == json.loads(_get_content(f"data/related_{accession}.json"))
@@ -455,16 +455,20 @@ def test_invalid_ncbi_accession(accession, mock_ncbi_client, mock_ensembl_client
 
 @pytest.mark.parametrize("accession", ["ENSG00000000000.0"])
 def test_invalid_ensembl_accession(accession, mock_ncbi_client, mock_ensembl_client):
+    mock_error = Mock()
+    mock_error.response = Mock()
+    mock_error.response = Mock(status_code=400, text="Bad Request")
+
+    mock_ensembl_client.look_id.side_effect = Http400(mock_error)
     assert get_related(accession) == {}
 
 
 @pytest.mark.parametrize("accession", ["abcde"])
 def test_invalid_gene_symbol(accession, mock_ncbi_client, mock_ensembl_client):
-    with pytest.raises(NameError, value = f"Could not retrieve related for {accession}."):
-        get_related(accession)
+    assert get_related(accession) == {}
 
 
 @pytest.mark.parametrize("accession, locations", [("NC_060935.1", "112097000_112100000_112100000")])
 def test_invalid_chr_range(accession, locations, mock_ncbi_client, mock_ensembl_client):
-    with pytest.raises(NameError, value =f"Invalid range format: '{locations}'. Expected numeric values like '100_200'."):
+    with pytest.raises(NameError, match = f"Invalid location format: '{locations}'. Expected format: porint or range 'start_end'."):
         get_related(accession, locations)
