@@ -212,32 +212,28 @@ def _merge_datasets(genomic_related, product_related):
     """
     Merges genomic and product-related from Datasets.
     """
+    if not (product_related and genomic_related) or not genomic_related:
+        return {}
+
     related = {}
-    taxnme = None
-    if genomic_related is None and product_related is None:
-        return None, {}
 
-    if genomic_related:
-        merged_genes = []
-        taxnme = genomic_related.get("taxname")
-        if genomic_related.get("assemblies"):
-            related["assemblies"] = genomic_related.get("assemblies")
+    merged_genes = []
+    if genomic_related.get("assemblies"):
+        related["assemblies"] = genomic_related.get("assemblies")
 
+    for genomic_gene in genomic_related.get("genes", []):
+        symbol = genomic_gene.get("name")
+        for product_gene in product_related.get("genes", []):
+            if symbol == product_gene.get("name"):
+                transcripts = product_gene.get("transcripts")
+                if transcripts:
+                    gene_products = {"transcripts": transcripts}
+                    merged_gene =  genomic_gene | gene_products
+                    merged_genes.append(merged_gene)
+            if merged_genes:
+                related["genes"] = merged_genes
 
-        for genomic_gene in genomic_related.get("genes", []):
-            symbol = genomic_gene.get("name")
-            for product_gene in product_related.get("genes", []):
-                if symbol == product_gene.get("name"):
-                    transcripts = product_gene.get("transcripts")
-                    if transcripts:
-                        gene_products = {"transcripts": transcripts}
+    # Sort genes alphabetically by name
+    related["genes"].sort(key=lambda g: g.get("name", ""))
 
-                        merged_gene =  genomic_gene | gene_products
-                        merged_genes.append(merged_gene)
-                if merged_genes:
-                    related["genes"] = merged_genes
-        # Sort genes alphabetically by name
-        related["genes"].sort(key=lambda g: g.get("name", ""))
-
-        return taxnme, related
-    return None, {}
+    return related

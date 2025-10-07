@@ -79,7 +79,7 @@ def _args_parser():
         default="0",
         help=(
             "location ranges on reference assemblies (used when retrieving related). "
-            "multiple ranges in the format start_end;start_end (e.g. 0_1;100_200)."
+            "multiple ranges or points in the format of point;start_end (e.g. 1;100_200)."
         )
     )
 
