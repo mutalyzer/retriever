@@ -2,10 +2,11 @@
 Module for NCBI Datsets response parsing.
 https://www.ncbi.nlm.nih.gov/datasets/docs/v2/api/rest-api/
 """
-from mutalyzer_retriever.util import DataSource, HUMAN_TAXON
+from mutalyzer_retriever.util import DataSource, HUMAN_TAXON, DEFAULT_TIMEOUT
 from mutalyzer_retriever.reference import GRCH37
+from mutalyzer_retriever.client import NCBIClient
 
-def _parse_assemblies(report):
+def parse_assemblies(report):
     taxon_name = None
     assemblies = []
 
@@ -39,10 +40,10 @@ def _parse_assemblies(report):
     return assemblies
 
 
-def _parse_genes(dataset_report):
+def parse_genes(dataset_report):
     if not dataset_report.get("gene"):
         return {}
-    
+
     gene_entry = {}
 
     gene = dataset_report.get("gene", {})
@@ -67,13 +68,13 @@ def _parse_genes(dataset_report):
                 "name": DataSource.ENSEMBL,
                 "accession": ensembl_ids[0] if ensembl_ids else None,
             }
-        
+
     # get gene information
     hgnc_id_raw = gene.get("nomenclature_authority", {}).get("identifier")
     if hgnc_id_raw and ":" in hgnc_id_raw:
         hgnc_id = hgnc_id_raw.split(":")[1] if "HGNC" in hgnc_id_raw else None
         if hgnc_id:
-            gene_entry["hgnc_id"] = hgnc_id 
+            gene_entry["hgnc_id"] = hgnc_id
     symbol = gene.get("symbol")
     if symbol:
         gene_entry["name"] = symbol
@@ -87,12 +88,12 @@ def _parse_genes(dataset_report):
     return gene_entry
 
 
-def _parse_transcripts(product_report):
+def parse_transcripts(product_report):
     product = product_report.get("product", {})
     gene_products = []
 
     for transcript in product.get("transcripts", []):
-        
+
         # build ncbi transcripts and protein units
         ncbi_transcript_acc = transcript.get("accession_version")
         ncbi_desc = transcript.get("name")
@@ -109,7 +110,7 @@ def _parse_transcripts(product_report):
         if ncbi_protein_acc:
             ncbi_transcript["protein_accession"] = ncbi_protein_acc
 
-        
+
         # build ensembl transcripts and protein units
         ensembl_transcript = {}
         ensembl_acc = transcript.get("ensembl_transcript")
@@ -136,11 +137,11 @@ def _parse_transcripts(product_report):
     return gene_products
 
 
-def empty_reports(reports):
+def _empty_reports(reports):
     if reports.get("reports"):
         return True
 
-def _parse_dataset_report(dataset_report):
+def parse_dataset_report(dataset_report):
     """
     Parses a gene dataset report from the NCBI Datasets API.
 
@@ -153,21 +154,21 @@ def _parse_dataset_report(dataset_report):
             - assemblies (list):
             - genes (list):
     """
-    if not empty_reports(dataset_report):
+    if not _empty_reports(dataset_report):
         return {}
-    
+
     output = {}
     taxname = dataset_report.get("reports")[0].get("taxname")
     if taxname:
-        output["taxname"] = taxname    
+        output["taxname"] = taxname
 
     genes = []
     for report in dataset_report.get("reports", []):
         # Extract genomic assemblies and genes
-        assemblies = _parse_assemblies(report)
+        assemblies = parse_assemblies(report)
         if assemblies:
             output["assemblies"] = assemblies
-        gene = _parse_genes(report)
+        gene = parse_genes(report)
         if gene:
             genes.append(gene)
     if genes:
@@ -176,7 +177,7 @@ def _parse_dataset_report(dataset_report):
     return output
 
 
-def _parse_product_report(product_report):
+def parse_product_report(product_report):
     """
     Parse NCBI product report JSON into a dictionary.
     Args:
@@ -184,18 +185,18 @@ def _parse_product_report(product_report):
     Returns:
         dict: Mapping gene_symbol -> list of transcript info dicts
     """
-    if not empty_reports(product_report):
+    if not _empty_reports(product_report):
         return {}
 
     output = {}
     taxname = product_report.get("reports")[0].get("taxname")
     if taxname:
         output["taxname"] = taxname
-    
+
     genes = []
     for report in product_report.get("reports", []):
         product = {}
-        transcripts = _parse_transcripts(report)
+        transcripts = parse_transcripts(report)
         if transcripts:
             product["transcripts"] = transcripts
 
@@ -208,9 +209,9 @@ def _parse_product_report(product_report):
     return output
 
 
-def _merge_datasets(genomic_related, product_related):
+def merge_datasets(genomic_related, product_related):
     """
-    Merges genomic and product-related from Datasets.
+    Merges genomic and product-related from datasets.
     """
     if not (product_related and genomic_related) or not genomic_related:
         return {}

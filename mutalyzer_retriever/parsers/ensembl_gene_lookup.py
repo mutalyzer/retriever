@@ -5,7 +5,7 @@ https://rest.ensembl.org/lookup/id/ENST00000530458?expand=1;content-type=applica
 from mutalyzer_retriever.util import DataSource
 
 
-def _parse_ensembl_gene_lookup_json(response):
+def parse_ensembl_gene_lookup_json(response):
     transcripts = []
     for transcript in response.get("Transcript", []):
         transcript_id = transcript.get("id")
@@ -28,7 +28,7 @@ def _parse_ensembl_gene_lookup_json(response):
         transcripts.append(t)
 
     gene_symbol = response.get("display_name")
-    taxon_name = response.get("species", "").replace("_", " ").upper()    
+    taxon_name = response.get("species", "").replace("_", " ").upper()
     output = {
         "taxon_name": taxon_name,
         "name":gene_symbol
