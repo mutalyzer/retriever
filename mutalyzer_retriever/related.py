@@ -56,6 +56,7 @@ def _fetch_ncbi_datasets_gene_accession(accession_id, timeout=TimeoutError):
 
 
 def filter_report_from_other_genes(gene_symbol: str, reports: dict):
+    "Return a report matching the given gene symbol from the NCBI reports data."
     # NCBI datasets would return related genes when query by gene name
     # e.g, query with CYP2D6 would get info of CYP2D7
     # https://api.ncbi.nlm.nih.gov/datasets/v2/gene/symbol/CYP2D6D%2CCYP2D6/taxon/9606/product_report
@@ -77,7 +78,7 @@ def _validate_locations(accession: str, locations):
     valid_locations = []
 
     if locations == "0":
-        raise ValueError(f"Unkown location on chromosomes.")
+        raise ValueError(f"Unkown location on {accession}.")
 
     for item in locations.split(";"):
         item = item.strip()
@@ -155,8 +156,9 @@ def ncbi_match(ncbi_data, ensembl_id):
 
 def _merge_assemblies(ensembl_related, ncbi_related):
     "Merge two lists of assemblies gathered from ensembl and ncbi"
-    return ensembl_related.get("assemblies", []) + ncbi_related.get(
-        "assemblies", []
+    return (
+        ensembl_related.get("assemblies", []) +
+        ncbi_related.get("assemblies", [])
     )
 
 
@@ -187,8 +189,9 @@ def _merge_transcripts(ensembl_related, ncbi_gene):
 
         for ncbi_t in ncbi_transcripts:
             transcript = deepcopy(ncbi_t)
-            if len(transcript.get("providers")) > 1 and ncbi_match(
-                ncbi_t, ensembl_accession
+            if (transcript
+                and len(transcript.get("providers"), []) > 1
+                and ncbi_match(ncbi_t, ensembl_accession)
             ):
                 transcript["providers"] = _merge_provider(
                     ensembl_entry, ncbi_t.get("providers")
@@ -197,7 +200,8 @@ def _merge_transcripts(ensembl_related, ncbi_gene):
                 matched = True
                 break
             if (
-                transcript.get("providers")
+                transcript
+                and transcript.get("providers")
                 and len(transcript["providers"]) == 1
                 and ncbi_t not in merged
             ):
@@ -210,7 +214,6 @@ def _merge_transcripts(ensembl_related, ncbi_gene):
 
 
 def _merge_gene(ensembl_related, ncbi_related):
-    # Add checks for empty
     "Merge two lists of related genes gathered from ensembl and ncbi"
     ensembl_gene_name = ensembl_related.get("name")
     ensembl_gene_accession = ensembl_related.get("accession")
