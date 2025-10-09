@@ -107,9 +107,12 @@ def _merge_provider(ensembl_provider, ncbi_provider):
     if not ncbi_provider:
         return ensembl_provider
     providers = deepcopy(ncbi_provider)
-    for i, p in enumerate(ncbi_provider):
-        if p.get("name") == DataSource.ENSEMBL:
-            providers[i] = ensembl_provider
+    if len(providers) > 1:
+        for i, p in enumerate(ncbi_provider):
+            if p.get("name") == DataSource.ENSEMBL:
+                providers[i] = ensembl_provider
+    else:
+        providers.append(ensembl_provider)
     return providers
 
 
@@ -202,7 +205,6 @@ def _merge_gene(ensembl_related, ncbi_related):
     ensembl_gene_accession = ensembl_related.get("accession")
     if not (ensembl_gene_name and ensembl_gene_accession):
         return ncbi_related.get("genes", [])
-
     for ncbi_gene in ncbi_related.get("genes", []):
         if ncbi_gene.get("name") == ensembl_gene_name:
             # shape ensembl gene data and merge gene info from two sources
@@ -229,12 +231,12 @@ def _merge_gene(ensembl_related, ncbi_related):
 def _merge(ensembl_related, ncbi_related):
     """Merge related gathered from two sources"""
     merged = {}
-    if _merge_assemblies(ensembl_related, ncbi_related):
-        merged["assemblies"] = _merge_assemblies(
-            ensembl_related, ncbi_related
-        )
-    if _merge_gene(ensembl_related, ncbi_related):
-        merged["genes"] = _merge_gene(ensembl_related, ncbi_related)
+    merged_assemblies = _merge_assemblies(ensembl_related, ncbi_related)
+    if merged_assemblies:
+        merged["assemblies"] = merged_assemblies
+    merged_genes = _merge_gene(ensembl_related, ncbi_related)
+    if merged_genes:
+        merged["genes"] = merged_genes
     return merged
 
 

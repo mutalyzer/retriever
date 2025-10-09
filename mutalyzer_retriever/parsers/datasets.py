@@ -230,11 +230,14 @@ def merge_datasets(genomic_related, product_related):
                 if transcripts:
                     gene_products = {"transcripts": transcripts}
                     merged_gene =  genomic_gene | gene_products
-                    merged_genes.append(merged_gene)
+                else:
+                    merged_gene = genomic_gene
+                merged_genes.append(merged_gene)
             if merged_genes:
                 related["genes"] = merged_genes
 
     # Sort genes alphabetically by name
-    related["genes"].sort(key=lambda g: g.get("name", ""))
+    if related.get("genes"):
+        related["genes"].sort(key=lambda g: g.get("name", ""))
 
     return related
