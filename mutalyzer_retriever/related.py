@@ -61,7 +61,7 @@ def filter_report_from_other_genes(gene_symbol: str, reports: dict):
     # https://api.ncbi.nlm.nih.gov/datasets/v2/gene/symbol/CYP2D6D%2CCYP2D6/taxon/9606/product_report
     for report in reports.get("reports", {}):
         for key, value in report.items():
-            if value.get("symbol") == gene_symbol.upper():
+            if isinstance(value, dict) and value.get("symbol") == gene_symbol.upper():
                 return {"reports": [{key: value}]}
     return {}
 

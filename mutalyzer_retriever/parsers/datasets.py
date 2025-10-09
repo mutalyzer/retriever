@@ -209,7 +209,7 @@ def merge_datasets(genomic_related, product_related):
     """
     Merges genomic and product-related from datasets.
     """
-    if not (product_related and genomic_related) or not genomic_related:
+    if not product_related or not genomic_related:
         return {}
 
     related = {}
