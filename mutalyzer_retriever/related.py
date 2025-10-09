@@ -55,6 +55,17 @@ def _fetch_ncbi_datasets_gene_accession(accession_id, timeout=TimeoutError):
     return json.loads(request(url=url, timeout=timeout))
 
 
+def filter_report_from_other_genes(gene_symbol: str, reports: dict):
+    # NCBI datasets would return related genes when query by gene name
+    # e.g, query with CYP2D6 would get info of CYP2D7
+    # https://api.ncbi.nlm.nih.gov/datasets/v2/gene/symbol/CYP2D6D%2CCYP2D6/taxon/9606/product_report
+    for report in reports.get("reports", {}):
+        for key, value in report.items():
+            if value.get("symbol") == gene_symbol.upper():
+                return {"reports": [{key: value}]}
+    return {}
+
+
 def _validate_locations(accession: str, locations):
     """
     Check if input locations are in the format of 'start_end' or single points,
@@ -172,7 +183,7 @@ def _merge_transcripts(ensembl_related, ncbi_gene):
         ensembl_accession = ensembl_t.get("transcript_accession")
         matched = False
         # shape ensembl gene data and merge gene info from two sources
-        ensembl_entry = {**ensembl_t, "name": DataSource.ENSEMBL}
+        ensembl_entry = {"name": DataSource.ENSEMBL, **ensembl_t}
 
         for ncbi_t in ncbi_transcripts:
             transcript = deepcopy(ncbi_t)
@@ -209,8 +220,8 @@ def _merge_gene(ensembl_related, ncbi_related):
         if ncbi_gene.get("name") == ensembl_gene_name:
             # shape ensembl gene data and merge gene info from two sources
             ensembl_entry = {
-                "accession": ensembl_gene_accession,
                 "name": DataSource.ENSEMBL,
+                "accession": ensembl_gene_accession,
             }
             gene = {}
             for key, value in ncbi_gene.items():
@@ -255,11 +266,13 @@ def _get_related_by_gene_symbol_from_ncbi(
     dataset_response = client.get_gene_symbol_dataset_report(
         gene_symbol, taxon_name
     )
-    parsed_dataset = datasets.parse_dataset_report(dataset_response)
+    filtered_dataset_response = filter_report_from_other_genes(gene_symbol, dataset_response)
+    parsed_dataset = datasets.parse_dataset_report(filtered_dataset_response)
     product_response = client.get_gene_symbol_product_report(
         gene_symbol, taxon_name
     )
-    parsed_product = datasets.parse_product_report(product_response)
+    filtered_product_response = filter_report_from_other_genes(gene_symbol, product_response)
+    parsed_product = datasets.parse_product_report(filtered_product_response)
     related = datasets.merge_datasets(
         parsed_dataset, parsed_product
     )
