@@ -137,10 +137,6 @@ def parse_transcripts(product_report):
     return gene_products
 
 
-def _empty_reports(reports):
-    if reports.get("reports"):
-        return True
-
 def parse_dataset_report(dataset_report):
     """
     Parses a gene dataset report from the NCBI Datasets API.
@@ -154,7 +150,7 @@ def parse_dataset_report(dataset_report):
             - assemblies (list):
             - genes (list):
     """
-    if not _empty_reports(dataset_report):
+    if not dataset_report.get("reports"):
         return {}
 
     output = {}
@@ -185,7 +181,7 @@ def parse_product_report(product_report):
     Returns:
         dict: Mapping gene_symbol -> list of transcript info dicts
     """
-    if not _empty_reports(product_report):
+    if not product_report.get("reports"):
         return {}
 
     output = {}
