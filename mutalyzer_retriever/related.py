@@ -487,9 +487,8 @@ def _parse_genome_annotation_report(genome_annotation_report):
             expected to contain a list of reports with gene annotations.
 
     Returns:
-        tuple:
-            - taxon_name (str or None): The organism name, if found.
-            - related (dict): Related gene and assembly information. Empty if no gene IDs are found.
+        list:
+            - gene_ids: NCBI gene Ids.
     """
 
     gene_ids = []
