@@ -62,7 +62,7 @@ def filter_report_from_other_genes(gene_symbol: str, reports: dict):
     # https://api.ncbi.nlm.nih.gov/datasets/v2/gene/symbol/CYP2D6D%2CCYP2D6/taxon/9606/product_report
     for report in reports.get("reports", {}):
         for key, value in report.items():
-            if isinstance(value, dict) and value.get("symbol") == gene_symbol.upper():
+            if isinstance(value, dict) and value.get("symbol") in [gene_symbol, gene_symbol.upper()]:
                 return {"reports": [{key: value}]}
     return {}
 
@@ -190,7 +190,7 @@ def _merge_transcripts(ensembl_related, ncbi_gene):
         for ncbi_t in ncbi_transcripts:
             transcript = deepcopy(ncbi_t)
             if (transcript
-                and len(transcript.get("providers"), []) > 1
+                and len(transcript.get("providers",[])) > 1
                 and ncbi_match(ncbi_t, ensembl_accession)
             ):
                 transcript["providers"] = _merge_provider(
@@ -291,6 +291,7 @@ def _get_related_by_gene_symbol_from_ensembl(gene_symbol):
     return ensembl_gene_lookup.parse_ensembl_gene_lookup_json(
         gene_lookup_response
     )
+
 
 def _get_related_by_gene_symbol(gene_symbol):
     """
@@ -497,11 +498,7 @@ def _parse_genome_annotation_report(genome_annotation_report):
         gene_id = annotation.get("gene_id")
         if gene_id is not None:
             gene_ids.append(gene_id)
-    if gene_ids:
-        taxon_name, related = _get_gene_related(gene_ids)
-        return taxon_name, related
-
-    return None, {}
+    return gene_ids
 
 
 def _get_related_by_chr_location(accession, locations):
@@ -535,9 +532,11 @@ def _get_related_by_chr_location(accession, locations):
     annotation_response = client.get_genome_annotation_report(
         assembly_accession, _validate_locations(accession, locations)
     )
-    taxon_name, related = _parse_genome_annotation_report(annotation_response)
-
-    return taxon_name, related
+    gene_ids = _parse_genome_annotation_report(annotation_response)
+    if gene_ids:
+        taxon_name, related = _get_gene_related(gene_ids)
+        return taxon_name, related
+    return None, {}
 
 
 def _get_assembly_accession(accession):
