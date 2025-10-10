@@ -67,35 +67,31 @@ def filter_report_from_other_genes(gene_symbol: str, reports: dict):
     return {}
 
 
-def _validate_locations(accession: str, locations):
+def _convert_locations(accession: str, locations):
     """
     Check if input locations are in the format of 'start_end' or single points,
     and return a normalized string like: accession:start_end;accession:start_end
     """
+    if locations is None:
+        raise ValueError(f"Unkown location on {accession}.")
+
     pattern_range = re.compile(r"^\d+_\d+$")
     pattern_point = re.compile(r"^\d+$")
 
     valid_locations = []
 
-    if locations == "0":
-        raise ValueError(f"Unkown location on {accession}.")
-
     for item in locations.split(";"):
         item = item.strip()
         if pattern_range.match(item):
-            try:
-                raw_start, raw_end = map(int, item.split("_"))
-                start, end = sorted([raw_start, raw_end])
-            except (ValueError, TypeError):
-                raise NameError(
-                    f"Invalid range format: '{item}'. Expected numeric values like '100_200'."
-                )
+            raw_start, raw_end = map(int, item.split("_"))
+            start = min(raw_start, raw_end)
+            end = max(raw_start, raw_end)
         elif pattern_point.match(item):
             start = int(item)
             end = start + 1
         else:
             raise NameError(
-                f"Invalid location format: '{item}'. Expected format: porint or range 'start_end'."
+                f"Invalid location format: '{item}'. Expected format: point or range 'point;start_end'."
             )
 
         valid_locations.append(f"{accession}:{start}-{end}")
@@ -529,7 +525,7 @@ def _get_related_by_chr_location(accession, locations):
 
     client = NCBIClient(timeout=DEFAULT_TIMEOUT)
     annotation_response = client.get_genome_annotation_report(
-        assembly_accession, _validate_locations(accession, locations)
+        assembly_accession, _convert_locations(accession, locations)
     )
     gene_ids = _parse_genome_annotation_report(annotation_response)
     if gene_ids:
@@ -779,11 +775,9 @@ def detect_sequence_source(seq_id):
     Args:
         seq_id (str): The sequence ID string to evaluate.
     Returns: (source: str, moltype: str):
-                source: DataSource.ENSEMBL, DataSource.NCBI, or DataSource.OTHER
-                moltype: MoleculeType.DNA, MoleculeType.RNA, MoleculeType.PROTEIN, MoleculeType.UNKNOWN
+                source: DataSource.ENSEMBL, DataSource.NCBI, or DataSource.OTHER.
+                moltype: MoleculeType.DNA, MoleculeType.RNA, MoleculeType.PROTEIN, MoleculeType.UNKNOWN.
     """
-    seq_id = seq_id.strip()
-
     source, moltype = parse_ensembl_id(seq_id)
     if source:
         return source, moltype
@@ -795,14 +789,14 @@ def detect_sequence_source(seq_id):
     return DataSource.OTHER, MoleculeType.UNKNOWN
 
 
-def get_related(accession, locations="0"):
+def get_related(accession, locations=None):
     """
     Retrieve related assembly/gene/transcript/protein information based
     on accession or gene symbol
     Args:
         accession (str): A sequence accession (e.g., RefSeq, Ensembl ID) or a human gene symbol.
         locations, optional (str): A point or a range on chromosome, in the format of
-            '10000;120000_130000'. Defaults to '0'.
+            '10000;120000_130000'. Defaults to None.
 
     Returns:
         related (dict): A dictionary containing related information retrieved from Ensembl, NCBI,
@@ -810,7 +804,7 @@ def get_related(accession, locations="0"):
     Raises:
         NameError: If the given accession is not from NCBI RefSeq or ENSEMBL.
     """
-    accession = accession.upper()
+    accession = accession.upper().strip()
 
     source, moltype = detect_sequence_source(accession)
     if source == DataSource.ENSEMBL and moltype != MoleculeType.UNKNOWN:

@@ -470,5 +470,5 @@ def test_invalid_gene_symbol(accession, mock_ncbi_client, mock_ensembl_client):
 
 @pytest.mark.parametrize("accession, locations", [("NC_060935.1", "112097000_112100000_112100000")])
 def test_invalid_chr_range(accession, locations, mock_ncbi_client, mock_ensembl_client):
-    with pytest.raises(NameError, match = f"Invalid location format: '{locations}'. Expected format: porint or range 'start_end'."):
+    with pytest.raises(NameError, match = f"Invalid location format: '{locations}'. Expected format: point or range 'point;start_end'."):
         get_related(accession, locations)
