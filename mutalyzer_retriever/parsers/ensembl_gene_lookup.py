@@ -6,36 +6,58 @@ from mutalyzer_retriever.util import DataSource
 
 
 def parse_ensembl_gene_lookup_json(response):
-    transcripts = []
-    for transcript in response.get("Transcript", []):
-        transcript_id = transcript.get("id")
-        transcript_version = transcript.get("version")
+    """
+    Parse response from Ensembl lookup endpoint.
 
-        if not transcript_id or not transcript_version:
-            continue
-        t = {
-                "transcript_accession": f"{transcript_id}.{transcript_version}",
-                "description": transcript.get("display_name"),
-            }
+    Args:
+        response (dict): Response fetched from Ensembl.
 
-        translation = transcript.get("Translation", {})
-        protein_id = translation.get("id")
-        protein_version = translation.get("version")
-        if protein_id and protein_version:
-            protein_accession = f"{protein_id}.{protein_version}"
-            t["protein_accession"] = protein_accession
-
-        transcripts.append(t)
-
+    Returns:
+        output (dict): A dictionary containing parsed information for one Ensembl gene, including:
+            - "taxon_name": Species name, in uppercase.
+            - "name": Gene symbol/name.
+            - "accession": Ensembl gene id if available.
+            - "transcripts": List of Ensembl transcripts with available protein accessions and description.
+                - "trancript_accession": Ensembl transcript id.
+                - "description": Display name of the transcript
+                - "protein_accession": Ensembl protein id.
+    """
+    gene_id = response.get("id")
     gene_symbol = response.get("display_name")
-    taxon_name = response.get("species", "").replace("_", " ").upper()
-    output = {
-        "taxon_name": taxon_name,
-        "name":gene_symbol
-    }
+
+    if not (gene_id and gene_symbol):
+        return {}
+
+    output = {"name": gene_symbol, "accession": gene_id}
+
+    taxon_name = response.get("species")
+    if taxon_name:
+        output["taxon_name"] = taxon_name.replace("_", " ").upper()
+
+    transcripts = []
+    for t in response.get("Transcript", []):
+        t_id = t.get("id")
+        t_version = t.get("version")
+        t_desc = t.get("display_name")
+
+        # Build transcript entry, it accession and description
+        transcript = {}
+        if t_id and t_version:
+            transcript["transcript_accession"] = f"{t_id}.{t_version}"
+        if t_desc:
+            transcript["description"] = t_desc
+
+        # Get protein accession
+        translation = t.get("Translation", {})
+        p_id = translation.get("id")
+        p_version = translation.get("version")
+        if p_id and p_version:
+            transcript["protein_accession"] = f"{p_id}.{p_version}"
+
+        if transcript:
+            transcripts.append(transcript)
+
     if transcripts:
         output["transcripts"] = transcripts
-    gene_id = response.get("id")
-    if gene_id:
-        output["accession"] = gene_id
+
     return output
