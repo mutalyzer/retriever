@@ -2,9 +2,9 @@
 Module for NCBI Datsets response parsing.
 https://www.ncbi.nlm.nih.gov/datasets/docs/v2/api/rest-api/
 """
-from mutalyzer_retriever.util import DataSource, HUMAN_TAXON, DEFAULT_TIMEOUT
 from mutalyzer_retriever.reference import GRCH37
-from mutalyzer_retriever.client import NCBIClient
+from mutalyzer_retriever.util import HUMAN_TAXON, DataSource
+
 
 def parse_assemblies(dataset_report):
     """

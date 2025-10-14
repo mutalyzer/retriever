@@ -1,18 +1,19 @@
 import json
 import re
-import requests
 from copy import deepcopy
+
+import requests
+
+from mutalyzer_retriever.client import EnsemblClient, NCBIClient
+from mutalyzer_retriever.configuration import cache_url
+from mutalyzer_retriever.parsers import datasets, ensembl_gene_lookup
+from mutalyzer_retriever.request import request
 from mutalyzer_retriever.util import (
+    DEFAULT_TIMEOUT,
+    HUMAN_TAXON,
     DataSource,
     MoleculeType,
-    HUMAN_TAXON,
-    DEFAULT_TIMEOUT,
 )
-from mutalyzer_retriever.configuration import cache_url, settings
-from mutalyzer_retriever.request import Http400, request
-from mutalyzer_retriever.reference import GRCH37
-from mutalyzer_retriever.client import NCBIClient, EnsemblClient
-from mutalyzer_retriever.parsers import datasets, ensembl_gene_lookup
 
 
 def get_cds_to_mrna(cds_id, timeout=DEFAULT_TIMEOUT):
@@ -21,7 +22,7 @@ def get_cds_to_mrna(cds_id, timeout=DEFAULT_TIMEOUT):
         if api_url:
             url = api_url + "/cds_to_mrna/" + cds_id
             try:
-                annotations = json.loads(requests.get(url).text)
+                annotations = json.loads(requests.get(url, timeout=timeout).text)
             except Exception:
                 return
             if annotations.get("mrna_id"):
