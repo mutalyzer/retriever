@@ -351,50 +351,78 @@ def write_annotations_releases(metadata, directory="./ncbi_annotation_releases")
 
 
 def get_annotation_models(metadata, ref_id_start=None):
-
     print("\nParse and extract the annotation models:")
     out = {}
+
     for assembly in metadata:
         print(f"- assembly: {assembly}")
         models = {}
         assemblies = []
-        ref_ids = []
+        processed_ref_ids = set()
+
         for freeze_date_id in sorted(metadata[assembly]):
             print(f"  - freeze date: {freeze_date_id}")
             assembly_details = _report_info(metadata[assembly][freeze_date_id]["xml"])
             assemblies.append(assembly_details)
-            with gzip.GzipFile(
-                fileobj=BytesIO(metadata[assembly][freeze_date_id]["gff3"]), mode="rb"
-            ) as f:
-                current_id = ""
-                current_content = ""
-                extras = ""
-                for line in f:
-                    s_line = line.decode()
-                    if s_line.startswith("#!"):
-                        extras += s_line
-                    elif s_line.startswith("##sequence-region"):
-                        if current_id and (ref_id_start is None or current_id.startswith(ref_id_start)):
-                            print(f"   - parsing reference id: {current_id}")
-                            current_model = parse(current_content, "gff3")
-                            current_model["qualifiers"]["annotations"] = assembly_details
-                            if current_id not in models:
-                                models[current_id] = current_model
-                            else:
-                                print(f"   - merging: {current_id}")
-                                _merge(current_model, models[current_id])
-                                models[current_id] = current_model
-                            ref_ids.append(current_id)
-                        current_id = s_line.split(" ")[1]
-                        current_content = f"##gff-version 3\n{extras}{s_line}"
-                    elif s_line.startswith("##species") or s_line.startswith(
-                        current_id
-                    ):
-                        current_content += s_line
-        for ref_id in ref_ids:
+
+            gff3_data = metadata[assembly][freeze_date_id]["gff3"]
+            _process_gff3_file(gff3_data, models, assembly_details, ref_id_start, processed_ref_ids)
+
+        # Update all models with complete assembly list
+        for ref_id in processed_ref_ids:
             models[ref_id]["qualifiers"]["annotations"] = assemblies
+
         out[assembly] = models
+
     return out
+
+
+def _process_gff3_file(gff3_data, models, assembly_details, ref_id_start, processed_ref_ids):
+    """Process a GFF3 file and update models dictionary."""
+    with gzip.open(BytesIO(gff3_data), 'rt') as f:
+        current_id = ""
+        current_content = ""
+        header_lines = ""
+
+        for line in f:
+            if line.startswith("#!"):
+                header_lines += line
+            elif line.startswith("##sequence-region"):
+                _finalize_current_model(
+                    current_id, current_content, models, assembly_details, ref_id_start, processed_ref_ids
+                )
+
+                current_id = line.split()[1]
+                current_content = f"##gff-version 3\n{header_lines}{line}"
+            elif line.startswith("##species") or line.startswith(current_id):
+                current_content += line
+
+        # Process final entry
+        _finalize_current_model(
+            current_id, current_content, models, assembly_details, ref_id_start, processed_ref_ids
+        )
+
+
+def _finalize_current_model(ref_id, content, models, assembly_details, ref_id_start, processed_ref_ids):
+    """Finalize and store the current model if it should be processed."""
+    if _should_process(ref_id, ref_id_start):
+        return
+
+    print(f"   - parsing reference id: {ref_id}")
+    current_model = parse(content, "gff3")
+    current_model["qualifiers"]["annotations"] = assembly_details
+
+    if ref_id in models:
+        print(f"   - merging: {ref_id}")
+        _merge(current_model, models[ref_id])
+
+    models[ref_id] = current_model
+    processed_ref_ids.add(ref_id)
+
+
+def _should_process(ref_id, ref_id_start):
+    """Check if a reference ID should be processed based on the filter."""
+    return not ref_id or not (ref_id_start is None or ref_id.startswith(ref_id_start))
 
 
 def annotations_summary(models_directory, ref_id_start=None):
