@@ -1,0 +1,267 @@
+{
+  "reports": [
+    {
+      "gene": {
+        "gene_id": "1105",
+        "symbol": "CHD1",
+        "description": "chromodomain helicase DNA binding protein 1",
+        "tax_id": "9606",
+        "taxname": "Homo sapiens",
+        "common_name": "human",
+        "type": "PROTEIN_CODING",
+        "orientation": "minus",
+        "chromosomes": [
+          "5"
+        ],
+        "nomenclature_authority": {
+          "authority": "HGNC",
+          "identifier": "HGNC:1915"
+        },
+        "swiss_prot_accessions": [
+          "O14646"
+        ],
+        "ensembl_gene_ids": [
+          "ENSG00000153922"
+        ],
+        "omim_ids": [
+          "602118"
+        ],
+        "synonyms": [
+          "CHD-1",
+          "PILBOS"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_000001405.40",
+            "assembly_name": "GRCh38.p14",
+            "annotation_name": "GCF_000001405.40-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000005.10",
+                "sequence_name": "5",
+                "genomic_range": {
+                  "begin": "98853985",
+                  "end": "98929007",
+                  "orientation": "minus"
+                }
+              }
+            ]
+          },
+          {
+            "assembly_accession": "GCF_009914755.1",
+            "assembly_name": "T2T-CHM13v2.0",
+            "annotation_name": "GCF_009914755.1-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060929.1",
+                "sequence_name": "5",
+                "genomic_range": {
+                  "begin": "99357270",
+                  "end": "99432327",
+                  "orientation": "minus"
+                }
+              }
+            ]
+          }
+        ],
+        "transcript_count": 17,
+        "protein_count": 15,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 3
+          },
+          {
+            "type": "NON_CODING",
+            "count": 2
+          },
+          {
+            "type": "PROTEIN_CODING_MODEL",
+            "count": 12
+          }
+        ],
+        "gene_groups": [
+          {
+            "id": "1105",
+            "method": "NCBI Ortholog"
+          }
+        ],
+        "summary": [
+          {
+            "description": "The CHD family of proteins is characterized by the presence of chromo (chromatin organization modifier) domains and SNF2-related helicase/ATPase domains.  CHD genes alter gene expression possibly by modification of chromatin structure thus altering access of the transcriptional apparatus to its chromosomal DNA template. [provided by RefSeq, Jul 2008]"
+          }
+        ],
+        "gene_ontology": {
+          "molecular_functions": [
+            {
+              "name": "ATP binding",
+              "go_id": "GO:0005524",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "ATP hydrolysis activity",
+              "go_id": "GO:0016887",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "ATP hydrolysis activity",
+              "go_id": "GO:0016887",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "ATP-dependent chromatin remodeler activity",
+              "go_id": "GO:0140658",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "DNA binding",
+              "go_id": "GO:0003677",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "DNA binding",
+              "go_id": "GO:0003677",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "chromatin binding",
+              "go_id": "GO:0003682",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "histone H3K4me3 reader activity",
+              "go_id": "GO:0140002",
+              "evidence_code": "IDA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "histone binding",
+              "go_id": "GO:0042393",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "hydrolase activity",
+              "go_id": "GO:0016787",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "nucleotide binding",
+              "go_id": "GO:0000166",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "protein binding",
+              "go_id": "GO:0005515",
+              "evidence_code": "IPI",
+              "qualifier": "enables"
+            }
+          ],
+          "biological_processes": [
+            {
+              "name": "chromatin organization",
+              "go_id": "GO:0006325",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "chromatin remodeling",
+              "go_id": "GO:0006338",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "chromatin remodeling",
+              "go_id": "GO:0006338",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "chromatin remodeling",
+              "go_id": "GO:0006338",
+              "evidence_code": "IMP",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "host-mediated activation of viral transcription",
+              "go_id": "GO:0043923",
+              "evidence_code": "IMP",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "nucleosome organization",
+              "go_id": "GO:0034728",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            }
+          ],
+          "cellular_components": [
+            {
+              "name": "chromatin",
+              "go_id": "GO:0000785",
+              "evidence_code": "IBA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "cytoplasm",
+              "go_id": "GO:0005737",
+              "evidence_code": "IDA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "cytoplasm",
+              "go_id": "GO:0005737",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "nuclear chromosome",
+              "go_id": "GO:0000228",
+              "evidence_code": "IDA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "nucleoplasm",
+              "go_id": "GO:0005654",
+              "evidence_code": "TAS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "nucleus",
+              "go_id": "GO:0005634",
+              "evidence_code": "IBA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "nucleus",
+              "go_id": "GO:0005634",
+              "evidence_code": "IDA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "nucleus",
+              "go_id": "GO:0005634",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            }
+          ]
+        }
+      },
+      "query": [
+        "CHD1"
+      ]
+    }
+  ],
+  "total_count": 1
+}

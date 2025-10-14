@@ -11,6 +11,7 @@ DEFAULT_SETTINGS = {
     "ENSEMBL_API": "https://rest.ensembl.org",
     "ENSEMBL_API_GRCH37": "https://grch37.rest.ensembl.org",
     "ENSEMBL_TARK_API":"https://tark.ensembl.org/api",
+    "NCBI_DATASETS_API":"https://api.ncbi.nlm.nih.gov/datasets/v2"
 }
 
 

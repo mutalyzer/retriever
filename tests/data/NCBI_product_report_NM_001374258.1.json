@@ -1,0 +1,5231 @@
+{
+  "reports": [
+    {
+      "product": {
+        "gene_id": "673",
+        "symbol": "BRAF",
+        "description": "B-Raf proto-oncogene, serine/threonine kinase",
+        "tax_id": "9606",
+        "taxname": "Homo sapiens",
+        "common_name": "human",
+        "type": "PROTEIN_CODING",
+        "transcripts": [
+          {
+            "accession_version": "NM_001354609.2",
+            "name": "transcript variant 2",
+            "length": 9687,
+            "cds": {
+              "accession_version": "NM_001354609.2",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2530",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140719337",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140734617",
+                    "end": "140734770",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "140719337",
+                    "end": "140726516",
+                    "orientation": "minus",
+                    "order": 19
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142033514",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142048795",
+                    "end": "142048948",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "142033514",
+                    "end": "142040693",
+                    "orientation": "minus",
+                    "order": 19
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000496384.7",
+            "protein": {
+              "accession_version": "NP_001341538.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 767,
+              "isoform_name": "isoform 2",
+              "ensembl_protein": "ENSP00000419060.2"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001374244.1",
+            "name": "transcript variant 4",
+            "length": 6579,
+            "cds": {
+              "accession_version": "NM_001374244.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2647",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140730665",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140785689",
+                    "end": "140785808",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "140730665",
+                    "end": "140734770",
+                    "orientation": "minus",
+                    "order": 19
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142044842",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142099870",
+                    "end": "142099989",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "142044842",
+                    "end": "142048948",
+                    "orientation": "minus",
+                    "order": 19
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000288602.11",
+            "protein": {
+              "accession_version": "NP_001361173.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 806,
+              "isoform_name": "isoform 3",
+              "ensembl_protein": "ENSP00000288602.7"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001374258.1",
+            "name": "transcript variant 5",
+            "length": 9807,
+            "cds": {
+              "accession_version": "NM_001374258.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2650",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140719337",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140785689",
+                    "end": "140785808",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "140734617",
+                    "end": "140734770",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "140719337",
+                    "end": "140726516",
+                    "orientation": "minus",
+                    "order": 20
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142033514",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142099870",
+                    "end": "142099989",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "142048795",
+                    "end": "142048948",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "142033514",
+                    "end": "142040693",
+                    "orientation": "minus",
+                    "order": 20
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000644969.2",
+            "protein": {
+              "accession_version": "NP_001361187.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 807,
+              "isoform_name": "isoform 4",
+              "ensembl_protein": "ENSP00000496776.1"
+            },
+            "type": "PROTEIN_CODING",
+            "select_category": "MANE_PLUS_CLINICAL"
+          },
+          {
+            "accession_version": "NM_001378467.1",
+            "name": "transcript variant 6",
+            "length": 9696,
+            "cds": {
+              "accession_version": "NM_001378467.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2539",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140719337",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808883",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140734617",
+                    "end": "140734770",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "140719337",
+                    "end": "140726516",
+                    "orientation": "minus",
+                    "order": 19
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142033514",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123076",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142048795",
+                    "end": "142048948",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "142033514",
+                    "end": "142040693",
+                    "orientation": "minus",
+                    "order": 19
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001365396.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 770,
+              "isoform_name": "isoform 5"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001378468.1",
+            "name": "transcript variant 7",
+            "length": 9533,
+            "cds": {
+              "accession_version": "NM_001378468.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2503",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140719337",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140719337",
+                    "end": "140726516",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142033514",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142033514",
+                    "end": "142040693",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001365397.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 758,
+              "isoform_name": "isoform 6"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001378469.1",
+            "name": "transcript variant 8",
+            "length": 6393,
+            "cds": {
+              "accession_version": "NM_001378469.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2461",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140730665",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783091",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140730665",
+                    "end": "140734770",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142044842",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097272",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142044842",
+                    "end": "142048948",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000912601.1",
+            "protein": {
+              "accession_version": "NP_001365398.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 744,
+              "isoform_name": "isoform 7",
+              "ensembl_protein": "ENSP00000582660.1"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001378470.1",
+            "name": "transcript variant 9",
+            "length": 9585,
+            "cds": {
+              "accession_version": "NM_001378470.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2428",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140719337",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140734617",
+                    "end": "140734770",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140719337",
+                    "end": "140726516",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142033514",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142048795",
+                    "end": "142048948",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142033514",
+                    "end": "142040693",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001365399.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 733,
+              "isoform_name": "isoform 8"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001378471.1",
+            "name": "transcript variant 10",
+            "length": 9576,
+            "cds": {
+              "accession_version": "NM_001378471.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2419",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140719337",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783083",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140734617",
+                    "end": "140734770",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140719337",
+                    "end": "140726516",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142033514",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097264",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142048795",
+                    "end": "142048948",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142033514",
+                    "end": "142040693",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001365400.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 730,
+              "isoform_name": "isoform 9"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001378472.1",
+            "name": "transcript variant 11",
+            "length": 9406,
+            "cds": {
+              "accession_version": "NM_001378472.1",
+              "range": [
+                {
+                  "begin": "102",
+                  "end": "2249",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140719337",
+                  "end": "140924268",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924186",
+                    "end": "140924268",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140734617",
+                    "end": "140734770",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "140719337",
+                    "end": "140726516",
+                    "orientation": "minus",
+                    "order": 19
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142033514",
+                  "end": "142238470",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238388",
+                    "end": "142238470",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142048795",
+                    "end": "142048948",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "142033514",
+                    "end": "142040693",
+                    "orientation": "minus",
+                    "order": 19
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001365401.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 715,
+              "isoform_name": "isoform 10"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001378473.1",
+            "name": "transcript variant 12",
+            "length": 6178,
+            "cds": {
+              "accession_version": "NM_001378473.1",
+              "range": [
+                {
+                  "begin": "102",
+                  "end": "2246",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140730665",
+                  "end": "140924268",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924186",
+                    "end": "140924268",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140730665",
+                    "end": "140734770",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142044842",
+                  "end": "142238470",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238388",
+                    "end": "142238470",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142044842",
+                    "end": "142048948",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001365402.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 714,
+              "isoform_name": "isoform 11"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001378474.1",
+            "name": "transcript variant 13",
+            "length": 5062,
+            "cds": {
+              "accession_version": "NM_001378474.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2362",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140713328",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140713328",
+                    "end": "140716036",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142027505",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142027505",
+                    "end": "142030213",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001365403.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 711,
+              "isoform_name": "isoform 12"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_001378475.1",
+            "name": "transcript variant 14",
+            "length": 9423,
+            "cds": {
+              "accession_version": "NM_001378475.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2266",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140719337",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140734617",
+                    "end": "140734770",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140719337",
+                    "end": "140726516",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142033514",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142048795",
+                    "end": "142048948",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142033514",
+                    "end": "142040693",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "NP_001365404.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 679,
+              "isoform_name": "isoform 13"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "NM_004333.6",
+            "name": "transcript variant 1",
+            "length": 6459,
+            "cds": {
+              "accession_version": "NM_004333.6",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2527",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140730665",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140730665",
+                    "end": "140734770",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              },
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142044842",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142044842",
+                    "end": "142048948",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000646891.2",
+            "protein": {
+              "accession_version": "NP_004324.2",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 766,
+              "isoform_name": "isoform 1",
+              "ensembl_protein": "ENSP00000493543.1"
+            },
+            "type": "PROTEIN_CODING",
+            "select_category": "MANE_SELECT"
+          },
+          {
+            "accession_version": "XM_017012559.2",
+            "name": "transcript variant X1",
+            "length": 9653,
+            "cds": {
+              "accession_version": "XM_017012559.2",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2623",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140719337",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140785689",
+                    "end": "140785808",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "140719337",
+                    "end": "140726516",
+                    "orientation": "minus",
+                    "order": 19
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_016868048.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 798,
+              "isoform_name": "isoform X1"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_047420766.1",
+            "name": "transcript variant X2",
+            "length": 9526,
+            "cds": {
+              "accession_version": "XM_047420766.1",
+              "range": [
+                {
+                  "begin": "102",
+                  "end": "2369",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140719337",
+                  "end": "140924268",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924186",
+                    "end": "140924268",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140785689",
+                    "end": "140785808",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "140734617",
+                    "end": "140734770",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "140719337",
+                    "end": "140726516",
+                    "orientation": "minus",
+                    "order": 20
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_047276722.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 755,
+              "isoform_name": "isoform X2"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_047420767.1",
+            "name": "transcript variant X3",
+            "length": 2555,
+            "cds": {
+              "accession_version": "XM_047420767.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2371",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140739812",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140785689",
+                    "end": "140785808",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140747366",
+                    "end": "140747447",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 19
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000944245.1",
+            "protein": {
+              "accession_version": "XP_047276723.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 714,
+              "isoform_name": "isoform X3",
+              "ensembl_protein": "ENSP00000614304.1"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_047420768.1",
+            "name": "transcript variant X4",
+            "length": 2243,
+            "cds": {
+              "accession_version": "XM_047420768.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2128",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140747377",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140785689",
+                    "end": "140785808",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140747377",
+                    "end": "140747447",
+                    "orientation": "minus",
+                    "order": 16
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_047276724.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 633,
+              "isoform_name": "isoform X4"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_047420769.1",
+            "name": "transcript variant X5",
+            "length": 2120,
+            "cds": {
+              "accession_version": "XM_047420769.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2008",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140747380",
+                  "end": "140924929",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140924566",
+                    "end": "140924929",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140850111",
+                    "end": "140850212",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140834609",
+                    "end": "140834872",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140808892",
+                    "end": "140808995",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140747380",
+                    "end": "140747447",
+                    "orientation": "minus",
+                    "order": 15
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENST00000646730.1",
+            "protein": {
+              "accession_version": "XP_047276725.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 593,
+              "isoform_name": "isoform X5",
+              "ensembl_protein": "ENSP00000494784.1"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_047420770.1",
+            "name": "transcript variant X6",
+            "length": 9145,
+            "cds": {
+              "accession_version": "XM_047420770.1",
+              "range": [
+                {
+                  "begin": "399",
+                  "end": "1988",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "Chromosome 7 Reference GRCh38.p14 Primary Assembly",
+                "genomic_range": {
+                  "begin": "140719337",
+                  "end": "140808983",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "140808892",
+                    "end": "140808983",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "140808237",
+                    "end": "140808316",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "140807960",
+                    "end": "140808062",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "140801412",
+                    "end": "140801560",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "140800362",
+                    "end": "140800481",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "140794308",
+                    "end": "140794467",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "140787548",
+                    "end": "140787584",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "140785689",
+                    "end": "140785808",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "140783021",
+                    "end": "140783157",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "140781576",
+                    "end": "140781693",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "140777991",
+                    "end": "140778075",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "140776912",
+                    "end": "140777088",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "140754187",
+                    "end": "140754233",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "140753275",
+                    "end": "140753393",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "140749287",
+                    "end": "140749418",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "140739812",
+                    "end": "140739946",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "140734617",
+                    "end": "140734770",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "140719337",
+                    "end": "140726516",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_047276726.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 529,
+              "isoform_name": "isoform X6"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054358874.1",
+            "name": "transcript variant X1",
+            "length": 9653,
+            "cds": {
+              "accession_version": "XM_054358874.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2623",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142033514",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142099870",
+                    "end": "142099989",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "142033514",
+                    "end": "142040693",
+                    "orientation": "minus",
+                    "order": 19
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054214849.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 798,
+              "isoform_name": "isoform X1"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054358875.1",
+            "name": "transcript variant X2",
+            "length": 9526,
+            "cds": {
+              "accession_version": "XM_054358875.1",
+              "range": [
+                {
+                  "begin": "102",
+                  "end": "2369",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142033514",
+                  "end": "142238470",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238388",
+                    "end": "142238470",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142099870",
+                    "end": "142099989",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "142048795",
+                    "end": "142048948",
+                    "orientation": "minus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "142033514",
+                    "end": "142040693",
+                    "orientation": "minus",
+                    "order": 20
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054214850.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 755,
+              "isoform_name": "isoform X2"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054358876.1",
+            "name": "transcript variant X3",
+            "length": 2555,
+            "cds": {
+              "accession_version": "XM_054358876.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2371",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142053991",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142099870",
+                    "end": "142099989",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142061545",
+                    "end": "142061626",
+                    "orientation": "minus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 19
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054214851.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 714,
+              "isoform_name": "isoform X3"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054358877.1",
+            "name": "transcript variant X4",
+            "length": 2243,
+            "cds": {
+              "accession_version": "XM_054358877.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2128",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142061556",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142099870",
+                    "end": "142099989",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142061556",
+                    "end": "142061626",
+                    "orientation": "minus",
+                    "order": 16
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054214852.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 633,
+              "isoform_name": "isoform X4"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054358878.1",
+            "name": "transcript variant X5",
+            "length": 2120,
+            "cds": {
+              "accession_version": "XM_054358878.1",
+              "range": [
+                {
+                  "begin": "227",
+                  "end": "2008",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142061559",
+                  "end": "142239131",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142238768",
+                    "end": "142239131",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142164303",
+                    "end": "142164404",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142148801",
+                    "end": "142149064",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142123085",
+                    "end": "142123188",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142061559",
+                    "end": "142061626",
+                    "orientation": "minus",
+                    "order": 15
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054214853.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 593,
+              "isoform_name": "isoform X5"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          },
+          {
+            "accession_version": "XM_054358879.1",
+            "name": "transcript variant X6",
+            "length": 9145,
+            "cds": {
+              "accession_version": "XM_054358879.1",
+              "range": [
+                {
+                  "begin": "399",
+                  "end": "1988",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "Chromosome 7 Alternate T2T-CHM13v2.0",
+                "genomic_range": {
+                  "begin": "142033514",
+                  "end": "142123176",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "142123085",
+                    "end": "142123176",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "142122430",
+                    "end": "142122509",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "142122153",
+                    "end": "142122255",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "142115605",
+                    "end": "142115753",
+                    "orientation": "minus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "142114555",
+                    "end": "142114674",
+                    "orientation": "minus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "142108489",
+                    "end": "142108648",
+                    "orientation": "minus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "142101729",
+                    "end": "142101765",
+                    "orientation": "minus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "142099870",
+                    "end": "142099989",
+                    "orientation": "minus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "142097202",
+                    "end": "142097338",
+                    "orientation": "minus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "142095757",
+                    "end": "142095874",
+                    "orientation": "minus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "142092172",
+                    "end": "142092256",
+                    "orientation": "minus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "142091093",
+                    "end": "142091269",
+                    "orientation": "minus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "142068366",
+                    "end": "142068412",
+                    "orientation": "minus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "142067454",
+                    "end": "142067572",
+                    "orientation": "minus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "142063466",
+                    "end": "142063597",
+                    "orientation": "minus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "142053991",
+                    "end": "142054125",
+                    "orientation": "minus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "142048795",
+                    "end": "142048948",
+                    "orientation": "minus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "142033514",
+                    "end": "142040693",
+                    "orientation": "minus",
+                    "order": 18
+                  }
+                ]
+              }
+            ],
+            "protein": {
+              "accession_version": "XP_054214854.1",
+              "name": "serine/threonine-protein kinase B-raf",
+              "length": 529,
+              "isoform_name": "isoform X6"
+            },
+            "type": "PROTEIN_CODING_MODEL"
+          }
+        ],
+        "transcript_count": 25,
+        "protein_count": 25,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 13
+          },
+          {
+            "type": "PROTEIN_CODING_MODEL",
+            "count": 12
+          }
+        ]
+      },
+      "query": [
+        "NM_001374258"
+      ]
+    }
+  ],
+  "total_count": 1
+}

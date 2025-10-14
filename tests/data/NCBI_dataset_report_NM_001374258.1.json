@@ -1,0 +1,666 @@
+{
+  "reports": [
+    {
+      "gene": {
+        "gene_id": "673",
+        "symbol": "BRAF",
+        "description": "B-Raf proto-oncogene, serine/threonine kinase",
+        "tax_id": "9606",
+        "taxname": "Homo sapiens",
+        "common_name": "human",
+        "type": "PROTEIN_CODING",
+        "orientation": "minus",
+        "reference_standards": [
+          {
+            "gene_range": {
+              "accession_version": "NG_007873.3",
+              "range": [
+                {
+                  "begin": "5001",
+                  "end": "195753",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "type": "REFSEQ_GENE"
+          }
+        ],
+        "chromosomes": [
+          "7"
+        ],
+        "nomenclature_authority": {
+          "authority": "HGNC",
+          "identifier": "HGNC:1097"
+        },
+        "swiss_prot_accessions": [
+          "P15056"
+        ],
+        "ensembl_gene_ids": [
+          "ENSG00000157764"
+        ],
+        "omim_ids": [
+          "164757"
+        ],
+        "synonyms": [
+          "NS7",
+          "B-raf",
+          "BRAF1",
+          "RAFB1",
+          "B-RAF1",
+          "BRAF-1"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_000001405.40",
+            "assembly_name": "GRCh38.p14",
+            "annotation_name": "GCF_000001405.40-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000007.14",
+                "sequence_name": "7",
+                "genomic_range": {
+                  "begin": "140713328",
+                  "end": "140924929",
+                  "orientation": "minus"
+                }
+              }
+            ]
+          },
+          {
+            "assembly_accession": "GCF_009914755.1",
+            "assembly_name": "T2T-CHM13v2.0",
+            "annotation_name": "GCF_009914755.1-RS_2025_08",
+            "annotation_release_date": "2025-08-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_060931.1",
+                "sequence_name": "7",
+                "genomic_range": {
+                  "begin": "142027505",
+                  "end": "142239131",
+                  "orientation": "minus"
+                }
+              }
+            ]
+          }
+        ],
+        "transcript_count": 25,
+        "protein_count": 25,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 13
+          },
+          {
+            "type": "PROTEIN_CODING_MODEL",
+            "count": 12
+          }
+        ],
+        "gene_groups": [
+          {
+            "id": "673",
+            "method": "NCBI Ortholog"
+          }
+        ],
+        "summary": [
+          {
+            "description": "This gene encodes a protein belonging to the RAF family of serine/threonine protein kinases. This protein plays a role in regulating the MAP kinase/ERK signaling pathway, which affects cell division, differentiation, and secretion. Mutations in this gene, most commonly the V600E mutation, are the most frequently identified cancer-causing mutations in melanoma, and have been identified in various other cancers as well, including non-Hodgkin lymphoma, colorectal cancer, thyroid carcinoma, non-small cell lung carcinoma, hairy cell leukemia and adenocarcinoma of lung. Mutations in this gene are also associated with cardiofaciocutaneous, Noonan, and Costello syndromes, which exhibit overlapping phenotypes. A pseudogene of this gene has been identified on the X chromosome. [provided by RefSeq, Aug 2017]"
+          }
+        ],
+        "gene_ontology": {
+          "molecular_functions": [
+            {
+              "name": "ATP binding",
+              "go_id": "GO:0005524",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "MAP kinase kinase activity",
+              "go_id": "GO:0004708",
+              "evidence_code": "IMP",
+              "qualifier": "enables"
+            },
+            {
+              "name": "MAP kinase kinase kinase activity",
+              "go_id": "GO:0004709",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "calcium ion binding",
+              "go_id": "GO:0005509",
+              "evidence_code": "IDA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "catalytic activity",
+              "go_id": "GO:0003824",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "identical protein binding",
+              "go_id": "GO:0042802",
+              "evidence_code": "IPI",
+              "qualifier": "enables"
+            },
+            {
+              "name": "kinase activity",
+              "go_id": "GO:0016301",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "metal ion binding",
+              "go_id": "GO:0046872",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "nucleotide binding",
+              "go_id": "GO:0000166",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "protein binding",
+              "go_id": "GO:0005515",
+              "evidence_code": "IPI",
+              "qualifier": "enables"
+            },
+            {
+              "name": "protein kinase activity",
+              "go_id": "GO:0004672",
+              "evidence_code": "IDA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "protein kinase activity",
+              "go_id": "GO:0004672",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "protein kinase activity",
+              "go_id": "GO:0004672",
+              "evidence_code": "TAS",
+              "qualifier": "enables"
+            },
+            {
+              "name": "protein serine kinase activity",
+              "go_id": "GO:0106310",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "protein serine/threonine kinase activity",
+              "go_id": "GO:0004674",
+              "evidence_code": "IDA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "protein serine/threonine kinase activity",
+              "go_id": "GO:0004674",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "scaffold protein binding",
+              "go_id": "GO:0097110",
+              "evidence_code": "IPI",
+              "qualifier": "enables"
+            },
+            {
+              "name": "small GTPase binding",
+              "go_id": "GO:0031267",
+              "evidence_code": "IPI",
+              "qualifier": "NOT enables"
+            },
+            {
+              "name": "transferase activity",
+              "go_id": "GO:0016740",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "zinc ion binding",
+              "go_id": "GO:0008270",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            }
+          ],
+          "biological_processes": [
+            {
+              "name": "CD4-positive or CD8-positive, alpha-beta T cell lineage commitment",
+              "go_id": "GO:0043369",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "CD4-positive, alpha-beta T cell differentiation",
+              "go_id": "GO:0043367",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "ERK1 and ERK2 cascade",
+              "go_id": "GO:0070371",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "ERK1 and ERK2 cascade",
+              "go_id": "GO:0070371",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of"
+            },
+            {
+              "name": "MAPK cascade",
+              "go_id": "GO:0000165",
+              "evidence_code": "IDA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "T cell differentiation in thymus",
+              "go_id": "GO:0033077",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "T cell receptor signaling pathway",
+              "go_id": "GO:0050852",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "alpha-beta T cell differentiation",
+              "go_id": "GO:0046632",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "animal organ morphogenesis",
+              "go_id": "GO:0009887",
+              "evidence_code": "TAS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "cell differentiation",
+              "go_id": "GO:0030154",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "cellular response to calcium ion",
+              "go_id": "GO:0071277",
+              "evidence_code": "IDA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "cellular response to xenobiotic stimulus",
+              "go_id": "GO:0071466",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "endothelial cell apoptotic process",
+              "go_id": "GO:0072577",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of"
+            },
+            {
+              "name": "epidermal growth factor receptor signaling pathway",
+              "go_id": "GO:0007173",
+              "evidence_code": "IDA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "establishment of protein localization to membrane",
+              "go_id": "GO:0090150",
+              "evidence_code": "IDA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "face development",
+              "go_id": "GO:0060324",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "head morphogenesis",
+              "go_id": "GO:0060323",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "long-term synaptic potentiation",
+              "go_id": "GO:0060291",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "myeloid progenitor cell differentiation",
+              "go_id": "GO:0002318",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "negative regulation of apoptotic process",
+              "go_id": "GO:0043066",
+              "evidence_code": "IDA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "negative regulation of apoptotic process",
+              "go_id": "GO:0043066",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "negative regulation of apoptotic process",
+              "go_id": "GO:0043066",
+              "evidence_code": "TAS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "negative regulation of endothelial cell apoptotic process",
+              "go_id": "GO:2000352",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "negative regulation of fibroblast migration",
+              "go_id": "GO:0010764",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "negative regulation of neuron apoptotic process",
+              "go_id": "GO:0043524",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "negative regulation of synaptic vesicle exocytosis",
+              "go_id": "GO:2000301",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "positive T cell selection",
+              "go_id": "GO:0043368",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "positive regulation of D-glucose transmembrane transport",
+              "go_id": "GO:0010828",
+              "evidence_code": "IDA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "positive regulation of ERK1 and ERK2 cascade",
+              "go_id": "GO:0070374",
+              "evidence_code": "IDA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "positive regulation of ERK1 and ERK2 cascade",
+              "go_id": "GO:0070374",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "positive regulation of axon regeneration",
+              "go_id": "GO:0048680",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "positive regulation of axonogenesis",
+              "go_id": "GO:0050772",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "positive regulation of gene expression",
+              "go_id": "GO:0010628",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "positive regulation of gene expression",
+              "go_id": "GO:0010628",
+              "evidence_code": "IMP",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "positive regulation of peptidyl-serine phosphorylation",
+              "go_id": "GO:0033138",
+              "evidence_code": "IDA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "positive regulation of stress fiber assembly",
+              "go_id": "GO:0051496",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "positive regulation of substrate adhesion-dependent cell spreading",
+              "go_id": "GO:1900026",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "postsynaptic modulation of chemical synaptic transmission",
+              "go_id": "GO:0099170",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "protein phosphorylation",
+              "go_id": "GO:0006468",
+              "evidence_code": "TAS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "regulation of T cell differentiation",
+              "go_id": "GO:0045580",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "regulation of axon regeneration",
+              "go_id": "GO:0048679",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "regulation of cell population proliferation",
+              "go_id": "GO:0042127",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "signal transduction",
+              "go_id": "GO:0007165",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "somatic stem cell population maintenance",
+              "go_id": "GO:0035019",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "stress fiber assembly",
+              "go_id": "GO:0043149",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of"
+            },
+            {
+              "name": "substrate adhesion-dependent cell spreading",
+              "go_id": "GO:0034446",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of"
+            },
+            {
+              "name": "synaptic vesicle exocytosis",
+              "go_id": "GO:0016079",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of"
+            },
+            {
+              "name": "thymus development",
+              "go_id": "GO:0048538",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "thyroid gland development",
+              "go_id": "GO:0030878",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "visual learning",
+              "go_id": "GO:0008542",
+              "evidence_code": "IEA",
+              "qualifier": "acts_upstream_of_or_within"
+            }
+          ],
+          "cellular_components": [
+            {
+              "name": "cell body",
+              "go_id": "GO:0044297",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "centriolar satellite",
+              "go_id": "GO:0034451",
+              "evidence_code": "IDA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "ciliary basal body",
+              "go_id": "GO:0036064",
+              "evidence_code": "IDA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "cilium",
+              "go_id": "GO:0005929",
+              "evidence_code": "IDA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "cytoplasm",
+              "go_id": "GO:0005737",
+              "evidence_code": "IBA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "cytoplasm",
+              "go_id": "GO:0005737",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "cytosol",
+              "go_id": "GO:0005829",
+              "evidence_code": "IBA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "cytosol",
+              "go_id": "GO:0005829",
+              "evidence_code": "IDA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "cytosol",
+              "go_id": "GO:0005829",
+              "evidence_code": "TAS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "glutamatergic synapse",
+              "go_id": "GO:0098978",
+              "evidence_code": "IEA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "membrane",
+              "go_id": "GO:0016020",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "IBA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "neuron projection",
+              "go_id": "GO:0043005",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "nucleus",
+              "go_id": "GO:0005634",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "plasma membrane",
+              "go_id": "GO:0005886",
+              "evidence_code": "IBA",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "plasma membrane",
+              "go_id": "GO:0005886",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "plasma membrane",
+              "go_id": "GO:0005886",
+              "evidence_code": "TAS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "postsynapse",
+              "go_id": "GO:0098794",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "presynapse",
+              "go_id": "GO:0098793",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            }
+          ]
+        }
+      },
+      "query": [
+        "NM_001374258"
+      ]
+    }
+  ],
+  "total_count": 1
+}

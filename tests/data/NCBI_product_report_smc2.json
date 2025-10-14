@@ -1,0 +1,350 @@
+{
+  "reports": [
+    {
+      "product": {
+        "gene_id": "321452",
+        "symbol": "smc2",
+        "description": "structural maintenance of chromosomes 2",
+        "tax_id": "7955",
+        "taxname": "Danio rerio",
+        "common_name": "zebrafish",
+        "type": "PROTEIN_CODING",
+        "transcripts": [
+          {
+            "accession_version": "NM_199542.3",
+            "length": 4073,
+            "cds": {
+              "accession_version": "NM_199542.3",
+              "range": [
+                {
+                  "begin": "96",
+                  "end": "3695",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "sequence_name": "Chromosome 1 Reference GRCz12tu Primary Assembly"
+              }
+            ],
+            "ensembl_transcript": "ENSDART00000109416.4",
+            "protein": {
+              "accession_version": "NP_955836.2",
+              "name": "structural maintenance of chromosomes protein 2",
+              "length": 1199,
+              "ensembl_protein": "ENSDARP00000104167.3"
+            },
+            "type": "PROTEIN_CODING"
+          },
+          {
+            "accession_version": "XR_012384470.1",
+            "name": "transcript variant X1",
+            "length": 4195,
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_133176.1",
+                "sequence_name": "Chromosome 1 Reference GRCz12tu Primary Assembly",
+                "genomic_range": {
+                  "begin": "21041431",
+                  "end": "21065953",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "21041431",
+                    "end": "21041707",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "21042444",
+                    "end": "21042593",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "21042685",
+                    "end": "21042807",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "21043538",
+                    "end": "21043576",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "21043680",
+                    "end": "21043790",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "21043876",
+                    "end": "21043920",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "21044508",
+                    "end": "21044741",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "21047607",
+                    "end": "21047756",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "21049039",
+                    "end": "21049272",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "21051178",
+                    "end": "21051337",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "21051712",
+                    "end": "21051829",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "21051936",
+                    "end": "21052074",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "21052916",
+                    "end": "21053035",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "21053129",
+                    "end": "21053333",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "21053664",
+                    "end": "21053799",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "21053885",
+                    "end": "21054009",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "21054120",
+                    "end": "21054313",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "21056768",
+                    "end": "21056911",
+                    "orientation": "plus",
+                    "order": 18
+                  },
+                  {
+                    "begin": "21057024",
+                    "end": "21057218",
+                    "orientation": "plus",
+                    "order": 19
+                  },
+                  {
+                    "begin": "21057641",
+                    "end": "21057841",
+                    "orientation": "plus",
+                    "order": 20
+                  },
+                  {
+                    "begin": "21060778",
+                    "end": "21060936",
+                    "orientation": "plus",
+                    "order": 21
+                  },
+                  {
+                    "begin": "21061684",
+                    "end": "21061910",
+                    "orientation": "plus",
+                    "order": 22
+                  },
+                  {
+                    "begin": "21062098",
+                    "end": "21062245",
+                    "orientation": "plus",
+                    "order": 23
+                  },
+                  {
+                    "begin": "21065393",
+                    "end": "21065953",
+                    "orientation": "plus",
+                    "order": 24
+                  }
+                ]
+              }
+            ],
+            "type": "NON_CODING_MODEL"
+          },
+          {
+            "accession_version": "XR_012384471.1",
+            "name": "transcript variant X2",
+            "length": 4544,
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_133176.1",
+                "sequence_name": "Chromosome 1 Reference GRCz12tu Primary Assembly",
+                "genomic_range": {
+                  "begin": "21041431",
+                  "end": "21056508",
+                  "orientation": "plus"
+                },
+                "exons": [
+                  {
+                    "begin": "21041431",
+                    "end": "21041707",
+                    "orientation": "plus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "21042444",
+                    "end": "21042593",
+                    "orientation": "plus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "21042685",
+                    "end": "21042807",
+                    "orientation": "plus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "21043538",
+                    "end": "21043576",
+                    "orientation": "plus",
+                    "order": 4
+                  },
+                  {
+                    "begin": "21043680",
+                    "end": "21043790",
+                    "orientation": "plus",
+                    "order": 5
+                  },
+                  {
+                    "begin": "21043876",
+                    "end": "21043920",
+                    "orientation": "plus",
+                    "order": 6
+                  },
+                  {
+                    "begin": "21044508",
+                    "end": "21044741",
+                    "orientation": "plus",
+                    "order": 7
+                  },
+                  {
+                    "begin": "21047607",
+                    "end": "21047756",
+                    "orientation": "plus",
+                    "order": 8
+                  },
+                  {
+                    "begin": "21049039",
+                    "end": "21049272",
+                    "orientation": "plus",
+                    "order": 9
+                  },
+                  {
+                    "begin": "21051178",
+                    "end": "21051337",
+                    "orientation": "plus",
+                    "order": 10
+                  },
+                  {
+                    "begin": "21051712",
+                    "end": "21051829",
+                    "orientation": "plus",
+                    "order": 11
+                  },
+                  {
+                    "begin": "21051936",
+                    "end": "21052074",
+                    "orientation": "plus",
+                    "order": 12
+                  },
+                  {
+                    "begin": "21052916",
+                    "end": "21053035",
+                    "orientation": "plus",
+                    "order": 13
+                  },
+                  {
+                    "begin": "21053129",
+                    "end": "21053333",
+                    "orientation": "plus",
+                    "order": 14
+                  },
+                  {
+                    "begin": "21053664",
+                    "end": "21053799",
+                    "orientation": "plus",
+                    "order": 15
+                  },
+                  {
+                    "begin": "21053885",
+                    "end": "21054009",
+                    "orientation": "plus",
+                    "order": 16
+                  },
+                  {
+                    "begin": "21054120",
+                    "end": "21054552",
+                    "orientation": "plus",
+                    "order": 17
+                  },
+                  {
+                    "begin": "21054764",
+                    "end": "21056508",
+                    "orientation": "plus",
+                    "order": 18
+                  }
+                ]
+              }
+            ],
+            "type": "NON_CODING_MODEL"
+          }
+        ],
+        "transcript_count": 3,
+        "protein_count": 1,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 1
+          },
+          {
+            "type": "NON_CODING_MODEL",
+            "count": 2
+          }
+        ]
+      },
+      "query": [
+        "smc2"
+      ]
+    }
+  ],
+  "total_count": 1
+}

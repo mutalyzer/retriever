@@ -1,0 +1,273 @@
+{
+  "reports": [
+    {
+      "gene": {
+        "gene_id": "66925",
+        "symbol": "Sdhd",
+        "description": "succinate dehydrogenase complex, subunit D, integral membrane protein",
+        "tax_id": "10090",
+        "taxname": "Mus musculus",
+        "common_name": "house mouse",
+        "type": "PROTEIN_CODING",
+        "orientation": "minus",
+        "chromosomes": [
+          "9"
+        ],
+        "nomenclature_authority": {
+          "authority": "MGI",
+          "identifier": "MGI:1914175"
+        },
+        "swiss_prot_accessions": [
+          "Q9CXV1"
+        ],
+        "ensembl_gene_ids": [
+          "ENSMUSG00000000171"
+        ],
+        "synonyms": [
+          "QPs3",
+          "cybS",
+          "CII-4",
+          "AVLL5809",
+          "PRO19626",
+          "3110001M13Rik"
+        ],
+        "annotations": [
+          {
+            "assembly_accession": "GCF_000001635.27",
+            "assembly_name": "GRCm39",
+            "annotation_name": "GCF_000001635.27-RS_2024_02",
+            "annotation_release_date": "2024-02-01",
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000075.7",
+                "sequence_name": "9",
+                "genomic_range": {
+                  "begin": "50507640",
+                  "end": "50515149",
+                  "orientation": "minus"
+                }
+              }
+            ]
+          }
+        ],
+        "transcript_count": 1,
+        "protein_count": 1,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 1
+          }
+        ],
+        "gene_groups": [
+          {
+            "id": "6392",
+            "method": "NCBI Ortholog"
+          }
+        ],
+        "summary": [
+          {
+            "description": "Enables succinate dehydrogenase (quinone) activity. Acts upstream of or within cellular response to hypoxia and regulation of catecholamine secretion. Located in mitochondrion. Part of respiratory chain complex II (succinate dehydrogenase). Is expressed in several structures, including alimentary system; genitourinary system; nervous system; respiratory system; and sensory organ. Human ortholog(s) of this gene implicated in Carney-Stratakis syndrome; mitochondrial complex II deficiency; and paraganglioma. Orthologous to human SDHD (succinate dehydrogenase complex subunit D). [provided by Alliance of Genome Resources, Jul 2025]"
+          }
+        ],
+        "gene_ontology": {
+          "molecular_functions": [
+            {
+              "name": "heme binding",
+              "go_id": "GO:0020037",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "heme binding",
+              "go_id": "GO:0020037",
+              "evidence_code": "ISS",
+              "qualifier": "enables"
+            },
+            {
+              "name": "metal ion binding",
+              "go_id": "GO:0046872",
+              "evidence_code": "IEA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "succinate dehydrogenase (quinone) activity",
+              "go_id": "GO:0008177",
+              "evidence_code": "IMP",
+              "qualifier": "enables"
+            },
+            {
+              "name": "ubiquinone binding",
+              "go_id": "GO:0048039",
+              "evidence_code": "IBA",
+              "qualifier": "enables"
+            },
+            {
+              "name": "ubiquinone binding",
+              "go_id": "GO:0048039",
+              "evidence_code": "ISS",
+              "qualifier": "enables"
+            }
+          ],
+          "biological_processes": [
+            {
+              "name": "cellular response to hypoxia",
+              "go_id": "GO:0071456",
+              "evidence_code": "IMP",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "mitochondrial electron transport, succinate to ubiquinone",
+              "go_id": "GO:0006121",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "mitochondrial electron transport, succinate to ubiquinone",
+              "go_id": "GO:0006121",
+              "evidence_code": "NAS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "proton motive force-driven mitochondrial ATP synthesis",
+              "go_id": "GO:0042776",
+              "evidence_code": "NAS",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "regulation of catecholamine secretion",
+              "go_id": "GO:0050433",
+              "evidence_code": "IMP",
+              "qualifier": "acts_upstream_of_or_within"
+            },
+            {
+              "name": "tricarboxylic acid cycle",
+              "go_id": "GO:0006099",
+              "evidence_code": "IBA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "tricarboxylic acid cycle",
+              "go_id": "GO:0006099",
+              "evidence_code": "IEA",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "tricarboxylic acid cycle",
+              "go_id": "GO:0006099",
+              "evidence_code": "ISO",
+              "qualifier": "involved_in"
+            },
+            {
+              "name": "tricarboxylic acid cycle",
+              "go_id": "GO:0006099",
+              "evidence_code": "NAS",
+              "qualifier": "involved_in"
+            }
+          ],
+          "cellular_components": [
+            {
+              "name": "membrane",
+              "go_id": "GO:0016020",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrial envelope",
+              "go_id": "GO:0005740",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrial inner membrane",
+              "go_id": "GO:0005743",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrial inner membrane",
+              "go_id": "GO:0005743",
+              "evidence_code": "ISO",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrial inner membrane",
+              "go_id": "GO:0005743",
+              "evidence_code": "ISS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrial inner membrane",
+              "go_id": "GO:0005743",
+              "evidence_code": "NAS",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "HDA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "IDA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "IEA",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "IMP",
+              "qualifier": "is_active_in"
+            },
+            {
+              "name": "mitochondrion",
+              "go_id": "GO:0005739",
+              "evidence_code": "IMP",
+              "qualifier": "located_in"
+            },
+            {
+              "name": "respiratory chain complex II (succinate dehydrogenase)",
+              "go_id": "GO:0045273",
+              "evidence_code": "IBA",
+              "qualifier": "part_of"
+            },
+            {
+              "name": "respiratory chain complex II (succinate dehydrogenase)",
+              "go_id": "GO:0045273",
+              "evidence_code": "IDA",
+              "qualifier": "part_of"
+            },
+            {
+              "name": "respiratory chain complex II (succinate dehydrogenase)",
+              "go_id": "GO:0045273",
+              "evidence_code": "IEA",
+              "qualifier": "part_of"
+            },
+            {
+              "name": "respiratory chain complex II (succinate dehydrogenase)",
+              "go_id": "GO:0045273",
+              "evidence_code": "ISO",
+              "qualifier": "part_of"
+            },
+            {
+              "name": "respiratory chain complex II (succinate dehydrogenase)",
+              "go_id": "GO:0045273",
+              "evidence_code": "ISS",
+              "qualifier": "part_of"
+            }
+          ]
+        }
+      },
+      "query": [
+        "66925"
+      ]
+    }
+  ],
+  "total_count": 1
+}

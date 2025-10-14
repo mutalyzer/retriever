@@ -1,0 +1,93 @@
+{
+  "assembly_name": "GRCh38",
+  "biotype": "nonsense_mediated_decay",
+  "length": 1421,
+  "strand": 1,
+  "object_type": "Transcript",
+  "is_canonical": 0,
+  "Parent": "ENSG00000204370",
+  "version": 1,
+  "gencode_primary": 0,
+  "start": 112086891,
+  "Exon": [
+    {
+      "seq_region_name": "11",
+      "assembly_name": "GRCh38",
+      "species": "homo_sapiens",
+      "strand": 1,
+      "id": "ENSE00004022762",
+      "db_type": "core",
+      "object_type": "Exon",
+      "version": 2,
+      "end": 112086959,
+      "start": 112086891
+    },
+    {
+      "end": 112087973,
+      "start": 112087857,
+      "db_type": "core",
+      "object_type": "Exon",
+      "id": "ENSE00003554863",
+      "version": 1,
+      "strand": 1,
+      "assembly_name": "GRCh38",
+      "seq_region_name": "11",
+      "species": "homo_sapiens"
+    },
+    {
+      "species": "homo_sapiens",
+      "assembly_name": "GRCh38",
+      "seq_region_name": "11",
+      "strand": 1,
+      "version": 2,
+      "object_type": "Exon",
+      "db_type": "core",
+      "id": "ENSE00004022765",
+      "start": 112088867,
+      "end": 112089015
+    },
+    {
+      "strand": 1,
+      "assembly_name": "GRCh38",
+      "seq_region_name": "11",
+      "species": "homo_sapiens",
+      "end": 112091514,
+      "start": 112091401,
+      "db_type": "core",
+      "object_type": "Exon",
+      "id": "ENSE00004022761",
+      "version": 2
+    },
+    {
+      "end": 112095776,
+      "start": 112094805,
+      "db_type": "core",
+      "object_type": "Exon",
+      "id": "ENSE00001467411",
+      "version": 3,
+      "strand": 1,
+      "assembly_name": "GRCh38",
+      "seq_region_name": "11",
+      "species": "homo_sapiens"
+    }
+  ],
+  "display_name": "SDHD-212",
+  "Translation": {
+    "end": 112091514,
+    "start": 112086908,
+    "object_type": "Translation",
+    "db_type": "core",
+    "id": "ENSP00000519382",
+    "Parent": "ENST00000714091",
+    "version": 1,
+    "length": 143,
+    "species": "homo_sapiens"
+  },
+  "seq_region_name": "11",
+  "species": "homo_sapiens",
+  "logic_name": "havana_homo_sapiens",
+  "db_type": "core",
+  "id": "ENST00000714091",
+  "source": "havana",
+  "end": 112095776
+}

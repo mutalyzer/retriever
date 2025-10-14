@@ -1,0 +1,46 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "568815587"
+    ],
+    "568815587": {
+      "uid": "568815587",
+      "term": "568815587",
+      "caption": "NC_000011",
+      "title": "Homo sapiens chromosome 11, GRCh38.p14 Primary Assembly",
+      "extra": "gi|568815587|gnl|ASM:GCF_000001305|11|ref|NC_000011.10||gpp|GPC_000001303.1||gnl|NCBI_GENOMES|11",
+      "gi": 568815587,
+      "createdate": "2002/08/29",
+      "updatedate": "2025/08/06",
+      "taxid": 9606,
+      "slen": 135086622,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "projectid": "168",
+      "genome": "chromosome",
+      "subtype": "chromosome",
+      "subname": "11",
+      "assemblygi": 568336013,
+      "assemblyacc": "CM000673.2",
+      "geneticcode": "1",
+      "organism": "Homo sapiens",
+      "statistics": "",
+      "flags": 544,
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NC_000011.10"
+      },
+      "accessionversion": "NC_000011.10"
+    }
+  }
+}

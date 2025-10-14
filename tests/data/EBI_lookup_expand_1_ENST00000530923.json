@@ -1,0 +1,93 @@
+{
+  "species": "homo_sapiens",
+  "biotype": "nonsense_mediated_decay",
+  "db_type": "core",
+  "strand": 1,
+  "end": 112095163,
+  "is_canonical": 0,
+  "gencode_primary": 0,
+  "logic_name": "havana_homo_sapiens",
+  "seq_region_name": "11",
+  "display_name": "SDHD-207",
+  "source": "havana",
+  "length": 762,
+  "Exon": [
+    {
+      "species": "homo_sapiens",
+      "object_type": "Exon",
+      "version": 2,
+      "db_type": "core",
+      "id": "ENSE00002169115",
+      "end": 112086959,
+      "strand": 1,
+      "start": 112086873,
+      "assembly_name": "GRCh38",
+      "seq_region_name": "11"
+    },
+    {
+      "strand": 1,
+      "end": 112087973,
+      "assembly_name": "GRCh38",
+      "seq_region_name": "11",
+      "start": 112087857,
+      "species": "homo_sapiens",
+      "id": "ENSE00003554863",
+      "db_type": "core",
+      "version": 1,
+      "object_type": "Exon"
+    },
+    {
+      "species": "homo_sapiens",
+      "object_type": "Exon",
+      "version": 1,
+      "db_type": "core",
+      "id": "ENSE00003636526",
+      "end": 112089011,
+      "strand": 1,
+      "start": 112088867,
+      "assembly_name": "GRCh38",
+      "seq_region_name": "11"
+    },
+    {
+      "strand": 1,
+      "end": 112091132,
+      "seq_region_name": "11",
+      "assembly_name": "GRCh38",
+      "start": 112091079,
+      "species": "homo_sapiens",
+      "id": "ENSE00002148165",
+      "db_type": "core",
+      "version": 1,
+      "object_type": "Exon"
+    },
+    {
+      "db_type": "core",
+      "id": "ENSE00002154859",
+      "object_type": "Exon",
+      "version": 1,
+      "species": "homo_sapiens",
+      "start": 112094805,
+      "seq_region_name": "11",
+      "assembly_name": "GRCh38",
+      "strand": 1,
+      "end": 112095163
+    }
+  ],
+  "id": "ENST00000530923",
+  "object_type": "Transcript",
+  "version": 6,
+  "Translation": {
+    "species": "homo_sapiens",
+    "length": 104,
+    "id": "ENSP00000432946",
+    "db_type": "core",
+    "version": 2,
+    "object_type": "Translation",
+    "end": 112091079,
+    "start": 112086908,
+    "Parent": "ENST00000530923"
+  },
+  "start": 112086873,
+  "Parent": "ENSG00000204370",
+  "assembly_name": "GRCh38"
+}

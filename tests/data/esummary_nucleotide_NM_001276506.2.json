@@ -1,0 +1,44 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "1675175899"
+    ],
+    "1675175899": {
+      "uid": "1675175899",
+      "term": "1675175899",
+      "caption": "NM_001276506",
+      "title": "Homo sapiens succinate dehydrogenase complex subunit D (SDHD), transcript variant 4, mRNA; nuclear gene for mitochondrial product",
+      "extra": "gi|1675175899|ref|NM_001276506.2|",
+      "gi": 1675175899,
+      "createdate": "2013/02/23",
+      "updatedate": "2025/04/27",
+      "taxid": 9606,
+      "slen": 1469,
+      "biomol": "mRNA",
+      "moltype": "rna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "genome": "genomic",
+      "subtype": "chromosome|map",
+      "subname": "11|11q23.1",
+      "completeness": "has-right",
+      "geneticcode": "1",
+      "organism": "Homo sapiens",
+      "statistics": "",
+      "flags": 512,
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NM_001276506.2"
+      },
+      "accessionversion": "NM_001276506.2"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "reports": [
+    {
+      "product": {
+        "gene_id": "66925",
+        "symbol": "Sdhd",
+        "description": "succinate dehydrogenase complex, subunit D, integral membrane protein",
+        "tax_id": "10090",
+        "taxname": "Mus musculus",
+        "common_name": "house mouse",
+        "type": "PROTEIN_CODING",
+        "transcripts": [
+          {
+            "accession_version": "NM_025848.3",
+            "length": 1287,
+            "cds": {
+              "accession_version": "NM_025848.3",
+              "range": [
+                {
+                  "begin": "61",
+                  "end": "540",
+                  "orientation": "plus"
+                }
+              ]
+            },
+            "genomic_locations": [
+              {
+                "genomic_accession_version": "NC_000075.7",
+                "sequence_name": "Chromosome 9 Reference GRCm39 C57BL/6J",
+                "genomic_range": {
+                  "begin": "50507640",
+                  "end": "50515149",
+                  "orientation": "minus"
+                },
+                "exons": [
+                  {
+                    "begin": "50515038",
+                    "end": "50515149",
+                    "orientation": "minus",
+                    "order": 1
+                  },
+                  {
+                    "begin": "50511848",
+                    "end": "50511964",
+                    "orientation": "minus",
+                    "order": 2
+                  },
+                  {
+                    "begin": "50510061",
+                    "end": "50510205",
+                    "orientation": "minus",
+                    "order": 3
+                  },
+                  {
+                    "begin": "50507640",
+                    "end": "50508550",
+                    "orientation": "minus",
+                    "order": 4
+                  }
+                ]
+              }
+            ],
+            "ensembl_transcript": "ENSMUST00000000175.6",
+            "protein": {
+              "accession_version": "NP_080124.1",
+              "name": "succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial",
+              "length": 159,
+              "ensembl_protein": "ENSMUSP00000000175.5"
+            },
+            "type": "PROTEIN_CODING",
+            "select_category": "REFSEQ_SELECT"
+          }
+        ],
+        "transcript_count": 1,
+        "protein_count": 1,
+        "transcript_type_counts": [
+          {
+            "type": "PROTEIN_CODING",
+            "count": 1
+          }
+        ]
+      },
+      "query": [
+        "Sdhd"
+      ]
+    }
+  ],
+  "total_count": 1
+}

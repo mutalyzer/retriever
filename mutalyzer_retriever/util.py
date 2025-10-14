@@ -1,3 +1,26 @@
+from enum import StrEnum
+
+
+# Constants
+DEFAULT_TIMEOUT: int = 10
+HUMAN_TAXON: str = "HOMO SAPIENS"
+EMPTY_VALUES = (None, "", [])
+
+class DataSource(StrEnum):
+    """Data source enumeration"""
+    ENSEMBL = "ENSEMBL"
+    NCBI = "NCBI"
+    OTHER = "OTHER"
+
+class MoleculeType(StrEnum):
+    """Molecule type enumeration"""
+    DNA = "dna"
+    RNA = "rna"
+    PROTEIN = "protein"
+    UNKNOWN = "unknown"
+    OTHER = "other"
+
+
 def f_e(source, e=None, extra=None):
     output = f"({source})"
     if e is not None:

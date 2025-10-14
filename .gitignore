@@ -39,3 +39,7 @@ coverage.xml
 
 # Other files
 *.png
+tmp/
+.vscode/
+config.txt
+cache/

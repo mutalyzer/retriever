@@ -1,0 +1,88 @@
+{
+  "assemblies": [
+    {
+      "name": "GRCh38.p14",
+      "accession": "NC_000011.10"
+    },
+    {
+      "name": "T2T-CHM13v2.0",
+      "accession": "NC_060935.1"
+    },
+    {
+      "name": "GRCh37.p13",
+      "accession": "NC_000011.9"
+    }
+  ],
+  "genes": [
+    {
+      "name": "SDHD",
+      "hgnc_id": "10683",
+      "description": "succinate dehydrogenase complex subunit D",
+      "transcripts": [
+        {
+          "providers": [
+            {
+              "name": "NCBI",
+              "transcript_accession": "NM_003002.4",
+              "protein_accession": "NP_002993.1",
+              "description": "transcript variant 1"
+            },
+            {
+              "name": "ENSEMBL",
+              "transcript_accession": "ENST00000375549.8",
+              "protein_accession": "ENSP00000364699.3",
+              "description": "SDHD-201"
+            }
+          ],
+          "tag": "MANE_SELECT"
+        }
+      ],
+      "providers": [
+        {
+          "name": "NCBI",
+          "id": "6392",
+          "accession": "NG_012337.3"
+        },
+        {
+          "name": "ENSEMBL",
+          "accession": "ENSG00000204370"
+        }
+      ]
+    },
+    {
+      "name": "TIMM8B",
+      "hgnc_id": "11818",
+      "description": "translocase of inner mitochondrial membrane 8 homolog B",
+      "transcripts": [
+        {
+          "providers": [
+            {
+              "name": "NCBI",
+              "transcript_accession": "NM_012459.4",
+              "protein_accession": "NP_036591.3",
+              "description": "transcript variant 1"
+            },
+            {
+              "name": "ENSEMBL",
+              "transcript_accession": "ENST00000504148.3",
+              "protein_accession": "ENSP00000422122.2",
+              "description": "TIMM8B-201"
+            }
+          ],
+          "tag": "MANE_SELECT"
+        }
+      ],
+      "providers": [
+        {
+          "name": "NCBI",
+          "id": "26521",
+          "accession": "NG_033145.1"
+        },
+        {
+          "name": "ENSEMBL",
+          "accession": "ENSG00000150779"
+        }
+      ]
+    }
+  ]
+}

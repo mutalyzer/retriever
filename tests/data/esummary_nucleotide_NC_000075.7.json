@@ -1,0 +1,47 @@
+{
+  "header": {
+    "type": "esummary",
+    "version": "0.3"
+  },
+  "result": {
+    "uids": [
+      "1877089960"
+    ],
+    "1877089960": {
+      "uid": "1877089960",
+      "term": "1877089960",
+      "caption": "NC_000075",
+      "title": "Mus musculus strain C57BL/6J chromosome 9, GRCm39",
+      "extra": "gi|1877089960|gnl|ASM:GCF_000000055|9|ref|NC_000075.7||gpp|GPC_000007821.1||gnl|NCBI_GENOMES|77",
+      "gi": 1877089960,
+      "createdate": "2004/09/02",
+      "updatedate": "2024/02/07",
+      "taxid": 10090,
+      "slen": 124359700,
+      "biomol": "genomic",
+      "moltype": "dna",
+      "topology": "linear",
+      "sourcedb": "refseq",
+      "projectid": "169",
+      "genome": "chromosome",
+      "subtype": "strain|chromosome",
+      "subname": "C57BL/6J|9",
+      "assemblygi": 1870082333,
+      "assemblyacc": "CM001002.3",
+      "geneticcode": "1",
+      "organism": "Mus musculus",
+      "strain": "C57BL/6J",
+      "statistics": "",
+      "flags": 544,
+      "properties": {
+        "na": "1",
+        "value": "1"
+      },
+      "oslt": {
+        "indexed": true,
+        "value": "NC_000075.7"
+      },
+      "accessionversion": "NC_000075.7"
+    }
+  }
+}

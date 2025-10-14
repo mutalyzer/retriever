@@ -1,0 +1,81 @@
+{
+  "is_canonical": 1,
+  "object_type": "Transcript",
+  "Parent": "ENSMUSG00000000171",
+  "version": 6,
+  "gencode_primary": 1,
+  "start": 50507657,
+  "assembly_name": "GRCm39",
+  "length": 1231,
+  "biotype": "protein_coding",
+  "strand": -1,
+  "id": "ENSMUST00000000175",
+  "logic_name": "ensembl_havana_transcript_mus_musculus",
+  "db_type": "core",
+  "source": "ensembl_havana",
+  "end": 50515112,
+  "Translation": {
+    "length": 159,
+    "species": "mus_musculus",
+    "start": 50508385,
+    "end": 50515089,
+    "version": 5,
+    "Parent": "ENSMUST00000000175",
+    "id": "ENSMUSP00000000175",
+    "db_type": "core",
+    "object_type": "Translation"
+  },
+  "display_name": "Sdhd-201",
+  "seq_region_name": "9",
+  "Exon": [
+    {
+      "seq_region_name": "9",
+      "assembly_name": "GRCm39",
+      "species": "mus_musculus",
+      "strand": -1,
+      "id": "ENSMUSE00000285370",
+      "object_type": "Exon",
+      "db_type": "core",
+      "version": 4,
+      "end": 50515112,
+      "start": 50515038
+    },
+    {
+      "strand": -1,
+      "seq_region_name": "9",
+      "assembly_name": "GRCm39",
+      "species": "mus_musculus",
+      "end": 50511964,
+      "start": 50511848,
+      "id": "ENSMUSE00000216226",
+      "object_type": "Exon",
+      "db_type": "core",
+      "version": 2
+    },
+    {
+      "version": 4,
+      "db_type": "core",
+      "object_type": "Exon",
+      "id": "ENSMUSE00000216224",
+      "start": 50510061,
+      "end": 50510205,
+      "species": "mus_musculus",
+      "assembly_name": "GRCm39",
+      "seq_region_name": "9",
+      "strand": -1
+    },
+    {
+      "id": "ENSMUSE00000382814",
+      "db_type": "core",
+      "object_type": "Exon",
+      "version": 4,
+      "end": 50508550,
+      "start": 50507657,
+      "seq_region_name": "9",
+      "assembly_name": "GRCm39",
+      "species": "mus_musculus",
+      "strand": -1
+    }
+  ],
+  "species": "mus_musculus"
+}

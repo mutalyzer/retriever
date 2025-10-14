@@ -1,0 +1,69 @@
+{
+  "id": "ENST00000528048",
+  "Exon": [
+    {
+      "object_type": "Exon",
+      "version": 2,
+      "db_type": "core",
+      "id": "ENSE00002169115",
+      "species": "homo_sapiens",
+      "start": 112086873,
+      "assembly_name": "GRCh38",
+      "seq_region_name": "11",
+      "end": 112086959,
+      "strand": 1
+    },
+    {
+      "seq_region_name": "11",
+      "assembly_name": "GRCh38",
+      "start": 112087857,
+      "strand": 1,
+      "end": 112087973,
+      "id": "ENSE00003554863",
+      "db_type": "core",
+      "version": 1,
+      "object_type": "Exon",
+      "species": "homo_sapiens"
+    },
+    {
+      "strand": 1,
+      "end": 112095505,
+      "start": 112094805,
+      "assembly_name": "GRCh38",
+      "seq_region_name": "11",
+      "species": "homo_sapiens",
+      "db_type": "core",
+      "id": "ENSE00002157310",
+      "object_type": "Exon",
+      "version": 1
+    }
+  ],
+  "version": 5,
+  "Translation": {
+    "id": "ENSP00000436217",
+    "db_type": "core",
+    "version": 1,
+    "object_type": "Translation",
+    "species": "homo_sapiens",
+    "length": 85,
+    "start": 112086908,
+    "Parent": "ENST00000528048",
+    "end": 112094893
+  },
+  "object_type": "Transcript",
+  "source": "ensembl_havana",
+  "length": 905,
+  "assembly_name": "GRCh38",
+  "start": 112086873,
+  "Parent": "ENSG00000204370",
+  "db_type": "core",
+  "species": "homo_sapiens",
+  "biotype": "protein_coding",
+  "gencode_primary": 1,
+  "display_name": "SDHD-205",
+  "seq_region_name": "11",
+  "logic_name": "ensembl_havana_transcript_homo_sapiens",
+  "strand": 1,
+  "is_canonical": 0,
+  "end": 112095505
+}
