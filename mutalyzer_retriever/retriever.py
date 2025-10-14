@@ -364,7 +364,19 @@ def get_chromosome_from_selector(assembly_id, selector_id):
             response = requests.get(url).text
             return json.loads(response)["id"]
         except Exception:
-            return
+            return None
+    return None
+
+
+def get_gene_suggestions(gene):
+    api_url = cache_url()
+    if api_url:
+        url = f"{api_url}/gene_suggestions/{gene}"
+        try:
+            return json.loads(requests.get(url).text)
+        except Exception:
+            return None
+    return None
 
 
 def extract_feature_model(
