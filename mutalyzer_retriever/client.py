@@ -1,3 +1,4 @@
+from __future__ import annotations
 import json
 from urllib.parse import quote
 from mutalyzer_retriever.request import Http400, request

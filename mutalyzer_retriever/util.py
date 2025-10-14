@@ -1,4 +1,10 @@
-from enum import StrEnum
+from enum import Enum
+
+class StrEnum(str, Enum):
+    """
+    Enum where members are also (and must be) strings
+    """
+    pass
 
 
 # Constants
