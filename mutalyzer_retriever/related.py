@@ -392,11 +392,9 @@ def filter_assemblies(related_assemblies):
     ]
 
 
-def filter_gene_products(accession_base, related_genes):
+def filter_genes(accession_base, related_genes):
     """
-    This function filters gene products and keeps only transcripts/proteins that either:
-        - Match the base accession (ignoring version), or
-        - Have a MANE Select or other tag.
+    Filter a list of gene entries by updating their transcript lists.
 
     Args:
         accession_base (str): The base accession to match (no version).
@@ -405,32 +403,51 @@ def filter_gene_products(accession_base, related_genes):
     Returns:
         list: A list of genes, each optionally containing filtered transcripts.
     """
+    if not accession_base:
+        return []
+
     filtered_genes = []
-
     for gene in related_genes:
-        filtered_transcripts = []
-
-        for transcript in gene.get("transcripts", []):
-            matching_providers = [
-                provider
-                for provider in transcript.get("providers", [])
-                if accession_base in {
-                    (provider.get("transcript_accession") or "").split(".")[0],
-                    (provider.get("protein_accession") or "").split(".")[0],
-                }
-            ]
-
-            if "tag" in transcript or matching_providers:
-                filtered_transcripts.append(transcript)
-
+        # Make a copy of this gene, only make changes in the 'transcripts'.
         filtered_gene = {k: v for k, v in gene.items() if k != "transcripts"}
-
+        filtered_transcripts = filter_transcripts(accession_base, gene)
         if filtered_transcripts:
             filtered_gene["transcripts"] = filtered_transcripts
 
         filtered_genes.append(filtered_gene)
 
     return filtered_genes
+
+
+def filter_transcripts(accession_base, gene):
+    """
+    This function filters products of one gene and keeps only transcripts/proteins that either:
+        - Match the base accession (ignoring version), or
+        - Have a MANE Select or other tag.
+
+    Args:
+        accession_base (str): The base accession to match (no version).
+        gene (dict): A dictionary contains a gene's products and proteins from different sources.
+
+    Returns:
+        list: A list of filtered products
+    """
+    filtered_transcripts = []
+
+    for transcript in gene.get("transcripts", []):
+        if "tag" in transcript:
+            filtered_transcripts.append(transcript)
+        else:
+            for provider in transcript.get("providers", []):
+                products = [
+                    (provider.get("transcript_accession") or "").split(".")[0],
+                    (provider.get("protein_accession") or "").split(".")[0],
+                ]
+                if accession_base in products:
+                    filtered_transcripts.append(transcript)
+                    break
+
+    return filtered_transcripts
 
 
 def filter_related(accession_base, related):
@@ -455,7 +472,7 @@ def filter_related(accession_base, related):
     filtered_assemblies = filter_assemblies(related.get("assemblies", []))
     if filtered_assemblies:
         filtered["assemblies"] = filtered_assemblies
-    filtered_gene_products = filter_gene_products(
+    filtered_gene_products = filter_genes(
         accession_base, related.get("genes", [])
     )
     if filtered_gene_products:
@@ -619,7 +636,7 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
     Args:
         accession (str): An NCBI accession.
         moltype (str): The molecule type, one of MoleculeType.DNA, RNA, or PROTEIN.
-        locations (str): Genomic location(s) if applicable (used for DNA/chromosomal lookup).
+        locations (str): Genomic location(s) if applicable (used for DNA/chromosomal).
 
     Returns:
         dict: A dictionary containing filtered related data, with optional keys:
@@ -629,8 +646,6 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
     Raises:
         NameError: If the accession cannot be retrieved or resolved via NCBI.
     """
-
-    related = {}
     accession_base = accession.split(".")[0]
 
     # Get taxon_name and related from ncbi datasets
@@ -646,6 +661,7 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
         raise NameError(f"Could not retrieve {accession} from NCBI.")
 
     # Get related from ensembl using ensembl gene id.
+    related = {}
     if ncbi_related:
         # All ensembl gene IDs
         ensembl_genes_id = [
