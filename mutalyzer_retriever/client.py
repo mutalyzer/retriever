@@ -1,5 +1,7 @@
 from __future__ import annotations
 import json
+import time
+import requests
 from urllib.parse import quote
 from mutalyzer_retriever.request import Http400, request
 from mutalyzer_retriever.configuration import settings
@@ -72,6 +74,50 @@ class NCBIClient(BaseAPIClient):
         """Get genome annotation report for assembly and locations"""
         url = f"{self.base_url}/genome/accession/{assembly_accession}/annotation_report"
         params = [("locations", loc) for loc in locations]
+        return self.make_request(url, params)
+
+
+class NCBIEutilsClient(BaseAPIClient):
+    """Client for NCBI E-utilities API operations"""
+
+    def __init__(self, timeout: int = DEFAULT_TIMEOUT, max_retries: int = 3):
+        super().__init__("https://eutils.ncbi.nlm.nih.gov/entrez/eutils", timeout)
+        self.max_retries = max_retries
+
+    def make_request(self, url: str, params: dict | None = None):
+        """Make HTTP request with retry logic for transient NCBI errors"""
+        last_exception = None
+
+        for attempt in range(self.max_retries):
+            try:
+                r = requests.get(url, params=params, timeout=self.timeout)
+                r.raise_for_status()
+                data = r.json()
+
+                if "ERROR" in data:
+                    raise RuntimeError(f"NCBI E-utilities error: {data['ERROR']}")
+
+                return data
+
+            except (json.JSONDecodeError, RuntimeError) as e:
+                last_exception = e
+                if attempt < self.max_retries - 1:
+                    time.sleep(1 * (attempt + 1))  # Backoff: 1s, 2s, 3s
+                    continue
+
+        raise last_exception
+
+    def elink(self, accession: str, dbfrom: str, db: str) -> dict:
+        """Fetch links between NCBI databases"""
+        url = f"{self.base_url}/elink.fcgi"
+        params = {
+            "id": accession,
+            "dbfrom": dbfrom,
+            "db": db,
+            "retmode": "json",
+            "api_key": settings.get("NCBI_API_KEY"),
+            "email": settings.get("EMAIL")
+        }
         return self.make_request(url, params)
 
 

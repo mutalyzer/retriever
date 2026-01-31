@@ -4,8 +4,8 @@ from copy import deepcopy
 
 import requests
 
-from mutalyzer_retriever.client import EnsemblClient, NCBIClient
-from mutalyzer_retriever.configuration import cache_url
+from mutalyzer_retriever.client import EnsemblClient, NCBIClient, NCBIEutilsClient
+from mutalyzer_retriever.configuration import cache_url, settings
 from mutalyzer_retriever.parsers import datasets, ensembl_gene_lookup
 from mutalyzer_retriever.request import request
 from mutalyzer_retriever.util import (
@@ -251,9 +251,7 @@ def _merge(ensembl_related, ncbi_related):
     return merged
 
 
-def _get_related_by_gene_symbol_from_ncbi(
-    gene_symbol, taxon_name=HUMAN_TAXON
-):
+def _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxon_name=HUMAN_TAXON):
     """
     Given a gene symbol, return a set of related sequence accessions (genomic and/or products).
     Returns related_dict, or {} if nothing found.
@@ -303,9 +301,7 @@ def _get_related_by_gene_symbol(gene_symbol):
     Raises:
         RuntimeError: If the NCBI Datasets API is unavailable or returns an invalid response.
     """
-    ncbi_related = _get_related_by_gene_symbol_from_ncbi(
-        gene_symbol, taxon_name=HUMAN_TAXON
-    )
+    ncbi_related = _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxon_name=HUMAN_TAXON)
     ensembl_related = _get_related_by_gene_symbol_from_ensembl(gene_symbol)
     related = _merge(ensembl_related, ncbi_related)
     related = filter_related(gene_symbol, related)
@@ -552,13 +548,36 @@ def _get_related_by_chr_location(accession, locations):
     return None, {}
 
 
+def _gene_ids_from_ng(accession):
+    """
+    Return a list of NCBI Gene IDs associated with an NG_ (RefSeqGene) accession.
+    """
+    client = NCBIEutilsClient(timeout=DEFAULT_TIMEOUT)
+    data = client.elink(accession, dbfrom="nuccore", db="gene")
+
+    gene_ids = []
+    for linkset in data.get("linksets", []):
+        for linkdb in linkset.get("linksetdbs", []):
+            if linkdb.get("dbto") == "gene":
+                gene_ids.extend(linkdb.get("links", []))
+
+    return list(dict.fromkeys(gene_ids))
+
+
+def _get_related_by_ng_accession(accession):
+    accession_base = accession.split(".")[0]
+    gene_ids = _gene_ids_from_ng(accession_base)
+    if gene_ids:
+        return _get_gene_related(gene_ids)
+    return None, {}
+
+
 def _get_assembly_accession(accession):
     """
     Retrieve the assembly accession corresponding to a given NCBI chromosome accession.
     """
     client = NCBIClient(timeout=DEFAULT_TIMEOUT)
     return client.get_assembly_accession(accession)
-
 
 
 def _get_related_by_accession_from_ncbi(accession):
@@ -586,9 +605,7 @@ def _get_related_by_accession_from_ncbi(accession):
     parsed_products = datasets.parse_product_report(product_report)
     parsed_dataset = datasets.parse_dataset_report(dataset_report)
 
-    related_from_ncbi = datasets.merge_datasets(
-        parsed_dataset, parsed_products
-    )
+    related_from_ncbi = datasets.merge_datasets(parsed_dataset, parsed_products)
     taxname = product_report.get("taxname")
     return taxname, related_from_ncbi
 
@@ -618,9 +635,7 @@ def _get_related_by_ensembl_id(accession, moltype):
     gene_symbol = ensembl_related.get("name")
     taxname = ensembl_related.get("taxon_name")
     if gene_symbol and taxname:
-        ncbi_related = _get_related_by_gene_symbol_from_ncbi(
-            gene_symbol, taxname
-        )
+        ncbi_related = _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxname)
 
     related = _merge(ensembl_related, ncbi_related)
     if taxname and taxname.upper() == HUMAN_TAXON:
@@ -651,13 +666,11 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
 
     # Get taxon_name and related from ncbi datasets
     if moltype in [MoleculeType.RNA, MoleculeType.PROTEIN]:
-        taxon_name, ncbi_related = _get_related_by_accession_from_ncbi(
-            accession
-        )
+        taxon_name, ncbi_related = _get_related_by_accession_from_ncbi(accession)
     elif moltype == MoleculeType.DNA and "NC_" in accession:
-        taxon_name, ncbi_related = _get_related_by_chr_location(
-            accession, locations
-        )
+        taxon_name, ncbi_related = _get_related_by_chr_location(accession, locations)
+    elif moltype == MoleculeType.DNA and "NG_" in accession:
+        taxon_name, ncbi_related = _get_related_by_ng_accession(accession)
     else:
         raise NameError(f"Could not retrieve {accession} from NCBI.")
 
@@ -681,9 +694,7 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
         all_genes = []
         all_assemblies = []
         for ensembl_gene in ensembl_genes_id:
-            ensembl_gene_related = _get_ensembl_gene_info(
-                ensembl_gene, moltype=MoleculeType.DNA
-            )
+            ensembl_gene_related = _get_ensembl_gene_info(ensembl_gene, moltype=MoleculeType.DNA)
             if not taxon_name:
                 taxon_name = ensembl_gene_related.get("taxon_name")
             if ensembl_gene_related:
