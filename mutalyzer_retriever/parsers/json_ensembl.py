@@ -34,17 +34,21 @@ def _exons(tark_exons):
     return exons
 
 
-def _translation(tark_translations):
+def _translation(tark_translations, loc_region):
     """Convert translations per transcript from tark list into internal translation list.
        - null for non-coding RNA in input, return an empty list;
        - one value for coding RNA in input, return a list of one item;
        - rarely multiple values for coding RNA in input with different versions,
          return a list of multiple items.
+       - tark does not expose a translation table, so use the vertebrate mitochondrial
+         table for the MT region.
     """
     translations = []
     for tark_translation in tark_translations:
         translation = _feature(tark_translation)
         translation["type"] = "CDS"
+        if loc_region == "MT":
+            translation["qualifiers"] = {"translation_table": "2"}
         translations.append(translation)
     return translations
 
@@ -138,7 +142,7 @@ def parse(tark_results):
 
     exon_features = _exons(tark_result["exons"])
 
-    translation_features = _translation(tark_result["translations"])
+    translation_features = _translation(tark_result["translations"], tark_result["loc_region"])
 
     transcript_features = _transcript(tark_result, exon_features, translation_features)
 

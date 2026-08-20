@@ -70,13 +70,14 @@ QUALIFIERS = {
         "map": "map",
         "Dbxref": "dbxref",
         "Is_circular": "is_circular",
-        "transl_table": "transl_table",
+        "transl_table": "transl_table", # This may be dead, we need to check it.
         "Name": "name",
         "genome": "genome",
     },
     "CDS": {
         "transl_except": "translation_exception",
         "exception": "exception",
+        "transl_table": "translation_table",
     },
     "mRNA": {
         "version": "version",
@@ -330,6 +331,14 @@ def _get_rna_features(record, mol_type):
         return features
 
 
+def _set_mt_translation_table(features):
+    for feature in features:
+        if feature["type"] == "CDS":
+            feature.setdefault("qualifiers", {}).setdefault("translation_table", "2")
+        if feature.get("features"):
+            _set_mt_translation_table(feature["features"])
+
+
 def _create_record_model(record, source=None):
     """
     Our model follows the gene-mRNA-CDS/exon and gene-ncRNA-exon conventions.
@@ -358,6 +367,12 @@ def _create_record_model(record, source=None):
     if features is None:
         # e.g., ENST
         features = _get_record_features_model(record)
+
+    if record.id == "MT" and features:
+        # Ensembl's GFF3 carries no transl_table attribute anywhere (unlike
+        # NCBI's, which has it per CDS); the seq id is the only indication
+        # available, matching the same heuristic used for the rark route.
+        _set_mt_translation_table(features)
 
     model = {
         "id": record.id,

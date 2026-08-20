@@ -86,7 +86,10 @@
                   },
                   "strand": 1
                 },
-                "id": "ENSP00000355265"
+                "id": "ENSP00000355265",
+                "qualifiers": {
+                  "translation_table": "2"
+                }
               }
             ]
           }
@@ -164,7 +167,10 @@
                   },
                   "strand": 1
                 },
-                "id": "ENSP00000354632"
+                "id": "ENSP00000354632",
+                "qualifiers": {
+                  "translation_table": "2"
+                }
               }
             ]
           }
@@ -226,7 +232,10 @@
                   },
                   "strand": 1
                 },
-                "id": "ENSP00000354982"
+                "id": "ENSP00000354982",
+                "qualifiers": {
+                  "translation_table": "2"
+                }
               }
             ]
           }

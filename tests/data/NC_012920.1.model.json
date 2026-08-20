@@ -185,7 +185,8 @@
                     "amino_acid": "*"
                   }
                 ]
-              }
+              },
+              "translation_table": "2"
             }
           }
         ]
@@ -311,7 +312,8 @@
                     "amino_acid": "*"
                   }
                 ]
-              }
+              },
+              "translation_table": "2"
             }
           }
         ]
@@ -464,6 +466,9 @@
                 "position": 7445
               },
               "strand": 1
+            },
+            "qualifiers": {
+              "translation_table": "2"
             }
           }
         ]
@@ -550,6 +555,9 @@
                 "position": 8269
               },
               "strand": 1
+            },
+            "qualifiers": {
+              "translation_table": "2"
             }
           }
         ]
@@ -614,6 +622,9 @@
                 "position": 8572
               },
               "strand": 1
+            },
+            "qualifiers": {
+              "translation_table": "2"
             }
           }
         ]
@@ -656,6 +667,9 @@
                 "position": 9207
               },
               "strand": 1
+            },
+            "qualifiers": {
+              "translation_table": "2"
             }
           }
         ]
@@ -718,7 +732,8 @@
                     "amino_acid": "*"
                   }
                 ]
-              }
+              },
+              "translation_table": "2"
             }
           }
         ]
@@ -800,7 +815,8 @@
                     "amino_acid": "*"
                   }
                 ]
-              }
+              },
+              "translation_table": "2"
             }
           }
         ]
@@ -862,6 +878,9 @@
                 "position": 10766
               },
               "strand": 1
+            },
+            "qualifiers": {
+              "translation_table": "2"
             }
           }
         ]
@@ -921,7 +940,8 @@
                     "amino_acid": "*"
                   }
                 ]
-              }
+              },
+              "translation_table": "2"
             }
           }
         ]
@@ -1027,6 +1047,9 @@
                 "position": 14148
               },
               "strand": 1
+            },
+            "qualifiers": {
+              "translation_table": "2"
             }
           }
         ]
@@ -1066,6 +1089,9 @@
                 "position": 14673
               },
               "strand": -1
+            },
+            "qualifiers": {
+              "translation_table": "2"
             }
           }
         ]
@@ -1147,7 +1173,8 @@
                     "amino_acid": "*"
                   }
                 ]
-              }
+              },
+              "translation_table": "2"
             }
           }
         ]

@@ -54,7 +54,10 @@
               },
               "strand": 1
             },
-            "id": "YP_004347470.1"
+            "id": "YP_004347470.1",
+            "qualifiers": {
+              "translation_table": "2"
+            }
           }
         ]
       },
@@ -111,7 +114,8 @@
                     "amino_acid": "*"
                   }
                 ]
-              }
+              },
+              "translation_table": "2"
             }
           }
         ]
@@ -150,7 +154,10 @@
               },
               "strand": 1
             },
-            "id": "YP_004347472.1"
+            "id": "YP_004347472.1",
+            "qualifiers": {
+              "translation_table": "2"
+            }
           }
         ]
       },
@@ -181,7 +188,8 @@
                 "amino_acid": "*"
               }
             ]
-          }
+          },
+          "translation_table": "2"
         }
       },
       {
@@ -217,7 +225,10 @@
               },
               "strand": 1
             },
-            "id": "YP_004347474.1"
+            "id": "YP_004347474.1",
+            "qualifiers": {
+              "translation_table": "2"
+            }
           }
         ]
       },
@@ -274,7 +285,8 @@
                     "amino_acid": "*"
                   }
                 ]
-              }
+              },
+              "translation_table": "2"
             }
           }
         ]
@@ -333,7 +345,8 @@
                     "amino_acid": "*"
                   }
                 ]
-              }
+              },
+              "translation_table": "2"
             }
           }
         ]
@@ -384,7 +397,8 @@
                     "amino_acid": "*"
                   }
                 ]
-              }
+              },
+              "translation_table": "2"
             }
           }
         ]
@@ -422,7 +436,10 @@
               },
               "strand": 1
             },
-            "id": "YP_004347478.1"
+            "id": "YP_004347478.1",
+            "qualifiers": {
+              "translation_table": "2"
+            }
           }
         ]
       },
@@ -472,7 +489,8 @@
                     "amino_acid": "*"
                   }
                 ]
-              }
+              },
+              "translation_table": "2"
             }
           }
         ]
@@ -510,7 +528,10 @@
               },
               "strand": 1
             },
-            "id": "YP_004347480.1"
+            "id": "YP_004347480.1",
+            "qualifiers": {
+              "translation_table": "2"
+            }
           }
         ]
       },
@@ -547,7 +568,10 @@
               },
               "strand": -1
             },
-            "id": "YP_004347481.1"
+            "id": "YP_004347481.1",
+            "qualifiers": {
+              "translation_table": "2"
+            }
           }
         ]
       },
@@ -584,7 +608,10 @@
               },
               "strand": 1
             },
-            "id": "YP_004347482.1"
+            "id": "YP_004347482.1",
+            "qualifiers": {
+              "translation_table": "2"
+            }
           }
         ]
       }
