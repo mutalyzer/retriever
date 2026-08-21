@@ -22,6 +22,6 @@ def parse(reference_content, reference_type=None, reference_source=None):
     elif reference_type == "json":
         model = json_ensembl.parse(reference_content)
     else:
-        return None
+        raise ValueError(f"Parsing does not support '{reference_type}' reference type.")
 
     return model
