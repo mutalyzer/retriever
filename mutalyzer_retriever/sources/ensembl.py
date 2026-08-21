@@ -20,7 +20,7 @@ def fetch_fasta(feature_id, api_base, timeout=DEFAULT_TIMEOUT):
         response_json = e.response.json()
         if response_json and response_json.get("error") == f"ID '{feature_id}' not found":
             raise NameError(f_e("fasta", e, response_json.get("error")))
-        raise e
+        raise
     return response
 
 
@@ -37,7 +37,7 @@ def fetch_gff3(feature_id, api_base, timeout=DEFAULT_TIMEOUT):
         response_json = e.response.json()
         if response_json and response_json.get("error") == f"ID '{feature_id}' not found":
             raise NameError(f_e("gff3", e, response_json.get("error")))
-        raise e
+        raise
     return response
 
 
@@ -132,6 +132,30 @@ def get_transcript_api_base(r_id, r_version, r_source, timeout=DEFAULT_TIMEOUT):
     raise NameError(f"Cannot fetch {r_id} from Ensembl Tark")
 
 
+def _fetch_default(r_id, r_version, reference_source, timeout):
+    # An explicit "ensembl_tark" source goes straight to Tark, same as
+    # reference_type="json" would. gff3 isn't served there anyway.
+    if reference_source == "ensembl_tark":
+        api_base, assembly = get_transcript_api_base(
+            r_id, r_version, reference_source, timeout
+        )
+        return fetch_json(r_id, r_version, api_base, assembly, timeout), "json"
+
+    # gff3 only exists on REST. Resolving or fetching it can fail as
+    # NameError, ConnectionError, or a raw RequestErrors, all of which
+    # fall back to Tark below.
+    try:
+        api_base, assembly = get_rest_api_base(r_id, r_version, timeout)
+        return fetch_gff3(r_id, api_base, timeout), "gff3"
+    except (NameError, ConnectionError, RequestErrors):
+        if "ENST" not in r_id:
+            raise
+        api_base, assembly = get_transcript_api_base(
+            r_id, r_version, reference_source, timeout
+        )
+        return fetch_json(r_id, r_version, api_base, assembly, timeout), "json"
+
+
 def fetch(
     reference_id,
     reference_type=None,
@@ -142,19 +166,20 @@ def fetch(
     if r_id is None:
         raise NameError
 
-    if "ENST" in r_id:
+    if reference_type is None:
+        return _fetch_default(r_id, r_version, reference_source, timeout)
+
+    # gff3/fasta only exist on REST, never on Tark.
+    if reference_type in ["gff3", "fasta"]:
+        api_base, assembly = get_rest_api_base(r_id, r_version, timeout)
+    elif "ENST" in r_id:
         api_base, assembly = get_transcript_api_base(
             r_id, r_version, reference_source, timeout
         )
     else:
         api_base, assembly = get_rest_api_base(r_id, r_version, timeout)
 
-    if reference_type is None:
-        try:
-            return fetch_gff3(r_id, api_base, timeout), "gff3"
-        except ConnectionError:
-            return fetch_json(r_id, r_version, api_base, assembly, timeout), "json"
-    elif reference_type == "gff3":
+    if reference_type == "gff3":
         return fetch_gff3(r_id, api_base, timeout), "gff3"
     elif reference_type == "fasta":
         return fetch_fasta(r_id, api_base, timeout), "fasta"

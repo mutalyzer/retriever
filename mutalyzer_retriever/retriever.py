@@ -28,7 +28,7 @@ class NoReferenceError(Exception):
         if uncertain_sources:
             message = f"\n\nUncertain sources: {', '.join(uncertain_sources)}\n"
 
-        for source in status.keys():
+        for source in status:
             source_errors = []
             message += f"\n{source}:"
             for error in status[source]["errors"]:
@@ -51,7 +51,7 @@ class NoReferenceError(Exception):
 
 def _raise_error(status):
     uncertain_sources = []
-    for source in status.keys():
+    for source in status:
         if not (
             len(status[source]["errors"]) == 1
             and isinstance(status[source]["errors"][0], NameError)
@@ -92,8 +92,8 @@ def _fetch_unknown_source(
         )
     except (NameError, ConnectionError, ValueError) as e:
         status["ncbi"]["errors"].append(e)
-    except Exception as e:
-        raise e
+    except Exception:
+        raise
     else:
         return reference_content, reference_type, "ncbi"
 
@@ -194,12 +194,12 @@ def retrieve_model(
                 "sequence": parser.parse(fasta[0], "fasta"),
             }
         elif model_type == "sequence":
-            fasta = retrieve_raw(reference_id, "fasta", size_off, timeout=timeout)
-            return {"sequence": parser.parse(fasta, "fasta")}
-        elif model_type == "annotations":
-            return parser.parse(
-                reference_content, reference_source, "fasta", reference_source
+            fasta = retrieve_raw(
+                reference_id, reference_source, "fasta", size_off, timeout=timeout
             )
+            return {"sequence": parser.parse(fasta[0], "fasta")}
+        elif model_type == "annotations":
+            return parser.parse(reference_content, reference_type, reference_source)
     elif reference_type == "fasta":
         return {
             "sequence": parser.parse(reference_content, "fasta"),
@@ -216,7 +216,7 @@ def retrieve_model(
             return {"annotations": annotations, "sequence": sequence}
 
 
-def retrieve_model_from_file(paths=[], is_lrg=False):
+def retrieve_model_from_file(paths=None, is_lrg=False):
     """
 
     :arg list paths: Path towards the gff3, fasta, or lrg files.
@@ -224,6 +224,8 @@ def retrieve_model_from_file(paths=[], is_lrg=False):
     :returns: Reference model.
     :rtype: dict
     """
+    if paths is None:
+        paths = []
     if is_lrg:
         with open(paths[0]) as f:
             content = f.read()
@@ -316,16 +318,17 @@ def get_reference_model(r_id, s_id=None):
     model = retrieve_model(r_id, timeout=10)
 
     cache_path = cache_dir()
-    if cache_add() and cache_path:
-        if (
-            model.get("annotations")
-            and model.get("sequence")
-            and model["sequence"].get("seq")
-        ):
-            with open(Path(cache_path) / (r_id + ".annotations"), "w") as f:
-                f.write(json.dumps(model["annotations"]))
-            with open(Path(cache_path) / (r_id + ".sequence"), "w") as f:
-                f.write(model["sequence"]["seq"])
+    if (
+        cache_add()
+        and cache_path
+        and model.get("annotations")
+        and model.get("sequence")
+        and model["sequence"].get("seq")
+    ):
+        with open(Path(cache_path) / (r_id + ".annotations"), "w") as f:
+            f.write(json.dumps(model["annotations"]))
+        with open(Path(cache_path) / (r_id + ".sequence"), "w") as f:
+            f.write(model["sequence"]["seq"])
     return model
 
 
@@ -425,7 +428,7 @@ def extract_feature_model(
                     k: deepcopy(feature[k])
                     for k in list(set(feature.keys()) - {"features"})
                 },
-                **{"features": output_model},
+                "features": output_model,
             },
             False,
             False,
