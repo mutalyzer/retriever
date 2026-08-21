@@ -7,6 +7,7 @@ import json
 import sys
 
 from . import usage, version
+from .configuration import DEFAULT_TIMEOUT
 from .related import get_cds_to_mrna, get_related
 from .retriever import retrieve_model, retrieve_model_from_file, retrieve_raw
 from .sources.ncbi_assemblies import annotations_summary, retrieve_assemblies
@@ -60,7 +61,9 @@ def _args_parser():
         "--mrna_id", help="retrieve the mrna_id from the cds_id", action="store_true"
     )
 
-    parser.add_argument("--timeout", help="timeout", type=int)
+    parser.add_argument(
+        "--timeout", help="timeout", type=int, default=DEFAULT_TIMEOUT
+    )
 
     parser.add_argument("--indent", help="indentation spaces", default=None, type=int)
 

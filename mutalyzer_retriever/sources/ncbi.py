@@ -3,7 +3,7 @@ from urllib.error import HTTPError
 
 from Bio import Entrez
 
-from ..configuration import settings
+from ..configuration import DEFAULT_TIMEOUT, settings
 from ..request import Http400, RequestErrors, request
 from ..util import f_e
 
@@ -155,7 +155,7 @@ def fetch_fasta(reference_id, db):
         return raw_data
 
 
-def fetch_gff3(reference_id, db, timeout=1):
+def fetch_gff3(reference_id, db, timeout=DEFAULT_TIMEOUT):
     """
     Retrieve the gff3 for the corresponding reference ID.
 
@@ -180,7 +180,7 @@ def fetch_gff3(reference_id, db, timeout=1):
         return response
 
 
-def fetch(reference_id, reference_type, size_on=True, timeout=1):
+def fetch(reference_id, reference_type, size_on=True, timeout=DEFAULT_TIMEOUT):
     """
     Fetch the raw annotation for the corresponding reference ID.
 

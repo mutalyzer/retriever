@@ -7,6 +7,7 @@ from mutalyzer_retriever.cli import (
     _retrieve_raw,
     parse_args,
 )
+from mutalyzer_retriever.configuration import DEFAULT_TIMEOUT
 
 
 def test_retrieve_raw():
@@ -21,7 +22,7 @@ def test_retrieve_raw():
     assert args.related is False
     assert args.sizeoff is False
     assert args.source is None
-    assert args.timeout is None
+    assert args.timeout == DEFAULT_TIMEOUT
     assert args.type is None
 
     assert _endpoint(args) == _retrieve_raw
@@ -39,7 +40,7 @@ def test_retrieve_model():
     assert args.related is False
     assert args.sizeoff is False
     assert args.source is None
-    assert args.timeout is None
+    assert args.timeout == DEFAULT_TIMEOUT
     assert args.type is None
 
     assert _endpoint(args) == _retrieve_model
@@ -57,7 +58,7 @@ def test_retrieve_model_indent():
     assert args.related is False
     assert args.sizeoff is False
     assert args.source is None
-    assert args.timeout is None
+    assert args.timeout == DEFAULT_TIMEOUT
     assert args.type is None
 
     assert _endpoint(args) == _retrieve_model
@@ -75,7 +76,7 @@ def test_related():
     assert args.command is None
     assert args.sizeoff is False
     assert args.source is None
-    assert args.timeout is None
+    assert args.timeout == DEFAULT_TIMEOUT
     assert args.type is None
 
     assert _endpoint(args) == _related
@@ -94,7 +95,7 @@ def test_from_file():
     assert args.related is False
     assert args.sizeoff is False
     assert args.source is None
-    assert args.timeout is None
+    assert args.timeout == DEFAULT_TIMEOUT
     assert args.type is None
 
     assert _endpoint(args) == _from_file
@@ -113,7 +114,7 @@ def test_from_file_indent():
     assert args.related is False
     assert args.sizeoff is False
     assert args.source is None
-    assert args.timeout is None
+    assert args.timeout == DEFAULT_TIMEOUT
     assert args.type is None
 
     assert _endpoint(args) == _from_file
@@ -134,7 +135,7 @@ def ncbi_assemblies():
     assert args.related is False
     assert args.sizeoff is False
     assert args.source is None
-    assert args.timeout is None
+    assert args.timeout == DEFAULT_TIMEOUT
     assert args.type is None
 
     assert _endpoint(args) == _retrieve_assemblies
@@ -155,7 +156,7 @@ def test_ncbi_assemblies_downloaded():
     assert args.related is False
     assert args.sizeoff is False
     assert args.source is None
-    assert args.timeout is None
+    assert args.timeout == DEFAULT_TIMEOUT
     assert args.type is None
 
     assert _endpoint(args) == _retrieve_assemblies

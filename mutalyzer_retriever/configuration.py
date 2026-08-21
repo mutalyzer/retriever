@@ -11,7 +11,8 @@ DEFAULT_SETTINGS = {
     "ENSEMBL_API": "https://rest.ensembl.org",
     "ENSEMBL_API_GRCH37": "https://grch37.rest.ensembl.org",
     "ENSEMBL_TARK_API":"https://tark.ensembl.org/api",
-    "NCBI_DATASETS_API":"https://api.ncbi.nlm.nih.gov/datasets/v2"
+    "NCBI_DATASETS_API":"https://api.ncbi.nlm.nih.gov/datasets/v2",
+    "DEFAULT_TIMEOUT": 10,
 }
 
 
@@ -48,6 +49,8 @@ def setup_settings():
 
 
 settings = setup_settings()
+
+DEFAULT_TIMEOUT: int = settings.get("DEFAULT_TIMEOUT")
 
 
 def cache_dir():

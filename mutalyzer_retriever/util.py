@@ -8,7 +8,6 @@ class StrEnum(str, Enum):
 
 
 # Constants
-DEFAULT_TIMEOUT: int = 10
 HUMAN_TAXON: str = "HOMO SAPIENS"
 EMPTY_VALUES = (None, "", [])
 

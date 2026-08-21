@@ -2,7 +2,7 @@ import socket
 from urllib.error import HTTPError, URLError
 from urllib.request import urlopen
 
-from ..configuration import settings
+from ..configuration import DEFAULT_TIMEOUT, settings
 from ..util import f_e
 
 
@@ -54,7 +54,7 @@ class NoSizeRetrieved(Exception):
     pass
 
 
-def fetch_lrg(reference_id, size_on=True, timeout=1):
+def fetch_lrg(reference_id, size_on=True, timeout=DEFAULT_TIMEOUT):
     """
     Fetch the LRG file content.
 

@@ -2,12 +2,12 @@ import json
 
 import requests
 
-from ..configuration import settings
+from ..configuration import DEFAULT_TIMEOUT, settings
 from ..request import Http400, RequestErrors, request
 from ..util import f_e
 
 
-def fetch_fasta(feature_id, api_base, timeout=1):
+def fetch_fasta(feature_id, api_base, timeout=DEFAULT_TIMEOUT):
     url = f"{api_base}/sequence/id/{feature_id}"
     params = {"format": "fasta", "type": "genomic"}
     headers = {"Content-Type": "text/x-fasta"}
@@ -24,7 +24,7 @@ def fetch_fasta(feature_id, api_base, timeout=1):
     return response
 
 
-def fetch_gff3(feature_id, api_base, timeout=1):
+def fetch_gff3(feature_id, api_base, timeout=DEFAULT_TIMEOUT):
     url = f"{api_base}/overlap/id/{feature_id}"
     params = {"feature": ["gene", "transcript", "cds", "exon"]}
     headers = {"Content-Type": "text/x-gff3"}
@@ -41,7 +41,7 @@ def fetch_gff3(feature_id, api_base, timeout=1):
     return response
 
 
-def _get_tark_versions(reference_id, api_base, timeout=1):
+def _get_tark_versions(reference_id, api_base, timeout=DEFAULT_TIMEOUT):
     endpoint = "transcript"
     params = {"stable_id": reference_id}
     tark_req = json.loads(
@@ -59,11 +59,11 @@ def _get_tark_versions(reference_id, api_base, timeout=1):
     return tark_versions_38, tark_versions_37
 
 
-def _get_most_recent_version(reference_id, api_base, timeout=1):
+def _get_most_recent_version(reference_id, api_base, timeout=DEFAULT_TIMEOUT):
     return int(_get_reference_information(reference_id, api_base, timeout)["version"])
 
 
-def _get_reference_information(reference_id, api_base, timeout=1):
+def _get_reference_information(reference_id, api_base, timeout=DEFAULT_TIMEOUT):
     url = f"{api_base}/lookup/id/{reference_id}"
     headers = {"Content-Type": "application/json"}
     return json.loads(request(url, headers=headers, timeout=timeout))
@@ -85,7 +85,13 @@ def _get_id_and_version(reference_id):
     return r_id, r_version
 
 
-def fetch_json(reference_id, reference_version, api_base, assembly="GRCh38", timeout=1):
+def fetch_json(
+    reference_id,
+    reference_version,
+    api_base,
+    assembly="GRCh38",
+    timeout=DEFAULT_TIMEOUT,
+):
     endpoint = "transcript"
     params = {
         "stable_id": reference_id,
@@ -99,20 +105,26 @@ def fetch_json(reference_id, reference_version, api_base, assembly="GRCh38", tim
     return req.json()
 
 
-def get_rest_api_base(r_id, r_version):
-    rest_version_38 = _get_most_recent_version(r_id, settings.get("ENSEMBL_API"))
+def get_rest_api_base(r_id, r_version, timeout=DEFAULT_TIMEOUT):
+    rest_version_38 = _get_most_recent_version(
+        r_id, settings.get("ENSEMBL_API"), timeout
+    )
     if r_version in [None, rest_version_38]:
         return settings.get("ENSEMBL_API"), "GRCh38"
-    if r_version == _get_most_recent_version(r_id, settings.get("ENSEMBL_API_GRCH37")):
+    if r_version == _get_most_recent_version(
+        r_id, settings.get("ENSEMBL_API_GRCH37"), timeout
+    ):
         return settings.get("ENSEMBL_API_GRCH37"), "GRCh37"
     raise NameError(f"Cannot fetch {r_id}.{r_version} from Ensembl REST")
 
 
-def get_transcript_api_base(r_id, r_version, r_source):
+def get_transcript_api_base(r_id, r_version, r_source, timeout=DEFAULT_TIMEOUT):
     if r_source == "ensembl_rest":
-        return get_rest_api_base(r_id, r_version)
+        return get_rest_api_base(r_id, r_version, timeout)
 
-    tark_versions_38, tark_versions_37 = _get_tark_versions(r_id, settings.get("ENSEMBL_TARK_API"))
+    tark_versions_38, tark_versions_37 = _get_tark_versions(
+        r_id, settings.get("ENSEMBL_TARK_API"), timeout
+    )
     if r_version is None or r_version in tark_versions_38:
         return settings.get("ENSEMBL_TARK_API"), "GRCh38"
     if r_version in tark_versions_37:
@@ -120,15 +132,22 @@ def get_transcript_api_base(r_id, r_version, r_source):
     raise NameError(f"Cannot fetch {r_id} from Ensembl Tark")
 
 
-def fetch(reference_id, reference_type=None, reference_source=None, timeout=1):
+def fetch(
+    reference_id,
+    reference_type=None,
+    reference_source=None,
+    timeout=DEFAULT_TIMEOUT,
+):
     r_id, r_version = _get_id_and_version(reference_id)
     if r_id is None:
         raise NameError
 
     if "ENST" in r_id:
-        api_base, assembly = get_transcript_api_base(r_id, r_version, reference_source)
+        api_base, assembly = get_transcript_api_base(
+            r_id, r_version, reference_source, timeout
+        )
     else:
-        api_base, assembly = get_rest_api_base(r_id, r_version)
+        api_base, assembly = get_rest_api_base(r_id, r_version, timeout)
 
     if reference_type is None:
         try:

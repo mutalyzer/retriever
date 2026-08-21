@@ -5,11 +5,10 @@ from copy import deepcopy
 import requests
 
 from mutalyzer_retriever.client import EnsemblClient, NCBIClient, NCBIEutilsClient
-from mutalyzer_retriever.configuration import cache_url, settings
+from mutalyzer_retriever.configuration import DEFAULT_TIMEOUT, cache_url, settings
 from mutalyzer_retriever.parsers import datasets, ensembl_gene_lookup
 from mutalyzer_retriever.request import request
 from mutalyzer_retriever.util import (
-    DEFAULT_TIMEOUT,
     HUMAN_TAXON,
     DataSource,
     MoleculeType,

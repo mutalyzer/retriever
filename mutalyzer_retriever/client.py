@@ -4,8 +4,8 @@ import time
 import requests
 from urllib.parse import quote
 from mutalyzer_retriever.request import Http400, request
-from mutalyzer_retriever.configuration import settings
-from mutalyzer_retriever.util import HUMAN_TAXON, DEFAULT_TIMEOUT
+from mutalyzer_retriever.configuration import DEFAULT_TIMEOUT, settings
+from mutalyzer_retriever.util import HUMAN_TAXON
 
 
 class BaseAPIClient:

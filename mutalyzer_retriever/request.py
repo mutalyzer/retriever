@@ -2,6 +2,8 @@ import time
 
 import requests
 
+from .configuration import DEFAULT_TIMEOUT
+
 
 class RequestErrors(Exception):
     def __init__(self, errors):
@@ -14,7 +16,9 @@ class Http400(Exception):
         self.response = error.response
 
 
-def request(url, params=None, headers=None, timeout=1, max_retries=1, sleep=1):
+def request(
+    url, params=None, headers=None, timeout=DEFAULT_TIMEOUT, max_retries=1, sleep=1
+):
     retries = 0
     errors = []
     while retries < max_retries:

@@ -48,14 +48,14 @@ def test_schema_validation(
     """Parse raw response and check its output schema"""
     monkeypatch.setattr(
         "mutalyzer_retriever.parsers.json_ensembl._seq_from_rest",
-        lambda _0, _1, _2, _3, _4: _seq_from_rest(r_id),
+        lambda _0, _1, _2, _3, _4, _5: _seq_from_rest(r_id),
     )
     r_model = parser.parse(
         reference_content=r_content,
         reference_type=r_type,
         reference_source=r_source,
     )
-    if r_source in ["ensembl_tark", "lrg"]:
+    if r_source == "lrg":
         assert validate(r_model["annotations"]) is None
     else:
         assert validate(r_model) is None

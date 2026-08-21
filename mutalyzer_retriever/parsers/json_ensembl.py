@@ -1,5 +1,7 @@
 import requests
-from ..util import make_location, f_e
+
+from ..configuration import DEFAULT_TIMEOUT
+from ..util import f_e, make_location
 
 
 def _feature(raw_dict):
@@ -85,7 +87,9 @@ def _gene(tark_gene, gene_feature):
     return [gene]
 
 
-def _seq_from_rest(assembly, chr_idx, strand, loc_start, loc_end, timeout=1):
+def _seq_from_rest(
+    assembly, chr_idx, strand, loc_start, loc_end, timeout=DEFAULT_TIMEOUT
+):
     """Retrieve sequence from ensembl Rest API."""
     if assembly == "GRCh38":
         server = "https://rest.ensembl.org"
@@ -102,7 +106,7 @@ def _seq_from_rest(assembly, chr_idx, strand, loc_start, loc_end, timeout=1):
     return r.text
 
 
-def _sequence(tark_result):
+def _sequence(tark_result, timeout=DEFAULT_TIMEOUT):
     return {
         "seq": _seq_from_rest(
             tark_result["assembly"],
@@ -110,6 +114,7 @@ def _sequence(tark_result):
             tark_result["loc_strand"],
             tark_result["loc_start"],
             tark_result["loc_end"],
+            timeout,
         ),
         "description": " ".join(
             [
@@ -129,20 +134,25 @@ def _sequence(tark_result):
     }
 
 
+def _latest_result(tark_results):
+    """Take the latest version from a Tark response."""
+    results = tark_results.get("results")
+    if results:
+        return results[-1]
+    raise NameError(f_e("ensembl tark", e=None, extra="returns no results"))
+
+
 def parse(tark_results):
-    """Convert the Tark json response into the retriever model json output.
-       - take the latest version from Tark response if no specific version required;
+    """Convert the Tark json response into the retriever annotations model.
        - for genes, take the latest version with "name" field in case of same stable ID
     """
-    tark_results = tark_results.get("results")
-    if tark_results:
-        tark_result = tark_results[-1]
-    else:
-        raise NameError(f_e("ensembl tark", e=None, extra="returns no results"))
+    tark_result = _latest_result(tark_results)
 
     exon_features = _exons(tark_result["exons"])
 
-    translation_features = _translation(tark_result["translations"], tark_result["loc_region"])
+    translation_features = _translation(
+        tark_result["translations"], tark_result["loc_region"]
+    )
 
     transcript_features = _transcript(tark_result, exon_features, translation_features)
 
@@ -153,11 +163,13 @@ def parse(tark_results):
     tark_gene = genes[-1]
     gene_feature = _gene(tark_gene, gene_feature=transcript_features)
 
-    return {
-        "annotations": _annotations(
-            tark_result["loc_region"],
-            make_location(tark_result["loc_start"] - 1, tark_result["loc_end"]),
-            gene_feature,
-        ),
-        "sequence": _sequence(tark_result),
-    }
+    return _annotations(
+        tark_result["loc_region"],
+        make_location(tark_result["loc_start"] - 1, tark_result["loc_end"]),
+        gene_feature,
+    )
+
+
+def sequence(tark_results, timeout=DEFAULT_TIMEOUT):
+    """Fetch the sequence (via Ensembl's REST API) for a Tark response."""
+    return _sequence(_latest_result(tark_results), timeout)

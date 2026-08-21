@@ -48,6 +48,6 @@ def _seq_from_rest(r_id):
 def test_model(r_id, r_source, r_type, expected_model, monkeypatch: pytest.MonkeyPatch):
     monkeypatch.setattr(
         "mutalyzer_retriever.parsers.json_ensembl._seq_from_rest",
-        lambda _0, _1, _2, _3, _4: _seq_from_rest(r_id),
+        lambda _0, _1, _2, _3, _4, _5: _seq_from_rest(r_id),
     )
     assert retrieve_model(r_id, r_source, r_type) == expected_model

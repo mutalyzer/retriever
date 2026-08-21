@@ -6,7 +6,14 @@ from pathlib import Path
 import requests
 
 from . import parser
-from .configuration import cache_add, cache_dir, cache_url, lru_cache_maxsize
+from .configuration import (
+    DEFAULT_TIMEOUT,
+    cache_add,
+    cache_dir,
+    cache_url,
+    lru_cache_maxsize,
+)
+from .parsers import json_ensembl
 from .sources import ensembl, lrg, ncbi
 
 
@@ -56,7 +63,11 @@ def _raise_error(status):
 
 
 def _fetch_unknown_source(
-    reference_id, reference_type, reference_source, size_off=True, timeout=1
+    reference_id,
+    reference_type,
+    reference_source,
+    size_off=True,
+    timeout=DEFAULT_TIMEOUT,
 ):
 
     status = {"lrg": {"errors": []}, "ncbi": {"errors": []}, "ensembl": {"errors": []}}
@@ -105,7 +116,7 @@ def retrieve_raw(
     reference_source=None,
     reference_type=None,
     size_off=True,
-    timeout=1,
+    timeout=DEFAULT_TIMEOUT,
 ):
     """
     Retrieve a reference based on the provided id.
@@ -126,7 +137,7 @@ def retrieve_raw(
         )
     elif reference_source == "ncbi":
         reference_content, reference_type = ncbi.fetch(
-            reference_id, reference_type, timeout
+            reference_id, reference_type, size_off, timeout
         )
     elif reference_source in ["ensembl", "ensembl_tark", "ensembl_rest"]:
         reference_content, reference_type = ensembl.fetch(
@@ -145,7 +156,7 @@ def retrieve_model(
     reference_type=None,
     size_off=True,
     model_type="all",
-    timeout=1,
+    timeout=DEFAULT_TIMEOUT,
 ):
     """
     Obtain the model of the provided reference id.
@@ -196,13 +207,13 @@ def retrieve_model(
 
     elif reference_type == "json":
         if "ensembl" in reference_source:
-            json_model = parser.parse(reference_content, "json")
-            if model_type == "all":
-                return json_model
-            elif model_type == "annotations":
-                return json_model["annotations"]
-            elif model_type == "sequence":
-                return json_model["sequence"]["seq"]
+            annotations = parser.parse(reference_content, "json")
+            if model_type == "annotations":
+                return annotations
+            sequence = json_ensembl.sequence(reference_content, timeout=timeout)
+            if model_type == "sequence":
+                return sequence["seq"]
+            return {"annotations": annotations, "sequence": sequence}
 
 
 def retrieve_model_from_file(paths=[], is_lrg=False):
