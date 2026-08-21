@@ -538,6 +538,64 @@
       },
       "features": [
         {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 42937
+            },
+            "end": {
+              "type": "point",
+              "position": 86735
+            },
+            "strand": -1
+          },
+          "id": "NR_144628.2",
+          "qualifiers": {
+            "gbkey": "misc_RNA",
+            "annotation_added_from": {
+              "freeze_date_id": "20220307",
+              "full_assembly_name": "GRCh37.p13",
+              "full_assembly_accession": "GCF_000001405.25"
+            }
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 86517
+                },
+                "end": {
+                  "type": "point",
+                  "position": 86735
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_144628.2-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 42937
+                },
+                "end": {
+                  "type": "point",
+                  "position": 44923
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_144628.2-2"
+            }
+          ]
+        },
+        {
           "type": "mRNA",
           "location": {
             "type": "range",
@@ -1314,6 +1372,64 @@
               "full_assembly_accession": "GCF_000001405.25"
             }
           }
+        },
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 42937
+            },
+            "end": {
+              "type": "point",
+              "position": 86735
+            },
+            "strand": -1
+          },
+          "id": "NR_144628.1",
+          "qualifiers": {
+            "gbkey": "misc_RNA",
+            "annotation_added_from": {
+              "freeze_date_id": "20190906",
+              "full_assembly_name": "GRCh37.p13",
+              "full_assembly_accession": "GCF_000001405.25"
+            }
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 86517
+                },
+                "end": {
+                  "type": "point",
+                  "position": 86735
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_144628.1-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 42937
+                },
+                "end": {
+                  "type": "point",
+                  "position": 44923
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_144628.1-2"
+            }
+          ]
         }
       ]
     }

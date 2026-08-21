@@ -59,6 +59,123 @@
       },
       "features": [
         {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 112604
+            },
+            "end": {
+              "type": "point",
+              "position": 124171
+            },
+            "strand": 1
+          },
+          "id": "NR_137167.1",
+          "qualifiers": {
+            "gbkey": "misc_RNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 112604
+                },
+                "end": {
+                  "type": "point",
+                  "position": 113887
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_137167.1-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 114023
+                },
+                "end": {
+                  "type": "point",
+                  "position": 114115
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_137167.1-2"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 121008
+                },
+                "end": {
+                  "type": "point",
+                  "position": 121073
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_137167.1-3"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 121493
+                },
+                "end": {
+                  "type": "point",
+                  "position": 121561
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_137167.1-4"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 123599
+                },
+                "end": {
+                  "type": "point",
+                  "position": 123698
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_137167.1-5"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 124108
+                },
+                "end": {
+                  "type": "point",
+                  "position": 124171
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_137167.1-6"
+            }
+          ]
+        },
+        {
           "type": "mRNA",
           "location": {
             "type": "range",

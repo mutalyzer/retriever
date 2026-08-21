@@ -49,6 +49,7 @@ CONSIDERED_TYPES = [
     "lnc_RNA",
     "snRNA",
     "polypeptide",
+    "transcript",
 ]
 QUALIFIERS = {
     "gene": {
@@ -84,6 +85,13 @@ QUALIFIERS = {
         "assembly_name": "assembly_name",
         "tag": "tag",
     },
+    "transcript": {
+        "version": "version",
+        "assembly_name": "assembly_name",
+        "tag": "tag",
+        "biotype": "biotype",  # mostly for Ensembl
+        "gbkey": "gbkey",  # mostly for NCBI
+    },
     "snRNA": {
         "version": "version",
         "assembly_name": "assembly_name",
@@ -105,7 +113,7 @@ def _get_feature_id(feature):
             return feature.qualifiers["gene_id"][0]
         elif feature.qualifiers.get("Name"):
             return feature.qualifiers["Name"][0]
-    elif feature.type in ["mRNA", "lnc_RNA", "snRNA"]:
+    elif feature.type in ["mRNA", "lnc_RNA", "snRNA", "transcript"]:
         if feature.qualifiers.get("transcript_id"):
             return feature.qualifiers["transcript_id"][0]
     elif feature.type == "CDS" and feature.qualifiers.get("protein_id"):
@@ -211,6 +219,17 @@ def _get_qualifiers(feature):
         return qs
 
 
+def _is_ncbi_ncrna_transcript(feature):
+    # misc_RNA + NR_/XR_ accession confidently non-coding.
+    gbkey = feature.qualifiers.get("gbkey", [None])[0]
+    transcript_id = feature.qualifiers.get("transcript_id", [None])[0]
+    return (
+        gbkey in ["misc_RNA"]
+        and transcript_id is not None
+        and transcript_id.startswith(("NR_", "XR_"))
+    )
+
+
 def _get_feature_type(feature):
     if feature.type in ["gene"]:
         return "gene"
@@ -222,6 +241,13 @@ def _get_feature_type(feature):
         return "exon"
     elif feature.type in ["CDS"]:
         return "CDS"
+    elif feature.type == "transcript" and feature.qualifiers.get("biotype", [None])[
+        0
+    ] in ["protein_coding_CDS_not_defined"]:
+        # Ensembl coding, but CDS just not annotated yet. Other (bio)types stay "transcript".
+        return "mRNA"
+    elif feature.type == "transcript" and _is_ncbi_ncrna_transcript(feature):
+        return "ncRNA"
     else:
         return feature.type
 
