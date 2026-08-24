@@ -917,6 +917,11 @@
               "strand": -1
             },
             "id": "ENST00000577854",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "processed_transcript",
+              "version": "1"
+            },
             "features": [
               {
                 "type": "exon",
@@ -967,6 +972,11 @@
               "strand": -1
             },
             "id": "ENST00000380150",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "processed_transcript",
+              "version": "2"
+            },
             "features": [
               {
                 "type": "exon",

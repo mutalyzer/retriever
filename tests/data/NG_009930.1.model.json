@@ -705,6 +705,9 @@
               "strand": -1
             },
             "id": "NR_024498.1",
+            "qualifiers": {
+              "biotype": "lnc_RNA"
+            },
             "features": [
               {
                 "type": "exon",

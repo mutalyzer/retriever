@@ -73,6 +73,9 @@
             "strand": -1
           },
           "id": "NR_170984.1",
+          "qualifiers": {
+            "biotype": "lnc_RNA"
+          },
           "features": [
             {
               "type": "exon",
@@ -166,6 +169,9 @@
             "strand": 1
           },
           "id": "NR_188603.1",
+          "qualifiers": {
+            "biotype": "lnc_RNA"
+          },
           "features": [
             {
               "type": "exon",
@@ -264,6 +270,9 @@
             "strand": 1
           },
           "id": "NR_188606.1",
+          "qualifiers": {
+            "biotype": "lnc_RNA"
+          },
           "features": [
             {
               "type": "exon",
@@ -346,6 +355,9 @@
             "strand": 1
           },
           "id": "NR_188604.1",
+          "qualifiers": {
+            "biotype": "lnc_RNA"
+          },
           "features": [
             {
               "type": "exon",
@@ -444,6 +456,9 @@
             "strand": 1
           },
           "id": "NR_188605.1",
+          "qualifiers": {
+            "biotype": "lnc_RNA"
+          },
           "features": [
             {
               "type": "exon",
@@ -554,6 +569,7 @@
           "id": "NR_144628.2",
           "qualifiers": {
             "gbkey": "misc_RNA",
+            "biotype": "misc_RNA",
             "annotation_added_from": {
               "freeze_date_id": "20220307",
               "full_assembly_name": "GRCh37.p13",
@@ -1390,6 +1406,7 @@
           "id": "NR_144628.1",
           "qualifiers": {
             "gbkey": "misc_RNA",
+            "biotype": "misc_RNA",
             "annotation_added_from": {
               "freeze_date_id": "20190906",
               "full_assembly_name": "GRCh37.p13",

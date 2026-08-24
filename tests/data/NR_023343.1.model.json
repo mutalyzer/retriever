@@ -53,6 +53,9 @@
           {
             "id": "NR_023343.1",
             "type": "ncRNA",
+            "qualifiers": {
+              "biotype": "snRNA"
+            },
             "location": {
               "type": "range",
               "start": {

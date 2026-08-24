@@ -74,7 +74,8 @@
           },
           "id": "NR_137167.1",
           "qualifiers": {
-            "gbkey": "misc_RNA"
+            "gbkey": "misc_RNA",
+            "biotype": "misc_RNA"
           },
           "features": [
             {

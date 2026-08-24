@@ -997,6 +997,11 @@
               "strand": -1
             },
             "id": "ENST00000577854",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "processed_transcript",
+              "version": "1"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1047,6 +1052,11 @@
               "strand": -1
             },
             "id": "ENST00000380150",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "processed_transcript",
+              "version": "2"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1168,6 +1178,11 @@
               "strand": -1
             },
             "id": "ENST00000470819",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "processed_transcript",
+              "version": "2"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1257,6 +1272,11 @@
               "strand": 1
             },
             "id": "ENST00000468603",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "7"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1307,6 +1327,11 @@
               "strand": 1
             },
             "id": "ENST00000651588",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "1"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1341,6 +1366,11 @@
               "strand": 1
             },
             "id": "ENST00000652420",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "1"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1391,6 +1421,11 @@
               "strand": 1
             },
             "id": "ENST00000584351",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "5"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1425,6 +1460,11 @@
               "strand": 1
             },
             "id": "ENST00000583719",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "5"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1459,6 +1499,11 @@
               "strand": 1
             },
             "id": "ENST00000580467",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "5"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1493,6 +1538,11 @@
               "strand": 1
             },
             "id": "ENST00000585267",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "5"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1527,6 +1577,11 @@
               "strand": 1
             },
             "id": "ENST00000580576",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "6"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1561,6 +1616,11 @@
               "strand": 1
             },
             "id": "ENST00000428597",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "6"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1595,6 +1655,11 @@
               "strand": 1
             },
             "id": "ENST00000455933",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "7"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1629,6 +1694,11 @@
               "strand": 1
             },
             "id": "ENST00000645313",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "2"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1663,6 +1733,11 @@
               "strand": 1
             },
             "id": "ENST00000582301",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "5"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1697,6 +1772,11 @@
               "strand": 1
             },
             "id": "ENST00000582072",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "5"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1731,6 +1811,11 @@
               "strand": 1
             },
             "id": "ENST00000584816",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "5"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1765,6 +1850,11 @@
               "strand": 1
             },
             "id": "ENST00000584020",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "5"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1799,6 +1889,11 @@
               "strand": 1
             },
             "id": "ENST00000577551",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "5"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1833,6 +1928,11 @@
               "strand": 1
             },
             "id": "ENST00000584637",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "5"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1867,6 +1967,11 @@
               "strand": 1
             },
             "id": "ENST00000581051",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "5"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1901,6 +2006,11 @@
               "strand": 1
             },
             "id": "ENST00000421632",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "2"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1935,6 +2045,11 @@
               "strand": 1
             },
             "id": "ENST00000651904",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "1"
+            },
             "features": [
               {
                 "type": "exon",
@@ -1969,6 +2084,11 @@
               "strand": 1
             },
             "id": "ENST00000651784",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "1"
+            },
             "features": [
               {
                 "type": "exon",
@@ -2003,6 +2123,11 @@
               "strand": 1
             },
             "id": "ENST00000650946",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "lncRNA",
+              "version": "1"
+            },
             "features": [
               {
                 "type": "exon",

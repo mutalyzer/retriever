@@ -15,7 +15,6 @@
     },
     "features": [
       {
-        "id": "ENSG00000206652",
         "type": "ncRNA_gene",
         "location": {
           "type": "range",
@@ -29,6 +28,7 @@
           },
           "strand": -1
         },
+        "id": "ENSG00000206652",
         "qualifiers": {
           "name": "RNU1-1",
           "assembly_name": "GRCh38",
@@ -36,8 +36,7 @@
         },
         "features": [
           {
-            "id": "ENST00000383925",
-            "type": "snRNA",
+            "type": "ncRNA",
             "location": {
               "type": "range",
               "start": {
@@ -50,13 +49,14 @@
               },
               "strand": -1
             },
+            "id": "ENST00000383925",
             "qualifiers": {
               "assembly_name": "GRCh38",
+              "biotype": "snRNA",
               "version": "1"
             },
             "features": [
               {
-                "id": "ENSE00001808303",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -69,7 +69,8 @@
                     "position": 16514285
                   },
                   "strand": -1
-                }
+                },
+                "id": "ENSE00001808303"
               }
             ]
           }

@@ -1,0 +1,2005 @@
+{
+  "annotations": {
+    "id": "17",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 59841265
+      },
+      "end": {
+        "type": "point",
+        "position": 59841337
+      }
+    },
+    "features": [
+      {
+        "type": "ncRNA_gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 59841265
+          },
+          "end": {
+            "type": "point",
+            "position": 59841337
+          },
+          "strand": 1
+        },
+        "id": "ENSG00000284190",
+        "qualifiers": {
+          "name": "MIR21",
+          "assembly_name": "GRCh38",
+          "version": "1"
+        },
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59841265
+              },
+              "end": {
+                "type": "point",
+                "position": 59841337
+              },
+              "strand": 1
+            },
+            "id": "ENST00000362134",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "miRNA",
+              "version": "1"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59841265
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59841337
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00001436897"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 59707191
+          },
+          "end": {
+            "type": "point",
+            "position": 59842255
+          },
+          "strand": 1
+        },
+        "id": "ENSG00000062716",
+        "qualifiers": {
+          "name": "VMP1",
+          "assembly_name": "GRCh38",
+          "version": "15"
+        },
+        "features": [
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707497
+              },
+              "end": {
+                "type": "point",
+                "position": 59842231
+              },
+              "strand": 1
+            },
+            "id": "ENST00000585847",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "6"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842231
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004013157"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59738852
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000465947"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000591877",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "3"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000467350"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000710770",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798369"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839796
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000518474"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000589823",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "8"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000466198"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707649
+              },
+              "end": {
+                "type": "point",
+                "position": 59842231
+              },
+              "strand": 1
+            },
+            "id": "ENST00000586245",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "6"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842231
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004013157"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59737511
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000466579"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000587259",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "7"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000465397"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707653
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000262291",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": [
+                "gencode_basic",
+                "Ensembl_canonical",
+                "gencode_primary",
+                "MANE_Select"
+              ],
+              "version": "9"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000262291"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707717
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000591315",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "version": "7"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000466511"
+              }
+            ]
+          },
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59837930
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000592790",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "retained_intron",
+              "version": "1"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59837930
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00002922329"
+              }
+            ]
+          },
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59837950
+              },
+              "end": {
+                "type": "point",
+                "position": 59841551
+              },
+              "strand": 1
+            },
+            "id": "ENST00000587470",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "biotype": "retained_intron",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59841551
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00001227966"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891487",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561546"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891488",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561547"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891489",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561548"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891490",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561549"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891491",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561550"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891492",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561551"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707653
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891493",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561552"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891494",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561553"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891495",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561554"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891496",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561555"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891497",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561556"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891498",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561557"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891499",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561558"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891500",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561559"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59729701
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000891501",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000561560"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000938025",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000608084"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000938026",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000608085"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000938027",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000608086"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000958712",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000628771"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59723351
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000958713",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "2"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000628772"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00000979482",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "1"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798369"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839796
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000649299"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00001040287",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "1"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798369"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839796
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000710104"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00001117456",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "1"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798370"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839888
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000787261"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00001122413",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": "gencode_basic",
+              "version": "1"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798370"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839888
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000792218"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 59707501
+              },
+              "end": {
+                "type": "point",
+                "position": 59842255
+              },
+              "strand": 1
+            },
+            "id": "ENST00001141181",
+            "qualifiers": {
+              "assembly_name": "GRCh38",
+              "tag": [
+                "gencode_basic",
+                "ens_canon_extended"
+              ],
+              "version": "1"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59839767
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59842255
+                  },
+                  "strand": 1
+                },
+                "id": "ENSE00004798366"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 59731446
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 59839911
+                  },
+                  "strand": 1
+                },
+                "id": "ENSP00000803291"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "TGTCGGGTAGCTTATCAGACTGATGTTGACTGTTGAATCTCATGGCAACACCAGTCGATGGGCTGTCTGACA",
+    "description": "ENSG00000284190.1 chromosome:GRCh38:17:59841266:59841337:1"
+  }
+}

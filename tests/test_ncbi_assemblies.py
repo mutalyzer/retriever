@@ -21,6 +21,16 @@ def test_ncbi_assemblies_general():
     models = get_annotation_models(metadata)
     for ref_id in ["NT_113901.1", "NT_167208.1", "NT_167222.1"]:
         assert models["GRCh37"][ref_id] == _expected_model(ref_id)
+    assert models["GRCh38"]["NT_167214.1"] == _expected_model("NT_167214.1")
+
+
+def test_ncbi_assemblies_restrict_ref_id_grch38():
+    metadata = load_metadata(
+        str(Path(__file__).parent.joinpath("data/annotation_releases/")), "GRCh38"
+    )
+    ref_id = "NT_167214.1"
+    models = get_annotation_models(metadata, ref_id_start=ref_id)
+    assert models["GRCh38"][ref_id] == _expected_model(ref_id)
 
 
 def test_ncbi_assemblies_restrict_ref_id():

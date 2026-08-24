@@ -1,0 +1,11 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NR_003286.4 1 1869
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+NR_003286.4	RefSeq	region	1	1869	.	+	.	ID=NR_003286.4:1..1869;Dbxref=taxon:9606;gbkey=Src;genome=genomic;mol_type=rRNA
+NR_003286.4	RefSeq	gene	1	1869	.	+	.	ID=gene-RNA18SN5;Dbxref=GeneID:100008588,HGNC:HGNC:53531;Name=RNA18SN5;description=RNA%2C 18S ribosomal N5;gbkey=Gene;gene=RNA18SN5;gene_synonym=RN18S1,RNA18S5
+NR_003286.4	RefSeq	rRNA	1	1869	.	+	.	ID=rna-RNA18SN5;Parent=gene-RNA18SN5;Dbxref=GeneID:100008588,HGNC:HGNC:53531;gbkey=rRNA;gene=RNA18SN5;product=RNA%2C 18S ribosomal N5
+NR_003286.4	RefSeq	exon	1	1869	.	+	.	ID=exon-RNA18SN5-1;Parent=rna-RNA18SN5;Dbxref=GeneID:100008588,HGNC:HGNC:53531;gbkey=rRNA;gene=RNA18SN5;product=RNA%2C 18S ribosomal N5
+NR_003286.4	RefSeq	exon	1	1869	.	+	.	ID=id-RNA18SN5;Parent=gene-RNA18SN5;Dbxref=GeneID:100008588,HGNC:HGNC:53531;gbkey=exon;gene=RNA18SN5;inference=alignment:Splign:2.1.0
+

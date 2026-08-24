@@ -44,6 +44,9 @@
           {
             "id": "XR_948219.2",
             "type": "ncRNA",
+            "qualifiers": {
+              "biotype": "lnc_RNA"
+            },
             "location": {
               "type": "range",
               "start": {

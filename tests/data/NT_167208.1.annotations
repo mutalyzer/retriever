@@ -71,6 +71,9 @@
             "strand": -1
           },
           "id": "NR_146655.1",
+          "qualifiers": {
+            "biotype": "lnc_RNA"
+          },
           "features": [
             {
               "type": "exon",
@@ -153,6 +156,9 @@
             "strand": -1
           },
           "id": "NR_146656.1",
+          "qualifiers": {
+            "biotype": "lnc_RNA"
+          },
           "features": [
             {
               "type": "exon",
@@ -251,6 +257,9 @@
             "strand": -1
           },
           "id": "NR_146657.1",
+          "qualifiers": {
+            "biotype": "lnc_RNA"
+          },
           "features": [
             {
               "type": "exon",

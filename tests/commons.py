@@ -16,6 +16,7 @@ API_BASE_MAP = {
     "ENSMUSG00000022346": {"version": 18, "species": "mus_musculus"},
     "ENST00000304494": {"version": 10, "species": "homo_sapiens"},
     "ENST00000000000": {"version": 20, "species": "homo_sapiens"},
+    "ENSG00000284190": {"version": 1, "species": "homo_sapiens"},
 }
 API_BASE_GRCH37_MAP = {
     "ENSG00000147889": {"version": 12, "species": "homo_sapiens"},
@@ -128,6 +129,7 @@ references = {
             "XR_948219.2",
             "NR_023343.1",
             "NC_015338.1",
+            "NR_003286.4",
         ]
     },
     "ensembl_rest": {
@@ -136,6 +138,7 @@ references = {
             "ENST00000383925",
             "ENST00000304494",
             "ENSG00000198899",
+            "ENSG00000284190",
         ]
     },
     "ensembl_tark": {

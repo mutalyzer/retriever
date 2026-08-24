@@ -1,0 +1,692 @@
+{
+  "id": "NT_167214.1",
+  "type": "record",
+  "location": {
+    "type": "range",
+    "start": {
+      "type": "point",
+      "position": 0
+    },
+    "end": {
+      "type": "point",
+      "position": 161802
+    }
+  },
+  "qualifiers": {
+    "dbxref": "taxon:9606",
+    "name": "Unknown",
+    "chromosome": "Unknown",
+    "genome": "genomic",
+    "mol_type": "genomic DNA",
+    "annotations": [
+      {
+        "freeze_date_id": "20190607",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20211119",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20250801",
+        "full_assembly_name": "GRCh38.p14",
+        "full_assembly_accession": "GCF_000001405.40"
+      }
+    ]
+  },
+  "features": [
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 4556
+        },
+        "end": {
+          "type": "point",
+          "position": 9392
+        },
+        "strand": -1
+      },
+      "id": "LOC100507395",
+      "qualifiers": {
+        "name": "LOC100507395"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 4556
+            },
+            "end": {
+              "type": "point",
+              "position": 9392
+            },
+            "strand": -1
+          },
+          "id": "XR_950600.3",
+          "qualifiers": {
+            "biotype": "lnc_RNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 5540
+                },
+                "end": {
+                  "type": "point",
+                  "position": 9392
+                },
+                "strand": -1
+              },
+              "id": "exon-XR_950600.3-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 4556
+                },
+                "end": {
+                  "type": "point",
+                  "position": 4710
+                },
+                "strand": -1
+              },
+              "id": "exon-XR_950600.3-2"
+            }
+          ]
+        },
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 4561
+            },
+            "end": {
+              "type": "point",
+              "position": 8638
+            },
+            "strand": -1
+          },
+          "id": "XR_950600.2",
+          "qualifiers": {
+            "biotype": "lnc_RNA",
+            "annotation_added_from": {
+              "freeze_date_id": "20211119",
+              "full_assembly_name": "GRCh38.p13",
+              "full_assembly_accession": "GCF_000001405.39"
+            }
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 5540
+                },
+                "end": {
+                  "type": "point",
+                  "position": 8638
+                },
+                "strand": -1
+              },
+              "id": "exon-XR_950600.2-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 4561
+                },
+                "end": {
+                  "type": "point",
+                  "position": 4710
+                },
+                "strand": -1
+              },
+              "id": "exon-XR_950600.2-2"
+            }
+          ]
+        },
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 4561
+            },
+            "end": {
+              "type": "point",
+              "position": 8638
+            },
+            "strand": -1
+          },
+          "id": "XR_950601.2",
+          "qualifiers": {
+            "biotype": "lnc_RNA",
+            "annotation_added_from": {
+              "freeze_date_id": "20211119",
+              "full_assembly_name": "GRCh38.p13",
+              "full_assembly_accession": "GCF_000001405.39"
+            }
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 5610
+                },
+                "end": {
+                  "type": "point",
+                  "position": 8638
+                },
+                "strand": -1
+              },
+              "id": "exon-XR_950601.2-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 4561
+                },
+                "end": {
+                  "type": "point",
+                  "position": 4710
+                },
+                "strand": -1
+              },
+              "id": "exon-XR_950601.2-2"
+            }
+          ]
+        },
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 4561
+            },
+            "end": {
+              "type": "point",
+              "position": 8638
+            },
+            "strand": -1
+          },
+          "id": "XR_950602.2",
+          "qualifiers": {
+            "biotype": "lnc_RNA",
+            "annotation_added_from": {
+              "freeze_date_id": "20211119",
+              "full_assembly_name": "GRCh38.p13",
+              "full_assembly_accession": "GCF_000001405.39"
+            }
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 6313
+                },
+                "end": {
+                  "type": "point",
+                  "position": 8638
+                },
+                "strand": -1
+              },
+              "id": "exon-XR_950602.2-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 4561
+                },
+                "end": {
+                  "type": "point",
+                  "position": 4710
+                },
+                "strand": -1
+              },
+              "id": "exon-XR_950602.2-2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 97128
+        },
+        "end": {
+          "type": "point",
+          "position": 126696
+        },
+        "strand": 1
+      },
+      "id": "LOC100507412",
+      "qualifiers": {
+        "name": "LOC100507412"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 97128
+            },
+            "end": {
+              "type": "point",
+              "position": 126696
+            },
+            "strand": 1
+          },
+          "id": "NR_038958.1",
+          "qualifiers": {
+            "biotype": "lnc_RNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 97128
+                },
+                "end": {
+                  "type": "point",
+                  "position": 97436
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_038958.1-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 100238
+                },
+                "end": {
+                  "type": "point",
+                  "position": 100554
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_038958.1-2"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 121604
+                },
+                "end": {
+                  "type": "point",
+                  "position": 121701
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_038958.1-3"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 121828
+                },
+                "end": {
+                  "type": "point",
+                  "position": 122829
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_038958.1-4"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 122990
+                },
+                "end": {
+                  "type": "point",
+                  "position": 123082
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_038958.1-5"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 124777
+                },
+                "end": {
+                  "type": "point",
+                  "position": 124995
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_038958.1-6"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 125783
+                },
+                "end": {
+                  "type": "point",
+                  "position": 126696
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_038958.1-7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 105423
+        },
+        "end": {
+          "type": "point",
+          "position": 118780
+        },
+        "strand": 1
+      },
+      "id": "RNA45SN5",
+      "qualifiers": {
+        "name": "RNA45SN5",
+        "synonym": "RNA45S5",
+        "HGNC": "53530"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 105423
+            },
+            "end": {
+              "type": "point",
+              "position": 118780
+            },
+            "strand": 1
+          },
+          "id": "NR_046235.3",
+          "qualifiers": {
+            "biotype": "rRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 105423
+                },
+                "end": {
+                  "type": "point",
+                  "position": 118780
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_046235.3-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 109077
+        },
+        "end": {
+          "type": "point",
+          "position": 110946
+        },
+        "strand": 1
+      },
+      "id": "RNA18SN5",
+      "qualifiers": {
+        "name": "RNA18SN5",
+        "synonym": [
+          "RN18S1",
+          "RNA18S5"
+        ],
+        "HGNC": "53531"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 109077
+            },
+            "end": {
+              "type": "point",
+              "position": 110946
+            },
+            "strand": 1
+          },
+          "id": "NR_003286.4",
+          "qualifiers": {
+            "biotype": "rRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 109077
+                },
+                "end": {
+                  "type": "point",
+                  "position": 110946
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_003286.4-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 112023
+        },
+        "end": {
+          "type": "point",
+          "position": 112180
+        },
+        "strand": 1
+      },
+      "id": "RNA5-8SN5",
+      "qualifiers": {
+        "name": "RNA5-8SN5",
+        "synonym": [
+          "RN5-8S1",
+          "RNA5-8S5"
+        ],
+        "HGNC": "53533"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 112023
+            },
+            "end": {
+              "type": "point",
+              "position": 112180
+            },
+            "strand": 1
+          },
+          "id": "NR_003285.3",
+          "qualifiers": {
+            "biotype": "rRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 112023
+                },
+                "end": {
+                  "type": "point",
+                  "position": 112180
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_003285.3-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 113347
+        },
+        "end": {
+          "type": "point",
+          "position": 118417
+        },
+        "strand": 1
+      },
+      "id": "RNA28SN5",
+      "qualifiers": {
+        "name": "RNA28SN5",
+        "synonym": [
+          "RN28S1",
+          "RNA28S5"
+        ],
+        "HGNC": "53532"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 113347
+            },
+            "end": {
+              "type": "point",
+              "position": 118417
+            },
+            "strand": 1
+          },
+          "id": "NR_003287.4",
+          "qualifiers": {
+            "biotype": "rRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 113347
+                },
+                "end": {
+                  "type": "point",
+                  "position": 118417
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_003287.4-1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

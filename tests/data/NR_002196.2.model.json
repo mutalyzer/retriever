@@ -23,7 +23,6 @@
     },
     "features": [
       {
-        "id": "H19",
         "type": "gene",
         "location": {
           "type": "range",
@@ -37,6 +36,7 @@
           },
           "strand": 1
         },
+        "id": "H19",
         "qualifiers": {
           "name": "H19",
           "synonym": [
@@ -55,6 +55,9 @@
           {
             "id": "NR_002196.2",
             "type": "ncRNA",
+            "qualifiers": {
+              "biotype": "lnc_RNA"
+            },
             "location": {
               "type": "range",
               "start": {
@@ -68,7 +71,6 @@
             },
             "features": [
               {
-                "id": "id-H19",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -81,10 +83,10 @@
                     "position": 1358
                   },
                   "strand": 1
-                }
+                },
+                "id": "id-H19"
               },
               {
-                "id": "id-H19-2",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -97,10 +99,10 @@
                     "position": 1493
                   },
                   "strand": 1
-                }
+                },
+                "id": "id-H19-2"
               },
               {
-                "id": "id-H19-3",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -113,10 +115,10 @@
                     "position": 1606
                   },
                   "strand": 1
-                }
+                },
+                "id": "id-H19-3"
               },
               {
-                "id": "id-H19-4",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -129,10 +131,10 @@
                     "position": 1729
                   },
                   "strand": 1
-                }
+                },
+                "id": "id-H19-4"
               },
               {
-                "id": "id-H19-5",
                 "type": "exon",
                 "location": {
                   "type": "range",
@@ -145,7 +147,8 @@
                     "position": 2348
                   },
                   "strand": 1
-                }
+                },
+                "id": "id-H19-5"
               }
             ]
           }

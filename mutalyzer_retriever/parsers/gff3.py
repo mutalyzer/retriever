@@ -48,6 +48,9 @@ CONSIDERED_TYPES = [
     "CDS",
     "lnc_RNA",
     "snRNA",
+    "miRNA",
+    "tRNA",
+    "rRNA",
     "polypeptide",
     "transcript",
 ]
@@ -95,6 +98,27 @@ QUALIFIERS = {
     "snRNA": {
         "version": "version",
         "assembly_name": "assembly_name",
+        "biotype": "biotype",  # Ensembl, e.g. snRNA
+    },
+    "miRNA": {
+        "version": "version",
+        "assembly_name": "assembly_name",
+        "biotype": "biotype",  # Ensembl, e.g. miRNA
+    },
+    "tRNA": {
+        "version": "version",
+        "assembly_name": "assembly_name",
+        "biotype": "biotype",  # Ensembl, e.g. Mt_tRNA
+    },
+    "rRNA": {
+        "version": "version",
+        "assembly_name": "assembly_name",
+        "biotype": "biotype",  # Ensembl, e.g. Mt_rRNA
+    },
+    "lnc_RNA": {
+        "version": "version",
+        "assembly_name": "assembly_name",
+        "biotype": "biotype",  # Ensembl, e.g. lncRNA, processed_transcript
     },
     "polypeptide": {"gbkey": "gbkey", "product": "product"},
 }
@@ -113,9 +137,18 @@ def _get_feature_id(feature):
             return feature.qualifiers["gene_id"][0]
         elif feature.qualifiers.get("Name"):
             return feature.qualifiers["Name"][0]
-    elif feature.type in ["mRNA", "lnc_RNA", "snRNA", "transcript"]:
+    elif feature.type in ["mRNA", "lnc_RNA", "snRNA", "miRNA", "transcript"]:
         if feature.qualifiers.get("transcript_id"):
             return feature.qualifiers["transcript_id"][0]
+    elif feature.type in ["tRNA", "rRNA"]:
+        # Fall back to the GFF3 local id, stripped of NCBI's "rna-" prefix,
+        # unless it's of this form "rna-NC_...:1..69", unusable in HGVS
+        if feature.qualifiers.get("transcript_id"):
+            return feature.qualifiers["transcript_id"][0]
+        elif feature.id and ":" not in feature.id:
+            if feature.id.startswith("rna-"):
+                return feature.id[len("rna-"):]
+            return feature.id
     elif feature.type == "CDS" and feature.qualifiers.get("protein_id"):
         return feature.qualifiers["protein_id"][0]
     elif feature.type == "exon":
@@ -215,6 +248,15 @@ def _get_qualifiers(feature):
                 for dbxref_entry in q["Dbxref"]:
                     if "Ensembl" in dbxref_entry:
                         qs["Ensembl"] = dbxref_entry.split(":")[-1]
+        if t in ["tRNA", "rRNA", "lnc_RNA", "snRNA", "miRNA"] and "biotype" not in qs:
+            # NCBI has no biotype qualifier; the type itself already names
+            # the RNA class, so use it as the closest equivalent to Ensembl.
+            qs["biotype"] = t
+        elif t == "transcript" and "biotype" not in qs and qs.get("gbkey"):
+            # "transcript" is generic, unlike the types above, so the type itself is
+            # not informative; gbkey (e.g. misc_RNA) is NCBI's closest equivalent to
+            # Ensembl's biotype here.
+            qs["biotype"] = qs["gbkey"]
         _extract_special_qualifiers(qs)
         return qs
 
@@ -235,7 +277,7 @@ def _get_feature_type(feature):
         return "gene"
     elif feature.type in ["mRNA"]:
         return "mRNA"
-    elif feature.type in ["lnc_RNA"]:
+    elif feature.type in ["lnc_RNA", "tRNA", "rRNA", "snRNA", "miRNA"]:
         return "ncRNA"
     elif feature.type in ["exon"]:
         return "exon"
@@ -279,8 +321,12 @@ def _get_feature_model(feature, considered_types=CONSIDERED_TYPES):
                     feature=sub_feature,
                     considered_types=considered_types,
                 )
-                if sub_feature_model:
-                    model["features"].append(sub_feature_model)
+                if not sub_feature_model:
+                    continue
+                # tRNA/rRNA can have no ids, so drop them here
+                if sub_feature.type in ("tRNA", "rRNA") and not sub_feature_model.get("id"):
+                    continue
+                model["features"].append(sub_feature_model)
         if feature.type == "mRNA":
             _combine_cdses(model)
         return model
@@ -320,10 +366,25 @@ def _get_rna_features(record, mol_type):
     rna_model = {"id": record.id, "type": feature_type}
 
     features = _get_record_features_model(
-        record=record, considered_types=["gene", "exon", "CDS", "mRNA", "lnc_RNA"]
+        record=record,
+        considered_types=[
+            "gene", "exon", "CDS", "mRNA", "lnc_RNA", "tRNA", "rRNA", "snRNA", "miRNA",
+        ],
     )
 
     if features:
+        # Take the RNA feature's own qualifiers (e.g. biotype) onto the rna_model.
+        rna_feature = next(
+            (
+                f
+                for f in features[0].get("features", [])
+                if f.get("type") in ("ncRNA", "mRNA")
+            ),
+            None,
+        )
+        if rna_feature and rna_feature.get("qualifiers"):
+            rna_model["qualifiers"] = rna_feature["qualifiers"]
+
         exon_positions = []
         if features[0].get("features"):
             for sub_feature in features[0]["features"]:

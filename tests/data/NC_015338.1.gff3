@@ -79,4 +79,3 @@ NC_015338.1	RefSeq	tRNA	15573	15642	.	-	.	ID=rna-NC_015338.1:15573..15642;gbkey=
 NC_015338.1	RefSeq	exon	15573	15642	.	-	.	ID=exon-NC_015338.1:15573..15642-1;Parent=rna-NC_015338.1:15573..15642;gbkey=tRNA;product=tRNA-Pro
 NC_015338.1	RefSeq	D_loop	15643	16493	.	+	.	ID=id-NC_015338.1:15643..16493;Note=control region;gbkey=D-loop
 
-

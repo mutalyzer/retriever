@@ -22,7 +22,6 @@
     },
     "features": [
       {
-        "id": "TRNF",
         "type": "gene",
         "location": {
           "type": "range",
@@ -36,14 +35,52 @@
           },
           "strand": 1
         },
+        "id": "TRNF",
         "qualifiers": {
           "name": "TRNF",
           "HGNC": "7481"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 576
+              },
+              "end": {
+                "type": "point",
+                "position": 647
+              },
+              "strand": 1
+            },
+            "id": "TRNF",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 576
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 647
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRNF-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "RNR1",
         "type": "gene",
         "location": {
           "type": "range",
@@ -57,15 +94,53 @@
           },
           "strand": 1
         },
+        "id": "RNR1",
         "qualifiers": {
           "name": "RNR1",
           "synonym": "MTRNR1",
           "HGNC": "7470"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 647
+              },
+              "end": {
+                "type": "point",
+                "position": 1601
+              },
+              "strand": 1
+            },
+            "id": "RNR1",
+            "qualifiers": {
+              "biotype": "rRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 647
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 1601
+                  },
+                  "strand": 1
+                },
+                "id": "exon-RNR1-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "TRNV",
         "type": "gene",
         "location": {
           "type": "range",
@@ -79,15 +154,53 @@
           },
           "strand": 1
         },
+        "id": "TRNV",
         "qualifiers": {
           "name": "TRNV",
           "synonym": "MTTV",
           "HGNC": "7500"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 1601
+              },
+              "end": {
+                "type": "point",
+                "position": 1670
+              },
+              "strand": 1
+            },
+            "id": "TRNV",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 1601
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 1670
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRNV-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "RNR2",
         "type": "gene",
         "location": {
           "type": "range",
@@ -101,15 +214,53 @@
           },
           "strand": 1
         },
+        "id": "RNR2",
         "qualifiers": {
           "name": "RNR2",
           "synonym": "MTRNR2",
           "HGNC": "7471"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 1670
+              },
+              "end": {
+                "type": "point",
+                "position": 3229
+              },
+              "strand": 1
+            },
+            "id": "RNR2",
+            "qualifiers": {
+              "biotype": "rRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 1670
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 3229
+                  },
+                  "strand": 1
+                },
+                "id": "exon-RNR2-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "TRNL1",
         "type": "gene",
         "location": {
           "type": "range",
@@ -123,15 +274,53 @@
           },
           "strand": 1
         },
+        "id": "TRNL1",
         "qualifiers": {
           "name": "TRNL1",
           "synonym": "MTTL1",
           "HGNC": "7490"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 3229
+              },
+              "end": {
+                "type": "point",
+                "position": 3304
+              },
+              "strand": 1
+            },
+            "id": "TRNL1",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 3229
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 3304
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRNL1-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "ND1",
         "type": "gene",
         "location": {
           "type": "range",
@@ -145,6 +334,7 @@
           },
           "strand": 1
         },
+        "id": "ND1",
         "qualifiers": {
           "name": "ND1",
           "synonym": "MTND1",
@@ -152,7 +342,6 @@
         },
         "features": [
           {
-            "id": "YP_003024026.1",
             "type": "CDS",
             "location": {
               "type": "range",
@@ -166,6 +355,7 @@
               },
               "strand": 1
             },
+            "id": "YP_003024026.1",
             "qualifiers": {
               "translation_exception": {
                 "exceptions": [
@@ -192,7 +382,6 @@
         ]
       },
       {
-        "id": "TRNI",
         "type": "gene",
         "location": {
           "type": "range",
@@ -206,15 +395,53 @@
           },
           "strand": 1
         },
+        "id": "TRNI",
         "qualifiers": {
           "name": "TRNI",
           "synonym": "MTTI",
           "HGNC": "7488"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 4262
+              },
+              "end": {
+                "type": "point",
+                "position": 4331
+              },
+              "strand": 1
+            },
+            "id": "TRNI",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 4262
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 4331
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRNI-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "TRNQ",
         "type": "gene",
         "location": {
           "type": "range",
@@ -228,15 +455,53 @@
           },
           "strand": -1
         },
+        "id": "TRNQ",
         "qualifiers": {
           "name": "TRNQ",
           "synonym": "MTTQ",
           "HGNC": "7495"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 4328
+              },
+              "end": {
+                "type": "point",
+                "position": 4400
+              },
+              "strand": -1
+            },
+            "id": "TRNQ",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 4328
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 4400
+                  },
+                  "strand": -1
+                },
+                "id": "exon-TRNQ-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "TRNM",
         "type": "gene",
         "location": {
           "type": "range",
@@ -250,15 +515,53 @@
           },
           "strand": 1
         },
+        "id": "TRNM",
         "qualifiers": {
           "name": "TRNM",
           "synonym": "MTTM",
           "HGNC": "7492"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 4401
+              },
+              "end": {
+                "type": "point",
+                "position": 4469
+              },
+              "strand": 1
+            },
+            "id": "TRNM",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 4401
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 4469
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRNM-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "ND2",
         "type": "gene",
         "location": {
           "type": "range",
@@ -272,6 +575,7 @@
           },
           "strand": 1
         },
+        "id": "ND2",
         "qualifiers": {
           "name": "ND2",
           "synonym": "MTND2",
@@ -279,7 +583,6 @@
         },
         "features": [
           {
-            "id": "YP_003024027.1",
             "type": "CDS",
             "location": {
               "type": "range",
@@ -293,20 +596,14 @@
               },
               "strand": 1
             },
+            "id": "YP_003024027.1",
             "qualifiers": {
               "translation_exception": {
                 "exceptions": [
                   {
                     "location": {
-                      "type": "range",
-                      "start": {
-                        "type": "point",
-                        "position": 5510
-                      },
-                      "end": {
-                        "type": "point",
-                        "position": 5511
-                      },
+                      "type": "point",
+                      "position": 5510,
                       "strand": 1
                     },
                     "amino_acid": "*"
@@ -319,7 +616,6 @@
         ]
       },
       {
-        "id": "TRNW",
         "type": "gene",
         "location": {
           "type": "range",
@@ -333,15 +629,53 @@
           },
           "strand": 1
         },
+        "id": "TRNW",
         "qualifiers": {
           "name": "TRNW",
           "synonym": "MTTW",
           "HGNC": "7501"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 5511
+              },
+              "end": {
+                "type": "point",
+                "position": 5579
+              },
+              "strand": 1
+            },
+            "id": "TRNW",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 5511
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 5579
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRNW-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "TRNA",
         "type": "gene",
         "location": {
           "type": "range",
@@ -355,15 +689,53 @@
           },
           "strand": -1
         },
+        "id": "TRNA",
         "qualifiers": {
           "name": "TRNA",
           "synonym": "MTTA",
           "HGNC": "7475"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 5586
+              },
+              "end": {
+                "type": "point",
+                "position": 5655
+              },
+              "strand": -1
+            },
+            "id": "TRNA",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 5586
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 5655
+                  },
+                  "strand": -1
+                },
+                "id": "exon-TRNA-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "TRNN",
         "type": "gene",
         "location": {
           "type": "range",
@@ -377,15 +749,53 @@
           },
           "strand": -1
         },
+        "id": "TRNN",
         "qualifiers": {
           "name": "TRNN",
           "synonym": "MTTN",
           "HGNC": "7493"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 5656
+              },
+              "end": {
+                "type": "point",
+                "position": 5729
+              },
+              "strand": -1
+            },
+            "id": "TRNN",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 5656
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 5729
+                  },
+                  "strand": -1
+                },
+                "id": "exon-TRNN-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "TRNC",
         "type": "gene",
         "location": {
           "type": "range",
@@ -399,15 +809,53 @@
           },
           "strand": -1
         },
+        "id": "TRNC",
         "qualifiers": {
           "name": "TRNC",
           "synonym": "MTTC",
           "HGNC": "7477"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 5760
+              },
+              "end": {
+                "type": "point",
+                "position": 5826
+              },
+              "strand": -1
+            },
+            "id": "TRNC",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 5760
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 5826
+                  },
+                  "strand": -1
+                },
+                "id": "exon-TRNC-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "TRNY",
         "type": "gene",
         "location": {
           "type": "range",
@@ -421,15 +869,53 @@
           },
           "strand": -1
         },
+        "id": "TRNY",
         "qualifiers": {
           "name": "TRNY",
           "synonym": "MTTY",
           "HGNC": "7502"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 5825
+              },
+              "end": {
+                "type": "point",
+                "position": 5891
+              },
+              "strand": -1
+            },
+            "id": "TRNY",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 5825
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 5891
+                  },
+                  "strand": -1
+                },
+                "id": "exon-TRNY-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "COX1",
         "type": "gene",
         "location": {
           "type": "range",
@@ -443,6 +929,7 @@
           },
           "strand": 1
         },
+        "id": "COX1",
         "qualifiers": {
           "name": "COX1",
           "synonym": [
@@ -453,7 +940,6 @@
         },
         "features": [
           {
-            "id": "YP_003024028.1",
             "type": "CDS",
             "location": {
               "type": "range",
@@ -467,6 +953,7 @@
               },
               "strand": 1
             },
+            "id": "YP_003024028.1",
             "qualifiers": {
               "translation_table": "2"
             }
@@ -474,7 +961,6 @@
         ]
       },
       {
-        "id": "TRNS1",
         "type": "gene",
         "location": {
           "type": "range",
@@ -488,15 +974,53 @@
           },
           "strand": -1
         },
+        "id": "TRNS1",
         "qualifiers": {
           "name": "TRNS1",
           "synonym": "MTTS1",
           "HGNC": "7497"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 7445
+              },
+              "end": {
+                "type": "point",
+                "position": 7514
+              },
+              "strand": -1
+            },
+            "id": "TRNS1",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 7445
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 7514
+                  },
+                  "strand": -1
+                },
+                "id": "exon-TRNS1-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "TRND",
         "type": "gene",
         "location": {
           "type": "range",
@@ -510,15 +1034,53 @@
           },
           "strand": 1
         },
+        "id": "TRND",
         "qualifiers": {
           "name": "TRND",
           "synonym": "MTTD",
           "HGNC": "7478"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 7517
+              },
+              "end": {
+                "type": "point",
+                "position": 7585
+              },
+              "strand": 1
+            },
+            "id": "TRND",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 7517
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 7585
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRND-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "COX2",
         "type": "gene",
         "location": {
           "type": "range",
@@ -532,6 +1094,7 @@
           },
           "strand": 1
         },
+        "id": "COX2",
         "qualifiers": {
           "name": "COX2",
           "synonym": [
@@ -542,7 +1105,6 @@
         },
         "features": [
           {
-            "id": "YP_003024029.1",
             "type": "CDS",
             "location": {
               "type": "range",
@@ -556,6 +1118,7 @@
               },
               "strand": 1
             },
+            "id": "YP_003024029.1",
             "qualifiers": {
               "translation_table": "2"
             }
@@ -563,7 +1126,6 @@
         ]
       },
       {
-        "id": "TRNK",
         "type": "gene",
         "location": {
           "type": "range",
@@ -577,15 +1139,53 @@
           },
           "strand": 1
         },
+        "id": "TRNK",
         "qualifiers": {
           "name": "TRNK",
           "synonym": "MTTK",
           "HGNC": "7489"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 8294
+              },
+              "end": {
+                "type": "point",
+                "position": 8364
+              },
+              "strand": 1
+            },
+            "id": "TRNK",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 8294
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 8364
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRNK-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "ATP8",
         "type": "gene",
         "location": {
           "type": "range",
@@ -599,6 +1199,7 @@
           },
           "strand": 1
         },
+        "id": "ATP8",
         "qualifiers": {
           "name": "ATP8",
           "synonym": [
@@ -609,7 +1210,6 @@
         },
         "features": [
           {
-            "id": "YP_003024030.1",
             "type": "CDS",
             "location": {
               "type": "range",
@@ -623,6 +1223,7 @@
               },
               "strand": 1
             },
+            "id": "YP_003024030.1",
             "qualifiers": {
               "translation_table": "2"
             }
@@ -630,7 +1231,6 @@
         ]
       },
       {
-        "id": "ATP6",
         "type": "gene",
         "location": {
           "type": "range",
@@ -644,6 +1244,7 @@
           },
           "strand": 1
         },
+        "id": "ATP6",
         "qualifiers": {
           "name": "ATP6",
           "synonym": [
@@ -654,7 +1255,6 @@
         },
         "features": [
           {
-            "id": "YP_003024031.1",
             "type": "CDS",
             "location": {
               "type": "range",
@@ -668,6 +1268,7 @@
               },
               "strand": 1
             },
+            "id": "YP_003024031.1",
             "qualifiers": {
               "translation_table": "2"
             }
@@ -675,7 +1276,6 @@
         ]
       },
       {
-        "id": "COX3",
         "type": "gene",
         "location": {
           "type": "range",
@@ -689,6 +1289,7 @@
           },
           "strand": 1
         },
+        "id": "COX3",
         "qualifiers": {
           "name": "COX3",
           "synonym": [
@@ -699,7 +1300,6 @@
         },
         "features": [
           {
-            "id": "YP_003024032.1",
             "type": "CDS",
             "location": {
               "type": "range",
@@ -713,20 +1313,14 @@
               },
               "strand": 1
             },
+            "id": "YP_003024032.1",
             "qualifiers": {
               "translation_exception": {
                 "exceptions": [
                   {
                     "location": {
-                      "type": "range",
-                      "start": {
-                        "type": "point",
-                        "position": 9989
-                      },
-                      "end": {
-                        "type": "point",
-                        "position": 9990
-                      },
+                      "type": "point",
+                      "position": 9989,
                       "strand": 1
                     },
                     "amino_acid": "*"
@@ -739,7 +1333,6 @@
         ]
       },
       {
-        "id": "TRNG",
         "type": "gene",
         "location": {
           "type": "range",
@@ -753,15 +1346,53 @@
           },
           "strand": 1
         },
+        "id": "TRNG",
         "qualifiers": {
           "name": "TRNG",
           "synonym": "MTTG",
           "HGNC": "7486"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 9990
+              },
+              "end": {
+                "type": "point",
+                "position": 10058
+              },
+              "strand": 1
+            },
+            "id": "TRNG",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 9990
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 10058
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRNG-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "ND3",
         "type": "gene",
         "location": {
           "type": "range",
@@ -775,6 +1406,7 @@
           },
           "strand": 1
         },
+        "id": "ND3",
         "qualifiers": {
           "name": "ND3",
           "synonym": "MTND3",
@@ -782,7 +1414,6 @@
         },
         "features": [
           {
-            "id": "YP_003024033.1",
             "type": "CDS",
             "location": {
               "type": "range",
@@ -796,20 +1427,14 @@
               },
               "strand": 1
             },
+            "id": "YP_003024033.1",
             "qualifiers": {
               "translation_exception": {
                 "exceptions": [
                   {
                     "location": {
-                      "type": "range",
-                      "start": {
-                        "type": "point",
-                        "position": 10403
-                      },
-                      "end": {
-                        "type": "point",
-                        "position": 10404
-                      },
+                      "type": "point",
+                      "position": 10403,
                       "strand": 1
                     },
                     "amino_acid": "*"
@@ -822,7 +1447,6 @@
         ]
       },
       {
-        "id": "TRNR",
         "type": "gene",
         "location": {
           "type": "range",
@@ -836,15 +1460,53 @@
           },
           "strand": 1
         },
+        "id": "TRNR",
         "qualifiers": {
           "name": "TRNR",
           "synonym": "MTTR",
           "HGNC": "7496"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 10404
+              },
+              "end": {
+                "type": "point",
+                "position": 10469
+              },
+              "strand": 1
+            },
+            "id": "TRNR",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 10404
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 10469
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRNR-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "ND4L",
         "type": "gene",
         "location": {
           "type": "range",
@@ -858,6 +1520,7 @@
           },
           "strand": 1
         },
+        "id": "ND4L",
         "qualifiers": {
           "name": "ND4L",
           "synonym": "MTND4L",
@@ -865,7 +1528,6 @@
         },
         "features": [
           {
-            "id": "YP_003024034.1",
             "type": "CDS",
             "location": {
               "type": "range",
@@ -879,6 +1541,7 @@
               },
               "strand": 1
             },
+            "id": "YP_003024034.1",
             "qualifiers": {
               "translation_table": "2"
             }
@@ -886,7 +1549,6 @@
         ]
       },
       {
-        "id": "ND4",
         "type": "gene",
         "location": {
           "type": "range",
@@ -900,6 +1562,7 @@
           },
           "strand": 1
         },
+        "id": "ND4",
         "qualifiers": {
           "name": "ND4",
           "synonym": "MTND4",
@@ -907,7 +1570,6 @@
         },
         "features": [
           {
-            "id": "YP_003024035.1",
             "type": "CDS",
             "location": {
               "type": "range",
@@ -921,20 +1583,14 @@
               },
               "strand": 1
             },
+            "id": "YP_003024035.1",
             "qualifiers": {
               "translation_exception": {
                 "exceptions": [
                   {
                     "location": {
-                      "type": "range",
-                      "start": {
-                        "type": "point",
-                        "position": 12136
-                      },
-                      "end": {
-                        "type": "point",
-                        "position": 12137
-                      },
+                      "type": "point",
+                      "position": 12136,
                       "strand": 1
                     },
                     "amino_acid": "*"
@@ -947,7 +1603,6 @@
         ]
       },
       {
-        "id": "TRNH",
         "type": "gene",
         "location": {
           "type": "range",
@@ -961,15 +1616,53 @@
           },
           "strand": 1
         },
+        "id": "TRNH",
         "qualifiers": {
           "name": "TRNH",
           "synonym": "MTTH",
           "HGNC": "7487"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 12137
+              },
+              "end": {
+                "type": "point",
+                "position": 12206
+              },
+              "strand": 1
+            },
+            "id": "TRNH",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 12137
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 12206
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRNH-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "TRNS2",
         "type": "gene",
         "location": {
           "type": "range",
@@ -983,15 +1676,53 @@
           },
           "strand": 1
         },
+        "id": "TRNS2",
         "qualifiers": {
           "name": "TRNS2",
           "synonym": "MTTS2",
           "HGNC": "7498"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 12206
+              },
+              "end": {
+                "type": "point",
+                "position": 12265
+              },
+              "strand": 1
+            },
+            "id": "TRNS2",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 12206
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 12265
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRNS2-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "TRNL2",
         "type": "gene",
         "location": {
           "type": "range",
@@ -1005,15 +1736,53 @@
           },
           "strand": 1
         },
+        "id": "TRNL2",
         "qualifiers": {
           "name": "TRNL2",
           "synonym": "MTTL2",
           "HGNC": "7491"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 12265
+              },
+              "end": {
+                "type": "point",
+                "position": 12336
+              },
+              "strand": 1
+            },
+            "id": "TRNL2",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 12265
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 12336
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRNL2-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "ND5",
         "type": "gene",
         "location": {
           "type": "range",
@@ -1027,6 +1796,7 @@
           },
           "strand": 1
         },
+        "id": "ND5",
         "qualifiers": {
           "name": "ND5",
           "synonym": "MTND5",
@@ -1034,7 +1804,6 @@
         },
         "features": [
           {
-            "id": "YP_003024036.1",
             "type": "CDS",
             "location": {
               "type": "range",
@@ -1048,6 +1817,7 @@
               },
               "strand": 1
             },
+            "id": "YP_003024036.1",
             "qualifiers": {
               "translation_table": "2"
             }
@@ -1055,7 +1825,6 @@
         ]
       },
       {
-        "id": "ND6",
         "type": "gene",
         "location": {
           "type": "range",
@@ -1069,6 +1838,7 @@
           },
           "strand": -1
         },
+        "id": "ND6",
         "qualifiers": {
           "name": "ND6",
           "synonym": "MTND6",
@@ -1076,7 +1846,6 @@
         },
         "features": [
           {
-            "id": "YP_003024037.1",
             "type": "CDS",
             "location": {
               "type": "range",
@@ -1090,6 +1859,7 @@
               },
               "strand": -1
             },
+            "id": "YP_003024037.1",
             "qualifiers": {
               "translation_table": "2"
             }
@@ -1097,7 +1867,6 @@
         ]
       },
       {
-        "id": "TRNE",
         "type": "gene",
         "location": {
           "type": "range",
@@ -1111,15 +1880,53 @@
           },
           "strand": -1
         },
+        "id": "TRNE",
         "qualifiers": {
           "name": "TRNE",
           "synonym": "MTTE",
           "HGNC": "7479"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 14673
+              },
+              "end": {
+                "type": "point",
+                "position": 14742
+              },
+              "strand": -1
+            },
+            "id": "TRNE",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 14673
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 14742
+                  },
+                  "strand": -1
+                },
+                "id": "exon-TRNE-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "CYTB",
         "type": "gene",
         "location": {
           "type": "range",
@@ -1133,6 +1940,7 @@
           },
           "strand": 1
         },
+        "id": "CYTB",
         "qualifiers": {
           "name": "CYTB",
           "synonym": "MTCYB",
@@ -1140,7 +1948,6 @@
         },
         "features": [
           {
-            "id": "YP_003024038.1",
             "type": "CDS",
             "location": {
               "type": "range",
@@ -1154,20 +1961,14 @@
               },
               "strand": 1
             },
+            "id": "YP_003024038.1",
             "qualifiers": {
               "translation_exception": {
                 "exceptions": [
                   {
                     "location": {
-                      "type": "range",
-                      "start": {
-                        "type": "point",
-                        "position": 15886
-                      },
-                      "end": {
-                        "type": "point",
-                        "position": 15887
-                      },
+                      "type": "point",
+                      "position": 15886,
                       "strand": 1
                     },
                     "amino_acid": "*"
@@ -1180,7 +1981,6 @@
         ]
       },
       {
-        "id": "TRNT",
         "type": "gene",
         "location": {
           "type": "range",
@@ -1194,15 +1994,53 @@
           },
           "strand": 1
         },
+        "id": "TRNT",
         "qualifiers": {
           "name": "TRNT",
           "synonym": "MTTT",
           "HGNC": "7499"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 15887
+              },
+              "end": {
+                "type": "point",
+                "position": 15953
+              },
+              "strand": 1
+            },
+            "id": "TRNT",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 15887
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 15953
+                  },
+                  "strand": 1
+                },
+                "id": "exon-TRNT-1"
+              }
+            ]
+          }
+        ]
       },
       {
-        "id": "TRNP",
         "type": "gene",
         "location": {
           "type": "range",
@@ -1216,12 +2054,51 @@
           },
           "strand": -1
         },
+        "id": "TRNP",
         "qualifiers": {
           "name": "TRNP",
           "synonym": "MTTP",
           "HGNC": "7494"
         },
-        "features": []
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 15955
+              },
+              "end": {
+                "type": "point",
+                "position": 16023
+              },
+              "strand": -1
+            },
+            "id": "TRNP",
+            "qualifiers": {
+              "biotype": "tRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 15955
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 16023
+                  },
+                  "strand": -1
+                },
+                "id": "exon-TRNP-1"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
