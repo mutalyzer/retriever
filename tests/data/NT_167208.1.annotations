@@ -298,6 +298,50 @@
       ]
     },
     {
+      "type": "pseudogene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 72548
+        },
+        "end": {
+          "type": "point",
+          "position": 73646
+        },
+        "strand": -1
+      },
+      "id": "LOC102724726",
+      "qualifiers": {
+        "name": "LOC102724726"
+      },
+      "features": [
+        {
+          "type": "exon",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 72548
+            },
+            "end": {
+              "type": "point",
+              "position": 73646
+            },
+            "strand": -1
+          },
+          "id": "id-LOC102724726",
+          "qualifiers": {
+            "annotation_added_from": {
+              "freeze_date_id": "20190906",
+              "full_assembly_name": "GRCh37.p13",
+              "full_assembly_accession": "GCF_000001405.25"
+            }
+          }
+        }
+      ]
+    },
+    {
       "type": "gene",
       "location": {
         "type": "range",

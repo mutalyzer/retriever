@@ -1,0 +1,350 @@
+{
+  "annotations": {
+    "id": "LC832987.1",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 5348
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:689403",
+      "mol_type": "genomic DNA"
+    },
+    "features": [
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 252
+          },
+          "end": {
+            "type": "point",
+            "position": 2669
+          },
+          "strand": 1
+        },
+        "id": "NS1",
+        "qualifiers": {
+          "name": "NS1"
+        },
+        "features": [
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 252
+              },
+              "end": {
+                "type": "point",
+                "position": 2164
+              },
+              "strand": 1
+            },
+            "id": "exon-BFP69721.1-1"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 2235
+              },
+              "end": {
+                "type": "point",
+                "position": 2669
+              },
+              "strand": 1
+            },
+            "id": "exon-BFP69721.1-2"
+          },
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 252
+              },
+              "end": {
+                "type": "point",
+                "position": 2669
+              },
+              "strand": 1
+            },
+            "id": "BFP69721.1"
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 252
+          },
+          "end": {
+            "type": "point",
+            "position": 2172
+          },
+          "strand": 1
+        },
+        "id": "NS1-70",
+        "qualifiers": {
+          "name": "NS1-70"
+        },
+        "features": [
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 252
+              },
+              "end": {
+                "type": "point",
+                "position": 2172
+              },
+              "strand": 1
+            },
+            "id": "BFP69722.1"
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 2115
+          },
+          "end": {
+            "type": "point",
+            "position": 2669
+          },
+          "strand": 1
+        },
+        "id": "UP1",
+        "qualifiers": {
+          "name": "UP1"
+        },
+        "features": [
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 2115
+              },
+              "end": {
+                "type": "point",
+                "position": 2164
+              },
+              "strand": 1
+            },
+            "id": "exon-BFP69723.1-1"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 2235
+              },
+              "end": {
+                "type": "point",
+                "position": 2669
+              },
+              "strand": 1
+            },
+            "id": "exon-BFP69723.1-2"
+          },
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 2115
+              },
+              "end": {
+                "type": "point",
+                "position": 2669
+              },
+              "strand": 1
+            },
+            "id": "BFP69723.1"
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 2409
+          },
+          "end": {
+            "type": "point",
+            "position": 3069
+          },
+          "strand": 1
+        },
+        "id": "NP1",
+        "qualifiers": {
+          "name": "NP1"
+        },
+        "features": [
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 2409
+              },
+              "end": {
+                "type": "point",
+                "position": 3069
+              },
+              "strand": 1
+            },
+            "id": "BFP69724.1"
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 3055
+          },
+          "end": {
+            "type": "point",
+            "position": 5071
+          },
+          "strand": 1
+        },
+        "id": "VP1",
+        "qualifiers": {
+          "name": "VP1"
+        },
+        "features": [
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 3055
+              },
+              "end": {
+                "type": "point",
+                "position": 5071
+              },
+              "strand": 1
+            },
+            "id": "BFP69725.1"
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 3442
+          },
+          "end": {
+            "type": "point",
+            "position": 5071
+          },
+          "strand": 1
+        },
+        "id": "VP2",
+        "qualifiers": {
+          "name": "VP2"
+        },
+        "features": [
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 3442
+              },
+              "end": {
+                "type": "point",
+                "position": 5071
+              },
+              "strand": 1
+            },
+            "id": "BFP69726.1"
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 3863
+          },
+          "end": {
+            "type": "point",
+            "position": 4226
+          },
+          "strand": 1
+        },
+        "id": "ORFx",
+        "qualifiers": {
+          "name": "ORFx"
+        },
+        "features": [
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 3863
+              },
+              "end": {
+                "type": "point",
+                "position": 4226
+              },
+              "strand": 1
+            },
+            "id": "BFP69727.1"
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "GCCGGCAGACATATTGGATTCCAAGATGGCGTCTGTACAACCACGTCACATATAAAATAATAAATATTCACAAGGAGGAGTGGTTATATGATGTAATCCATAACCACTCCCAGGAAATGACGTATGATAGCCAATCAGAATTGAGTATTAAACCTATATAAGCTGCTGCACTTCCTGATTCAATCAGACTGCATCCGGTCTCCGGCGAGTGAACATCTCTGGAAAAAGCTCCACGCTTGTGGTGAGTCTACTATGGCTTTCAATCCTCCTGTGATTAGAGCTTTTTCTCAACCTGCTTTTACTTATGTCTTCAAATTTCCATATCCACAATGGAAAGAAAAAGAATGGCTGCTTCATGCACTTTTAGCTCATGGAACTGAACAATCTATGATACAATTAAGAAACTGCGCTCCTCATCCGGATGAAGACATAATCCGTGATGACTTGCTTATTTCTTTAGAAGATCGCCATTTTGGGGCTGTTCTCTGCAAGGCTGTTTACATGGCAACAACTACTCTCATGTCACACAAACAAAGGAATATGTTTCCTCGTTGTGACATCATAGTTCAGTCTGAGCTAGGAGAGAAAAACTTACACTGCCATATTATAGTTGGGGGAGAAGGACTAAGCAAGAGGAATGCTAAATCATCCTGTGCTCAGTTCTATGGTTTAATACTAGCTGAGATAATTCAACGCTGCAAATCTCTTCTGGCTACACGTCCTTTTGAACCTGAGGAGGCTGACATATTTCACACTCTAAAAAAGGCTGAGCGAGAGGCATGGGGTGGAGTTACTGGCGGCAACATGCAGATCCTTCAATATAGAGATCGCAGAGGAGACCTTCATGCACAAACAGTGGATCCTCTTCGCTTCTTCAAAAACTACCTTTTACCTAAAAATAGATGTATTTCATCTTACAGCAAACCTGATGTTTGTACTTCTCCTGACAACTGGTTCATTTTAGCTGAAAAAACTTACTCTCACACTCTTATTAACGGGCTGCCGCTTCCAGAACATTACAGAAAAAACTACCACGCAACCCTAGATAACGAAGTCATTCCAGGGCCTCAAACAATGGCCTATGGAGGACGTGGTCCGTGGGAACATCTTCCTGAGGTAGGAGATCAGCGCCTAGCTGCGTCTTCTGTTAGCACTACTTATAAACCTAACAAAAAAGAAAAACTTATGCTAAACTTGCTAGACAAATGTAAAGAGCTAAATCTATTAGTTTATGAAGACTTAGTAGCTAATTGTCCTGAACTACTCCTTATGCTTGAAGGTCAACCAGGAGGGGCACGCCTTATAGAACAAGTCTTGGGCATGCACCATATTAATGTTTGTTCTAACTTTACAGCTCTCACATATCTTTTTCATCTACATCCTGTTACTTCGCTTGACTCAGACAATAAAGCTTTACAGCTTTTGTTGATTCAAGGCTATAATCCTCTAGCCGTTGGTCACGCCCTGTGCTGTGTCCTGAACAAACAATTCGGGAAACAAAACACTGTTTGCTTTTACGGGCCTGCCTCAACAGGTAAAACAAATATGGCCAAGGCAATCGTCCAAGGGATTAGACTTTATGGGTGTGTTAATCATTTGAACAAAGGATTTGTATTTAATGACTGCAGACAACGCCTAGTTGTTTGGTGGGAGGAGTGCTTAATGCACCAGGATTGGGTGGAACCTGCAAAGTGTATCTTGGGCGGGACAGAATGCAGAATTGACGTCAAGCATAGAGACAGTGTACTTTTAACTCAAACACCTGTAATTATATCCACTAACCACGATATCTACGCGGTTGTTGGTGGCAATTCTGTTTCTCATGTTCACGCGGCTCCATTAAAAGAAAGAGTGATTCAGCTAAATTTTATGAAACAACTTCCTCAAACATTTGGAGAAATCACTGCTACTGAGATTGCAGCTCTTCTACAGTGGTGTTTCAATGAGTACGACTGTACTCTGACAGGATTTAAACAAAAATGGAATTTAGATAAAATTCCAAACTCATTTCCTCTTGGGGTCCTTTGTCCTACTCATTCACAGGACTTTACACTTCACGAAAACGGATACTGCACTGATTGCGGTGGTTACCTTCCTCATAGTGCTGACAATTCTATGTACACTGATCGCGCAAGCGAAACTAGCACAGGAGACATCACACCAAGTAAGTAAATACGCATGCGCAAGTAATTCTTTTACTTTCACTTCGCTATTTTTACCAATTTTTACTTTTAGGTGACTTGGGGGATTCGGACGGAGAAGACACCGAGCCTGAGACATCGCAAGTGGACTATTGTCCACCCAAGAAACGTCGTCTAACTGCTTCAGCAAGTCCTCCAAACTCACCTGCGAGCTCTGTAAGTACTATTACTTTCTTTAACACTTGGCACGCACAGCCACGTGACGAAGATGAGCTCAGGGAATATGAAAGACAAGCATCGCTCCTACAAAAGAAAAGGGAGTCCAGAAAGAGGGGAGAGGAAGAGACACTGGCAGACAACTCATCACAGGAGCAGGAGCCGCAGCCCGATCCGACACAGTGGGGAGAGAGGCTCGGGCTCATATCATCAGGAACACCCAATCAGCCACCTATCGTCTTGCACTGCTTCGAAGACCTCAGACCAAGTGATGAAGACGAGGGAGAGTACATCGGGGAAAAAAGACAATAGAACAAATCCATACACTGTATTCAGTCAACACAGAGCTTCCAATCCTGAAGCTCCAGGGTGGTGTGGGTTCTACTGGCACTCTACTCGCATTGCTAGAGATGGTACTAATTCAATCTTTAATGAAATGAAACAACAGTTTCAACAGCTACAAATTGATAATAAAATAGGATGGGATAACACTAGAGAACTATTGTTTAATCAAAAGAAAACACTAGATCAAAAATACAGAAATATGTTCTGGCACTTTAGAAATAACTCTGATTGTGAAAGATGTAATTACTGGGATGATGTGTACCGTAGACACTTAGCTAATGTTTCCTCACAGACAGAAGCAGACGAGATAACTGACGAGGAAATGCTTTCTGCTGCTGAAAGCATGGAAGCAGATGCCTCCAATTAAGAGACAGCCTAGAGGGTGGGTGCTGCCTGGATACAAATATCTTGGGCCATTTAATCCACTTGATAACGGTGAACCTGTAAATAACGCTGATCGCGCTGCTCAATTACATGATCACGCCTACTCTGAACTAATAAAGAGTGGTAAAAATCCATACCTGTATTTCAATAAAGCTGATGAAAAATTCATTGATGATCTAAAAGACGATTGGTCAATTGGTGGAATTATTGGATCCAGTTTTTTTAAAATAAAGCGCGCCGTGGCTCCTGCTCTGGGAAATAAAGAGAGAGCCCAAAAAAGACACTTTTACTTTGCTAACTCAAATAAAGGTGCAAAAAAAACAAAAAAAAGTGAACCTAAACCAGGAACCTCAAAAATGTCTGACACTGACATTCAAGACCAACAACCTGATACTGTGGACGCACCACAAAACACCTCAGGGGGAGGAACAGGAAGTATTGGAGGAGGAAAAGGATCTGGTGTGGGGATTTCCACTGGAGGGTGGGTCGGAGGTTCTCACTTTTCAGACAAATATGTGGTTACTAAAAACACAAGACAATTTATAACCACAATTCAGAATGGTCACCTCTACAAAACAGAGGCCATTGAAACAACAAACCAAAGTGGAAAATCACAGCGCTGCGTCACAACTCCATGGACATACTTTAACTTTAATCAATACAGCTGTCACTTCTCACCACAGGATTGGCAGCGCCTTACAAATGAATATAAGCGCTTCAGACCTAAAGCAATGCAAGTAAAAATTTACAACTTGCAAATAAAACAAATACTTTCAAATGGTGCTGACACAACATACAACAATGACCTCACAGCTGGCGTTCACATCTTTTGTGATGGAGAACATGCTTATCCAAATGCATCTCATCCATGGGATGAGGACGTCATGCCTGATCTTCCATACAAGACCTGGAAACTTTTTCAATATGGATATATTCCTATTGAAAATGAACTCGCAGATCTTGATGGAAATGCAGCTGGAGGCAATGCTACAGAAAAAGCACTTCTGTATCAGATGCCTTTTTTTCTACTTGAAAACAGTGACCACCAAGTACTTAGAACTGGTGAGAGCACTGAATTTACTTTTAACTTTGACTGTGAATGGGTTAACAATGAAAGAGCATACATTCCTCCTGGACTAATGTTTAATCCAAAAGTCCCAACAAGAAGAGTTCAGTACATAAGACAAAACGGAAGCACAGCAGCCAGCACAGGCAGAATTCAGCCATACTCAAAACCAACAAGCTGGATGACAGGACCTGGCCTGCTCAGTGCACAAAGAGTAGGACCACAGTCATCAGACACTGCTCCATTCATGGTTTGCACTAACCCAGAAGGAACACACATAAACACAGGTGCTGCAGGATTTGGATCTGGCTTTGATCCTCCAAGCGGATGTCTGGCACCAACTAACCTAGAATACAAACTTCAGTGGTACCAGACACCAGAAGGAACAGGAAATAATGGAAACATAATTGCAAACCCATCACTCTCAATGCTTAGAGACCAACTCCTATACAAAGGAAACCAGACCACATACAATCTAGTGGGGGACATATGGATGTTTCCAAATCAAGTCTGGGACAGATTTCCTATCACCAGAGAAAATCCAATTTGGTGCAAAAAACCAAGGGCTGACAAACACACAATCATGGATCCATTTGATGGATCAATTGCAATGGATCATCCTCCAGGCACTATTTTTATAAAAATGGCAAAAATTCCAGTTCCAACTGCCTCAAATGCAGACTCATACCTAAACATATACTGTACTGGACAAGTCAGCTGTGAAATTGTATGGGAGGTAGAAAGATACGCAACAAAGAACTGGCGTCCAGAAAGAAGACATACTGCACTCGGGATGTCACTGGGAGGAGAGAGCAACTACACGCCTACATACCACGTGGATCCAACAGGAGCATACATCCAGCCCACGTCATATGATCAGTGTATGCCAGTAAAAACAAACATCAATAAAGTGTTGTAATCTTATAAGCCTCTTTTTTGCTTCTGCTTACAAGTTCCTCCTCAATGGACAAGCGGAAAGTGAAGGGTGACTGTAGTCCTGAGCTCATGGGTTCAAGACCACAGCCCGATGGTAGTGGTGTTACCGTCTCGAACCTAGCCGACAGCCCTTGTACATTGTGGGGGGAGCTGTTTTGTTTGCTTATGCAATCGCGAAACTCTATATCTTTTAATGTGTTGTTGTTGTACATGCGCCATCTTAGTTTTATATCAGCTGGCGCCTTAGTTATATAACATGC",
+    "description": "LC832987.1 Human bocavirus 1 HBoV1/human/Japan/NIID24-146/2024 DNA, complete genome"
+  }
+}

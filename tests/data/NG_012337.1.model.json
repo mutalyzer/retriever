@@ -276,54 +276,6 @@
         },
         "features": [
           {
-            "type": "exon",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 2953
-              },
-              "end": {
-                "type": "point",
-                "position": 3616
-              },
-              "strand": -1
-            },
-            "id": "id-TIMM8B-3"
-          },
-          {
-            "type": "exon",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 4131
-              },
-              "end": {
-                "type": "point",
-                "position": 4464
-              },
-              "strand": -1
-            },
-            "id": "id-TIMM8B-2"
-          },
-          {
-            "type": "exon",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 4793
-              },
-              "end": {
-                "type": "point",
-                "position": 4952
-              },
-              "strand": -1
-            },
-            "id": "id-TIMM8B-1"
-          },
-          {
             "type": "mRNA",
             "location": {
               "type": "range",
@@ -417,70 +369,6 @@
           "HGNC": "10683"
         },
         "features": [
-          {
-            "type": "exon",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 5000
-              },
-              "end": {
-                "type": "point",
-                "position": 5113
-              },
-              "strand": 1
-            },
-            "id": "id-SDHD-1"
-          },
-          {
-            "type": "exon",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 6010
-              },
-              "end": {
-                "type": "point",
-                "position": 6127
-              },
-              "strand": 1
-            },
-            "id": "id-SDHD-2"
-          },
-          {
-            "type": "exon",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 7020
-              },
-              "end": {
-                "type": "point",
-                "position": 7165
-              },
-              "strand": 1
-            },
-            "id": "id-SDHD-3"
-          },
-          {
-            "type": "exon",
-            "location": {
-              "type": "range",
-              "start": {
-                "type": "point",
-                "position": 12958
-              },
-              "end": {
-                "type": "point",
-                "position": 13948
-              },
-              "strand": 1
-            },
-            "id": "id-SDHD-4"
-          },
           {
             "type": "mRNA",
             "location": {

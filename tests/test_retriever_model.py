@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 
 from mutalyzer_retriever import retrieve_model
-from mutalyzer_retriever.retriever import retrieve_model_from_file
+from mutalyzer_retriever.retriever import ReferenceParseError, retrieve_model_from_file
 
 from .commons import _get_content, patch_retriever, references
 
@@ -92,3 +92,9 @@ def test_retrieve_model_from_file_lrg():
     with (data_dir / "LRG_11.model.json").open() as f:
         expected_model = json.load(f)
     assert model == expected_model
+
+
+def test_unparsable_gff3():
+    # NC_037304.1: CDS lines outside the lines of their trans-spliced nad5 gene.
+    with pytest.raises(ReferenceParseError):
+        retrieve_model("NC_037304.1", "ncbi", "gff3")

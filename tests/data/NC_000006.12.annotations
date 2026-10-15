@@ -1,0 +1,1066 @@
+{
+  "id": "NC_000006.12",
+  "type": "record",
+  "location": {
+    "type": "range",
+    "start": {
+      "type": "point",
+      "position": 0
+    },
+    "end": {
+      "type": "point",
+      "position": 170805979
+    }
+  },
+  "qualifiers": {
+    "dbxref": "taxon:9606",
+    "name": "6",
+    "chromosome": "6",
+    "genome": "chromosome",
+    "mol_type": "genomic DNA",
+    "annotations": [
+      {
+        "freeze_date_id": "20190607",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20211119",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20250801",
+        "full_assembly_name": "GRCh38.p14",
+        "full_assembly_accession": "GCF_000001405.40"
+      }
+    ]
+  },
+  "features": [
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26701482
+        },
+        "end": {
+          "type": "point",
+          "position": 26701555
+        },
+        "strand": 1
+      },
+      "id": "TRM-CAT5-1",
+      "qualifiers": {
+        "name": "TRM-CAT5-1",
+        "HGNC": "34869"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26701482
+            },
+            "end": {
+              "type": "point",
+              "position": 26701555
+            },
+            "strand": 1
+          },
+          "id": "TRM-CAT5-1",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26701482
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26701555
+                },
+                "strand": 1
+              },
+              "id": "exon-TRM-CAT5-1-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26705376
+        },
+        "end": {
+          "type": "point",
+          "position": 26705449
+        },
+        "strand": 1
+      },
+      "id": "TRNAA-AGC",
+      "qualifiers": {
+        "name": "TRNAA-AGC"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26705376
+            },
+            "end": {
+              "type": "point",
+              "position": 26705449
+            },
+            "strand": 1
+          },
+          "id": "TRNAA-AGC",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26705376
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26705449
+                },
+                "strand": 1
+              },
+              "id": "exon-TRNAA-AGC-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26720991
+        },
+        "end": {
+          "type": "point",
+          "position": 26721065
+        },
+        "strand": -1
+      },
+      "id": "TRI-AAT7-1",
+      "qualifiers": {
+        "name": "TRI-AAT7-1",
+        "HGNC": "34710"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26720991
+            },
+            "end": {
+              "type": "point",
+              "position": 26721065
+            },
+            "strand": -1
+          },
+          "id": "TRI-AAT7-1",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26720991
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26721065
+                },
+                "strand": -1
+              },
+              "id": "exon-TRI-AAT7-1-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26730533
+        },
+        "end": {
+          "type": "point",
+          "position": 26730606
+        },
+        "strand": 1
+      },
+      "id": "TRA-AGC9-1",
+      "qualifiers": {
+        "name": "TRA-AGC9-1",
+        "HGNC": "34718"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26730533
+            },
+            "end": {
+              "type": "point",
+              "position": 26730606
+            },
+            "strand": 1
+          },
+          "id": "TRA-AGC9-1",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26730533
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26730606
+                },
+                "strand": 1
+              },
+              "id": "exon-TRA-AGC9-1-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26735369
+        },
+        "end": {
+          "type": "point",
+          "position": 26735442
+        },
+        "strand": -1
+      },
+      "id": "TRM-CAT4-1",
+      "qualifiers": {
+        "name": "TRM-CAT4-1",
+        "HGNC": "34661"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26735369
+            },
+            "end": {
+              "type": "point",
+              "position": 26735442
+            },
+            "strand": -1
+          },
+          "id": "TRM-CAT4-1",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26735369
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26735442
+                },
+                "strand": -1
+              },
+              "id": "exon-TRM-CAT4-1-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26743262
+        },
+        "end": {
+          "type": "point",
+          "position": 26743335
+        },
+        "strand": 1
+      },
+      "id": "TRM-CAT4-2",
+      "qualifiers": {
+        "name": "TRM-CAT4-2",
+        "HGNC": "34922"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26743262
+            },
+            "end": {
+              "type": "point",
+              "position": 26743335
+            },
+            "strand": 1
+          },
+          "id": "TRM-CAT4-2",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26743262
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26743335
+                },
+                "strand": 1
+              },
+              "id": "exon-TRM-CAT4-2-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26756551
+        },
+        "end": {
+          "type": "point",
+          "position": 26756625
+        },
+        "strand": 1
+      },
+      "id": "TRI-AAT6-1",
+      "qualifiers": {
+        "name": "TRI-AAT6-1",
+        "HGNC": "34940"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26756551
+            },
+            "end": {
+              "type": "point",
+              "position": 26756625
+            },
+            "strand": 1
+          },
+          "id": "TRI-AAT6-1",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26756551
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26756625
+                },
+                "strand": 1
+              },
+              "id": "exon-TRI-AAT6-1-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26766233
+        },
+        "end": {
+          "type": "point",
+          "position": 26766306
+        },
+        "strand": 1
+      },
+      "id": "TRM-CAT4-3",
+      "qualifiers": {
+        "name": "TRM-CAT4-3",
+        "HGNC": "34959"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26766233
+            },
+            "end": {
+              "type": "point",
+              "position": 26766306
+            },
+            "strand": 1
+          },
+          "id": "TRM-CAT4-3",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26766233
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26766306
+                },
+                "strand": 1
+              },
+              "id": "exon-TRM-CAT4-3-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26771079
+        },
+        "end": {
+          "type": "point",
+          "position": 26771152
+        },
+        "strand": -1
+      },
+      "id": "TRNAA-AGC",
+      "qualifiers": {
+        "name": "TRNAA-AGC"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26771079
+            },
+            "end": {
+              "type": "point",
+              "position": 26771152
+            },
+            "strand": -1
+          },
+          "id": "TRNAA-AGC-2",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26771079
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26771152
+                },
+                "strand": -1
+              },
+              "id": "exon-TRNAA-AGC-2-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26780621
+        },
+        "end": {
+          "type": "point",
+          "position": 26780695
+        },
+        "strand": 1
+      },
+      "id": "TRI-AAT7-2",
+      "qualifiers": {
+        "name": "TRI-AAT7-2",
+        "HGNC": "34970"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26780621
+            },
+            "end": {
+              "type": "point",
+              "position": 26780695
+            },
+            "strand": 1
+          },
+          "id": "TRI-AAT7-2",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26780621
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26780695
+                },
+                "strand": 1
+              },
+              "id": "exon-TRI-AAT7-2-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26796208
+        },
+        "end": {
+          "type": "point",
+          "position": 26796281
+        },
+        "strand": -1
+      },
+      "id": "TRNAA-AGC",
+      "qualifiers": {
+        "name": "TRNAA-AGC"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26796208
+            },
+            "end": {
+              "type": "point",
+              "position": 26796281
+            },
+            "strand": -1
+          },
+          "id": "TRNAA-AGC-3",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26796208
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26796281
+                },
+                "strand": -1
+              },
+              "id": "exon-TRNAA-AGC-3-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26800112
+        },
+        "end": {
+          "type": "point",
+          "position": 26800185
+        },
+        "strand": -1
+      },
+      "id": "TRM-CAT5-2",
+      "qualifiers": {
+        "name": "TRM-CAT5-2",
+        "HGNC": "54713"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26800112
+            },
+            "end": {
+              "type": "point",
+              "position": 26800185
+            },
+            "strand": -1
+          },
+          "id": "TRM-CAT5-2",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26800112
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26800185
+                },
+                "strand": -1
+              },
+              "id": "exon-TRM-CAT5-2-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26814338
+        },
+        "end": {
+          "type": "point",
+          "position": 26814411
+        },
+        "strand": -1
+      },
+      "id": "TRNAA-AGC",
+      "qualifiers": {
+        "name": "TRNAA-AGC"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26814338
+            },
+            "end": {
+              "type": "point",
+              "position": 26814411
+            },
+            "strand": -1
+          },
+          "id": "TRNAA-AGC-4",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26814338
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26814411
+                },
+                "strand": -1
+              },
+              "id": "exon-TRNAA-AGC-4-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26819108
+        },
+        "end": {
+          "type": "point",
+          "position": 26819181
+        },
+        "strand": -1
+      },
+      "id": "TRNAA-AGC",
+      "qualifiers": {
+        "name": "TRNAA-AGC"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26819108
+            },
+            "end": {
+              "type": "point",
+              "position": 26819181
+            },
+            "strand": -1
+          },
+          "id": "TRNAA-AGC-5",
+          "qualifiers": {
+            "biotype": "tRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26819108
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26819181
+                },
+                "strand": -1
+              },
+              "id": "exon-TRNAA-AGC-5-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26780621
+        },
+        "end": {
+          "type": "point",
+          "position": 26780695
+        },
+        "strand": 1
+      },
+      "id": "TRNAI-AAU",
+      "qualifiers": {
+        "name": "TRNAI-AAU",
+        "annotation_added_from": {
+          "freeze_date_id": "20190607",
+          "full_assembly_name": "GRCh38.p13",
+          "full_assembly_accession": "GCF_000001405.39"
+        }
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26780621
+            },
+            "end": {
+              "type": "point",
+              "position": 26780695
+            },
+            "strand": 1
+          },
+          "id": "TRNAI-AAU",
+          "qualifiers": {
+            "biotype": "tRNA",
+            "annotation_added_from": {
+              "freeze_date_id": "20190607",
+              "full_assembly_name": "GRCh38.p13",
+              "full_assembly_accession": "GCF_000001405.39"
+            }
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26780621
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26780695
+                },
+                "strand": 1
+              },
+              "id": "exon-TRNAI-AAU-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26766233
+        },
+        "end": {
+          "type": "point",
+          "position": 26766306
+        },
+        "strand": 1
+      },
+      "id": "TRNAM-CAU",
+      "qualifiers": {
+        "name": "TRNAM-CAU",
+        "annotation_added_from": {
+          "freeze_date_id": "20190607",
+          "full_assembly_name": "GRCh38.p13",
+          "full_assembly_accession": "GCF_000001405.39"
+        }
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26766233
+            },
+            "end": {
+              "type": "point",
+              "position": 26766306
+            },
+            "strand": 1
+          },
+          "id": "TRNAM-CAU",
+          "qualifiers": {
+            "biotype": "tRNA",
+            "annotation_added_from": {
+              "freeze_date_id": "20190607",
+              "full_assembly_name": "GRCh38.p13",
+              "full_assembly_accession": "GCF_000001405.39"
+            }
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26766233
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26766306
+                },
+                "strand": 1
+              },
+              "id": "exon-TRNAM-CAU-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 26800112
+        },
+        "end": {
+          "type": "point",
+          "position": 26800185
+        },
+        "strand": -1
+      },
+      "id": "TRNAM-CAU",
+      "qualifiers": {
+        "name": "TRNAM-CAU",
+        "annotation_added_from": {
+          "freeze_date_id": "20190607",
+          "full_assembly_name": "GRCh38.p13",
+          "full_assembly_accession": "GCF_000001405.39"
+        }
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 26800112
+            },
+            "end": {
+              "type": "point",
+              "position": 26800185
+            },
+            "strand": -1
+          },
+          "id": "TRNAM-CAU-2",
+          "qualifiers": {
+            "biotype": "tRNA",
+            "annotation_added_from": {
+              "freeze_date_id": "20190607",
+              "full_assembly_name": "GRCh38.p13",
+              "full_assembly_accession": "GCF_000001405.39"
+            }
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 26800112
+                },
+                "end": {
+                  "type": "point",
+                  "position": 26800185
+                },
+                "strand": -1
+              },
+              "id": "exon-TRNAM-CAU-2-1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

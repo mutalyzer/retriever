@@ -8,17 +8,31 @@ from pathlib import Path
 import requests
 
 from ..parser import parse
+from ..util import get_range
 from .ncbi import fetch
 
 
-def _get_gene(g_id, model):
-    features = model.get("features", [])
-    return next((gene for gene in features if gene.get("id") == g_id), None)
+def _overlap(feature_1, feature_2):
+    start_1, end_1 = get_range(feature_1)
+    start_2, end_2 = get_range(feature_2)
+    return start_1 < end_2 and start_2 < end_1
 
 
-def _get_gene_i(g_id, model):
+def _get_gene_i(gene, model):
+    """
+    Get the index of the `gene` in the `model`, matching its id and locus,
+    as gene ids are not unique (e.g., the two TRNAM-CAU genes in
+    NC_000006.12 up to 20191205).
+    """
     features = model.get("features", [])
-    return next((i for i, gene in enumerate(features) if gene.get("id") == g_id), None)
+    return next(
+        (
+            i
+            for i, g in enumerate(features)
+            if g.get("id") == gene.get("id") and _overlap(g, gene)
+        ),
+        None,
+    )
 
 
 def _get_gene_transcript_ids(gene):
@@ -91,34 +105,34 @@ def _merge(new, old):
     ts_old = _get_transcripts_mappings(old)
 
     ts_not_in = sorted(set(ts_old) - set(ts_new))
+    # Old gene index -> index of the same gene in the new model (or None).
     gene_cache = {}
 
     for t_not_in_id in ts_not_in:
         if t_not_in_id in ts_new:
             continue
-        old_gene_id = ts_old[t_not_in_id]["gene_id"]
-        if old_gene_id not in gene_cache:
-            gene_cache[old_gene_id] = _get_gene(old_gene_id, new)
-        gene_new = gene_cache[old_gene_id]
-        if not gene_new:
-            gene_old = deepcopy(_get_gene(old_gene_id, old))
-            gene_ts = set(_get_gene_transcript_ids(gene_old))
-            gene_old["features"] = [t for t in gene_old["features"] if t["id"] not in ts_new]
-            _gene_added_from(gene_old, old)
-            new.setdefault("features", []).append(gene_old)
-            gene_index = len(new["features"]) - 1  # Store the new gene index
+        i_g_old = ts_old[t_not_in_id]["i_g"]
+        gene_old = old["features"][i_g_old]
+        if i_g_old not in gene_cache:
+            gene_cache[i_g_old] = _get_gene_i(gene_old, new)
+        i_g_new = gene_cache[i_g_old]
+        if i_g_new is None:
+            gene_copy = deepcopy(gene_old)
+            gene_ts = set(_get_gene_transcript_ids(gene_copy))
+            gene_copy["features"] = [
+                t for t in gene_copy["features"] if t["id"] not in ts_new
+            ]
+            _gene_added_from(gene_copy, old)
+            new.setdefault("features", []).append(gene_copy)
+            gene_cache[i_g_old] = len(new["features"]) - 1
             for t in gene_ts - ts_new.keys():
-                ts_new[t] = {"i_g": gene_index, "gene_id": gene_old["id"]}
+                ts_new[t] = {"i_g": gene_cache[i_g_old], "gene_id": gene_copy["id"]}
         else:
-            transcript = deepcopy(old["features"][ts_old[t_not_in_id]["i_g"]]["features"][ts_old[t_not_in_id]["i_t"]])
+            gene_new = new["features"][i_g_new]
+            transcript = deepcopy(gene_old["features"][ts_old[t_not_in_id]["i_t"]])
             _added_from(transcript, old)
             gene_new.setdefault("features", []).append(transcript)
-            if old_gene_id not in gene_cache:
-                gene_cache[old_gene_id] = _get_gene_i(old_gene_id, new)
-            ts_new[t_not_in_id] = {
-                "i_g": gene_cache[old_gene_id],
-                "gene_id": gene_new["id"],
-            }
+            ts_new[t_not_in_id] = {"i_g": i_g_new, "gene_id": gene_new["id"]}
 
     # Final check for any remaining missing transcripts
     if set(ts_old) - set(ts_new):
@@ -316,7 +330,7 @@ def download_annotation_releases(urls, assembly_id_start=None):
         print(f" - assembly: {assembly_id}")
         metadata[assembly_id] = {}
         for i, (url_gff3, url_xml) in enumerate(urls[assembly_id]):
-            print(f"  - {i+1}/{len(urls[assembly_id])}:")
+            print(f"  - {i + 1}/{len(urls[assembly_id])}:")
             print(f"   - downloading xml: {url_xml}")
             response_xml = download_ncbi_releases_file(url_xml)
             freeze_date_id = _report_info(response_xml)["freeze_date_id"]

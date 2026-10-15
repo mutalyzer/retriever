@@ -14,11 +14,16 @@ from .configuration import (
     lru_cache_maxsize,
 )
 from .parsers import json_ensembl
+from .parsers.gff3 import GFF3ParseError
 from .sources import ensembl, lrg, ncbi
 
 
 class NoReferenceRetrieved(Exception):
     pass
+
+
+class ReferenceParseError(NoReferenceRetrieved):
+    """The reference was retrieved, but its content could not be parsed."""
 
 
 class NoReferenceError(Exception):
@@ -150,6 +155,13 @@ def retrieve_raw(
     return reference_content, reference_type, reference_source
 
 
+def _parse_gff3(reference_id, reference_content, reference_source):
+    try:
+        return parser.parse(reference_content, "gff3", reference_source)
+    except GFF3ParseError as e:
+        raise ReferenceParseError(f"{reference_id}: {e}") from e
+
+
 def retrieve_model(
     reference_id,
     reference_source=None,
@@ -183,9 +195,7 @@ def retrieve_model(
             return model["annotations"]
     elif reference_type == "gff3":
         if model_type == "all":
-            annotations = parser.parse(
-                reference_content, reference_type, reference_source
-            )
+            annotations = _parse_gff3(reference_id, reference_content, reference_source)
             fasta = retrieve_raw(
                 reference_id, reference_source, "fasta", size_off, timeout=timeout
             )
@@ -199,7 +209,7 @@ def retrieve_model(
             )
             return {"sequence": parser.parse(fasta[0], "fasta")}
         elif model_type == "annotations":
-            return parser.parse(reference_content, reference_type, reference_source)
+            return _parse_gff3(reference_id, reference_content, reference_source)
     elif reference_type == "fasta":
         return {
             "sequence": parser.parse(reference_content, "fasta"),

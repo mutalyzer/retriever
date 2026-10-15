@@ -1,0 +1,148 @@
+{
+  "id": "NC_000009.12",
+  "type": "record",
+  "location": {
+    "type": "range",
+    "start": {
+      "type": "point",
+      "position": 0
+    },
+    "end": {
+      "type": "point",
+      "position": 138394717
+    }
+  },
+  "qualifiers": {
+    "dbxref": "taxon:9606",
+    "name": "9",
+    "chromosome": "9",
+    "genome": "chromosome",
+    "mol_type": "genomic DNA",
+    "annotations": [
+      {
+        "freeze_date_id": "20190607",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20211119",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20250801",
+        "full_assembly_name": "GRCh38.p14",
+        "full_assembly_accession": "GCF_000001405.40"
+      }
+    ]
+  },
+  "features": [
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 35657749
+        },
+        "end": {
+          "type": "point",
+          "position": 35658019
+        },
+        "strand": -1
+      },
+      "id": "RMRP",
+      "qualifiers": {
+        "name": "RMRP",
+        "synonym": [
+          "CHH",
+          "NME1",
+          "RMRPR",
+          "RRP2"
+        ],
+        "HGNC": "10031"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 35657749
+            },
+            "end": {
+              "type": "point",
+              "position": 35658019
+            },
+            "strand": -1
+          },
+          "id": "NR_003051.4",
+          "qualifiers": {
+            "biotype": "RNase_MRP_RNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 35657749
+                },
+                "end": {
+                  "type": "point",
+                  "position": 35658019
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_003051.4-1"
+            }
+          ]
+        },
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 35657750
+            },
+            "end": {
+              "type": "point",
+              "position": 35658018
+            },
+            "strand": -1
+          },
+          "id": "NR_003051.3",
+          "qualifiers": {
+            "biotype": "RNase_MRP_RNA",
+            "annotation_added_from": {
+              "freeze_date_id": "20211119",
+              "full_assembly_name": "GRCh38.p13",
+              "full_assembly_accession": "GCF_000001405.39"
+            }
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 35657750
+                },
+                "end": {
+                  "type": "point",
+                  "position": 35658018
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_003051.3-1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

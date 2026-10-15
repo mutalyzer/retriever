@@ -1,0 +1,185 @@
+{
+  "id": "NC_000007.14",
+  "type": "record",
+  "location": {
+    "type": "range",
+    "start": {
+      "type": "point",
+      "position": 0
+    },
+    "end": {
+      "type": "point",
+      "position": 159345973
+    }
+  },
+  "qualifiers": {
+    "dbxref": "taxon:9606",
+    "name": "7",
+    "chromosome": "7",
+    "genome": "chromosome",
+    "mol_type": "genomic DNA",
+    "annotations": [
+      {
+        "freeze_date_id": "20190607",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20211119",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20250801",
+        "full_assembly_name": "GRCh38.p14",
+        "full_assembly_accession": "GCF_000001405.40"
+      }
+    ]
+  },
+  "features": [
+    {
+      "type": "pseudogene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 38685345
+        },
+        "end": {
+          "type": "point",
+          "position": 38687089
+        },
+        "strand": -1
+      },
+      "id": "CFAP144P1",
+      "qualifiers": {
+        "name": "CFAP144P1",
+        "synonym": [
+          "FAM183B",
+          "FAM183BP",
+          "THEG6"
+        ],
+        "HGNC": "34511"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 38685345
+            },
+            "end": {
+              "type": "point",
+              "position": 38687089
+            },
+            "strand": -1
+          },
+          "id": "NR_028347.1",
+          "qualifiers": {
+            "gbkey": "misc_RNA",
+            "biotype": "misc_RNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 38686309
+                },
+                "end": {
+                  "type": "point",
+                  "position": 38687089
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_028347.1-1"
+            },
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 38685345
+                },
+                "end": {
+                  "type": "point",
+                  "position": 38686212
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_028347.1-2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 148941487
+        },
+        "end": {
+          "type": "point",
+          "position": 148941571
+        },
+        "strand": 1
+      },
+      "id": "RNY5",
+      "qualifiers": {
+        "name": "RNY5",
+        "synonym": [
+          "hY5",
+          "Y5"
+        ],
+        "HGNC": "10248"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 148941487
+            },
+            "end": {
+              "type": "point",
+              "position": 148941571
+            },
+            "strand": 1
+          },
+          "id": "NR_001571.2",
+          "qualifiers": {
+            "biotype": "Y_RNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 148941487
+                },
+                "end": {
+                  "type": "point",
+                  "position": 148941571
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_001571.2-1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

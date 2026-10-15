@@ -22,22 +22,6 @@
     },
     "features": [
       {
-        "type": "exon",
-        "location": {
-          "type": "range",
-          "start": {
-            "type": "point",
-            "position": 4579
-          },
-          "end": {
-            "type": "point",
-            "position": 4838
-          },
-          "strand": 1
-        },
-        "id": "id-AB006684.1:4580..4838-1"
-      },
-      {
         "type": "gene",
         "location": {
           "type": "range",
@@ -745,22 +729,6 @@
             "id": "id-APECED-13"
           }
         ]
-      },
-      {
-        "type": "exon",
-        "location": {
-          "type": "range",
-          "start": {
-            "type": "point",
-            "position": 16354
-          },
-          "end": {
-            "type": "point",
-            "position": 16688
-          },
-          "strand": 1
-        },
-        "id": "id-AB006684.1:16355..16688-14"
       }
     ]
   },

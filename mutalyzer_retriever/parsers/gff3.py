@@ -38,34 +38,59 @@ import io
 from BCBio.GFF import GFFParser
 from Bio.SeqUtils import seq1
 
-from ..util import make_location
+from ..util import get_range, make_location
 
-CONSIDERED_TYPES = [
-    "gene",
-    "ncRNA_gene",
-    "mRNA",
-    "exon",
-    "CDS",
-    "lnc_RNA",
-    "snRNA",
-    "miRNA",
-    "tRNA",
-    "rRNA",
-    "polypeptide",
-    "transcript",
-]
+# Examples are test references, as reference(selector): the NC_0000 ones in
+# tests/data/annotation_releases, all others in tests/data.
+
+# Transcript types in the model.
+TRANSCRIPT_TYPES = ("mRNA", "ncRNA")
+
+# Gene feature types, kept as such in the model (pseudogenes too, as by HGNC).
+GENE_TYPES = (
+    "gene",  # NG_012337.1(SDHD), ENSG00000141510
+    "ncRNA_gene",  # ENSG00000147889(ENSG00000240498)
+    "pseudogene",  # NR_163594.1(NR_163594.1), NC_000007.14(NR_028347.1)
+)
+
+# Non-coding RNA feature types, including source specific spellings.
+NCRNA_TYPES = (
+    "lnc_RNA",  # NG_007485.1(NR_003529.3), ENSG00000141510(ENST00000505014)
+    "lncRNA",  # PV394717.1(PV394717.1), PZ268039.1(PZ268039.1)
+    "tRNA",  # NC_012920.1(TRNF)
+    "rRNA",  # NC_012920.1(RNR1)
+    "snRNA",  # NG_008047.2(NR_023317.1), ENST00000383925
+    "snoRNA",  # NC_000003.12(NR_002582.1)
+    "miRNA",  # ENSG00000284190(ENST00000362134)
+    "scaRNA",  # NC_000003.12(NR_003001.1)
+    "antisense_RNA",  # NC_000003.12(NR_148359.2)
+    "RNase_MRP_RNA",  # NC_000009.12(NR_003051.4)
+    "RNase_P_RNA",  # NC_000014.9(NR_002312.1)
+    "telomerase_RNA",  # NC_000003.12(NR_001566.3)
+    "Y_RNA",  # NC_000007.14(NR_001571.2)
+    "vault_RNA",  # NC_000005.10(NR_030583.3)
+    "scRNA",  # NC_000014.9(NR_002715.1)
+    "ncRNA",  # NC_001806.2(HHV1gp00s01)
+)
+
+CONSIDERED_TYPES = (
+    *GENE_TYPES,
+    "mRNA",  # NG_012337.1(NM_003002.2), ENSG00000141510(ENST00000413465)
+    "exon",  # In NG_012337.1(NM_003002.2), ENSG00000141510(ENST00000413465)
+    "CDS",  # NG_012337.1(NP_002993.1), ENSG00000141510(ENSP00000410739)
+    *NCRNA_TYPES,
+    "polypeptide",  # NP_060665.3(NP_060665.3)
+    "transcript",  # NG_008047.2(NR_126035.2), ENSG00000141510(ENST00000574684)
+)
 QUALIFIERS = {
-    "gene": {
-        "Name": "name",
-        "gene_synonym": "synonym",
-        "version": "version",
-        "assembly_name": "assembly_name",
-    },
-    "ncRNA_gene": {
-        "Name": "name",
-        "gene_synonym": "synonym",
-        "version": "version",
-        "assembly_name": "assembly_name",
+    **{
+        t: {
+            "Name": "name",
+            "gene_synonym": "synonym",
+            "version": "version",
+            "assembly_name": "assembly_name",
+        }
+        for t in GENE_TYPES
     },
     "region": {
         "organism": "organism",
@@ -74,7 +99,7 @@ QUALIFIERS = {
         "map": "map",
         "Dbxref": "dbxref",
         "Is_circular": "is_circular",
-        "transl_table": "transl_table", # This may be dead, we need to check it.
+        "transl_table": "transl_table",  # This may be dead, we need to check it.
         "Name": "name",
         "genome": "genome",
     },
@@ -95,30 +120,14 @@ QUALIFIERS = {
         "biotype": "biotype",  # mostly for Ensembl
         "gbkey": "gbkey",  # mostly for NCBI
     },
-    "snRNA": {
-        "version": "version",
-        "assembly_name": "assembly_name",
-        "biotype": "biotype",  # Ensembl, e.g. snRNA
-    },
-    "miRNA": {
-        "version": "version",
-        "assembly_name": "assembly_name",
-        "biotype": "biotype",  # Ensembl, e.g. miRNA
-    },
-    "tRNA": {
-        "version": "version",
-        "assembly_name": "assembly_name",
-        "biotype": "biotype",  # Ensembl, e.g. Mt_tRNA
-    },
-    "rRNA": {
-        "version": "version",
-        "assembly_name": "assembly_name",
-        "biotype": "biotype",  # Ensembl, e.g. Mt_rRNA
-    },
-    "lnc_RNA": {
-        "version": "version",
-        "assembly_name": "assembly_name",
-        "biotype": "biotype",  # Ensembl, e.g. lncRNA, processed_transcript
+    # Biotype from Ensembl, e.g., Mt_tRNA, lncRNA, processed_transcript.
+    **{
+        t: {
+            "version": "version",
+            "assembly_name": "assembly_name",
+            "biotype": "biotype",
+        }
+        for t in NCRNA_TYPES
     },
     "polypeptide": {"gbkey": "gbkey", "product": "product"},
 }
@@ -132,15 +141,19 @@ SO_IDS = {
 
 
 def _get_feature_id(feature):
-    if feature.type in ["gene", "ncRNA_gene"]:
+    if feature.type in GENE_TYPES:
         if feature.qualifiers.get("gene_id"):
             return feature.qualifiers["gene_id"][0]
         elif feature.qualifiers.get("Name"):
             return feature.qualifiers["Name"][0]
-    elif feature.type in ["mRNA", "lnc_RNA", "snRNA", "miRNA", "transcript"]:
-        if feature.qualifiers.get("transcript_id"):
-            return feature.qualifiers["transcript_id"][0]
-    elif feature.type in ["tRNA", "rRNA"]:
+        elif (
+            feature.qualifiers.get("description")
+            and " " not in feature.qualifiers["description"][0]
+        ):
+            # Short gene codes with no Name (e.g. NC_011507.2's VP1); free-text
+            # descriptions are excluded by the whitespace check.
+            return feature.qualifiers["description"][0]
+    elif feature.type in ["mRNA", "transcript", *NCRNA_TYPES]:
         # Fall back to the GFF3 local id, stripped of NCBI's "rna-" prefix,
         # unless it's of this form "rna-NC_...:1..69", unusable in HGVS
         if feature.qualifiers.get("transcript_id"):
@@ -160,16 +173,118 @@ def _get_feature_id(feature):
         return feature.id.split("-")[1].split(":")[0]
 
 
+def _merge_split_features(features):
+    """
+    Merge the lines sharing a GFF3 ID into a single feature, as the GFF3
+    specification defines them as one discontinuous feature (e.g., the two
+    NS1 gene lines in LC832987.1). The GFF3 parser keeps them apart.
+    https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md
+    (the ID attribute in Column 9: "attributes").
+
+    Keep CDS slices separate here so their boundaries remain available for
+    ribosomal slippage handling and exon reconstruction. CDS merging is
+    handled by _combine_cdses() and _add_split_cds_exons(). Exon lines
+    are left apart as well: an exon is a single interval, so lines sharing an
+    exon ID are not merged into a span that would include the gap between them.
+    """
+    merged = []
+    by_id = {}
+    for feature in features:
+        gff3_id = None
+        if feature.type not in ("CDS", "exon"):
+            gff3_id = feature.qualifiers.get("ID", [None])[0]
+        if gff3_id in by_id:
+            first = by_id[gff3_id]
+            first.location = first.location + feature.location
+            first.sub_features.extend(feature.sub_features)
+            continue
+        if gff3_id:
+            by_id[gff3_id] = feature
+        merged.append(feature)
+    for feature in merged:
+        if feature.sub_features:
+            feature.sub_features = _merge_split_features(feature.sub_features)
+    return merged
+
+
+def _add_split_cds_exons(features):
+    """
+    For a gene with no transcript and one CDS split over non-overlapping
+    slices (e.g., NS1 in LC832987.1), create an exon for each slice and
+    combine the CDS into a single span. This preserves the splice structure
+    while representing the CDS as a span, as _combine_cdses() does for mRNA.
+    Slices annotated with ribosomal slippage are left unchanged. The gene's
+    own exons are kept instead when they cover all the slices (e.g., with the
+    UTRs of HLA-A in PZ706538.1).
+    """
+    for gene in features:
+        if gene["type"] != "gene":
+            continue
+        children = gene.get("features", [])
+        cdses = [c for c in children if c["type"] == "CDS"]
+        if (
+            len(cdses) < 2
+            or len({c.get("id") for c in cdses}) != 1
+            or not cdses[0].get("id")
+            or any(c["type"] in TRANSCRIPT_TYPES for c in children)
+            or any(
+                (c.get("qualifiers") or {}).get("exception") == "ribosomal slippage"
+                for c in cdses
+            )
+        ):
+            continue
+        slices = sorted(get_range(c) for c in cdses)
+        if any(a[1] > b[0] for a, b in zip(slices, slices[1:])):
+            continue
+        strand = cdses[0]["location"].get("strand")
+        cds = cdses[0]
+        cds["location"] = make_location(slices[0][0], slices[-1][1], strand)
+        _combine_translation_exceptions(cds, cdses)
+        exons = [c for c in children if c["type"] == "exon"]
+        exon_ranges = [get_range(e) for e in exons]
+        if not all(
+            any(e_start <= start and end <= e_end for e_start, e_end in exon_ranges)
+            for start, end in slices
+        ):
+            exons = [
+                {
+                    "type": "exon",
+                    "location": make_location(start, end, strand),
+                    "id": f"exon-{cds['id']}-{i}",
+                }
+                for i, (start, end) in enumerate(slices, start=1)
+            ]
+        others = [c for c in children if c["type"] not in ("CDS", "exon")]
+        gene["features"] = others + exons + [cds]
+
+
+def _combine_translation_exceptions(cds, cdses):
+    """
+    Collect translation exceptions from all `cdses` slices on `cds`, removing duplicates.
+    """
+    exceptions = []
+    for c in cdses:
+        qualifiers = c.get("qualifiers") or {}
+        for e in qualifiers.get("translation_exception", {}).get("exceptions", []):
+            if e not in exceptions:
+                exceptions.append(e)
+    if exceptions:
+        cds.setdefault("qualifiers", {})["translation_exception"] = {
+            "exceptions": exceptions
+        }
+
+
 def _combine_cdses(mrna):
     """
     Combine all the cds features into a single one.
     """
     positions = []
     exons = []
+    cdses = []
     for feature in mrna["features"]:
         if feature["type"] == "CDS":
-            positions.append(feature["location"]["start"]["position"])
-            positions.append(feature["location"]["end"]["position"])
+            positions.extend(get_range(feature))
+            cdses.append(feature)
         elif feature["type"] == "exon":
             exons.append(feature)
     positions = sorted(positions)
@@ -177,6 +292,7 @@ def _combine_cdses(mrna):
         if feature["type"] == "CDS":
             feature["location"]["start"]["position"] = positions[0]
             feature["location"]["end"]["position"] = positions[-1]
+            _combine_translation_exceptions(feature, cdses)
             mrna["features"] = exons + [feature]
             return
 
@@ -238,7 +354,7 @@ def _get_qualifiers(feature):
             for k in q.keys()
             if k in QUALIFIERS[t].keys()
         }
-        if t == "gene":
+        if t in GENE_TYPES:
             if q.get("Dbxref"):
                 for dbxref_entry in q["Dbxref"]:
                     if "HGNC" in dbxref_entry:
@@ -248,7 +364,7 @@ def _get_qualifiers(feature):
                 for dbxref_entry in q["Dbxref"]:
                     if "Ensembl" in dbxref_entry:
                         qs["Ensembl"] = dbxref_entry.split(":")[-1]
-        if t in ["tRNA", "rRNA", "lnc_RNA", "snRNA", "miRNA"] and "biotype" not in qs:
+        if t in NCRNA_TYPES and "biotype" not in qs:
             # NCBI has no biotype qualifier; the type itself already names
             # the RNA class, so use it as the closest equivalent to Ensembl.
             qs["biotype"] = t
@@ -277,7 +393,7 @@ def _get_feature_type(feature):
         return "gene"
     elif feature.type in ["mRNA"]:
         return "mRNA"
-    elif feature.type in ["lnc_RNA", "tRNA", "rRNA", "snRNA", "miRNA"]:
+    elif feature.type in NCRNA_TYPES:
         return "ncRNA"
     elif feature.type in ["exon"]:
         return "exon"
@@ -358,64 +474,107 @@ def _get_region_model(features):
                 return _get_feature_model(feature=feature, considered_types=["region"])
 
 
+def _get_bare_rna_feature(record):
+    """
+    Exceptional case for transcripts with no gene id, but with some sort of
+    RNA and exons (e.g. NR_114042.1).
+    """
+    for feature in record.features:
+        if feature.type not in NCRNA_TYPES:
+            continue
+
+        exons = []
+        for sub_feature in feature.sub_features:
+            if sub_feature.type == "exon":
+                exon_model = _get_feature_model(sub_feature, considered_types=["exon"])
+                if exon_model:
+                    exons.append(exon_model)
+        if not exons:
+            continue
+
+        exon_positions = []
+        for exon in exons:
+            exon_positions.extend(get_range(exon))
+
+        rna_model = {
+            "id": record.id,
+            "type": _get_feature_type(feature),
+            "location": make_location(
+                sorted(exon_positions)[0], sorted(exon_positions)[-1]
+            ),
+            "features": exons,
+        }
+        qualifiers = _get_qualifiers(feature)
+        if qualifiers:
+            rna_model["qualifiers"] = qualifiers
+        return [rna_model]
+    return []
+
+
 def _get_rna_features(record, mol_type):
     if mol_type == "mRNA":
         feature_type = "mRNA"
     else:
+        # e.g., snRNA (NR_023343.1), rRNA (NR_003286.4)
         feature_type = "ncRNA"
     rna_model = {"id": record.id, "type": feature_type}
 
     features = _get_record_features_model(
         record=record,
-        considered_types=[
-            "gene", "exon", "CDS", "mRNA", "lnc_RNA", "tRNA", "rRNA", "snRNA", "miRNA",
-        ],
+        considered_types=[*GENE_TYPES, "exon", "CDS", "mRNA", *NCRNA_TYPES],
     )
 
-    if features:
-        # Take the RNA feature's own qualifiers (e.g. biotype) onto the rna_model.
-        rna_feature = next(
-            (
-                f
-                for f in features[0].get("features", [])
-                if f.get("type") in ("ncRNA", "mRNA")
-            ),
-            None,
-        )
-        if rna_feature and rna_feature.get("qualifiers"):
-            rna_model["qualifiers"] = rna_feature["qualifiers"]
-
-        exon_positions = []
-        if features[0].get("features"):
-            for sub_feature in features[0]["features"]:
-                if sub_feature["type"] == "exon":
-                    exon_positions.append(sub_feature["location"]["start"]["position"])
-                    exon_positions.append(sub_feature["location"]["end"]["position"])
-        if exon_positions:
-            rna_model["location"] = make_location(
-                sorted(exon_positions)[0], sorted(exon_positions)[-1]
-            )
-        else:
-            rna_model["location"] = make_location(
-                record.annotations["sequence-region"][0][1],
-                record.annotations["sequence-region"][0][2],
-            )
-        if features[0].get("features"):
-            if len(features[0]["features"]) == 1 and features[0]["features"][0].get(
-                "type"
-            ) in ["ncRNA", "mRNA"]:
-                # e.g., M65131.1, XR_948219.2
-                rna_model["features"] = features[0]["features"][0]["features"]
-                features[0]["features"] = [rna_model]
-            else:
-                # e.g. NR_002196.2
-                features_to_add = []
-                for f in features[0]["features"]:
-                    if f["type"] in ("exon", "CDS"):
-                        features_to_add.append(f)
-                rna_model["features"] = features_to_add
-                features[0]["features"] = [rna_model]
+    if not features:
+        return _get_bare_rna_feature(record)
+    if features[0].get("type") in TRANSCRIPT_TYPES:
+        # Use the reference accession as the bare RNA's selector ID.
+        features[0]["id"] = record.id
         return features
+    # Take the RNA feature's own qualifiers (e.g. biotype) onto the rna_model.
+    rna_feature = next(
+        (
+            f
+            for f in features[0].get("features", [])
+            if f.get("type") in TRANSCRIPT_TYPES
+        ),
+        None,
+    )
+    if rna_feature and rna_feature.get("qualifiers"):
+        rna_model["qualifiers"] = rna_feature["qualifiers"]
+
+    if features[0].get("features"):
+        if (
+            len(features[0]["features"]) == 1
+            and features[0]["features"][0].get("type") in TRANSCRIPT_TYPES
+        ):
+            # Use the RNA's children (e.g. M65131.1, XR_948219.2).
+            rna_children = features[0]["features"][0].get("features", [])
+        else:
+            # Prefer direct gene exons/CDS: they capture the splice structure
+            # in NR_002196.2, though they can be incomplete (NR_037934.1).
+            rna_children = [
+                f for f in features[0]["features"] if f["type"] in ("exon", "CDS")
+            ]
+    else:
+        rna_children = []
+
+    exon_positions = []
+    for sub_feature in rna_children:
+        if sub_feature["type"] == "exon":
+            exon_positions.extend(get_range(sub_feature))
+    if exon_positions:
+        rna_model["location"] = make_location(
+            sorted(exon_positions)[0], sorted(exon_positions)[-1]
+        )
+    else:
+        rna_model["location"] = make_location(
+            record.annotations["sequence-region"][0][1],
+            record.annotations["sequence-region"][0][2],
+        )
+    if rna_children:
+        rna_model["features"] = rna_children
+        features[0]["features"] = [rna_model]
+    return features
 
 
 def _set_mt_translation_table(features):
@@ -430,8 +589,9 @@ def _create_record_model(record, source=None):
     """
     Our model follows the gene-mRNA-CDS/exon and gene-ncRNA-exon conventions.
     Annotations in GFF3 files also conform to this, with some exceptions:
-    - `mol_type=*RNA` NCBI references (e.g., NM_/XM, NR_/XR), for which the
-       RNA may be missing, leaving something like: gene-(CDS)/exon. In this
+    - Transcript NCBI references (`mol_type` mRNA, rRNA, tRNA, ncRNA or
+       transcribed RNA, e.g., NM_/XM, NR_/XR), for which the RNA may be
+       missing, leaving something like: gene-(CDS)/exon. In this
        case we create the '*RNA' feature between the gene and the CDS/exons.
        We observed that for mRNAs (e.g., NMs) the gene children consist of
        only the CDS and exons, while for other RNAs (e.g., NRs) there are
@@ -439,21 +599,39 @@ def _create_record_model(record, source=None):
          - There are also examples where the gene-mRNA-(CDS)/exon nesting is
            present (M65131.1, XR_948219.2) or where gene-exon/lnc_RNA-exon
            (NR_002196.2).
-    - There may be some floating exons attached directly to a gene. We do not
-      add them to our model.
+    - There may be some floating exons attached directly to a gene. We only
+      add them to our model when the gene has no transcript (e.g., PZ706538.1).
     """
+
+    record.features = _merge_split_features(record.features)
 
     features = None
     region_model = _get_region_model(record.features)
     if region_model and region_model.get("qualifiers"):
         if region_model["qualifiers"].get("mol_type"):
             mol_type = region_model["qualifiers"]["mol_type"]
-            if "RNA" in region_model["qualifiers"]["mol_type"].upper():
-                # e.g., NCBI: NM_/NR_/...
+            if mol_type in ("mRNA", "rRNA", "tRNA", "ncRNA", "transcribed RNA"):
+                # "genomic RNA" (e.g. NC_003468.2) uses the general parser below.
                 features = _get_rna_features(record, mol_type)
-    if features is None:
+    if not features:
         # e.g., ENST
         features = _get_record_features_model(record)
+
+    # Drop parentless exons and direct gene exons when the gene also contains
+    # a transcript with its own exons (e.g., NG_012337.1). Preserve exons of
+    # genes without transcripts (e.g., the UTRs of HLA-A in PZ706538.1).
+    # Do this after RNA reconstruction, which can move direct gene exons
+    # into a transcript (e.g., NM_078467.2).
+    features = [feature for feature in features if feature["type"] != "exon"]
+    for feature in features:
+        children = feature.get("features")
+        if (
+            feature["type"] in GENE_TYPES
+            and children
+            and any(c["type"] in TRANSCRIPT_TYPES for c in children)
+        ):
+            feature["features"] = [c for c in children if c["type"] != "exon"]
+    _add_split_cds_exons(features)
 
     if record.id == "MT" and features:
         # Ensembl's GFF3 carries no transl_table attribute anywhere (unlike
@@ -479,9 +657,19 @@ def _create_record_model(record, source=None):
     return model
 
 
+class GFF3ParseError(ValueError):
+    """
+    The GFF3 parser could not read the content (e.g., the NC_037304.1 CDS
+    lines outside the lines of their trans-spliced nad5 gene).
+    """
+
+
 def parse(gff_content, source=None):
     gff_parser = GFFParser()
-    gff = gff_parser.parse(io.StringIO(gff_content))
+    try:
+        gff = list(gff_parser.parse(io.StringIO(gff_content)))
+    except ValueError as e:
+        raise GFF3ParseError(str(e)) from e
 
     records = []
     for record in gff:

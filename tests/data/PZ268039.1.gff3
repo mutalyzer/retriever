@@ -1,0 +1,10 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PZ268039.1 1 3447
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+PZ268039.1	Genbank	region	1	3447	.	+	.	ID=PZ268039.1:1..3447;Dbxref=taxon:9606;Name=10;cell-line=MCF7;chromosome=10;gbkey=Src;genome=genomic;mol_type=transcribed RNA
+PZ268039.1	Genbank	gene	1	3447	.	+	.	ID=gene-PTEN;Name=PTEN;end_range=3447,.;gbkey=Gene;gene=PTEN;partial=true;start_range=.,1
+PZ268039.1	Genbank	lncRNA	1	3447	.	+	.	ID=rna-PTEN;Parent=gene-PTEN;gbkey=ncRNA;gene=PTEN
+PZ268039.1	Genbank	exon	1	3447	.	+	.	ID=exon-PTEN-1;Parent=rna-PTEN;gbkey=ncRNA;gene=PTEN
+

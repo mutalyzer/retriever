@@ -1,0 +1,192 @@
+{
+  "annotations": {
+    "id": "PZ706538.1",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 3517
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:9606",
+      "mol_type": "genomic DNA"
+    },
+    "features": [
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 0
+          },
+          "end": {
+            "type": "point",
+            "position": 3517
+          },
+          "strand": 1
+        },
+        "id": "HLA-A",
+        "qualifiers": {
+          "name": "HLA-A"
+        },
+        "features": [
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 0
+              },
+              "end": {
+                "type": "point",
+                "position": 373
+              },
+              "strand": 1
+            },
+            "id": "id-HLA-A-1"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 503
+              },
+              "end": {
+                "type": "point",
+                "position": 773
+              },
+              "strand": 1
+            },
+            "id": "id-HLA-A-2"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 1014
+              },
+              "end": {
+                "type": "point",
+                "position": 1290
+              },
+              "strand": 1
+            },
+            "id": "id-HLA-A-3"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 1890
+              },
+              "end": {
+                "type": "point",
+                "position": 2166
+              },
+              "strand": 1
+            },
+            "id": "id-HLA-A-4"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 2265
+              },
+              "end": {
+                "type": "point",
+                "position": 2382
+              },
+              "strand": 1
+            },
+            "id": "id-HLA-A-5"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 2820
+              },
+              "end": {
+                "type": "point",
+                "position": 2853
+              },
+              "strand": 1
+            },
+            "id": "id-HLA-A-6"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 2995
+              },
+              "end": {
+                "type": "point",
+                "position": 3043
+              },
+              "strand": 1
+            },
+            "id": "id-HLA-A-7"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 3212
+              },
+              "end": {
+                "type": "point",
+                "position": 3517
+              },
+              "strand": 1
+            },
+            "id": "id-HLA-A-8"
+          },
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 300
+              },
+              "end": {
+                "type": "point",
+                "position": 3217
+              },
+              "strand": 1
+            },
+            "id": "YGX89091.1"
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "CAGGAGCAGAGGGGTCAGGGCGAAGTCCCAGGGCCCCAGGCGTGGCTCTCAGGGTCTCAGGCCCCGAAGGCGGTATATGGATTGGGGAGTCCCAGCCTTGGGGATTCCCCAACTCCGCAGTTTCTTTTCTCCCTCTCCCAACCTATGTAGGGTCCTTCTTCCTGGATACTCACGACGCGGACCCAGTTCTCACTCCCATTGGGTGTCGGGTTTCCAGAGAAGCCAATCAGTGTCGTCGCGGTCGCGGTTCTAAAGTCCGCACGCACCCACCGGGACTCAGATTCTCCCCAGACGCCGAGGATGGCCGTCATGGCGCCCCGAACCCTCGTCCTGCTACTCTCGGGGGCCCTGGCCCTGACCCAGACCTGGGCGGGTGAGTGCGGGGTCGGGAGGGAAACGGCCTCTGTGGGGAGAAGCAAGGGGCCCGCCCGGCGGGGGCGCAGGACCCGGGAAGCCGCGCCTGGAGGAGGGTCGGGCGGGTCTCAGCCACTCCTCGCCCCCAGGCTCCCACTCCATGAGGTATTTCTACACCTCCGTGTCCCGGCCCGGCCGCGGGGAGCCCCGCTTCATCGCCGTGGGCTACGTGGACGACACGCAGTTCGTGCGGTTCGACAGCGACGCCGCGAGCCAGAGGATGGAGCCGCGGGCGCCGTGGATAGAGCAGGAGGGGCCGGAGTATTGGGACCGGAACACACGGAATGTGAAGGCCCACTCACAGACTGACCGAGCGAACCTGGGTACCCTGCGCGGCTACTACAACCAGAGCGAGGACGGTGAGTGACCCCGGCCCGGGGCGCAGGTCACGACCCCTCATCCCCCACGGACGGGCCAGGTCGCCCACAGTCTCCGGGTCCGAGATCCGCCCCGAAGCCGCGGGACCCCGAGACCCTTGCCCCGGGAGAGGCCCAGGCGCCTTTACCCGGTTTCATTTTCAGTTTAGGCCAAAAATCCCCCCGGGTTGGTCGGGGCGGGGCGGGGCTCGGGGGACCGGGCTGACCTCGGGGTCCGGGCCAGGTTCTCACACCATCCAGAGGATGTATGGCTGCGACGTGGGGCCGGACGGGCGCTTCCTCCGCGGGTACCAGCAGGACGCTTACGACGGCAAGGATTACATCGCCCTGAACGAGGACCTGCGCTCTTGGACCGCGGCGGACATGGCGGCTCAGATCACCCAGCGCAAGTGGGAGACGGCCCATGAGGCGGAGCAGTGGAGAGCCTACCTGGAGGGCCGGTGCGTGGAGTGGCTCCGCAGATACCTGGAGAACGGGAAGGAGACGCTGCAGCGCACGGGTACCAGGGGCCACGGGGCGCCTCCCTGATCGCCTGTAGATCTCCCGGGCTGGCCTCCCACAAGGAGGGGAGACAATTGGGACCAACACTAGAATATCGCCCTCCCTCTGGTCCTGAGGGAGAGGAATCCTCCTGGGTTTCCAGATCCTGTACCAGAGAGTGACTCTGAGGTTCCGCCCTGCTCTCTGACACAATTAAGGGATAAAATCTCTGAAGGAATGACGGGAAGACGATCCCTCGAATACTGATGAGTGGTTCCCTTTGACACACACCGGCAGCAGCCTTGGGCCCGTGACTTTTCCTCTCAGGCCTTGTTCTCTGCTTCACACTCAATGTGTGTGGGGGTCTGAGTCCAGCACTTCTGAGTCCCTCAGCCTCCACTCAGGTCAGGACCAGAAGTCGCTGTTCCCTCTTCAGGGACTAGAATTTTCCACGGAATAGGAGATTATCCCAGGTGCCTGTGTCCAGGCTGGTGTCTGGGTTCTGTGCTCCCTTCCCCATCCCAGGTGTCCTGTCCATTCTCAAGATAGCCACATGTGTGCTGGAGGAGTGTCCCATGACAGATGCAAAATGCCTGAATGTTCTGACTCTTCCTGACAGACGCCCCCAAGACGCATATGACTCACCACGCTGTCTCTGACCATGAGGCCACCCTGAGGTGCTGGGCCCTGAGCTTCTACCCTGCGGAGATCACACTGACCTGGCAGCGGGATGGGGAGGACCAGACCCAGGACACGGAGCTCGTGGAGACCAGGCCTGCAGGGGATGGGACCTTCCAGAAGTGGGCGTCTGTGGTGGTGCCTTCTGGACAGGAGCAGAGATACACCTGCCATGTGCAGCATGAGGGTCTGCCCAAGCCCCTCACCCTGAGATGGGGTAAGGAGGGAGACGGGGGTGTCATGTCTTTTAGGGAAAGCAGGAGCCTCTCTGACCTTTAGCAGGGTCAGGGCCCCTCACCTTCCCCTCTTTTCCCAGAGCCGTCTTCCCAGCCCACCATCCCCATCGTGGGCATCATTGCTGGCCTGGTTCTCTTTGGAGCTGTGATCGCTGGAGCTGTGGTCGCTGCTGTGATGTGGAGGAGGAAGAGCTCAGGTGGGGAAGGGATGAAGGGTGGGTCTGAGATTTCTTGTCTCACTGAGGGTTCCAAGACCCAGGAAGAAGTGTGCCCTGCCTCGTTACTGGGAAGCACCATCCACAATTATGAGCCTACCCAGCCTGGGCCCTGTGTGCCAGCACTTACTCTTTTGTAAAGCACCTGTTAAAATGAAGGACAGATTTATCACCTTGATTACGGCGGTGATGGGACCTGATCCCAGCAGTCACAAGTCACAGGGGAAGGTCCCTGAGGACCTTCAGGAGGGCGGTTGGTCCAGGACCCACACCTGCTTTCTTCATGTTTCCTGATCCCGCCCTGGGTCTGCAGTCACACATTTCTGGAAACTTCTCTGAGGTCCAAGACTTGGAGGTTCCTCTAGGACCTTAAGGCCCTGGCTCCTTTCTGGTATCTCACAGGACATTTTCTTCCCACAGATAGAAAAGGAGGGAGCTACTCTCAGGCTGCAAGTAAGTATGAAGGAGGCTGATGCCTGAGGTCCTTGGGATATTGTGTTTGGGAGCCCGTGGGGGAGCTCACCCACCCCACAATTCCTCCTCTAGCCACATGTTCTGTGGGATCTGACCAGGTTCTGTTTTTGTCCTACCCCAGGCAGTGACAGTGCCCAGGGCTCTGATATGTCTCTCACAGCTTGTAAAGGTGAGAGCCTGGAGGGCCTGATGTGTGTTGGGTGTTGGGCGGAACAGTGGACGCAGCTGTGCTATGGGGTTTCTTTGCATTGGATGTATTGAGCATGCGATGGGCTGTTTAAAGTGTGACTCCTCACTGTGACAGATACGAATTTGTTCATGAATATTTTTTTCTATAGTGTGAGACAGCTGCCTTGTGTGGGACTGAGAGGCAAGATTTGTTCCTGCCCTTCCCTTTGTGACTTGAAGAACCCTGACTTTGTTTCTGCAAAGGCACCTGCATGTGTCTGTGTTCTTGTAGGCATAATGTGAGGAGGTGGGGAGACCACCCCACCCCCATGTCCACCATGACCCTCTTCCCACGCTGACCTGTGCTCCCTCCCCAATCATCTTTCCTGTTCCAGAGAGGTGGGGCTGAGGTGTCTCCATCTCTGCCTCAACTTCATGGTGCACTGAGCTGTAACTTTTTCCTTCCCTATTAAAA",
+    "description": "PZ706538.1 Homo sapiens isolate LIB_6519585 MHC class I antigen (HLA-A) gene, HLA-A*26:01:01:13 allele, complete cds"
+  }
+}

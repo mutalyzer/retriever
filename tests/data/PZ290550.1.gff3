@@ -1,0 +1,12 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PZ290550.1 1 24867
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=289637
+PZ290550.1	Genbank	region	1	24867	.	+	.	ID=PZ290550.1:1..24867;Dbxref=taxon:289637;Is_circular=true;Name=10;chromosome=10;country=China: Yunnan;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;tissue-type=flower
+PZ290550.1	Genbank	exon	14955	15804	.	-	.	ID=id-PZ290550.1:14955..15804-2;Note=cox1 exon 2;exon_number=2;gbkey=exon;number=2
+PZ290550.1	Genbank	gene	14956	17495	.	-	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+PZ290550.1	Genbank	CDS	16770	17495	.	-	0	ID=cds-YEN79089.1;Parent=gene-COX1;Dbxref=NCBI_GP:YEN79089.1;Name=YEN79089.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=YEN79089.1
+PZ290550.1	Genbank	CDS	14956	15804	.	-	0	ID=cds-YEN79089.1;Parent=gene-COX1;Dbxref=NCBI_GP:YEN79089.1;Name=YEN79089.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=YEN79089.1
+PZ290550.1	Genbank	exon	16770	17495	.	-	.	ID=id-COX1-1;Parent=gene-COX1;Note=cox1 exon 1;exon_number=1;gbkey=exon;gene=COX1;number=1
+

@@ -1,0 +1,169 @@
+{
+  "id": "NC_000014.9",
+  "type": "record",
+  "location": {
+    "type": "range",
+    "start": {
+      "type": "point",
+      "position": 0
+    },
+    "end": {
+      "type": "point",
+      "position": 107043718
+    }
+  },
+  "qualifiers": {
+    "dbxref": "taxon:9606",
+    "name": "14",
+    "chromosome": "14",
+    "genome": "chromosome",
+    "mol_type": "genomic DNA",
+    "annotations": [
+      {
+        "freeze_date_id": "20190607",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20211119",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20250801",
+        "full_assembly_name": "GRCh38.p14",
+        "full_assembly_accession": "GCF_000001405.40"
+      }
+    ]
+  },
+  "features": [
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 20343070
+        },
+        "end": {
+          "type": "point",
+          "position": 20343411
+        },
+        "strand": -1
+      },
+      "id": "RPPH1",
+      "qualifiers": {
+        "name": "RPPH1",
+        "synonym": [
+          "H1RNA",
+          "RPPH1-1"
+        ],
+        "HGNC": "19273"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 20343070
+            },
+            "end": {
+              "type": "point",
+              "position": 20343411
+            },
+            "strand": -1
+          },
+          "id": "NR_002312.1",
+          "qualifiers": {
+            "biotype": "RNase_P_RNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 20343070
+                },
+                "end": {
+                  "type": "point",
+                  "position": 20343411
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_002312.1-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 49586579
+        },
+        "end": {
+          "type": "point",
+          "position": 49586878
+        },
+        "strand": 1
+      },
+      "id": "RN7SL1",
+      "qualifiers": {
+        "name": "RN7SL1",
+        "synonym": [
+          "7L1a",
+          "7SL",
+          "RN7SL",
+          "RNSRP1"
+        ],
+        "HGNC": "10038"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 49586579
+            },
+            "end": {
+              "type": "point",
+              "position": 49586878
+            },
+            "strand": 1
+          },
+          "id": "NR_002715.1",
+          "qualifiers": {
+            "biotype": "scRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 49586579
+                },
+                "end": {
+                  "type": "point",
+                  "position": 49586878
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_002715.1-1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

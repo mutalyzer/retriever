@@ -1,0 +1,9 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PV394717.1 1 3522
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+PV394717.1	Genbank	region	1	3522	.	+	.	ID=PV394717.1:1..3522;Dbxref=taxon:9606;collection-date=Mar-2021;country=Belgium;gbkey=Src;genome=genomic;mol_type=transcribed RNA;tissue-type=retina
+PV394717.1	Genbank	lncRNA	1	3522	.	-	.	ID=rna-PV394717.1:1..3522;gbkey=ncRNA;product=LINC03128
+PV394717.1	Genbank	exon	1	3522	.	-	.	ID=exon-PV394717.1:1..3522-1;Parent=rna-PV394717.1:1..3522;gbkey=ncRNA;product=LINC03128
+

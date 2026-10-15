@@ -1,0 +1,112 @@
+{
+  "id": "NC_000005.10",
+  "type": "record",
+  "location": {
+    "type": "range",
+    "start": {
+      "type": "point",
+      "position": 0
+    },
+    "end": {
+      "type": "point",
+      "position": 181538259
+    }
+  },
+  "qualifiers": {
+    "dbxref": "taxon:9606",
+    "name": "5",
+    "chromosome": "5",
+    "genome": "chromosome",
+    "mol_type": "genomic DNA",
+    "annotations": [
+      {
+        "freeze_date_id": "20190607",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20211119",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20250801",
+        "full_assembly_name": "GRCh38.p14",
+        "full_assembly_accession": "GCF_000001405.40"
+      }
+    ]
+  },
+  "features": [
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 136080490
+        },
+        "end": {
+          "type": "point",
+          "position": 136080598
+        },
+        "strand": -1
+      },
+      "id": "VTRNA2-1",
+      "qualifiers": {
+        "name": "VTRNA2-1",
+        "synonym": [
+          "CBL-3",
+          "CBL3",
+          "hsa-mir-886",
+          "hvg-5",
+          "MIR886",
+          "MIRN886",
+          "nc886",
+          "pre-miR-886",
+          "svtRNA2-1a",
+          "VTRNA2"
+        ],
+        "HGNC": "37054"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 136080490
+            },
+            "end": {
+              "type": "point",
+              "position": 136080598
+            },
+            "strand": -1
+          },
+          "id": "NR_030583.3",
+          "qualifiers": {
+            "biotype": "vault_RNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 136080490
+                },
+                "end": {
+                  "type": "point",
+                  "position": 136080598
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_030583.3-1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

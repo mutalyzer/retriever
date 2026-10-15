@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class StrEnum(str, Enum):
     """
     Enum where members are also (and must be) strings
@@ -11,11 +12,13 @@ class StrEnum(str, Enum):
 HUMAN_TAXON: str = "HOMO SAPIENS"
 EMPTY_VALUES = (None, "", [])
 
+
 class DataSource(StrEnum):
     """Data source enumeration"""
     ENSEMBL = "ENSEMBL"
     NCBI = "NCBI"
     OTHER = "OTHER"
+
 
 class MoleculeType(StrEnum):
     """Molecule type enumeration"""
@@ -33,6 +36,12 @@ def f_e(source, e=None, extra=None):
     if extra is not None:
         output += f" ({extra})"
     return output
+
+
+def get_range(feature):
+    """Return the (start, end) positions of the feature location."""
+    location = feature["location"]
+    return location["start"]["position"], location["end"]["position"]
 
 
 def make_location(start, end=None, strand=None):

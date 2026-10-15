@@ -1,0 +1,289 @@
+{
+  "id": "NC_000003.12",
+  "type": "record",
+  "location": {
+    "type": "range",
+    "start": {
+      "type": "point",
+      "position": 0
+    },
+    "end": {
+      "type": "point",
+      "position": 198295559
+    }
+  },
+  "qualifiers": {
+    "dbxref": "taxon:9606",
+    "name": "3",
+    "chromosome": "3",
+    "genome": "chromosome",
+    "mol_type": "genomic DNA",
+    "annotations": [
+      {
+        "freeze_date_id": "20190607",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20211119",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20250801",
+        "full_assembly_name": "GRCh38.p14",
+        "full_assembly_accession": "GCF_000001405.40"
+      }
+    ]
+  },
+  "features": [
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 12840311
+        },
+        "end": {
+          "type": "point",
+          "position": 12840450
+        },
+        "strand": -1
+      },
+      "id": "SNORA7A",
+      "qualifiers": {
+        "name": "SNORA7A",
+        "synonym": "ACA7",
+        "HGNC": "32592"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 12840311
+            },
+            "end": {
+              "type": "point",
+              "position": 12840450
+            },
+            "strand": -1
+          },
+          "id": "NR_002582.1",
+          "qualifiers": {
+            "biotype": "snoRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 12840311
+                },
+                "end": {
+                  "type": "point",
+                  "position": 12840450
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_002582.1-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 63911511
+        },
+        "end": {
+          "type": "point",
+          "position": 63912383
+        },
+        "strand": -1
+      },
+      "id": "SCAANT1",
+      "qualifiers": {
+        "name": "SCAANT1",
+        "synonym": "ATXN7-AS1",
+        "HGNC": "43718"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 63911511
+            },
+            "end": {
+              "type": "point",
+              "position": 63912383
+            },
+            "strand": -1
+          },
+          "id": "NR_148359.2",
+          "qualifiers": {
+            "biotype": "antisense_RNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 63911511
+                },
+                "end": {
+                  "type": "point",
+                  "position": 63912383
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_148359.2-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 160514906
+        },
+        "end": {
+          "type": "point",
+          "position": 160515236
+        },
+        "strand": -1
+      },
+      "id": "SCARNA7",
+      "qualifiers": {
+        "name": "SCARNA7",
+        "synonym": "U90",
+        "HGNC": "32563"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 160514906
+            },
+            "end": {
+              "type": "point",
+              "position": 160515236
+            },
+            "strand": -1
+          },
+          "id": "NR_003001.1",
+          "qualifiers": {
+            "biotype": "scaRNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 160514906
+                },
+                "end": {
+                  "type": "point",
+                  "position": 160515236
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_003001.1-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 169764609
+        },
+        "end": {
+          "type": "point",
+          "position": 169765060
+        },
+        "strand": -1
+      },
+      "id": "TERC",
+      "qualifiers": {
+        "name": "TERC",
+        "synonym": [
+          "DKCA1",
+          "hTR",
+          "PFBMFT2",
+          "SCARNA19",
+          "TER",
+          "TR",
+          "TRC3"
+        ],
+        "HGNC": "11727"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 169764609
+            },
+            "end": {
+              "type": "point",
+              "position": 169765060
+            },
+            "strand": -1
+          },
+          "id": "NR_001566.3",
+          "qualifiers": {
+            "biotype": "telomerase_RNA"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 169764609
+                },
+                "end": {
+                  "type": "point",
+                  "position": 169765060
+                },
+                "strand": -1
+              },
+              "id": "exon-NR_001566.3-1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

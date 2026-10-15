@@ -1,0 +1,788 @@
+{
+  "annotations": {
+    "id": "NG_008047.2",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 24863
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:9606",
+      "name": "12",
+      "chromosome": "12",
+      "genome": "genomic",
+      "map": "12p13.31",
+      "mol_type": "genomic DNA"
+    },
+    "features": [
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 0
+          },
+          "end": {
+            "type": "point",
+            "position": 4240
+          },
+          "strand": 1
+        },
+        "id": "ENO2",
+        "qualifiers": {
+          "name": "ENO2",
+          "synonym": [
+            "HEL-S-279",
+            "NSE"
+          ],
+          "HGNC": "3353"
+        },
+        "features": [
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 108
+              },
+              "end": {
+                "type": "point",
+                "position": 4240
+              },
+              "strand": 1
+            },
+            "id": "NM_001975.3",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 108
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 306
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001975.3-1"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 2123
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 2325
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001975.3-2"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 2598
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 2707
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001975.3-3"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 2886
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 2945
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001975.3-4"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 3273
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 4240
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001975.3-5"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 108
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 3343
+                  },
+                  "strand": 1
+                },
+                "id": "NP_001966.1",
+                "qualifiers": {
+                  "exception": "annotated by transcript or proteomic data"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 8501
+          },
+          "end": {
+            "type": "point",
+            "position": 22864
+          },
+          "strand": 1
+        },
+        "id": "ATN1",
+        "qualifiers": {
+          "name": "ATN1",
+          "synonym": [
+            "B37",
+            "CHEDDA",
+            "D12S755E",
+            "DRPLA",
+            "HRS",
+            "NOD"
+          ],
+          "HGNC": "3033"
+        },
+        "features": [
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 8501
+              },
+              "end": {
+                "type": "point",
+                "position": 22864
+              },
+              "strand": 1
+            },
+            "id": "NM_001940.4",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 8501
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 8927
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001940.4-1"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 14382
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 14571
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001940.4-2"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 14718
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 14856
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001940.4-3"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 15007
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 15121
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001940.4-4"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 16089
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 18104
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001940.4-5"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 18387
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 18610
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001940.4-6"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 19023
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 19720
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001940.4-7"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21422
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21566
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001940.4-8"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 21916
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 22097
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001940.4-9"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 22289
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 22864
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001940.4-10"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 14544
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 22323
+                  },
+                  "strand": 1
+                },
+                "id": "NP_001931.2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 23975
+          },
+          "end": {
+            "type": "point",
+            "position": 24863
+          },
+          "strand": 1
+        },
+        "id": "C12orf57",
+        "qualifiers": {
+          "name": "C12orf57",
+          "synonym": [
+            "C10",
+            "GRCC10"
+          ],
+          "HGNC": "29521"
+        },
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 24564
+              },
+              "end": {
+                "type": "point",
+                "position": 24716
+              },
+              "strand": 1
+            },
+            "id": "NR_126035.2",
+            "qualifiers": {
+              "gbkey": "misc_RNA",
+              "biotype": "misc_RNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 24564
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 24716
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NR_126035.2-1"
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 23975
+              },
+              "end": {
+                "type": "point",
+                "position": 24205
+              },
+              "strand": 1
+            },
+            "id": "NM_001301836.2",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 23975
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 24205
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001301836.2-1"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 24192
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 24205
+                  },
+                  "strand": 1
+                },
+                "id": "NP_001288765.1",
+                "qualifiers": {
+                  "exception": "annotated by transcript or proteomic data"
+                }
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 24044
+              },
+              "end": {
+                "type": "point",
+                "position": 24716
+              },
+              "strand": 1
+            },
+            "id": "NM_001301834.1",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 24044
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 24205
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001301834.1-1"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 24649
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 24716
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001301834.1-2"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 24664
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 24716
+                  },
+                  "strand": 1
+                },
+                "id": "NP_001288763.1",
+                "qualifiers": {
+                  "exception": "annotated by transcript or proteomic data"
+                }
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 24564
+              },
+              "end": {
+                "type": "point",
+                "position": 24716
+              },
+              "strand": 1
+            },
+            "id": "NM_138425.4",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 24564
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 24716
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_138425.4-1"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 24664
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 24716
+                  },
+                  "strand": 1
+                },
+                "id": "NP_612434.1",
+                "qualifiers": {
+                  "exception": "annotated by transcript or proteomic data"
+                }
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 24564
+              },
+              "end": {
+                "type": "point",
+                "position": 24716
+              },
+              "strand": 1
+            },
+            "id": "NM_001301837.2",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 24564
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 24716
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001301837.2-1"
+              },
+              {
+                "type": "CDS",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 24664
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 24716
+                  },
+                  "strand": 1
+                },
+                "id": "NP_001288766.1",
+                "qualifiers": {
+                  "exception": "annotated by transcript or proteomic data"
+                }
+              }
+            ]
+          },
+          {
+            "type": "mRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 24564
+              },
+              "end": {
+                "type": "point",
+                "position": 24716
+              },
+              "strand": 1
+            },
+            "id": "NM_001301838.2",
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 24564
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 24716
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NM_001301838.2-1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 24358
+          },
+          "end": {
+            "type": "point",
+            "position": 24421
+          },
+          "strand": 1
+        },
+        "id": "RNU7-1",
+        "qualifiers": {
+          "name": "RNU7-1",
+          "synonym": [
+            "AGS9",
+            "RNU7",
+            "U7.1"
+          ],
+          "HGNC": "34033"
+        },
+        "features": [
+          {
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 24358
+              },
+              "end": {
+                "type": "point",
+                "position": 24421
+              },
+              "strand": 1
+            },
+            "id": "NR_023317.1",
+            "qualifiers": {
+              "biotype": "snRNA"
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 24358
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 24421
+                  },
+                  "strand": 1
+                },
+                "id": "exon-NR_023317.1-1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "TCCCTCAGGAACAGCCCTCCACCTCTGCCCTGAATGTCTTTTCTTTCCCTCCTCCTCCTTGCCCATCCCTCCTGCTTGTACTATAATCTCACTGTATTCTGTCCCCAGCCTTGGAGCTGGTGAAGGAAGCCATCGACAAGGCTGGCTACACGGAAAAGATCGTTATTGGCATGGATGTTGCTGCCTCAGAGTTTTATCGTGATGGCAAATATGACTTGGACTTCAAGTCTCCCACTGATCCTTCCCGATACATCACTGGGGACCAGCTGGGGGCACTCTACCAGGACTTTGTCAGGGACTATCCTGGTGAGAGGAAGTGGTGTGAGGGGGAGGTCTGGGGGCAGGCAGGGACGTGTCCCAGCAACTCTGGACCTTATGGGGTGCTGACTCAGGCACCAGGTGGGGGTGTCCTAAGAAGAACCTGAGAACCAGGGAGAGGGTGCAGGAGCCACCTGCAAAGACTGGGCTTTGTATGTAGTGTAAAAATGCAGGTACCCGTGACCAATCTGTTCTGTCTCAGATCCTGATTAAAGTCATGGGTTCTGAAAACTACTGGGGTCATGGGGAAGGCTCTGGAAGGAACCAGGGATGATATGAGTGTGACTGGATCTAGCAGAGAACTAGAACATTTCAGTATCTTTGATTGATGAAATTGTGGATGCTGAATGGAGCTGGGACTGATGTGTGAGTAGAAAGAAGGCTGAGGGGGACTGAATTAGCTTCTGCAAGTCTGCCCAGGGCCTTTATCTCAGGATGGAGGCAGTTGGTCGCCATCTTCCTGACACAGAGCGAAAGAAAATCAACATAATTGCAGAATTAAGGATTTGGATTAGCAATGAGGAAGGGCTTGCTGGCAGTGAGAACAGGAAAATGCAAAGCTAGGTTGTGAACCCTTGTTACTGGAAGATTTTTTTTGGGGGGGGGGTGGGGTTGTTTTTTTTGTTTTGTTTTTTTTTTTTGAGACAGAGTTTGACTCTTCTTGCCCAGGCTGGAGTGCAATGGCGCCATCTCGGCTCACCACAACCTCCACCTCCCGGATTCAAGCGATTCTTCTGCCTCAGCCTCCCGAATAGCTGGGATTACAGGCATGTGCCACCATGCCTGGCTAATTTTGTATTTTTAGTAGAGACAGGGGTTTCTCCATGTTGGTCAGGCTGGTCTCCAACTCCTGACCTCAGGTAATCTATCCACCTTGGTCTCCCAAAGTGCTGGGATTACAGGCGTGAGCCACCACGCCTGGCTGGTTTGCTTTTAATTAACTTTTTTTTTTTTTTTTTTTTTTTGTAGAGACAGGGTTTAGCCATGTTGCTCATGGCTGGTCTCAAACTACTGGGCTCAAGTGATCTGCATGCCTCGGCCTCCCAAAGTGCTGGGATTACAGGCATGAGCCACTGTGCCCAGCCTATGGAAGTGGCGTGAGATCTCTGCTCACTGCACGATTCTCTTAGCCTCCCAAGTAGCTGGGATTACAGGCGTGCACCACCATGCCTGGCTAATTTTTGTATTTTTAGTAGAGATGGGGTTTTACTATGTTAGCCAGGGAACTCCTATCCTCAAGTGATCCGTTCACCTCAGTATCCCAAAGTGCTGGGATTACAGGCATGAGCCACTGTGCCTGGCCTCTCCATGTAAGGTTTTATGAAATAAGAATCAGGAGCCAGGCGTGGTGGCTCATGCCTGTAATCCCATTACTTTGGGAAGCCGAGGCAGGAGGACTGCTTGAATCCAGGAGTTCGAGACTGGCCTGGCAATACAGTGAGACCTCATCTCTACAAAAATTTTAAAAATTAGCTGAGTGTGGTGCCACACACCTAAAGTCCCTGCTACTCAGGAGGCTGAGGTGGCAGGATCACTTGATTGGGGAGGTGGAGGTTGCAGTGAGCTGAGATTGTGCCACTGCACTCCAGCCTGGATGACAGAATGAGGCTCTGTCAAAAAAAAAAAAAAAGTTAAGAATCAGTTAGGGCAGGCTTACACTGGGGGGATTTGTCTTAGCAAGGATGAGCAGGTGTAGTTAACCAAGGGCCTGTCCATTTCAGGGAATAAAGGGGCATGTTCCTGCCTGATGTAGAGACCCAGGGAAGATGAACACCTCCCCCCTCCCCACCATGCTCTCTCTGCAGTGGTCTCCATTGAGGACCCATTTGACCAGGATGATTGGGCTGCCTGGTCCAAGTTCACAGCCAATGTAGGGATCCAGATTGTGGGTGATGACCTGACAGTGACCAACCCAAAACGTATTGAGCGGGCAGTGGAAGAAAAGGCCTGCAACTGTCTGCTGCTCAAGGTCAACCAGATCGGCTCGGTCACTGAAGCCATCCAAGCGTGAGTGACTTCTGGCCCTCTCCTGTGTGGTCCTCGTTTCTATAAGACTCCTTTTGCAAGTGCTCCAGCCTAATTCTACCCAGGGGTGCCAAAGAGAGCGGGGAACCTGGAATCATCCTCACAGTTCTCTCACCTCTGCCCCTCCACCCCTGATTCTCTGCTCCCCTCCCAGATAGCTTTCCCCTAGATGTTTCCTGACATAGACCAAGGTTGGGGCTGGGAAGAGAGTGCCCAGTGTGAGAGCTGGAGAATCAGTGCTGTGTGTGGATACAGGTGCAAGCTGGCCCAGGAGAATGGCTGGGGGGTCATGGTGAGTCATCGCTCAGGAGAGACTGAGGACACATTCATTGCTGACCTGGTGGTGGGGCTGTGCACAGGCCAGGTGAGTGAGGCAGCCTGGTGAGTGAAGAGAACTCTCTGTGGGATTGGTATTTCTAGCTCACCCACCTGGTCTCTCCTTCCAGGTGTTTGAGGGTGTCAGGGGAGTTTCAGGAGAGCAGAAGTTTCCTTTCAGGGGTGAGAGGGCAGTCACTGAGCTGCAAATCCTTTGAAATGTTTCAGATCAAGACTGGTGCCCCGTGCCGTTCTGAACGTCTGGCTAAATACAACCAGCTCATGAGGTGAGGGTCCCTGGGGTGGGAGCCCCTGGCCCAGATGGCTAAAGGCCCCATTTGCCTGCCAGACCATCTGTAGCACCAAGGGCCTGGATAACAGTCCATTTCCTGGATAACAGTCCAACAGATAATATTGGTTTTTGCTTCCTGGGTTTATTGATGGCCTGATTGACAAATCCCAGAGATCACATGGGAAAGCCAGGGAATGCTAAGCCTTGGGGCAGGACACAAAAGCAGGTGGTGTGGGGGTGGTTGGAGTCTGGGGGACCCCTAGAGAGAGAAGCAGGATCCTCCTGCATCCCTGACCACTTCCTTTGTGGTTCATCTCTCTCAGAATTGAGGAAGAGCTGGGGGATGAAGCTCGCTTTGCCGGACATAACTTCCGTAATCCCAGTGTGCTGTGATTCCTCTGCTTGCCTGGAGACGTGGAACCTCTGTCTCATCCTCCTGGAACCTTGCTGTCCTGATCTGTGATAGTTCACCCCCTGAGATCCCCTGAGCCCCAGGGTGCCCAGAACTTCCCTGATTGACCTGCTCCGCTGCTCCTTGGCTTACCTGACCTCTTGCTGTCTCTGCTCGCCCTCCTTTCTGTGCCCTACTCATTGGGGTTCCGCACTTTCCACTTCTTCCTTTCTCTTTCTCTCTTCCCTCAGAAACTAGAAATGTGAATGAGGATTATTATAAAAGGGGGTCCGTGGAAGAATGATCAGCATCTGTGATGGGAGCGTCAGGGTTGGTGTGCTGAGGTGTTAGAGAGGGACCATGTGTCACTTGTGCTTTGCTCTTGTCCCACGTGTCTTCCACTTTGCATATGAGCCGTGAACTGTGCATAGTGCTGGGATGGAGGGGAGTGTTGGGCATGTGATCACGCCTGGCTAATAAGGCTTTAGTGTATTTATTTATTTATTTATTTTATTTGTTTTTCATTCATCCCATTAATCATTTCCCCATAACTCAATGGCCTAAAACTGGCCTGACTTGGGGGAACGATGTGTCTGTATTTCATGTGGCTGTAGATCCCAAGATGACTGGGGTGGGAGGTCTTGCTAGAATGGGAAGGGTCATAGAAAGGGCCTTGACATCAGTTCCTTTGTGTGTACTCACTGAAGCCTGCGTTGGTCCAGAGCGGAGGCTGTGTGCCTGGGGGAGTTTTCCTCTATACATCTCTCCCCAACCCTAGGTTCCCTGTTCTTCCTCCAGCTGCACCAGAGCAACCTCTCACTCCCCATGCCACGTTCCACAGTTGCCACCACCTCTGTGGCATTGAAATGAGCACCTCCATTAAAGTCTGAATCAGTGCACTGTTGTGTCTAAGGAGTCTTACTCTAGTCCCTATGAGGGGAGAGAAGATGGAGCACCTGGAAGCTGGTGAAACTGGATAGCAGAGCTGGGGGGGCACAAAAAGAGGAAGACAAACTGAACAAATATGGCCGAGATGATGGCACTGCCTACCCCATTCTGGCTAGGTGGGGTGCATGTGGCCCCTGCTTTCTTAGCAGAAGGCTTGGCTCCCAGACGCAGGTGAATTAAGGGGTTCAAGAGCCCCTAAAAGCATAAAATATTTTGTGTGTGTGTGTGTGTGCACGCGCATTTTGGGGGAAAGGGGGTCTAAGGTGTTTTCATATCCAAAGGGCTTGTGGACTGGAGCAGCTCCTGTACTGGGCCTCTGCCAACAAAACCCTGGCTGGTTCTCGAATGGAACAGGACTTCATGGCCATCACCCACTGCAAGATGGGGAAATGGGAAGGAAGAATGGTTCCGGGGGTAGTATACGGAAGGACCTAAGGAAACAGAGTCCTCAATAAACTGAAGATTCAGGAACAAAAGTGCTTAACAGAACCCTGGCTGGGTCAGACTAACAGTAGGTTTCCAATATGTGGCTAGAGACGTACTACTCCTTAGCTATAACTCGTTAACTCTTATGGGGCCTCAGCGTTGAGATGCTCATTCTAGGTACCCCCGAGGGGGACAAATCCCTTCCTAGTGGCTCGGATGCAAGGTTGCGTCCCACAGATAGGGTTTGCACATGGGAGATCTAACCACTAGAGGGAGTCAGAGTTTTGCAGGACGCCATACTGGACGCCAAGTGGGAGGAACTTCAAGGCTGTCCCCTGCGGGCCTCCCGCTCTGCTTCTGCGAAGGTCTGGTCCTGGCTCCCTCTGCCATCCTGCCCAGCTCCAAGGCTAAAATAGGTTCTAGTTCTGTATGGGTAGGGCCCATTTCTTTTCTTGCCCTCCTTCCCGGGTCCCTGACACCTCAGCCATTTTCAGTTCAAAGAGCCTCATGCCCCCTTTCCATTTCTGTGCCTTTTAGTTTCAGTGTGGGCATCTCATCTTTCCCTTTTCTCCTGGCGACCCTTTATGCCTCCCTTGGGGTTTCCTGTACTTTCCTCTGTGCCTCTCAGTTTTCTCTGGGGTCCCTGATACCCATCTTACCTTAGTAACTCCCAGACTGACCAGGACTATCCTAGTTTGAGCCTAGTTCCTAGCCTCTGTCCTTTCTTTCATCCCTCCTCACCAGGTCGCCTTCTCTGACAGTCTGGCCCCCCAACCCCCAAAGTATCGGGGTTGGATTGGGTTACAGCTAGCTCTGCCTGGGCCTCCCAGGCCCTTCTCTCCACTTTCCCTTTGTGCCGTTGCCTGGAGACCAATGGGTTGTGGGGGGCTGAGCCAGAGAGGGAGCTGGGGTGAGGGATGGCTGGGGCTGTGTGTGTGCGTGTGCGTGTGTGTGTGTGTGTGTGTGTGTGAGAGAGAGAGAGAGAGATGTCCCCTGCAGCTGGACTATAAGCCTGGCCCTCAGGTAGGGGAGGAATGGGAGAGGGTAGACAATGGTTTCTTTTGTGACTCTCACCATCCCCTATCCCCACATATGCCTAAATTTTTCTTTTAGTATCCATTGTAGCCCATTCCTTAGTGATTAAAAAACAAGGGAGAAGAGCTCAGCCTGGAAGGGATTTGGAAAGGGCTTGAGCCAAGGCCCAGTGGGAGACTGAACTGAGTGGTACAGAAAGAGAGGAAATGCCATGGGGAGAGAGGGTGAGAGGGAAAGGGGGAGCCCTGGAACAAAGTCAGGGGTGGGGAGGAGCAGCAGCTACCCTAGAGCAAGAGGAAGGGAGTCGGGGTGCACAGGGAGACAGGGAGCTGGCCTGGTCTCAGGGAGGCCCTGGGAGGAAGGTGTGCTTGGAGTGGTAAAGTGAGTGCCAACCAATTCAAGGGACTTCAGAGTGATGACTCATTCCCAGGCCAAGGAAGTGTTCCTGTTCCTGCGCCCAGTTCCCCAGTGCTCTGGAATCTTGTTTAGAGCTTTTGAGTATTCCCAGAACTTTGTTGAATCTGGCCCAAGGAATTGTGAGACAAAAATCTACTGAGCTGCTCCAGAGCTAACCTCCTTCCTTCCCTGAAGGCAGGTGGGATCTTGCCAATTCAGGGCCCACCCTTAGCCTCCAGCAAGACTGGCCCCACAAGTACCCGACCCCCACCCCAAATCTGGAGCTCTACTGAGGGCTCCTAATCCACACTCCAGCTCCAGCTCTTCCGGCTTGCCAGCCTGCCTCCCTCCCATTCTCTGGCCTTCCCAATTTCTGCTGCCAAAAATCACCCTGTGTCCTTTGTCCTGGGAGATGTTGCCGCTTGGTGGAGGGCCAGGAGGGAGCCCAGGAGAAGGAACTGGTGGTGGGCTGGCGGAGGTGCTGGCTTCACGGCCGGGAGCAGACTGACTGCCAGAGGCTACCTGGAGAGCAGGGGAGGGAGAGGAAGGGTTGGGAGGAGCCTGCAGTCTGTGGTGGGGACTGTCTCCACCTTAGAACAAGTGGGATTGAGCAACAAGGATACCCAGGGATTTGGGTCCACATTAAGCCCAGTCTTCACCCGACTGCTTCCCTGTGACCCAGGGGATCTTTAGTGATGACTTTCAACAGATTTGAGAAGGAAAATGGAGATGCCACTAGATGGAAGGCCTGAGGATGGTGTCTCACTCCTCCAAGCTGTATCCCTTACCTATCTACCCATGAGCTTGCCAGCAACCTCCCCCCGCTCCCACATCTGTCATTTCCTTTAACTGCCCTCGTTTCCCATCTCCATTTTTTCTTTTTTTTTTTGAGACGGCGTCTCGCTCTGTCTCCCAGGCTGGAGTGCAGTGGCGCGATCTCTGCTTGCTGAAACCTTTGCCTCCCAGGTTCAAGGATTCTCCTGCCTCAGCCTCTGAGTAGCTGGGATTACAGGCATGCGCCACCACACCCGGCTAATTTTTGTATTTTTAGTAGAGACGGGGTTTCGCCATGTTGGCCAGGCTGGTCTTGAACTCCTGACAAGTGACCCACCCGACTCAGCCTCCGAAAGTGCTGAGATTACAGGCGTGAGCCCCCGCACCGGCCCCATCTCCATTTTCTTTTCCCATCCATGATCTTTCCTCTTCCATACTGCCGCCAGCCATAGGCCTTGTTCAGCTTACATTTCCTTCCAATCTTCTTATCCCCCTCTTCCCCATTCTGCCCGCCCAAGTAAACCCTCCTCGGCTCTACTGGGAGCCCCCACCCCCAGGATCCAGCCAGCCCGGTGTCTCCCACCCTTCTTTCCCATCCAGAGCCCTCCTTTCTCACCCAGAACCTATTTTCCCTAGAATTGGCACCTGGGCCCACCTCGTTCATCCCTTCTTAAGGTTCCTCACGCGTTCCCTCCTCTCTCTCCTCACTGACGTTTCCTCTGGACTTCTCTCTCTCCAGCATTCCTTCATCCCCCCACCCCCAATTCTTATATTTATGACTCTTTTGTCAACACTAATCACCCCCAAAAGCTTTACTTTTTCCAGAAGCCCCATCTTTCTATATATGTCATCTTTTCAATTTTTCTCTCTCCTTATGACCCCAAACTTCCATCCCATTCTCTCTGATAATAGCCCCCAAACCCGTCTGGCTCCATCTCTGCCACAGATCCCTCACCCCAAGCTTCTCTCACTTCTCACCAGGCACCCACAAAGCCCCCAGGCAGCTCCATCTTTCCAATCCAATCCCATTATCCCAATCTCTACCCCAGGATCCCCCAAACTCCTCCCACTTCACCTCTGCCACAGACCCGCTCGCCCCCAAACTTCAGCCTCCCCTCATCTGCCCTCACCACCCACAGCCCCTCCTACCTAGCCCTCTCCCGCGCCGGGCCCGCGGGCTCCCCACATTCCGCCACGGCTAGCCCTCCCCGCGCCCCGGCCCCCTCGGCCTCGGCCTCGGCCAACTCGCGCTGCGCCTCCCCCTCTCCGGCTCCCCCTCTCTCCCCCCTCGCGGCTTGCCTCGCGCTCCCTCCCTCGCGTCTCCCTCCTGGCCCCTCTCTCCTCCGTTCCTCCGCGCTCCCTCCTTCTCCCTCTTCCTCCCTTCTCCCATCCCCCTCTCCCAGGCTCCCTCCCTTCGCCGTCCGCTTTCCTGTGCGAGTCGCCGGACGCACCGCCCAGCCCGTCCGCAGCCCCGCGCCGGGTCGGGGCCTCGGGCCGGGCCATTTCGGAGGGACCGCGGCTTCGGGGAGGGGCTAGGAGGGGGGAGAGGGAGCCGACTGCCGGGGAAGGGGCGGGGGCCGCGGGCGAGGCGGCCGAGGGGCCCGGGATCGCGCGGGTGCGGGCTGCGCTAGGCGGGCGCGGGCGGCGGCGGGTCGGAACCGCGCCGAGGGCCGGGCGGGCCGCGGGGCCGGGCGGCGCGGCGGGGGCGGGCGGCGCGGCCCGGGGCATTCCGGGCGGCCAGGGGGAGGCGGCGAGCCCGGGGAGGTGGGGAGCAGAGCGGGGATCGGGGTTTGCTCCGGGGGCCGGCGGGCGATTGGGGCCAGGCGGGGAAAAGGGGGGATGGGGGCCGCCCTCCGGGGGGGTCGGGGCCGCCGCCGCCGTCGTCGCGGCGGCGACTGAGGCCGAGAAGAGGAGAGGGGGGCGGGGGAGCTGCCGCCGCCGCCCCCCAGAGGCGCCGGAGCCCGGAATCCCGCTCGGAGCCAGCCAGCCGTCCCGAGCTACCAGCAGGTAAGGTCTGCGGCCGCCTGGGCCCCGGGCCCGCGGGGTTCTGTCCCGCCCGGGCTCCGGCCTGCGGCTCCCCACCCCCACCCCTCCCAGTTCCCCCTCCTGCCGCCGCCGCCTCCATTTGTTATTTTCCCAATCCCGTCCCCCCACTGCGGGCTCTGCCTGGCCTGAGGGCCGGGGGCTCAGGGGGTGGGGCCCGCCGAGGAGAGTCGGGGGCCAGGGTTTCGGGAGGATCGGGAAGGTGGGGAAGGAGGGAGGGTCTCCGGAGGAGGCCTGTGGGGCCAGAGGGTATCCGGGACCCGCAGACTCAAAAGAGGAGGAACATCGAGGCCGGGGTTGGCGGAGGAAAACGGGGGATGCTGTGAGTGGGGTTCCGGGCGAAGGCAGAATGGATAGGAGAGATGGCAGCGAGGTGGGGCATGAAGCCTCCAGGAAAAAGCTCCAAAGGACCAGAACACGGGTTCCGGAGCCTGGGGTTGGGGGCTTTAGGAATAGACGGGAAGTGGGAAACGGGAAAGGGGTGTGGTAGGTGGAAAGAGGGATTGTGGCTGATGAACCTGGGGGAGACGGAGGCTTGGGCAAAGAGAGGTCCATTTTTGAGAAGAGCCGGAGGTTTTCCAGCGTGGAAGAGGGAAGGCCATGTCTTTGTGACGGTTTTCATTCCCCTACTGCAGGTCACCTCTGACCCTGTTTTCCCTATCCCAGACATAGTTATTTCTTGGAGAGGGCACTGGGGCCCAGTAGTGTGGGTTATCCCAAAACTAGTGAGGAGGAAAACAGGAACACAGAAGGGGGAGTTGGGAAGAAAGGGGTTCTGGGAGGATGGAAATGGAGAATTGAGCAACCTTACAGGCACTCCAGGCAAGTTGCGACCTCCACCCTCCACCCTCCAATTTCCGGAGCGTCCGCTGCCCCTGGAGCTGTGATCTATATAGGGAGGCCTTAGTTACTGCTTTGAGCTCAAAGATCTCCCTTTGTGCATGGGCTTATTTTGACTAGGGTAGGTACCTTCAAGCTCCCTTACCTGAGGTGCTATAGGAGGGTAGGAGTTGCTTTGGCAACTGGGGTAGGGGGTAGCTGCCAGATGGACACCTGGGATGGTCTCTTGAGGGGCACCTTTTGCCACTGTGTTGCTATGGTAGTGATCCAGTGGGATGTCAGATTGGTTGGGGGGGCTTCGAATGTTTATTGGACCTCAGCCTGTGGCTGTCCTTGGGACTCTGGGCTGGGTTTTGGAGGTTGTTTCTGGATCTGTTGGTGGTTGGGAGTTTCCCCACGGTGTGCACCCTTTCATGTTGAAGTCTGTTGGAACAGGTAGATACGTTCCTTGCAGATCATAGGTGTTTCTCCAAGTCTCTCCACCTGGGCATGATGGGAGGATGAAAACGCTTCTGTTCAGGTTACACCATCTTTTGGCAGTTGGTTCTGACCTCTACCTCCCTTATTATGTTATTTTTTGTAGAGTTGTCTTTTTGCTTCTTTGCACTTTCTTTCATTTTCTAAAACTTGAATTCCTCTTTGAGCCTCCCTTCTTGAGTAACCCTTTTCCTCTTTCCCTCAACTAACCTTTGGCCTTCTTCCCTGACCTTGTAGAAATGGCTGGGCTCCCAGGCCCATCCCAGGTGAGGGTGGCCCAGGACAGAGGGCTGTGAAACAGCTTCATGCAGGGGAAATACTATAGAACAGGAGCCAGGAGACCTGTGTCTAGACCTGGCTGTGCCTCTGTGACCTTGGGCAAGTCACTTCTCTTTGAGCCTGGGCTTCATTGTTAAGATGAAGGGGCTATAGATGAGATGATCTCTGAGGCCTCTCTGAAGGTCCCGGATTCTCAGAAGGCTTAGGCCAGTGCATCGTTATCTGCTGGTCTGGGCTGCATTGTTATCTAGGAGTCACTTTGGACTGGTTTGTTAGTCTGGCAGGTCCAGAATGATGTTGGGGGCTGGGCCAATGATCCTGAAATTTAGCCTGCGAGCCCCTCCCAGAGAGCTTGTGACTCCACTGTATTCCTTCTGACATCCCATATTTCTCTCTTAATTTCTTTTCCTGTTCTTACTTAGGGGCTCTTTTTCTAGTTCTCACTTTCCTCCCAACCCAGTCTGGTCTTAATCATTTTCTTTTTAAAGTAAGGTAATGGCAGTGCGCAGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCTGAGGCGGGCGGATCACGAGGTCAGGCGATTGAGACCATCCTGGCTAACACGGTGAAACCCCGTCTCTAGTAAAAATACAAAAAAATTAGCCGGGCGTGGTGGCGGGCGCCTGTAGTCCCAGCTACTCAGGAGGCTGAGGCAGGAGAATGGCGTGAACCCGGGAGGTGGAGCTTGCAGTGAGCCGAGCCGAGATCGCGGCACGGCACTCCAGCCTGGGTGACAGAGTGAGACTCCGTCTCAATAAATAAATAAATAAATAAATAAATAAAATAAAGCAAGGTAATGAAGGTGAATGTGCTTAGTATGTGGCCAGATACAGAGTAGGTGCTCTGTAATATTAGTTACAGTGATTGCCTGCTAGGAGTGTAGGCTGGTGCTAAAACATGACCCAGGTCTAGAAAGACACACAATCCACCCCTAACTCCTTTCCTCGTCTGCCACTCCTTATCCCCAGGATTACTTGTTCTTTTATGACTGCTTTTCTCCTTCAAAGCTTCTCATTGCTAGTTTTTATCAGATTTCAGGTGATTAAAAAAGAAGGGCATACTATGATTGCTGTGTTCCTCAGGTACATTCCTGTGTTTCTCTGACCTTTTGGATCCCCTAACCTAACTGACTTGGTGAACAGGTTCTGTGATGGGGAAGGGAGATGGACACCCTTCTCTAGGAGGGCTGGCAAAAATACACCAATCACAAATAGTCATCTTTGTTGTGCTTTTTGTTTAAGATTGTTTTCCTCTTTTGCTATGGTGGGTGTTGTTCTTCGGATTTTTTTTTTTTTTTGGTTGATAGTATTTTAAAACCAGTCTACATAACAACTAAAAAATGTGGGAAAATAGCTGTAGTTGAAAAAAAAAAAAAAAAAAAAAAGGCCGGGCATGGTGGCTCACGCCTGTAATCCCAACACTTTAGGAGGCTGAGGCAGGTGGATCATCTGAGGTCAGGAGTTCGAGACCAGCCTGGTCAACATGGTGAAACTCCGTCTCTACTAAAAATACAAAAATTAGCCAGGTGTGGTGGTGTGCGCTTGTAATCCCAGCTACTTGGGAGGCTGAGGCAGGAGAATCGCTTGAACCTGGGAGGCGGAGGTGGCAGTGAGCTGAGATCATGCCATAGCACCTCCAGCCTGGGGAACAAGAGCAAAGATCCATCTCAAAAAAAAAAAAAAGGAAAAAAAAAGAAAACTAGTTGGCCGGGCACAGTGGCTCACGCCTGTAATCCCAGCACTTGGGAAGGCCGAGGCAGGCAGATCACCTGAGGTCAGTAGTTCGAGACCACCCTGACTAACATGGTGAAACCCTGTCTCTACTAAAAATACAAAAAATTAGCCGGGTGTGGTGGTGCATGCCTGTAATCCCAGCTATTCAGGAGGCTGAGGCAGGAGAATCGCTTGAACCTGGGAGGCAGAGGTTGCAGTGAGTGAGATCACGCCACTGCACTCCAGCCTGGGCAACAAGAGTGAAACTCTGTCTCAAAAAAAAAAAAAAAAAAAAAAAAAAAGACAAGTCTACTGGGCAGAGCATCAGTTGAAAGTTCAGAAGATAGGCTCTGTCCCAGCAATTTTGTGATTCTAAGTAAATTGTGAAGTTTCCTGGAAAGGTTAGACTCACCCCTTACTGCCTGCATCAGTATGGTTCCGTGGAGGTGAGTGAGAATTACTGTGTTTCTTGGGAAAAAATACACTACAGAATATGGACATGCCGTTTACCTAGCAGGCCTCCAACTCAGAATAGAATACATGGGTAAGCTTAGTCTGTTCCCACTGGAGCTAGCAGCACTTAATTCAGGAAGAAAGACCTACTGATGTTAGTGGGTTTAAAGGTCAATCACAAGAAGAGCGCACACACATCAGTGGAAAGGAAGAAAACAGTAAGAAAATACCATTTTTGCTCTCAAAAGATCTTACAATCAGTAATTTGGAGGGACTTGACACTTAGCAAGAAATACAAACAAGTGCAAATGAATACAGCTGGCTATAGGGATTTGGATAAAGATAGATACCTGCTGATAGACAGATACGGATGGATTGGCTGTGAGAAACTGTGTAACCCAGTCTACACCAAGTAGGAGGATAGGCTTAAAAACTGGTACATCTGTGTTGTTTGCTCACGGATATTTTGAGTCTTTAATCATTCATGTGAAAACCCTGACTTTTCCTCTAGCCTTAGGGAGCTCAAGTACTAGAGAATGGGTCCTTTATGGGGCTCTCAAAAATGAAGTTCTACAATTTGGGGCTACCTAGGTTTAGTCTTGGGATTGGTAGGGCTGTGTTCCTTTGTATTATAGAATGGGACATTCTTCTTCTACCTACTCTGATGTGAGAAAAGATTCTTTTCATATCTCTGTGACTGATCTAGGCCTTCTGAGAATTCTCCCCAGCAACTTCTGAGGAGAATACAGCAAAGTATAGAAGAAAGAGCATGGGCTTTGAAGTCACCGACATGGGTTTGATTCTGGCTCTGTCACTGGTTCCTCACTGTGTGAGGTTGGGCTAGTCACAATCACAATCTTTGAGCCTCAGTTCCCTCACCTATATAATGAGGGTAATAATGCTTACCATTCAGGGTTGGTTGTAAATATTAAATGAAATCATGTATGTGAAGGGCTTGATATAAAGAAGGTATTCAATAAATTCATACTTCAATGTCATTTCTTTTTTCTTTTTTTTTTTTTGAGACAGAGTCTTACTCTGTCACCCAGGCTGGAGTGCAGTGGCATGATCTCGGCTCACTGCAACCTCTGCCTCCCAGGTTCAAGTGATTTGCTTGCCTCAGCCTCCTGAGTAGCTGGGATTACAGGCACGTGCCACCACGCCTGGCTGGGTTTCACCATGTTGGCTAGGCTGGTCTTGAACTCCTGACCTTGTGGTCCATCCACCTAGGCCTCCCAAAGTGCTGGAATTATAGACATGAGCCACCATGCCCCGCTCCATTTCTTTATGTTCCTTTGTAAGGCTCCGTGGAATGTGTGTGTTCACAAATATCCTTTAGGGATCATGAAGGGTAAACTGTGTGATCTCCTGGATTGGGGCTTGTAGGTACATCCGAATTTTCTGCCCTCTACAGAGATGAAAGAGATTATACTTCGAGCAGAATCTGCCTCCCTTTTAGATAGCTAAGGTAGCCCATGGGGCATGCCAGCAATGTCTTGTGGTATCTGTACCTCTTGGCCCAAAGGCTTAGGGTTGGGCCGCTTGCTCAGTTCTCTGACAAGCAGAATAGTATTCCTTTGTGACTCTGTTCTCCAAGTTGGAGACTCTGATGGTTTCCTTCTAACAGGTTTCATTGAAAACAGATCCTGCAAAAGTTCCAGGTGCCCACACTGGAAACTTGGAGATCCTGCTTCCCAGACCACAGCTGTGGGGAACTTGGGGTGGAGCAGAGAAGTTTCTGTATTCAGCTGCCCAGGCAGAGGAGAATGGGGTCTCCACAGCCTGAAGAATGAAGACACGACAGAATAAAGACTCGGTGAGTTAAAATGAGAGACATGAAAGATGAGGGGCGGGGCAGGCAAGCTAGGAGGAAGGGTCTAGAGAAGAAGAACAAATAATGTGCACCATAAAGTTAGGTGCAATGTAAAGAACAGTGTTACCTACCTCCTTCCTCCTCCTGTAGATGTCAATGAGGAGTGGACGGAAGAAAGAGGCCCCTGGGCCCCGGGAAGAACTGAGATCGAGGGGCCGGGCCTCCCCTGGAGGGGTCAGCACGTCCAGCAGTGATGGCAAAGCTGAGAAGTCCAGGCAGACAGCCAAGGTATTCTGTCCTCAGGTCCTCCCACAGGATGCCCAAGGCACTGGGGCTGAGGGTGTGTGTGTGTTGTGGGGGAACTTCCTGTTTGGCAGAGGGTAACGGTGGAGCTCGGGAGGTAGGGAAAAGACAGGAATTTTCTCTTTCTCTCTAACAGAAGGCCCGAGTAGAGGAAGCCTCCACCCCAAAGGTCAACAAGCAGGGTCGGAGTGAGGAGATCTCAGAGAGTGAAAGTGAGGAGACCAATGCACCAAAAAAGACCAAAACTGAGGTGGGAAACCCTTGTCGCCATCCTGACCCATCTTGTGACCATTCTTTTCTCAGACTTGCTTATGCTCACTATTCTTAGCTGGATCTCTCCTGGGACATAAGAGAAAGGCCAGATCATAGTGCTTATGAGAGCAGTTCTGTCTATAATATGCCAGAGAGATTCTTAGAGCTTTGACAGACCACCAGATGACCAGGCAGGGCCAAAGGGGACCAGAAGAGTTGGGGGATTCTAGTCTCTGGGTGAGAAGTCTTAGTCGGAGGAACAAATAAATCTTAAGGAAAATGCAGAAGTGGTCTTTCTTTTTTATTGTTTTTTTTTGTTTGTTTGTTTTTGAGACAGTTTCGCTCTGTCACCCAGGCTGGAGTACAGTGGCACAATCTCAGCTCATTGCAACCTCCGCCTCCTGGGTTCAAACAATTGTGCCTCAGCCTCCCGAGTGGCTGGGATTATAGGCATGAGCCACCATGCCCGGCTAATTTTTGTATTTTTGGTAGAGACAGTGTTTCACCATGTTGGCCAGGCTGGTTTGGAACTCCTGGCATCAAGTGATCCGCCCGCTTCAGCTTCCCAAAGTGCTGGGATTACAGGTGTAAGCCTCTGTGCCCGGCCAGAAGTGGTATAAAAACCAAGGGCTTGGGGGATGGAGGATGGTTAAAGTGGTGGTTATGAGATGGTGGAAGACAGGGAGTTGGAGTCAGCTGTGGGTAGAGACAAGGTGCTTGAGATGGATCCTTGAGGAAGGAATAGGGTTTTACAGGCGGGAAACAAGACTGGCTGCTAGGGAGCAGCCAAGAATGTGAGGAAAGTGAGAAATCCCCAGATGGTAAGAGGTGGGCTTGAGCAAGAGTACTCACCACATCACAGTACAACAGTGTGCTGTGAGGGGAAATGATTTTATGCAAGAGAGCCCCAAATCTCAGGGAAGCAGGAAAGGAAAAGAGAAAAAATGAGTCTTCCCTTTTCTACAGCAGGAACTCCCTCGGCCACAGTCTCCCTCCGATCTGGATAGCTTGGACGGGCGGAGCCTTAATGATGATGGCAGCAGCGACCCTAGGGATATCGACCAGGACAACCGAAGCACGTCCCCCAGTATCTACAGCCCTGGAAGTGTGGAGAATGACTCTGACTCATCTTCTGGCCTGTCCCAGGGCCCAGCCCGCCCCTACCACCCACCTCCACTCTTTCCTCCTTCCCCTCAACCGCCAGACAGCACCCCTCGACAGCCAGAGGCTAGCTTTGAACCCCATCCTTCTGTGACACCCACTGGATATCATGCTCCCATGGAGCCCCCCACATCTCGAATGTTCCAGGCTCCTCCTGGGGCCCCTCCCCCTCACCCACAGCTCTATCCTGGGGGCACTGGTGGAGTTTTGTCTGGACCCCCAATGGGTCCCAAGGGGGGAGGGGCTGCCTCATCAGTGGGGGGCCCTAATGGGGGTAAGCAGCACCCCCCACCCACTACTCCCATTTCAGTATCAAGCTCTGGGGCTAGTGGTGCTCCCCCAACAAAGCCGCCTACCACTCCAGTGGGTGGTGGGAACCTACCTTCTGCTCCACCACCAGCCAACTTCCCCCATGTGACACCGAACCTGCCTCCCCCACCTGCCCTGAGACCCCTCAACAATGCATCAGCCTCTCCCCCTGGCCTGGGGGCCCAACCACTACCTGGTCATCTGCCCTCTCCCCACGCCATGGGACAGGGTATGGGTGGACTTCCTCCTGGCCCAGAGAAGGGCCCAACTCTGGCTCCTTCACCCCACTCTCTGCCTCCTGCTTCCTCTTCTGCTCCAGCGCCCCCCATGAGGTTTCCTTATTCATCCTCTAGTAGTAGCTCTGCAGCAGCCTCCTCTTCCAGTTCTTCCTCCTCTTCCTCTGCCTCCCCCTTCCCAGCTTCCCAGGCATTGCCCAGCTACCCCCACTCTTTCCCTCCCCCAACAAGCCTCTCTGTCTCCAATCAGCCCCCCAAGTATACTCAGCCTTCTCTCCCATCCCAGGCTGTGTGGAGCCAGGGTCCCCCACCACCTCCTCCCTATGGCCGCCTCTTAGCCAACAGCAATGCCCATCCAGGCCCCTTCCCTCCCTCTACTGGGGCCCAGTCCACCGCCCACCCACCAGTCTCAACACATCACCATCACCACCAGCAACAGCAACAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCATCACGGAAACTCTGGGCCCCCTCCTCCTGGAGCATTTCCCCACCCACTGGAGGGCGGTAGCTCCCACCACGCACACCCTTACGCCATGTCTCCCTCCCTGGGGTCTCTGAGGCCCTACCCACCAGGGCCAGCACACCTGCCCCCACCTCACAGCCAGGTGTCCTACAGCCAAGCAGGCCCCAATGGCCCTCCAGTCTCTTCCTCTTCCAACTCTTCCTCTTCCACTTCTCAAGGGTCCTACCCATGTTCACACCCCTCCCCTTCCCAGGGCCCTCAAGGGGCGCCCTACCCTTTCCCACCGGTGCCTACGGTCACCACCTCTTCGGCTACCCTTTCCACGGTCATTGCCACCGTGGCTTCCTCGCCAGCAGGCTACAAAACGGCCTCCCCACCTGGGCCCCCACCGTACGGAAAGAGAGCCCCGTCCCCGGGGGCCTACAAGACAGCCACCCCACCCGGATACAAACCCGGGTCGCCTCCCTCCTTCCGAACGGGGACCCCACCGGGCTATCGAGGAACCTCGCCACCTGCAGGCCCAGGGACCTTCAAGCCGGGCTCGCCCACCGTGGGACCTGGGCCCCTGCCACCTGCGGGGCCCTCAGGCCTGCCATCGCTGCCACCACCACCTGCGGCCCCTGCCTCAGGGCCGCCCCTGAGCGCCACGCAGATCAAACAGGAGCCGGCTGAGGAGTATGAGACCCCCGAGAGCCCGGTGCCCCCAGCCCGCAGCCCCTCGCCCCCTCCCAAGGTGGTAGATGTACCCAGCCATGCCAGTCAGTCTGCCAGGTGAGCGGCCAGGTGGGGCGGAGGTGGGCCTGGAAAGGGGACGACGACAAGGCGGCGACGAGAGAGGGAGTAGCAGGGAGGGGCCTTGCGCTGGTGTAGTGTTTTAGAAAAGCACGCCCCTCTCCTCCGTCCAGGCCTAGTGGCCAGTGAGGCCCGCAGCAGCTCACAGCCTGCAGGGGTGGTTTTGAGGCGGGGGCTACAAGCACTCGCCGGGGCCGCGGCGCTGCGGGCTCCATCGGGCAGCTCGCACCGCCTGAGCGCCCGCTGCTTCCACGCCCGGCAGGTTCAACAAACACCTGGATCGCGGCTTCAACTCGTGCGCGCGCAGCGACCTGTACTTCGTGCCACTGGAGGGCTCCAAGCTGGCCAAGAAGCGGGCCGACCTGGTGGAGAAGGTGCGGCGCGAGGCCGAGCAGCGCGCGCGCGAAGAAAAGGAGCGCGAGCGCGAGCGGGAACGCGAGAAAGAGCGCGAGCGCGAGAAGGAGCGCGAGCTTGAACGCAGCGTGGTGAGTGCGTCACTGCCTGCGCCACCGCCTTCTTTCCCTCTTTCCTTCCTTCCCTCTGCGCTGCGCTGCGCTACGCTACGCTGCGGGGCTGTGGCTGGGTGGGCGGGCGAGTCACGTCGCCACCTGTCGGAGGGGAGGTACCACTGCAGCCCAGGAAATGGAGCCCAAAAGGTTTTCAGCGAGAGCCATCTGCATTCCTGGGTTGGGAAAAGGCATGCTCAGATGGGACTACCTGTGGATCCCAAGAAGGGCAAATATTCGGGAGCGGGGGCCGCAGTTAAGTTCCAGGTGGGCAGAGTTTCAATGAGTTGAGGCATTTTGGCATTCGGCTGTCGAAACAAATGGGCAGCTTAAAACCAGCCACCTCTTTTCATAACTGCCGCTTTGACTCCACTTTTCCCTGTATCCCACAGAAGTTGGCTCAGGAGGGCCGTGCTCCGGTGGAATGCCCATCTCTGGGCCCAGTGCCCCATCGCCCTCCATTTGAACCGGGCAGTGCGGTGGCTACAGTGCCCCCCTACCTGGGTCCTGACACTCCAGCCTTGCGCACTCTCAGTGAATATGCCCGGCCTCATGTCATGTCTCCTGGCAATCGCAACCATCCATTCTACGTGCCCCTGGGGGCAGTGGACCCGGGGCTCCTGGGTTACAATGTCCCGGCCCTGTACAGCAGTGATCCAGCTGCCCGGGAGAGGGAACGGGAAGCCCGTGAACGAGACCTCCGTGACCGCCTCAAGCCTGGCTTTGAGGTGAAGCCTAGTGAGCTGGAACCCCTACATGGGGTCCCTGGGCCGGGCTTGGATCCCTTTCCCCGACATGGGGGCCTGGCTCTGCAGCCTGGCCCACCTGGCCTGCACCCTTTCCCCTTTCATCCGAGCCTGGGGCCCCTGGAGCGAGAACGTCTAGCGCTGGCAGCTGGGCCAGCCCTGCGGCCTGACATGTCCTATGCTGAGCGGCTGGCAGCTGAGAGGCAGCACGCAGAAAGGGTGGCGGCCCTGGGCAATGACCCACTGGCCCGGCTGCAGATGCTCAATGTGACTCCCCATCACCACCAGCACTCCCACATCCACTCGCACCTGCACCTGCACCAGCAAGATGCTATCCATGCAGGTGAGACCCCTCCTTCCTTGCCCTGGCCCTTTGGGGCCACCTTCCCCCTATCATGACTGGGCTCTTTCATTCCTATGGCCAAGACTTTCCTCCCCTGGCCTGGCATGAACCTTTCCTGAGATTGCTGCCCTGAACTTTGCCTCCCTGACGTTCTCTCAGCCTTGTCTTCTCATGGCCTTCCCTGGCCACAAAGCCTGTATGCCCCACAGCCCAGTTCTCTCCATAGTCTAGTATCCTTCCCATGACAGAGGCCCACACGGGAGCTTTTGAAGGACACTTTTCTATTCTCACAGCCCCATTCTCCCAAGCCCTTCACAAACCTGTCTTCTTATTTATTTTTTTGAGACATGGTCTGGCTCTGCCACCCAGGCTGGAGTGTAGTGGCGCAATCACAGCTCACTGCAGCCTCGACTTCCCGGTCTCAAGTGATCCTCCTACCTCAGCCTCTGGAGTAGCTGGGATTACAGGCGTGTGTCACCATACCTGGCTACTTTTTGTATTTTTGGTAGAGACGGGGTTTCGCCATGTTGGCCATGGCTGGTCTCAAATTCCTGAGCTCAAAGCGATCCACCCACCTCGGCCTCCCAAAGTCCTGAGATTACAGGCGTGAGCCACCGTGCCCAACCCACAAACCTATCTTCTGATTTCTCTGGATTCAACTCATTTTTTGCCATTTTCTCCTCTTCTCCCTCTGCGAGGTCTTTCATGTTTTTCCCCATCTCTAGATCTGTAACTTTCTAGAAAGGGCCCTGTAGCTTTGGGTTTGGGTGTCATAGGCGATAATGAGCTTTACTTACTATCCTTTCACCATTTTTTGGTTTTTGAGACGGAGTCTCGCCCTGTCACCAAGCTGGAGTGCAGTGGCGCGATCTCGGCTTACTGCAACCTCCGCCTCTGGGGTTCAAGTGATTCTTCTGCCTCAGCAGGCACTGCCTGCCCGAGTAGCTGGGACTGCAGGCGTGTGCCACCAAGTACAGCTAATTTTTGTATTTTTAGTAGACACGGGGTTTCACCATGTTGGCCAGGATAGTCTTGATCTCTTGACCTTGTGATCCACCCGCCTTGGCCTCCCAAAGTGCTGGAATTACAAGCGTGAGCCACCGCACCCGGCTTCCTTTTTTTCTTTTGCCCAGACTGGAGTGCAGTGGCGCGATCTCGGCTCACTGCAGCTTCCACCTCCCAGGTTCAAGCGATTCTCCTGCCTCAGCCTCCCGAGGAGCTGGGACTATAGGCGTGTGCCACCCTGCCTGGCTAATTTTTTTGTATTTTTTGTAGAAACAGGGTTTCACCATCTTGGCCAGGCTGGTCTTGAACTCCTCACCTCAGGTGAGCTGCCTGCCTCAGCCTCCCAAAGTGCTGAGATTATAGGCTTGAGCCACTGTGCCCGGCCTCTTCTTGTCTTATTTTCTAAACTTCTATCATCTTCCACCTTCTTCACGCAGTCTACCTCTCTCTGTCCTTCCCCTCAGACCCTTCTGATGACTGTAATCTCCTGTCCTGTGTCATCCATATGTCCCTCCTCCAGTAGGGCTCAGCCTGTCCACCCCTGCCAGGCCTCTAGTTCTTCCACTCTGCCTTTGTTCCACTTTGGACCTCCTTGTGTTTGTCTGACTCAGTTCCCAGGCTTGGATCCCTTCACCCAAATGCATGGTTTGCCCCAAACCTGCCTTCTGGTGACACCTTCCTCTTCTCTGCCCTCCAGCCTCTGCCTCGGTGCACCCTCTCATTGACCCCCTGGCCTCAGGGTCTCACCTTACCCGGATCCCCTACCCAGCTGGAACTCTCCCTAACCCCCTGCTTCCTCACCCTCTGCACGAGAACGAAGTTCTTCGTCACCAGCTCTTTGGTAAGGATGGAAGTTGGGGTAGGCAGCTCCAATGAGAAAAGGGCAGAAAGGAGGTATTTGGGTGGGGGGATGGGCCTAGTTGGGCTTGGGGAGGGATGAGGAGGTGCCTAGAGGAGCTGGGCATGGGAATAGGAGAGCTGGAGCTCTGCCCAAGAGAAGCACGAGTTTTAGTGTCAGCCTAAGAGGTTCGAATCCCAATTCCACCCTACCACTGGCAACTTACAGAACTGGGTGTGTTACCTCACTTTTTAGTTCATTACCTTTGTATGTAAAGGAGCTGGCTATCCCCTGGTCCAGAGCAGGTACTTGTTATCCGTTGGTCATATGCCCCTTGCCCTTCCTGCTCACAGCTGCCCCTTACCGGGACCTGCCGGCCTCCCTTTCTGCCCCGATGTCAGCAGCTCATCAGCTGCAGGCCATGCACGCACAGTCAGCTGAGCTGCAGCGCTTGGCGCTGGAACAGCAGCAGTGGCTGCATGCCCATCACCCGCTGCACAGTGTGCCGCTGCCTGCCCAGGAGGACTACTACAGGTACCCTAGGGTGCCCCAGCCCAGGGGACATGGGCTCAGCGAGCCTGGGAGGAGCTGTGGGCATGGTACGGCTGGGCACCGTGCTCCTGGGGGAGGGAACCCCTCCTCTCCCAACCCCTTCGGTAAGAGGGGGCAAGGTCAGAGTTGGTCTCAAGTCTCTTACCTCTCTGCTATGCACTGCCCCTTCCCTAGTCACCTGAAGAAGGAAAGCGACAAGCCACTGTAGAACCTGCGATCAAGAGAGCACCATGGCTCCTACATTGGACCTTGGAGCACCCCCACCCTCCCCCCACCGTGCCCTTGGCCTGCCACCCAGAGCCAAGAGGGTGCTGCTCAGTTGCAGGGCCTCCGCAGCTGGACAGAGAGTGGGGGAGGGAGGGACAGACAGAAGGCCAAGGCCCGATGTGGTGTGCAGAGGTGGGGAGGTGGCGAGGATGGGGACAGAAAGCGCACAGAATCTTGGACCAGGTCTCTCTTCCTTGTCCCCCCTGCTTTTCTCCTCCCCCATGCCCAACCCCTGTGGCCGCCGCCCCTCCCCTGCCCCGTTGGTGTGATTATTTCATCTGTTAGATGTGGCTGTTTTGCGTAGCATCGTGTGCCACCCCTGCCCCTCCCCGATCCCTGTGTGCGCGCCCCCTCTGCAATGTATGCCCCTTGCCCCTTCCCCACACTAATAATTTATATATATAAATATCTATATGACGCTCTTAAAAAAACATCCCAACCAAAACCAACCAAACAAAAACATCCTCACAACTCCCCAGGAACATGGCTGTGACTATTCTTTGCGGGATATGGGGGTGAGGCTGGGTCTCAGTGCAGCGGTGCTTAGAGAGAACTGCAGCCAGGGCCTGGCAGGGAAGCGGGAAGAGACCAGACCTTCTTAAGGAACGGGGTGTGGGGGCTGGGAAGAATTGGAGAGGGGATCCCTGAAGAGCCCAGAGCCTTGACTCAGCTGGAGGCGGTACCATGGGTGCTGGTGCCCCCTCCTGCCCCAAGGCTGGGCAGGACCGCTGCGCGCCAGTGGAGGCCTCGGTCTGGGCTCTGTGGCTTATGCCTGTGAGACGCGGGTGGATTGCTTGAGCCCAGGAGTTGGAAACCAGCTTGGGCAACATAGAGAAACCCCATCTTAAGACAAAATCAGCTGGGGGTTGTGGTGCACTTGTGGTCCCAGCTACTCAGGAGGCTGAGGTGGGAGGATCACTTGGGGGTCGAGGCTACAGTGAGTCATGATCGCACCACTGCACTCTAGCCTGGGTGACAGAGCAAGGCCCTATCTCAAAACAAACAAACAAAAGACACCCCAACCAACCAAACACTAGAGGCCTGGGACAGGCCCACCTCTGACGTGGTCAGTTCTAGGAATCTATTCAGACGGGTCTCACTGCTAGGAGCCACCAGAGTCCTCCGGAACAAGGGCTTCAGAGTCCTGAAACCTTTCCGTGGAATACTTTAAGAAACGGTTATGAGGCCAGGCGCGACGGCTCACGCTGGTAATCCCAGGACTTTGGGAGGCCGAGGCGGGCGGATCACGAGGTCAGGAGTTCCAGACCAGCTTGGCCAACATGGCAAAACCCTGTCTCTACTAAAAACAAAACATTAGCTGGGCATGGTGGCGCGCGCCTGTCGTCCCAGCGACTTGGGAGGTTGAGGCAGGAGAATCGCTTGAACCCGGGAGGTGGAGGTTATGGTGAGCCAAGATCCCCCCCAGCTGCACTCCAGCTTGGCGACAGAGCAAGACTCCGTCTCAAAAACAAAAAACAAAGCCGGTTATGAAGCGGGGGTGGGGTGGGCTAGTTTTAATAGGTCCAGGCGATTAGTACCTGGCATCCTTAACCACCTACAGTTTGAGAAGGGAGTGGGTGATAAAAGCCTGGAAGGGAAGGGAAATCGGGCCGGGCATTAGGCTCCATCGCTCATCAATAGACAAGGCCTTTAGGAAACTGCGACAACGGCTTTTGCTCTGGGCCTTTACTGCCGAATCCAGGTCTCCGGGCTTAACAACAACGAAGGGGCTGTGACTGGCTGCTTTCTCAACCAATCAGCACCGAACTCATTTGCATGGGCTGAGAACAAATGTTCGCGAACTCTAGAAATGAATGACTTAAGTAAGTTCCTTAGAATATTATTTTTCCTACTGAAAGTTACCACATGCGTCGTTGTTTATACAGTAATAGGAACAAGAAAAAAGTCACCTAAGCTCACCCTCATCAATTGTGGAGTTCCTTTATATCCCATCTTCTCTCCAAACACATACGCAGCAGTGTTACAGCTCTTTTAGAATTTGTCTAGTAGGCTTTCTGGCTTTTTACCGGAAAGCCCCTCTTATGATGTTTGTTGCCAATGATAGATTGTTTTCACTGTGCAAAAATTATGGGTAGTTTTGGTGGTCTTGATGCAGTTGTAAGCTTGGGGTATGAAGGTTTGGGCCACGCCTGGGCGCTTCCGGCTGCGCCGGATGCTGTTTCCTTTCCGCTCCCAGGGGCGTTGGGAACGGTTGTAGGACGTGGCTCTTTATTCGTGAGTTTTCCATTTACCTCCGCTGAACCTAGAGCTTCAGACGCCCTATGGCGTCCGCCTCGACCCAACCGGCGGCCTTGAGCGCTGAGCAAGCAAAGGGTGAGAATCGTCCTAGTCAAGGCATAGGCTGCTGGCCTGGGGTAGTCAAGGCATGGGCTGCTGGTCTGGGGAGGATGCGGGCGGAGGATGTGGGGCGACAAACCTGGCTACGTCCGCCGGGAAAATGGGGTAGGGGACGCCGGGTAC",
+    "description": "NG_008047.2 Homo sapiens atrophin 1 (ATN1), RefSeqGene on chromosome 12"
+  }
+}

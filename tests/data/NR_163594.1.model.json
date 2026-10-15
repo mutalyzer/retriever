@@ -1,0 +1,1719 @@
+{
+  "annotations": {
+    "id": "NR_163594.1",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 15690
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:9606",
+      "name": "7",
+      "chromosome": "7",
+      "genome": "genomic",
+      "map": "7q36.1",
+      "mol_type": "transcribed RNA"
+    },
+    "features": [
+      {
+        "type": "pseudogene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 0
+          },
+          "end": {
+            "type": "point",
+            "position": 15690
+          },
+          "strand": 1
+        },
+        "id": "SSPOP",
+        "qualifiers": {
+          "name": "SSPOP",
+          "synonym": "SSPO",
+          "HGNC": "21998"
+        },
+        "features": [
+          {
+            "id": "NR_163594.1",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 0
+              },
+              "end": {
+                "type": "point",
+                "position": 15690
+              }
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 0
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 50
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 50
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 233
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-2"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 233
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 316
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-3"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 316
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 496
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-4"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 496
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 741
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-5"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 741
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 841
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-6"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 841
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 1000
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-7"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 1000
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 1080
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-8"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 1080
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 1233
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-9"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 1233
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 1405
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-10"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 1405
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 1646
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-11"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 1646
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 1791
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-12"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 1791
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 1909
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-13"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 1909
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 2085
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-14"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 2085
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 2313
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-15"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 2313
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 2479
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-16"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 2479
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 2714
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-17"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 2714
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 2903
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-18"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 2903
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 2998
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-19"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 2998
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 3255
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-20"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 3255
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 3390
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-21"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 3390
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 3587
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-22"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 3587
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 3715
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-23"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 3715
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 3825
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-24"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 3825
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 3975
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-25"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 3975
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 4069
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-26"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 4069
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 4239
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-27"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 4239
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 4473
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-28"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 4473
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 4695
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-29"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 4695
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 5033
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-30"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 5033
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 5217
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-31"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 5217
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 5309
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-32"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 5309
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 5541
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-33"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 5541
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 5694
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-34"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 5694
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 5835
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-35"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 5835
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 6018
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-36"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 6018
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 6169
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-37"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 6169
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 6323
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-38"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 6323
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 6378
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-39"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 6378
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 6483
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-40"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 6483
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 6702
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-41"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 6702
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 6830
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-42"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 6830
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 6975
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-43"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 6975
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 7126
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-44"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 7126
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 7199
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-45"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 7199
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 7257
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-46"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 7257
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 7428
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-47"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 7428
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 7572
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-48"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 7572
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 7791
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-49"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 7791
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 7956
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-50"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 7956
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 8136
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-51"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 8136
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 8259
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-52"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 8259
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 8389
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-53"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 8389
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 8515
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-54"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 8515
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 8607
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-55"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 8607
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 8781
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-56"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 8781
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 8946
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-57"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 8946
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 9203
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-58"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 9203
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 9250
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-59"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 9250
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 9421
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-60"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 9421
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 9552
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-61"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 9552
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 9698
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-62"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 9698
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 9793
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-63"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 9793
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 9846
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-64"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 9846
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 10017
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-65"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 10017
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 10097
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-66"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 10097
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 10267
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-67"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 10267
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 10314
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-68"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 10314
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 10506
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-69"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 10506
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 10677
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-70"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 10677
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 10878
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-71"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 10878
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 10975
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-72"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 10975
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 11175
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-73"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 11175
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 11342
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-74"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 11342
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 11473
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-75"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 11473
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 11697
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-76"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 11697
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 11739
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-77"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 11739
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 11895
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-78"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 11895
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 12105
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-79"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 12105
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 12273
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-80"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 12273
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 12405
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-81"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 12405
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 12652
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-82"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 12652
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 12805
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-83"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 12805
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 12852
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-84"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 12852
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 13188
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-85"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 13188
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 13356
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-86"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 13356
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 13487
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-87"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 13487
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 13612
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-88"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 13612
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 13659
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-89"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 13659
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 13938
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-90"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 13938
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 14098
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-91"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 14098
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 14215
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-92"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 14215
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 14354
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-93"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 14354
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 14557
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-94"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 14557
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 14685
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-95"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 14685
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 14828
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-96"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 14828
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 14875
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-97"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 14875
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 15092
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-98"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 15092
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 15188
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-99"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 15188
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 15249
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-100"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 15249
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 15380
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-101"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 15380
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 15531
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-102"
+              },
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 15531
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 15690
+                  },
+                  "strand": 1
+                },
+                "id": "id-SSPOP-103"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "ATGCTACTCCCTGCCCTCCTCTTTGGGATGGCGTGGGCCCTGGCTGACGGGCGGTGGTGTGAGTGGACAGAGACCATCCGTGTGGAGGAGGAAGTGGCACCCCGTCAGGAGGACCTGGTACCCTGTGCCAGCCTCGACCATTACAGCCGCCTGGGCTGGCGGCTGGACCTGCCCTGGAGTGGCCGCTCGGGGCTTACCCGGTCCCCAGCGCCTGGGCTCTGTCCTATCTACAAACCTCCAGAAACCCGGCCTGCCAAGTGGAACCGGACAGTGAGGACTTGTTGCCCAGGCTGGGGGGGCGCCCACTGCACTGAGGCCCTTGCCAAAGCCAGTCCTGAAGGCCACTGCTTTGCCATGTGGCAGTGCCAGCTACAGGCAGGCTCAGCTAATGCCTCAGCAGGAAGCCTGGAGGAGTGCTGCGCCCGGCCCTGGGGACAAAGCTGGTGGGATGGCAGCTCCCAGGCCTGCCGCAGCTGCTCCAGCCGACACCTGCCAGGCAGTGCCTCTTCTCCAGCCCTCCTGCAGCCCCTGGCAGGGGCTGTGGGCCAGCTCTGGAGCCAGCACCAGCGTCCCTCGGCCACCTGTGCCTCCTGGTCGGGCTTCCACTACCGCACCTTTGATGGCCGCCACTATCACTTCCTGGGCCGCTGCACCTACCTGCTGGCGGGTGCTGCGGACTCCACCTGGGCTGTCCACCTAACACCCGGGGACCGCTGCCCCCAGCCTGGACACTGTCAGCGGGTCCAGGTGACTATGGGACCCGAGGAGGTGCTGATCCAGGCTGGAAATGTGTCTGTGAAGGGGCAGCTGGTACCTGAAGGGCAGTCTTGGCTGCTCCACGGGCTGAGCCTGCAATGGCTGGGGGACTGGCTGGTGCTGTCAGGAGGCCTGGGGGTCGTGGTGCGGCTGGACAGGACTGGCTCCATCTCCATCTCTGTGGACCACGAGCTCTGGGGACAGACACAAGGCCTCTGTGGGCTCTACAATGGCTGGCCAGAGGATGACTTCATGGAGCCAGGCGGAGGGCTGGCCATGTTAGCAGCCACCTTTGGAAATTCCTGGAGGCTCCCTGGCTCGGAGTCTGGGTGTCTGGATGCAGTGGAGGTGGCCCAGGGCTGTGACAGCCCCCTGGGGCTCATAGACGCAGATGTAGAACCTGGCCACCTGCGGGCTGAAGCCCAGGACGTGTGCCATCAGCTGCTGGAAGGTCCATTCGGGCAGTGCCATGCCCAGGTTTCCCCTGCTGAGTACCACGAGGCCTGTCTCTTTGCCTACTGCGCAGGGGCCATGGCAGGCAGTGGGCAAGAGGGGCGGCAGCAGGCTGTTTGTGCCACCTTTGCCAGCTATGTCCAGGCCTGTGCCAGGCGGCACATCCACATTCGCTGGAGGAAGCCTGGCTTCTGCGAGCGCCTGTGCCCCGGGGGCCAGCTCTACTCCGACTGCGTCTCCCTCTGCCCACCCAGCTGCGAGGCGGTGGGTCAGGGAGAGGAGGAGTCCTGCAGGGAAGAGTGTGTGAGTGGCTGTGAGTGCCCGCGAGGCCTCTTCTGGAATGGCACCCTCTGTGTGCCTGCTGCCCACTGCCCCTGCTACTACTGCCGCCAGCGCTATGTACCCGGTGACACCGTGCGCCAGCTGTGTAACCCCTGCGTGTGCAGGGATGGCCGCTGGCACTGTGCCCAGGCACTGTGCCCCGCCGAGTGTGCAGTGGGTGGGGACGGGCACTACCTCACCTTCGATGGGCGGAGCTACTCCTTCTGGGGTGGTCAAGGTTGCCGCTACAGCCTGGTGCAGGACTATGTGAAGGGACAGCTACTGATCCTACTGGAGCATGGGGCCTGCGACGCTGGGAGCTGCCTGCACGCCATCTCCGTCTCCCTGGAGGACACCCACATCCAGCTCAGGGACTCAGGAGCTGTGCTGGTCAATGGGCAGGATGTGGGCTTGCCCTGGATTGGCGCTGAGGGCCTCAGTGTGCGCCGAGCTTCCTCTGCCTTTCTGCTGCTGCGCTGGCCTGGGGCCCAGGTGCTCTGGGGACTGTCTGACCCTGTAGCCTACATCACCCTGGACCCCCGCCATGCCCACCAGGTGCAGGGTCTGTGTGGCACCTTCACCCAGAACCAGCAGGACGACTTCCTGACACCAGCCGGAGATGTGGAAACTAGCATTGCTGCCTTTGCTAGCAAGTTCCAGGTGGCCGGCAAGGGAAGATGCCCCTCTGAGGACAGTGCCCTGCTGTCTCCCTGCACCACCCACTCCCAGCGCCACGCCTTCGCAGAGGCGGCCTGTGCCATCCTGCACAGCTCTGTCTTCCAGGAATGCCACAGGCTGGTGGACAAAGAGCCATTCTATCTGCGCTGCCTGGCAGCCGTGTGTGGCTGTGATCCCGGCAGTGACTGCCTGTGCCCGGTGCTGTCTGCCTATGCGCGTCGCTGTGCCCAGGAAGGTGCCTCACCTCCCTGGAGGAACCAGACCCTCTGCCCTGTTATGTGTCCTGGTGGCCAGGAGTACCGAGAGTGTGCCCCAGCATGCGGTCAACACTGCGGGAAACCAGAGGACTGTGGAGAGCTGGGCAGCTGTGTGGCTGGTTGTAACTGTCCTCTGGGGCTGCTGTGGGACCCTGAGGGCCAGTGTGTGCCCCCCAGCTTGTGCCCCTGCCAGCTCGGAGCCCGTCGCTATGCCCCTGGCAGTGCCACCATGAAGGAGTGCAACCGCTGCATCTGCCAGGAAAGGGGCCTCTGGAATTGCACGGCTCGCCACTGCCCTTCACAGGGGCATTCTGCCCCAGGGAGCTTGTCTATGCCCCTGGTGCCTGTCTCCTCACCTGTGACAGCCCCAGCGCCAATCACTCCTGCCCTGCAGGCAGTACTGATGGCTGTGTCTGTCCACCAGGCACGGTGCTGCTGGACGAGCGCTGTGTGCCTCCTGACCTCTGTCCCTGCCGTCACAGTGGGCAGTGGTACCTGCCCAACGCCACCATCCAGGAAGACTGCAACGTTTGCGTGTGCCGGGGCCGGCAGTGGCACTGCACAGGCCAGCGGCGCAGTGGGCGGTGCCAGGCATCAGGCGCCCCCCACTATGTGACATTTGACGGACTGGCCTTCACCTATCCTGGGGCCTGCGAGTATCTGCTGGTGCGAGAGGCCAGTGGCCTATTCACAGTCTCTGCCCAGAACCTGCCCTGTGGGGCCAGCGGTCTCACCTGCACCAAAGCGCTGGCCGTGCGTCTGGAGGGCACTGTTGTGCACATGCTCAGAGGCCGGGCAGTGACGGTGAATGGGGTGAGCGTGACGCCCCCCAAGGTCTACACAGGCCCTGGGCTGAGCCTGCGTCGTGCTGGCCTCTTCCTGCTGCTCTCGACCCACCTGGGCCTCACCCTGCTCTGGGATGGAGGGACTCGGGTCCTGGTGCAACTGTCCCCTCAGTTCCGTGGTCGCGTGGCTGGGCTGTGTGGTGACTTTGATGGAGATGCCAGTAATGATCTGCGGAGCCGCCAGGGCGTCCTGGAGCCCACAGCTGAACTGGCTGCCCACTCCTGGCGCCTCAGCCCCCTCTGCCCTGAGCCAGGAGACCTGCCACACCCCTGCACGATGAACACACACCGGGCTGGTTGGGCTCGGGCCCGCTGTGGGGCGCTGCTGCAGCCGCTCTTCACATTATGCCACGCGGAGGTCCCCCCGCAGCAGCACTATGAGTGGTGCCTGTATGACGCCTGCGGCTGCGACTCGGGGGGTGACTGTGAGTGCCTCTGCTCGGCCATTGCCACCTATGCAGATGAGTGTGCCCGGCATGGGCACCACGTGCGCTGGCGTAGCCAGGAGCTCTGCTCCCTGCAGTGTGAAGGGGGACAGGTATATGAGGCCTGTGGCCCCACGTGTCCCCCCACCTGCCATGAGCAGCATCCTGAGCCCGGGTGGCACTGCCAGGTGGTGGCCTGTGTGGAGGGCTGCTTCTGCCCCGAGGGGACTCTGCTGCACGGAGGAGCCTGCTTGGAGCCAGCTTCCTGCCCCTGTGAGTGGGGCCGCAACTCCTTCCCGCCGGGGTCTGTGCTGCAAAAGGACTGCGGGAACTGCACGTGCCAGGAAGGTCAATGGCATTGTGGGGGTGACGGTGGCCACTGTGAGGAGCTTGTGCCTGCCTGTGCAGAGGGAGAGGCCCTGTGCCAAGAGAATGGGCACTGTGTGCCCCATGGGTGGCTTTGTGACAACCAGGACGACTGTGGCGATGGCTCTGATGAGGAGGGTTGTGCCGCCCCAGGCTGTGGGGAGGGGCAGATGACTTGCAGCTCCGGCCACTGCCTGCCCCTGGCCCTGCTCTGTGACCGCCAGGATGACTGTGGAGATGGCACGGATGAGCCGAGCTATCCGTGCCCCCAGGGCTTGCTGGCCTGTGCCGATGGACGCTGCCTGCCGCCGGCCCTGCTCTGCGATGGGCATCCTGACTGTCTGGATGCCGCCGACGAGGAGTCCTGTCTGGGGCAGGTGACCTGCGTCCCCGGGGAGGTGTCCTGTGTTGATGGCACCTGCCTGGGGGCCATCCAGCTGTGTGACGGAGTCTGGGACTGCCCAGATGGAGCCGATGAGGGGCCGGGACACTGCCCCCTACCTTCTCTGCCCACACCTCCTGCCAGCACCTTGCCTGGCCCCTCCCCAGGCTCCCTGGACACTGCGTCAAGTCCCCTGGCCAGCGCCAGCCCTGCGCCACCCTGCGGCCCCTTCGAGTTTCGGTGCGGCAGCGGCGAGTGCACCCCGCGGGGCTGGCGCTGCGACCAGGAGGAAGACTGCGCCGACGGCAGCGACGAGCGCGGCTGCGGAGGGCCCTGCGCGCCGCACCACGCGCCCTGCGCCCGCGGCCCTCACTGCGTGTCCCCCGAGCAGCTGTGCGACGGCGTGCGGCAGTGTCCCGACGGCTCGGACGAGGGCCCCGACGCCTGCGTTGAGGCTCCCGCGCCCCCGGCCATGCGCGGCCCCCCTGGCCAAGCCGGCGGGCCCACCTCTTCCCGAGCGCCATCCCCACCTTCGCCTCCTGAGGCACAGGGAGAGGGCAGGAAGGGACAGGAGCGGAGCAGGACACATCTCACAGTGCCCGCAGGCTCCACCCAGCTGCCTCTGTGCCCTGGCCTCTTTCCCTGTGGTGTGGCTCCGGGGCTGTGCCTGACCCCTGAGCAGCTCTGTGATGGGATCCCAGACTGTCCCCAGGGCGAGGACGAGCTGGACTGCGGGGGGCTGCCAGCCCTGGGAGGCCCCAACAGGACAGGGCTTCCCTGCCCAGAATACACCTGCCCCAATGGCACCTGCATAGGCTTCCAGCTGGTGTGTGATGGGCAGCCTGACTGTGGAAGGCCAGGGCAGGTGGGCCCCTCCCCAGAAGAGCAGGGTTGTGGGGCCTGGGGCCCCTGGAGCCCATGGGGGCCCTGCAGCCGGACGTGTGGGCCCTGGGGCCAGGGCCGGAGCCGCCGCTGCTCCCCACTCGGCCTCCTGGTGCTACAGAACTGCCCAGGGCCTGAGCACCAGTCTCAGGCCTGCTTCACGGCAGCCTGCCCAGTGGACGGTGAATGGAGCACCTGGTCCCCCTGGTCTGTGTGCTCTGAGCCGTGCAGGGGCACCATGACGCGGCAACGGCAGTGCCACTCACCCCAGAATGGGGGCCGCACCTGTGCTGCACTGCCCGGAGGCCTGCACAGCACCCGCCAGACCAAGCCTTGCCCTCAGGACGGCTGCCCCAATGCCACTTGCTCTGGGGAGCTGATGTTCCAGCCCTGTGCCCCCTGCCCACTGACCTGTGATGACATCTCTGGCCAGGTCACGTGCCCACCTGATTGGCCCTGCGGCAGCCCGGGCTGCTGGTGCCCAGAAGGGCAGGTGCTGGGCAGCGAGGGGTGGTGTGTGTGGCCCCGGCAGTGCCCCTGCCTGGTGGACGGTGCCCGCTACTGGCCTGGGCAACGCATCAAGGCCGACTGCCAGCTCTGCATCTGCCAAGACGGACGGCCCCGACGCTGCCGACTCAACCCGGACTGCGCTGTGGACTGTGGCTGGTCCTCCTGGTCACCCTGGGCCAAGTGCCTGGGCCCCTGTGGAAGCCAGAGCATCCAGTGGTCCTTCCGGAGCTCCAACAACCCCCGCCCCTCCGGCCGAGGTCGCCAGTGCCGTGGCATCCACCGCAAGGCACGCAGGTGCCAGACGGAGCCCTGTGAGGGGTGTGAGCATCAGGGCCAGGTCCACCGTGTCGGGGAACGCTGGCATGGGGGCCCCTGCAGGGTGTGCCAGTGTCTGCACAACCTCACCGCACACTGCTCACCCTACTGCCCGCTCGGCAGCTGCCCCCAGGGCTGGGTCTTGGTGGAGGGGACGGGAGAATCATGCTGCCACTGTGCCCTACCTGGAGAGAACCAGACGGTCCAGCCCATGGCCACTCCTGCCGCAGCTCCGGCTCCCAGTCCCCAGATCAGATTCCCTTTGGCCACTTACATTCTGCCTCCGTCAGGAGACCCCTGCTATTCTCCCCTGGGGCTGGCCGGACTGGCTGAGGGGAGTCTGCATGCATCGTCCCAGCAGCTGGAACACCCCACCCAGGCTGCCCTCCTGGGGGCTCCCACCCAGGGGCCCAGCCCTCAGGGATGGCACGCTGGAGGGGATGCTTATGCCAAGTGGCACACTCGGCCCCATTACCTGCAGCTGGACCTGCTTCAGCCTCGGAACCTCACTGGCATCCTAGTGCCGGAGACTGGCTCCTCCAACGCATATGCCAGCAGCTTCTCACTCCAGTTCAGCAGCAATGGTCTACACTGGCATGACTATCGTGACCTCCTGCCTGGCATCTTGCCCCTGCCCAAGCTTTTCCCCAGAAACTGGGATGACCTGGACCCTGCCGTATGGACTTTCGGCCGCATGGTGCAGGCGAGGTTTGTCAGGGTGTGGCCCCACGATGTCCACCACAGCGATGTCCCCCTGCAGGTGGAGCTGCTGGGCTGCGAGCCAGGGTCCCCACCGGCACCTCTGTGCCCAGGGGTTGGACTCCGCTGTGCCAGTGGTGAGTGTGTCCTGAGAGGGGGCCCTTGTGACGGTGTTCTGGACTGCGAGGATGGCTCGGATGAGGAGGGCTGTGTGTTGCTGCCTGAGGGCACTGGCAGATTCCATTCCACAGCCAAGACCCTGGCCCTCTCCTCTGCCCAGCCGGGGCAGCTGCTGCACTGGCCCAGGGAGGGCCTGGCAGAGACTGAGCACTGGCCCCCTGGGCAGGAATCCCCCACGTCCCCGACAGAGACAAGGCCCGTGAGTCCTGGCCCAGCCTCCGGGGTGCCTCACCATGGGGAATCTGTGCAGATGGTGACCACCACCCCCATACCCCAGATGGAGGCCAGGACCCTGCCACCAGGTATGGCAGCTGTGACGGTGGTGCCCCCACACCCTGTGACTCCAGCGACCCCTGCTGGCCAGAGCGTCGCCCCAGGACCCTTCCCACCTGTGCAGTGTGGCCCCGGCCAGACGCCCTGTGAGGTGCTGGGCTGCGTGGAACAGGCGCAGGTGTGTGATGGCAGGGAGGATTGCCTCGACGGCTCCGACGAGAGGCACTGCGCCAGGAATCTACTTATGTGGCTCCCTTCTCTCCCTGCCTTGTGGGCAGCGAGCACTGTGCCCTTCATGATGCCTACCATGGCCCTGCCTGGGCTTCCAGCCTCAAGGGCCCTCTGTTCCCCGAGCCAGCTGAGCTGTGGCAGCGGGGAGTGTCTGTCTGCTGAGCGGCGCTGTGACCTGCGGCCTGACTGCCAGGATGGCTCGGACGAGGATGGCTGTGTGGACTGCGTGCTGGCCCCCTGGTCTGTCTGGAGCAGCTGCAGCCGCAGCTGTGGCCTGGGCCTCACCTTCCAGCGCCAGGAGCTGCTGCGGCCTCCTCTGCCAGGGGGCAGCTGCCCGCGTGACCGGTTCCGAAGCCAGTCCTGCTTTGTGCAGGCCTGCCCAGTGGCTGGGGCATGGGCCATGTGGGAGGCCTGGGGACCCTGCAGCGTCTCCTGCGGGGGTGGCCATCAGAGTCGCCAGAGAAGCTGTGTGGACCCCCCACCCAAGAATGGCGGTGCCCCCTGCCCCGGGGCCTCCCAAGAGAGGGCACCCTGCGGCTTGCAGCCCTGCTCAGGTGGCACAGACTGCGAGCTGGGCCGTGTGTATGTGAGTGCCGATCTGTGCCAGAAGGGGCTGGTGCCCCCATGCCCACCCTCCTGCCTGGATCCCAAGGCCAACAGAAGCTGCAGTGGGCATTGTGTGGAAGGATGCCGCTGTCCCCCGGGGCTCCTTCTGCATGACACTCGCTGCCTGCCCCTCTCTGAGTGCCCCTGCCTGGTGGGCGAAGAGCTGAAGTGGCCAGGGGTGTCCTTCCTCCTGGGCAACTGCAGCCAATGCGTGTGTGAGAAGGGGGAGTTGCTGTGCCAACCAGGGGGCTGCCCCCTGCCCTGCGGCTGGTCAGCCTGGTCCTCCTGGGCTCCCTGCGACCGCTCCTGTGGCTCTGGAGTGAGGGCCAGGTTCAGGTCTCCCTCCAACCCTCCGGCAGCCTGGGGGGGTGCCCCGTGTGAAGGTGACCGGCAGGAACTGCAGGGCTGCCACACAGTGTGTGGGACAGAGGTGTTCGGCTGGACGCCCTGGACTTCCTGGTCCTCCTGCTCCCAAAGCTGCCTTGCCCCGGGAGGGGGCCCTGGCTGGCGCAGTCGTTCCCGACTCTGCCCCAGCCCTGGGGATTCATCCTGCCCAGGAGATGCCACCCAGGAGGAGCCCTGCAGCCCCCCTGTATGCCCAGTGCCAAGCATCTGGGGTCTGTGGGCTCCCTGGTCCACTTGCTCAGCCCCCTGTGATGGAGGCATCCAGACACGTGGGCGCAGCTGCTCCAGCTTGGCTCCAGGGGACACCACGTGCCCAGGACCCCACAGTCAGACCAGGGACTGCAACACGCAGCCCTGCACAGCCCAGTGCCCAGAGAACATGTTGTTCCGCTCAGCAGAGCAGTGTCACCAGGAGGGGGGTCCTTGCCCTCGGCTATGCCTGACGCAGGGCCCCGGGATAGATAGAGTGTACGGGCTTCTGCGCCCCCGGCTGCACCTGCCCCCCTGGTCTTTTCCTGCACAATGCTAGCTGCCTGCCCCGCAGCCAGTGCCCCTGCCAGCTGCACGGGCAGCTCTATGCATCAGGAGCAATGGCTCGCCTGGACTCCTGCAACAACTGCACCTGTGTCTCTGGTAAGATGGCATGCACCTCGGAGCGCTGCCCAGTGGCCTGTGGCTGGAGTCCCTGGACCCTGTGGAGTCTCTGTAGCTGCAGCTGCAACGTGGGCATTCGGCGCCGCTTCCGGGCAGGCACTGCACCCCCAGCTGCCTTTGGGGGTGCTGAGTGCCAAGGCCCCACCATGGAGGCTGAATTCTGCAGCCTGCGGCCATGTCCAGGTCCTGGTGGGGAGTGGGGCCCTTGGTCTCCGTGCTCCGTGCCCTGTGGTGGTGGCTACAGGAACCGCACCCGAGGCAGCAGCTGCGCAGCCTCATGGAGTTTTCCACCTGTGGCCTGCAGCCCTGCGCAGGGCCAGTGCCTGGCATGTGTCCCAGGGACAAGCAGTGGCTGGACTGTGCCCAGGGCCCTGCCTCTTGTGCAGAGCTCAGCGCCCCAAGAGGGACTAACCAGACCTGCCACCCTGGCTGCCACTGCCCCTCTGGGATGCTTCTGCTGAACAACGTGTGTGTGCCCACCCAGGACTGCCCCTGTGCCCACGAGGGGCACCTCTACCCCCCGGGCAGCACTGTGGTTCGTCCATGTGAAAACTGCTCCTGTGTCTCCGGGCTCATCGCCAACTGCAGCTCCTGGCCTTGTGCGGAGGGAGCTGGGGGATGGGGTCCATGGGGGCCCTGGTCCCACTGTAGCCGGAGCTGTGGGGGAGGCCTGCGGAGCCGGACCCGGGCCTGTGACCAGCCCCCACCCCAGGGCCTGGGGGATTACTGCGAGGGGCCACGGGCACAGGGGGAGGTCTGCCAGGCTCTGCCCTGCCCAGTGACCAACTGCACTGCCATTGAAGGGGCCGAGTATAGCCCCTGTGGCCCTCCGTGCCCTCGCTCCTGTGATGACCTAGTGCACTGCGTGTGGCGCTGCCAGCCTGGCTGCTACTGCCCACCAGGCCAGGTACTGAGTTCCAACGGGGCCATCTGCGTGCAGCCGGGTCACTGCAGCTGCCTGGACCTGCTGACCGGGCAGCGGCACCATCCGGGTGCTCGGCTGGCAAGGCCTGACGGCTGCAACCACTGCACCTGCCTGGAGGGGAGGCTGAACTGCACAGACCTGCCCTGCCCAGTGCCCGGAGGCTGGTGCCCGTGGTCGGAGTGGACAATGTGCTCCCAGCCCTGCAGGGGCCAGACCAGGAGCCGCTCCAGGGCCTGTGCCTGCCCCACTCCTCAGCACGGTGGTGCCCCGTGCACTGGAGAGGCTGGGGAGGCAGGGGCCCAGCATCAGAGGGAGGCCTGCCCCAGCTACGCCACGTGCCCAGTGGACGGAGCCTGGGGCCCATGGGGGCCATGGTCTCCCTGCGACATGTGCTTGGGGCAGTCCCACCGGAGCCGGGCGTGCAGCCGGCCCCCCACCCCTGAGGGAGGGAGGCCCTGCCCTGGGAACCACACGCAGAGTCGCCCTTGCCAGGAAAATTCCACCCAGTGCACAGACTGCGGGGGTGGCCAGAGTCTGCATCCCTGTGGGCAGCCCTGCCCCCGCTCCTGCCAGGACCTGTCCCCTGGGAGTGTGTGCCAGCCAGGCTCTGTGGGCTGCCAGCCCACTTGTGGGTGCCCCCTGGGCCAGCTCTCCCAGGACGGGCTGTGCGTGCCCCCAGCCCACTGCCGCTGCCAGTACCAGCCTGGAGCCATGGGGATCCCTGAGAACCAGAGCCGCTCAGCAGGGTCTAGGTTTAGCTCCTGGGAGAGCCTGGAACCCGGAGAGGTGGTCACTGGGCCATGTGACAACTGCACCTGTGTGGCAGGCATTCTGCAATGCCAGGAGGTGCCTGACTGCCCGGACCCTGGGGTGTGGAGCTCTTGGGGCCCTTGGGAAGACTGCAGTGTTTCGTGTGGGGGCGGGGAGCAGCTGCGCTCCCGGCGCTGTGCTCGTCCTCCCTGCCCAGGGCCTGCCCGCCAGAGCCGCACATGCAGCACACAGGTCTGCAGAGAGGCAGGCTGCCCGGCTGGCCGCCTGTACCGTGAATGCCAGCCCGGCGAGGGATGCCCCTTCTCCTGCGCCCACGTCACGCAGCAGGTGGGCTGCTTCTCTGAGGGCTGCGAGGAGGGCTGCCACTGCCCCGAGGGCACCTTCCAGCACCGCCTGGCCTGTGTGCAGGAGTGCCCTTGTGTGCTGACAGCCTGGCTGCTGCAGGAGCTGGGAGCCACCATAGGTGACCCTGGTCAGCCCCTCGGGCCTGGAGATGAGCTGGACTCAGGCCAGACACTTCGTACAAGCTGTGGCAACTGCTCGTGTGCACACGGGAAGCTGTCTTGCTCCCTGGACGACTGCTTCGAGGCCGATGGTGGTTTCGGTCCCTGGAGCCCGTGGGGCCCGTGCTCCCGCTCCTGTGGAGGGCTGGGCACCCGTACCCGCAGCCGCCAGTGTGTGCTCACCATGCCCACCCTCAGTGGTCAGGGCTGCCGTGGGCCCCGCCAGGACCTCGAGTACTGCCCCAGCCCAGACTGCCCTGGGGCTGAAGGGTCCACGGTGGAGCCAGTAACAGGCCTTCCAGGTGGCTGGGGCCCATGGTCCTCCTGGTCCCCCTGCTCCAGAAGCTGCACGGACCCCGCTCGCCCTGCATGGCGCAGCCGCACCCGCCTCTGCCTGGCTAACTGCACCATGGGGGACCCATTACAGGAGCGCCCCTGCAACCTGCCCTCATGCACAGAGCTGCCCGTGTGCCCTGGCCCTGGCTGTGGGGCTGGGAACTGTTCCTGGACCTCCTGGGCCCCGTGGGAACCTTGCTCCCGCAGCTGCGGAGTGGGCCAGCAGCGCCGCCTGCGGGCATACCGTCCCCCTGGGCCCGGCGGGCACTGGTGCCCCAACATCCTTACTGCCTACCAAGAGCGCCGCTTCTGCAACCTGCGAGCCTGCCCAGTGCCCGGGGGCTGGTCACGCTGGAGTCCCTGGTCCTGGTGTGACCGCAGCTGTGGGGGAGGCCAATCCCTGAGAAGCCGCAGCTGCTCAAGCCCCCCATCCAAGAACGGGGGAGCCCCCTGTGCTGGGGAGCGGCACCAGGCCCGCCTCTGCAATCCCATGCCTTGTGAGGCCGGCTGCCCAGCAGGCATGGAGGTGGTCACCTGTGCCAACCGCTGCCCCCGCCGCTGCTCAGACCTCCAGGAGGGAATTGTGTGTCAGGACGACCAGGTCTGCCAGAAGGGCTGCCGCTGCCCAAAGGGGTCCCTGGAGCAGGATGGTGGCTGCGTGCCAATTGGGCACTGTGACTGCACCGATGCCCAGGGCCACAGCTGGGCCCCGGGGAGCCAGCACCAGGATGCCTGCAACAACTGCTCATGCCAAGCTGGGCAGCTCTCCTGCACGGCTCAGCCCTGCCCGCCTCCCACCCACTGTGCCTGGAGCCACTGGTCGGCCTGGAGTCCCTGCAGCCACTCATGCGGGCCCAGAGGGCAGCAGAGCCGCTTCCGGTCCTCCACGTCGGGCTCGTGGGCCCCAGAGTGTCGGGAGGAGCAGTCCCAGAGCCAGCCCTGCCCTCAGCCCTCGTGCCCACCCCTGTGCCTGCAGGGCACTCGCTCCCGCACCCTGGGGGACAGCTGGCTGCAGGGGGAGTGCCAGCGGTGCTCCTGCACCCCGGAGGGTGTGATCTGCGAAGATACGGAGTGTGCAGTGCCTGAGGCTTGGACGCTGTGGTCCTCCTGGTCCGACTGCCCTGTCTCCTGTGGAGGTGGAAACCAGGTCCGAACCCGGGCCTGCAGGGCCGCAGCCCCTCACCACAGGAGCCCACCCTGCCTGGGCCCTGACACCCAGACCAGGCAGCAGCCTTGCCCAGGGCTGCTGGAGGCCTGCTCCTGGGGCCCGTGGGGGCCCTGTTCCCGCAGCTGCGGCCCGGGCCTGGCCTCTCGCTCTGGGTCCTGCCCCTGCCTGATGGCCAAGGCCGACCCCACCTGCAACAGCACCTTCCTCCACCTGGACACCCAGGGCTGCTACTCAGGGCCCTGCCCAGAGGAGTGTGTGTGGAGCAGCTGGAGCAGCTGGACGCGCTGCTCTTGCCGGGTGCTGGTGCAGCAGCGCTACCGACACCAGGGCCCGGCGTCCCGAGGGGCCAGGGCAGGCGCCCCCTGCACGCGGCTGGATGGCCACTTCCGGCCTTGCCTTATCAGCAACTGCTCTGAGGACAGCTGCACGCCTCCCTTTGAGTTCCATGCCTGCGGCTCCCCCTGTGCTGGGCTCTGTGCCACACACCTGAGCCATCAGCTCTGCCAGGACCTGCCACCCTGCCAGCCGGGCTGCTACTGCCCCAAGGGGCTGCTGGAGCAGGCTGGGGGCTGCATTCCCCCAGAGGAGTGTAACTGCTGGCATACCTCAGCAGCAGGAGCCGGGATGACCCTGGCCCCTGGGGACCGCCTGCAGCTGGGCTGTAAGGAGTGTGAATGCCGGCGTGGGGAGCTGCACTGCACCAGCCAGGGCTGTCAAGGTCTTCTGCCTCTGAGTGAGTGGTCCGAGTGGTCGCCCTGTGGGCCCTGCCTGCCGCCCAGCGCCCTGGCCCCTGCCTCCAGGACTGCCCTAGAGGAGCACTGGCTCCGAGACCCAACTGGCCTCTCCCCCACCTTGGCCCCGCTGCTGGCTTCAGAGCAGCACCGCCACCGGCTCTGTCTGGATCCTGCGACAGGGAGGCCCTGGACTGGAGCCCCTCACCTCTGCACCGCACCCCTCAGCCAGCAGCGCCTCTGCCCTGACCCTGGAGCCTGCCCTGACTCATGCCAGTGGAGTCTGTGGGGGCCATGGAGCCCCTGCCAGGTGCCCTGCAGTGGGGGGTTCAGGCTACGCTGGAGAGAGGCAGAGGCCCTCTGTGGAGGAGGCTGCCGGGAGCCATGGGCTCAAGACAGAAAGCTGCAACGGAGGGCCCTGCCCAGGTTAGAGCTGCGAGGCCCAAGACACTGTATTCACCCTGGACTGTGCCAACCAGTGCCCACACAGCTGTGCCGACCTCTGGGACCGCGTTCAGTGTCTGCAGGGACCCTGCCGCCCAGGCTGCCGCTGTCCCCCTGGCCAGCTGGTCCAGGATGGGCGCTGTGTGCCGATCTCCTCTTGCCGCTGTGGCCTCCCCAGTGCCAATGCCTCTTGGGAGCTGGCCCCGGCCCAGGCGGTGCAGCTGGACTGCCAAAACTGCACCTGTGTCAACGAGTCCCTGGTGTGCCCACACCAGGAGTGTCCAGTCCTTGGGCCTTGGTCAGCCTGGAGCAGTTGCTCGGCCCCCTGTGGTGGGGGCACTATGGAGCGACATCGGACTTGTGAGGGGGGTCCTGGGGTGGCACCATGCCAGGCCCAGGACACAGAGCAACGGCAGGAGTGTAACCTGCAGCCCTGCCCTGAGTGCCCCCCTGGCCAGGTGCTTAGTGCCTGTGCCACCTCATGCCCGTGCCTCTGCTGGCATCTGCAGCCTGGTGCCATCTGTGTGCAGGAGCCCTGCCAGCCTGGCTGTGGCTGCCCTGGAGGGCAGCTGCTGCACAATGGCACGTGTGTGCCTCCCACTGCCTGCCCCTGCACCCAGCATTCTCTGCCCTGGGGCCTCACCCTGACCCTGGAAGAGCAGGCCCAGGAGCTGCCCCCAGGGACTGTGCTCACCCGGAACTGCACCCGCTGTGTCTGCCACGGTGGAGCCTTCAGCTGCTCCCTCGTTGACTGTCAGGAGTGCCCCCTGGGGAAACGTGGCAGCAGGTGGCCCCGGGGGAGCTGGGGCTCTGCGAGCAGACGTGCCTGGAGATGAACGCCACAAAGACCCAGAGTAACTGCAGTTCAGCTCGAGCCTCGGGCTGCGTGTGCCAGCCCGGGCACTTCCGCAGCCAGGCAGGCCCCTGCGTCCCCGAAGACCACTGCGAGTGCTGGCACCTTGGGCGTCCCCACCTGCCTGGATCTGAATGGCAGGAGGCCTGTGAGAGCTGCCTCTGCCTCAGTGGGAGGCCTGTCTGCACCCAGCACTGCTCCCCACTCACCTGTGCTCAGGGCGAGGAGATGGTGCTGGAGCCAGGGAGCTGCTGTCCCTCTTGCCGCAGGGAGGCTCCGGAGGAGCAGTCGCCCTCCTGCCAGCTCCTCACGGAGCTTCGAAACTTCACCAAAGGGACCTGTTACCTGGACCAGGTAGAAGTGAGCTACTGCAGTGGGTACTGCCCATCCAGCACCCATGTCATGCCAGAGGAGCCATACCTGCAGAGCCAGTGTGACTGCTGCAGCTACCGTCTAGACCCGGAGAGCCCTGTGCGGATCCTGAACCTGCGCTGTCTGGGTGGCCACACAGAGCCCGTGGTGCTGCCGGTCATCCACAGCTGCCAGTGCAGCTCCTGCCAGGGAGGTGACTTCTCAAAGCGCTAACAGGCTCCGCTGGGTGAGTCCACAGCTGTCCCTCTTGTGATCATGGGACTCAGCAGCACTGACCACGTCCTTCCACGCTCTCTCACCTGCCCCCAACTGGGGGCCCATGACTTGGCATTAGCATGTTCCAAATAAA",
+    "description": "NR_163594.1 Homo sapiens SCO-spondin, pseudogene (SSPOP), non-coding RNA"
+  }
+}

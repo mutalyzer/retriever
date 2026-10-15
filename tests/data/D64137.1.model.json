@@ -22,54 +22,6 @@
     },
     "features": [
       {
-        "type": "exon",
-        "location": {
-          "type": "range",
-          "start": {
-            "type": "point",
-            "position": 983
-          },
-          "end": {
-            "type": "point",
-            "position": 2047
-          },
-          "strand": 1
-        },
-        "id": "id-D64137.1:984..2047-1"
-      },
-      {
-        "type": "exon",
-        "location": {
-          "type": "range",
-          "start": {
-            "type": "point",
-            "position": 983
-          },
-          "end": {
-            "type": "point",
-            "position": 1084
-          },
-          "strand": 1
-        },
-        "id": "id-D64137.1:984..1084-1"
-      },
-      {
-        "type": "exon",
-        "location": {
-          "type": "range",
-          "start": {
-            "type": "point",
-            "position": 1218
-          },
-          "end": {
-            "type": "point",
-            "position": 2047
-          },
-          "strand": 1
-        },
-        "id": "id-D64137.1:1219..2047-2"
-      },
-      {
         "type": "gene",
         "location": {
           "type": "range",
@@ -169,38 +121,6 @@
             "id": "id-KIP2-2"
           }
         ]
-      },
-      {
-        "type": "exon",
-        "location": {
-          "type": "range",
-          "start": {
-            "type": "point",
-            "position": 2613
-          },
-          "end": {
-            "type": "point",
-            "position": 2749
-          },
-          "strand": 1
-        },
-        "id": "id-D64137.1:2614..2749-3"
-      },
-      {
-        "type": "exon",
-        "location": {
-          "type": "range",
-          "start": {
-            "type": "point",
-            "position": 2832
-          },
-          "end": {
-            "type": "point",
-            "position": 3114
-          },
-          "strand": 1
-        },
-        "id": "id-D64137.1:2833..3114-4"
       }
     ]
   },

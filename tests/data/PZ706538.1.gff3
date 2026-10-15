@@ -1,0 +1,33 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PZ706538.1 1 3517
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+PZ706538.1	Genbank	region	1	3517	.	+	.	ID=PZ706538.1:1..3517;Dbxref=taxon:9606;collection-date=2026;country=Brazil;gbkey=Src;isolate=LIB_6519585;mol_type=genomic DNA
+PZ706538.1	Genbank	gene	1	3517	.	+	.	ID=gene-HLA-A;Name=HLA-A;gbkey=Gene;gene=HLA-A;gene_biotype=protein_coding
+PZ706538.1	Genbank	CDS	301	373	.	+	0	ID=cds-YGX89091.1;Parent=gene-HLA-A;Dbxref=NCBI_GP:YGX89091.1;Name=YGX89091.1;gbkey=CDS;gene=HLA-A;product=MHC class I antigen;protein_id=YGX89091.1
+PZ706538.1	Genbank	CDS	504	773	.	+	2	ID=cds-YGX89091.1;Parent=gene-HLA-A;Dbxref=NCBI_GP:YGX89091.1;Name=YGX89091.1;gbkey=CDS;gene=HLA-A;product=MHC class I antigen;protein_id=YGX89091.1
+PZ706538.1	Genbank	CDS	1015	1290	.	+	2	ID=cds-YGX89091.1;Parent=gene-HLA-A;Dbxref=NCBI_GP:YGX89091.1;Name=YGX89091.1;gbkey=CDS;gene=HLA-A;product=MHC class I antigen;protein_id=YGX89091.1
+PZ706538.1	Genbank	CDS	1891	2166	.	+	2	ID=cds-YGX89091.1;Parent=gene-HLA-A;Dbxref=NCBI_GP:YGX89091.1;Name=YGX89091.1;gbkey=CDS;gene=HLA-A;product=MHC class I antigen;protein_id=YGX89091.1
+PZ706538.1	Genbank	CDS	2266	2382	.	+	2	ID=cds-YGX89091.1;Parent=gene-HLA-A;Dbxref=NCBI_GP:YGX89091.1;Name=YGX89091.1;gbkey=CDS;gene=HLA-A;product=MHC class I antigen;protein_id=YGX89091.1
+PZ706538.1	Genbank	CDS	2821	2853	.	+	2	ID=cds-YGX89091.1;Parent=gene-HLA-A;Dbxref=NCBI_GP:YGX89091.1;Name=YGX89091.1;gbkey=CDS;gene=HLA-A;product=MHC class I antigen;protein_id=YGX89091.1
+PZ706538.1	Genbank	CDS	2996	3043	.	+	2	ID=cds-YGX89091.1;Parent=gene-HLA-A;Dbxref=NCBI_GP:YGX89091.1;Name=YGX89091.1;gbkey=CDS;gene=HLA-A;product=MHC class I antigen;protein_id=YGX89091.1
+PZ706538.1	Genbank	CDS	3213	3217	.	+	2	ID=cds-YGX89091.1;Parent=gene-HLA-A;Dbxref=NCBI_GP:YGX89091.1;Name=YGX89091.1;gbkey=CDS;gene=HLA-A;product=MHC class I antigen;protein_id=YGX89091.1
+PZ706538.1	Genbank	exon	1	373	.	+	.	ID=id-HLA-A-1;Parent=gene-HLA-A;exon_number=1;gbkey=exon;gene=HLA-A;number=1
+PZ706538.1	Genbank	exon	504	773	.	+	.	ID=id-HLA-A-2;Parent=gene-HLA-A;exon_number=2;gbkey=exon;gene=HLA-A;number=2
+PZ706538.1	Genbank	exon	1015	1290	.	+	.	ID=id-HLA-A-3;Parent=gene-HLA-A;exon_number=3;gbkey=exon;gene=HLA-A;number=3
+PZ706538.1	Genbank	exon	1891	2166	.	+	.	ID=id-HLA-A-4;Parent=gene-HLA-A;exon_number=4;gbkey=exon;gene=HLA-A;number=4
+PZ706538.1	Genbank	exon	2266	2382	.	+	.	ID=id-HLA-A-5;Parent=gene-HLA-A;exon_number=5;gbkey=exon;gene=HLA-A;number=5
+PZ706538.1	Genbank	exon	2821	2853	.	+	.	ID=id-HLA-A-6;Parent=gene-HLA-A;exon_number=6;gbkey=exon;gene=HLA-A;number=6
+PZ706538.1	Genbank	exon	2996	3043	.	+	.	ID=id-HLA-A-7;Parent=gene-HLA-A;exon_number=7;gbkey=exon;gene=HLA-A;number=7
+PZ706538.1	Genbank	exon	3213	3517	.	+	.	ID=id-HLA-A-8;Parent=gene-HLA-A;exon_number=8;gbkey=exon;gene=HLA-A;number=8
+PZ706538.1	Genbank	intron	374	503	.	+	.	ID=id-HLA-A;Parent=gene-HLA-A;exon_number=1;gbkey=intron;gene=HLA-A;number=1
+PZ706538.1	Genbank	intron	774	1014	.	+	.	ID=id-HLA-A-9;Parent=gene-HLA-A;exon_number=2;gbkey=intron;gene=HLA-A;number=2
+PZ706538.1	Genbank	intron	1291	1890	.	+	.	ID=id-HLA-A-10;Parent=gene-HLA-A;exon_number=3;gbkey=intron;gene=HLA-A;number=3
+PZ706538.1	Genbank	intron	2167	2265	.	+	.	ID=id-HLA-A-11;Parent=gene-HLA-A;exon_number=4;gbkey=intron;gene=HLA-A;number=4
+PZ706538.1	Genbank	intron	2383	2820	.	+	.	ID=id-HLA-A-12;Parent=gene-HLA-A;exon_number=5;gbkey=intron;gene=HLA-A;number=5
+PZ706538.1	Genbank	intron	2854	2995	.	+	.	ID=id-HLA-A-13;Parent=gene-HLA-A;exon_number=6;gbkey=intron;gene=HLA-A;number=6
+PZ706538.1	Genbank	intron	3044	3212	.	+	.	ID=id-HLA-A-14;Parent=gene-HLA-A;exon_number=7;gbkey=intron;gene=HLA-A;number=7
+PZ706538.1	Genbank	three_prime_UTR	3218	3517	.	+	.	ID=id-HLA-A-15;Parent=gene-HLA-A;gbkey=3'UTR;gene=HLA-A
+PZ706538.1	Genbank	five_prime_UTR	1	300	.	+	.	ID=id-HLA-A-16;Parent=gene-HLA-A;gbkey=5'UTR;gene=HLA-A
+

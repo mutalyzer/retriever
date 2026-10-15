@@ -130,6 +130,26 @@
       ]
     },
     {
+      "type": "pseudogene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 114857
+        },
+        "end": {
+          "type": "point",
+          "position": 115287
+        },
+        "strand": -1
+      },
+      "id": "VN1R44P",
+      "qualifiers": {
+        "name": "VN1R44P",
+        "HGNC": "37364"
+      }
+    },
+    {
       "type": "gene",
       "location": {
         "type": "range",

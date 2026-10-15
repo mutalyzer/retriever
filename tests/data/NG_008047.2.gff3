@@ -1,0 +1,141 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NG_008047.2 1 24863
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+NG_008047.2	RefSeq	region	1	24863	.	+	.	ID=NG_008047.2:1..24863;Dbxref=taxon:9606;Name=12;chromosome=12;gbkey=Src;genome=genomic;map=12p13.31;mol_type=genomic DNA
+NG_008047.2	RefSeq	gene	1	4240	.	+	.	ID=gene-ENO2;Dbxref=GeneID:2026,HGNC:HGNC:3353,MIM:131360;Name=ENO2;description=enolase 2;gbkey=Gene;gene=ENO2;gene_biotype=protein_coding;gene_synonym=HEL-S-279,NSE;partial=true;start_range=.,1
+NG_008047.2	RefSeq	mRNA	109	4240	.	+	.	ID=rna-NM_001975.3;Parent=gene-ENO2;Dbxref=GeneID:2026,GenBank:NM_001975.3,HGNC:HGNC:3353,MIM:131360;Name=NM_001975.3;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=ENO2;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_001975.3;partial=true;product=enolase 2;start_range=.,109;transcript_id=NM_001975.3
+NG_008047.2	RefSeq	exon	109	306	.	+	.	ID=exon-NM_001975.3-1;Parent=rna-NM_001975.3;Dbxref=GeneID:2026,GenBank:NM_001975.3,HGNC:HGNC:3353,MIM:131360;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=ENO2;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_001975.3;partial=true;product=enolase 2;start_range=.,109;transcript_id=NM_001975.3
+NG_008047.2	RefSeq	exon	2124	2325	.	+	.	ID=exon-NM_001975.3-2;Parent=rna-NM_001975.3;Dbxref=GeneID:2026,GenBank:NM_001975.3,HGNC:HGNC:3353,MIM:131360;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=ENO2;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_001975.3;partial=true;product=enolase 2;transcript_id=NM_001975.3
+NG_008047.2	RefSeq	exon	2599	2707	.	+	.	ID=exon-NM_001975.3-3;Parent=rna-NM_001975.3;Dbxref=GeneID:2026,GenBank:NM_001975.3,HGNC:HGNC:3353,MIM:131360;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=ENO2;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_001975.3;partial=true;product=enolase 2;transcript_id=NM_001975.3
+NG_008047.2	RefSeq	exon	2887	2945	.	+	.	ID=exon-NM_001975.3-4;Parent=rna-NM_001975.3;Dbxref=GeneID:2026,GenBank:NM_001975.3,HGNC:HGNC:3353,MIM:131360;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=ENO2;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_001975.3;partial=true;product=enolase 2;transcript_id=NM_001975.3
+NG_008047.2	RefSeq	exon	3274	4240	.	+	.	ID=exon-NM_001975.3-5;Parent=rna-NM_001975.3;Dbxref=GeneID:2026,GenBank:NM_001975.3,HGNC:HGNC:3353,MIM:131360;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=ENO2;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_001975.3;partial=true;product=enolase 2;transcript_id=NM_001975.3
+NG_008047.2	RefSeq	CDS	109	306	.	+	2	ID=cds-NP_001966.1;Parent=rna-NM_001975.3;Dbxref=CCDS:CCDS8570.1,GeneID:2026,GenBank:NP_001966.1,HGNC:HGNC:3353,MIM:131360;Name=NP_001966.1;exception=annotated by transcript or proteomic data;gbkey=CDS;gene=ENO2;inference=similar to AA sequence (same species):RefSeq:NP_001966.1;partial=true;product=gamma-enolase;protein_id=NP_001966.1;start_range=.,109
+NG_008047.2	RefSeq	CDS	2124	2325	.	+	2	ID=cds-NP_001966.1;Parent=rna-NM_001975.3;Dbxref=CCDS:CCDS8570.1,GeneID:2026,GenBank:NP_001966.1,HGNC:HGNC:3353,MIM:131360;Name=NP_001966.1;exception=annotated by transcript or proteomic data;gbkey=CDS;gene=ENO2;inference=similar to AA sequence (same species):RefSeq:NP_001966.1;partial=true;product=gamma-enolase;protein_id=NP_001966.1
+NG_008047.2	RefSeq	CDS	2599	2707	.	+	1	ID=cds-NP_001966.1;Parent=rna-NM_001975.3;Dbxref=CCDS:CCDS8570.1,GeneID:2026,GenBank:NP_001966.1,HGNC:HGNC:3353,MIM:131360;Name=NP_001966.1;exception=annotated by transcript or proteomic data;gbkey=CDS;gene=ENO2;inference=similar to AA sequence (same species):RefSeq:NP_001966.1;partial=true;product=gamma-enolase;protein_id=NP_001966.1
+NG_008047.2	RefSeq	CDS	2887	2945	.	+	0	ID=cds-NP_001966.1;Parent=rna-NM_001975.3;Dbxref=CCDS:CCDS8570.1,GeneID:2026,GenBank:NP_001966.1,HGNC:HGNC:3353,MIM:131360;Name=NP_001966.1;exception=annotated by transcript or proteomic data;gbkey=CDS;gene=ENO2;inference=similar to AA sequence (same species):RefSeq:NP_001966.1;partial=true;product=gamma-enolase;protein_id=NP_001966.1
+NG_008047.2	RefSeq	CDS	3274	3343	.	+	1	ID=cds-NP_001966.1;Parent=rna-NM_001975.3;Dbxref=CCDS:CCDS8570.1,GeneID:2026,GenBank:NP_001966.1,HGNC:HGNC:3353,MIM:131360;Name=NP_001966.1;exception=annotated by transcript or proteomic data;gbkey=CDS;gene=ENO2;inference=similar to AA sequence (same species):RefSeq:NP_001966.1;partial=true;product=gamma-enolase;protein_id=NP_001966.1
+NG_008047.2	RefSeq	gene	8502	22864	.	+	.	ID=gene-ATN1;Dbxref=GeneID:1822,HGNC:HGNC:3033,MIM:607462;Name=ATN1;description=atrophin 1;gbkey=Gene;gene=ATN1;gene_biotype=protein_coding;gene_synonym=B37,CHEDDA,D12S755E,DRPLA,HRS,NOD
+NG_008047.2	RefSeq	exon	8502	8927	.	+	.	ID=id-ATN1-1;Parent=gene-ATN1;Dbxref=GeneID:1822,HGNC:HGNC:3033,MIM:607462;exon_number=1;gbkey=exon;gene=ATN1;inference=alignment:Splign:2.1.0;number=1
+NG_008047.2	RefSeq	exon	14383	14571	.	+	.	ID=id-ATN1-2;Parent=gene-ATN1;Dbxref=GeneID:1822,HGNC:HGNC:3033,MIM:607462;exon_number=2;gbkey=exon;gene=ATN1;inference=alignment:Splign:2.1.0;number=2
+NG_008047.2	RefSeq	exon	14719	14856	.	+	.	ID=id-ATN1-3;Parent=gene-ATN1;Dbxref=GeneID:1822,HGNC:HGNC:3033,MIM:607462;exon_number=3;gbkey=exon;gene=ATN1;inference=alignment:Splign:2.1.0;number=3
+NG_008047.2	RefSeq	exon	15008	15121	.	+	.	ID=id-ATN1-4;Parent=gene-ATN1;Dbxref=GeneID:1822,HGNC:HGNC:3033,MIM:607462;exon_number=4;gbkey=exon;gene=ATN1;inference=alignment:Splign:2.1.0;number=4
+NG_008047.2	RefSeq	exon	16090	18104	.	+	.	ID=id-ATN1-5;Parent=gene-ATN1;Dbxref=GeneID:1822,HGNC:HGNC:3033,MIM:607462;exon_number=5;gbkey=exon;gene=ATN1;inference=alignment:Splign:2.1.0;number=5
+NG_008047.2	RefSeq	exon	18388	18610	.	+	.	ID=id-ATN1-6;Parent=gene-ATN1;Dbxref=GeneID:1822,HGNC:HGNC:3033,MIM:607462;exon_number=6;gbkey=exon;gene=ATN1;inference=alignment:Splign:2.1.0;number=6
+NG_008047.2	RefSeq	exon	19024	19720	.	+	.	ID=id-ATN1-7;Parent=gene-ATN1;Dbxref=GeneID:1822,HGNC:HGNC:3033,MIM:607462;exon_number=7;gbkey=exon;gene=ATN1;inference=alignment:Splign:2.1.0;number=7
+NG_008047.2	RefSeq	exon	21423	21566	.	+	.	ID=id-ATN1-8;Parent=gene-ATN1;Dbxref=GeneID:1822,HGNC:HGNC:3033,MIM:607462;exon_number=8;gbkey=exon;gene=ATN1;inference=alignment:Splign:2.1.0;number=8
+NG_008047.2	RefSeq	exon	21917	22097	.	+	.	ID=id-ATN1-9;Parent=gene-ATN1;Dbxref=GeneID:1822,HGNC:HGNC:3033,MIM:607462;exon_number=9;gbkey=exon;gene=ATN1;inference=alignment:Splign:2.1.0;number=9
+NG_008047.2	RefSeq	exon	22290	22864	.	+	.	ID=id-ATN1-10;Parent=gene-ATN1;Dbxref=GeneID:1822,HGNC:HGNC:3033,MIM:607462;exon_number=10;gbkey=exon;gene=ATN1;inference=alignment:Splign:2.1.0;number=10
+NG_008047.2	RefSeq	mRNA	8502	22864	.	+	.	ID=rna-NM_001940.4;Parent=gene-ATN1;Dbxref=GeneID:1822,GenBank:NM_001940.4,HGNC:HGNC:3033,MIM:607462;Name=NM_001940.4;gbkey=mRNA;gene=ATN1;product=atrophin 1%2C transcript variant 2;transcript_id=NM_001940.4
+NG_008047.2	RefSeq	exon	8502	8927	.	+	.	ID=exon-NM_001940.4-1;Parent=rna-NM_001940.4;Dbxref=GeneID:1822,GenBank:NM_001940.4,HGNC:HGNC:3033,MIM:607462;gbkey=mRNA;gene=ATN1;product=atrophin 1%2C transcript variant 2;transcript_id=NM_001940.4
+NG_008047.2	RefSeq	exon	14383	14571	.	+	.	ID=exon-NM_001940.4-2;Parent=rna-NM_001940.4;Dbxref=GeneID:1822,GenBank:NM_001940.4,HGNC:HGNC:3033,MIM:607462;gbkey=mRNA;gene=ATN1;product=atrophin 1%2C transcript variant 2;transcript_id=NM_001940.4
+NG_008047.2	RefSeq	exon	14719	14856	.	+	.	ID=exon-NM_001940.4-3;Parent=rna-NM_001940.4;Dbxref=GeneID:1822,GenBank:NM_001940.4,HGNC:HGNC:3033,MIM:607462;gbkey=mRNA;gene=ATN1;product=atrophin 1%2C transcript variant 2;transcript_id=NM_001940.4
+NG_008047.2	RefSeq	exon	15008	15121	.	+	.	ID=exon-NM_001940.4-4;Parent=rna-NM_001940.4;Dbxref=GeneID:1822,GenBank:NM_001940.4,HGNC:HGNC:3033,MIM:607462;gbkey=mRNA;gene=ATN1;product=atrophin 1%2C transcript variant 2;transcript_id=NM_001940.4
+NG_008047.2	RefSeq	exon	16090	18104	.	+	.	ID=exon-NM_001940.4-5;Parent=rna-NM_001940.4;Dbxref=GeneID:1822,GenBank:NM_001940.4,HGNC:HGNC:3033,MIM:607462;gbkey=mRNA;gene=ATN1;product=atrophin 1%2C transcript variant 2;transcript_id=NM_001940.4
+NG_008047.2	RefSeq	exon	18388	18610	.	+	.	ID=exon-NM_001940.4-6;Parent=rna-NM_001940.4;Dbxref=GeneID:1822,GenBank:NM_001940.4,HGNC:HGNC:3033,MIM:607462;gbkey=mRNA;gene=ATN1;product=atrophin 1%2C transcript variant 2;transcript_id=NM_001940.4
+NG_008047.2	RefSeq	exon	19024	19720	.	+	.	ID=exon-NM_001940.4-7;Parent=rna-NM_001940.4;Dbxref=GeneID:1822,GenBank:NM_001940.4,HGNC:HGNC:3033,MIM:607462;gbkey=mRNA;gene=ATN1;product=atrophin 1%2C transcript variant 2;transcript_id=NM_001940.4
+NG_008047.2	RefSeq	exon	21423	21566	.	+	.	ID=exon-NM_001940.4-8;Parent=rna-NM_001940.4;Dbxref=GeneID:1822,GenBank:NM_001940.4,HGNC:HGNC:3033,MIM:607462;gbkey=mRNA;gene=ATN1;product=atrophin 1%2C transcript variant 2;transcript_id=NM_001940.4
+NG_008047.2	RefSeq	exon	21917	22097	.	+	.	ID=exon-NM_001940.4-9;Parent=rna-NM_001940.4;Dbxref=GeneID:1822,GenBank:NM_001940.4,HGNC:HGNC:3033,MIM:607462;gbkey=mRNA;gene=ATN1;product=atrophin 1%2C transcript variant 2;transcript_id=NM_001940.4
+NG_008047.2	RefSeq	exon	22290	22864	.	+	.	ID=exon-NM_001940.4-10;Parent=rna-NM_001940.4;Dbxref=GeneID:1822,GenBank:NM_001940.4,HGNC:HGNC:3033,MIM:607462;gbkey=mRNA;gene=ATN1;product=atrophin 1%2C transcript variant 2;transcript_id=NM_001940.4
+NG_008047.2	RefSeq	CDS	14545	14571	.	+	0	ID=cds-NP_001931.2;Parent=rna-NM_001940.4;Dbxref=CCDS:CCDS31734.1,GeneID:1822,GenBank:NP_001931.2,HGNC:HGNC:3033,MIM:607462;Name=NP_001931.2;Note=isoform 1 is encoded by transcript variant 2;gbkey=CDS;gene=ATN1;product=atrophin-1 isoform 1;protein_id=NP_001931.2
+NG_008047.2	RefSeq	CDS	14719	14856	.	+	0	ID=cds-NP_001931.2;Parent=rna-NM_001940.4;Dbxref=CCDS:CCDS31734.1,GeneID:1822,GenBank:NP_001931.2,HGNC:HGNC:3033,MIM:607462;Name=NP_001931.2;Note=isoform 1 is encoded by transcript variant 2;gbkey=CDS;gene=ATN1;product=atrophin-1 isoform 1;protein_id=NP_001931.2
+NG_008047.2	RefSeq	CDS	15008	15121	.	+	0	ID=cds-NP_001931.2;Parent=rna-NM_001940.4;Dbxref=CCDS:CCDS31734.1,GeneID:1822,GenBank:NP_001931.2,HGNC:HGNC:3033,MIM:607462;Name=NP_001931.2;Note=isoform 1 is encoded by transcript variant 2;gbkey=CDS;gene=ATN1;product=atrophin-1 isoform 1;protein_id=NP_001931.2
+NG_008047.2	RefSeq	CDS	16090	18104	.	+	0	ID=cds-NP_001931.2;Parent=rna-NM_001940.4;Dbxref=CCDS:CCDS31734.1,GeneID:1822,GenBank:NP_001931.2,HGNC:HGNC:3033,MIM:607462;Name=NP_001931.2;Note=isoform 1 is encoded by transcript variant 2;gbkey=CDS;gene=ATN1;product=atrophin-1 isoform 1;protein_id=NP_001931.2
+NG_008047.2	RefSeq	CDS	18388	18610	.	+	1	ID=cds-NP_001931.2;Parent=rna-NM_001940.4;Dbxref=CCDS:CCDS31734.1,GeneID:1822,GenBank:NP_001931.2,HGNC:HGNC:3033,MIM:607462;Name=NP_001931.2;Note=isoform 1 is encoded by transcript variant 2;gbkey=CDS;gene=ATN1;product=atrophin-1 isoform 1;protein_id=NP_001931.2
+NG_008047.2	RefSeq	CDS	19024	19720	.	+	0	ID=cds-NP_001931.2;Parent=rna-NM_001940.4;Dbxref=CCDS:CCDS31734.1,GeneID:1822,GenBank:NP_001931.2,HGNC:HGNC:3033,MIM:607462;Name=NP_001931.2;Note=isoform 1 is encoded by transcript variant 2;gbkey=CDS;gene=ATN1;product=atrophin-1 isoform 1;protein_id=NP_001931.2
+NG_008047.2	RefSeq	CDS	21423	21566	.	+	2	ID=cds-NP_001931.2;Parent=rna-NM_001940.4;Dbxref=CCDS:CCDS31734.1,GeneID:1822,GenBank:NP_001931.2,HGNC:HGNC:3033,MIM:607462;Name=NP_001931.2;Note=isoform 1 is encoded by transcript variant 2;gbkey=CDS;gene=ATN1;product=atrophin-1 isoform 1;protein_id=NP_001931.2
+NG_008047.2	RefSeq	CDS	21917	22097	.	+	2	ID=cds-NP_001931.2;Parent=rna-NM_001940.4;Dbxref=CCDS:CCDS31734.1,GeneID:1822,GenBank:NP_001931.2,HGNC:HGNC:3033,MIM:607462;Name=NP_001931.2;Note=isoform 1 is encoded by transcript variant 2;gbkey=CDS;gene=ATN1;product=atrophin-1 isoform 1;protein_id=NP_001931.2
+NG_008047.2	RefSeq	CDS	22290	22323	.	+	1	ID=cds-NP_001931.2;Parent=rna-NM_001940.4;Dbxref=CCDS:CCDS31734.1,GeneID:1822,GenBank:NP_001931.2,HGNC:HGNC:3033,MIM:607462;Name=NP_001931.2;Note=isoform 1 is encoded by transcript variant 2;gbkey=CDS;gene=ATN1;product=atrophin-1 isoform 1;protein_id=NP_001931.2
+NG_008047.2	RefSeq	gene	23976	24863	.	+	.	ID=gene-C12orf57;Dbxref=GeneID:113246,HGNC:HGNC:29521,MIM:615140;Name=C12orf57;description=chromosome 12 open reading frame 57;end_range=24863,.;gbkey=Gene;gene=C12orf57;gene_biotype=protein_coding;gene_synonym=C10,GRCC10;partial=true
+NG_008047.2	RefSeq	transcript	24565	24716	.	+	.	ID=rna-NR_126035.2;Parent=gene-C12orf57;Dbxref=GeneID:113246,GenBank:NR_126035.2,HGNC:HGNC:29521,MIM:615140;Name=NR_126035.2;end_range=24716,.;exception=annotated by transcript or proteomic data;gbkey=misc_RNA;gene=C12orf57;inference=similar to RNA sequence (same species):RefSeq:NR_126035.2;partial=true;product=chromosome 12 open reading frame 57%2C transcript variant 6;transcript_id=NR_126035.2
+NG_008047.2	RefSeq	exon	24565	24716	.	+	.	ID=exon-NR_126035.2-1;Parent=rna-NR_126035.2;Dbxref=GeneID:113246,GenBank:NR_126035.2,HGNC:HGNC:29521,MIM:615140;end_range=24716,.;exception=annotated by transcript or proteomic data;gbkey=misc_RNA;gene=C12orf57;inference=similar to RNA sequence (same species):RefSeq:NR_126035.2;partial=true;product=chromosome 12 open reading frame 57%2C transcript variant 6;transcript_id=NR_126035.2
+NG_008047.2	RefSeq	mRNA	23976	24205	.	+	.	ID=rna-NM_001301836.2;Parent=gene-C12orf57;Dbxref=GeneID:113246,GenBank:NM_001301836.2,HGNC:HGNC:29521,MIM:615140;Name=NM_001301836.2;end_range=24205,.;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=C12orf57;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_001301836.2;partial=true;product=chromosome 12 open reading frame 57%2C transcript variant 3;transcript_id=NM_001301836.2
+NG_008047.2	RefSeq	exon	23976	24205	.	+	.	ID=exon-NM_001301836.2-1;Parent=rna-NM_001301836.2;Dbxref=GeneID:113246,GenBank:NM_001301836.2,HGNC:HGNC:29521,MIM:615140;end_range=24205,.;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=C12orf57;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_001301836.2;partial=true;product=chromosome 12 open reading frame 57%2C transcript variant 3;transcript_id=NM_001301836.2
+NG_008047.2	RefSeq	CDS	24193	24205	.	+	0	ID=cds-NP_001288765.1;Parent=rna-NM_001301836.2;Dbxref=GeneID:113246,GenBank:NP_001288765.1,HGNC:HGNC:29521,MIM:615140;Name=NP_001288765.1;Note=isoform 2 is encoded by transcript variant 3;end_range=24205,.;exception=annotated by transcript or proteomic data;gbkey=CDS;gene=C12orf57;inference=similar to AA sequence (same species):RefSeq:NP_001288765.1;partial=true;product=protein C10 isoform 2;protein_id=NP_001288765.1
+NG_008047.2	RefSeq	mRNA	24045	24716	.	+	.	ID=rna-NM_001301834.1;Parent=gene-C12orf57;Dbxref=GeneID:113246,GenBank:NM_001301834.1,HGNC:HGNC:29521,MIM:615140;Name=NM_001301834.1;end_range=24716,.;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=C12orf57;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_001301834.1;partial=true;product=chromosome 12 open reading frame 57%2C transcript variant 2;transcript_id=NM_001301834.1
+NG_008047.2	RefSeq	exon	24045	24205	.	+	.	ID=exon-NM_001301834.1-1;Parent=rna-NM_001301834.1;Dbxref=GeneID:113246,GenBank:NM_001301834.1,HGNC:HGNC:29521,MIM:615140;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=C12orf57;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_001301834.1;partial=true;product=chromosome 12 open reading frame 57%2C transcript variant 2;transcript_id=NM_001301834.1
+NG_008047.2	RefSeq	exon	24650	24716	.	+	.	ID=exon-NM_001301834.1-2;Parent=rna-NM_001301834.1;Dbxref=GeneID:113246,GenBank:NM_001301834.1,HGNC:HGNC:29521,MIM:615140;end_range=24716,.;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=C12orf57;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_001301834.1;partial=true;product=chromosome 12 open reading frame 57%2C transcript variant 2;transcript_id=NM_001301834.1
+NG_008047.2	RefSeq	CDS	24665	24716	.	+	0	ID=cds-NP_001288763.1;Parent=rna-NM_001301834.1;Dbxref=CCDS:CCDS8571.1,GeneID:113246,GenBank:NP_001288763.1,HGNC:HGNC:29521,MIM:615140;Name=NP_001288763.1;Note=isoform 1 is encoded by transcript variant 2;end_range=24716,.;exception=annotated by transcript or proteomic data;gbkey=CDS;gene=C12orf57;inference=similar to AA sequence (same species):RefSeq:NP_001288763.1;partial=true;product=protein C10 isoform 1;protein_id=NP_001288763.1
+NG_008047.2	RefSeq	mRNA	24565	24716	.	+	.	ID=rna-NM_138425.4;Parent=gene-C12orf57;Dbxref=GeneID:113246,GenBank:NM_138425.4,HGNC:HGNC:29521,MIM:615140;Name=NM_138425.4;end_range=24716,.;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=C12orf57;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_138425.4;partial=true;product=chromosome 12 open reading frame 57%2C transcript variant 1;transcript_id=NM_138425.4
+NG_008047.2	RefSeq	exon	24565	24716	.	+	.	ID=exon-NM_138425.4-1;Parent=rna-NM_138425.4;Dbxref=GeneID:113246,GenBank:NM_138425.4,HGNC:HGNC:29521,MIM:615140;end_range=24716,.;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=C12orf57;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_138425.4;partial=true;product=chromosome 12 open reading frame 57%2C transcript variant 1;transcript_id=NM_138425.4
+NG_008047.2	RefSeq	CDS	24665	24716	.	+	0	ID=cds-NP_612434.1;Parent=rna-NM_138425.4;Dbxref=CCDS:CCDS8571.1,GeneID:113246,GenBank:NP_612434.1,HGNC:HGNC:29521,MIM:615140;Name=NP_612434.1;Note=isoform 1 is encoded by transcript variant 1;end_range=24716,.;exception=annotated by transcript or proteomic data;gbkey=CDS;gene=C12orf57;inference=similar to AA sequence (same species):RefSeq:NP_612434.1;partial=true;product=protein C10 isoform 1;protein_id=NP_612434.1
+NG_008047.2	RefSeq	mRNA	24565	24716	.	+	.	ID=rna-NM_001301837.2;Parent=gene-C12orf57;Dbxref=GeneID:113246,GenBank:NM_001301837.2,HGNC:HGNC:29521,MIM:615140;Name=NM_001301837.2;end_range=24716,.;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=C12orf57;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_001301837.2;partial=true;product=chromosome 12 open reading frame 57%2C transcript variant 4;transcript_id=NM_001301837.2
+NG_008047.2	RefSeq	exon	24565	24716	.	+	.	ID=exon-NM_001301837.2-1;Parent=rna-NM_001301837.2;Dbxref=GeneID:113246,GenBank:NM_001301837.2,HGNC:HGNC:29521,MIM:615140;end_range=24716,.;exception=annotated by transcript or proteomic data;gbkey=mRNA;gene=C12orf57;inference=similar to RNA sequence%2C mRNA (same species):RefSeq:NM_001301837.2;partial=true;product=chromosome 12 open reading frame 57%2C transcript variant 4;transcript_id=NM_001301837.2
+NG_008047.2	RefSeq	CDS	24665	24716	.	+	0	ID=cds-NP_001288766.1;Parent=rna-NM_001301837.2;Dbxref=CCDS:CCDS76515.1,GeneID:113246,GenBank:NP_001288766.1,HGNC:HGNC:29521,MIM:615140;Name=NP_001288766.1;Note=isoform 3 is encoded by transcript variant 4;end_range=24716,.;exception=annotated by transcript or proteomic data;gbkey=CDS;gene=C12orf57;inference=similar to AA sequence (same species):RefSeq:NP_001288766.1;partial=true;product=protein C10 isoform 3;protein_id=NP_001288766.1
+NG_008047.2	RefSeq	mRNA	24565	24716	.	+	.	ID=rna-NM_001301838.2;Parent=gene-C12orf57;Dbxref=GeneID:113246,GenBank:NM_001301838.2,HGNC:HGNC:29521,MIM:615140;Name=NM_001301838.2;end_range=24716,.;gbkey=mRNA;gene=C12orf57;partial=true;product=chromosome 12 open reading frame 57%2C transcript variant 5;transcript_id=NM_001301838.2
+NG_008047.2	RefSeq	exon	24565	24716	.	+	.	ID=exon-NM_001301838.2-1;Parent=rna-NM_001301838.2;Dbxref=GeneID:113246,GenBank:NM_001301838.2,HGNC:HGNC:29521,MIM:615140;end_range=24716,.;gbkey=mRNA;gene=C12orf57;partial=true;product=chromosome 12 open reading frame 57%2C transcript variant 5;transcript_id=NM_001301838.2
+NG_008047.2	RefSeq	gene	24359	24421	.	+	.	ID=gene-RNU7-1;Dbxref=GeneID:100147744,HGNC:HGNC:34033,MIM:617876;Name=RNU7-1;description=RNA%2C U7 small nuclear 1;gbkey=Gene;gene=RNU7-1;gene_biotype=snRNA;gene_synonym=AGS9,RNU7,U7.1
+NG_008047.2	RefSeq	snRNA	24359	24421	.	+	.	ID=rna-NR_023317.1;Parent=gene-RNU7-1;Dbxref=GeneID:100147744,GenBank:NR_023317.1,HGNC:HGNC:34033,MIM:617876;Name=NR_023317.1;gbkey=ncRNA;gene=RNU7-1;product=RNA%2C U7 small nuclear 1;transcript_id=NR_023317.1
+NG_008047.2	RefSeq	exon	24359	24421	.	+	.	ID=exon-NR_023317.1-1;Parent=rna-NR_023317.1;Dbxref=GeneID:100147744,GenBank:NR_023317.1,HGNC:HGNC:34033,MIM:617876;gbkey=ncRNA;gene=RNU7-1;product=RNA%2C U7 small nuclear 1;transcript_id=NR_023317.1
+NG_008047.2	RefSeq	cDNA_match	5002	5080	.	+	.	ID=aln0;Target=NM_001007026.2 1 79 +;idty=1;splign=79
+NG_008047.2	RefSeq	cDNA_match	14383	14571	.	+	.	ID=aln0;Target=NM_001007026.2 80 268 +;idty=1;splign=189
+NG_008047.2	RefSeq	cDNA_match	14719	14856	.	+	.	ID=aln0;Target=NM_001007026.2 269 406 +;idty=1;splign=138
+NG_008047.2	RefSeq	cDNA_match	15008	15121	.	+	.	ID=aln0;Target=NM_001007026.2 407 520 +;idty=1;splign=114
+NG_008047.2	RefSeq	cDNA_match	16090	18104	.	+	.	ID=aln0;Target=NM_001007026.2 521 2535 +;idty=1;splign=2015
+NG_008047.2	RefSeq	cDNA_match	18388	18610	.	+	.	ID=aln0;Target=NM_001007026.2 2536 2758 +;idty=1;splign=223
+NG_008047.2	RefSeq	cDNA_match	19024	19720	.	+	.	ID=aln0;Target=NM_001007026.2 2759 3455 +;idty=1;splign=697
+NG_008047.2	RefSeq	cDNA_match	21423	21566	.	+	.	ID=aln0;Target=NM_001007026.2 3456 3599 +;idty=1;splign=144
+NG_008047.2	RefSeq	cDNA_match	21917	22097	.	+	.	ID=aln0;Target=NM_001007026.2 3600 3780 +;idty=1;splign=181
+NG_008047.2	RefSeq	cDNA_match	22290	22864	.	+	.	ID=aln0;Target=NM_001007026.2 3781 4355 +;idty=1;splign=575
+NG_008047.2	RefSeq	cDNA_match	5002	5738	.	+	.	ID=aln1;Target=NM_001424176.1 1 737 +;idty=1;splign=737
+NG_008047.2	RefSeq	cDNA_match	14383	14571	.	+	.	ID=aln1;Target=NM_001424176.1 738 926 +;idty=1;splign=189
+NG_008047.2	RefSeq	cDNA_match	14719	14856	.	+	.	ID=aln1;Target=NM_001424176.1 927 1064 +;idty=1;splign=138
+NG_008047.2	RefSeq	cDNA_match	15008	15121	.	+	.	ID=aln1;Target=NM_001424176.1 1065 1178 +;idty=1;splign=114
+NG_008047.2	RefSeq	cDNA_match	16090	18104	.	+	.	ID=aln1;Target=NM_001424176.1 1179 3193 +;idty=1;splign=2015
+NG_008047.2	RefSeq	cDNA_match	18388	18610	.	+	.	ID=aln1;Target=NM_001424176.1 3194 3416 +;idty=1;splign=223
+NG_008047.2	RefSeq	cDNA_match	19024	19720	.	+	.	ID=aln1;Target=NM_001424176.1 3417 4113 +;idty=1;splign=697
+NG_008047.2	RefSeq	cDNA_match	21423	21566	.	+	.	ID=aln1;Target=NM_001424176.1 4114 4257 +;idty=1;splign=144
+NG_008047.2	RefSeq	cDNA_match	21917	22097	.	+	.	ID=aln1;Target=NM_001424176.1 4258 4438 +;idty=1;splign=181
+NG_008047.2	RefSeq	cDNA_match	22290	22864	.	+	.	ID=aln1;Target=NM_001424176.1 4439 5013 +;idty=1;splign=575
+NG_008047.2	RefSeq	cDNA_match	5002	5080	.	+	.	ID=aln2;Target=NM_001424179.1 1 79 +;idty=1;splign=79
+NG_008047.2	RefSeq	cDNA_match	14399	14571	.	+	.	ID=aln2;Target=NM_001424179.1 80 252 +;idty=1;splign=173
+NG_008047.2	RefSeq	cDNA_match	14719	14856	.	+	.	ID=aln2;Target=NM_001424179.1 253 390 +;idty=1;splign=138
+NG_008047.2	RefSeq	cDNA_match	15008	15121	.	+	.	ID=aln2;Target=NM_001424179.1 391 504 +;idty=1;splign=114
+NG_008047.2	RefSeq	cDNA_match	16093	18104	.	+	.	ID=aln2;Target=NM_001424179.1 505 2516 +;idty=1;splign=2012
+NG_008047.2	RefSeq	cDNA_match	18388	18610	.	+	.	ID=aln2;Target=NM_001424179.1 2517 2739 +;idty=1;splign=223
+NG_008047.2	RefSeq	cDNA_match	19024	19720	.	+	.	ID=aln2;Target=NM_001424179.1 2740 3436 +;idty=1;splign=697
+NG_008047.2	RefSeq	cDNA_match	21423	21566	.	+	.	ID=aln2;Target=NM_001424179.1 3437 3580 +;idty=1;splign=144
+NG_008047.2	RefSeq	cDNA_match	21917	22097	.	+	.	ID=aln2;Target=NM_001424179.1 3581 3761 +;idty=1;splign=181
+NG_008047.2	RefSeq	cDNA_match	22290	22864	.	+	.	ID=aln2;Target=NM_001424179.1 3762 4336 +;idty=1;splign=575
+NG_008047.2	RefSeq	cDNA_match	8502	8927	.	+	.	ID=aln3;Target=NM_001940.4 1 426 +;idty=1;splign=426
+NG_008047.2	RefSeq	cDNA_match	14383	14571	.	+	.	ID=aln3;Target=NM_001940.4 427 615 +;idty=1;splign=189
+NG_008047.2	RefSeq	cDNA_match	14719	14856	.	+	.	ID=aln3;Target=NM_001940.4 616 753 +;idty=1;splign=138
+NG_008047.2	RefSeq	cDNA_match	15008	15121	.	+	.	ID=aln3;Target=NM_001940.4 754 867 +;idty=1;splign=114
+NG_008047.2	RefSeq	cDNA_match	16090	18104	.	+	.	ID=aln3;Target=NM_001940.4 868 2882 +;idty=1;splign=2015
+NG_008047.2	RefSeq	cDNA_match	18388	18610	.	+	.	ID=aln3;Target=NM_001940.4 2883 3105 +;idty=1;splign=223
+NG_008047.2	RefSeq	cDNA_match	19024	19720	.	+	.	ID=aln3;Target=NM_001940.4 3106 3802 +;idty=1;splign=697
+NG_008047.2	RefSeq	cDNA_match	21423	21566	.	+	.	ID=aln3;Target=NM_001940.4 3803 3946 +;idty=1;splign=144
+NG_008047.2	RefSeq	cDNA_match	21917	22097	.	+	.	ID=aln3;Target=NM_001940.4 3947 4127 +;idty=1;splign=181
+NG_008047.2	RefSeq	cDNA_match	22290	22864	.	+	.	ID=aln3;Target=NM_001940.4 4128 4702 +;idty=1;splign=575
+NG_008047.2	RefSeq	cDNA_match	8502	8927	.	+	.	ID=aln4;Target=NM_001424177.1 1 426 +;idty=1;splign=426
+NG_008047.2	RefSeq	cDNA_match	14399	14571	.	+	.	ID=aln4;Target=NM_001424177.1 427 599 +;idty=1;splign=173
+NG_008047.2	RefSeq	cDNA_match	14719	14856	.	+	.	ID=aln4;Target=NM_001424177.1 600 737 +;idty=1;splign=138
+NG_008047.2	RefSeq	cDNA_match	15008	15121	.	+	.	ID=aln4;Target=NM_001424177.1 738 851 +;idty=1;splign=114
+NG_008047.2	RefSeq	cDNA_match	16090	18104	.	+	.	ID=aln4;Target=NM_001424177.1 852 2866 +;idty=1;splign=2015
+NG_008047.2	RefSeq	cDNA_match	18388	18610	.	+	.	ID=aln4;Target=NM_001424177.1 2867 3089 +;idty=1;splign=223
+NG_008047.2	RefSeq	cDNA_match	19024	19720	.	+	.	ID=aln4;Target=NM_001424177.1 3090 3786 +;idty=1;splign=697
+NG_008047.2	RefSeq	cDNA_match	21423	21566	.	+	.	ID=aln4;Target=NM_001424177.1 3787 3930 +;idty=1;splign=144
+NG_008047.2	RefSeq	cDNA_match	21917	22097	.	+	.	ID=aln4;Target=NM_001424177.1 3931 4111 +;idty=1;splign=181
+NG_008047.2	RefSeq	cDNA_match	22290	22864	.	+	.	ID=aln4;Target=NM_001424177.1 4112 4686 +;idty=1;splign=575
+NG_008047.2	RefSeq	cDNA_match	8502	8927	.	+	.	ID=aln5;Target=NM_001424180.1 1 426 +;idty=1;splign=426
+NG_008047.2	RefSeq	cDNA_match	14383	14571	.	+	.	ID=aln5;Target=NM_001424180.1 427 615 +;idty=1;splign=189
+NG_008047.2	RefSeq	cDNA_match	14719	14856	.	+	.	ID=aln5;Target=NM_001424180.1 616 753 +;idty=1;splign=138
+NG_008047.2	RefSeq	cDNA_match	15008	15121	.	+	.	ID=aln5;Target=NM_001424180.1 754 867 +;idty=1;splign=114
+NG_008047.2	RefSeq	cDNA_match	16093	18104	.	+	.	ID=aln5;Target=NM_001424180.1 868 2879 +;idty=1;splign=2012
+NG_008047.2	RefSeq	cDNA_match	18388	18610	.	+	.	ID=aln5;Target=NM_001424180.1 2880 3102 +;idty=1;splign=223
+NG_008047.2	RefSeq	cDNA_match	19024	19720	.	+	.	ID=aln5;Target=NM_001424180.1 3103 3799 +;idty=1;splign=697
+NG_008047.2	RefSeq	cDNA_match	21423	21566	.	+	.	ID=aln5;Target=NM_001424180.1 3800 3943 +;idty=1;splign=144
+NG_008047.2	RefSeq	cDNA_match	21917	22097	.	+	.	ID=aln5;Target=NM_001424180.1 3944 4124 +;idty=1;splign=181
+NG_008047.2	RefSeq	cDNA_match	22290	22864	.	+	.	ID=aln5;Target=NM_001424180.1 4125 4699 +;idty=1;splign=575
+NG_008047.2	RefSeq	cDNA_match	9044	9285	.	+	.	ID=aln6;Target=NM_001424178.1 1 242 +;idty=1;splign=242
+NG_008047.2	RefSeq	cDNA_match	14383	14571	.	+	.	ID=aln6;Target=NM_001424178.1 243 431 +;idty=1;splign=189
+NG_008047.2	RefSeq	cDNA_match	14719	14856	.	+	.	ID=aln6;Target=NM_001424178.1 432 569 +;idty=1;splign=138
+NG_008047.2	RefSeq	cDNA_match	15008	15121	.	+	.	ID=aln6;Target=NM_001424178.1 570 683 +;idty=1;splign=114
+NG_008047.2	RefSeq	cDNA_match	16090	18104	.	+	.	ID=aln6;Target=NM_001424178.1 684 2698 +;idty=1;splign=2015
+NG_008047.2	RefSeq	cDNA_match	18388	18610	.	+	.	ID=aln6;Target=NM_001424178.1 2699 2921 +;idty=1;splign=223
+NG_008047.2	RefSeq	cDNA_match	19024	19720	.	+	.	ID=aln6;Target=NM_001424178.1 2922 3618 +;idty=1;splign=697
+NG_008047.2	RefSeq	cDNA_match	21423	21566	.	+	.	ID=aln6;Target=NM_001424178.1 3619 3762 +;idty=1;splign=144
+NG_008047.2	RefSeq	cDNA_match	21917	22097	.	+	.	ID=aln6;Target=NM_001424178.1 3763 3943 +;idty=1;splign=181
+NG_008047.2	RefSeq	cDNA_match	22290	22864	.	+	.	ID=aln6;Target=NM_001424178.1 3944 4518 +;idty=1;splign=575
+

@@ -17,6 +17,7 @@ API_BASE_MAP = {
     "ENST00000304494": {"version": 10, "species": "homo_sapiens"},
     "ENST00000000000": {"version": 20, "species": "homo_sapiens"},
     "ENSG00000284190": {"version": 1, "species": "homo_sapiens"},
+    "ENSG00000141510": {"version": 21, "species": "homo_sapiens"},
 }
 API_BASE_GRCH37_MAP = {
     "ENSG00000147889": {"version": 12, "species": "homo_sapiens"},
@@ -108,28 +109,43 @@ def _retrieve_raw(
 references = {
     "ncbi": {
         "gff3": [
-            "NM_078467.2",
+            "NM_078467.2",  # mRNA record, no mRNA feature: gene exons go to the mRNA
             "NM_152263.2",
             "NM_152263.3",
             "NM_000077.4",
             "NM_002001.2",
             "NG_012337.1",
-            "NR_002196.2",
+            "NR_002196.2",  # gene exons (spliced) preferred over the lnc_RNA exon
             "L41870.1",
             "NG_007485.1",
             "NC_012920.1",
-            "NG_009930.1",
+            "NG_009930.1",  # transl_except repeated on all the CDS slices
             "AA010203.1",
             "NP_060665.3",
+            # Gene and parentless exons dropped; mRNAs with no gene; 2 split CDSs
             "D64137.1",
+            # Gene and parentless exons dropped; mRNAs with no gene; 3 split CDSs
             "AB006684.1",
-            "NM_004152.3",
+            "NM_004152.3",  # CDS slices with ribosomal slippage, kept apart
             "7",
-            "M65131.1",
-            "XR_948219.2",
-            "NR_023343.1",
+            "M65131.1",  # mRNA record with gene-mRNA-exon/CDS nesting
+            "XR_948219.2",  # gene-lnc_RNA-exon nesting
+            "NR_023343.1",  # snRNA, ncRNA wrapper
             "NC_015338.1",
-            "NR_003286.4",
+            "NR_003286.4",  # mol_type=rRNA, ncRNA wrapper
+            "NR_114042.1",  # rRNA with no gene
+            "NC_003468.2",  # mol_type=genomic RNA, not a transcript record
+            # mRNA with no transcript_id; two LAT ncRNAs, one spanning the
+            # origin of the circular genome; UL15 spliced CDS with no mRNA
+            "NC_001806.2",
+            "NC_011507.2",  # gene with no Name, id from its description (VP1)
+            "LC832987.1",  # NS1 and UP1 genes split over two lines sharing an ID
+            "PZ706538.1",  # HLA-A, no mRNA: gene exons (with UTRs) kept, split CDS
+            "PZ290550.1",  # COX1, no mRNA: gene exons miss a CDS slice, so not used
+            "NG_008047.2",  # transcript (misc_RNA) NR_126035.2 as ncRNA; RNU7-1 snRNA
+            "PV394717.1",  # LINC03128: lncRNA (spelling), no gene
+            "PZ268039.1",  # lncRNA (spelling) under the PTEN gene
+            "NR_163594.1",  # SSPOP pseudogene: transcript with no transcript_id
         ]
     },
     "ensembl_rest": {
@@ -139,6 +155,8 @@ references = {
             "ENST00000304494",
             "ENSG00000198899",
             "ENSG00000284190",
+            # TP53: transcript (protein_coding_CDS_not_defined) as mRNA
+            "ENSG00000141510",
         ]
     },
     "ensembl_tark": {
