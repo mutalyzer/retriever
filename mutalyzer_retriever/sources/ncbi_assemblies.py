@@ -397,6 +397,8 @@ def _process_gff3_file(gff3_data, models, assembly_details, ref_id_start, proces
         current_id = ""
         current_content = ""
         header_lines = ""
+        # Only collect the lines of the requested references (all, by default).
+        keep = True
 
         for line in f:
             if line.startswith("#!"):
@@ -407,8 +409,9 @@ def _process_gff3_file(gff3_data, models, assembly_details, ref_id_start, proces
                 )
 
                 current_id = line.split()[1]
-                current_content = f"##gff-version 3\n{header_lines}{line}"
-            elif line.startswith("##species") or line.startswith(current_id):
+                keep = not _should_skip(current_id, ref_id_start)
+                current_content = f"##gff-version 3\n{header_lines}{line}" if keep else ""
+            elif keep and (line.startswith("##species") or line.startswith(current_id)):
                 current_content += line
 
         # Process final entry
@@ -419,7 +422,7 @@ def _process_gff3_file(gff3_data, models, assembly_details, ref_id_start, proces
 
 def _finalize_current_model(ref_id, content, models, assembly_details, ref_id_start, processed_ref_ids):
     """Finalize and store the current model if it should be processed."""
-    if _should_process(ref_id, ref_id_start):
+    if _should_skip(ref_id, ref_id_start):
         return
 
     print(f"   - parsing reference id: {ref_id}")
@@ -434,8 +437,8 @@ def _finalize_current_model(ref_id, content, models, assembly_details, ref_id_st
     processed_ref_ids.add(ref_id)
 
 
-def _should_process(ref_id, ref_id_start):
-    """Check if a reference ID should be processed based on the filter."""
+def _should_skip(ref_id, ref_id_start):
+    """Check if a reference ID should be skipped based on the filter."""
     return not ref_id or not (ref_id_start is None or ref_id.startswith(ref_id_start))
 
 
