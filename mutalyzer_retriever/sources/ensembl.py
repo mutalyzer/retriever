@@ -15,11 +15,11 @@ def fetch_fasta(feature_id, api_base, timeout=DEFAULT_TIMEOUT):
     try:
         response = request(url, params, headers, timeout=timeout)
     except RequestErrors as e:
-        raise ConnectionError(f_e("gff3", e))
+        raise ConnectionError(f_e("gff3", e)) from e
     except Http400 as e:
         response_json = e.response.json()
         if response_json and response_json.get("error") == f"ID '{feature_id}' not found":
-            raise NameError(f_e("fasta", e, response_json.get("error")))
+            raise NameError(f_e("fasta", e, response_json.get("error"))) from e
         raise
     return response
 
@@ -32,11 +32,11 @@ def fetch_gff3(feature_id, api_base, timeout=DEFAULT_TIMEOUT):
     try:
         response = request(url, params, headers, timeout=timeout)
     except RequestErrors as e:
-        raise ConnectionError(f_e("gff3", e))
+        raise ConnectionError(f_e("gff3", e)) from e
     except Http400 as e:
         response_json = e.response.json()
         if response_json and response_json.get("error") == f"ID '{feature_id}' not found":
-            raise NameError(f_e("gff3", e, response_json.get("error")))
+            raise NameError(f_e("gff3", e, response_json.get("error"))) from e
         raise
     return response
 
@@ -181,13 +181,12 @@ def fetch(
 
     if reference_type == "gff3":
         return fetch_gff3(r_id, api_base, timeout), "gff3"
-    elif reference_type == "fasta":
+    if reference_type == "fasta":
         return fetch_fasta(r_id, api_base, timeout), "fasta"
-    elif reference_type == "json":
+    if reference_type == "json":
         if reference_source in [None, "ensembl", "ensembl_tark"]:
             return fetch_json(r_id, r_version, api_base, assembly, timeout), "json"
-
-    elif reference_type == "genbank":
+    if reference_type == "genbank":
         return None, "genbank"
 
     raise ValueError(

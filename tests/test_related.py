@@ -16,6 +16,7 @@ class MockHttp400(Exception):
         super().__init__("Bad Request")
         self.response = response
 
+
 def normalize_enums(obj):
     # convert DataSource enums to its value
     if isinstance(obj, dict):
@@ -40,28 +41,36 @@ def _get_content(relative_location):
 def mock_get_grch37_chr_accession(chr):
     return GRCH37[chr]
 
+
 def mock_get_accession_dataset_report(accession):
     return json.loads(_get_content(f"data/NCBI_dataset_report_{accession}.json"))
+
 
 def mock_get_accession_product_report(accession):
     return json.loads(_get_content(f"data/NCBI_product_report_{accession}.json"))
 
+
 def mock_get_gene_id_dataset_report(gene_ids):
     return json.loads(_get_content(f"data/NCBI_dataset_report_{gene_ids}.json"))
+
 
 def mock_get_gene_id_product_report(gene_ids):
     return json.loads(_get_content(f"data/NCBI_product_report_{gene_ids}.json"))
 
+
 def mock_get_gene_symbol_dataset_report(gene_symbol, taxon_name):
     return json.loads(_get_content(f"data/NCBI_dataset_report_{gene_symbol}.json"))
 
+
 def mock_get_gene_symbol_product_report(gene_symbol, taxon_name):
     return json.loads(_get_content(f"data/NCBI_product_report_{gene_symbol}.json"))
+
 
 def mock_get_genome_annotation_report(accession, locations):
     if isinstance(locations, list):
         locations = locations[0]
     return json.loads(_get_content(f"data/NCBI_annotation_report_{locations}.json"))
+
 
 def mock_get_assembly_accession(chr):
     asssembly_map = {
@@ -71,8 +80,10 @@ def mock_get_assembly_accession(chr):
     }
     return asssembly_map.get(chr)
 
+
 def mock_lookup_symbol(gene_symbol, taxon_name=HUMAN_TAXON):
     return json.loads(_get_content(f"data/EBI_lookup_expand_1_{gene_symbol}.json"))
+
 
 def mock_lookup_id(accession, expand):
     return json.loads(_get_content(f"data/EBI_lookup_expand_{expand}_{accession}.json"))
@@ -177,8 +188,7 @@ def test_ensembl_non_coding_transcript_with_ncbi_match_accession(accession, mock
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    #TODO: this matched up information is not the same from two sources
-
+    # TODO: this matched up information is not the same from two sources
 
 
 @pytest.mark.parametrize("accession", ["ENST00000714091.5"])
@@ -372,6 +382,7 @@ def test_ncbi_no_gene_at_hg38_chr_location(accession, locations, mock_ncbi_clien
     related = get_related(accession, locations)
     assert related == {}
 
+
 @pytest.mark.parametrize("accession, locations", [
     ("NC_060935.1", "112097000_112100000"),
 ])
@@ -409,7 +420,7 @@ def test_ncbi_non_coding_transcript_with_ensembl_match_accession(accession, mock
     """
     related = normalize_enums(get_related(accession))
     assert related_schema.validate(related)
-    #TODO: this matched up information is not the same from two sources
+    # TODO: this matched up information is not the same from two sources
 
 
 @pytest.mark.parametrize("accession", ["NR_157078.3"])
@@ -470,5 +481,5 @@ def test_invalid_gene_symbol(accession, mock_ncbi_client, mock_ensembl_client):
 
 @pytest.mark.parametrize("accession, locations", [("NC_060935.1", "112097000_112100000_112100000")])
 def test_invalid_chr_range(accession, locations, mock_ncbi_client, mock_ensembl_client):
-    with pytest.raises(NameError, match = f"Invalid location format: '{locations}'. Expected format: point or range 'point;start_end'."):
+    with pytest.raises(NameError, match=f"Invalid location format: '{locations}'. Expected format: point or range 'point;start_end'."):
         get_related(accession, locations)

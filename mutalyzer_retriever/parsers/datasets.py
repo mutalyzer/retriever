@@ -44,8 +44,8 @@ def parse_assemblies(dataset_report):
         grch37_acc = GRCH37.get(sequence_name)
         if grch37_acc:
             assemblies.append({
-                    "name": "GRCh37.p13",
-                    "accession": grch37_acc,
+                "name": "GRCh37.p13",
+                "accession": grch37_acc,
             })
 
     return assemblies
@@ -89,9 +89,9 @@ def parse_gene(dataset_report):
     ensembl_ids = gene.get("ensembl_gene_ids") or []
     if ensembl_ids:
         ensembl_gene = {
-                "name": DataSource.ENSEMBL,
-                "accession": ensembl_ids[0]
-            }
+            "name": DataSource.ENSEMBL,
+            "accession": ensembl_ids[0]
+        }
 
     # get gene information
     hgnc_id_raw = gene.get("nomenclature_authority", {}).get("identifier")
@@ -149,16 +149,15 @@ def parse_transcripts(product_report):
         if ncbi_protein_acc:
             ncbi_transcript["protein_accession"] = ncbi_protein_acc
 
-
         # Build ensembl transcripts and protein units
         ensembl_transcript = {}
         ensembl_transcript_acc = transcript.get("ensembl_transcript")
         ensembl_protein_acc = ncbi_protein.get("ensembl_protein")
         if ensembl_transcript_acc:
             ensembl_transcript = {
-                    "name": DataSource.ENSEMBL,
-                    "transcript_accession": ensembl_transcript_acc
-                }
+                "name": DataSource.ENSEMBL,
+                "transcript_accession": ensembl_transcript_acc
+            }
         if ensembl_protein_acc:
             ensembl_transcript["protein_accession"] = ensembl_protein_acc
 
@@ -287,7 +286,7 @@ def merge_datasets(genomic_related, product_related):
                 transcripts = product_gene.get("transcripts")
                 if transcripts:
                     gene_products = {"transcripts": transcripts}
-                    merged_gene =  genomic_gene | gene_products
+                    merged_gene = genomic_gene | gene_products
                 else:
                     merged_gene = genomic_gene
                 merged_genes.append(merged_gene)

@@ -29,7 +29,7 @@ def request(
             response.raise_for_status()
         except requests.exceptions.HTTPError as e:
             if e.response.status_code == 400:
-                raise Http400(e)
+                raise Http400(e) from e
             errors.append(e)
             if e.response.status_code == 429:
                 time.sleep(sleep)

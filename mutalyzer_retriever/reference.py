@@ -118,8 +118,8 @@ def get_chromosome_accession_from_mrna_model(ref_id, model):
         chromosome_number = get_model_qualifier(model, "chromosome")
         if chromosome_number is not None:
             chromosome_accessions = []
-            for assembly in ASSEMBLIES:
-                chromosome_accession = ASSEMBLIES[assembly].get(chromosome_number)
+            for assembly, accessions in ASSEMBLIES.items():
+                chromosome_accession = accessions.get(chromosome_number)
                 if chromosome_accession is not None:
                     chromosome_accessions.append((assembly, chromosome_accession))
             if chromosome_accessions:
@@ -131,8 +131,7 @@ def get_assembly_id(assembly_id):
         a_id = assembly_id.upper()
     else:
         return None
-    if a_id in ASSEMBLY_ALIASES:
-        a_id = ASSEMBLY_ALIASES[a_id]
+    a_id = ASSEMBLY_ALIASES.get(a_id, a_id)
     if a_id in ASSEMBLIES:
         return a_id
     return None

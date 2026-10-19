@@ -1,10 +1,13 @@
 from __future__ import annotations
+
 import json
 import time
-import requests
 from urllib.parse import quote
-from mutalyzer_retriever.request import Http400, request
+
+import requests
+
 from mutalyzer_retriever.configuration import DEFAULT_TIMEOUT, settings
+from mutalyzer_retriever.request import Http400, request
 from mutalyzer_retriever.util import HUMAN_TAXON
 
 
@@ -19,6 +22,7 @@ class BaseAPIClient:
         """Make HTTP request"""
         response = request(url=url, params=params, timeout=self.timeout)
         return json.loads(response)
+
 
 class NCBIClient(BaseAPIClient):
     """Client for NCBI API operations"""

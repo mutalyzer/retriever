@@ -97,8 +97,6 @@ def _fetch_unknown_source(
         )
     except (NameError, ConnectionError, ValueError) as e:
         status["ncbi"]["errors"].append(e)
-    except Exception:
-        raise
     else:
         return reference_content, reference_type, "ncbi"
 
@@ -203,12 +201,12 @@ def retrieve_model(
                 "annotations": annotations,
                 "sequence": parser.parse(fasta[0], "fasta"),
             }
-        elif model_type == "sequence":
+        if model_type == "sequence":
             fasta = retrieve_raw(
                 reference_id, reference_source, "fasta", size_off, timeout=timeout
             )
             return {"sequence": parser.parse(fasta[0], "fasta")}
-        elif model_type == "annotations":
+        if model_type == "annotations":
             return _parse_gff3(reference_id, reference_content, reference_source)
     elif reference_type == "fasta":
         return {
@@ -237,7 +235,7 @@ def retrieve_model_from_file(paths=None, is_lrg=False):
     if paths is None:
         paths = []
     if is_lrg:
-        with open(paths[0]) as f:
+        with open(paths[0], encoding="utf-8") as f:
             content = f.read()
             model = parser.parse(content, "lrg")
             return model
@@ -246,11 +244,11 @@ def retrieve_model_from_file(paths=None, is_lrg=False):
     fasta = paths[1]
 
     model = {}
-    with open(gff3) as f:
+    with open(gff3, encoding="utf-8") as f:
         annotations = f.read()
         model["annotations"] = parser.parse(annotations, "gff3")
 
-    with open(fasta) as f:
+    with open(fasta, encoding="utf-8") as f:
         sequence = f.read()
         model["sequence"] = parser.parse(sequence, "fasta")
 
@@ -261,7 +259,7 @@ def retrieve_model_from_file(paths=None, is_lrg=False):
 def get_annotations_from_file_cache(r_id):
     cache_path = cache_dir()
     if cache_path and (Path(cache_path) / (r_id + ".annotations")).is_file():
-        with open(Path(cache_path) / (r_id + ".annotations")) as json_file:
+        with open(Path(cache_path) / (r_id + ".annotations"), encoding="utf-8") as json_file:
             return json.load(json_file)
 
 
@@ -269,7 +267,7 @@ def get_annotations_from_file_cache(r_id):
 def get_sequence_from_file_cache(r_id):
     cache_path = cache_dir()
     if cache_path and (Path(cache_path) / (r_id + ".sequence")).is_file():
-        with open(Path(cache_path) / (r_id + ".sequence")) as seq_file:
+        with open(Path(cache_path) / (r_id + ".sequence"), encoding="utf-8") as seq_file:
             return {"seq": seq_file.read()}
 
 
@@ -335,9 +333,9 @@ def get_reference_model(r_id, s_id=None):
         and model.get("sequence")
         and model["sequence"].get("seq")
     ):
-        with open(Path(cache_path) / (r_id + ".annotations"), "w") as f:
+        with open(Path(cache_path) / (r_id + ".annotations"), "w", encoding="utf-8") as f:
             f.write(json.dumps(model["annotations"]))
-        with open(Path(cache_path) / (r_id + ".sequence"), "w") as f:
+        with open(Path(cache_path) / (r_id + ".sequence"), "w", encoding="utf-8") as f:
             f.write(model["sequence"]["seq"])
     return model
 
@@ -415,7 +413,7 @@ def extract_feature_model(
                 output_model.pop("features")
             return output_model, True, True
         return output_model, True, False
-    elif feature.get("features"):
+    if feature.get("features"):
         for f in feature["features"]:
             output_model, just_found, propagate = extract_feature_model(
                 f, feature_id, siblings, ancestors, descendants

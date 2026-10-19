@@ -55,7 +55,7 @@ def _args_parser():
 
     parser.add_argument(
         "-r", "--related", help="retrieve related reference ids", action="store_true"
-    )   
+    )
 
     parser.add_argument(
         "--mrna_id", help="retrieve the mrna_id from the cds_id", action="store_true"
@@ -85,7 +85,6 @@ def _args_parser():
             "multiple ranges or points in the format of point;start_end (e.g. 1;100_200)."
         )
     )
-
 
     subparsers = parser.add_subparsers(dest="command")
 
@@ -152,10 +151,10 @@ def _write_model(model, args):
             with open(f"{args.output}/{args.id}.annotations", "w", encoding="utf-8") as f:
                 f.write(json.dumps(model["annotations"], indent=args.indent))
         if model.get("sequence"):
-            with open(f"{args.output}/{args.id}.sequence", "w") as f:
+            with open(f"{args.output}/{args.id}.sequence", "w", encoding="utf-8") as f:
                 f.write(model["sequence"]["seq"])
     else:
-        with open(f"{args.output}/{args.id}", "w") as f:
+        with open(f"{args.output}/{args.id}", "w", encoding="utf-8") as f:
             f.write(json.dumps(model, indent=args.indent))
 
 
@@ -229,18 +228,17 @@ def _assemblies_summary(args):
 def _endpoint(args):
     if args.command == "from_file":
         return _from_file
-    elif args.command == "ncbi_assemblies":
+    if args.command == "ncbi_assemblies":
         return _retrieve_assemblies
-    elif args.command == "summary":
+    if args.command == "summary":
         return _assemblies_summary
-    elif args.parse:
+    if args.parse:
         return _retrieve_model
-    elif args.related:
+    if args.related:
         return _related
-    elif args.mrna_id:
+    if args.mrna_id:
         return _cds_to_mrna
-    else:
-        return _retrieve_raw
+    return _retrieve_raw
 
 
 def main():

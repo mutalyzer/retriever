@@ -16,8 +16,6 @@ class ReferenceToLong(Exception):
     Raised when the reference length exceeds maximum size.
     """
 
-    pass
-
 
 def fetch_ncbi_databases(reference_id):
     """
@@ -44,7 +42,7 @@ def fetch_ncbi_databases(reference_id):
     try:
         handle = Entrez.egquery(term=reference_id)
     except (IOError, HTTPError, HTTPException) as e:
-        raise ConnectionError
+        raise ConnectionError from e
 
     result = Entrez.read(handle)
     databases = set()
@@ -62,14 +60,13 @@ def _get_database(reference_id):
 
     if "nuccore" in databases:
         return "nuccore"
-    elif "protein" in databases:
+    if "protein" in databases:
         return "protein"
-    elif "nucest" in databases:
+    if "nucest" in databases:
         return "nucest"
         # Todo: Pay attention to the following:
         # https://ncbiinsights.ncbi.nlm.nih.gov/2018/07/30/upcoming-changes-est-gss-databases/
-    else:
-        raise NameError
+    raise NameError
 
 
 def _fetch_reference_summary(reference_id):
@@ -82,15 +79,13 @@ def _fetch_reference_summary(reference_id):
     """
     try:
         handle = Entrez.esummary(id=reference_id)
-    except (IOError, HTTPError, HTTPException):
-        raise ConnectionError
-    else:
-        try:
-            record = Entrez.read(handle)
-        except RuntimeError:
-            raise NameError
-        else:
-            handle.close()
+    except (IOError, HTTPError, HTTPException) as e:
+        raise ConnectionError from e
+    try:
+        record = Entrez.read(handle)
+    except RuntimeError as e:
+        raise NameError from e
+    handle.close()
 
     return {
         "reference_id": record[0]["AccessionVersion"],
@@ -119,12 +114,11 @@ def fetch_genbank(reference_id, size_on=True):
             rettype="gbwithparts",
             retmode="text",
         )
-    except (IOError, HTTPError, HTTPException):
-        raise NameError
-    else:
-        raw_data = handle.read()
-        handle.close()
-        return raw_data
+    except (IOError, HTTPError, HTTPException) as e:
+        raise NameError from e
+    raw_data = handle.read()
+    handle.close()
+    return raw_data
 
 
 def fetch_fasta(reference_id, db):
@@ -141,18 +135,16 @@ def fetch_fasta(reference_id, db):
         if e.code == 400:
             # TODO: Check whether in the response is mentioned that the
             #  reference_id was not found.
-            raise NameError(f_e("fasta", e))
-        else:
-            raise ConnectionError(f_e("fasta", e))
+            raise NameError(f_e("fasta", e)) from e
+        raise ConnectionError(f_e("fasta", e)) from e
     except (IOError, HTTPException) as e:
-        raise ConnectionError(f_e("fasta", e))
-    else:
-        try:
-            raw_data = handle.read()
-        except IncompleteRead as e:
-            raw_data = e.partial.decode()
-        handle.close()
-        return raw_data
+        raise ConnectionError(f_e("fasta", e)) from e
+    try:
+        raw_data = handle.read()
+    except IncompleteRead as e:
+        raw_data = e.partial.decode()
+    handle.close()
+    return raw_data
 
 
 def fetch_gff3(reference_id, db, timeout=DEFAULT_TIMEOUT):
@@ -168,16 +160,14 @@ def fetch_gff3(reference_id, db, timeout=DEFAULT_TIMEOUT):
     try:
         response = request(url=url, params=params, timeout=timeout)
     except RequestErrors as e:
-        raise ConnectionError(f"(gff3) Original: {str(e)}")
+        raise ConnectionError(f"(gff3) Original: {str(e)}") from e
     except Http400 as e:
         if "Failed to understand id" in e.response.text:
-            raise NameError(f_e("gff3", e))
-        else:
-            raise ConnectionError(f_e("gff3", e))
-    else:
-        if response.startswith("Error"):
-            raise NameError(f_e("gff3"))
-        return response
+            raise NameError(f_e("gff3", e)) from e
+        raise ConnectionError(f_e("gff3", e)) from e
+    if response.startswith("Error"):
+        raise NameError(f_e("gff3"))
+    return response
 
 
 def fetch(reference_id, reference_type, size_on=True, timeout=DEFAULT_TIMEOUT):
@@ -207,12 +197,9 @@ def fetch(reference_id, reference_type, size_on=True, timeout=DEFAULT_TIMEOUT):
         db = "protein"
     if reference_type in [None, "gff3"]:
         return fetch_gff3(reference_id, db, timeout), "gff3"
-    elif reference_type == "fasta":
+    if reference_type == "fasta":
         return fetch_fasta(reference_id, db), "fasta"
-    elif reference_type == "genbank":
+    if reference_type == "genbank":
         return fetch_genbank(reference_id, size_on), "genbank"
 
-    raise ValueError(
-        "NCBI fetch does not support '{}' reference type.".format(reference_type)
-    )
-
+    raise ValueError(f"NCBI fetch does not support '{reference_type}' reference type.")

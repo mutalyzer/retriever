@@ -4,7 +4,7 @@ from .parsers import fasta, gff3, json_ensembl, lrg
 def _get_reference_type(content):
     if content.startswith("<?xml version="):
         return "lrg"
-    elif content.startswith("LOCUS"):
+    if content.startswith("LOCUS"):
         return "genbank_ncbi"
 
 

@@ -144,9 +144,9 @@ def _get_feature_id(feature):
     if feature.type in GENE_TYPES:
         if feature.qualifiers.get("gene_id"):
             return feature.qualifiers["gene_id"][0]
-        elif feature.qualifiers.get("Name"):
+        if feature.qualifiers.get("Name"):
             return feature.qualifiers["Name"][0]
-        elif (
+        if (
             feature.qualifiers.get("description")
             and " " not in feature.qualifiers["description"][0]
         ):
@@ -158,7 +158,7 @@ def _get_feature_id(feature):
         # unless it's of this form "rna-NC_...:1..69", unusable in HGVS
         if feature.qualifiers.get("transcript_id"):
             return feature.qualifiers["transcript_id"][0]
-        elif feature.id and ":" not in feature.id:
+        if feature.id and ":" not in feature.id:
             if feature.id.startswith("rna-"):
                 return feature.id[len("rna-"):]
             return feature.id
@@ -167,7 +167,7 @@ def _get_feature_id(feature):
     elif feature.type == "exon":
         if feature.qualifiers.get("exon_id"):
             return feature.qualifiers["exon_id"][0]
-        elif feature.id:
+        if feature.id:
             return feature.id
     elif feature.type == "polypeptide":
         return feature.id.split("-")[1].split(":")[0]
@@ -391,23 +391,22 @@ def _is_ncbi_ncrna_transcript(feature):
 def _get_feature_type(feature):
     if feature.type in ["gene"]:
         return "gene"
-    elif feature.type in ["mRNA"]:
+    if feature.type in ["mRNA"]:
         return "mRNA"
-    elif feature.type in NCRNA_TYPES:
+    if feature.type in NCRNA_TYPES:
         return "ncRNA"
-    elif feature.type in ["exon"]:
+    if feature.type in ["exon"]:
         return "exon"
-    elif feature.type in ["CDS"]:
+    if feature.type in ["CDS"]:
         return "CDS"
-    elif feature.type == "transcript" and feature.qualifiers.get("biotype", [None])[
+    if feature.type == "transcript" and feature.qualifiers.get("biotype", [None])[
         0
     ] in ["protein_coding_CDS_not_defined"]:
         # Ensembl coding, but CDS just not annotated yet. Other (bio)types stay "transcript".
         return "mRNA"
-    elif feature.type == "transcript" and _is_ncbi_ncrna_transcript(feature):
+    if feature.type == "transcript" and _is_ncbi_ncrna_transcript(feature):
         return "ncRNA"
-    else:
-        return feature.type
+    return feature.type
 
 
 def _get_feature_model(feature, considered_types=CONSIDERED_TYPES):

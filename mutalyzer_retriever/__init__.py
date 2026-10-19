@@ -8,8 +8,8 @@ def _get_metadata(name):
     return meta.get(name, "")
 
 
-_copyright_notice = "Copyright (c) {} <{}>".format(
-    _get_metadata("Author"), _get_metadata("Author-email")
+_copyright_notice = (
+    f"Copyright (c) {_get_metadata('Author')} <{_get_metadata('Author-email')}>"
 )
 
 usage = [_get_metadata("Summary"), _copyright_notice]
@@ -20,9 +20,7 @@ def doc_split(func):
 
 
 def version(name):
-    return "{} version {}\n\n{}\nHomepage: {}".format(
-        _get_metadata("Name"),
-        _get_metadata("Version"),
-        _copyright_notice,
-        _get_metadata("Home-page"),
+    return (
+        f"{_get_metadata('Name')} version {_get_metadata('Version')}\n\n"
+        f"{_copyright_notice}\nHomepage: {_get_metadata('Home-page')}"
     )

@@ -5,7 +5,7 @@ from copy import deepcopy
 import requests
 
 from mutalyzer_retriever.client import EnsemblClient, NCBIClient, NCBIEutilsClient
-from mutalyzer_retriever.configuration import DEFAULT_TIMEOUT, cache_url, settings
+from mutalyzer_retriever.configuration import DEFAULT_TIMEOUT, cache_url
 from mutalyzer_retriever.parsers import datasets, ensembl_gene_lookup
 from mutalyzer_retriever.request import request
 from mutalyzer_retriever.util import (
@@ -139,22 +139,21 @@ def ncbi_match(ncbi_data, ensembl_id):
     providers = ncbi_data.get("providers", [])
     for p in providers:
         if (
-            p.get("name") == DataSource.ENSEMBL and
-            (
-                p.get("accession") == ensembl_id or
-                p.get("transcript_accession") == ensembl_id
+            p.get("name") == DataSource.ENSEMBL
+            and (
+                p.get("accession") == ensembl_id
+                or p.get("transcript_accession") == ensembl_id
             )
         ):
             return providers
     return []
 
 
-
 def _merge_assemblies(ensembl_related, ncbi_related):
     "Merge two lists of assemblies gathered from ensembl and ncbi"
     return (
-        ensembl_related.get("assemblies", []) +
-        ncbi_related.get("assemblies", [])
+        ensembl_related.get("assemblies", [])
+        + ncbi_related.get("assemblies", [])
     )
 
 
@@ -185,8 +184,9 @@ def _merge_transcripts(ensembl_related, ncbi_gene):
 
         for ncbi_t in ncbi_transcripts:
             transcript = deepcopy(ncbi_t)
-            if (transcript
-                and len(transcript.get("providers",[])) > 1
+            if (
+                transcript
+                and len(transcript.get("providers", [])) > 1
                 and ncbi_match(ncbi_t, ensembl_accession)
             ):
                 transcript["providers"] = _merge_provider(
@@ -462,7 +462,6 @@ def filter_related(accession_base, related):
             - "assemblies": Only chromosomal assemblies.
             - "genes": Genes with at least MANE Select transcripts or products.
     """
-
 
     filtered = {}
     filtered_assemblies = filter_assemblies(related.get("assemblies", []))

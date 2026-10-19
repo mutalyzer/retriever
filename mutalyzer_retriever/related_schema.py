@@ -1,4 +1,4 @@
-from schema import Schema, And, Or, Optional
+from schema import And, Optional, Schema
 
 transcript_provider_schema = Schema({
     "name": And(str, lambda s: s.strip() != ""),
@@ -36,4 +36,3 @@ related_schema = Schema({
     "assemblies": [assembly_schema],
     "genes": [gene_schema]
 })
-

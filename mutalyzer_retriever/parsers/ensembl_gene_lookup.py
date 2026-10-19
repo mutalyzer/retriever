@@ -3,6 +3,7 @@ Module for ENSEMBL lookup endpoint response parsing.
 https://rest.ensembl.org/lookup/id/ENST00000530458?expand=1;content-type=application/json
 """
 
+
 def parse_ensembl_gene_lookup_json(response):
     """
     Parse response from Ensembl lookup endpoint.

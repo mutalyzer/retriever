@@ -11,15 +11,11 @@ class NoLrgSettings(Exception):
     Raised when there are no LRG settings.
     """
 
-    pass
-
 
 class NoLrgUrlSet(Exception):
     """
     Raised when there is no LRG path specified in the settings.
     """
-
-    pass
 
 
 class LrgUrlAccessError(Exception):
@@ -27,15 +23,11 @@ class LrgUrlAccessError(Exception):
     Raised when there is some error when accessing the LRG url.
     """
 
-    pass
-
 
 class ReferenceToLong(Exception):
     """
     Raised when the reference length exceeds maximum size.
     """
-
-    pass
 
 
 class NotLrg(Exception):
@@ -43,15 +35,11 @@ class NotLrg(Exception):
     Raised when the reference is not LRG.
     """
 
-    pass
-
 
 class NoSizeRetrieved(Exception):
     """
     Raised when the size of the LRG cannot be retrieved.
     """
-
-    pass
 
 
 def fetch_lrg(reference_id, size_on=True, timeout=DEFAULT_TIMEOUT):
@@ -63,22 +51,23 @@ def fetch_lrg(reference_id, size_on=True, timeout=DEFAULT_TIMEOUT):
     :returns: the file content or None when the file was not retrieved
     """
     if settings.get("LRG_URL"):
-        url = "{}/{}.xml".format(settings["LRG_URL"], reference_id)
+        url = f"{settings['LRG_URL']}/{reference_id}.xml"
     else:
         raise NoLrgUrlSet()
 
     try:
         handle = urlopen(url, timeout=timeout)
     except socket.timeout as e:
-        raise ConnectionError(f_e("socket.timeout", e, f"timeout set to {timeout} s"))
+        raise ConnectionError(
+            f_e("socket.timeout", e, f"timeout set to {timeout} s")
+        ) from e
     except HTTPError as e:
         if e.code == 404:
-            raise NameError(f_e("HTTPError", e))
-        else:
-            raise ConnectionError(f_e("HTTPError", e))
+            raise NameError(f_e("HTTPError", e)) from e
+        raise ConnectionError(f_e("HTTPError", e)) from e
     except URLError as e:
         if hasattr(e, "reason"):
-            raise ConnectionError(f_e("URLError", e))
+            raise ConnectionError(f_e("URLError", e)) from e
 
     info = handle.info()
 
@@ -89,21 +78,19 @@ def fetch_lrg(reference_id, size_on=True, timeout=DEFAULT_TIMEOUT):
                 if 512 > length or length > settings["MAX_FILE_SIZE"]:
                     handle.close()
                     raise ReferenceToLong(
-                        "Filesize '{}' is not within the allowed boundaries "
-                        "(512 < filesize < {} ) for {}.".format(
-                            length,
-                            settings["MAX_FILE_SIZE"] // 1048576,
-                            reference_id,
-                        )
+                        f"Filesize '{length}' is not within the allowed boundaries "
+                        f"(512 < filesize < {settings['MAX_FILE_SIZE'] // 1048576} ) "
+                        f"for {reference_id}."
                     )
         else:
             raise NoSizeRetrieved()
         try:
             raw_data = handle.read()
         except socket.timeout as e:
-            raise ConnectionError(f_e("socket.timeout", e, f"timeout set to {timeout} s"))
+            raise ConnectionError(
+                f_e("socket.timeout", e, f"timeout set to {timeout} s")
+            ) from e
         handle.close()
         return raw_data.decode()
-    else:
-        handle.close()
-        raise NotLrg()
+    handle.close()
+    raise NotLrg()

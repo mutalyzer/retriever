@@ -10,8 +10,8 @@ DEFAULT_SETTINGS = {
     "MAX_FILE_SIZE": 10 * 1048576,
     "ENSEMBL_API": "https://rest.ensembl.org",
     "ENSEMBL_API_GRCH37": "https://grch37.rest.ensembl.org",
-    "ENSEMBL_TARK_API":"https://tark.ensembl.org/api",
-    "NCBI_DATASETS_API":"https://api.ncbi.nlm.nih.gov/datasets/v2",
+    "ENSEMBL_TARK_API": "https://tark.ensembl.org/api",
+    "NCBI_DATASETS_API": "https://api.ncbi.nlm.nih.gov/datasets/v2",
     "DEFAULT_TIMEOUT": 10,
 }
 
@@ -27,7 +27,7 @@ def setup_settings():
     settings = DEFAULT_SETTINGS
     if os.environ.get("MUTALYZER_SETTINGS"):
         configuration_path = os.environ["MUTALYZER_SETTINGS"]
-        with open(configuration_path) as f:
+        with open(configuration_path, encoding="utf-8") as f:
             configuration_content = "[config]\n" + f.read()
         loaded_settings = configparser.ConfigParser()
         loaded_settings.optionxform = str
