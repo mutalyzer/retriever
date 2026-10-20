@@ -17,68 +17,17 @@ class ReferenceToLong(Exception):
     """
 
 
-def fetch_ncbi_databases(reference_id):
-    """
-    Queries NCBI to identify in what databases a specific reference appears.
-
-    Note:
-    Whenever a reference without the most recent version is employed it seems
-    that not all the databases are returned (including the most important ones
-    for us, i.e., nuccore and protein). Hence, we always strip the reference
-    and employ the accession only. Example:
-    https://eutils.ncbi.nlm.nih.gov/gquery?term=NC_000001.10&retmode=xml
-    versus:
-    https://eutils.ncbi.nlm.nih.gov/gquery?term=NC_000001&retmode=xml
-    Strange enough, but this works:
-    https://www.ncbi.nlm.nih.gov/search/all/?term=NC_000001.10
-    I was not able to find any additional parameter that would expand the
-    search.
-
-    :arg str reference_id: The id of the reference.
-    :returns set: Set with NCBI databases.
-    """
-    if "." in reference_id:
-        reference_id = reference_id.rsplit(".")[0]
-    try:
-        handle = Entrez.egquery(term=reference_id)
-    except (IOError, HTTPError, HTTPException) as e:
-        raise ConnectionError from e
-
-    result = Entrez.read(handle)
-    databases = set()
-    for item in result["eGQueryResult"]:
-        if item["Status"].upper() == "OK" and int(item["Count"]) >= 1:
-            databases.add(item["DbName"])
-    return databases
-
-
-def _get_database(reference_id):
-    try:
-        databases = fetch_ncbi_databases(reference_id)
-    except ConnectionError as e:
-        raise e
-
-    if "nuccore" in databases:
-        return "nuccore"
-    if "protein" in databases:
-        return "protein"
-    if "nucest" in databases:
-        return "nucest"
-        # Todo: Pay attention to the following:
-        # https://ncbiinsights.ncbi.nlm.nih.gov/2018/07/30/upcoming-changes-est-gss-databases/
-    raise NameError
-
-
-def _fetch_reference_summary(reference_id):
+def _fetch_reference_summary(reference_id, db):
     """
     Retrieves the reference summary if available on the NCBI.
 
     :arg str reference_id: The id of the reference.
+    :arg str db: The NCBI database ("nuccore" or "protein").
 
     :returns dict:
     """
     try:
-        handle = Entrez.esummary(id=reference_id)
+        handle = Entrez.esummary(db=db, id=reference_id)
     except (IOError, HTTPError, HTTPException) as e:
         raise ConnectionError from e
     try:
@@ -89,27 +38,27 @@ def _fetch_reference_summary(reference_id):
 
     return {
         "reference_id": record[0]["AccessionVersion"],
-        "db": _get_database(reference_id),
         "length": int(record[0]["Length"]),
     }
 
 
-def fetch_genbank(reference_id, size_on=True):
+def fetch_genbank(reference_id, db, size_on=True):
     """
     Retrieve a genbank reference from the NCBI.
 
     :arg str reference_id: The id of the reference.
+    :arg str db: The NCBI database ("nuccore" or "protein").
     :arg bool size_on: Consider or not the maximum sequence length.
     :returns: Reference content.
     :rtype: str
     """
-    reference_summary = _fetch_reference_summary(reference_id)
+    reference_summary = _fetch_reference_summary(reference_id, db)
 
     if size_on and reference_summary["length"] > settings["MAX_FILE_SIZE"]:
         raise ReferenceToLong
     try:
         handle = Entrez.efetch(
-            db=reference_summary["db"],
+            db=db,
             id=reference_id,
             rettype="gbwithparts",
             retmode="text",
@@ -200,6 +149,6 @@ def fetch(reference_id, reference_type, size_on=True, timeout=DEFAULT_TIMEOUT):
     if reference_type == "fasta":
         return fetch_fasta(reference_id, db), "fasta"
     if reference_type == "genbank":
-        return fetch_genbank(reference_id, size_on), "genbank"
+        return fetch_genbank(reference_id, db, size_on), "genbank"
 
     raise ValueError(f"NCBI fetch does not support '{reference_type}' reference type.")
