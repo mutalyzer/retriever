@@ -5,7 +5,7 @@ build-backend = 'setuptools.build_meta'
 [project]
 name = 'mutalyzer_retriever'
 description = 'Mutalyzer genomic reference retriever.'
-version = '0.7.0'
+version = '0.7.1'
 
 authors = [
     {name = 'LUMC, Mihai Lefter', email = 'M.Lefter@lumc.nl'}]
