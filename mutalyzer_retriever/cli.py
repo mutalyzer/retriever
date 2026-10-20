@@ -6,7 +6,7 @@ import argparse
 import json
 import sys
 
-from . import usage, version
+from . import description, info
 from .configuration import DEFAULT_TIMEOUT
 from .related import get_cds_to_mrna, get_related
 from .retriever import retrieve_model, retrieve_model_from_file, retrieve_raw
@@ -18,12 +18,12 @@ def _args_parser():
     Command line argument parser.
     """
     parser = argparse.ArgumentParser(
-        description=usage[0],
-        epilog=usage[1],
+        description=description,
+        epilog=info,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
 
-    parser.add_argument("-v", action="version", version=version(parser.prog))
+    parser.add_argument("-v", action="version", version=info)
 
     parser.add_argument("--id", help="the reference id")
 

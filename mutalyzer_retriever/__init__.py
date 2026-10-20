@@ -1,26 +1,32 @@
-from importlib.metadata import metadata
+from importlib.metadata import PackageNotFoundError, metadata
+from re import split
+from typing import Callable
 
 from .retriever import retrieve_model, retrieve_raw
 
 
-def _get_metadata(name):
-    meta = metadata(__package__)
-    return meta.get(name, "")
+def _extract(key: str, delim: str = r"[^\s\S]", index: int = 0) -> str:
+    try:
+        value = metadata(__package__).get(key, "")
+    except PackageNotFoundError:
+        return "<NO DATA>"
+    return split(delim, value)[index]
 
 
-_copyright_notice = (
-    f"Copyright (c) {_get_metadata('Author')} <{_get_metadata('Author-email')}>"
-)
-
-usage = [_get_metadata("Summary"), _copyright_notice]
-
-
-def doc_split(func):
+def doc_split(func: Callable) -> str:
     return func.__doc__.split("\n\n")[0]
 
 
-def version(name):
-    return (
-        f"{_get_metadata('Name')} version {_get_metadata('Version')}\n\n"
-        f"{_copyright_notice}\nHomepage: {_get_metadata('Home-page')}"
-    )
+_email = _extract("Author-email", r"<|>", 1)
+_url = _extract("Project-URL", r", ", 1)
+_year = "2018-2026"
+
+project = _extract("Name")
+release = _extract("Version")
+author = _extract("Author-email", r'"', 1)
+description = _extract("Summary")
+copyright = f"{_year} by {author} <{_email}>"
+info = f"""{project} version {release}
+
+Copyright (c) {copyright}
+Homepage: {_url}"""

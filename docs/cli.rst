@@ -2,5 +2,6 @@ Command Line Interface
 ======================
 
 .. argparse::
-   :ref: mutalyzer_retriever.cli._arg_parser
+   :module: mutalyzer_retriever.cli
+   :func: _args_parser
    :prog: mutalyzer_retriever

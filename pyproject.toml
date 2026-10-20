@@ -1,0 +1,68 @@
+[build-system]
+requires = ['setuptools>=77']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'mutalyzer_retriever'
+description = 'Mutalyzer genomic reference retriever.'
+version = '0.6.0'
+
+authors = [
+    {name = 'LUMC, Mihai Lefter', email = 'M.Lefter@lumc.nl'}]
+readme = 'README.md'
+urls = {Homepage = 'https://github.com/mutalyzer/retriever'}
+keywords = ['Mutalyzer', 'HGVS', 'reference', 'retriever', 'genomic']
+license = 'MIT'
+classifiers = [
+    'Intended Audience :: Developers',
+    'Intended Audience :: Science/Research',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Topic :: Scientific/Engineering :: Bio-Informatics']
+
+requires-python = '>=3.9'
+dependencies = [
+    'bcbio-gff>=0.7.1',
+    'biopython>=1.81',
+    'requests>=2.26.0',
+    'schema>=0.7.4']
+
+[tool.setuptools.packages.find]
+include = ['mutalyzer_retriever*']
+
+[project.scripts]
+mutalyzer_retriever = 'mutalyzer_retriever.cli:main'
+
+[project.optional-dependencies]
+dev = [
+    'pytest-cov>=4.0.0',
+    'pytest>=7.4.0',
+    'ruff>=0.17.0']
+release = [
+    'build>=1.6.1',
+    'twine>=7.0.0']
+docs = [
+    'sphinx-argparse>=0.4.0',
+    'sphinx-autodoc-typehints>=3.10.3',
+    'sphinx>=9.1',
+    'sphinx_rtd_theme>=3.1.0']
+
+[tool.ruff]
+line-length = 89
+
+[tool.ruff.lint]
+select = ['C90', 'E', 'F', 'I', 'W']
+ignore = ['E501', 'F401', 'F403']
+
+[tool.ruff.lint.mccabe]
+max-complexity = 18
+
+[tool.coverage.run]
+source = ['mutalyzer_retriever']
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.coverage.html]
+show_contexts = true

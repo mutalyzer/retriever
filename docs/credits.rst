@@ -6,6 +6,7 @@ Main developers:
 - Jeroen F.J. Laros <J.F.J.Laros@lumc.nl> (Author initial version)
 - Martijn Vermaat <martijn@vermaat.name> (Author initial version, maintainer 2011 - 2016)
 - Mihai Lefter <m.lefter@lumc.nl> (Author current version, maintainer)
+- Xiaoyun Liu <X.Liu@lumc.nl> (Ensembl Tark retrieval, related references)
 
 Other contributions by:
 
