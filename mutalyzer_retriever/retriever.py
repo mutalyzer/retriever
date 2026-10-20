@@ -314,7 +314,7 @@ def get_overlap_models(r_id, l_min, l_max):
         return model
 
 
-def get_reference_model(r_id, s_id=None):
+def get_reference_model(r_id, s_id=None, timeout=DEFAULT_TIMEOUT):
 
     model = get_from_api_cache(r_id, s_id)
     if model:
@@ -323,7 +323,7 @@ def get_reference_model(r_id, s_id=None):
     model = get_from_file_cache(r_id)
     if model:
         return model
-    model = retrieve_model(r_id, timeout=10)
+    model = retrieve_model(r_id, timeout=timeout)
 
     cache_path = cache_dir()
     if (
@@ -341,7 +341,12 @@ def get_reference_model(r_id, s_id=None):
 
 
 def get_reference_model_segmented(
-    reference_id, feature_id=None, siblings=False, ancestors=True, descendants=True
+    reference_id,
+    feature_id=None,
+    siblings=False,
+    ancestors=True,
+    descendants=True,
+    timeout=DEFAULT_TIMEOUT,
 ):
     def _get_from_api_cache():
         api_url = cache_url()
@@ -365,7 +370,7 @@ def get_reference_model_segmented(
         return model
     model = get_from_file_cache(reference_id)
     if model is None:
-        model = retrieve_model(reference_id, timeout=10)
+        model = retrieve_model(reference_id, timeout=timeout)
 
     if feature_id is not None:
         return extract_feature_model(
