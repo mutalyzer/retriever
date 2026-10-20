@@ -1,0 +1,106 @@
+{
+  "id": "NC_000017.11",
+  "type": "record",
+  "location": {
+    "type": "range",
+    "start": {
+      "type": "point",
+      "position": 0
+    },
+    "end": {
+      "type": "point",
+      "position": 83257441
+    }
+  },
+  "qualifiers": {
+    "dbxref": "taxon:9606",
+    "name": "17",
+    "chromosome": "17",
+    "genome": "chromosome",
+    "mol_type": "genomic DNA",
+    "annotations": [
+      {
+        "freeze_date_id": "20190607",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20211119",
+        "full_assembly_name": "GRCh38.p13",
+        "full_assembly_accession": "GCF_000001405.39"
+      },
+      {
+        "freeze_date_id": "20250801",
+        "full_assembly_name": "GRCh38.p14",
+        "full_assembly_accession": "GCF_000001405.40"
+      }
+    ]
+  },
+  "features": [
+    {
+      "type": "gene",
+      "location": {
+        "type": "range",
+        "start": {
+          "type": "point",
+          "position": 59841265
+        },
+        "end": {
+          "type": "point",
+          "position": 59841337
+        },
+        "strand": 1
+      },
+      "id": "MIR21",
+      "qualifiers": {
+        "name": "MIR21",
+        "synonym": [
+          "hsa-mir-21",
+          "miR-21",
+          "MIRN21",
+          "miRNA21"
+        ],
+        "HGNC": "31586"
+      },
+      "features": [
+        {
+          "type": "ncRNA",
+          "location": {
+            "type": "range",
+            "start": {
+              "type": "point",
+              "position": 59841265
+            },
+            "end": {
+              "type": "point",
+              "position": 59841337
+            },
+            "strand": 1
+          },
+          "id": "NR_029493.1",
+          "qualifiers": {
+            "biotype": "primary_transcript"
+          },
+          "features": [
+            {
+              "type": "exon",
+              "location": {
+                "type": "range",
+                "start": {
+                  "type": "point",
+                  "position": 59841265
+                },
+                "end": {
+                  "type": "point",
+                  "position": 59841337
+                },
+                "strand": 1
+              },
+              "id": "exon-NR_029493.1-1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

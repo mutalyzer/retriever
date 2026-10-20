@@ -150,6 +150,9 @@ references = {
             "NR_055330.1",  # piRNA (C. elegans)
             "NR_002716.1",  # RNU2-1 gene with no RNA and no exons
             "NR_002761.3",  # RNU2-2P gene with two identical snRNAs
+            "NR_029493.1",  # MIR21 precursor_RNA, mature miRNAs not kept
+            "NG_008076.3",  # MIR1289-1 precursor_RNA NR_031620.1 and its mature miRNA
+            "X54156.1",  # p53 pre-mRNA (primary_transcript) with no gene, not kept
         ]
     },
     "ensembl_rest": {

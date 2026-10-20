@@ -71,8 +71,12 @@ NCRNA_TYPES = (
     "vault_RNA",  # NC_000005.10(NR_030583.3)
     "scRNA",  # NC_000014.9(NR_002715.1)
     "piRNA",  # NR_055330.1 (C. elegans)
+    "precursor_RNA",  # NG_012232.1(NR_031646.1), miRNA precursor
+    "primary_transcript",  # NC_000017.11(NR_029493.1) in NCBI annotation releases
     "ncRNA",  # NC_001806.2(HHV1gp00s01)
 )
+# Only kept under a gene (e.g. not the p53 pre-mRNA in X54156.1).
+PRECURSOR_TYPES = ("precursor_RNA", "primary_transcript")
 
 CONSIDERED_TYPES = (
     *GENE_TYPES,
@@ -442,6 +446,9 @@ def _get_feature_model(feature, considered_types=CONSIDERED_TYPES):
                 # tRNA/rRNA can have no ids, so drop them here
                 if sub_feature.type in ("tRNA", "rRNA") and not sub_feature_model.get("id"):
                     continue
+                # An RNA within an RNA, e.g. the mature miRNAs of NR_029493.1.
+                if model["type"] in TRANSCRIPT_TYPES and sub_feature_model["type"] in TRANSCRIPT_TYPES:
+                    continue
                 model["features"].append(sub_feature_model)
         if feature.type == "mRNA":
             _combine_cdses(model)
@@ -452,6 +459,8 @@ def _get_record_features_model(record, considered_types=CONSIDERED_TYPES):
     features = []
     if record.features:
         for feature in record.features:
+            if feature.type in PRECURSOR_TYPES:
+                continue
             feature_model = _get_feature_model(
                 feature=feature,
                 considered_types=considered_types,

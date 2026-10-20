@@ -1,0 +1,15 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NR_029493.1 1 72
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+NR_029493.1	RefSeq	region	1	72	.	+	.	ID=NR_029493.1:1..72;Dbxref=taxon:9606;Name=17;chromosome=17;gbkey=Src;genome=genomic;map=17q23.1;mol_type=transcribed RNA
+NR_029493.1	RefSeq	gene	1	72	.	+	.	ID=gene-MIR21;Dbxref=GeneID:406991,HGNC:HGNC:31586,MIM:611020,miRBase:MI0000077;Name=MIR21;description=microRNA 21;gbkey=Gene;gene=MIR21;gene_synonym=hsa-mir-21,miR-21,MIRN21,miRNA21
+NR_029493.1	RefSeq	precursor_RNA	1	72	.	+	.	ID=rna-MIR21;Parent=gene-MIR21;Dbxref=GeneID:406991,HGNC:HGNC:31586,MIM:611020,miRBase:MI0000077;gbkey=precursor_RNA;gene=MIR21;product=microRNA 21
+NR_029493.1	RefSeq	exon	1	72	.	+	.	ID=exon-MIR21-1;Parent=rna-MIR21;Dbxref=GeneID:406991,HGNC:HGNC:31586,MIM:611020,miRBase:MI0000077;gbkey=precursor_RNA;gene=MIR21;product=microRNA 21
+NR_029493.1	RefSeq	miRNA	8	29	.	+	.	ID=rna-MIR21-2;Parent=rna-MIR21;Dbxref=miRBase:MIMAT0000076,GeneID:406991,HGNC:HGNC:31586,MIM:611020,miRBase:MI0000077;gbkey=ncRNA;gene=MIR21;product=hsa-miR-21-5p
+NR_029493.1	RefSeq	exon	8	29	.	+	.	ID=exon-MIR21-2-1;Parent=rna-MIR21-2;Dbxref=miRBase:MIMAT0000076,GeneID:406991,HGNC:HGNC:31586,MIM:611020,miRBase:MI0000077;gbkey=ncRNA;gene=MIR21;product=hsa-miR-21-5p
+NR_029493.1	RefSeq	miRNA	46	66	.	+	.	ID=rna-MIR21-3;Parent=rna-MIR21;Dbxref=miRBase:MIMAT0004494,GeneID:406991,HGNC:HGNC:31586,MIM:611020,miRBase:MI0000077;gbkey=ncRNA;gene=MIR21;product=hsa-miR-21-3p
+NR_029493.1	RefSeq	exon	46	66	.	+	.	ID=exon-MIR21-3-1;Parent=rna-MIR21-3;Dbxref=miRBase:MIMAT0004494,GeneID:406991,HGNC:HGNC:31586,MIM:611020,miRBase:MI0000077;gbkey=ncRNA;gene=MIR21;product=hsa-miR-21-3p
+NR_029493.1	RefSeq	exon	1	72	.	+	.	ID=id-MIR21;Parent=gene-MIR21;Dbxref=GeneID:406991,HGNC:HGNC:31586,MIM:611020,miRBase:MI0000077;gbkey=exon;gene=MIR21;inference=alignment:Splign:2.1.0
+

@@ -33,6 +33,8 @@ def test_ncbi_assemblies_general():
     # NC_000007.14 also has the CFAP144P1 transcribed pseudogene (NR_028347.1).
     for ref_id in ["NC_000003.12", "NC_000014.9", "NC_000005.10", "NC_000007.14"]:
         assert models["GRCh38"][ref_id] == _expected_model(ref_id)
+    # MIR21 only: its primary_transcript NR_029493.1, without the mature miRNAs.
+    assert models["GRCh38"]["NC_000017.11"] == _expected_model("NC_000017.11")
 
 
 def test_ncbi_assemblies_restrict_ref_id_grch38():

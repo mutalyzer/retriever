@@ -1,0 +1,34 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NG_008076.3 1 28395
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+NG_008076.3	RefSeq	region	1	28395	.	+	.	ID=NG_008076.3:1..28395;Dbxref=taxon:9606;Name=20;chromosome=20;gbkey=Src;genome=genomic;map=20q11.22;mol_type=genomic DNA
+NG_008076.3	RefSeq	gene	1	4149	.	-	.	ID=gene-CEP250;Dbxref=GeneID:11190,HGNC:HGNC:1859,MIM:609689;Name=CEP250;description=centrosomal protein 250;gbkey=Gene;gene=CEP250;gene_biotype=other;gene_synonym=C-NAP1,CEP2,CNAP1,CRDHL2;partial=true;start_range=.,1
+NG_008076.3	RefSeq	mRNA	1373	4149	.	-	.	ID=rna-NM_007186.6;Parent=gene-CEP250;Dbxref=GeneID:11190,GenBank:NM_007186.6,HGNC:HGNC:1859,MIM:609689;Name=NM_007186.6;gbkey=mRNA;gene=CEP250;partial=true;product=centrosomal protein 250%2C transcript variant 1;start_range=.,1373;tag=MANE Select;transcript_id=NM_007186.6
+NG_008076.3	RefSeq	exon	3996	4149	.	-	.	ID=exon-NM_007186.6-1;Parent=rna-NM_007186.6;Dbxref=GeneID:11190,GenBank:NM_007186.6,HGNC:HGNC:1859,MIM:609689;gbkey=mRNA;gene=CEP250;partial=true;product=centrosomal protein 250%2C transcript variant 1;tag=MANE Select;transcript_id=NM_007186.6
+NG_008076.3	RefSeq	exon	1373	1443	.	-	.	ID=exon-NM_007186.6-2;Parent=rna-NM_007186.6;Dbxref=GeneID:11190,GenBank:NM_007186.6,HGNC:HGNC:1859,MIM:609689;gbkey=mRNA;gene=CEP250;partial=true;product=centrosomal protein 250%2C transcript variant 1;start_range=.,1373;tag=MANE Select;transcript_id=NM_007186.6
+NG_008076.3	RefSeq	gene	5650	5793	.	+	.	ID=gene-MIR1289-1;Dbxref=GeneID:100302125,HGNC:HGNC:35281,miRBase:MI0006350;Name=MIR1289-1;description=microRNA 1289-1;gbkey=Gene;gene=MIR1289-1;gene_biotype=miRNA;gene_synonym=hsa-mir-1289-1,MIRN1289-1
+NG_008076.3	RefSeq	precursor_RNA	5650	5793	.	+	.	ID=rna-NR_031620.1;Parent=gene-MIR1289-1;Dbxref=GeneID:100302125,GenBank:NR_031620.1,HGNC:HGNC:35281,miRBase:MI0006350;Name=NR_031620.1;gbkey=precursor_RNA;gene=MIR1289-1;product=microRNA 1289-1;transcript_id=NR_031620.1
+NG_008076.3	RefSeq	exon	5650	5793	.	+	.	ID=exon-NR_031620.1-1;Parent=rna-NR_031620.1;Dbxref=GeneID:100302125,GenBank:NR_031620.1,HGNC:HGNC:35281,miRBase:MI0006350;gbkey=precursor_RNA;gene=MIR1289-1;product=microRNA 1289-1;transcript_id=NR_031620.1
+NG_008076.3	RefSeq	miRNA	5735	5757	.	+	.	ID=rna-MIR1289-1;Parent=rna-NR_031620.1;Dbxref=miRBase:MIMAT0005879,GeneID:100302125,HGNC:HGNC:35281,miRBase:MI0006350;gbkey=ncRNA;gene=MIR1289-1;product=hsa-miR-1289
+NG_008076.3	RefSeq	exon	5735	5757	.	+	.	ID=exon-MIR1289-1-1;Parent=rna-MIR1289-1;Dbxref=miRBase:MIMAT0005879,GeneID:100302125,HGNC:HGNC:35281,miRBase:MI0006350;gbkey=ncRNA;gene=MIR1289-1;product=hsa-miR-1289
+NG_008076.3	RefSeq	gene	21519	26400	.	+	.	ID=gene-GDF5;Dbxref=GeneID:8200,HGNC:HGNC:4220,MIM:601146;Name=GDF5;description=growth differentiation factor 5;gbkey=Gene;gene=GDF5;gene_biotype=protein_coding;gene_synonym=BDA1C,BMP-14,BMP14,CDMP1,DUPANS,LAP-4,LAP4,OS5,SYM1B,SYNS2
+NG_008076.3	RefSeq	exon	21519	22449	.	+	.	ID=id-GDF5-1;Parent=gene-GDF5;Dbxref=GeneID:8200,HGNC:HGNC:4220,MIM:601146;exon_number=1;gbkey=exon;gene=GDF5;inference=alignment:Splign:2.1.0;number=1
+NG_008076.3	RefSeq	exon	24964	26400	.	+	.	ID=id-GDF5-2;Parent=gene-GDF5;Dbxref=GeneID:8200,HGNC:HGNC:4220,MIM:601146;exon_number=2;gbkey=exon;gene=GDF5;inference=alignment:Splign:2.1.0;number=2
+NG_008076.3	RefSeq	mRNA	21519	26400	.	+	.	ID=rna-NM_000557.5;Parent=gene-GDF5;Dbxref=GeneID:8200,GenBank:NM_000557.5,HGNC:HGNC:4220,MIM:601146;Name=NM_000557.5;gbkey=mRNA;gene=GDF5;product=growth differentiation factor 5%2C transcript variant 2;transcript_id=NM_000557.5
+NG_008076.3	RefSeq	exon	21519	22449	.	+	.	ID=exon-NM_000557.5-1;Parent=rna-NM_000557.5;Dbxref=GeneID:8200,GenBank:NM_000557.5,HGNC:HGNC:4220,MIM:601146;gbkey=mRNA;gene=GDF5;product=growth differentiation factor 5%2C transcript variant 2;transcript_id=NM_000557.5
+NG_008076.3	RefSeq	exon	24964	26400	.	+	.	ID=exon-NM_000557.5-2;Parent=rna-NM_000557.5;Dbxref=GeneID:8200,GenBank:NM_000557.5,HGNC:HGNC:4220,MIM:601146;gbkey=mRNA;gene=GDF5;product=growth differentiation factor 5%2C transcript variant 2;transcript_id=NM_000557.5
+NG_008076.3	RefSeq	CDS	21819	22449	.	+	0	ID=cds-NP_000548.2;Parent=rna-NM_000557.5;Dbxref=CCDS:CCDS13254.1,GeneID:8200,GenBank:NP_000548.2,HGNC:HGNC:4220,MIM:601146;Name=NP_000548.2;gbkey=CDS;gene=GDF5;product=growth/differentiation factor 5 preproprotein;protein_id=NP_000548.2
+NG_008076.3	RefSeq	CDS	24964	25838	.	+	2	ID=cds-NP_000548.2;Parent=rna-NM_000557.5;Dbxref=CCDS:CCDS13254.1,GeneID:8200,GenBank:NP_000548.2,HGNC:HGNC:4220,MIM:601146;Name=NP_000548.2;gbkey=CDS;gene=GDF5;product=growth/differentiation factor 5 preproprotein;protein_id=NP_000548.2
+NG_008076.3	RefSeq	gene	25096	26718	.	-	.	ID=gene-GDF5-AS1;Dbxref=GeneID:554250,HGNC:HGNC:33435;Name=GDF5-AS1;description=GDF5 antisense RNA 1;gbkey=Gene;gene=GDF5-AS1;gene_biotype=lncRNA;gene_synonym=GDF5OS
+NG_008076.3	RefSeq	lncRNA	25096	26718	.	-	.	ID=rna-NR_161326.1;Parent=gene-GDF5-AS1;Dbxref=GeneID:554250,GenBank:NR_161326.1,HGNC:HGNC:33435;Name=NR_161326.1;gbkey=ncRNA;gene=GDF5-AS1;product=GDF5 antisense RNA 1;transcript_id=NR_161326.1
+NG_008076.3	RefSeq	exon	26584	26718	.	-	.	ID=exon-NR_161326.1-1;Parent=rna-NR_161326.1;Dbxref=GeneID:554250,GenBank:NR_161326.1,HGNC:HGNC:33435;gbkey=ncRNA;gene=GDF5-AS1;product=GDF5 antisense RNA 1;transcript_id=NR_161326.1
+NG_008076.3	RefSeq	exon	25096	25895	.	-	.	ID=exon-NR_161326.1-2;Parent=rna-NR_161326.1;Dbxref=GeneID:554250,GenBank:NR_161326.1,HGNC:HGNC:33435;gbkey=ncRNA;gene=GDF5-AS1;product=GDF5 antisense RNA 1;transcript_id=NR_161326.1
+NG_008076.3	RefSeq	cDNA_match	4998	5107	.	+	.	ID=aln0;Target=NM_001319138.2 1 110 +;idty=1;splign=110
+NG_008076.3	RefSeq	cDNA_match	18360	18515	.	+	.	ID=aln0;Target=NM_001319138.2 111 266 +;idty=1;splign=156
+NG_008076.3	RefSeq	cDNA_match	21578	22449	.	+	.	ID=aln0;Target=NM_001319138.2 267 1138 +;idty=1;splign=872
+NG_008076.3	RefSeq	cDNA_match	24964	26400	.	+	.	ID=aln0;Target=NM_001319138.2 1139 2575 +;idty=1;splign=1437
+NG_008076.3	RefSeq	cDNA_match	21519	22449	.	+	.	ID=aln1;Target=NM_000557.5 1 931 +;idty=1;splign=931
+NG_008076.3	RefSeq	cDNA_match	24964	26400	.	+	.	ID=aln1;Target=NM_000557.5 932 2368 +;idty=1;splign=1437
+

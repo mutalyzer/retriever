@@ -1,0 +1,95 @@
+{
+  "annotations": {
+    "id": "NR_029493.1",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 72
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:9606",
+      "name": "17",
+      "chromosome": "17",
+      "genome": "genomic",
+      "map": "17q23.1",
+      "mol_type": "transcribed RNA"
+    },
+    "features": [
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 0
+          },
+          "end": {
+            "type": "point",
+            "position": 72
+          },
+          "strand": 1
+        },
+        "id": "MIR21",
+        "qualifiers": {
+          "name": "MIR21",
+          "synonym": [
+            "hsa-mir-21",
+            "miR-21",
+            "MIRN21",
+            "miRNA21"
+          ],
+          "HGNC": "31586"
+        },
+        "features": [
+          {
+            "id": "NR_029493.1",
+            "type": "ncRNA",
+            "qualifiers": {
+              "biotype": "precursor_RNA"
+            },
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 0
+              },
+              "end": {
+                "type": "point",
+                "position": 72
+              }
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 0
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 72
+                  },
+                  "strand": 1
+                },
+                "id": "id-MIR21"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "TGTCGGGTAGCTTATCAGACTGATGTTGACTGTTGAATCTCATGGCAACACCAGTCGATGGGCTGTCTGACA",
+    "description": "NR_029493.1 Homo sapiens microRNA 21 (MIR21), microRNA"
+  }
+}
