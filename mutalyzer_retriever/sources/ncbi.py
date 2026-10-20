@@ -33,8 +33,15 @@ def _fetch_reference_summary(reference_id, db):
     try:
         record = Entrez.read(handle)
     except RuntimeError as e:
-        raise NameError from e
-    handle.close()
+        # ESummary reports both an unknown ID and an ID in another database
+        # as errors. Other errors (e.g. a backend failure) are not lookup misses.
+        if str(e).startswith(("Invalid uid ", "Otherdb uid=")):
+            raise NameError(str(e)) from e
+        raise ConnectionError(str(e)) from e
+    except (IOError, HTTPException) as e:
+        raise ConnectionError from e
+    finally:
+        handle.close()
 
     return {
         "reference_id": record[0]["AccessionVersion"],
@@ -63,10 +70,12 @@ def fetch_genbank(reference_id, db, size_on=True):
             rettype="gbwithparts",
             retmode="text",
         )
+        try:
+            raw_data = handle.read()
+        finally:
+            handle.close()
     except (IOError, HTTPError, HTTPException) as e:
-        raise NameError from e
-    raw_data = handle.read()
-    handle.close()
+        raise ConnectionError from e
     return raw_data
 
 
@@ -93,6 +102,12 @@ def fetch_fasta(reference_id, db):
     except IncompleteRead as e:
         raw_data = e.partial.decode()
     handle.close()
+    if not raw_data.startswith(">"):
+        # Ids NCBI cannot parse come back as HTTP 200 with a (letter-spaced)
+        # "Error: Failed to understand id" body. Other errors are not misses.
+        if raw_data.replace(" ", "").startswith("Error:Failedtounderstandid"):
+            raise NameError(f_e("fasta", extra=raw_data.strip()))
+        raise ConnectionError(f_e("fasta", extra=raw_data[:100].strip()))
     return raw_data
 
 
@@ -144,11 +159,18 @@ def fetch(reference_id, reference_type, size_on=True, timeout=DEFAULT_TIMEOUT):
         or reference_id.startswith("ZP_")
     ):
         db = "protein"
-    if reference_type in [None, "gff3"]:
-        return fetch_gff3(reference_id, db, timeout), "gff3"
-    if reference_type == "fasta":
-        return fetch_fasta(reference_id, db), "fasta"
-    if reference_type == "genbank":
-        return fetch_genbank(reference_id, db, size_on), "genbank"
 
-    raise ValueError(f"NCBI fetch does not support '{reference_type}' reference type.")
+    def _fetch(db):
+        if reference_type in [None, "gff3"]:
+            return fetch_gff3(reference_id, db, timeout), "gff3"
+        if reference_type == "fasta":
+            return fetch_fasta(reference_id, db), "fasta"
+        if reference_type == "genbank":
+            return fetch_genbank(reference_id, db, size_on), "genbank"
+        raise ValueError(f"NCBI fetch does not support '{reference_type}' reference type.")
+
+    try:
+        return _fetch(db)
+    except NameError:
+        # Not found: the prefixes above miss e.g. INSDC proteins (BFP69721.1).
+        return _fetch("protein" if db == "nuccore" else "nuccore")
