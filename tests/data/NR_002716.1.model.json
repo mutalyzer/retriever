@@ -1,0 +1,72 @@
+{
+  "annotations": {
+    "id": "NR_002716.1",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 186
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:9606",
+      "name": "17",
+      "chromosome": "17",
+      "genome": "genomic",
+      "map": "17q12-q21",
+      "mol_type": "transcribed RNA"
+    },
+    "features": [
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 0
+          },
+          "end": {
+            "type": "point",
+            "position": 186
+          },
+          "strand": 1
+        },
+        "id": "RNU2-1",
+        "qualifiers": {
+          "name": "RNU2-1",
+          "synonym": [
+            "U2",
+            "RNU2"
+          ],
+          "HGNC": "10142"
+        },
+        "features": [
+          {
+            "id": "NR_002716.1",
+            "type": "ncRNA",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 0
+              },
+              "end": {
+                "type": "point",
+                "position": 186
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "ATCGCTTCTCGGCCTTTTGGCTAAGATCAAGTGTAGTATCTGTTCATCAGTTTAATATCTGATACGTCCTCTATCCGAGGACAATATATTAAATGGATTTTTGGAGCAGGGAGATGGAATAGGAGCTTGCTCCGTCCACTCCACGCATCGACCTGGTATTGCAGTACCTCCAGGAACGGTGCACCA",
+    "description": "NR_002716.1 Homo sapiens RNA, U2 small nuclear 1 (RNU2-1), non-coding RNA"
+  }
+}

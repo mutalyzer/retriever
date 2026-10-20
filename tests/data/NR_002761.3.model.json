@@ -1,0 +1,94 @@
+{
+  "annotations": {
+    "id": "NR_002761.3",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 138
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:9606",
+      "name": "11",
+      "chromosome": "11",
+      "genome": "genomic",
+      "map": "11q12.3",
+      "mol_type": "transcribed RNA"
+    },
+    "features": [
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 0
+          },
+          "end": {
+            "type": "point",
+            "position": 138
+          },
+          "strand": 1
+        },
+        "id": "RNU2-2P",
+        "qualifiers": {
+          "name": "RNU2-2P",
+          "synonym": [
+            "RNU2-2",
+            "RNU2B",
+            "U2"
+          ],
+          "HGNC": "10152"
+        },
+        "features": [
+          {
+            "id": "NR_002761.3",
+            "type": "ncRNA",
+            "qualifiers": {
+              "biotype": "snRNA"
+            },
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 0
+              },
+              "end": {
+                "type": "point",
+                "position": 138
+              }
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 0
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 138
+                  },
+                  "strand": 1
+                },
+                "id": "exon-RNU2-2P-1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "TCAGTTTAATATCTGATACGTCCTCTATCCGAGGACAATATATTAAATGGATTTTTGGAAATAGGAGATGGAATAGGAGCTTGCTCCGTCCACTCCACGCATCGACCTGGTATTGCAGTACTTCCAGGAACGGTGCAC",
+    "description": "NR_002761.3 Homo sapiens RNA, U2 small nuclear 2, pseudogene (RNU2-2P), small nuclear RNA"
+  }
+}

@@ -1,0 +1,11 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NR_047663.1 1 2938
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+NR_047663.1	RefSeq	region	1	2938	.	+	.	ID=NR_047663.1:1..2938;Dbxref=taxon:9606;Name=11;chromosome=11;gbkey=Src;genome=genomic;map=11q13.1;mol_type=transcribed RNA
+NR_047663.1	RefSeq	gene	1	2938	.	+	.	ID=gene-ACTN3;Dbxref=GeneID:89,HGNC:165,MIM:102574;Name=ACTN3;description=actinin%2C alpha 3;gbkey=Gene;gene=ACTN3
+NR_047663.1	RefSeq	transcript	1	2938	.	+	.	ID=rna-ACTN3;Parent=gene-ACTN3;Dbxref=GeneID:89,HGNC:165,MIM:102574;gbkey=misc_RNA;gene=ACTN3;product=actinin%2C alpha 3%2C transcript variant 1%2C non-coding
+NR_047663.1	RefSeq	exon	1	2938	.	+	.	ID=exon-ACTN3-1;Parent=rna-ACTN3;Dbxref=GeneID:89,HGNC:165,MIM:102574;gbkey=misc_RNA;gene=ACTN3;product=actinin%2C alpha 3%2C transcript variant 1%2C non-coding
+NR_047663.1	RefSeq	sequence_feature	98	1828	.	+	.	ID=id-ACTN3;Dbxref=GeneID:89,HGNC:165,MIM:102574;Note=primary ORF has stop codon >50 nucleotides from the terminal splice site%3B nonsense-mediated mRNA decay (NMD)candidate.;gbkey=misc_feature;gene=ACTN3;inference=COORDINATES: ab initio prediction:ORF Finder
+

@@ -1,0 +1,8 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NR_002716.1 1 186
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+NR_002716.1	RefSeq	region	1	186	.	+	.	ID=NR_002716.1:1..186;Dbxref=taxon:9606;Name=17;chromosome=17;gbkey=Src;genome=genomic;map=17q12-q21;mol_type=transcribed RNA
+NR_002716.1	RefSeq	gene	1	186	.	+	.	ID=gene-RNU2-1;Dbxref=GeneID:6066,HGNC:10142,MIM:180690;Name=RNU2-1;description=RNA%2C U2 small nuclear 1;gbkey=Gene;gene=RNU2-1;gene_synonym=U2,RNU2
+

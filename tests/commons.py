@@ -146,6 +146,10 @@ references = {
             "PV394717.1",  # LINC03128: lncRNA (spelling), no gene
             "PZ268039.1",  # lncRNA (spelling) under the PTEN gene
             "NR_163594.1",  # SSPOP pseudogene: transcript with no transcript_id
+            "NR_047663.1",  # ACTN3 transcript (misc_RNA) with no transcript_id
+            "NR_055330.1",  # piRNA (C. elegans)
+            "NR_002716.1",  # RNU2-1 gene with no RNA and no exons
+            "NR_002761.3",  # RNU2-2P gene with two identical snRNAs
         ]
     },
     "ensembl_rest": {

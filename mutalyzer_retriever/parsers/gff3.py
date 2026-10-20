@@ -70,6 +70,7 @@ NCRNA_TYPES = (
     "Y_RNA",  # NC_000007.14(NR_001571.2)
     "vault_RNA",  # NC_000005.10(NR_030583.3)
     "scRNA",  # NC_000014.9(NR_002715.1)
+    "piRNA",  # NR_055330.1 (C. elegans)
     "ncRNA",  # NC_001806.2(HHV1gp00s01)
 )
 
@@ -556,6 +557,12 @@ def _get_rna_features(record, mol_type):
             ]
     else:
         rna_children = []
+    if not rna_children:
+        # E.g. an RNA type not considered (transcript in NR_047663.1) or two RNAs
+        # (NR_002761.3): use the gene's first child with exons.
+        rna_children, qualifiers = _get_first_rna_with_exons(record, features[0]["id"])
+        if qualifiers and not rna_model.get("qualifiers"):
+            rna_model["qualifiers"] = qualifiers
 
     exon_positions = []
     for sub_feature in rna_children:
@@ -572,8 +579,34 @@ def _get_rna_features(record, mol_type):
         )
     if rna_children:
         rna_model["features"] = rna_children
+    if rna_children or (
+        features[0]["type"] in GENE_TYPES
+        and not any(
+            f["type"] in TRANSCRIPT_TYPES for f in features[0].get("features", [])
+        )
+    ):
+        # A gene without any RNA (e.g. NR_002716.1) gets the record itself.
         features[0]["features"] = [rna_model]
     return features
+
+
+def _get_first_rna_with_exons(record, gene_id):
+    """
+    Exons and qualifiers of the gene's first child with exons, of any type.
+    """
+    for feature in record.features:
+        if _get_feature_id(feature) != gene_id:
+            continue
+        for sub_feature in feature.sub_features:
+            exons = [
+                _get_feature_model(f, considered_types=["exon"])
+                for f in sub_feature.sub_features
+                if f.type == "exon"
+            ]
+            if exons:
+                # As for the considered types, the type names the RNA class.
+                return exons, _get_qualifiers(sub_feature) or {"biotype": sub_feature.type}
+    return [], None
 
 
 def _set_mt_translation_table(features):

@@ -1,0 +1,87 @@
+{
+  "annotations": {
+    "id": "NR_055330.1",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 21
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:6239",
+      "name": "IV",
+      "chromosome": "IV",
+      "genome": "genomic",
+      "mol_type": "transcribed RNA"
+    },
+    "features": [
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 0
+          },
+          "end": {
+            "type": "point",
+            "position": 21
+          },
+          "strand": 1
+        },
+        "id": "21ur-2260",
+        "qualifiers": {
+          "name": "21ur-2260"
+        },
+        "features": [
+          {
+            "id": "NR_055330.1",
+            "type": "ncRNA",
+            "qualifiers": {
+              "biotype": "piRNA"
+            },
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 0
+              },
+              "end": {
+                "type": "point",
+                "position": 21
+              }
+            },
+            "features": [
+              {
+                "type": "exon",
+                "location": {
+                  "type": "range",
+                  "start": {
+                    "type": "point",
+                    "position": 0
+                  },
+                  "end": {
+                    "type": "point",
+                    "position": 21
+                  },
+                  "strand": 1
+                },
+                "id": "exon-CELE_M03D4.14-1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "TCTGTGTTCAATTTTCACTGC",
+    "description": "NR_055330.1 Caenorhabditis elegans piwi-interacting RNA 21ur-2260 (21ur-2260), piRNA"
+  }
+}

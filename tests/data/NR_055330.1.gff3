@@ -1,0 +1,10 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NR_055330.1 1 21
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=6239
+NR_055330.1	RefSeq	region	1	21	.	+	.	ID=NR_055330.1:1..21;Dbxref=taxon:6239;Name=IV;chromosome=IV;gbkey=Src;genome=genomic;mol_type=transcribed RNA;strain=Bristol N2
+NR_055330.1	RefSeq	gene	1	21	.	+	.	ID=gene-CELE_M03D4.14;Dbxref=WormBase:WBGene00047949,GeneID:13195526;Name=21ur-2260;gbkey=Gene;gene=21ur-2260;locus_tag=CELE_M03D4.14
+NR_055330.1	RefSeq	piRNA	1	21	.	+	.	ID=rna-CELE_M03D4.14;Parent=gene-CELE_M03D4.14;Dbxref=GeneID:13195526,WormBase:WBGene00047949;gbkey=ncRNA;gene=21ur-2260;locus_tag=CELE_M03D4.14;product=piwi-interacting RNA 21ur-2260;standard_name=M03D4.14
+NR_055330.1	RefSeq	exon	1	21	.	+	.	ID=exon-CELE_M03D4.14-1;Parent=rna-CELE_M03D4.14;Dbxref=GeneID:13195526,WormBase:WBGene00047949;gbkey=ncRNA;gene=21ur-2260;locus_tag=CELE_M03D4.14;product=piwi-interacting RNA 21ur-2260;standard_name=M03D4.14
+

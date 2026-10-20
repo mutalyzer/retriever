@@ -1,0 +1,12 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NR_002761.3 1 138
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606
+NR_002761.3	RefSeq	region	1	138	.	+	.	ID=NR_002761.3:1..138;Dbxref=taxon:9606;Name=11;chromosome=11;gbkey=Src;genome=genomic;map=11q12.3;mol_type=transcribed RNA
+NR_002761.3	RefSeq	gene	1	138	.	+	.	ID=gene-RNU2-2P;Dbxref=GeneID:26855,HGNC:HGNC:10152;Name=RNU2-2P;description=RNA%2C U2 small nuclear 2%2C pseudogene;gbkey=Gene;gene=RNU2-2P;gene_synonym=RNU2-2,RNU2B,U2
+NR_002761.3	RefSeq	snRNA	1	138	.	+	.	ID=rna-RNU2-2P;Parent=gene-RNU2-2P;Dbxref=GeneID:26855,HGNC:HGNC:10152;gbkey=ncRNA;gene=RNU2-2P;product=RNA%2C U2 small nuclear 2%2C pseudogene
+NR_002761.3	RefSeq	exon	1	138	.	+	.	ID=exon-RNU2-2P-1;Parent=rna-RNU2-2P;Dbxref=GeneID:26855,HGNC:HGNC:10152;gbkey=ncRNA;gene=RNU2-2P;product=RNA%2C U2 small nuclear 2%2C pseudogene
+NR_002761.3	RefSeq	snRNA	1	138	.	+	.	ID=rna-RNU2-2P-2;Parent=gene-RNU2-2P;Dbxref=GeneID:26855,HGNC:HGNC:10152;gbkey=ncRNA;gene=RNU2-2P;product=RNA%2C U2 small nuclear 2%2C pseudogene
+NR_002761.3	RefSeq	exon	1	138	.	+	.	ID=exon-RNU2-2P-2-1;Parent=rna-RNU2-2P-2;Dbxref=GeneID:26855,HGNC:HGNC:10152;gbkey=ncRNA;gene=RNU2-2P;product=RNA%2C U2 small nuclear 2%2C pseudogene
+
