@@ -1,0 +1,856 @@
+{
+  "annotations": {
+    "id": "L78833.1",
+    "type": "record",
+    "location": {
+      "type": "range",
+      "start": {
+        "type": "point",
+        "position": 0
+      },
+      "end": {
+        "type": "point",
+        "position": 117143
+      }
+    },
+    "qualifiers": {
+      "dbxref": "taxon:9606",
+      "map": "17q21",
+      "mol_type": "genomic DNA"
+    },
+    "features": [
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 3343
+          },
+          "end": {
+            "type": "point",
+            "position": 84436
+          },
+          "strand": 1
+        },
+        "id": "BRCA1",
+        "qualifiers": {
+          "name": "BRCA1"
+        },
+        "features": [
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 3343
+              },
+              "end": {
+                "type": "point",
+                "position": 3464
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-1"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 3620
+              },
+              "end": {
+                "type": "point",
+                "position": 3998
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-1-2"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 4619
+              },
+              "end": {
+                "type": "point",
+                "position": 4718
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-2"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 12954
+              },
+              "end": {
+                "type": "point",
+                "position": 13008
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-3"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 22200
+              },
+              "end": {
+                "type": "point",
+                "position": 22278
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-5"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 23777
+              },
+              "end": {
+                "type": "point",
+                "position": 23866
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-6"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 24472
+              },
+              "end": {
+                "type": "point",
+                "position": 24612
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-7"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 28852
+              },
+              "end": {
+                "type": "point",
+                "position": 28958
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-8"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 31442
+              },
+              "end": {
+                "type": "point",
+                "position": 31488
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-9"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 32809
+              },
+              "end": {
+                "type": "point",
+                "position": 32886
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-10"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 33871
+              },
+              "end": {
+                "type": "point",
+                "position": 37297
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-11"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 37699
+              },
+              "end": {
+                "type": "point",
+                "position": 37788
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-12"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 46155
+              },
+              "end": {
+                "type": "point",
+                "position": 46327
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-13"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 52117
+              },
+              "end": {
+                "type": "point",
+                "position": 52244
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-14"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 54210
+              },
+              "end": {
+                "type": "point",
+                "position": 54401
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-15"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 57493
+              },
+              "end": {
+                "type": "point",
+                "position": 57804
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-16"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 61037
+              },
+              "end": {
+                "type": "point",
+                "position": 61125
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-17"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 64781
+              },
+              "end": {
+                "type": "point",
+                "position": 64859
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-18"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 65359
+              },
+              "end": {
+                "type": "point",
+                "position": 65400
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-19"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 71597
+              },
+              "end": {
+                "type": "point",
+                "position": 71681
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-20"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 77619
+              },
+              "end": {
+                "type": "point",
+                "position": 77674
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-21"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 79542
+              },
+              "end": {
+                "type": "point",
+                "position": 79616
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-22"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 81033
+              },
+              "end": {
+                "type": "point",
+                "position": 81094
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-23"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 82935
+              },
+              "end": {
+                "type": "point",
+                "position": 84436
+              },
+              "strand": 1
+            },
+            "id": "id-BRCA1-24"
+          },
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 4638
+              },
+              "end": {
+                "type": "point",
+                "position": 83060
+              },
+              "strand": 1
+            },
+            "id": "AAC37594.1"
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 48898
+          },
+          "end": {
+            "type": "point",
+            "position": 49390
+          },
+          "strand": -1
+        },
+        "id": "rpL21",
+        "qualifiers": {
+          "name": "rpL21"
+        },
+        "features": [
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 48898
+              },
+              "end": {
+                "type": "point",
+                "position": 49390
+              },
+              "strand": -1
+            },
+            "id": "rpL21",
+            "qualifiers": {
+              "pseudo": "true"
+            }
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 96692
+          },
+          "end": {
+            "type": "point",
+            "position": 103623
+          },
+          "strand": -1
+        },
+        "id": "Rho7",
+        "qualifiers": {
+          "name": "Rho7"
+        },
+        "features": [
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 100053
+              },
+              "end": {
+                "type": "point",
+                "position": 100302
+              },
+              "strand": -1
+            },
+            "id": "exon-AAC37595.1-1"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 100538
+              },
+              "end": {
+                "type": "point",
+                "position": 100673
+              },
+              "strand": -1
+            },
+            "id": "exon-AAC37595.1-2"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 101441
+              },
+              "end": {
+                "type": "point",
+                "position": 101551
+              },
+              "strand": -1
+            },
+            "id": "exon-AAC37595.1-3"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 102686
+              },
+              "end": {
+                "type": "point",
+                "position": 102774
+              },
+              "strand": -1
+            },
+            "id": "exon-AAC37595.1-4"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 103284
+              },
+              "end": {
+                "type": "point",
+                "position": 103386
+              },
+              "strand": -1
+            },
+            "id": "exon-AAC37595.1-5"
+          },
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 100053
+              },
+              "end": {
+                "type": "point",
+                "position": 103386
+              },
+              "strand": -1
+            },
+            "id": "AAC37595.1"
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 106658
+          },
+          "end": {
+            "type": "point",
+            "position": 114716
+          },
+          "strand": 1
+        },
+        "id": "VatI",
+        "qualifiers": {
+          "name": "VatI"
+        },
+        "features": [
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 106658
+              },
+              "end": {
+                "type": "point",
+                "position": 106789
+              },
+              "strand": 1
+            },
+            "id": "id-VatI-1"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 109926
+              },
+              "end": {
+                "type": "point",
+                "position": 110134
+              },
+              "strand": 1
+            },
+            "id": "id-VatI-2"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 110519
+              },
+              "end": {
+                "type": "point",
+                "position": 110690
+              },
+              "strand": 1
+            },
+            "id": "id-VatI-3"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 110795
+              },
+              "end": {
+                "type": "point",
+                "position": 110885
+              },
+              "strand": 1
+            },
+            "id": "id-VatI-4"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 112773
+              },
+              "end": {
+                "type": "point",
+                "position": 113015
+              },
+              "strand": 1
+            },
+            "id": "id-VatI-5"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 113177
+              },
+              "end": {
+                "type": "point",
+                "position": 114716
+              },
+              "strand": 1
+            },
+            "id": "id-VatI-6"
+          },
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 106681
+              },
+              "end": {
+                "type": "point",
+                "position": 113261
+              },
+              "strand": 1
+            },
+            "id": "AAC37596.1"
+          }
+        ]
+      },
+      {
+        "type": "gene",
+        "location": {
+          "type": "range",
+          "start": {
+            "type": "point",
+            "position": 115032
+          },
+          "end": {
+            "type": "point",
+            "position": 116275
+          },
+          "strand": -1
+        },
+        "id": "ifp35",
+        "qualifiers": {
+          "name": "ifp35"
+        },
+        "features": [
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 115032
+              },
+              "end": {
+                "type": "point",
+                "position": 115214
+              },
+              "strand": -1
+            },
+            "id": "exon-AAC37597.1-1"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 115439
+              },
+              "end": {
+                "type": "point",
+                "position": 115546
+              },
+              "strand": -1
+            },
+            "id": "exon-AAC37597.1-2"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 115659
+              },
+              "end": {
+                "type": "point",
+                "position": 115846
+              },
+              "strand": -1
+            },
+            "id": "exon-AAC37597.1-3"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 115948
+              },
+              "end": {
+                "type": "point",
+                "position": 116055
+              },
+              "strand": -1
+            },
+            "id": "exon-AAC37597.1-4"
+          },
+          {
+            "type": "exon",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 116127
+              },
+              "end": {
+                "type": "point",
+                "position": 116275
+              },
+              "strand": -1
+            },
+            "id": "exon-AAC37597.1-5"
+          },
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 115032
+              },
+              "end": {
+                "type": "point",
+                "position": 116275
+              },
+              "strand": -1
+            },
+            "id": "AAC37597.1"
+          }
+        ]
+      }
+    ]
+  },
+  "sequence": {
+    "seq": "ACGGGGTCTCGAAAAAAGGAGAATGGGATGAGAAGGATATATGGGTAGTGTCATTTTTTAACTTGCAGATTTCATCCTAGTCTTCCAGTTATCGTTTCCTAGCACTCCATGTTCCCAAGATAGTGTCACCACCCCAAGGACTCTCTCTCATTTTCTTTGCCTGGGCCCTCTTTCTACTGAGGAGTCGTGGCCTTCCATCAGTAGAAGCCGGATGTTCTTGTGTCCGAAATTGGTGGGTTCTTGGTCTCACTGACTTCAAGAATGAAGTTGCGGACCCTCACGGTGAGTGGTACAGTTCTTAAAGATGATGTGTCCAGAGTTTGTTCCTTCTGATGTTCGGACGTGTTCAGAGTTACCTCCTTCTGGTGGATTCGTGGTCTCGCTGGCTTCAGGAGTGAAGCTGCAGACCTTTGCGGTGAGTGTTACAGCTCTTAAGGCGGCATGTCTGGAGTTTGTTCGTTCCTCCCGTCTGGAGTTGTTCATTCCTCCTGGTGGGTTCGTGGTCTCGCTGGCTTCAGGAGTGAAGCTGCAGACCTCTGCGGTCGGTGTTACCAGCAGATAAATGCTATGCGGACCCAAAGAGTGAGCAGCAGCAAGATTTATTGCAAAGAGCACAAGAACAAAGCTTCCACAGCGTGGAAGGAGACCAGAGCGGGTTGCTGCTGCTGGCTCAGGCAGCCTGCATTTTTTTTTTTTTTTTTTTTTTTTTTTGAGATGGAGTCTCCCTCTGTCACCCAGGCTGGAATGCAGTGGTGCAATCTGGGCTCACTGCAAGCTCCGCCTCCCGGGTTCACGCCATTCTCCTGCCTCAACCTCCCCAGTAGAGGGGATTACAGGCACCCACCACCGCACCCAGCTAATATTTTGTCTTTTTAGTAGAGTCGGGGTTTCACTGTGTTAGCCAGGATGGTCTCGATCTCTTGACCTCGTGATCCACCCCTCTAGGCCTCCCAAATTGCTGGGATTACAGGTGTGAGCCACTGGCACCCAGCGGGGCAGCCTGCTTTTATTCCCTTATCTGACCCCACCCACATCCTGTTGATTGGTCCATTTTACAGAGAGCTAATTGGTCCGTTTTGACAGGGTGCTGATTGGTGCATTTACAATCCCTGAGCTAGATATACACAGAGTGCTGATTGGTGCATTTACAATCCTCTAGCTAGACATAAAAATTCTCCAAGTCCCCACTACATTTGCTAGACACAGAGCACTGATTGGTGCGTTTACAAACCTTTAGCTAGACACAGAGTGCTGATTGGTGCATTTGCAAACCTTGAGCTAGACACAGAGCACTGATTGGTGCATTTACAATCCTTTAGCTAGACACAGAAGTTCTCCAAGTGCCCACCAGATTAGCTAGATACAGAGTGCTGATTGGTGCATCCCCAAACCCCAAGCTAGACACAGAGTGCTGACTGGTGCATATAAAATCCTCAGGCTAGACATAAAAGTTTTCCAAGTCCCCATCTGACTCAGGAGCCCAGCTGGCTTCACCTAGTGGATCCTGCGCAGGGCTGTGCCGGGCGCCTGCACTCCTCTCAGCCCTTGGGCAGTCGATGGGACCGGGCGCTGAGGAGCAGGGGGCGGTGCCCGTCGGGGAGGCTCAGGCCACGCTGGAGCTCACAGGGGTTGGGAGGGGGCTCGGGCATGGCGGGCTGCAGGTCCTGAGCCTTGCCCTGTGCAGGGCGGCTGGGGCCCGGTGAGAATTCAAGCGGGGTGCAGGCGGGCCGGCAGTGCTGGGGGACCCGGCGCACCCTCTGCAGCTGCTGGCCCGGGTGCTAGGCCCCTGACTGCCCGGGGCCGGGGGTGCGGGGCCCGCTGAGCCCGCGCCCACCTGGAACTCGCGCTGGCTGGCGAGCGCTGCGCGCAGCCCCAGTTCCCACACCCGCCTCTCCCTCCACACTTCCCCGCAAGCAGAGGGAGCCGGCTCTGGCTTCGGCCAGCCCAGAGAGGGGCCCCCACAGCGCAGTGGCGGGCTGAAGGGCTCCTCCAGCACGGCCAGAATGGACGCCAAGGCCGAGGAGGCGCCGAGAGCGAGCGAGGGCTGCTAGCACGTTGTCACCTCGCATTCTGAACCACAGACTCTCCAACTCTCCGGCGCTTTTCGCCCACTCGGTCCCTCAGAACACGAAGGGCTCTCTCATCCTGTCACTAAAACGATTAGCTGTCCGGAGACACGGAAAAAGTCGCCCCTCTTCTTTGCAGGATTCCTCCCTTGAACTTCTCCAAACCCTCTTAGTGTGACGTGACCCCACCCCTAGCTAACCCAGGCTGCTTCCTTACCAGCTTCCCGCCCCCTGGGGAGGCGGCAATGCAAAGACCGTCCGCTGCCAGCTCTGCCGCTATCTCTGTGGGGTGAATCTAACATGGCGGACAAAGACAGTAACTAGTCCCGTTTCTCCGCGTTTTCGCCAAGAAGATTGGCTCTTACCACTTGTCCCTCAAAACGACCACCCCATTGACTGGTGGCGATTGCGTCGACGGAGACGGGGCAAAAGCAAGCTGAACCCGAAAAATAACAAACACTGGGGCTGAGGGGTGGAACTACGAGTGCGCAGACATGGGCCAGAGCGCATTTCCCCTGCCCCAGGCAAATTCGGCGCTCACTGCGTCCCCGCAGGCCACTGACCTTACAAGACTACTTGCCCCAGACTCCTGGGGCTGGATGGGAATTGTAGTCTCCCTAAAGAGTTGTACGTATCTTTTTAAGGCCTAGTTTCTGCTTTCAAAATACGAAAACATAACACTCCAGTCCATAACTGTTGACAAGTACAAGCGCGCACAGGTCTCCAATCTATCCACTGGATTTCCGTGAGAATTGTGCCCGCTCTGGTATTGGATGTTCCTCTCCATAAGACTACAGTTTCTAAGGAACACTGTGGCGAAGACCTTTCATTCCGCAACGCATGCTGGAAATAATTATTTCCCTCCACCCCCCCAACAATCCTTATTACTTATATTTACCGAAACTGGAGACCTCCATTAGGGCGGAAAGAGTGGGGGATTGGGACCTCTTCTTACGACTGCTTTGGACAATAGGTAGCGATTCTGACCTTCGTACAGCAATTACTGTGATGCAATAAGCCGCAACTGGAAGAGTAGAGGCTAGAGGGCAGGCACTTTATGGCAAACTCAGGTAGAATTCTTCCTCTTCCGTCTCTTTCCTTTTACGTCATCCGGGGGCAGACTGGGTGGCCAATCCAGAGCCCCGAGAGACGCTTGGCTCTTTCTGTCCCTCCCATCCTCTGATTGTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAAGCGCGGGAATTACAGATAAATTAAAACTGCGACTGCGCGGCGTGAGCTCGCTGAGACTTCCTGGACGGGGGACAGGCTGTGGGGTTTCTCAGATAACTGGGCCCCTGCGCTCAGGAGGCCTTCACCCTCTGCTCTGGGTAAAGGTAGTAGAGTCCCGGGAAAGGGACAGGGGGCCCAAGTGATGCTCTGGGGTACTGGCGTGGGAGAGTGGATTTCCGAAGCTGACAGATGGGTATTCTTTGACGGGGGGTAGGGGCGGAACCTGAGAGGCGTAAGGCGTTGTGAACCCTGGGGAGGGGGGCAGTTTGTAGGTCGCGAGGGAAGCGCTGAGGATCAGGAAGGGGGCACTGAGTGTCCGTGGGGGAATCCTCGTGATAGGAACTGGAATATGCCTTGAGGGGGACACTATGTCTTTAAAAACGTCGGCTGGTCATGAGGTCAGGAGTTCCAGACCAGCCTGACCAACGTGGTGAAACTCCGTCTCTACTAAAAATACAAAAATTAGCCGGGCGTGGTGCCGCTCCAGCTACTCAGGAGGCTGAGGCAGGAGAATCGCTAGAACCCGGGAGGCGGAGGTTGCAGTGAGCCGAGATCGCGCCATTGCACTCCAGCCTGGGCGACAGAGCGAGACTGTCTCAAAACAAAACAAAACAAAACAAAACAAAAAACACCGGCTGGTATGTATGAGAGGATGGGACCTTGTGGAAGAAGAGGTGCCAGGAATATGTCTGGGAAGGGGAGGAGACAGGATTTTGTGGGAGGGAGAACTTAAGAACTGGATCCATTTGCGCCATTGAGAAAGCGCAAGAGGGAAGTAGAGGAGCGTCAGTAGTAACAGATGCTGCCGGCAGGGATGTGCTTGAGGAGGATCCAGAGATGAGAGCAGGTCACTGGGAAAGGTTAGGGGCGGGGAGGCCTTGATTGGTGTTGGTTTGGTCGTTGTTGATTTTGGTTTTATGCAAGAAAAAGAAAACAACCAGAAACATTGGAGAAAGCTAAGGCTACCACCACCTACCCGGTCAGTCACTCCTCTGTAGCTTTCTCTTTCTTGGAGAAAGGAAAAGACCCAAGGGGTTGGCAGCAATATGTGAAAAAATTCAGAATTTATGTTGTCTAATTACAAAAAGCAACTTCTAGAATCTTTAAAAATAAAGGACGTTGTCATTAGTTCTTTGGTTTGTATTATTCTAAAACCTTCCAAATCTTAAATTTACTTTATTTTAAAATGATAAAATGAAGTTGTCATTTTATAAACCTTTTAAAAAGATATATATATATGTTTTTCTAATGTGTTAAAGTTCATTGGAACAGAAAGAAATGGATTTATCTGCTCTTCGCGTTGAAGAAGTACAAAATGTCATTAATGCTATGCAGAAAATCTTAGAGTGTCCCATCTGGTAAGTCAGCACAAGAGTGTATTAATTTGGGATTCCTATGATTATCTCCTATGCAAATGAACAGAATTGACCTTACATACTAGGGAAGAAAAGACATGTCTAGTAAGATTAGGCTATTGTAATTGCTGATTTCCTTAACTGAAGAACTTTAAAAATATAGAAAATGATTCCTTGTTCTCCATCCACTCTGCCTCTCCCACTCCTCTCCTTTTCAACACAAATCCTGTGGTCCGGGAAAGACAGGGACTCTGTCTTGATTGGTTCTGCACTGGGGCAGGAATCTAGTTTAGATTAACTGGCATTTTGGCTTTTCTTCCAGCTCTAAAACAAGCTCCATCACTTGAAATGGCAAAATAAAATCATGGATGAGGCCGAGGGCGGTGGCTTATGCCTGTAATCCCAGCACTTTGGGAGGCCAAGGTGGTAGGATCACGAGGTCAGGAGATCGAGACCATCCTGGCCAACATGGTGAAACCCCCTCTCCACTAAAAATACAAAAATTAGCTGGGCGTAGTGGCATGTGCCTGTAATCCCAGCTACTCAGGAGGCTGAGGCAGGAGAATCACTTGAACCAGGAGGCAGATGTTGCTGTGAGCCAATATGGCACCACTGAACTCCAGCGACAGAGCTAAACTCCATCCCAAAAAAAAAAAAAAAAAAAAAAAAACATGGATGATCGGTGTCGTTGAGAGGATAGGTATTTGGAAGAACCTTTGTTTGAAACTGGCTCTGTACATACAATGAAATTACATACTTATTTACATACAATGAAATGCAGAGGTTTTTTTTTTATATAGGATCTCTGTCGAGAGGCTGGAGTGCAGTGGTGCTATCACAGCTCACTGCAGCCTCAACCTCGTCAGGCTCAAGCAATCCTCCCACCTCAGCCTCCAGAGTAGCAGGGACGATAGGTGTGCACCACCATGCCCAGCTAATTTTTGTATTTTTTTTTCTTTTTTTGAGATGGAGTCTTGCTCTGTTGCCCAGGCTGGAGTGCAGTGGCGCGATCTCAGCTCACTGCAAACTCTGCCTCCCGGGTTCATGCCATTCTTCTGCCTGAGCCTCCTGAATAGCTGGGACTACAAGCACCCACTACCACGCCCGGCTAATTTTTTGTATTTTTTTTTCTTTTTTAGTAGAGGCGGGATTTCACCGTGTTAGCCAGGATAGTCTTGATCTCCTGACCTTGTGATCCACCCGCCTGGGCCTCCCAAAGTGCTAGGATTACAGGCATAAGCCACTGCGTCCAGCCATTCTTGTATTTTTCTGTTGTAGAGATAGGGTTTTGCTATGTTGGCCATGCTGGTCTCAAACTCCTGACCTCAAGTGATCTACCCTCCCTTGGCCTCTCAAGGTGCTGGGATTACAGGCCTGAGCCATTGCACCCAGCCATGGTCTAAAAATCTTGATTGAAATACCACCTTTTCATTTCCAGACACCCCTATTTAAAATTACCACACCCCCAGCACACACTTTATCTTCTATTCCTGCTGCTTCTCCATAACACTGATTACTAGCTGACATTCTATGTAATGTATCCATTTTTTATCTCTAGTCCCACAGAATGTAAACTCCAGGATGGGATTTTTGTTTTGTTTACATACATCTGTATGTTCAGTAGTTAGAACGGTACTTGGGACCTAGTTGCCACTCAATAAACATTTGTCAAATAAATAATAAACTAAACTAAATTAGTTCTTTAATTTTTTTAAATATGGTGATGGTTAGTAGTGAGTAACATTCAAAAAATAAGTTGAAAAGTTGTACCATTGCCTCTTACCCACAATAAAAAAGGGTAAATTCTTTTCTGCTTTATGAAAGTTGTTTTTCATATTTGAAGTCAAGTTAATCAGATTAAGGAAAATGTATGTTGTGTTTTCAGAGCGATACAAGATTTATAAATAACCATCCTCTCCCTTGCCCTTCAACATTATAGCTAAACAAAAATAAGAGGAAAACAGGATTCACAATTTATCAATTTATTGAAAATCAGAGCCAGAGAAGCAGGAAATGACATTGTAGGAAAAAACTGCTTTTGAAAAAGCACAAAACTTACTCATGACAATCAGTGATCAGGAAAATCCTCAATAGTGTGGCATTTGGATACATTTATGTTTCATTTCCATGGGAGAGAGTCATAAAAATAGGATGTTCTTTCTCATTCTGGCAAATTAAACCATCAATTAAAAACTCAGATACATAAAAATTAAAGATGTAAGAATGAAAATGCTAAATTGTTATTTTCAATCAACTATTATGTTTTCTAGCTTTTCATTGCTTTTTTCTGTTTCCTGTTAAGATTAATTTCTTTTTTTTTTTTTTTTTTTTTTTTTGAGACAGACTTTGGCTCTTGTTGCCCAGGCTGGAGTGCAGTGGCACAATCTCGGCTCACTACAACCTCCACCTCCCGGGTTCAAGCAATTCTGCTGCCTCAGCCTCCGGAGTACCTGGGATTGCAGGCATGTGCCATCACACCAGCTAATTTTGTATTTTTAGTAGAGACAGGGTTTCTCCATATTGGTCAGGTTGGTCTCGAACTCCTGACCTCAGGTGATCCTCCTGCCTTGGCCTCCGAAAGTGCTGGGATTACAGGCGTGAGCCACCGCTCCCAGACTTTTTGTTTTGTTTTGTTTTGTTTTTTTGAGACACGGTCTCGCTCTGCTGCCTAGGCTGGAGTGCAGTGGCACGATCTTGGCTCACTGCCAGCTCCGACTCCCGGGTTCAGGCCATTCTCCTGCCTCAGCCTCCCGAGTAGCTGGGACTACAGGCGCCCACCACTATGCCCGGCTAATTTTTTGTATTTTTAGTAGAGACGGGGTTTCACCATGTTAGCCAAGATGGTCTCGATCTCCTGACCTTGTGATCCACCCGCCTCAGCCTTCCAAAGTGCTGGGATTACAGTCCTGAGCCACTGCGCCCGGCCTGGACCTTTTTTTTTCGGGGTGGGGGGTTGGAGTCTGGCTCTGTCGCCCAGGCTGGAGTGCAGTGGCGCCATCTTGGCTCACTGCAACCTCCGCCTGCCAGGTTCAAGTTCAAGCGCTTCTCCTGCCTCAGCCTCCTGAGTAGCTGGGATTATAGGCGCACGCCACCGTGGCCGGCTAATTTTGTATTTTTAGTAGAGATAGGGTTTCATCACGTTGGTCAGGCTGGTCTTGAAGTCCTGATCTCGTGATCCACCCGCCTCGGCCTTCCAAAGTGCTGGCGTGAGCCACTGCGCCTGGCTTAAGATTAATTTTTGTTTGTTTTGTTTTTGAGACGGAGTCTCGCTCTTTCACCCAGGCCGGAGTGCAGTGGCGCCATCTCGGCTCACTGCAAGCTCCGCCTCCCGGGTTCACGCCATTCTCCTGCCTCGGCCCCCCAAGTAGCTGGGACTACAGGCGTCCACCACCACGCCCGGCTAATTTTTTGTATTTTTAGTAGAGACGGGGTTTCACCGTGTTAGCCAGGATGGTCTCCACTTCCTGACCTCGTGATCCGCCCACCTCGGCCTCCCAAAGTGCTGGGATTACAGGCGTGAGCCACCGCGCCCGGCCTTAAGATTAATTTTTATGGTGTTTTACATTCATTTGTATGGAAAGTTCTAGGATAGGGATCATATTTCACTTCCTTTTAATATAGTACAGTATAGCACAATTTGCAGTTATGTCTTAATATGTGATCAGGAATGATCATGACTGGAAACAGTGTTATTTGTGGTAGCTATAGGGTAGGTAAGGTTTTCAGCCTGTTTTAGGTTTCTTGAACTAAAATTCCTTCTGCTGTCTTCTAAGTCAATATTGGCAGCTATTTCTGACAATTGGTAGTTCTTTGTAACTTTTTACCTATGACTATAACATTTTTGACTTTCAGAAGAATTTGCTAAAATGTGTTCCCCGGTGGGTTGTTGTTTTTCAACCTAAACCTAGCTGCTTTTTCCAGTCACTTATCCGTATTGGAAGCTCAAAATGCAAATATACAGTAGGCCTAAAATATTGCCTGGTTTGAAAAGTGTTTAAAATATTTGAATCATTTTTATAGTAAACATTTACTCTCATCAGGACCTAGAAGGGGAACATTTTAATTTTTTTTCTTTTCCCTTTTCACAGTCTTCCTTCAACATTCATTACCTTTTTACATATCGGAGTTTTCATCTGTTCAAAGTTTGTGTTTACAGTGTGTTTATATAGTTTAGATTATAATTACCATACTGAAATATAATTGTTTCAGAATTGAGTCAGTGGTGAGAATGAAAGCCATCTGGTATGATAACTGAATCCAATTTTTCTTTTACGGAGAATTTCTTTGAAATGTAGCTTATCTCAGAAATAGGGATTTAGTAACCAATCAGAGTTTTCTTTGTCAAGGTTGTTTTTCTTTTTAAAGTCACATTTGGTCCCAGTAATAATACCAATGTTGGTACAAGTTATCTCAGGTTGTGAAGCATTTTTCCCAAGTCATCTCAGGTTGTGAAGCATTTTCCCAAGTAGCATTTAATTTTATTCTTGCAATAGCCCAAGGAGTCTGGCAGGGTGAATGGCAAGAGAAGGAAACAGGTTCAGGTAGAGTGGTTAGCCCAAGGTGGCTCTGCTTATATACACAACTGGTAGTAGAAACCCAGCCTCCTGACTTAGTTCATTGTTTTTCTTTTCACTGCCCTGTGCTATGTCAAAAACCCCATGATTACAAGAGTTGTATTACAACCCTTCACAATAAGGTTACTGTCCACAAGCTTTTCTTGTGATCCTTTTCTTTTTTTTTTTTCTTTTTTTGAGATGGATTCTCTGTCACCCAGGCTGGCCCGCCTTGGCCTCCCAAAATGCTGGGATTACAGCGTGAGCCACCGCACCTGGCCCTTGTGATCCTTTTCTAAAAAGTTAAATATTTAAGGAAAAAACCACATTCTTGTCACACTGCCAGGTTAGTCGTTCTTTGATATCTTGCCTGGACTTTATCCAAAAAATCCGTTTCAAAAATTCACATTTAGAGCTAAGTGTAGTGGCTCACGCCTGTAATCCCGGTCGAGGCAGATGGATCACTTGAGGTCAGGACTTCAAGACCAGCCTGGGCAATATGGTGAAACCCCTTCCCTACCAAAAATACAAAAAAATTAGCCGGGTGTGGCAGCACGCGCCTGTAGTCCCAGCTACTTGGAATGCTGAGGCACAAGAATCACTTCAATCCGAGAGGCAGAGGTTGCAGTGAGCCAAGACCACACCACTGCACTCCAGCCTGAGCAGCAGAGTGAGTGAGACTCCATCTCCAAAAAAAAAAAAAAAGGTTCACATTCAGAAGAAAGCTAAAGGCCGGGTATAGTAGCTCACACCTGTAATCCCAGCACTTTGGGAAGCCGAAGCAGGAAGATTGCTTGATGCCAGGCATTCAAGACCAGCATGGGCATCATAGTGAGATCCTGTCTCTACAAAAATTAATTAACATTAAAAATTAAAAAGATGGCTGGCATGGTGGCTCACTCCTGTAATCCCAGTACTTTGGGAGGCCAAGGCATGGTGGTGCATGCCTTTAGTCCCAGCTACTCGGGAGGCTGAGGCAGGAGAATCACTTGAATTCAGGAGGCGGAGGTTACAGAGAGCCGAGATGGTGCCACTGCACTCCAGCCTGGGCGACAGAACGAGACTCTGTCTGAAAAAAAAAAAGAAAATTAAAAAGACCAGAATAAAGCTAAAGATTTAAAATAGCCTATAGGTTCCTACCAGAAGTTACCAGCTACCTCTCTGATAGTCTTTCCCTACAATATCCTCCTGGATTATTACATTTTAGCACCTTGACCTATCTGATGTCCTGCATACACAGGCATGGTCCTGCTCAGGGTTTGCCTTCTCTGCTCCCTCTTTCTTGGAATGCTCTTCCCCTAATTGTTGCATAGTGTGTTTCTTTACATTATTAAGCTATCCTCTAGTCTCACCTCAGTGAAACCTTTCCTGACTCCCCCCATGTACATCTCACCCCCACATAGATATTGAACTACCTGTTTCCCCTTACCCTGCTTAATTTTTCTCTTTAATGCACTTATTCCCATGTATTCTTTAATTCCGTATCAACTGTCTACCACACTAGAATATGAGCTCTATGAGAGCAGGCTTTATTTTGTAAACTGCTACATTTCTATCTCCTAGAATAGTACTTGAATATAGTAGTAGATACTTAATAAACACTTGTTATATTAGTATAATAAATGAACTAATCTCAGGAATGCCTTGGTTTTGTGGATAGACAGGTAGGGATGGGAACTTGGGTGATGTATTTTCTGAAGTTTTTATTTTTAAGCTTATTATTATTTTGAGATGGAGTCCAGCTCTGTCGCCCAGGTTGGAGTACAGTGGCGCGATCTTGGCTCACTGCAACGTGCACTTCCCCGGTTCAAGCGATTCTCCTGCCTTAGCCTCCCAAGTAGCTGGGATTACAGGCGCATGCCACCATGCCCAGTTAGTTTTGGTATTTTTAGTAGAGACAGCGTTTCACTGTGTTGGCCAGGCTGGTCTCGAAATCCTGACCTCATGATCCGCCCGCCTCGGCCTCCCAAGTGCTGGGATTACAAGCATGAGCCCCCGTGTCTGGCCTTATTTTCTTTTTTTTGAGACAGAGTCTTCCTCTGTCACCTAGGCTGGAGTGCAGTGGCACGATATTGGCTCACTCTGCAACCTCCACCTCCAGGATTCAAGTGATCCTTCTACCTTAGTCTCCAAAGTAGCTGAGACCACAGGCATGCCCCACCACGCCCGGCTAATTTCCGTATTTTAAGCGTAGACAGGGTTTCACCATATTGTCCAGGATGATCTGGAACTCCTGAGCTCAGGTGATCCACCCACCTCAGCCTCCCAAAGTGCTAGGATTACAGGCATGAGGCACCATGCCCGGCCTTAAGCTTATCATTTTCTAAATTTCCTTTAGTGAGTACTTATTACACTGTTTTTACAAAGTAATCACAAACCAAACATCATGCCTCTTCTGAAGTGATCTAATAAGAGTACACAGTACCATCTGTAAAGTGTTCTTGCCAGAAAGTTGAACCTGAATGATTAAGCCTGTAAGTCTAGTTTATAGGAAATAAGGCTAGAGGAACAAGTTAAACCTCACCATAGGGTTATACAATCAGCAAAATCCAGAATGGGGGAAACTCCACAGGTCAAATGACCTAATTTTAAAAATAAATGACAAGGGAGAAAAAGTAAGAGACACCTATAGATCAGAAGACACTTGGGGCTGGGCATGGTGGCTCACACCTGTAATCCCAGCACTTTGGGAGGCCAAGGCAGGCGGATCACCTGAGGTCAGGAGTTCAAGACCAGCCGGCCAACATGGTGAACCCCAACTCTACTAAAATTACGAAAAATCAGCCGGGCGTGGTGGCGCACGCGTGTAGTTCCAACTACCTGGGAGGCTGAGGCAGGAGAATCACTTGAACTTGGGAGGCAGAGGTTGCAGTGAGCCGAGATCGCACCATTGCATGCCAGTCTGGGCTACAAAAGCAAAACCCCATCTCAAAAAAAAGAAGACACTTGGGTTTGGGTGTGTTGGCTCATGCCTGTAAACCCCGTGCTGGGAGGATTGCTTGAGCCCAGGAGTTCAAGGCTGCAGTGAGGTATGTTTGCACCACTGCACTCCAGCCTAGGTGACAGAGTGTGACCTTATCTTAAAAGTAATAATAATTAAAATAATCTGGGGTAGGGGTGGATATGGGTGAAACAGCTTGGCCATGAGTTGATGGTTGTTGGACCAGGGTGATGGTCCATATAGTTCATTTTATTATTTTATTTACTTGAAATTTTGAAATACTTGAAATTTTCCATATTAAGTTAAAAAGGCATTTACAGTAAACAAAAAAAAGTTCTAGGAAGGAATTCAAAAGAAATATAAGCAGAAAATTTTGTCTTTATGGAGCTTAAAGATGAGATGTGCACCCACAGTGATAGTGCAGAAAAATATATCACTGGAAATGAATTCGTACGAACTATTATCAACTAATCTTTTAAATGCTGATGATAGTATAGAGTATTGAAGGGATCAATATAATTCTGTTTTGATATCTGAAAGCTCACTGAAGGTAAGGATCGTATTCTCTGCTGTATTCTCAGTTCCTGACACAGCAGACATTTAATAAATATTGAACGAACTTGAGGCCTTATGTTGACTCAGTCATAACAGCTCAAAGTTGAACTTATTCACTAAGAATAGCTTTATTTTTAAATAAATTATTGAGCCTCATTTATTTTCTTTTTCTCCCCCCCTACCCTGCTAGTCTGGAGTTGATCAAGGAACCTGTCTCCACAAAGTGTGACCACATATTTTGCAAGTAAGTTTGAATGTGTTATGTGGCTCCATTATTAGCTTTTGTTTTTGTCCTTCATAACCCAGGAAACACCTAACTTTATAGAAGCTTTACTTTCTTCAATTAAGTGAGAACGAAAAATCCAACTCCATTTCATTCTTTCTCAGAGAGTATATAGTTATCAAAAGTTGGTTGTAATCATAGTTCCTGGTAAAGTTTTGACATATATTATCTTTTTTTTTTTTTTTGAGACAAAGTCTCGCTCTGTCGCCCAGGCTGGAGTGCAGTGGCATGATCTTGGCTCACTGCAACCTCCGCCCCCCGAGTTCAAGCGATTCTTCTACCTCAGCCTCCCAGGTAGCTGGGACTACAGGCACCCGCCACCATGCTTGGCTAATTTTTGTACTTTTAGTAGAGATAAGGTTTCACCATATTGGCCAGGCTGGTCTCGAACTCCTGACCTTGTGATCCACCTGCCTCGGCCTCCCAAAGTTCTGGGATTACAGGCGTGAGCCACCACACCCGACTGACATATATTATCTATTAGGATGTAACATCATTTTGAACAGTGTTTTGTATTTTTTGTGTCCATCAGTGAAAGCAAACTGCAAGCAGTTTTGAAATAAGCACATTGTGTTTGAGCCTTCCCAGTTTCTCCTTTCTGTTCATTTCTGCATATCCTTATGCATTCCCCCTTCTAAGGGTCAGTGTTTGCCCGCTTTGTAATCATTGTGAAGACAGGAAAGGACCTGATACCAGTTTCTATTTAGGCCAAAATTCATTTATAGCAGTGATTCAAGTTATATTTACGTATTTGATGATCTTGTCTTTTGAAATGAAAATGTTTGTTTCTTAATAAAAGAATTTCAGAAAAAGTAGAGTAGGTAATTTAGTAGAACAAGTGGGCTTTCTCCTTTTCTTTATGTTAAGCTATGGCTCACATCTTACCTTAAATGTCAACTAATTTGTTTTTAAGTATTTATGTACCTGGTACATAACCTGGTACCAGGTACAAACTATGTACTTGGTAAAAAGTTTATTAGCACAAAAAGGTATATGATGCAAAGTATACTTCCCTCTTACCCTACAACCCCTGCCTCCCTGTTCCCTCCCCAGACAACCACAATGATCAATTTCTTATGTATCCTTTGAGGAATTTTTAAATTCCAGAGTTCTTAACTTGGGGTTTATGAATAGTCTTTATGAATTTCCTAGAATTATATTTAAATTGTATTCAAAACTATGGCCATGTACATTTTTCTGGGAAGATAGTCCATAATTTTCATCTGAGTGAGCTAAGATCATGCCACTGCACTCCAGCCTGGGAGACAAGAGGGAGACTCAAAAAAAAAAAAGAAAGGCCCAGTATTTACTACAGAGAGCTAAAGATTAACCTTTAAAGCCCTGGGGCTTTCAATTTATCTGGATGAGAATCTTTCTGGAATGAACTGTATGTTTTATGGTCAGCTTGAGTAACAAATGCTGAGCATACTATACTATTATTACAGGGACTCAGGGGCCCAGTGTGGTAGCTCCTGCCCATAACCCCAGCACTTTGGGAGGCCAAGGCAGGAGGATCACTTAAGGCCAGGAGTTCGAAGCTGTAGTGAGCTATGATCACACCACTGCACTCCAGCCTAGATGACAGAGTGAGACCCTGTCTTTTTTTTTTTTTGAGATGGTGTTTCACTCTATTGCCCAGGCTGGAGTGCAGTGGTGTGATCTCGGCTCACTGCAACCTCCACCTCCTGGGTTCAAGCGATTCTCCTGCCTCAGCCTCTTGAGTAGCTGGGATTACAGGCATCTGCCACCACACCCAGCTAATTTTTGTATTTTTAGTCGAGACAGGGTTTTCACCATGTTGGCCAGGCTGCTCTCAAACTCCTGACTTCAGCTACCTTGGCCTTAAAAAGTGTTGGGATTACAGGTGTAAGCCACCGCGCCTGGCTGACCCTGTCTCTTAACAAAAAAAGAGAGATTAAGTTATGAATATAGTTGCTTTGAGAACTTGTGGAAGAAGGAAATTATAGGCTTATAGGCAGAGATAATAATACGAGCAAATGTACAAATAAAAGAAAATAGAGGACGGGCGCGGTGGCTCACGCCTATAATACCAGCACTTTGGGAGGTCGAGGTGGGCGGATCACGAGGTCAGGAAATTAAGACCATCCTGGCCAAAATGGCGAAACACTGTCTCTACTAAAACACACAAAAAACTAGCCTGGCATGGTGGCACGTACCTGTAGTCCCAGCTACTTGGTAGGCTGCGGCAGGGGTATCACTTGAACCTGGGAGGCAGAGGTTGCCCTGAGCCGAGATCATGCCAATGCACTCCAGCCTGACAACAGAGTGAGACTCTGTCTGAAAAAAAAGAAAAGAAAAGAAAATACATCCAGGAAAAATAAGCTAACTTTGCATATGTGTATAGGAGTTGTGTTAGAAAAGGAAGAAGCCCTCAAAGATGGGAAGCCATTTGCAAGAAAGAGAAGGTCCAAGAGGAGGCAGAAGGGATTGGAAATAGAAAAAGGATGTAAGAAAGAGTTGATTATTACTCATAAACAGTAATGAAGGAAAAGGAGAGTAATTCTACAGGAAGATGCTGAGGTGCTTTGAGCCCAGTGAAGTTGGAGGTAAAGACAGCTGTTGAGGCCGGGCACGGTGGCTCACGCCTCTAATCCTAGCACTTTTGGAGCCCAAGGCAGGTGGATCACCTGAGGTCAGGAGCTCAAGACCAGCCTGACCAACATAGAGAAACCCCATCTCTACTAAAAATACAAAATTAGACGGGCGTGGAGGCGCATGCCTGTAATCCCAGCTACTTGGGAGGCTGAGGCAGGAGAATCACTTGAACCTGGGAGGCGGAGGTTGCAGTGAGCCGAGATTGCGCCATTGCACTCCAGCCTGGCCGACAAGAGTGAAAACTGTCTCAAAAAAAAAAAACAACAAAAAACAGCTGTTGAGATTGAGAGGATTAGAGTTGGCAACTGGAGAAGAGTGAGAAGCTTGGTTTCAAGCTTGTGATAGTCAGGATTGTGATAGTCAGGAAAGAACCAGTCATAAAGATATATGTGTGTGTATACATATAAATATGTTATATATATGTGTGTGTGTGACACATATATATTTTTGTTTGTTTCTTTGAGACAGTGTCTCCCTCTGACACCCAGGCTGGAGTTCAGTGGTGTGATCATAGTTCACTTTTACCTTGCAATCTGGGTTCAAGCAATCTCTCATCTCAGCCCCTCAAGTAGCTAGGACTACAGGTACATGGCATTTGCCCAGCTAATTTTTAAGTTTCTTGTAGAGATGGGCCAGCCATATTTTAAATTGTGTTTTGAATGTTATATTAGAATTAAAAGTCCAAAGCCGGGTGTGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCTGAGGTGGGCGGATCACGAGGTCAGGAGTTCGAGACCAGCCTGGCCAATATGGTAACACCATCTCTACTAAAAATACAAAAATTAGCTGGGTATGGGGGCACATGCCTGTAGTCCCAGCTACTCAGGAGGCTGAGGCAGAGGAACCTCTTGAACCCAGGAGGCAGAGGCTGCAGTGAGTTGAGATCGTGCCACTGTACTCTAGCCTGGGCGACAGAGCAAGATTCCGTCTCAAAAAAAAAAAAAGTCCAGTATAATGCCCATGTGATAGATCGACTTTTTCATGAAATCTCTTCTGTAATATCAATATAATCTGAATAACACTTTGATCTATATGATGAGAAAGCTGGGAGCCTGGGAGCGATACCCCCATGCTTTTGTTGTATTAATTGTATTTTCTACGGATAAACTCTAATTGCTAAAAATAAAACAACTTTATTGACCCAAGCAAGCCTAAAGTTCTGAAATCTTTTTTTTATTTTTGTTTGTTTGTTTGTTTGTTTTTGTTTGTTTTGTTTTGAGACGGAGTCTCGCTCTGTCGCCCAGGCTGGAGTGCGGTGGTGCAGTCTCGGCTCACTGCAAGCTCCACCTCCCGGGTTCACACCATTCTCCTGCCTCAGCCTCCCAAGTAGCTGGGACTACAGACGCCTGCCACCACGCCCAGCTAATTTTTTTGTATTTTTAGTAGAGAAAGGGTTTCACCGTGTTAGCCAGGATGGTCTCGATCTCCTGACCTCGTGATCTGCCCGCCTTGGCCTCCCTAAGTTCTGGGATTACAAGTGTGAGCCACCACGCCCGGCTGTTTTTTTTTGTTTTGTTTTGAGACGGAGTCTCACTGTGTTGCCCAGACTGGAGTGCAGTGGCATGATCTCAGCTCACTGCCACCTCCATCTCCTGGGTTCAAGCAAATCTCCTGCCTCAGCCTCCCGAGTAGCTGGGACTACAGGCATGTGCCACCACACCTGGCTAATTTTTGTATTTTTAGTAGAGACGGGGTTTCACTATGTTGGCCAGGCTGGTCCAAAACTCCTGACCTCAGGTGATCTGCTCGCCTTGGCCTCCCACAGTGCCAGGATTACAGGCATGAGCCACCTTGCCCAGCCAGTTCTGAAATCTTTTATGAAGCCTATAAAAAAAGATAATAATACCAATCTAGAAAATATTTCTTAAGGCAGTCATGCATTAGTTTGAACTTTCCAAACAAAAAAATGCAATGTGTAATACTTTTTTTTTTTTTTTTGAGATGGAGTCTTGTTCTGTTGCCCAGGCTGGAGTGCAGTGGTACAATCTCGGCTCACTGCAGCCTCTGCCTCTCTGGTTCAAGTGATTCTCCTGCCTCAGCCTCCCAAGTAGCTGGGATTACAGGCGTGCACCACCATGCATGGCTAATTTTTGTATTTTTAGTAGAGACAGGGTTTCACCATGTTGACAAGGCTGATCTCGAACTCCTGACCTCAGGTGATCCGCCCACCTCAGCCTCCCAAAGTGCTGAGATTACAGGCATTAGCCACCACGCCCAGCCTTTTATTTTAGTAGAGACCATGTTTCACCATGTTGACCAAGCTGGTCTTGAGCTGACCTCAAGTGATCCGCCCACCTCCACCTCCCAAAATGGTGGGATTATAGGCATGAGCCACCGCACCCAGCCTGTAATACTTTTTTGAAGATCTAGAACCACATTGTTCAAAGAGATAGAATGTGAGCAATAAATGTAACTTAAATTTTTCAACAGCTACTTTTTTTTTTTTTTTTTGAGACAGGGTCTTACTCTGTTGTCCCAGCTGGAGTACAGTGGTGCGATCATGAGGCTTACTGTTGCCTTGACCTCCTAGGCTCAAGCGATCCTATCACCTCAGTCTCCCAAGTAGCTGGGACTGTAAGTGCACACCACCATATCCAGCTAAATTTTGTGTTTTCTGTAGAGACGGGGTTTCGCCATGTTTCCCAGGCTGGTCTTGAACTTTGGGCTTAACCCGTCTGCCCACCTAGGCATCCCAAAGTGCTAGGATTACAGGTGTGAGTCATCATGCCTGGCCAGTATTTTAGTTAGCTCTGTCTTTTCAAGTCATATACAAGTTCATTTTCTTTTAAGTTTAGTTAACAACCTTTATACATGTATTCTTTTTCTAGCATAAAGAAAGATTCGAGGCCGGGTGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCTGAGATGGGCACATCACGAGGTCAGGAGATCGAGACCATCCTGGCTAACATGGTGAAACCCCGCCTCTACTAAAATTACAAAAAGTTAGCCAGGCGTGGTAGCGGGCACCTGTAGTCCCAGCTACTCAGGAGGCTGAGGCAGGAGAATGGCGTGAACCCAGGAGGCAGAGCTTGCAGTGAGCAGAGATTGTGCCACTGCACTCCAGCCTGAGAGACAGAGCGAGACTCCGTCTAAAAAAAAAAAAAAAGATTCGAATCCTTATCTTGGTTGATTTTTGCGTATCTAGTTCCACTGAATTATTTATATAATTGTATAGACTACAGCACGAGACAGCTTAGCTTGTCACTCTACTGTACTATATTCTGCAGTACTATCATAAGGGAATTTCCTCCCTACCCCTGCTCTGAATTGTTCAATTGTACTATTTGCTGGAGTAATGCTTGATGCCTTCTTGATCCATTATACTAGAGTATATGTAGTATTTGTAGATTCTGAAGGAGTGGGAGCCTCTATTCTGAGTTTTAAAGGTACTTATGTACAGTGGAGGTAGCTTTTTGACAGCCTCATCTTCCAAACTATAGAGTCATTGTTTTGTTGAGTGCAATATGGTACTTGAAGCATCTATATCGGCGAAGAAGGACCCAAGTCTCCTTGACCTTACCTACCTACATTCACTTTCTCTGGTAGGAAGATTGTGGGTGCCTCTCTCCAGACTTAGTTTCCATGTCAAAAAAGAAAAAAGGAAGATTGTGGGCTTTGCTACAATCCAATTCTGGATCCAATATAACCTTCATTGCTTAATTACTGTGTGATCTGGGACAAGCCTCTACTCTATAAAAATGAAGATAAGGCCAGGCTTGATGGCTCATGCCTGTAATCCCAGCACGTTGGGATGCCAAGGCAGGAGGATCACTTGAGGTCAGGAGTTCGAGACCAGACTGGGCAATATAGTGAAACCACATCTGTACAAAAATAAAGATAGAAAGTAGCCCAGCGCAATGGCTCACACCTGTAATCCCAGCACTTTGGGAGGCTGAAGCAGGCGATCACTTGAGGTCGGGAGTTCAAGACTGTAGACAGATAGATAGGTAGGTAGATAGATAGAGATATAGATATAGTTGGGGTTTTTTTGTTTTGTTTTGTTTTGTTTTTGAGATGGAGTTTCGCTCTTGTTGCCCAGGCTGGAGTGCAATGGCGCGATCTCAGTTTACTGCAACCTCCGCCTCCCGGGTTCAAGAGATTCTCCTGCCTCAGCCTCCTGAGTAGCCAGGATTACAGGCATATGCCACCATGCCCGGCTAATTTTTGTATTTTTAGTAGAGACAGGGTTTCTCCGTGTTGGTCAGGCTGGTCTTGAACTCCTGACCTCTCCCAAAGTGTTGGGATTACAGGCGTGAGCCACCGCTCCTGGCCTTTTTTTTTTTTTTTTTTTTTTTTTTGAGACAGAGTCTTCCTCTGTTGCCCAGGGTGGAGTGCAGTGGCACTCTTCTCAGCTCATTGCAACCTCTGCCATCCTGGGTTCCAGTGATTCTCATGCCTCAGCCTCCCAAGTAGCTGGGACTCAGGCGTGTGCCCACCACGCCTGGCTAATTTTGTTGTATTTTTAGTAGAGACAGGGTTTCACCATGTTAGCCAGGCTGGTCTCAAACTCCAGGCCTCAAGTGATCTGCCTGCCTCAGCCTCCTGGGATTGCAGACATGAGCCACTGCACCCGGCCAAGAGAGGGTAATAAATGTTAAATTACCTGGCTAGTAAAAAATATTCTCTAAGTGTCTTTTCTCACAATTCCCAATGCCTTTTTTTTTTTTTTGGCACAATCTCACTCTGTTGCCCAGGCTGGAATGCAATGGTGCAATATTGGCTCACTGTAACCCCCGCCTCACAGGTTCAACTTATTCTCATGCCTCAGCCTCCCGAGTAACTGGGACTACAGTGCACCACCACCACACCCAGCTAATTTTTGAATATTTAGTAGAGACAGGGTTTCACCATGTTGGCCAGGCTGGTCTTGAACTCCTGGCCTCAAGTGATTCACCCACCCCGCAAGTGCTGGGATTACAGGTGTGGACCACCGTGCACAGCCCTAGTGACTTTTTTTTTAGCCCCTTAATCTTTTCTTTCCTGGGTCTCTTCATTGTCAGTGTCTGCTATTTACTCCCTACCTAGTCACCCCCTTCACCAGTATATTATGTCCTTTATGTTTTATTTTGCAGGATCTTATTTTGCTTTTCTATTGAATCCCCTCCATCTAGAATAGTACTAGACATAGTAAATATTGGTTGTATGAGTGAATCGCTGCTTTTAATTATCATCACCATTGCTCTCTCTACTTCTGGTCTATGATCCACTTTGAGTTAACTTTTGTTATTTGGTGTGAGATAGGAGTATAATTTCATTCTTTTACATGTGGTTATACTTTTGTCTCAACACTGTTTGTTAAAAACACAAAAAGTATTATTTTCCCATTTAATCATCTTTGGCCTGGGCACGGTGGCTCATGCCTGTAATCCCAGCACTCTGGAAGGCCAAGGCAGATGGATCAATTTGAGGCCAGGAGTTCAAGACTAGCCAACATGGTGAAACTAAAAATACAAAAAATTAGCTGGGTATGGTGGTGCATGTCTGTAATCCCAGCTACTCGGGAGGCTGAGGCACGAGAATTGCTTGAGCCTAGGAGGTGGAGGTTGTAGTGAGCTGAGATTGTGTCACTACCCTCCAGCCTGGGTGATAGAGTGAGTCTGTCTCAAAAAAAAAAAAAAAAAATTAAGAAAATAAAAATCGTCGGCCAGGCATGGTGGCTCACACCTGTAATCCCAGCACTTTGGGAGGCAGAGGCGGGCAGATCACGAGGTCAGGAGATGGAGACCATCCTGGCTAACATGGTGAAACCCCGTCTCTACTAAAAATAAAAAAATTAGCCGGGCATGGTGCTGGGCGCCTGTAGTCCCAGCTGCTCGGGAGGCTGAGGCAGGAGAATGGCGTGAACCCAGGAGGTGGAGCTTGCAGTGAGCCGAGATCGTGCCACTGCACTCCAGCCTGGGAGACAGAGCGAGACTCCGTCTCAAAAAAAAAAAAAAAAAAAATTGTCTTGGTATTTATTATTGTTGAAAATCGCTTGATCACAGATGTATGTATGAGTTTATTTCTGTACTGTCAATTCCATTTTATTGATGTATGTGTCTATTCTTATGCTATTACCACACTTTCTTGATTACTATAGCTTTGTGGTGAGGTGTTGAGATTTTAAACTAATTATAAGCATCTTACATGAACTACTTACCGTTTATATTTGATTATGCAGCATGAAATAATTATGAATATATCATTAAATATGCCATATTAACTTTTATTAAGTTTTATGTGATCATAACAGTAAGCCATATGCATGTAAGTTCAGTTTTCATAGATCATTGCTTATGTAGTTTAGGTTTTTGCTTATGCAGCATCCAAAAACAATTAGGAAACTATTGCTTGTAATTCACCTGCCATTACTTTTTAAATGGCTCTTAAGGGCAGTTGTGAGATTATCTTTTCATGGCTATTTGCCTTTTGAGTATTCTTTCTACAAAAGGAAGTAAATTAAATTGTTCTTTCTTTCTTTATAATTTATAGATTTTGCATGCTGAAACTTCTCAACCAGAAGAAAGGGCCTTCACAGTGTCCTTTATGTAAGAATGATATAACCAAAAGGTATATAATTTGGTAATGATGCTAGGTTGGAAGCAACCACAGTAGGAAAAAGTAGAAATTATTTAATAACATAGCGTTCCTATAAAACCATTCATCAGAAAAATTTATAAAAGAGTTTTTAGCACACAGTAAATTATTTCCAAAGTTATTTTCCTGAAAGTTTTATGGGACATCTGCCTTATACAGGTATTAGAAACTTACTGCCTTTCTCTAATGCTTCTAGTGTAAAAACTTGCAGACTTATGTAAAGTAGGGCTGTATCGCCGTGCCCCCATTGTCTGTTAATCTTGTTTTTATATTTTTGATTGTGTTTCCTTTTCTTTTTTTTTTTTTTTTTAAGACAGGGTCCTGCTCTGTCACTGAGGCTGGAGTGCAGTGGCGTGATCTCGGCTCACTGTAGCCTCTGTCTCCCAGCCTCTTCCTGCCTTAGCCTCCCAAATAGCTGGGACTACAGGCACACGCTACCATGCCCGGCCAATTTTTGTATTTTTTGTAGAGATGAGGTTTTACCATGTTGCCCAGGCTGGTAACTCCTGAGCTCAGGTGATCTGCCCACCTCGGCCTCCCAAAGTGCTGGGGTTCACAGGTGTGTGTTTATTTCTATCTAATTATTTACACAAACACAATGTATTTATATATTGTGTATCTCTTCTGCTACAATGTAAATTCTATGAGAGTAGTAATTTTGTCTGTCTCAACACTGTTTTTCCTAAGTTTGGTACATAGTAGGCACTCAGATGCTTAAAGGAATGAATGAATTGTGCTTTAATTCCACTTTACTAAACCCAAATCTCCCTTTGGACATTGTTATCTATGTGTTTTCAAAGAAGTATAATCATAATTTGACAGAAATCCTTGAGAGGCAGAACTAAGTGAGGGATTGGGCAGGGTTCAGATGTTAAGAACAGTAAGCTCAGCAGGGTGTGATTGCTCATGCCTATAACCCTAGCACTCTAGGAGGCTGAGGTGGGATGATTGCTTGAGGCCAGGAGTTTGAAATCAGCCTGGGCAACATAGTGAGACCCCATCACTACCAACAAAATAAATAAATAAATGTACATGGTGGCATATGCCCATAGTCCTAGCTACTTGGGAGGCTATAGTGGGAGGATAGCTTGAGTACAGAAGTCTGAGGCTGCAGTGAGCTATGATTGTGGCACTGCATGCTAGCCTGGGCAATAGAGCAAGACCCTGTCTCTAAATTAAACAAAAAAAAAAGTACTCTAGTTTTCTATGCAATGCATTATATCTGCTGTGGATTTAGGGCAGTATTATATCAGATAATTTTAGGCATTTGGTAGGCTTAAATGAATGACAAAAAGTTACTAAATCACTGCCATCACACGGTTTATACAGATGTCAATGATGTATTGATTATAGAGGTTTTCTACTGTTGCTGCATCTTATTTTTATTTGTTTACATGTCTTTTCTTATTTTAGTGTCCTTAAAAGGTTGATAATCACTTGCTGAGTGTGTTTCTCAAACAATTTAATTTCAGGAGCCTACAAGAAAGTACGAGATTTAGTCAACTTGTTGAAGAGCTATTGAAAATCATTTGTGCTTTTCAGCTTGACACAGGTTTGGAGTGTAAGTGTTGAATATCCCAAGAATGCAACTCAAGTGCTGTCCATGAAAACTCAGGAAGTTTGCACAATTACTTTCTATGACGTGGTGATAAGACCTTTTAGTCTAGGTTAATTTTAGTTCTGTATCTGTAATCTATTTTTAAAAAATTACTCCCACTGGTCTCACACCTTATTTTATCAATCGTAAGGTGCACATTTTTCACATCTTAACATCTCTGAAATTGGGAACATTTTACTATTGAGGGTGTGTCATTTGTTTAATTTGTGTGCTTTCTTTCTTAGTGATACACGAAATAATAGTGCCACTTACATTGTTGGTGTCTTAGCTTTAGTGAAATACAGTATTGATAGGCAAATTTCTTAGTGTTAAGGTAGAAAACAAGGACTCTAAATAACTTTGATGGTCTGTGTATTTGTTTTTGTTTCCTAGGAGTAAAATTTCCAGTTGATTTTTTAAAATTTGATTTTTAAAAAAAATCACAGGTAACCTTAATGCATTGTCTTAACACAACAAAGAGCATACATAGGGTTTCTCTTGGTTTCTTTGATTATAATTCATACATTTTTCTCTAACTGCAAACATAATGTTTTCCCTTGTATTTTACAGATGCAAACAGCTATAATTTTGCAAAAAAGGAAAATAACTCTCCTGAACATCTAAAAGATGAAGTTTCTATCATCCAAAGTATGGGCTACAGAAACCGTGCCAAAAGACTTCTACAGAGTGAACCCGAAAATCCTTCCTTGGTAAAACCATTTGTTTTCTTCTTCTTCTTCTTCTTCTTTTCTTTTTTTTTTCTTTTTTTTTTTTGAGATGGAGTCTTGCTCTGTGGCCCAGGCTAGAAGCAGTCCTCCTGCCTTAGCCCCCTTAGTAGCTGGGATTACAGGCACGCGCCACCATGCCAGGCTAATTTTTGTATTTTTAGTAGAGACGGGGTTTCATCATGTTGGCCAGGCTGGTCTCGAACTCCTAACCTCAGGTGATCCACCCACCTCGGCTCCCCAAATTGCTGGGATTACAGGTGTGAGCCACTGTGCCCGGCCGGTAAAACCATTTTCATTTATTCTGGCAACATCTCTTTATTGAGCATTGTGAATATGTTAGTGAATGTGCTAGATGCTCATAGATTTATATAAAAAGTTAGTGAAGAAGGAAAGATGGTATATTAAGTGGTTAGACAAGTGTTCTAATCAGTTAGAGTTCAGAGAAGGTCAGGGTACCTGATATAATCAAGAGAGAGACCTTACAGCCAGGTGAGGTGAATGTACCTATAATCCCAGCTACTTAGGAGGCTGAAATGGGAGGATCACTTGAGTCCAGGTTTGAGACCAGCCCAGGCAACATAGCAAGATCCCCATCAGATACACCAAAAAGACAGATTTCTTTTTTTTTTTTTTTTTTGAGACAGAGTCTCGCTCTGTCGCCCAGGCTGGAGCGCAGTGACACGATGTCAGCTCACTGCAACCTCCGCCTCCCAGGTTCAAGTGATTCTCCTGCCTCAGCCTCCTGAGTAGTTGGGACTACAGGGGTACGACACCAGACCTGGCTAATTTTTGTAATTTTAGTAGAGTCGGGGTTTCACCATATTGGTCAGGCTGGTCTCGAACTCCTGACCTCAGGTGATCCACCCTCCTTGGCCTCCCAGAGTGCTGGGATTACAGGCGTGAGCCACCAAGCCCGGCCAAAAAAGAGAGCTCTTATAGGCCCTTCCTTGCTTTGGAGCTTTATCTGCTCTGTGATGCTTATCTAAAATAGCCATAAGGTCACTGATATTTTTAAGCATTTGGAAATTACTTCAGCTGGGTGCCATGGCTCATGCCTATAATCCCAACCCTTTGGGAGGCTGAGGTAGGAGGTCCTTTGAGCCCAGCTTGGGCAACACAGTGAGACACTGTCTCTGCAATTAAAAAAAAAAAAAAAGTAGCTGGGTGCCGTGGCTCACGCCTGTAATTCCAGCACTAGGAGGCTTGAGGATTGCCTGAGCTCAGGAGTTCAAGACCAGTTTGGGCAACATAGCAAGTCCTTGTCTATATTAAAAGTTTTTTTAAATTATCTGGGCATGGTGGTGTGTGCCTGTAGTCCCAGCTACTTGGGAAGCTGAGACAGAAGGATCACTTGAGTCCAGGAGATGTAGACTACAGTGAGCTATGATCACTCCACTGCACTTCAGCGTGGGCGGCAAAGCAAGATCTAGTTGCAAAAAAAAAAAGAACTGGCTGGGTGCGGCGGCTAACACCTGCAATCCCAGCACCTTGGGAGGCTGAGGCCAGTGGATCATGAGGTCAGGAGATTGAGACCACCCTGGCCAACATGGTGAAACCCGGTCTCTACTAAAAATACAAAAATTAGCTGGGTGTGGTGGCACGTGCCTGTAATCCCAGCTACTCCAGAGGCTGAGGATGGAGAATCACTTGAACCTGAGAGTCGGAGGTTGCAGTGAGCCGAGATTGCGCCACTGCACTCCAGCCTGGCGACAGAGCGAGACTCCGTCTCAAAAAAAAAAAAAAAAAAGCTTCACGCCTGTAATCCCAGCACTTTGGGAGGCCGAGTCAAGTGGATCACGAGGTGTGGAGATCAAGACTATCCTGGCTCACATGGTGAAAGCCCGTCTCTACTAAAAACACAGAAAAATTAGCTGAGCGTGATGGCGGACTCCTGTAGTCCCAGCTACTCGGGAGGCTGAGGCAGGAGAATAGCATGAACCCGGGAGGTGGAGCTTGCAGTGAGCCGAGATCCCGCCACTGCGATCCAGCCTGGGCGACAGAGTGAGACTCTGTCTCAAAAAAAAAACAAAAAAACTTAGCTGGGCGTGGTGGTATGCACCTGTGGTCCTAGCTACTTGGGAGGCTGAGGCTGGAGCATTGCTTTAACATAGAGAGTCAAGGCTGCAGTTGAGCTATGACTGTGCCACTGGACTCCAGCGCAGGTGACTGAGACCCTATCTTTTAAAAAAAGGGAAAATTACTTGAACTTAAAAGGTGTAATTGTTAAAGAAAATGTAGTGATTTGCTCTGTTGTTACTTATATGTGCATGAATGATGGAGATCTTAAAAAGTAATCATTCTGGGGCTGGGCGTAGTAGCTTGCACCTGTAATCCCAGCACTTCGGGAGGCTGAGGCAGGCAGATAATTTGAGGTCAGGAGTTTGAGACCAGCCTGGCCAACATGGTGAAACCCATCTCTACTAAAAATACAAAAATTAGCTGGGTGTGGTGGCACGTACCTGTAATCCCAGCTACTCGGGAGGCGGAGGCACAAGAATTGCTTGAACCTAGGACGCGGAGGTTGCAGCGAGCCAAGATCGCGCCACTGCACTCCAGCCTGGGCCGTAGAGTGAGACTCTGTCTCAAAAAAGAAAAAAAAGTAATTGTTCTAGCTGGGCGCAGTGGCTCTTGCCTGTAATCCCAGCACTTTGGGAGGCCAAGGCGGGTGGATCTCGAGTCCTAGAGTTCAAGACCAGCCTAGGCAATGTGGTGAAACCCCATCGCTACAAAAAATACAAAAATTAGCCAGGCATGGTGGCGTGCGCATGTAGTCCCAGCTCCTTGGGAGGCTGAGGTGGGAGGATCACTTGAACCCAGGAGACAGAGGTTGCAGTGAACCGAGATCACGCCACCACGCTCCAGCCTGGGCAACAGAACAAGACTCTGTCTAAAAAAATACAAATAAAATAAAAGTAGTTCTCACAGTACCAGCATTCATTTTTCAAAAGATATAGAGCTAAAAAGGAAGGAAAAAAAAAGTAATGTTGGGCTTTTAAATACTCGTTCCTATACTAAATGTTCTTAGGAGTGCTGGGGTTTTATTGTCATCATTTATCCTTTTTAAAAATGTTATTGGCCAGGCACGGTGGCTCATGGCTGTAATCCCAGCACTTTGGGAGGCCGAGGCAGGCAGATCACCTGAGGTCAGGAGTGTGAGACCAGCCTGGCCAACATGGCGAAACCTGTCTCTACTAAAAATACAAAAATTAACTAGGCGTGGTGGTGTACGCCTGTAGTCCCAGCTACTCGGGAGGCTGAGGCAGGAGAATCAACTGAACCAGGGAGGTGGAGGTTGCAGTGTGCCGAGATCACGCCACTGCACTCTAGCCTGGCAACAGAGCAAGATTCTGTCTCAAAAAAAAAAAACATATATACACATATATCCCAAAGTGCTGGGATTACATATATATATATATATATATATCATATCTATATATATATATATGTAATATATATGTTATATATATATTACATATATATATGTTATATATATGTTATATATATATAATATATATATGTTATATATATGTTATATATATATATACACACACACACACATATATATGTATATATATATACACACACACACACATATTAGCCAGGCATAGTTGCACACGCTTGTAGACCCAGCTACTCAGGAGGCTGAGGCAGGAGAATCTCTTGAACTTAGGAGGCGGAGGTTGCAGTGAGCTGAGATTGCGCCACTGCACTCCAGCCTGGGTGACAGAGCAGGACTCTGTACACCCCCCAAAACAAAAAAAAAAGTTATCAGATGTGATTGGAATGTATATCAAGTATCAGCTTCAAAATATGCTATATTAATACTTCAAAAATTACACAAATAATACATAATCAGGTTTGAAAAATTTAAGACAACAGAAAAAAAAATTCAAATCACACATATCCCACACATTTTATTATTACTACTACTATTATTTTGTAGAGACTGGGTCTCACTCTGTTGCTTATGCTGGTCTTGAACTCCTGGCCTCAAGCAGTCCTGCTCCAGCCTCCCAAAGTGCTGGGATTATAGGCATGAGCTACCGCTCCCAGCCCCAGACATTTTAGTGTGTAAATTCCTGGGCATTTTTTCCAGGCATCATACATGTTAGCTGACTGATGATGGTCAATTTATTTTGTCCATGGTGTCAAGTTTCTCTTCAGGAGGAAAAGCACAGAACTGGCCAATAATTGCTTGACTGTTCTTTACCATACTGTTTAGCAGGAAACCAGTCTCAGTGTCCAACTCTCTAACCTTGGAACTGTGAGAACTCTGAGGACAAAGCAGCGGATACAACCTCAAAAGACGTCTGTCTACATTGAATTGGGTAAGGGTCTCAGGTTTTTTAAGTATTTAATAATAATTGCTGGATTCCTTATCTTATAGTTTTGCCAAAAATCTTGGTCATAATTTGTATTTGTGGTAGGCAGCTTTGGGAAGTGAATTTTATGAGCCCTATGGTGAGTTATAAAAAATGTAAAAGACGCAGTTCCCACCTTGAAGAATCTTACTTTAAAAAGGGAGCAAAAGAGGCCAGGCATGGTGGCTCACACCTGTAATCCCAGCACTTTGGGAGGCCAAAGTGGGTGGATCACCTGAGGTCGGGAGTTCGAGACCAGCCTAGCCAACATGGAGAAACTCTGTCTGTACCAAAAAATAAAAAATTAGCCAGGTGTGGTGGCACATAACTGTAATCCCAGCTACTCGGGAGGCTGAGGCAGGAGAATCACTTGAACCCGGGAGGTGGAGGTTGCGGTGAACCGAGATCGCACCATTGCACTCCAGCCTGGGCAAAAATAGCGAAACTCCATCTAAAAAAAAAAAAGAGAGCAAAAGAAAGAATATCTGGTTTTAAATATGTGTAAATATGTTTTGGAAAGATGGAGAGTAGCAATAAGGAAAAACATGATGGATTGCTACAGTATTTAGTTCCAAGATAAATTGTACTAGATGAGGAAGCCTTTTAAGAAGAGCTGAATTGCCAGGCGCAGTGCTCACGCCTGTAATCCCAGCACTTTGGAAGGCCGAGGTGGGCGGATCACCTGAGGTCGGGAGTTCAAGACCAGCCTGACCAACATGGAGAAACCCCATCTCTACTAAAAAAAAAAAAAAAAAAATTAGCCGGGGTGGTGGCTTATGCCTGAAATCCCAGCTACTCAGGAGGCTGAGGCAGGAGAATCGCTTGAACCCAGGAAGCAGAGGTTGCAGTGAGCCAAGATCGCACCATTGCACTCCAGCCTAGGCAACAAGAGTGAAACTCCATCTCAAAAAAAAAAAAAAAGAGCTGAATCTTGGCTGGGCAGGATGGCTCGTGCCTGTAATCCTAACGCTTTGGAAGACCGAGGCAGAAGGATTGGTTGAGTCCACGAGTTTAAGACCAGCCTGGCCAACATAGGGGAACCCTGTCTCTATTTTTAAAATAATAATACATTTTTGGCCGGTGCGGTGGCTCATGCCTGTAATCCCAATACTTTGGGAGGCTGAGGCAGGTAGATCACCTGAGGTCAGAGTTCGAGACCAGCCTGGATAACCTGGTGAAACCCCTCTTTACTAAAAATACAAAAAAAAAAAAAAATTAGCTGGGTGTGGTAGCACATGCTTGTAATCCCAGCTACTTGGGAGGCTGAGGCAGGAGAATCGCTTGAACCAGGGAGGCGGAGGTTACAATGAGCCAACACTACACCACTGCACTCCAGCCTGGGCAATAGAGTGAGACTGCATCTCAAAAAAATAATAATTTTTAAAAATAATAAATTTTTTTAAGCTTATAAAAAGAAAAGTTGAGGCCAGCATAGTAGCTCACATCTGTAATCTCAGCAGTGGCAGAGGATTGCTTGAAGCCAGGAGTTTGAGACCAGCCTGGGCAACATAGCAAGACCTCATCTCTACAAAAAAATTTCTTTTTTAAATTAGCTGGGTGTGGTGGTGTGCATCTGTAGTCCCAGCTACTCAGGAGGCAGAGGTGAGTGGATACATTGAACCCAGGAGTTTGAGGCTGTAGTGAGCTATGATCATGCCACTGCACTCCAACCTGGGTGACAGAGCAAGACCTCCAAAAAAAAAAAAAAAAGAGCTGCTGAGCTCAGAATTCAAACTGGGCTCTCAAATTGGATTTTCTTTTAGAATATATTTATAATTAAAAAGGATAGCCATCTTTTGAGCTCCCAGGCACCACCATCTATTTATCATAACACTTACTGTTTTCCCCCCTTATGATCATAAATTCCTAGACAACAGGCATTGTAAAAATAGTTATAGTAGTTGATATTTAGGAGCACTTAACTATATTCCAGGCACTATTGTGCTTTTCTTGTATAACTCATTAGATGCTTGTCAGACCTCTGAGATTGTTCCTATTATACTTATTTTACAGATGAGAAAATTAAGGCACAGAGAAGTTATGAAATTTTTCCAAGGTATTAAACCTAGTAAGTGGCTGAGCCATGATTCAAACCTAGGAAGTTAGATGTCAGAGCCTGTGCTTTTTTTTTGTTTTTGTTTTTGTTTTCAGTAGAAACGGGGGTCTCACTTTGTTGGCCAGGCTGGTCTTGAACTCCTAACCTCAAATAATCCACCCATCTCGGCCTCCTCAAGTGCTGGGATTACAGGTGAGAGCCACTGTGCCTGGCGAAGCCCATGCCTTTAACCACTTCTCTGTATTACATACTAGCTTAACTAGCATTGTACCTGCCACAGTAGATGCTCAGTAAATATTTCTAGTTGAATATCTGTTTTTCAACAAGTACATTTTTTTAACCCTTTTAATTAAGAAAACTTTTATTGATTTATTTTTTGGGGGGAAATTTTTTAGGATCTGATTCTTCTGAAGATACCGTTAATAAGGCAACTTATTGCAGGTGAGTCAAAGAGAACCTTTGTCTATGAAGCTGGTATTTTCCTATTTAGTTAATATTAAGGATTGATGTTTCTCTCTTTTTAAAAATATTTTAACTTTTATTTTAGGTTCAGGGATGTATGTGCAGTTTGTTATATAGGTAAACACACGACTTGGGATTTGGTGTATAGATTTTTTTCATCATCCGGGTACTAAGCATACCCCACAGTTTTTTGTTTGCTTTCTTTCTGAATTTCTCCCTCTTCCCACCTTCCTCCCTCAAGTAGGCTGGTGTTTCTCCAGACTAGAATCATGGTATTGGAAGAAACCTTAGAGATCATCTAGTTTAGTTCTCTCATTTTATAGTGGAGGAAATACCCTTTTTGTTTGTTGGATTTAGTTATTAGCACTGTCCAAAGGAATTTAGGATAACAGTAGAACTCTGCACATGCTTGCTTCTAGCAGATTGTTCTCTAAGTTCCTCATATACAGTAATATTGACACAGCAGTAATTGTGACTGATGAAAATGTTCAAGGACTTCATTTTCAACTCTTTCTTTCCTCTGTTCCTTATTTCCACATATCTCTCAAGCTTTGTCTGTATGTTATATAATAAACTACAAGCAACCCCAACTATGTTACCTACCTTCCTTAGGAATTATTGCTTGACCCAGGTTTTTTTTTTTTTTTTTTTGGAGACGGGGTCTTGCCCTGTTGCCAGGATGGAGTGTAGTGGCGCCATCTCGGCTCACTGCAATCTCCAACTCCCTGGTTCAAGCGATTCTCCTGTCTCAATCTCACGAGTAGCTGGGACTACAGGTATACACCACCACGCCCGGTTAATTGACCATTCCATTTCTTTCTTTCTCTCTTTTTTTTTTTTTTTTTTGAGACAGAGTCTTGCTCTGTTGCCCAGGCTGGAGTACAGAGGTGTGATCTCACCTCTCCGCAACGTCTGCCTCCCAGGTTGAAGCCATACTCCTGCCTCAGCCTCTCTAGTAGCTGGGACTACAGGCGCGCGCCACCACACCCGGCTAATTTTTGTATTTTTAGTAGAGATGGGGTTTCACCATGTTGGCCAGGCTGGTCTTGAACTCATGACCTCAAGTGGTCCACCCGCCTCAGCCTCCCAAAGTGCTGGAATTACAGGCTTGAGCCACCGTGCCCAGCAACCATTTCATTTCAACTAGAAGTTTCTAAAGGAGAGAGCAGCTTTCACTAACTAAATAAGATTGGTCAGCTTTCTGTAATCGAAAGAGCTAAAATGTTTGATCTTGGTCATTTGACAGTTCTGCATACATGTAACTAGTGTTTCTTATTAGGACTCTGTCTTTTCCCTATAGTGTGGGAGATCAAGAATTGTTACAAATCACCCCTCAAGGAACCAGGGATGAAATCAGTTTGGATTCTGCAAAAAAGGGTAATGGCAAAGTTTGCCAACTTAACAGGCACTGAAAAGAGAGTGGGTAGATACAGTACTGTAATTAGATTATTCTGAAGACCATTTGGGACCTTTACAACCCACAAAATCTCTTGGCAGAGTTAGAGTATCATTCTCTGTCAAATGTCGTGGTATGGTCTGATAGATTTAAATGGTACTAGACTAATGTACCTATAATAAGACCTTCTGTAACTGATTGTTGCCCTTTCGTTTTTTTTTTTGTTTGTTTGTTTGTTTTTTTTTGAGATGGGGTCTCACTCTGTTGCCCAGGCTGGAGTGCAGTGATGCAATCTTGGCTCACTGCAACCTCCACCTCCAAGGCTCAAGCTATCCTCCCACTTCAGCCTCCTGAGTAGCTGGGACTACAGGCGCATGCCACCACACCCGGTTAATTTTTTGTGGTTTTATAGAGATGGGGTTTCACCATGTTACCGAGGCTGGTCTCAAACTCCTGGACTCAAGCAGTCTGCCCACTTCAGCCTCCCAAAGTGCTGCAGTTACAGGCTTGAGCCACTGTGCCTGGCCTGCCCTTTACTTTTAATTGGTGTATTTGTGTTTCATCTTTTACCTACTGGTTTTTAAATATAGGGAGTGGTAAGTCTGTAGATAGAACAGAGTATTAAGTAGACTTAATGGCCAGTAATCTTTAGAGTACATCAGAACCAGTTTTCTGATGGCCAATCTGCTTTTAATTCACTCTTAGACGTTAGAGAAATAGGTGTGGTTTCTGCATAGGGAAAATTCTGAAATTAAAAATTTAATGGATCCTAAGTGGAAATAATCTAGGTAAATAGGAATTAAATGAAAGAGTATGAGCTACATCTTCAGTATACTTGGTAGTTTATGAGGTTAGTTTCTCTAATATAGCCAGTTGGTTGATTTCCACCTCCAAGGTGTATGAAGTATGTATTTTTTTAATGACAATTCAGTTTTTGAGTACCTTGTTATTTTTGTATATTTTCAGCTGCTTGTGAATTTTCTGAGACGGATGTAACAAATACTGAACATCATCAACCCAGTAATAATGATTTGAACACCACTGAGAAGCGTGCAGCTGAGAGGCATCCAGAAAAGTATCAGGGTAGTTCTGTTTCAAACTTGCATGTGGAGCCATGTGGCACAAATACTCATGCCAGCTCATTACAGCATGAGAACAGCAGTTTATTACTCACTAAAGACAGAATGAATGTAGAAAAGGCTGAATTCTGTAATAAAAGCAAACAGCCTGGCTTAGCAAGGAGCCAACATAACAGATGGGCTGGAAGTAAGGAAACATGTAATGATAGGCGGACTCCCAGCACAGAAAAAAAGGTAGATCTGAATGCTGATCCCCTGTGTGAGAGAAAAGAATGGAATAAGCAGAAACTGCCATGCTCAGAGAATCCTAGAGATACTGAAGATGTTCCTTGGATAACACTAAATAGCAGCATTCAGAAAGTTAATGAGTGGTTTTCCAGAAGTGATGAACTGTTAGGTTCTGATGACTCACATGATGGGGAGTCTGAATCAAATGCCAAAGTAGCTGATGTATTGGACGTTCTAAATGAGGTAGATGAATATTCTGGTTCTTCAGAGAAAATAGACTTACTGGCCAGTGATCCTCATGAGGCTTTAATATGTAAAAGTGAAAGAGTTCACTCCAAATCAGTAGAGAGTAATATTGAAGACAAAATATTTGGGAAAACCTATCGGAAGAAGGCAAGCCTCCCCAACTTAAGCCATGTAACTGAAAATCTAATTATAGGAGCATTTGTTACTGAGCCACAGATAATACAAGAGCGTCCCCTCACAAATAAATTAAAGCGTAAAAGGAGACCTACATCAGGCCTTCATCCTGAGGATTTTATCAAGAAAGCAGATTTGGCAGTTCAAAAGACTCCTGAAATGATAAATCAGGGAACTAACCAAACGGAGCAGAATGGTCAAGTGATGAATATTACTAATAGTGGTCATGAGAATAAAACAAAAGGTGATTCTATTCAGAATGAGAAAAATCCTAACCCAATAGAATCACTCGAAAAAGAATCTGCTTTCAAAACGAAAGCTGAACCTATAAGCAGCAGTATAAGCAATATGGAACTCGAATTAAATATCCACAATTCAAAAGCACCTAAAAAGAATAGGCTGAGGAGGAAGTCTTCTACCAGGCATATTCATGCGCTTGAACTAGTAGTCAGTAGAAATCTAAGCCCACCTAATTGTACTGAATTGCAAATTGATAGTTGTTCTAGCAGTGAAGAGATAAAGAAAAAAAAGTACAACCAAATGCCAGTCAGGCACAGCAGAAACCTACAACTCATGGAAGGTAAAGAACCTGCAACTGGAGCCAAGAAGAGTAACAAGCCAAATGAACAGACAAGTAAAAGACATGACAGCGATACTTTCCCAGAGCTGAAGTTAACAAATGCACCTGGTTCTTTTACTAAGTGTTCAAATACCAGTGAACTTAAAGAATTTGTCAATCCTAGCCTTCCAAGAGAAGAAAAAGAAGAGAAACTAGAAACAGTTAAAGTGTCTAATAATGCTGAAGACCCCAAAGATCTCATGTTAAGTGGAGAAAGGGTTTTGCAAACTGAAAGATCTGTAGAGAGTAGCAGTATTTCATTGGTACCTGGTACTGATTATGGCACTCAGGAAAGTATCTCGTTACTGGAAGTTAGCACTCTAGGGAAGGCAAAAACAGAACCAAATAAATGTGTGAGTCAGTGTGCAGCATTTGAAAACCCCAAGGGACTAATTCATGGTTGTTCCAAAGATAATAGAAATGACACAGAAGGCTTTAAGTATCCATTGGGACATGAAGTTAACCACAGTCGGGAAACAAGCATAGAAATGGAAGAAAGTGAACTTGATGCTCAGTATTTGCAGAATACATTCAAGGTTTCAAAGCGCCAGTCATTTGCTCCGTTTTCAAATCCAGGAAATGCAGAAGAGGAATGTGCAACATTCTCTGCCCACTCTGGGTCCTTAAAGAAACAAAGTCCAAAAGTCACTTTTGAATGTGAACAAAAGGAAGAAAATCAAGGAAAGAATGAGTCTAATATCAAGCCTGTACAGACAGTTAATATCACTGCAGGCTTTCCTGTGGTTGGTCAGAAAGATAAGCCAGTTGATAATGCCAAATGTAGTATCAAAGGAGGCTCTAGGTTTTGTCTATCATCTCAGTTCAGAGGCAACGAAACTGGACTCATTACTCCAAATAAACATGGACTTTTACAAAACCCATATCGTATACCACCACTTTTTCCCATCAAGTCATTTGTTAAAACTAAATGTAAGAAAAATCTGCTAGAGGAAAACTTTGAGGAACATTCAATGTCACCTGAAAGAGAAATGGGAAATGAGAACATTCCAAGTACAGTGAGCACAATTAGCCGTAATAACATTAGAGAAAATGTTTTTAAAGAAGCCAGCTCAAGCAATATTAATGAAGTAGGTTCCAGTACTAATGAAGTGGGCTCCAGTATTAATGAAATAGGTTCCAGTGATGAAAACATTCAAGCAGAACTAGGTAGAAACAGAGGGCCAAAATTGAATGCTATGCTTAGATTAGGGGTTTTGCAACCTGAGGTCTATAAACAAAGTCTTCCTGGAAGTAATTGTAAGCATCCTGAAATAAAAAAGCAAGAATATGAAGAAGTAGTTCAGACTGTTAATACAGATTTCTCTCCATATCTGATTTCAGATAACTTAGAACAGCCTATGGGAAGTAGTCATGCATCTCAGGTTTGTTCTGAGACACCTGATGACCTGTTAGATGATGGTGAAATAAAGGAAGATACTAGTTTTGCTGAAAATGACATTAAGGAAAGTTCTGCTGTTTTTAGCAAAAGCGTCCAGAAAGGAGAGCTTAGCAGGAGTCCTAGCCCTTTCACCCATACACATTTGGCTCAGGGTTACCGAAGAGGGGCCAAGAAATTAGAGTCCTCAGAAGAGAACTTATCTAGTGAGGATGAAGAGCTTCCCTGCTTCCAACACTTGTTATTTGGTAAAGTAAACAATATACCTTCTCAGTCTACTAGGCATAGCACCGTTGCTACCGAGTGTCTGTCTAAGAACACAGAGGAGAATTTATTATCATTGAAGAATAGCTTAAATGACTGCAGTAACCAGGTAATATTGGCAAAGGCATCTCAGGAACATCACCTTAGTGAGGAAACAAAATGTTCTGCTAGCTTGTTTTCTTCACAGTGCAGTGAATTGGAAGACTTGACTGCAAATACAAACACCCAGGATCCTTTCTTGATTGGTTCTTCCAAACAAATGAGGCATCAGTCTGAAAGCCAGGGAGTTGGTCTGAGTGACAAGGAATTGGTTTCAGATGATGAAGAAAGAGGAACGGGCTTGGAAGAAAATAATCAAGAAGAGCAAAGCATGGATTCAAACTTAGGTATTGGAACCAGGTTTTTGTGTTTGCCCCAGTCTATTTATAGAAGTGAGCTAAATGTTTATGCTTTTGGGGAGCACATTTTACAAATTTCCAAGTATAGTTAAAGGAACTGCTTCTTAAACTTGAAACATGTTCCTCCTAAGGTGCTTTTCATAGAAAAAAGTCCTTCACACAGCTAGGACGTCATCTTTGACTGAATGAGCTTTAACATCCTAATTACTGGTGGACTTACTTCTGGTTTCATTTTATAAAAGCAAATCCAGGTGTCCCAAAGCAAGGAATTTAATCATTTTGTGTGACATGAAAGTAAATCCAGTCCTGCCAATGAGAAGAAAAAGACACAGCAAGTTGCAGCGTTTATAGTCTGCTTTTACATCTGAACCTCTGTTTTTGTTATTTAAGGTGAAGCAGCATCTGGGTGTGAGAGTGAAACAAGCGTCTCTGAAGACTGCTCAGGGCTATCCTCTCAGAGTGACATTTTAACCACTCAGGTAAAAAGCGTGTGTGTGTGTGCACATGCGTGTGTGTGGTGTCCTTTGCATTCAGTAGTATGTATCCCACATTCTTAGGTTTGCTGACATCATCTCTTTGAATTAATGGCACAATTGTTTGTGGTTCATTGTCTCCTTAAATTAGACTGTAAGCACCTTGATGGAACTCATACTACCTTTTATTTCACACACACGCACACGCGCACACACAGCCTACACATACACTGCCTAGCTCATTGTAGCATACTAAATACTGATTTTAATGAATAAGCTAAACCTTCGAAACCCATTTGCTAATCCCAGCACTTTGGGAGGCCAAGGTGGGTGGATCACCTCAGGTCAGAAGTTTGAGACCAGCCTGGCCAACATGGTGAAACCCCACATCTACTAAAAATACAAAAATTAGCTGGGCGTGGTGGCCAATGCCTTGTAATCCCAGCTATTCTGGAGGCTGAGACAGGAGAATCGCCTGAACCTGGGAGGCGGAGGTTGCACTGAGCTGGGATTGTACCACTGCACTCCAGCCTGGGTGACAAAGTGAGACTCCATCTCAAAAACAAACAAACAAAAACACATCATTTCCCCTATAGCAAAAACATGACGGCACTTACTGTATCAAGAGAGGTGAGAAAAAGGAGCCACAGCAGGATGATTCAAGGGACTCTGCATAGCTCCATTTTAAGAATATGCCTACTGCAGGTCAGAGAAGGTAAGCAAACTGCCTAAGGCCACACAGCCAGGTACAGAACTCTCACCAATATTATTGCCAGCAATCGCAATTTTGGTGTTTATTCTTGGTACCAAGTTGGAGACTATAGGGTTCTCTTCCTAATAGAGACCATCTAGCCTTTCACTGTTTTGTGGATACTTCTTTCTCTTCTTCTTTTTTTTTTTCCCTTTTAAAATCTAGTTATTTTTTTCTTTTTGGTTTCTTTGACACAGGGTCTCTTACTCTGTTACCCAGGCTGGAATGGAGTAGTGCAGTCATGGTTCACTGTAGCTTTGACTTCCTGGGCTCAAGCGATCCTCCTACCTCAGCTTCCCGAGTAGCTGGGACCACAGGCGCCCACCAACACCTCCAGCTAATTTTTAAGTTTTTACTAGAGACAACATCTCACTATGTTGCCCAGGCTGGTCTCAAAATCCTGGGCTCAAGTGATCCCACCTCAGCCTTCCAAAATGCTGGGATTACAGGTGTGTGCACCACGCCTGGCCTATTTTTTTTTTAATTGCTCATAAATCATCTTTTTTCTTTAAAAAAAAGAAAGATGGGAGGCTAAAGCAGGAGAATCACTTGAACCCAGGAGGCGGAGGTTGCAGTGAGCTGAGATCATGCTGCTGCTCTCCAGCCTGGGCAACAAGAGTGAAACTCCATCTCAAAAAAAAAAAAAAAGAAAGTACACAATTTTACTTTCTGGACCTAATGGTCAAGGCCAATAATTTGGTCACCTATGAAATAAATAAAAGCTTTACCATATATATGACCATTTGATAATGTAATATGAAATGTTTATGTACTAAAGGCAGAATAGTCTAGAAAAAACATTCTGTATCACAACGTCTAAAAATGAATATCATCTTCATCATAGAACCAGGCTCTTTCTCCTAATTTTTTTTTTTGAGATGGAGTTTTGCTCTGTCACCCAGGCTGGAATGCAGTGGCACAATTTTGGCTCACTGCAACCTTCAGCTCCCAGGTTCAGGATCAAGTGATTTTCGTGCTTCAGCCTTCTAAGTAGCTGGGATTACAGGTGACTGCCACCACACCCAGCTCATTTTTTTGTATTTTTTTAGTAGAGAGAGGGTTTCACCATGTTGGCCAGGCTCGTCTCGAACTCCTGACCTCAAATAATCCACCCGTCTCAGCCTCCCAAAGTGCTGAGATTACAGGCGTGAGCCACCAGGCCTGGCCTCCTAATTTTTATTTGTAGAAGTGGCACCAAAATTTTCCAAGTTCTCATGCAAAAATTCAGGCTCATCTCAGTTTATTTTTTTCATTTATTTATCTCCCACTAAATTGACAACTTCTAATAATTAGGTTGGTTCTTTGTATTCCCAGCACAGGGTTCTATGCAGAATACACACACAGCAGTTGCTGGCAATAATATTGGTGAGAGTTCTGTACTGGGCTATGTGATCTTAGACAGTTTGCTTATGTTCTCTGACCTGCCGTAGGCACATTCTTAAAATGAAGCTGTTCAGACCCCCTCGATTCATCCTGCTGTGGCTTCTTTTTCCCACCTAAATCTTAAATACCCTTTTAGCTGCTAGTAAGTGAATGATGTTTTTTTATGAACTTTCTGAAGTCAGATTAGATGAAGTTGAGAAAAGCCTGATATTCTTATAAAGTTATATATGTGCATCATAGAAAACTTAGAAAATACAGATAAACAAAAATCATCCATGGACGAACCTTGAAGACATTGTGTTAACTGAAATAAACCGGACACCAAAGGACACATGTTATATGCTTCCACTTATATGAGATACCTAGAATAGTTACATTTGGTTACTCTGGGTACATTGCCTATAGATAAGCCTTGCTCCACAAGGAGCAGTTAAAAAAAAAAAAAAGATAAATTCATAGGATGGAAGGTAGAATAGTGGTTACTAGGGACTTGGGGAGGGGGAAATGGGGAGTTACTGTTTGATGAGTGCAGATTTCAGTTTGGGATGATGAAAAAGTTCTGGAGATAGATAGTGGCAATGGTAACACAACAGTGTGAAAATAATGCCACTGAACTGTACACTTAAAATGATTAAAATGATAAGTTAATTGTAATTTGTGTTATCCAGAAATGGTTAGCAATTTATTGGTGTATATTCTTTTAGTATTCCTGTGTGTGCACAGGGGTGCTTGTATATACTTTATCTTTAAAATATATCCAGGAAGCTAGGCACAGTGGCTTACACCTGTAATCCCAGCACTTTGGGAGGGTGAGGCAGGAAGATTGCCTGAGCCCCGGAGGTCAAGGCTGCAGTGAGTTGTGATCACGCTACTGCACTCTGTTCTGGGCAACCCCTGTCTGGGAAAAAAAAAAAAATTAGTGAGGCTTAGTGGTGCACACCTGTAGTCTCAGCTACTTGAGTGGCTGGGGTAGGATTGCTTGATCCCAGCAAGTTGAGGCCGTGGTGAGCCATGATGGTGCCACTGCACTCCATCCTGGGTGATATGGTGAGACCCTGTCTCAAAAACAAGAAATCCAGATAATTCTGTGCATTATAATCTAGCTTTTACTGGATCATTAAAATTCTTTTTTCTTTTTTTTTTTTTTTTTCTGAGATGGAGTTTCACTCTTGTTGCCCAGGCTGGAGTGCAGTGGTGTGACCTTGGCTCACCGCATCCTCTGCCTCCCGGGTTCATGCGATTCTCCTGCCTCAGCCTCCCGAGTAGCTGGGATTACAGGCATGTGCCACCATGCCCAGCTAACTTTGTATTTTTAGTAGAGACAGGGTTTCTCCATGTTGACCAGGCTGGTCTCAAACTCCTGGCCTCAAGTGATCCACCCACCTCGGCCTCCCAAAGTGCTGGGGTTACAGGCGTGAGCCACCGCACTCAGCCTGGGTCGTTAAAATTCTTAAGTGACTTCATTTTTAATTACTATATGGGATTCTATCTTTCCAGTGTATCATGATTTATTTGACCTATTGCTGAATGTTGGAGGTTTCAGGGTAAGAGGCACAGTTTGCTATTATGTACATCACTATAGTGGCATCCTGATAGCTAAATATTTGCCTACATCCCTGATTATTTCCTTAGTCTAAATTACTGGGACTAGGATTTTGGTGTTTGATACATGTTACTAAATTGTTTTTTAGAAAGATTAAACCAGTTTATGCTCTTCCAGCCCCTGTGGTATATGATAGTTCCCATTTTCCTGTACCTTGCCAACACTGGGTGATATCCAGTTTTAAAATCTAAATCTTGCATTGCTATGAGAACTACAATTAGAGAAGGCTTATCTTCTACTGCCCATTCTCTGTACAGAGCAAATCCCTCTAGACCTGAAGCCCCTTGGAGTTGTCAAGAAACCTTTGAGATGACTCCCCACTCTGTATCTGAGCTGTCACCAGTATTCTCCACTTCTTCAGGATTGCCATGGCAACTAAATTGATGAAAAGATTTAGGAGGCCTTTTCTCTCTTTGCAATTCCTATGATCCTTTTTGAATGTGGGTTTGGGACTCTGTCAATATACCCATCATCTAATTCTGTCCATTGTGTTTTAAAGTTTAAGGTTGCAATTTCTGATTACATCTGCCTTAGCCATACTGTATTATATTTGACATTCAATATACAATGTCCTTGTTTTTCTGTATTTCTAATCTTATTCCCAGAGATGTGTCTATTTGTTCAGGATTCATTTTGCAACGTGTTTTTACTAAGCATCTACCCAAAACCGTTGAAGTCAGATTTCAGGCTGTCTTACGTCTAAAGTAGCACAGGCAGGAAAAACTATTGAAGTGGGATTTTTTTTTCCCTTTTTGTACTGAACCGAGAAAAAGTATATAGATGATAGAGAATTCCTAATTTGGTATCATTGATATCTGGGTTTTTGTTTGTTTTTACAGAAGACTGATTAACTATACTTATTTATTAATTTATCTTCTCATTAATAAACACTTGCTGAGTGCTTACTGTCTGCTAGGCATTAGGGAGACAAATATGATTAAGGGAAGCTTCCTCCTATCAAGGTCATGTGTTCCATTTGGGTATACTAATGCATTAGCAATGTAAATCAAGTAGTGAGAGATCATCTGTTCCCGATAGGAGATGGATTATTGGTGGGGACTTCTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTATGTATGTGATAAAATAAATATAGGAAATGTTAATTATAGATTCTAAGTAGTAGATATATAAACACTCATTGCAAAGTTGCTTCAAGTTTTCTGTATATTTGAAAATATTCACAACATGTCGACAAAACTAGCATGATAAAGCCACTATTTGTGCTAAGACTTCAGCTTGTATCTGGATTAGGCTTATTATGTAGTAGTAGGAACATTAGAAATAGTTTTAACTCATTAAATACACATGTTTTATGGGAAGGTTTTATATATATATTTATATGTAATGAATGTGAACAAACAAGGGTCAGATATACACTCTGCTTCCCTCCAGACCAGTTCCGGCTGCTCTGCTGCACATTTCAGGAGTCTTATTAGAATTAGCCACATTCTGCCCACTTGCCCTTACTTCTCATATTTCACAACTCCTCCTGGTGGGGACTTAAGGAGACATTCAAACTAGGCCTTGAAAGATGAGAATTTTTCCAAGTGGAAAAAGAGGAGTGGCAGCAAGTAAGGTAAAGGTACAGAGTCATGGAATTCCCAGGAAACGTAAAGTTGTCATGTGTTATAGGAAAACAACTTGTGTGAGGGGTGTTGGGAGAAATGAGAGATAATACCAGGGTATAAAGGGCCTTTTGAATGCTATGTTGAGGAATTTTATCCTAATGGCAGTAATGACTAACAATTATATAGTGTTCAAAAAGTATAAATCAGCAGTGGTATACCACTAAGGGTTTTTTTCTTTTCTTTTTTTTTTTGAGACAGAGTTTTGCTCTGTTGCCCAGGCTGGAGTGCCGTGGCACGATCTCAGCTCACTGCACTTCCGCCACCTGGGTTCAAGTGATTCTTCTGCCTCAGCCAGTGTTTCACTGTGATGGCCAGGATGGAGCACTAAGGGTCTTTATGGAAGAAAAAGACATGATAAACAAGGCTTTTAGGGAACTTCTACAGTAATGTAGCTGTATTAAAAGTAGAGATCAGAGCAGCATAGTAGAAGTAGAAGGCTAGAGCTAATTGAAGGAGCACTTCAGAATTAGAATCAAGAAGTCTTAGAAACCTATTGGTTTTATTCTCCCTAATGTATTTGGCCACTTACCTGCTGGGGAATTTGTCTAAGTTATAAAAAATAATTCCTTTGGGAAACCCAAAGGAAAGTTATCTATTAATAATTACCCCACTACTTTTTCTGATTTATGTAATGGCCACGTAGAGGTTAGATGTGATGGTTGTGACAGTAGTGACTAATACAGCCTGTGAAGCATTTTGGTCAGATATCTATGTGCTTTCATTCCAGGTTGACTGAGGCAAGACTTTGGCTAGGGTTTGATCAGTGATGTAACTACTCACGAGTACCACGTGGTGGCAATGGCATTGCTGCAGACCTTGGCAGCAAAGCAGTGTTAGAGTAGCAGTAGAAACCTTTGTGAAGCTAGGAATACATTTTCTGGTCATAAAAACCTCCTGAAAATTGTGAACTCAGTGTAGCAGGAGAAAGAAGATGGCTTGTTTTTAGTAAAGGGCAAAGTCATTTTTAAGGATCAGAAGAAGAAACGGAGAGTGAAACAATGTGTTCCTGCCCTACTCCCCCACTGGACTTTTTGGCAACCATTGCTGTTCCTTCTAAAAGTGATTTTTAAACATGTATATTTTGAAGCCAGGCACAGTGACTCACGTCTGTAATCCCAGCACTTTGGGAGGCCGAGGCGGGCAGATCACCTGAGGTCAGGAGTTCAAGACCAGCCTGGCCAACATGGTGAAACCCCGTCTCTACTAAAAATACAAAAATTAGGCCAGGTGTGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCCGAGGCGGGAGGATCATGTGGTCAGGAGATCCAGACCATCCTGGCTAACACGGTGAAACACCATTTCTACTAAAAATACAAAAAATTAGCTGGGCATGGTGGCGGGCGCCTGTAATCCCAGCTACTCAGGAGGCTGAAGCAGAAGAATGGCTTGAACCTGGGAGGCGGAGCTTGCAGTGAACCAAGATTGCGCCACTGCACTCCAGCCTGGGCAACAAAGTGAGACTCCGTCTCAAAAAAAAAAAAAAAAATTAGTCGGGCATGGTAACAGGTGCCTGTAATCCCAGCTACTTGAGAGGCTGAGGCAGGGAGAATTGCTTGAACCAGGTAGGCGGAGGTTGCAGTGAGCCAAGATCGCACCACTGCACTCCAGCCTGGGGCAACAGAGCAAGACTGTCTCAAAAAAAATAAATAAATAAAATAAATTCTTAAGAAGGATATTTTGGAAAACTCCTTACATACCTAAATTCTTTGTTTATCAAATACTTGGACTTAGCACACTCTTCTTTGAAATGGACCAATAAACAACAGGAGCCCATAAGCAAAAAGAACTCATTATTTTAAAAACAGTAACTATCCTTACAGGCTTTCTCAGGGCTCTTTCTGTTGGATCCTTCCCTCTCACAGGTCCTTGCTAATGATCTCTAGGTGGACACATTCTAGATGAGATGTCCCTGTCTAGAATGGCAGCACCATGAGGGCTATATCCTCAGTACTAGGACAGCGCCTGGTGCTTAATAGATAGTAAATAGTTGTCTAATTAACTGAGCAAACAGATAGATTCATGAATTAGCTTTTTGCTTTTTCTGTTAGAAACTAAAGGTTCAGGTCAGGCACAATGGCGCATGTCTCTAATCCCAGCACTTTGGGAGGCCGAGGCGGGCTGATCACTTGAGGTCAGGAGTTCAAGACCAGCCTGGCCAACATAGTAAAACCCTGTTTCTACAAAAATTACCAAAATTAGCCGGGCGTCTTGGCAAGCACCTGTAATGCCAGCTACTTGAGAGGCTGAGGTGGGAGAATCGCTTGAACCTGGGAGGAAGAGGTTGCAGTGAGCCGAGATGGTGCCAACCTGGGTGACAGAGGGAGACTTAAAAAAAAAAAGAAAGAAAGAAAGAAAAGAAACTAAAGGTTCAAAGAATCCCAGAAAAGGAAGAGTCCTCACAAGCCAGTAATCTAGGCAGGATTACTGATAGTATTTTTATATTTGTTGTATTTTTATAAAATGCCATAGATAGAGGGCTTTTTTCAACATTACATCAGTCTAAAAATCACACATTTTTATATGAACTAACCTAAATGTCTGATGAATCTCACAACACCAAGTCTTTGAAATGTGCCCATATAAATAAAATGTTAACAGATTCATGCTAATTTTAAATATCGATAGTGTTTAAATGCCTTAATTATTTTTTCACTCCCTAGCTTTAAAAGAAAATAACCAACTTCAAAAGGACATCACAATAACATCAAGTCTATTTGGGGGAATTTGAGGATTTTTTCCCTCACTAACATCATTTGGAAATAATTTCATGGGCATTAATTGCATGAATGTGGTTAGATTAAAAGGTGTTCAGCTAGAACTTGTAGTTCCATACTAGGTGATTTCAATTCCTGTGCTAAAATTAATTTGTATGATATATTTTCATTTAATGGAAAGCTTCTCAAAGTATTTCATTTTCTTGGTGCCATTTATCGTTTTTGAAGCAGAGGGATACCATGCAACATAACCTGATAAAGCTCCAGCAGGAAATGGCTGAACTAGAAGCTGTGTTAGAACAGCATGGGAGCCAGCCTTCTAACAGCTACCCTTCCATCATAAGTGACTCTTCTGCCCTTGAGGACCTGCGAAATCCAGAACAAAGCACATCAGAAAAAGGTGTGTATTGTTGGCCAAACACTGATATCTTAAGCAAAATTCTTTCCTTCCCCTTTATCTCCTTCTGAAGAGTAAGGACCTAGCTCCAACATTTTATGATCCTTGCTCAGCACATGGGTAATTATGGAGCCTTGGTTCTTGTCCCTGCTCACAACTAATATACCAGTCAGAGGGACCCAAGGCAGTCATTCATGTTGTCATCTGAGTACCTACAACAAGTAGATGCTATGGGGAGCCCATGGAAGATACATGGTATACAACATAGCTCTTGCTCTATTGGAAGCTAAGTGGAATGGGAGAAATTGGTGACAGGCAACCCCATAATTTCAGAAAGCTATGAAAAAGTACTCAGACATATTCCTTATAACACTGGTGTCACATCACAAAGACCTATTTAATGTGCTTCTGATTTATAGGGAGAGACATCCTATACTTCAGGAACTGCACTTTGATCCACAGAAAGCCTAGTGATGTAGAGCTCCTGTTAGTTCAAAAGGAAAAGAAAAGAACAACACAGAAAGCCTAATTATGCAATAGAGTCAAGTGCTTTATAGCAATGTTACAGTTATCAAAAAAAATCCAGATGGACCTCTGAGAGGATGCCATTGGAGTAACCAGGCAGATGCAGTTGATCAGAGCTGACTTCCTATAAGAAGTGAGCACTGAGCTGAGGAATAATGGCATAAATGAAGGAAAGTGAGATGGAAATTTGAGTTTTTAATTGGAAAGACAATACATCAGGCAGATTTTTAAATAGGGGCAAACAAACAGACACATAGGAGATGCTAGGCATGGGGTCCCCACTAGGATGCTGCTTAGAAACATGCAGGGGTGGTGAGTACTCCCAAAGTACACTTCATTCCTAGCTCAGTGATTCTTATCTGAGTGTTAAAGTTCCTTCTTCAGCACCCCGTTCCACAGTCCAACTGGGAACTTTAAGACCTTTCTTGGAGTCTTTCTAGGAACTCAAGTCTGCTACTTATACAGAACAGTGGCTTTGGTCCCCAGTTGTGCCTTGCAGTATTTTTGTGTTCAGGAAGAAACAGTAGCTCTTGGATAAAGAAGCTAGCTAGAAACTCTGTTGCTATGGCAGTGCTTCAAAATGTATTTCCTTAAATGCTTTCTTTGTAACTATCTTCATTTAGTTCATCTCTCAGATAATGAGAGATCAGAGTCCCATCCCCAGTATAATACTCTTCTTTAGGGTACTTTCACCATCTTCAGTCTAAACACAGACTAGACTTTCAATTATAATGTGTAAGATTTAAAATGTTATTATTGTGTGACTTTGAATATCTGTGTAAATCTACTATCTCCTCTTTGGTATATACGTGTGTTTATTTTTTTCTGGAGATCTGTAACTGAAATGCTTAATTTCTGAATTGTTTTGGATATCACAACTTAATACCAACATAAGTTTTGAGCCTTTTTCTCCCTAAATCTGGTGTGAGTCTAACTGAAACTCAAATGAACTTTTTAAAAATAATTTTTTCTTTTCTTTAATTTTTTTTTTAAGTAGAGACAGGGACGCACTGTTAACTAGGCTGGTCTTGAACTCCTGATCTTGAGCCATCCTCCCCGACCTGAGCCTCACCTTATAGAGAGGGTCTTGCTCTGTTGCCCAAGCTGGAGGGCAGTGGCATAATCACAGCTCACTGCAGCCTCTCGACCTCCTCAAGCGATCCTCCTGCCTTAGCCTCCCAAGTAGCTGGGACTATAGGCGTCCACCACCATACCCAGCTAATTTTTTTTTTTATTTTTTGTAGAGACAAGGTCTCCCTATGTTGCCCAAGTTGGTCTCAAACTCCTGGACTCAAGCAGTCCTCTCACCTCAGGGTCCCAAAGTGCTGGGGTTACAGGTGTGAGCCATGGCACCTGGCCAGAACTTCTAGTAAAAAGAATATTGTTGCCGGGTACGGTGGCTCACGCCTGTAACCCCAGCACTTTGGGAGGCCAAGGCAGGCGAATCACCTGAGGTCGGGAGCTCGAGACCAGCCTGACCAACATGGAGAAACCACATCTCTACTAAAACTACAAAAAATTAGCCGGGCGTGGTGGCACATGCCTGTAATCCCAGCTACTTGGGAGCTACGGTGCCTGGCCTAGTTTATTATTTCTTAATATCTGTTGTCTTCCAGTGTCTTCCTTAATTCTTCACAATACCCTGTACAATGCTTAGCACACAGTGGGCAGTCTGTAAGTTTATTAAATGTTTGGTGTGGCCCATACTTCCTATCCACAAAGAATGTAACATGTTAAGACATCTAGATGAGGGAATGATTTAAGAGGAACTACAATAATATTCTGAAACTTGGACTCTGGATCTCTGCATTTAGACTTTCCTAAACCAGCCAGCAAGTAGATCATCATGTCACAAGGCTTAGGTTGGGCTTGCTGTTCAGAGAATGAATTAAGGATTAAGGAGAAAAAAAAGCAGAAAGGTTTTGCTCTGTTTTTCAGGTTCTATTGAGTTGTTAACTTCTAACAAGTTATCTTATTTGCTTCATTGCATGAGGCCCATTGTAGTAAGAAGAGGAATTTATATGCTAAATGTTCTGGTGATAGAATGACTTTTCTTTTTTTTTACAGTCCAAAGGTCTTTTTTTTTTTTTTTTAACACCTATTATGCCATGAATTCATAGGGAATAGGTTCCAGCTGCTCAGGCTCCTTCCCATTGGTTCTCACAAAGTGTGCTTCTCTGGGTGGAGCAGGCTGGTGCTTCAGTTGAACCCACGTACCTTTCTCTTTGGCTTCTTTCTTTTTCTGATCATTTTCCTTCACGCGTTTCAGGAAGCTGTCTTGGCTCTTAGAGTGTTTAATGTGCTCAATACGCACATTAATTCTCTTGGCAAGAATCTTGCCCTTAACTTGTTTACAGCGATGCCAACAGCATGCTGGGTCACGTTGTAGACTTTTCCAGTTTTGCCATGGTAACACTTGTGGGGCATTCCTTTTTGAACAGTACCCGTTCCCTTGATGTCTACAATTTCACCTTTCTTACAGATTCGCATATACATGGCCAAAGGAACAACTCCATGTTTTCTAAAAGGCCTAGAGAACATATATCAGGTGCCTCTCCTCTTTCCCTTTGTGTTCGTCATTTTGGCAAATTACTGAAAGATGGTGGTTCTGGCCAAAAGGAGGAATGACTTTTTAATAGCTGTGTTTGTATCTGAGCCTTCCCTCTGCCTTTCATTTTTTTTGTTTTGTTTTGTTTTGTTTTTGTTTGAGATGAAGTTTCACTTTTGTTGCCCAGGCTGGAGTGCAATGGTGTGATTTCGGCTCATTACAATGTCCGCCTCAGCCTCCTGGGTAGCTGGGATTACAGGCACCCGCCACCACGCCCAGCTAATTTTTGTATTTTTAGTAGAGACAGGGTTTCACCATGTTGGCCGGGCTGGTCTCAAACTCCTGACCTCAGGTGATCTGTCCACCTCGGCCTCTCAAAGTGCTGGGATTGTAGGCGTGAGCCACATCACCTGGCCACTTTTTTAACTCTTTCCAATGGTTAATTCCGTTTGATATGGTTCCTTGGAACTTGCACATTACCCTTTATCAATTATCACCCTGTATTGGGGGTGGGGAGGATGATACCTCTCTTCATAGTTAGATCCTACTTACTTTCAACAGAGTTCTTAACAATCCTAGAAACTCACAGGTCCAGAAAAGACAAGCATAAAGGAAACTATAAATAATGCATTTGAAGACTAACTCAGGAAATCAATGATTATTTCCCCCCAGGCTACCCAGTGTCTTAAAAAAACAGTTTAATTAATACAATCTTTTGTTTCAATTTTCTACCTATATTTATGGCTTTTAGCTTTTCTAATAAAAGCTCAAAATGAATTACAGTCATCAGTGACTTTTTAATGAATAGAAGACTTTTGCAATTTTTAACTATTTGTTTTTACTTATTAAATATTTCCGCCTTGGCCAGGCATGGTGGCTCACGCCTATAATCCCAGCACTGTGAGATGCCAAGGCAGGAGGATCACTTGAGTTTAAGAGTTCTAGACCAGGCTGGGTATGGTGGCTCATGCCTATAATCCCAGCACTTTGTGAGGCCAAGGTTGGCGGATCACCTGAGGTCAGGAGTTTAAGACCAGCCTGGCCAACATGGTAAAACCCCATCTCTACAAAAAATACAAAAATTAGCCAAGGGGTGGTGGTGGGCACCTATAATCCCATCTTCTTGGGAGGCTAAGGCAGGAGAATCGCTTGAACCTGGAGGCAGAGGTTGCAGTGAGCCGAGATCATGCCACTGTATTCCAGCCTGGGTAACAGAGCAAGACTCTGTCTCAAAAAAAAAAAAAAGTTTGAAACCAGCCTGGTCAACACAGCAAGACACCCATCTCGTTGAAAAATAACGGTCGGGCGCAGTGGCTCACGCCTGTAATCCCATCACTTTGGGAGGCCGAGGCAGGCAGATCACCTGAGGTCGGGAGTTCGAGACCAGCGTGACCAACATGGAGAAACCCCATCTCTACTAAAAATACAAAATTAGTTGGGCGAGGTGGTGCATACCTGTAATCCCAACTACTTGGGAGGCTGAGGCAGGAGAACAGCTTGAACCTGGGAGGCAGAGAGGTTGTGGTGAGCCAAGATCATGCCATTGCACTGCAGCCTGGGCAACAAGAGCAAAACTCCATCTCAAAAAAAATAAATAAATAAAAATAAATAAATAAGTACTTCTGCCTTTAAGCCACTTCCTAGAAGGCAGTGGCACAAAGTGATACATTTGGAGGAGTAAATATATTACAAAATGAATTAGGCTGGGCGCAGTGGCTCATGTCTGTAATCCCCGCACTTTGGGAGGCCAAGGCGGGTGGATCACTTGAGGTCAGGAGTTCGAGACTAGCCTGATCAACAGGGTAAAATCCCATCTCTACTAAAAATACCAAAAAAACTAGCTGGGCGTGGTGGCAGGCACCTGTAATGTCAGCTACTAGGAAGGCTGAGGCAGGAGAATCGCTTGAACCCAGGAGGTGGAGGTTGCAGTGAGCCAAGATTGCACCATTGCACTTCAGCTTGGGCAACAGAGTGAGACTCCGTCTCAAAAAAAAAAAAAGAACTAACATGCCAGAACTTTGCCTTCAGTATGTTTTGTGATTTTTCCCTTCTTGTGCCATTTCATCATTAGTTCCATGTATTATTTAAGATTTCTTATCAACCAGCACCTTGGGATTTTTTTGTGTATGTGTTGGTTTAGGGGGTTTATTTGTTTTTTTCTTTTTTTTCGGTAATTGAAAATGTGAAGCAAAATGTCACCTGTTTTTTCTTTCATGTCTGACACTCATGTCTTGTTTACCCCCGACATGCAGAAGCTGAAATCCCCATTTCATACAGTCTTCAATGTGGAGGCAGTAGGGATGGAGAAAATAATGTACTTTGTGCTCTCCGGTACTCTTTCTTTCCTATTGTCTGAGGGGATTTGGGCATAATTTATTTTGCTGCAGAGATAAAAATTTGTTATATATATTTTTTATCATTCAGGGCCAAGGAATATAGATTTTTTTTTTCAGCCTTGTCTCAGCTGGGTGTCTTTATTTACTCTGTCTTAAAGTGTTCCTTTTATTATCATTATTATTTTTTAATCATTGAATTCCATTTGGTGCTAGCATCTGTCTGTTGCATTGCTTGTGTTTATAAAATTCTGCCTGATATACTTGTTTAAAAACCAATTTGTGTATCATAGATTGATGCTTTTGAAAAAAATCAGTATTCTAACCTGAATTATCACTATCAGAACAAAGCAGTAAAGTAGATTTGTTTTCTCATTCCATTTAAAGCAGTATTAACTTCACAGAAAAGTAGTGAATACCCTATAAGCCAGAATCCAGAAGGCCTTTCTGCTGACAAGTTTGAGGTGTCTGCAGATAGTTCTACCAGTAAAAATAAAGAACCAGGAGTGGAAAGGTAAGAAACATCAATGTAAAGATGCTGTGGTATCTGACATCTTTATTTATATTGAACTCTGATTGTTAATTTTTTTCACCATACTTTCTCCAGTTTTTTGCATACAGGCATTTATACACTTTTATTGCTCTAGGATACTTCTTTTGTTTAATCCTATATAGGTTTTTTGAACCTATAACATAAGCTACAACATGAGAAATGTGCGGTTAGATAGATATGTCCCTTCTGAAGGTCAGAAAAAAATATAATGGAGGTAAAACCTGAACAAGCTTGGAAACTGATGGTAGACTTCTTCAAGGCAGCCCTTGCCCTAATTAAAATTCTTGTCTTTCTAGAAAAAGTCTAGCTGTTGATTTACCACAGAAAATAATAATAATAATTACTATTATTATTATTTTTTGAGACAGGGTCGCCCTGTGTCACCTAGATTGCAGTGGTGCAGTCATGGCTCACTGCATCCTCCGTTTTTCAGGCTCAAGCAATCCTCCCACCTTAGCCTCCTGAGTAGCTGGGTCCACAAGCATGCGCCACCCACACCCACTAAGTTTTTGTATTTTTGGTAGAGATGGAGTTTTACCTTGTTGCCCAGGCTGGTCTCAAATTCCTGGACTCAAGTAGTCCGCCCGCCTTGCCCTCCCAAAGCCAGAAAACATTTAGAATATCTTTCAGAGATGTGTATTTACACCACTATTAACACAGGGCTGTATAGCAGTCCAGTACTGGACTATGTAGTCCAGTACTATTCTTTTCCTTACTGGAGGGCCAGGCGTGGTGGCAGGTGCCTGTAATCCCAGCTACTCAGGAGGCTGAGGCAGGAGAATTGCTTGAACCTGGGAGGCAGAGGTTGCAGTGAGCTGGGACCGTGCCATTGCACTCCAGCCTGGGCGACAGAGCAAGACTCCGTCTCAAAACAAAAAAAAAAAGAGAGAGAGAGCAGTAATTCAGGTCTCACCCATCTTCAATCCAGGGGGCCTAGCCTTAGTATTTGACCCATAGTAAGCACCCAATAATTGTTTAAATTAATTAACCTCTGAGGCCCTTTAAATCTGTTGATAAGTATCTTATTTTGCAAAGTCCTAAGCACTTGGAAGAGCAGAGGAACTATTTACTGGGTGTGTATGCTTTTCTAACAATATTTTATAGCTGGCTTTTGTTTTTAGAATGAATTTGAACATTGAAAAGGCAGGCAATAGGGATGATTCTGTGAATTCTGCTAAAACTGAGTAGAAAGAATGAGTGTAGAGATGTCGACATTGATCAACTTTCTATCTTCATAAGAGATCTGATTCTAACATATCCATTTAGACTCAAGTAGAATATTGTGTATAGAGTGAGTGGCAGTGAGTAATTTGGTAAAAATTTGCTGACCTGCTTTTATTCTTTCCTCCTTTCTTTCTTCCTTTCCTTCCTTCCTTCCTTCCGTCCTTTCCTTTCCTTTCCCTCCCTTCCTTCCTTCTTTCCTTCTTTCTTTCCTTTCTTTCCTTTCTTCCTTTCTTTCCTTCCTCCCTTCCTTTTCTTTTCTTTCTTTCCTTTCCTTTTCTTTCCTTTCTTTCCTTTCCTTTCTTTCTTGACAGAGTCTTGCTCTGTCACTCAGGCTGGAGTGCAGTGGCGTGATCTCGGCTCACTGCAACCTCTGTCTCCCAGGTTCAAGCAATTTTCCTGCCTCAGCCTCCCGAGTAGCTGAGATTACAGGCGCCAGCCACCACACCCAGCTACTGACCTGCTTTTAAACAGCTGGGAGATATGGTGCCTCAGACCAACCCAACCCCATGTTATATGTCAACCCTGACATATTGGCAGGCAACATGAATCCAGACTTCTAGGCTGTCTTGCGGGCTCTTTTTTGCCAGTCATTTCTGATCTCTCTGACATGAGCTGTTTCATTTATGCTTTGGCTGCCCAGCAAGTATGATTTGTCCTTTCACAATTGGTGGCGATGGTTTTCTCCTTCCATTTATCTTTCTAGGTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAGTCTTCAGAATAGAAACTACCCATCTCAAGAGGAGCTCATTAAGGTTGTTGATGTGGAGGAGCAACAGCTGGAAGAGTCTGGGCCACACGATTTGACGGAAACATCTTACTTGCCAAGGCAAGATCTAGGTAATATTTCATCTGCTGTATTGGAACAAACACTTTGATTTTACTCTGAATCCTACATAAAGATATTCTGGTTAACCAACTTTTAGATGTACTAGTCTATCATGGACACTTTTGTTATACTTAATTAAGCCCACTTTAGAAAAATAGCTCAAGTGTTAATCAAGGTTTACTTGAAAATTATTGAAACTGTTAATCCATCTATATTTTAATTAATGGTTTAACTAATGATTTTGAGGATGAGGGAGTCTTGGTGTACTCTAAATGTATTATTTCAGGCCAGGCATAGTGGCTCACGCCTGTAATCCCAGTACTCCAGGAGGCCGAGGCAGGTGGATCAGCTGAGGTCAGGAGTTCAAGACCTGTCTGGCCAACATGGTGAAACCCTGTCTCTACTAAAAATACAAAAAAATTAACTGGGTGTGCTAGTGCATGCCCGTAATCCTAGCTACTCTGGAGGCTGAGGCAGCAGAATCACTTGAACCCGGGAGGCGGAGGTTGCGGTGAGCCAAGATCACACCACTGCACTCCAGTCTGGGTGACAGAGCAAGACTCCATCTCAAAAAATATATATATATATATATACACACATATATTTTATTTCAACTGTTAGACAAGAGTCCAAAGGCCAAAGAATAAAGTTTTAGGCCAGTCCTTTATTAGAAAATGAGTCAAATCCCAAAGCAAGTTTTTTTATGAGTTAATGAATATAAATGACTACATATTTTATGCCTTAAAAATCACTTTTAATGAATGGTGTTTTATGGCTTGTAAATCAGAGTTTTAATCAGTAAAGAAAGTTTTTAATCCTCAAAAACACGTTATCATAAAAGACACTGTTTGGCATCAAATGTGGTATTTGGCCATGTTCATTAGGGTCATTTTAGGAATCTCATACATTCTACTTAGCTATGCTTAATTCCTGATACCATGGCATTTTCTGAAATGTTTCAAGGATGACATCTCTGCTGTTTTTAATTTGGTAATGATATCTGCTGATTTATTAAGTGAAAAAAGTAATGGTGTCATTACCTTGGATGAAGAAACAAAAATAAAGCATTTGCCACATTTTTCAACTTTGTTTTCCTTTCTTACAAAATTGCTATAAGCTCATTGCCCCCAAATTGGACAATATAGGGAATAAAAAAGATAATTTGGGGTGGGGTTAGACACGGGTCTTGTTATGTTGCCGAGGCTGGTCTCTAACTCCTGGCCTCATGCAATCTTCCTACCTTGGCCTCCCAAAGTGCTGGGATTATAGGTGTGAGCCACTTCACCAAGCTGAGATGCCACCTCTTAAAAGAGAGAATAAGGACAGATTACAGCCACTGCTCATGCCTGTAATGTCAGTACTTTGGGAGGCCAAGGTGGGAGAATTGCTCGAGGCCAAGAGTTCAAGACCAGCCTGGGCAATGTAGCGAGACCTGATCTCTATGAAAAGGGGGGTGGGGGGGAAAACTAGCTGGGGCCAGGCGTGGTGGGTGGCTTACGCCTGTAATCCCAGCACTTTGGGAGGCCGAGGCGGGCAGATCACCTGAGGGCAGGAGTTCAGGACCAACCTGACCAATATGGAGAAACCCTGTCTCTACTAAAAATACAAAATTAGCCAGGCTTGGTGGCTTATGCCTGTAGTCCCAGCTACTCGGGAGGCTGAGGCAGGAGAATCGCTTGAACCTGGGAGGCAGAGGTTTCAGTGAGCTGAGATCGCGCCATTGCACTCTAGCCTGGGCAACAAGAATGAAACTCCATCTCAAAAAAAAAAAAAATCAGCTGGAAGGTGGCAAACACCTGTGGTCCCAGCTACTCAGGAGGCTGAGACAGGAAGATCACTTGAGTCCAGGAGGTCAAGGCTGCAGGTGAGCCATGTTTGTGCCACTGCACTGCAGCCTGGATGACAGACCGAGACCCTTCTCAAAAAAAAAATTTTTCCCGGTATTTTTTTTTGGGGGGGGGTTTAATTCTTGTTGCCCAGGCTGGGGTGAATTGGGGAATTTTGGGTTAAGGGAACCTTCGGCTTCCTGGGTTGGGGGGTTTTTCCTGTTTAGGCTTCCCCAGTAGCTGGGATTACAGGCATGCACCACCACGCCCGGCTAATTTTTTGTATTTTTAGTAGAGACAGGGTTTCTCCATGTTGGTCAGACTGGTCTCGACCTCTTGACCTCAGGTGATCCGCCCACCTTGGCCTCCCAAAGTGTTGGGATTACAGGCCTGAGCCACCGCACCCGGCCTGTACTCTTATTCTTTAATAATAAAATATTTCTGTGTTTCTTTAGTCATTTTACATAAACTTTTATTTATTTATTTATTTTTATTTATTTATTTTTTTGAGACGGAGTCTCGTTCTGTTGCCCAGGCTGGAATGCAATGGCTCAATCTCAGCTCACTGCAAGCTCTGCCTCCCGGGTACACGCCATTCCCCTGCCTCAGCCTCCCTAGTAGCCGGGACTACAGGCGCCCGCCACCACGCCCAGCTAATTTTTTTTTTTGTATTTTCAGTAGAGACAGGGTTTCACTGTGTTAGCCAGGATGGTCTTGATCTCCTGACCTCGTGATCCACCCGTCTCGGCCTCCCAAAGTGCTGGGATTACAGGTGTGAGCCACCGTGCTCGGCCCATAAACTTTTATTTTTAAAATAATGTCATGATAAATAATATTGCTTAGGTGTCTTTAATATATTAGTAACATTTCTGTTTTATTGTACATCAACATTTATATTCAAATTAATGGGTGAAGAGTACTCCATTGGACTAGGTATATCGTAATTTAATCTCCTATTATTGGACAACTACATTGTTTCTAAAATTATACTATTCCTATGACTAAACCTTTGCATATATCTTTTATCTCCCTAGGATATATTTCTAAAACTAGCATTGTTGACTGAAAGTGTAAATACGTGTTAAGGTGTTTGCTACATAATGCCATATTTCCTTTTTAGGAAACTAAGCTACTTTGGATTTCCACCAACACTGTATTCATGTACCCATTTTTCTCTTAACCTAACTTTATTGGTCTTTTTAATTCTTAACAGAGACCAGAACTTTGTAATTCAACATTCATCGTTGTGTAAATTAAACTTCTCCCATTCCTTTCAGAGGGAACCCCTTACCTGGAATCTGGAATCAGCCTCTTCTCTGATGACCCTGAATCTGATCCTTCTGAAGACAGAGCCCCAGAGTCAGCTCGTGTTGGCAACATACCATCTTCAACCTCTGCATTGAAAGTTCCCCAATTGAAAGTTGCAGAATCTGCCCAGAGTCCAGCTGCTGCTCATACTACTGATACTGCTGGGTATAATGCAATGGAAGAAAGTGTGAGCAGGGAGAAGCCAGAATTGACAGCTTCAACAGAAAGGGTCAACAAAAGAATGTCCATGGTGGTGTCTGGCCTGACCCCAGAAGAATTTGTGAGTGTATCCATATGTATCTCCCTAATGACTAAGACTTAACAACATTCTGGAAAGAGTTTTATGTAGGTATTGTCAATTAATAACCTAGAGGAAGAAATCTAGAAAACAATCACAGTTCTGTGTAATTTAATTTCGATTACTAATTTCTGAAAATTTAGATCTAGATAAAGCTATAGTGTGGATTATTTTATGTATATTTACTTGAGAAAATAATTATTAAATATTAGTGGAAAAGCTATACTTTGGGTATGATATAGGACTTTCGAATTGGAATTTTCCTTTCTATCTGTAAAAGCAAGTAGGTATAGTTTTATTCCCCAGAAGGCATCTTTTTCTCCCCCTTGTCTCACATGGGTGAATTTACCAGCATATTTAACTAAATTCAGACTGGTTCCAAATGTACTGCCAGATAGTAGCATTTCTCTAGTGTTTGTTTTCATCCTGGCTTGTAAGAATGCCCTGCCACTTCTGCCCTGCAATATCCCTTGCTATTAGGATTTTGGCATCACCTTGGGTCCTTAATGCCAGAAATGGGAATTGCTTCATACTGTGGAAAAATACCCATTAAAATATTAAGACCAGTAAAACCTCGTTTCTGCTTGGGCTATTTGTGGATTTCAGACATCCTGAGAAGTTTACCACCCCTGTAATTAATTGTCATTGTCATCACTTCATAATAAAAATAATTGCATGGCCGGGCATGGTGGCTCAAGCCTGTAATCCCAGCACTTTGGGAGGCTGAGGTGGTCAGATCACCTAAGGTCAGGAGATCAAGACCAGCCTGACCAACATGAAGAAACCCCATCTTTACTAAAAATACACAATTAGCCGGGCGTGGTGGCGCATGCCTATAATCCCAGCTACTCAGGAGGCTGAGGCAGGAGAATTGCTTGAACCCGGGAGGCGGAGGTTGCGGTGAGCCGAGATTGCACCATTGCACTCCAGCCTGGGCAACAAGAGCGAAACTCTGTCTCAATAATAAGAAGAAGAATTGCGTGAATATTTCTTTAAAACTATGATGAGATAACATACCAGATTATCAAATGGATTCAGTAGTGGGTGTGCCATTTATTGCACACTGAGAGATGACCAAGTCATTCTGAAATATCTTTATTAATATATCCTTCCTAGGATTTTTCATCCTAACTTCTCCATAGGTAGTTACTTAGCATAACATCTCTGTGGCCAGATGTATCCCACTACTAAAAGGGCAAAGTAAGCTGTGGCTGCCCTGGTAGATACAATGAGTAAGTGCACAGTGATGGCTATAAATGTTTTCATCTCATAATCCCATGTCCAGACCAGCAATTTGCTCTGAAAGCTCTTACCTGTGTCTGTTTCAATGGCTCTTGATCACTTGCCTGCACGTCCAGAATTCCTTATTTATTCATTGAAAATTAGCGTTCTTTATCCCTTTGTTTTGCAAGTTCAGCTTTTTAGAGATGGCTAAAATGGTCTAATCTTTCTTGGCAAAGGCAATTCTGAGCTGCAGATTAGACTACAAGTGGCTTGGGTACATGTTGTCTTTAAACAAGCGAAGAGGAAAACTTTGAGCTCTATTCAGACTTGGTGAAGTGTGGTAAATTTATGATGAAAGCTACTGACTGTATTACACATGATTAATTCTGAAGCCCATATTAAGATGATCTTTTCAGCAGTTCAGCATTGCTCTTCTAACTGAACAGTTTCAAGGCTGGGATTTCAGCAATTAATCAGTTCAGAATTGCTAATGATCTGGCGGAGGGTGGTAGCAAAAGGGGGAGGATGTCATTAGCTTCTCTAGCCTGCCTTTTTTCAGTGCCCTGTGGCAGTATGGAGTGAGGCAACATGAAAGAAAGATGGCCTGACCTTCATGGCAGTATTGTGCAACACGTAAATACTGGTGTGAGTGGCTGTGGCTATGGCTAGTAAATGATGGCCCTTGGTAAACAAAGTTATTTATCAGACAATACCTACCAGCTAGGTCAACTGTGCCCATAATTGATCTGGTTAATTTCTTTTGCTGCCTATTGATTTTTATTTGGTTGATAGATAATAGCTAGAGGACTCTAAATTTCTTTGGGGAAGAACATGAACCCCTTCTAAGCCTTCTTACGAGAGAATTGATCGCTTTTGCACTGACCTTTAGTAACATCCTGATTTCAGTGTTTTGTAACTATCAGAGGGTTGAGTCTTGGTTTTAAGCCATGTATATCTGTAGCATAACTTTCTGTGTAGGCTAGTTACCTCTCAGCTTATAAAGTGTAGGCTGATAAATTTATAGTACAGTAGAGTGTCACTATGCAAAGAAACGATCTTAGGGAATCGAATGATATCTGCTATTAAAGCAAAATTAATATATATTTTTTCTTTTTACTTTTTTTTTTTTTTAAAGACATGAAATCTCACTGTATTGCCCAGGCTGGTCTTGGTCTCAGACTCTTGAGCTCAAGCAGTCCTCCCACCTCAGCTTCCCAAAGTGCTGGGATTATAGGCATGAGCTGCCGTGTCTGGCCCAGTATATATTTTTTAAGTTTTAAGTTTTGTGGTACGTAGTAGGTTTATAATATTATTTTGAATCCTTAGTTGTAATTTTATGTCTGCTGATGTGTACATAATTTTTATTAAACTATTTATTTGAGACTTCAGGTATCTTTTTTTTTTTTTTGAGACGGAGTCTCGCACTCTCGCCCAGGCTAGAGTGCAGTGGCGCCATCTCGGCTTACTGCAAGCTCTGCTTCCTGGGTTCACGCCATTCTCCTGCCTCAGCCTCCTGAGTAGCTGAGACTACAGGTGCCCGCCACCACGCCTGGCTAATTTTTTGTATTTTTAGTAGAGACAGGGTTTCACCGTGTTAGCCAGGATGGTCTCGATCTCCTGACCTTGTGATCTGCCCGCCTCAGCCTCCCAAAGTGCTGAGATTACAGGCGTGAGCCACCGCGCCCAGCCGAGACTTCAGGTGTCTTAGAATTTTTTAAATGTACCCTTTCTGAGAAAAACAGAGACTTAAAGCTAGGATAACTGGTATTCTATTTTTTTTTTTTTTTTTTTTTTTTACCTCCAGCCTGGGTGACAGAGCAAGACTCTGTCTAAAAAAAAAAAAAAAAAAATTCACTTTAAATAGTTCCAGGACACGTGTAGAACGTGCAGGATTGCTACATAGGTAAACATATGCCATGGTGGAATAACTAGTATTCTGAGCTGTGTGCTAGAGGTAACTCATGATAATGGAATATTTGATTTAATTTCAGATGCTCGTGTACAAGTTTGCCAGAAAACACCACATCACTTTAACTAATCTAATTACTGAAGAGACTACTCATGTTGTTATGAAAACAGGTATACCAAGAACCTTTACAGAATACCTTGCATCTGCTGCATAAAACCACATGAGGCGAGGCACGGTGGCGCATGCCTGTAATCGCAGCACTTTGGGAGGCCGAGGCGGGCAGATCACGAGATTAGGAGATCGAGACCATCCTGGCCAGCATGGTGAAACCCCGTCTCTACTAAAAAATAAAAAAATTAGCTGGGTGTGGTCGCGTGCGCCTGTAGTCCCAGCTACTCGTGAGGCTGAGGCAGGAGAATCACTTGAACCGGGGAGATGGAGGTTGCAGTGAGCCGAGATCATGCCACTGCATTCCAGCCTGGCGACAGAGCAAGGCTCCGTCTCAAAAAAAAAAAAAAAAAACGTGAAAAAATAAGAATATTTGTTGAGCATAGCATGGATGATAGTCTTCTAATAGTCAATCAATTACTTTATGAAAGACAAATAATAGTTTTGCTGCTTCCTTACCTCCTTTTGTTTTGGGTTAAGATTTGGAGTGTGGGCCAGGCACGGTGGCTCACACCTGTAATCTCAGCACTTTGGGAGGCCGAGGCGGGTGGATCACCTGAGGTCAGGAGTTCGAGACCAGCCTGGCCAACGTGTTGAAACCCCGTCTCTACTAAAAATATAAAAATTAGGTGGGCGTGGTGGCAGGCACCTGTAATCCCAGCTACTCAGGAGGCTGAGGCAGCAGAATCGCTTGAACCCAGGAGGTGGAGGTTGCAGTGACCCAAGATCGCACCATTGCACTCCAGCCTGGGGACAAGAGCGAGATTCTTGTCTCAAAAAAAAAAAAAAAAAAAAAAGGTTTGGAGGGTGGTGAGCTGAGATAGTCAACTATTAACTCCTATCTACCTGCTGGGACTACACTGGTGAGGTGGAGCCTAAGTCCTAAAACAACAAGTGAGGCAGCTGGACGCGGTGGCTCGCATCAGTAATCCCAGCACTTTGGGAGCCTGAGGCGGGCAGATCACAAGGTCAGGAGTTCGAGACCAGCCTGGCCAATATGGTAAAACCCAGTCTCTACTAAAAATACATAAATTGGCTGGGCGTGGTGGTGTGCACCTGTAATCCCAGCTACTTGGGAGGCTGACACAGAAGAATTGCTTGAACTCTGGAGGCTGAGGTTGCAGTCAGCTGAGATCCTGCCACTGCACTCCAGCCTGGCGACAGAGTGAGACTCTGTCTCAACAACAACAAAAGAAAGAACAAGTGAGGCAAAACCTGGAGACCCCAGCTTCATGTAACACCTAGTTTGAGTATTGTTGAGAGTTTTTCAGGAAAAAAGTCTGATAACAGCTCCGAGATAGTCTTAACATATGAAAAAGCAAAAAAGGGAGGAGACAGATCATTTGTCCTATACCTTTCTCTTTTAAGGTTTTAATTATAACTTGTGTAATACAGGAGACCTCTGGGTGTTTTTAGTTGACTATAAACTAAATCTGAGTACACATTTCAGGGCTGCTAAAAATGCTTATTTGAAACTGGGCCGTATTAACACAAGCAGAGGCTCTGGAGCAAGTGAAGTACAGATCCAGAGCCCCACTGTATTCTCCAATGGAGTGATTGCCTGAAAGATGATGTCAGTTTTAAGCACCGTGCTTGGTTTTTAACATGGTCACTGACAAATTGGAGAGTGTTTATCCAGAGGTAGATGGTAAAGATACATAAAAGTAACTTGAAATACTGTCTTTTGAAGAAGAAATGAGAAGATTTAAGGAAATAAGACACTGTCTTCAAGTATCTGAAGAACCGTTACCCGGAAGAGAACTGTTATCTGGAACAGGATTAAGACTCACTCATGGGGCTCCAGAAAGCAGACGAGTGCATGGAGGACGCAGAAGATGCAGATTGTGTGGCTCAACTCTAAAATCTTTCTAACAAAATTAGTTCTCTGGATGTGTTCCAGTTCACTTGATGATGATTCTTTTGTTTTTGTTTTTGTTTTTGAGGTGTAGTTTTTCACTCTTGTTGCCCAGGCTGCTGGAGTGCAATGGCACGATCTTGGCTTGCTGCAACCTCCCCCTCCCGGGTTCAAGCGATTCTCCTGCCTCAGCCTCCCGAGTAGCTGGGATTACAGGAATGCACCACCATACCTAATTTTGTATTTTTAGTAGAGACAGGGTTTTTCCATGTCAGTCAGGCTGGTCTTGGACTCCCGACCTCAGGTGATCCACCTACCTCGGCCTCCCAAAGTGCTGGGATTACAGGTGTGAGCCATCGCGCCTAGCCTATGATGATTCTTTTCACAGAGATACAGGCACTTAAGGAGAGGATCTAAACCCCTTGGACACATTGCCGTTGAACTTCTAAGATCTTAGGTTTCCACTTACTCATGAAAATTATACCACAGGGTCAGAGGGTAGTGTTCATTGGAGCCAGGTGCCAGAACAAGTTATTACAAACTACTATTTTAGAGAAAAATGTCATTAAAGTTTAAGATACCTTAAGCTATAGGTTTGCATCAAAGTTAATGAAAGGTAAAAAGATGCCAAGCGTGGTGGCTCAGGCCTGTAATCCCAGCGCTTTGGGGGGCCAAGGCGGGCAGATCACGAGGTCAGGAGATCGAGACCATCCTGGCTAACACGGTGAAACCCCATCTCTAGTAAAAATACAAAAAATTAGCCGGGCATGGTGGCGGGCATCTGTAGTCCCAGCTACTCAGGAGGCTGAGGCAGGAGAATGGCATGAACCCAGGAGGCAGAGCTTGCCGTGAGCTGAGATCCAGCCACTGCACTCCAGCCTGGCTGACAGAGCAAGACTGCATCTCAAAAAAAAAAAAAAAAAAAAATGCAAATCAAATCTAAAGTAGTTCAGTCTTTAAACTCAAAGCCAATACATTTGCTTTGAACTACAAATGAACTGAAGTTTTTAAGTGTAATAAATGTTACTAAATCGGCTTTTGTAGCAGTTAAACAAAAAACTTCAAAAATTGTAAGGATTCTGTGAGGGAGCATGGCTGCTGCTGCTGCTGCTGCTTGCAGATAGCCTGCTGTGTTTAGGATTTAGTTAAATACATTTCTCCTGTTTAAAACTAAATGGTCTTTCCTTAGTTTGCTTAGTTCTTCAGAAGGGCCTTTGAAACACTGGGAAATAAACAAGTGATTCTTTAGCTACTGCTTTCTGAAATACTTATATAAAAGCTCTGCACTGTATTCTCCCATCCCTCTCAGGGGAATATTAGAGGGTTAGGACTCCCCAGGTAGACATTCTAGGGGTGAAAATTTGTCATTACATTGACATTTCAGATTTAGGTTTTCAACAATACTGTTTTCTTCTTTCACATATTGCCATCTAGTAATATAGATGTTCTCCGTCCACATTAATCAAAACTATTGACATGGATAATTCCTAATTCCTTGAACACTATAATGGAGATCTATAGCTAGCCTTGGCGTCTAGAAGATGGGTGTTGAGAAGAGGGAGTGGACAGATATTTCCTCTGGTCTTAACTTCATATCAGCCTCCCCTAGACTTCCAAATATCCATACCTGCTGGTTATAATTAGTGGTGTTTTCAGCCTCTGATTCTGTCACCAGGGGTTTTAGAATCATAAATCCAGATTGATCTTGGGAGTGTAAAAAACTGAGGCTCTTTAGCTTCTTAGGACAGCACTTCCTGATTTTGTTTTCAACTTCTAATCCTTTGAGTGTTTTTCATTCTGCAGATGCTGAGTTTGTGTGTGAACGGACACTGAAATATTTTCTAGGAATTGCGGGAGGAAAATGGGTAGTTAGCTATTTCTGTAAGTATAATACTATTTCTCCCCTCCTCCCTTTAACACCTCAGAATTGCATTTTTACACCTAACGTTTAACACCTAAGGTTTTTGCTGATGCTGAGTCTGAGTTACCAAAAGGTCTTTAATTGTAATACTAAACTACTTTTATCTTTAATATCACTTTGTTCAGATAAGCTGGTGATGCTGGGAAAATGGGTCTCTTTTATAACTAATAGGACCTAATCTGCTCCTAGCAATGTTAGCATATGAGCTAGGGATTTATTTAATAGTCGGCAGGAATCCATGTGCAGCAGGCAAACTTATAATGTTTAAATTAAACATCAACTCTGTCTCCAGAAGGAAACTGCTGCTACAAGCCTTATTAAAGGGCTGTGGCTTTAGAGGGAAGGACCTCTCCTCTGTCATTCTTCCTGTGCTCTTTTGTGAATCGCTGACCTCTCTATCTCCGTGAAAAGAGCACGTTCTTCTGCTGTATGTAACCTGTCTTTTCTATGATCTCTTTAGGGGTGACCCAGTCTATTAAAGAAAGAAAAATGCTGAATGAGGTAAGTACTTGATGTTACAAACTAACCAGAGATATTCATTCAGTCATATAGTTAAAAATGTATTTGCTTCCTTCCATCAATGCACCACTTTCCTTAACAATGCACAAATTTTCCATGATAATGAGGATCATCAAGAATTATGCAGGCCTGCACTGTGGCTCATACCTATAATCCCAGCGCTTTGGGAGGCTGAGGCGCTTGGATCACCTGATGTCGGGAGTTCAAGACCAGCCTGACCAACATGGAGAAACCCCGTTTCTACTAAAAATACAAAATTAGCCGGGCTTGGTGGCACTTGCCTGTAATTCCAGCTACTCGGGAGGCTGAGGCAGGAGAATCACTTGAACCTGGGAGGCGGGGGTTGCAGTGAGCTGAGATCGCATCATTGCACTCTAACCTGGGCAACAAGAGCAAAACTCCATCAAAAGAAAAAAAAAATCGGGTGCAGTGGCTCATGCCTGTAATCCTAACACTGTGGGAGGCCAAGACAGGCAGATTGCCTGAGCTCAGGAGTTCGAGATCAGCCTGGGCAACATGGTGAAACCCTGTCTCTACTAAAATACAAAAAATTACTCAGCGTGGTGGCATGCGCCTTTAGTTCCAGCTACTCAGGAGGCTGAGGCAGGAGAATCTCTTGAACCCGGGAGGTGGAGGTTGCAATGAGCCAAGATCGTGCCACTGCACTCCAACCTGGCAACAGAGCGAGACTCCGTCTTAAAAAAAAAAAAAATTTTGCAGCGCAAACCAGGATATCCTCTGTTCTCATTTGTTCTAGATTTCAAAAGAAACAGTCCTTTCTTTGGGGAAAAGAGAAAGGAAAAGGAGTTTTATAAAAGGAAAGAAAAGATTCATAAGAACAAGAAGTGGGCCCACTTGCATATACCTTTGTAGAAAACTGTTCACTGTTGTTGAAGAAAAGCTCTTCATATTAATATGCAGTCCAGATGCAGTGGCTCACACTTATAATCTCAGCCCTTTGGGAGGCTGAGACAGGAAGATTACTTGAGGCCAGGAGTTTGAAACCAGCCTGGGCAACATAGTGAGACTCTGTCTCCACAAAATTTTTTTTTAATTAGCCGGGCATGGCAGTGTGCTTCTGTAGTCTTAGCTACTGAGGAAGCTAAGCCAGAAGAATCACTTGAGCCCAGGAGTTCAAGGCTGCAGTGAGCTATGATCATACCATTGCACTCTTGCACTTGCACAGAGCAAGACCCTGTCTCTTAAAAAAAAAAAAGTGTGTGTGTGCATATGCATATATACATATATATACATGCAAATGTATCTGTTTATAATTCAGATTGCTTCAAAAAGATGTTGCACTTTATGATACTGAGAACAGTGAGAAGTAAATAAGATAGAGTGTAGGAGGAGGAATAATTTCAGAACAGCCATCTGAGAACTTCTGTGACAACAGATCAGGCAAAATGAAATGTGAAAGTAATTTTATAGGCCAGGCGTGGTGGCTCATGCCTATAATCCCAGCACTTTGAGTGGCCAAGGCAGGTGGATCACTTGAGGTCAGGAGTTCGAGACCAGCCTGGTCAACATGGTGAAACCTTGTCTCTACTAAAAACACAAAAAAATTAGTCGAGCGTGGTGGCATGTGCCTGTAATCCTAGCTGCTGGGGAGGCTGAGGCAGGAGAATCACTTGAACCCGGGAGGCGGAGGTTGCAGTGAGCCTAGATTGCACCACTGCACTCCAGCCTGTGAGACAGAATGAGACCCTGTCTTAAAAAAAAAAAAAAAGTAATTTTATAAACTATTGTGCACAATTCGATGTATTCATAATTAATTAAATGATTATTTTTGTTGGTTTTAACTTTTATTCAGTGGCTATTTATTGGGAGCCTACTGTGTTCTGGGCACTAGGAATGCAACAGTAAATAAGACTAACTAAGTCCCTGGTAGGATTCAGGTTCTGTCGAGGGGAGATACACAATAAAGATGAATTTAAGATAACAATAAATGCTATGGAGAAATATACAGAACAGTGGAATAGTATTAGCTGTCAAAGGTTGTTGATTACTTTCGTTTAAGGAGGCCAGGGAAAGCCTTTCTGAAAAAATTGAGCTGAGACCTAAATAACAAGAAATAATTGTCCTTGAAAAATGAAGGGAATGCATCTTATAGGCAGAGGAATAGCAAACATAAAGGTCTTGAGGTAATAATGAGTGTGGTTTTTTGATTTCTGTATTTTGGTTTTTTTGAGATGGTGTCTCCCTCTATCCCCCAGGCTGGAGTGCAGTGGCACAATCTTGGCTCACTGCAAACTCTGTCTCCTGGGTTCAAGCAATTCTCCTGCCTTGGCCTCCTGAGTAGCTGGTATTACAGGCACGCGTGCTACCACACCCGACTAGTTTTTATTTTTAGTAGAGATGGGGTTTTACCACGTTGGTCAGGCTGGTCTCAAACTCCTGAACTCAAGTGATCCAACCACCTCAACCTCCCAAAGTGCTGGGATCACAGGCGTGAGCCACCATGCCCGGCCAGAGCTTGGTTTATTTTTTAAAAGATAGGCCAATGTTGGTCGTGTGTGGTGGCTCGTGCCTATAATCCCAGCACTTTGGGAAGCCAAGGCAGGCAAATCACTTGAGGTCAGGAGTTCGAGACCAGCCTGGCCAACATGGTGAAACCCCATCTCTACTAAAAATACAAAAAACTAGCATGGTGTGGTGGTGTGTGCCTGTAATCCCAGTGCCTGTAATCCCAGCTACTCCAGAGGCTGAGGCAGGAGAATCACTTGAACCGAAAGGTAGGAGTTACAGTGAGCCAAGATCGCATCACTGCACTCCAGCCTGAACGACAGAGCAAGACTCCTGTCTCAAGAAATAATAATGATAAAAGGTTCGGGCACAGTGGCTCACACCTGTAATTCCAGCACTCTAGGAGGCCGAGGCAGGCAGATCCCCTGAGGTCAGGAGTTTGAGACCAGCCTGGCCAACGTGGCAAAACCCCATCTCTACTAAAAAATGCAAAAATTAGCTGGGCACGGCTGGGTGTGGTGGCTCATTCCTGTAATCCCAGCACTTTGGGAGGTCAAGGCGGACAGATCACTGAGGTAGAAACCCTGTCTCTACTAAAAATACAAAAATTTGCCCAGCGTGGTGGCGCGTGCCTCTAATCCCAGCTACACGGGAGGCTGAGACAAGAGAATCACTTCATCAACCCGGGAGGTGGAGGTTGTGGTGAGCTGAGATCGCACCATTGCACTCCAGCCTGGGCAACAAGAGTGAAACTCCATCTCAAAAACAAAAAAAAATTAGCTGGGAATGGTGGCATGTGCCTGTAATCACAGCTACTTGGGAGGCTGGGGCAGGAGAATCGCTTGAACCCAGGAGGCGGAGATTGCAGTGAGCTGAGATTGCGCCACTGCACTCCAGGCTGGGCGAAAGAGCAAGACTCCGTCTCAAAAATAATAATAATAATAATAATAGGCCAGTGTAGCTGGAGTAATTTGCAAATTATGTGTGGAGGCAGAGATTACACAAGGAATGGGAGAAGGTCATAGATGAGGGCCAGATCACATAGTATTTGGTGGTAAGGAATTCAGATTTTATCCTTGTGGTAATTGGTGGTGTGGAGATGGTTAAAAACAAGGTTGGTTTGGGATGGGTTTGAAGAGAGGACTTGCTAATGGATTAAATTTGGAGGATAAGGTAAAGAGAAATTGAAGGAGTGACACTTGGGTTTTGGCTTGAACAATAGATCTTGTTAGTAATATTAAATTAGATGAAGAAGGCATGGTAGGGAATATGGGGGAGTGGGAAAGGCAGGAAGCAGGAATGGAACCAGGAACTCTGTTTTAGATGTGAGAATTTGTTGTTGTTGTTGTTGTTGTTGTTGTTGTTGTTGTTGTTGTTGTGACAGCATCTCGTTCTGTTGCCCAGGCTAGAGTGCATGGAGTGCGGTAGCACGATCTCAGCTCACTCCAACCTCCGCCTCCCGGTTCAAGTGATTTTCCTGCCTCAGCCTCCCGAGTAGCTGGGATTACAGGCACCTGCCACAATGCCTGGCTAATACTTGTATTTTTAGTAGAGATGGGGTTTTACCATGTTGGCCAGGCTGGTCTTAAACTCCTGACCTCAGGTAATCCACCCACCTCGGCCTCCCAAAGTGCTGGGATTGCAGGTGTGAGCCACTGTGCCCGGCCAGATGCATGAATTTTGAGATGTATACTAGACTTCTGGATAGAGAAGTTAAGTAGGCAGTTGGACACATTGTATGAAGCTCAGGGGTACAAGGAGGACTATGAACATGGGAGTCTTCTGACAAATTTATCACTAGACTCCTCATTCAAGTAACTAGGAAATGTCAGATATTCTTCCCCTAGTAATAGCCAGTGGTTATACTCTTGCCTTTAGTTTTCTTCACAATACTCTTGGCAACACATAAGGCCTTCCCTACAATCTGAGTTTCAGTCAGAATTGTTTCTGAGCGTTCTTCCTCAAATTTCTCCCCAGTCTCATTATTCTTTATTCTCATGTCCATGACCAGTCATAATAGTAATTATGAAAAACCTCTAACTTTCTTTAGTGCATTGAATGTATATTTTATCATTTTGGTTGTGTTAACTGTAAATCTCTCAGTGGAAATCTGAAAAGCCTTTATTTCCTTAGATGATAATATACAATTGATTTAGGAGATAGGGAATTTTTCAGTTACCTTTATAACAGCACAGTATTAGCAGTCTAATCTAAATGCTAAGTGAATGTTTTGAGAGGAGATAGATGTTGAAAATTAAAATACATTAAGTCCCAGTGAGGTGAAAAGCCGATTGTTAAGTTCTGCACACAAAAGATTTGCTTCAGTGAATTGATTTCAACAGCTGAGATCCTAGTCATTTCACCTGGTCTACCAAAAAGAATGATTTTACTTGCTTTTGGTCAAATCTCTGCCCAGCAATTCTTTTTCTTTCTTTCTTTTTTTTGTTTTATGTGTGTGTGTGTGTGTGTTTTTTTTTAGCAGAGTCTCACTTTGTCACCCAGGCGGGAGTGTGGTGGTATGATCACAGTTCACTGCAGCCTCCAACTCCTGGGCTCAAGTGATCCTCCAGCTTCAGCTTTTCAAGAAATTGGGACTGCAGGCACATGCAACTATGCCTGGCTGAGGTTTTATGTATCTTTTTTCTAGAGAAGGGGTCTCACTGTGTTGCCCAGCTGGGTCTCCAGCTCCTGGTCTCAAGCTGTCCTCCTGCCTCAGCCTCCCAAAGTGCCAAAGTGCTAGGGTTATAGGTGTGAGCCATTGGTGCCCAGCTACTGCCTGCCTGGCAATTCTGAATGCCTTAAATTTTTTTTTTTTTTTTTTTTTTTTTTGAGACAGAGTTTCACTCTGTCACCCAGGCTGGAGTGCAGTGGCATGATCGTGGCTCACAGCAACCTCTGCCTCCTGGATTCCAGCAATTCTCATGCCTCAGCTTCCCGAGTAGCTGGGACTACAGGTGCATGCCACCACGCCCAGCTAATTTTTGGTTTTTTTGTTTGTTTGTTTGTTTGTTTTGAGACGGAGTCTCGCTCAGTTGCCCAGGCTGGAGTGCAGTGGCGTGATCTCCGCTCACTGCAAGCTCCGCCTCCCGGGTTCACGCCATTCTCCTGCCTCAGCCTCCCGAGTAGCTGGGACTACAGGCGCCTGCCACTACACCCGGCTAATTTTTTTGTATTTTAAGTAGAGACGGGGTTTCACCGTGTTAGCCAGGATGGTCTCGATCTCCTGACCTCGTGATCCGCCTGTCTCGGCCTCCCAAAGTCCTGGGATTACAGGCGTGAGCCACCACACCCGGCCTAATTTTTTTTTTTTTAATTTTATTTTTAATTTTTTGAGATGCGAGATGGAGTCTCGCTCTGTTACCCAGGCTGGAGTGCAGTGGCACCATCTCAGCTCACTGCAACCTCCACCTCCTGCATTCAAAAGATTCTCCTGCCTCAGCCTCCCAAGTAGCTGGGATTACAGGTGCCTGCCACCACGCCCAACTAATTTTTTGTATTTTTAGTAGAGATGAGGTTTCACCATGTTGGTCAGACTGGTGTCGAACTCCTGACCTCAAGTGATCTGCCTGCCTCAGTCTCCCAAAGTGCTAGGATTACAGGGGTGAGCCACTGCGCCTGGCCTGAATGCCTTAAATATGACGTGTCTGCTCCACTTCCATTGAAGGAAGCTTCTCTTTCTCTTATCCTGATGGGTTGTGTTTGGTTTCTTTCAGCATGATTTTGAAGTCAGAGGAGATGTGGTCAATGGAAGAAACCACCAAGGTCCAAAGCGAGCAAGAGAATCCCAGGACAGAAAGGTAAAGCTCCCTCCCTCAAGTTGACAAAAATCTCACCCCACCACTCTGTATTCCACTCCCCTTTGCAGAGATGGGCCGCTTCATTTTGTAAGACTTATTACATACATACACAGTGCTAGATACTTTCACACAGGTTCTTTTTTCACTCTTCCATCCCAACCACATAAATAAGTATTGTCTCTACTTTATGAATGATAAAACTAAGAGATTTAGAGAGGCTGTGTAATTTGGATTCCCGTCTCGGGTTCAGATCTTAGCTGATAAGTGGAAGAGCTGGGACTTTAAGCAGATGAGAATCTAAAGACTTTGCTCTTTTCACTTCACTGGGGTGTCTTTCTCTCTCTCTCTCTTGCTCTCTCTCTCTCTTTTTTTTTTTCCCAAGACGGAGTCTCACTCCATTGCCCAGGCCAGAGTGCAGTGGTGCGATCTCAGCTCACTGAAAACTCATCTTGCCCAGGCTGGTCTTGAACCCCTGACCTTGTGATCCTCCCGCCTTGGCCTCCCCAAGTGCTGGGATAGGCGTGAGCCACCGTGCCCAGCCAATAATAGCTAAAATTTATATAATGTTCACTGGGCCAGGCACAGCGGCTCGTTCCTGTTATCCCAGCACTTTGGGAAGCTGAGGCAGGCAGATCGCTTGAGCCAAGGAGTTCGATACCAGCCTGGGCAACATGGCAAAACCCCATCTCTACCAAAAAAAATATACAAAAATTAGCCAGGCGTGGTGGCATGTACTTGTAGTTCCAGCTACTCGGAAGGCTGAGTTGAGAGTATCTCTTGAGCCCAAGAAGAGGGGACTACAGTGAACGGAGATTGCGCCACTGCACTCCAGCCTAGACGACAGACAGAAGATCTCAAAAGAAAAAAAAAAAAAAAAGATCACTTTATGCTGGGACTGCTCTAAAGGCCCAACCATGTTTTAACTAATTAACAATTTTATGACAACTCTATGAGCTATGTACTGTAATTATGCCTATATTACAGATGTGAAAATTGAGGCTCAGAGAGGTTGAATAAGTTGCTCAAAGTCACACAGGTAATAAGTGATGGAACTAGAAGTTGAACTCAGGAAGTCTAGCTCCAAGTCTAAATTCTTTGTTAATTTATTTTTCGGGCCAGAGTCTTACTCTGTCACCCAGGCTGGAGTGCAGTGCCACTATCTCTGCTCACTGCAACCTTCACCTCCCAAGTTCAAACCTTGTTCAATTCTTGTGCCTTGGCCTCCCAAGTGGCTAGGATTACAGGCATGTGCCACAACAACTAGCTAATTTTTTGTCTGATTCTGTTGGCCAGTCTGGAGTGCAGTGGCGCAATCTCAGCTCACTGCAGTCTCCAGCTCCCAGGTTCAAGTGATTCTCGTGCCTTAGCCTCCCAAATAGCTGGGATTACAGGCACGTGCCACCACACCGAGATAGTTTTTTGTATTTTTAATAGAAACAAGGTTTCAACATGTTGGCCAGGCTGGTCTCAAATTCCAGACCTCAGATCATCTGCCCGCCTCAGGCTCCCAAAGTGCTGGGATTACAGGCATGAGCCACTGCACCCGGCCTTAATTTTTATATTTTTATTAGAGATGGGGTTTTGCCATGTTGGCCAGGCTGGCCTTGATCTCCTGGCCTCCAGTGATCCACCCGCCTTGGCTTCCCAAAGTGCTGGGATTACAAGCATGAGCCACTGCACCCGGCCTCCAATTCTAAACTCTTAACAACAATACTATAGTTTCTTGAAAAGTTGTTGAAGGCTTCACGGAGGGAAAAAAAATGGAGCATTCTAACAACTTTGCAGATGAGACCCAAGAAGACTCAATGACTTTCTCCTGATCATATTGTAGCAGATGACTTAGCCAGAACTCTGACTTCCTCACAGGGAGAAAGTCTGCAAGATTTCACACTTACCTGTCAGGCCTGAGCTGGCTGCTTTCTCAGCTCCCTAAGTGCTATGTTCCCAGTCTGCTTTTCTTCCTTTTTCAAGTGTGCACTACCAGGCATTTCAGAACATCCCAGGCTGGTCGCGGTGGCTCACACCTGTGATCCCAGCACTTTGGGAGCCCAAGGCGGGTGGATCACCTGAGGTCAGGAGTTCGAGACCAGCCTGGCCAACATGGTGAAACCCCATCTCTACTAAAAATACAAAAGTTAACTGGGCGTGGTGGTAGGCACCTGTAATCCTAGCTCAGGATTACTCGGGAGGCTGAGGCTAGAGAATCGGTTGAACCCAGGAGGCGGAGGTTGCAGTGAGCCAAGATTGCGCCACTGCACTCTAGCCTGGGGACAAGAGGGAGACTTCATCTCAAAAAAAAAAAAAAAATCCCAGCTGGGCACAGCGGCTCACTTCTGTAATCCCAGCACTTTAGGAGGCCAAGGCAGGAGGATCACTTGAGCCCAGGAGTTCAAGACTAGCCTGGGCAACATAGTAAGACCCTGTCTCTACAAAAAAATTTAAAAATTAATTGGGTGTCGTAGCACACTCTTGTATTCCCAGCTACTCAGGAGGCTGAGGTGAGAAGAATGCTTGAGTCTGGGAGGTCGAGGCTGCAGTGAGCCATGATGGTGCTACTGCACTCCAGCCTGGCCAACATTGTGAGACCTTGTCTCAAAACAAAACAAAACATCCTTCTACTGAGCACTTTCTGTCCCTTTATAGAAACTTAAGAGGGAACCAGTAGAGGTAATTTCCTAAGGAAAACTGCTTTGGGACATGATCACAAATGAAGCCTGGAGTTTTGAACTGCTGAGGTCAGCCTGTTTTTACCTTCTGAGCCTATCAAGTAATTGTTCCAGATGCCAAGAAAAGCTGCTGGCCTTATTTCTGCTTCTGCCTTTACCACAGGGGAGCGCCATGTGAGCCAGTCCTCTGTTTTTCCTCCACTGTATGCTAGGCAGTATTAGCACCAGATTCTTCCCCTCTTTAAAAAGAAATTCTAGTGCTTTGGATTTTTTCCTCCATGCAGAATAGCAATGATGGAAAGTATGTGGTCAAAGTAATGACATTCTGAAAATACTAAATGTCACCATAGTATTTTTCTCTGGAAGAGAAATGTATATGTAGAGGTGAAACTTCAAATTTCTTTTTTTTTTTTTTTAAGACGAAGCTTTGCTCTTCTTGCCCAGGCTGAAGTACAATGGCGTGATCTTGGCTCACCGCAATCTCTGCCTCCAGGGTTCAAGTGATTCTCCTGCCTCAGCCTCCTAAGTAGCTAGGATTACAGGCATGTGCCACCACGCCCAGCTGATTTTGTATTTTTAGTAGAGATGGGGTTTCTCCATGTTGGTCACGCTGGTCTTGAACTCCCGACCCCAAGTGATCCACCCACCTCGGCCTCCCAAAGTGCTAGGATTACAGGCCACCGCGCCCGGCCTGAAACTTCAAATTTCTTTTTTTTTTTGAGACAGAGTCTCGCTATGTCACCCAGGCTGGAGTGCAGTGGCGCCGTCTCGGCTCACTACCAGCTCCACTCCACCTCCTGGGTTCACACCATTCTCCTGCCTCAGCCTCCCAAGTAGCTGGGACTACAGGTGCCCGCCACCATGCCCAGCTAATTTTTTGTATTTTTAGTAGAGACGGGTTTTCACTGTGTTAGACGGGATGGTCTCCATCTCTTGACCTCGTGATCCGCCTGCCTCAGCCTCCCAAAGTGCTGGGATTACAGGCGTGAGCCACTACGCCAAGCCCGAAACTTCAAATTTCTTATCTCATAACTAGGCATCCTTATCACTGAGTGTTAGCCTGGATATAAACATTCCTAATCTTTTGTACTTTTCATGTCAGCATTTGGCTCCACTTGGCTGCCTGGGGAGAACTTCTAGCATTATGAGCATGCAGGTCCTATCAACAGGTTGGGGGTGCGGTTTATTCATACAGGTAGTGAGAGTGGCACAGATGGATGCTGTCCCTTAAAACAAACAGACTTGTCTTTGGGAGCCTGAGGCGGGTGGATCATGAGGTCAGGAGTTCAAGACCAGCCTGGCCAACATAGTGAAACCCCGTTTCTACTAAAAATACAAAAAATTAGCCGGGTGTGGTGGTGTGCACCTGTAATCCCAGCTACTAGGGAGGCTGAGGCAGGAGAATCACTTGAACCCAGGAGGTGGAGGTTGCAGTGAGCCGAGATGGCACCATTGCACTCCAGCCCAGGCGACAGTGCAAGACTGCGTCTCAAAAAAAAAAAAAAAACACACAGACTTGTCCTACTGCCATTTCTTTTCACTCTGGCGGTAAAGTAAGAGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTTTCTGTCCGTCTGTCTGTCAAGGGGGAGGGTGACCACTTTCTAAAAGGCCATCCGTGTATTTTTAGCTTCCTGATTTTTTTCTCTATCGCAGTCTCTTTGAAGCCAGGTGAATTTTAGGCCTTGGCAATTTTCTTTTTATTGCAATGGGAAGGTCAAGACACTGAGAGTCACCCAAAACATATCCATCCAAAATGATACAATTTTAGGGTTTATTTTTAAGTGATACCCAAGTTATTTGCTAAGAACCTATGCCAGTGTGTTTATGAGAATTTGCACTGTCCCACACTGTTGCCACCAGCCACATGGGACTGTTTAAATTTAAATTTTACAAATTAGCCAGTCATGGTGGTGTGCACTTGTAGTCCCAGCTACTTAGGAGGCTGAGGCAAGAGGATTGCTTGAGCCCAGAAGTTCAATACTGCAGCAAGCTATGATCGTGCCACTGTACTCCAGCCTGAGTGACAGAATGAGACCTCATCTCTTCAAAAAAAAAGAAAAAAATTAAAATATGAAGTTTAGTTCTTCATTCACCCTAACCACATCTCCAGTGCTCAATAACTATATGTGACTCATGGCTACCTTATTAGCATAGATATAGAACATTGTGACTATCACAGAAAGTTGTTTTGAACAGTGTTGCCAAGCCCTGTAAGTGGAAGAGGCAGTGCAGTGTGATCTGTGTCTTCAGGAAACCAGGTAGTCAGACTAGTTCAATGAGGAGAGGCAGAACCTGGCTTCACTTCTAGATTAAAAACTGCTTAGGTGGCCTAAAGATACAATGGCCATTCTCAGAGTAGTGAGAAGGAAGGAACAGATGTTTAGGGGGCTAGAAGAAAGTCAGAGAGGGCCGGGCGCAGTGGCTTATGCCTGTAATCCCAGCACTTTGGAAGGCCAAGACAGGCAGATCACGAGGTCAGGAGTTCGAGACCAGCCTGACCAACATGGTGAAACCCTGTCTCTACTAAAAATACAAAAATTAGCCGGGCGTGGTGGTGCGCGCCTGTAATCCCAGCTACTCAGGAGGCTAAGGCAGGAGAATCGCTTGAACCCTGGAGGCAGAGGTTGCAGTGAGCCCAGATCGCACCACTACGCTCCAGCCTAGGTGACAGAGAGAGACTCCGTCTCAAAAAAAAAAAAAAAAGTCAGAGGAGACAAGGAGCATGTACACCTAAAATCAACATAGACCCCTCTGTTGATGGGGTCATAGTGAGTACTTGAGGTACCAAGTCTGGATAAACATCAAACTTCAGCCAATAACTTTGAGTTTCTAGCCATCCAAGCCTCTTATTAAACATACAGAAGGACCTTTTTTCCCTTGCATCTAACAAGTTAAAGCACCTGCAGAGATCATTAGGGAGGAGCCTTGGCCTGATTGGTGACAAAAGTGAGATGCTCAGTCCTTGAATGACAAAGAATGCCTGTAGAGTGCAGGTCAACTACATATGCACTTCAAGAAGATCTTCTGAAATCCAGTAGTGTTCTGGACATTGGACTGCTTGTCCCTGGGAAGTAGCAGCAGAAATCATCAGGTGGTGAACAGAAGAAAAAGAAAAGCTCTTCCTTTTTGAAAGTCTGTTTTTTGAATAAAAGCCAATATTCTTTTATAACTAGATTTTCCTTCTCTCCATTCCCCTGTCCCTCTCTCTTCCTCTCTTCTTCCAGATCTTCAGGGGGCTAGAAATCTGTTGCTATGGGCCCTTCACCAACATGCCCACAGGTAAGAGCCTGGGAGAACCCCAGAGTTCCAGCACCAGCCTTTGTCTTACATAGTGGAGTATTATAAGCAAGATCCCACGATGGGGGTTCCTCAGATTGCTGAAATGTTCTAGAGGCTATTCTATTTCTCTACCACTCTCCAAACAAAACAGCACCTAAATGTTATCCTATGGCAAAAAAAAACTATACCTTGTCCCCCTTCTCAAGAGCATGAAGGTGGTTAATAGTTAGGATTCAGTATGTTATGTGTTCAGATGGCGTTGAGCTGCTGTTAGTGCCAACATGTTAGTGAGAAAATATCTTTGGATAGGTAAAAATCAAGGAGGAGTTCTCCTCTTCCTAAACCATCTTAATTTACTTACATAGAAGAAAGCACAGCAGCTGGCCCACCACGGACGGGCCCAGAGCAGGGGAAGATTCTCGGTGAACATTTCTTTTTTTTTTTCTTTTTTTTTGAGGTCGAGTCTCTGTTGCCCAGGCCAGAGTGCAATGGCGCGATCTCGGCTCACTGCAACCTCCACCTCCCGGGTTCAAGTGATTCTCCTGCCTCAGCCTCCCAAATAGCTGAGACTACAGGCGTGTGCCACCACGCCCGACTAATTTTTTGTATTTTTTTTTTAGTAGAGACGGGGTTTCACCGTGTTAGCCAATATGGTCCCGATCTCCTGACCTCGTGATCCACCCGCCTCAGCCTCCCAAAGTGCTAGGATTACAGGCATGAGCCACTGTGCCCAGCCCTCTCCATGAACATTTTCTAATTAAACTTGACACTTAATACAATGTTATGCTTAGGACTGCTATAAAGCTTACCTCTGGAGTTGCGCAGCACAAAGGCCTTGGTGTGTGTATAAATTTGGTTTGTTCTTTTCACAGCAAAAGCTACCCACCTTTGCCTCCTGTGCCTGCTTCTGCCCAGGGACTTAGGTCCTCTTACACCTTAGAGAAAGGCCTTAGCATCTGGTCACAGGCAGATGAGTGACAGCAAGAAAACCTGGCTGCAATGTAATTTTGTTTCCATCCTCTTTATTAGTTATCAATTGGATTTTTATGAAATTTCCAAGTTCCACTCAAGGATTTCTCAGTGTTTTTTTACTTTGGTATAGTGGAAACCAGGGTTGCCAGAAAGTATTATTTTGGGGGTGAGTTAGTCAACCTTCGTTCAGTCAGACAGACAGGAGCACCTCAGCAATTCCCAGAAACGGGCTGATGGGAAAGAGCAACATACATGAATGTCTTGAAGAACACAGCCAACAGAGCCCATTGGGCAGTTCTGATTTTCCAGGTACACAGCATCTCCACAGTCTCTTCTGATTTTTATTCCCCTGAGTATATGGATTCCAGCTCAGCATGTAGCCTTTCCCTGCTGAGTCTCTAACCAGGATAACATGTATTTTTTTGACTGGATGAATTATCTTCCCATCTCTTGACATTTACAGTAATTACCACCAAGTATGGTATTTTCAGTGGCCGTGATTATCAGTTACCAACACAGAATTAGGATGAAGGGAGGAAGGGAGGGAAGGAAGGTGGGTGTTTTTTCACACAGTGTCTTAGCCAGCAATTTAGCAAATTAATGGAAATTAGATCTTTGATTTTTTTTTCTTTCAAGCATTTTATTTGAGAGACTATCAAACCTTATACCAAGTGGCCTTATGGAGACTGATAACCAGAGTACATGGCATATCAGTGGCAAATTGACTTAAAATCCATACCCCTACTATTTTAAGACCATTGTCCTTTGGAGCAGAGAGACAGACTCTCCCATTGAGAGGTCTTGCTATAAGCCTTCATCCGGAGAGTGTAGGGTAGAGGGCCTGGGTTAAGTATGCAGATTACTGCAGTGATTTTACATCTAAATGTCCATTTTAGATCAACTGGAATGGATGGTACAGCTGTGTGGTGCTTCTGTGGTGAAGGAGCTTTCATCATTCACCCTTGGCACAGTAAGTATTGGGTGCCCTGTCAGAGAGGGAGGACACAATATTCTCTCCTGTGAGCAAGACTGGCACCTGTCAGTCCCTATGGATGCCCCTACTGTAGCCTCAGAAGTCTTCTCTGCCCACATACCTGTGCCAAAAGACTCCATCTGTAAGGGATGGGTAAGGATTTGAGAACTGCACATATTAAATATACTGAGGGAAGACTTTTTCCCTCTAACTCTTTTTCCCATATGTCCCTCCCCCTCCTCTCTGTGACTGCCCCAGCATACTGTGTTTCAACAAATCATCAAGAAATGATGGGCTGGAGGCTGGGCATGGTGGCTCATGTCTGTAATCCCAGCACTTTGGGAGGCCGAGGCAGGTGGATCACTTGTCAGGAGTTTGAGACCAGCCTGGCCAACATGGTGAAACCCCATCTGTACTAAAAAAAAAAAAACAAAAAGTAGCCAGGCCTGGTGGAGCATGCCTGTAATGCCAGCTATTTGGGAAGTTGAGGTGTGAGCATCGCTTGAACGTGGGAGGCAGAGGTTGCAGTGAGCCAAGATTGCACCACTGCACTCCAGACTGGGTGACAGAGTGAGACTTTGTCTAAAAAAAAAAAAAAAGAGAGAGAGAGAAAAGCTAGGTGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCTGAGGTGGGCAGATCACGAGGTCAAGAGATCGAGACCATCCTGGCCAACCAACATGGCGAAACCCCGTCTCTACTAAAAATACAAAAATTAGCTGGGCGTAGGGGCGCACGCCTGTAGTCCCAGCTACTTGAGGGGCTGGGGCAGGAGAATCGCTTGAACCCCGGAGGCGGAGGTTGCAGTTAGCCAAGATCGCGCCACTGCACTCCAGCCCGGGCGACAGAGCGAGACTCCGTCTCAAAAAAAAAGAGAGAGAGAGAAATGATGGGCTGGGCCAGTGCCCCACCCCTGTAATCACAACACTGGGAGGCCAAGGTGGGAGAATCGCTTGAGCCTGGGAGCTGAAGACCAGCCTGGGCAATACAGTAGGACCTCATGTCTACAAAAAAATTATTAAAAATTAGCCAAGGCTGGGTGCGGTGGCTCATGCCTATAATCCCGGGGGTGAAGTTGAGCCCAGGAGTTTGAGACCAGCCTGGGCAACATGGCAAAACCCTGTCTCTACCAAAAATACAAAAAAATTAGCCAGGGGTGGTGGTACGTGTCTGTAGTTCCAGCTACTTAGGAGGCTGAGATGGAAGGATTGCTTGAGCCCAGGAGGCAGAGGTGGCAGTGAGCTGAGATCACACCACTGCACTCCAGCCTGGGTGACAGAGCAAGACCCTGTCTCAAAAACAAACAAAAAAAATGATGAAGTGACAGTTCCAGTAGTCCTACTTTGACACTTTGAATGCTCTTTCCTTCCTGGGGATCCAGGGTGTCCACCCAATTGTGGTTGTGCAGCCAGATGCCTGGACAGAGGACAATGGCTTCCATGGTAAGGTGCCTGCATGTACCTGTGCTATATGGGGTCCTTTTGCATGGGTTTGGTTTATCACTCATTACCTGGTGCTTGAGTAGCACAGTTCTTGGCACATTTTAAATATTTGTTGAATGAATGGCTAAAATGTCTTTTTGATGTTTTTATTGTTATTTGTTTTATATTGTAAAAGTAATACATGAACTGTTTCCATGGGGTGGGAGTAAGATATGAATGTTCATCACAAAAACATAAATCAAGGCCGGGCATGGTGGCTCATGCCTATAATTCCAGCACTTTGGGAGGTCAAGATGGAGGTCAAGGTGGGAGCCTAGAAGTTCGAGACCAGCCTGGGCAACATAAGGAGACTTCATCTGTACAACAAATTTAAAAAGTAGCTGGGTGTGGTGGCAGATGCCTGTAGTCGCAGCTACTTGGGAAGCTGAGGTGGGAGGATCACTTGAGCTCAGGAGGTTGATGCTTCAGTGAGCCACGATCACACCACTGTACTCCAGCCTGGGCGACAGAGCGAGACCGTGTCTCAAAAAGAAAAAAGAAAGTATAAATTTACACAAAAACAATAAAATAATCCCAGTAATTCCACCACTTGGAGATGATCACCATAAAACTCCACCAGGCATATGTGCGTATATATACACGTGTATTTTATAAAATGTGATCATAATTACACTGTTTTGCTTTTTTCCTTAAGATATTACATACATTTTTCCACATCGTTAAATTACAGTGCTGTTTTCCTGGTGGCTTTCCTTTAACAGATTGAAGTTCATGTTAATACAGTTGCCAGAGGCTGTGGGCTTTCACTGTCACCAGGAGTCACTCCTAGGGCCTCTTCAGAGCAAGGCCTTATGTCCTGAAGCATTGCCTTTTTTTTTTTTTTTTGAGGTGGAGTCTCACTCTGTCACTTAGCAGGCTGGAGTGCAGTGGCCCAGTCTTGGCTCACTGCAACCTCCGCCTCCTGGGTTTAAATGATTCTCCTGCCTCAGCCTCAGGGCGGATCACCTGACATCAGGAGTTTGAGACCAGCCTGGCCAATATGGCGAAACCCCATCTCTACTAAAAATACTAAAAAAAATTAGCCAGGCATGGTGGCACGCACTTGTAGTCCCAGCTACTTGGGAGACTGAGGCAGGAGAATCGCTTGAACCCAGGATGTTGAGGTTGCAGTGAGCTGAGATCACACCATCACAATCCAGCCTGAGTGACAGAGTGAGACTCCATCTGAAAAAAAAGAAAAAACAATTAGCCTGGCATGGTGGCAGGCACCTGTAATCCCTGCTACTTGGGAGGCTGAGGCAGGAGAATTGCTTGAACCCGGGAGGTGGAGGTTGCAGTGAGCTGAGATCGTGCCATTGCATTCCAGGCTGAGCAACAAGAGCAAGACTCCGTCTCAAAAAAAAAAAAAAAAAAAAAAAAAGGCCAGGTGCAGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCCAAGGTGGGTGGATCACCTGAGGTCAGGAGTTCCAGAGCAGCCTGGCCAACATTGTGAAACCCCCGTCTCTACTAAAAATACAAAAATTAGCTGGGTGTGATGGCATGTGCCTGTAATTCCAGCTACTCAGGAGGCAGAGACAGGAGAATTGCTTGAACCCAGGAGGCGGAGGTTGAATGAGCCGAGATTGCGCCATCACACTCTAGCCTCGGCGACAGAGCAAGACTCCGTCTCAAAAAAAAAAAAAAAAAAATTAGCTTCTACCTCATTAATCCTAAGAACTCATACAACCAGGACCCTGGAGTCGATTGATTAGAGCCTAGTCCAGGAGAATGAATTGACACTAATCTCTGCTTGTGTTCTCTGTCTCCAGCAATTGGGCAGATGTGTGAGGCACCTGTGGTGACCCGAGAGTGGGTGTTGGACAGTGTAGCACTCTACCAGTGCCAGGAGCTGGACACCTACCTGATACCCCAGATCCCCCACAGCCACTACTGACTGCAGCCAGCCACAGGTACAGAGCCACAGGACCCCAAGAATGAGCTTACAAAGTGGCCTTTCCAGGCCCTGGGAGCTCCTCTCACTCTTCAGTCCTTCTACTGTCCTGGCTACTAAATATTTTATGTACATCAGCCTGAAAAGGACTTCTGGCTATGCAAGGGTCCCTTAAAGATTTTCTGCTTGAAGTCTCCCTTGGAAATCTGCCATGAGCACAAAATTATGGTAATTTTTCACCTGAGAAGATTTTAAAACCATTTAAACGCCACCAATTGAGCAAGATGCTGATTCATTATTTATCAGCCCTATTCTTTCTATTCAGGCTGTTGTTGGCTTAGGGCTGGAAGCACAGAGTGGCTTGGCCTCAAGAGAATAGCTGGTTTCCCTAAGTTTACTTCTCTAAAACCCTGTGTTCACAAAGGCAGAGAGTCAGACCCTTCAATGGAAGGAGAGTGCTTGGGATCGATTATGTGACTTAAAGTCAGAATAGTCCTTGGGCAGTTCTCAAATGTTGGAGTGGAACATTGGGGAGGAAATTCTGAGGCAGGTATTAGAAATGAAAAGGAAACTTGAAACCTGGGCATGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCCAAGGTGGGCAGATCACTGGAGGTCAGGAGTTCGAAACCAGCCTGGCCAACATGGTGAAACCCCATCTCTACTAAAAATACAGAAATTAGCCGGTCATGGTGGTGGACACCTGTAATCCCAGCTACTCAGGTGGCTAAGGCAGGAGAATCACTTCAGCCCGGGAGGTGGAGGTTGCAGTGAGCCAAGATCATACCACGGCACTCCAGCCTGGGTGACAGTGAGACTGTGGCTCAAAAAAAAAAAAAAAAAAGGAAAATGAAACTAGGAAAGGTTTCTTAAAGTCTGAGATATATTTGCTAGATTTCTAAAGAATGTGTTCTAAAACAGCAGAAGATTTTCAAGAACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGTATATAATCCATTCCTCTTAAAATATAAGACCTCTGGCATGAATATTTCATATCTATAAAATGACAGATCCCACCAGGAAGGAAGCTGTTGCTTTCTTTGAGGTGATTTTTTTCCTTTGCTCCCTGTTGCTGAAACCATACAGCTTCATAAATAATTTTGCTTGCTGAAGGAAGAAAAAGTGTTTTTCATAAACCCATTATCCAGGACTGTTTATAGCTGTTGGAAGGACTAGGTCTTCCCTAGCCCCCCCAGTGTGCAAGGGCAGTGAAGACTTGATTGTACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCACCATGAATGACTGTTCTTGAGACTTAGGCCAGCCGACTTTCTCAGAGCCTTTTCACTGTGCTTCAGTCTCCCACTCTGTAAAATGGGGGTAATGATAGTATCTACCTCCTAGGATTTATTGAGGCAGCTTAAATACCTTTTGTATTTCCTGTTGCTGCCAAAACAAATTGTTGCAAGGTCAGAAGTCTGAGGTGGCTCAACTGTTTCTTTGTTTCAGGTTTCATGAGGCCAAAATAAAGGTGTTCGCAGGGCGTGTTCCCTTCTAGAGGCTCTGGGTCCTTGCAGTTCTAGGACTAAGATCCCTGTTTCCCACTGGCTGTTGGCTGGGCATCATTCTCAGCTTCTTGAGGCTCCCCACATTCCTAGGCTCCTGGCCTGTCTGCCTCCATCTTCAAAACCAGCAATGGGTGGTCAAGTTTTTCTCACACTGAATCTTGCTGACTACTGTATCTTTCTAACTCCTGCCAGAGACATTTCTCTGTTTCTAAGGGCTCAAGTGATTAGATTGCACCCACTTGGTAATCCAAAGTGATCTTCATATCTTAAGGCCCATAGCCTTAATTATAGCTGCAAAGTCCCTTCGCAGCAGTACCTAGATTACTGTTGGAATGAATAACCAGAAGACAGCAATCAAGGGAGGACATCTTTAGAATTCTGCCTACCACTTGTATTTAACATGCTTAATCCACAGATGACACTCTCTACCATTATTTCCTGGTCCTCACACTGCTCAGAGATTGGAATCCTTTTTAAGCAAAGAGAATGAAGTCATCACATAGTTCAGTCCTGCTGTATTTGCTGGAAACAGTGAAGGAAGATAGAGAAAATGGAGCTAACTGCCAATATTACCATTTTATAATCAGTCCTCAATCATAGCCCTATGAAGTGGGTATTTGTTACCTCATTGGAAAAATGGGAGTTGAATCTCAAGTTCCTTGTTTGTAAGATTTTACTCAGATTTGCACAGCTAAAAATGACTACATGGAGACCCAAAGCCACCTTTCTGTTCCCATCATCAGCTTTCCATCTGCCTCTGTCACTGACCCCGGGACAGAAGGTTCAAGCCTTAAGGGAATTTGGAGAGAGAACTAGATTTTGAGGGGAACTCACACTCACTTCCCTTTTGGGCCACAGTAGGAGACAGTAAAAGCAGCCCCATGTCAGGCAAAGGGTCTTACAGGAGTGGATCATGGCTGCTGTTTCCACTTCTCTCTGGCTTCCCAGCTTATGACTGTGTATCTTAGTTGTCAAAGCCTTCCAGTTCATCCTCACCTACAGCTTGACTTCCCAAGGGCCCATGCCAGCTCCCTGTCTACCTGCCAGTGAGTTGATGAGTCTCGGTGTTAGTAGTAAAGGCAGGCGGGAAGCAAGCAGAAGTGCTACTGGGCCTTGAGGGTAAGCCAGGCCTCAGCCTTCTGACCCCATCACTAATGGGTTAATAGGAAAAGCAGTATCCATCTAGTACAGCCTGCCTTTTCAGGAATAGTGAGTAAAAGCAAAGATGACTAAAATACATTAAAGTTTTCTGTAATTGTCTCTAAGGTCTCCCAACAAACATATACCCCATCTGTTTCAAGCTCTGCATAACCTTTCCCAGAAGTCAAGTTCAGGCCCTGGCCTCATGGTGCCTGGCCCAGGTTAAGAGTGCTACCTGATGATGGAGTTAATACACGTTGCTTTGACCTCTGACTTTAAGATGTCCTCCCACTTTTCCACCCCGCAATCTCTAGCCCTCTCTGGGCACAGCAGCAATTGGGAACTAGTTCCTGTACTGCCTTTATCTCATTTTACAAAACAAACTTCTACAAAGAAGCTGGAAAGGAAGGAGGAGAAAGGATTATCATGCAGGCACAGGGAGGGGGCCTAGAGAAGAGCTCTGGCAGATTATGTCCCTCTTAAAAAATGCAACCAGAATCATCAACAAAGTATCACCTCAAAAATATGCAGGAGAAAAAGAAAGGAATCAATGTTGGGGTGGTTGGAGCAGAAGGAGCCAAACTGCCCAGAAGGTGTCCTCTGAAGGCTGCGAGGAGCAGACTAGGTCAGCCCCAGAGGCAGATGGCACACACAGAATGGCAGGATTACCGGTAGCTGCAGATTTATTGACAGAAGCCCTAGAGACTGGGCCTGCTGCCCAGGGAATGTGGGGGCTCACTTATCAAAGACTACTGGAAAATGGCTGAGCCGGCAACCCCTTCCACTACAGTGATGCCTGGTTTTCTTGCACAGCCTGTAACTCTGCCTGTAACAAGGAGAAAATTAAAGCAACGAATCTGGCCAAATAGAAAATTAAGGAAAACTAGAAACAGCTCCTATGGAGAGCAGGGATTGGGGAGGTGTAGAGGGGCTGATCCTGAATGTCTGGAGGATCAGGAAAATGTAAGCAATTGTTTAAGGGACTGGTAGGAATCAAGATCTGGAGAGAGATCCTCCCGACTCTGGTGGCTGGGGAATATGAACTGTGGAGACATGGTTTCAAGGACTCAAAATGATATGACAGCTTAACATTTACAGTTCAGTGCAGAGGCTCTCAAAGCATGATCCCCTGATAGGAGTGTGAGGGGGCAACACCATCACCTAGGAATTTGTTAGATATGCAAATTCCCAGACCCACTGAATCCCAGACAGGTGGGGCCAGCAACCTGTGAATCTACAACAGGCTCAAGTTTGAGAACAAATGACTTAGTGTAAGGGGCTGCTAATTGATATAAAATGTTACCTGTGGTCTATTATTTTGTCTGTAGTGAATATTGGGCTTGTTAAGGATAAATAAGGTTTGTGGGCTGGTAAGTGGTTCTTCTCTACAAGGTTGCAACAGCTGGCTTCAGTTAACTTCAAAAAGGCCCTTTAAGCAAAGACAGTAGTCCCCCCACTCATCCATGGTTTTGATTTCAGTTACTTATGGTCAACCATGGTCCAAAAATATTAAAAGGAAAATTCCGGAAACCAGTCACTCGTTTTAAATTGTACACCATTCTAAGTATTGTTTGACTTGTTCTATTTTATTATTAGTTATTGTTGTTAATCTCTTACTGTGCCCAATTTATAAATTAAATTTTATCATAGGTATGTATGTATAGGGAAAAACATAATATATATAGGGTTTGGTACTATCCGAGGGTTCAGGCATCTACTTGTGGTCTTGGAACATATGCCCCGCAGATAAGGGGGGACTGCTGTACAATGCAAAGGACAAAGATTAAATTATATTAGCAATCTAGGAGCAGAAGGGCAAGACTGCTTTTTTAAAAAACAGCTAAAGGTTTAGGAGGTTTTATTAATATTTAAATTGTATTGAAACCACAGCTGCAGCCTTTGACTCCAGCATAGAGATATGCAAATATGGCTTTCAAAAGAAAGGCAATTTCAGACAGCCCTCAAAGTAACAGGAACAAATAAAACAAATGATTTTGTAATTTATCTTTATTGACTGATGTTGCACAAGGCACAGGCCATACCCTGTGAGAGTCAGCAACAGCCGAGCTCTCTGAGGAGAGAAGAGAAAGCCAGGCTGGAGGGAGAGGCAGGCCGACCCATAGACAGGTGACAGGAAAGACACAGAGCAGGCAGATGGGAGAAGAAGACAACTAAATTAAAAGGGAAGGAAAATAAAAACCCAGCCCTGGGTCCTGTAGACCATCTGATCTTGCTGGCTCTCAGCAGCAACAACAATAATCATTAATGACTATCATTTGCCACACTACTACTAAGTGCCATGCACTATTCCTCACATACAAATGAGGAAAATGAAGCTTTGAGAGGTCAAGCAACTTACCCAAGGTCACACAACAAAAGGAAGGGGCAGAGCCCAGATTCAAAGATTTGTGTGAGGCTGAAGCCCTGTGCTCTTTCCAGTGCATTATGCTGGGAACCAGTCCTGGGAGGCAGTGAATAACAATAAGGTTAATGGGCCGGGCGCAGTGGCTCATGCCTGTAATCCCAGCACTTTGGGAGGCGGAGGCGGGCAAATCACGAGGTCAGGAGATCGAGACCATCCTGGCTAACATGGTGAAACCCTGTCTCTACTAAAAATACAAAAAATTAGCCGGGCGTGGTGTCGGGCACCTGTAGTCCCAGCTACTCAGGAGGCTGAGGCAGGAGAATGGCATGAACCTGGGAGGCAGAGCTTGCGGTGAGCCACGATCGCGCCACTGCACTCCAACCTGGGTGACACAGTGAGACTCCGTCTCAAAAGAAAAAACAAAACAAAACAATAAGGTTAATGATTGAGGGGACACTTTGTGCCCAGTTCTGTGGTATTCTGTATGGGCATGCGTGTGTCTGTGTGTGTGTATATGTATGTAACTGTGGAAAAGAGGGTGAAAACCTCCATTTCTGACCTTCAAATTGGTTACTATCCAATGAGTAAGGCAAGAAAAGAAAGCCAAAGAAAACTTGCAGAATTCTGGTGTAAAAGTTCTTTTGGGGCCGTGTGGTGGGGCCAGCTCTGCCTGTTGTGGAAGACTTCTGGTGGAGGCATCTCAGCTGGCCTTGGCCTTGAGTAAAATTTAGCCAGATGAAAAGGAAAGCTGGAGATTACACAGGCCCAGGTGAGAGCCTCCAGCTGCTAGAATTGGAGGAAGGAGCACCTGATTCAGAGAGATGAGAAAAGGCAAGAGAATCCTGAAAGGATACATATCTCTGACCCTTTGTCCCCATCCAATCTCCCCAGACCTTCCATCCCAAGCCCAAACACAACCTTACCTGCTGCTCCTTTTCAGGCACCCTGGCCACCAAATATAGGAACCCATAAATTTTGCTCATACTCTATGTTCTACTAGGCAAGTCCTGATCTGTCATCTCTACAGGCCCCAATCCTTCCCGCTCACCCCTACAGAGCCTTCTCCAGGTTTTCTAGGCCAGAATCTCTCCCCACTTAGAATACTCCAGAAGTTTTGCTTTATTTGTGAGACTTTATTCAATTGAAGTTACTTGTGTGCATATGTTATCCTCTCTATTTGACTAGAAGGTCCTTATAATCCCTTATGACCATAATTATTTTATCTTTGATATAACCCAGCTCTGTAACTAGCAGATACTTTGTTAGGCATCCAGTGGGTTTTTCCTAAATGAATGAAGTAAAGGATGAATGAATGGACTCAGTGCATTGAAGGGCTTATCCAACTATTGGTTCCACTCTCAAGACCTTTGGAAAACTAGCCATGTTCTGGAATGCTAATTCCCTTCAATGCCTTTCGCCCATTTTTCTATGACCCTGATTTACTCCAAAAACAATATAAGGGATCTAAGTGTCCAAGAATGACTCCTTCTAAACCCACACCTAAGGATTTTCTCTCTTTTTGTGTGTGTGTGTGTGAGACAGAGTTTCACTCTTATTGCCCAGGCTGGAGTGCAATGGTGCGATCTCAGCTCACTGCAACCTCCGCCTCCAGGGTTCAAGTGATTCTCCCTGTCTCACCCTCCCGAGTAGCTGAGATTACAGGCGCCTGCCATCACACCCAGCTAATTTTTGTATTTTTAGTAGAGACAGGGTTCACCACGTTGGCCAGGCTGGTCTCGAACTCCTGTCCTCAGGTGATCCACCCACCTTGGCCTCCCAAAGTGCTGGGATTACAAGCATGAGCCACCACACCCGGCCTCTTTGATTCTCTTTTGCCTATCATGAAGTCTACCCCTTTGTAATTAATTAGACCAATGTCCACCCAGACAGAATAACATTTTCCCCTATCCATCAGCGAGGTCTTCTCCGTGATGGACATTCAAGGCAGACAGAGAGACTGCTGCTGCAATAACTGGGGAAATAATTATGGTGTTCATGATGATTTCTTTGCAGGTTCAAAGCACTAGCCCAGCCATTATCTCTCCCACTTCACTAGGATAAAATTGCTAACCCCACTTTATAGGTGCTAAAACAGGTCCAGGGCCTTGTCAAAGGTCACTCAGTGAGCTGGTGGCAGACCTGGAAATAACTAGCCTAGGAGTCTCGATATTCATTAGGCCACAGATGGAAATGCCCTCATTATGCTGTCTGGGCTATGTCTGAGAGAGAGTCAACTAACTGGACTCCAGTTAAATGGAGATATGCACTGGAAGATAAGTTTGTGACTACAGAGTGTTTTTCTCTGCAATGCTGCAGCAGTTGGCACTGGTTAATTCCAGAGGGTGTGTGTGTGTGTTTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTTTAAAGCATTATCACGCGTCCTAGATGAGGGAAGAGAGGGTGAATCCAAGGTAACACAGACACACAGGTAAGCAGATGTTTGCCATCTTCTCTTGAAAGTCATATAAAACCAAATGACAGTGTATATTAGCAGGAGAAACTCAGGAGGCTCTTCCCAGCTGTTAGGCTATACGACTCTGGAATAAGCTAGTACAAATTAGGTAGAAAGTCTAGGATTGTTCCTAGAGCCTGGTGGCGGGAGGTCTTTCCTGGAGGCAAAGGACTGTGGGGCTGTCTCAGGGCCTTCTGCAGCTGCTAAAGTGAGAAGCCTGCCGACGGGATCATCCCCAAGCCCACAGAAGCTCTGAAAGCTATGGAAACCAAGATCTGTACAGGAGCCACTTCTGGTTTCTAATGCCTGAGAGATTAAAATGGAAAAAAAAATTCCCATGGAAATTCAAGAATGCAAGAATGTTCTGGGGCCAGGCACGGTGGCTCATGCCTGTAATCCCAGCACTTTTGGAAGGCCGATCACCTAAGATCAGAAGTTCAAGACCAGCCTGGTCAACATGGTGAAACCCCGTCTCTATTAAAAATAGAAAATTAGCTGGGCGTGGTGGTGTGCACCTGTAATCCCAGCTACTCAGGAGGCTGAGGCCAGAGAATCACTTGAACCCTGGAGCCAGAGGTTGCAGCGAGCTGAGATCATGCCATTGCACTCCAGCCCAGGCAACAAGAGCAAAACTCCATCTCAAAAAAAAAAAAAAAAGTTCTACAACGTGGCCACAGGTCCGTTCTGGCTAAGGCAGTGATGTCCCCCTCCCACCAAAGCCCAAACCTTCTAACATCATCCTAAAGTGTGGGAATCACCTCTTCACCTCAGGCCAGCTCTGGGCTTTTCTCAGCCTATTCATCAGCCTCCATTAGTCCTCAGCTCTGCTGAGGCCTCAGCAGCTTCCCAGTCCCACTGAAGGCTGTGGGGCATAGAATGGGCAGAGGGCAGGCCGGGCGTGGTGGCTCAAGCCTGTAATCCCAGCACTTTGGGAGGCCGAGGCGGGCAGATCACGAGGTCAGGAGATCGAGACCATCCTGGCTAACACGGTGAACCCCATCTCTACTAAAAATACAAAAAATTAGCCAGGCGTGGTGGCAGGTGCCTGTAGTCCCAGCTACTTGGTAGGCTGAGGCAGGAGAATGGCATGAACCCGGGAGGCGGAGCTTGCAGTGAGCCAAGATCCTGCCACTGCACTCCAGCCTGGGCGACAGAGCAAAACTCCGTCTCAAAAAAAAAAAAAAAAAGAAAGAATGGGCAGAGGGCATAAAACCTGAGTCCAGAGGTGGTGGTTGCACAACATTGTGAATGCACTAAATGCCCCTGAATTGTACATTTTAAAATGGCTAATTGTATGTTATGTGAATTTCAATCGATTTTTAAAAAAAATAAAACTGAGCCACCTTTGGGGTGGGGAGAGGAGCTGGGCCAGGCTCTGAGGATTTGAGGGTTGAAACTCCTTGCAGGGAGTGAAATGAACGACAATGGGGAGGCCAGTCTGGCCCTCCCAACTCCTCCTCCAGGACCAGATGGGAACTGGGGCTAGGGAGAAAGGCCCAACTGGGGCGGCGCCGGGCTCTGGGCAGAAGAGAAGCACTCAGTGAATGTGAGGAGGCTGCAGCCGTCGGCTCATTTGCATCATAAGTGATTGGTTTTCCCTGCTCGTCCCTCATCAGGACACAATGGACAGTTGTTTGCTGGCGCAGCAGATCCATTTACCAAGGGAGAGAGGAGACAGAGCACAAGTGACCGATGGGTAATAGTGTTGAAGGGTGGGCAGCCGCCTCCCCTCCCCTGTGCTCCCAGGCCACTGGGACTCTTGTTCTCACACAATGAGAAGGGACCTTAGAGAGCAAATCACCGCTTCACTTTATAGAAGAAGAGACTGAGGTGCTGAGAGGAGGTGAGCCTTGCTGTGGTCAAACAGCAAGAACATAGCAAAACTAAGCATTTTAAACTCTAACCTCTGGATCCTTTTTCTTTGAGACAAGGTCTCGCTCTGTCACCCAGGCTGGAGTAGTACAGTGGCACAATCTCAGCTCACTGCAACCTCTACCTCCCAGGCTCAAGTGATCCCCCCACCTCAACTTTCTGTGGGCCACGACACCTGGCTAATTTTTTGTAGAGACAAGGTCTCACTGTGTTGCCCACATTTTTCTCGAACTCCTGGGCTCAAGTGATCCTCCAGCCTTGGCCTCCCAAAGTGCTAGGATTACAGGTGTGAGCCACAGCACTGGGCCTGTTTGGTTTTTGTTTTGTTTTGTTTTTTTGAGATAGGGTTCCACTCTGTCATCCAGGCTAGAGTGCAGTGGTATGATCACTGCTCACTACAGCCTCACACTCCTGGTTCAAGTGATCCTCCCACCTCAGCCTCCTGAGTAGCTAGGACTATAAGTATGTGCCACCACGCTTAGCTAATTTTTATTTCTTTTATTTTTTCTAGAAACAGTGTTTCCCTATGTTGCCCAGGCTGGTCTCACCTGGGTTCAAGTGATCCTCCCACCTCAGCCTCCTGAATAGCTGGGATTACAAGTGTGAGCCACTGCACCAGGCCTGGATTCTAAACTGTCATTTGAGGGTTCACTTCGTTTCCCCATAATACCTTCTCTGTGCCCTTATTCCCATCTCTGTGGTCTCCTGTTCCCGGGGCCTTCGTTTCCATCATTCTGTCTCCTGGGTCTATTTCTTTTTCTCTGTTTCTGTTCCTCTCTGTATCTTTTCCTCTTGGTTTCCAGGCAGCTAGGATAATTACTAGACTTTTAATTAACCCCTGCCCTAACAAAGGTGGGTCTGGCATGAGGCAGCAATTTAGCAAGTGTCTTGGTTTGTTTTGGGGATAGGTGGGGAGAGAAAAATATGTGTTGGGGCCTATTATAAACCAGGCACTAAGACAGACACATAATGCACTTTATCTCATTTCATCCTTTCAATCTTGCAAGGTAGGTGTTCTTAGAGACAAAAAGGGTGAGGCTCAGAGAGGTTAAGTAACTTGTGCAAGGGCACCCAGCTAGCAAATTGTAGTTACCTGACTCCAAAACCTCTGTTCTTCCATCTCACACCCTGGCACAGGGTCTAACTCAGGGTAAGGGGCTCATTGATTTCAGGCGCAAGGGAGGCACAAAGTCACTGAAGGAGACCACTGTTTTGTTGCTGTCCTCTAGGCAGCGACTGCGTCCCCCCAGAGCCCCCTCCTTCTCTGAGCCCCTTCTGCAGCGTGGCGAAATCTCACAAATGCAAGCTTTTGCCCCCAGGGAGGTGGGGAGGCAGTGATCAAGAAAGAAACCTGACAAACCCAGACCAACCATGGGGGTCTCCCTCCTGTTAACACCCCTCCCTAACAGCCCTCCTGGTGGTTCCCTGTCTGCCCCTCCCCTTTATGGGTCAAGCCTGCTGGCGTCTGTTTCATTGTGCTGTGGGGGAAGGGGAGAGTCAGGGGTGAGTGGGTGTCTGTGTGCATGAACATAAGGCCTCCGGGTTCATTCTGACACTGAATGAAAAACTCACCAATTATTCGTCCAGTCTCATTAATATGCAGACAGACATCTGTTATTTAGGAGTCAACAGCAGAGGCATTTTCTTGTCGGGAGGGGCACTAGTGTACAGGGCTCTCTTGTCTCTCCGCTGCTAGCGGGTAGCTACTCAGGAATCATCCCACACCTCCCGACCTGGAGCCTCCCCTCTCTCTGACCCTCACTCACAGCTTTGAGGACAGCAAGTAAGGGATTGACCAGACAGAGATGGAGGGAGATCTGGGAACCTGGCTGGAAGGAAGGAAGCAGGAGAGGAGCTGCCTTGTGTAGAACAAACTGAGAACAAAACGCTAAACCCTTTCCTGGGGAAGAGAATGTGGAGTTGGGGGAGAGAGCTGTGCCAAGAGTGCCTGCCCCACTGGGAATCTCAGGGACATGACCCCTCCCCCCACACCTTCCTCAGCCTGCAGGACAAGTCTGAGTGCATCTGAAGCAGGGAGAGGGTCACTATGGCAACATGAAGTCCTCACCCAGAGACTGCAGAAAACGTAATAAGAGGAGTTCAGAAAAATGGAGACCAAGGGACCTCAATCTTTTTTTTTTTTTTTCAATTTATTTATTTTTTTTTATTGATCATTCTTGGGTGTTTCTCGCAGAGGGGGATTTGGCAGGGAGGGACCTCAATCTTTGGAGGAGTCACTAAAGCTCTCTTCAGGCCCCAAGATAGGGGTGGGAACAAGACATAACCACCTCCTGCTTTCTGTCTTCTGTCTTCCTCCAGCCTTTAAGTCCCAGCACAAAATACCCCTCCAAGAAGCCTTTCCCAACTCCCTCAGGCCCAGCTTAGAAGCACTTAAGCCTTGGTGTCTTGGTTGTAAAGAATAAAAGTTGACATCAGCTGAGCAACACAATGAGGTAGATGTGGTGATCAGCCCCCTTTTCTAGGTGCAAAAACTGAGGTTCAGAGAGGTGCTGGGCCTCACCAAAGATTCCCCAGGGAAGAAGCAGCAGAGCTCAACCCAGGCCCTGGGACTTCTGCCTCTGAACCTGAAGCTCTTCCCACGACTACCCCCTGGGAGGGCCAGAGTCACAAGGGGAGGACCCTTGTCAGCTGAAGTGTTTCAGGAGTTTGATTGAGTCCTCTCTTCCCATCCACCCTGTCCTTCCCCCTCCTCCCTCCTAGGCAGGCGGATTGCCTAGGTTAAGAAACACTAGTCTGGGCGAGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCCAAGGCAGGTGGATCACTAGGTCAGGAAATTGAGACCATCCTGGCTAACACGGTGAAACCTCGTCTCTACTAAAAAATACAAAAAATTAGGCCGGGCGCGGTGGCTTATGCCTGTAATCCCAGCACTTTGGGAGGCCAAGACAGGCGGATCACGAGGTCAGGAGATCAAGACCATCCTGACTAACACGGTGAAACCCCGTCTCTACTAAAAATACAAAAAATGAGCCGGACGTGGTGGCAGGTGCCTGTAGTCCCAGCTACTCGGGAGGCTGAGGCAGGAGAATGGCGTGAACCCAGGAGGCAGAGCTTGCAGTGAGCCGAGATTGCGCCACTGCACTCCAGCCTGGGCGACAGAGCGAGACTCCGTCTCAAAAAAAAAAAAAAAAAAATTAGCCAGGCGTGGTGGCGGGTGCCTGTGGTCCCAGTTACTGGGGCGGCTGAGGCAGGAGAATGGCGTGAACCTGTGAGGTGGAGCTTGCAGTGAGCCAAGATTGGGCCACTGCACTCCAGCCTGGGCAAGAAAGCGAGACTCTCAAAAAAAAAACCACTAGTCTGGGCGCGGTGGCTCCTGCCTGTAATCCCAACACTTTGGGAGGCCAAGGTGGGTGGATCACCTGAGGTCAGGAGTTCGAGACCAGCCTGGCCAACATGGTGAAACCCCATCTCTACTAAAAATACAAAAATTAGGTCAGGCATGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGACTGAAGCAGGCGGATCATGAGGTCAAGAGATGGAGACCATCCTGGCCAACATGGTGAAACCCTGTCTCTACTAAAAATACAAAAATGGCTGGGCACGGTGGCTCATGCCTGTAATCCCAGCACTTTGGGAGGCCGAGGTGGGTGGATCACGTTAGGTCGGGAGTTCAAGACTAGCCTGACCAACATGGAGAAACCCCATCTCTACTAAAAATACAAAATTAGCTGGGCATGGTGGCACATGGCTGTAATCCCAGCTACTTCAGGAAGCTGAGGCAGGAGAATCACTTGAACCCAGGAGGTGAGGTTGCCGTGAGCCGAGATCGCGCCAGTGCACTCCAGCCTGGGCAATAAGAGTGAAACTCCGTCTCAAAAAAAAAAAAAACACTAAAATTAGCTGTGCATGGTGGCGCGCGCCTGTAGTCCCAGCTACTCAGGAGACTGAGGCAGGAGAATCGCTTGAACCCAGGAGGCAGAGGTTGCAGTGAGCCGAGATGGTGCCACTGCACTCCAGCCTGAATGACAGAGTGAAACTCCGTCTCAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAGAAACTCTGGCAGCCATCACAGTGTGATTATTTGTTTATTTCATTAAATGTTTAACGAGGCTACATTGTTTCCCAAACCAATGTCTAATTTGTGAAGGAAACAGCGCAGAGAAGGAAGCTGGGTGACTCCTGCATCTGGGGTGGGGAAGGGAGTAAGGTCCCCTCCCTCCATCCTACAGAGGCCTTTGAGGATCAGCAACAGTCCCATTCCCTCCTCCCACCCACTGAGCTCCTCAGCCCAGAGCCCTCCTCCCCAGAAATAAAACGTCTGGCAACCCAGACCTGCAGAAAGGGACCAAAAATCCATTCCTGGTGGTATTGAAAATGTATTAAACTTTGGGGGGTCCTCCAGCTGATTGATTTTTCTAATTATGTTTGCTTTAGATGGATATTTAAATGCATTTGCATTCCCTGAGCTCACATGGCAGGATATGGAGGTTGGAGGAAAGAGGGGGCACAAACACTCCACACTCTGCACTTTGGTGGTTGCAGGCTTGAACCTGCTATACACTGAGAAGTCCAAAGTGGAAAAGAGAAGCCACTCAGCTAAAAATCGCAAGTCGATTTTTATGGCAGGTCCTTGTGGGGAAAGGGTCAGTCCTCAGAGACAGATGGAGATCCACCTAGCTGGGCCTGGAGCCCCTGCCCTCTCCTGTACCCTTAGCCGAGGACTCAGGGTCTTTGAGTCAGTCCCTAACCAGGTCTCAGTTTGAGGGGGTGGTTATCCAAGCACACTTAGATAATTTCAAATGCCATTGAAGTTATCCTAGAATCTTTGAGACTGGCTGAGATGAACTAGTCCCATAGGAGAGGTTGGGATAGGGATATCTGATGATCCAGGGAGTGGTGGGTAGGGATTCCTTTCCTCTCAAGACTGGAACCTGGCATAAGGGAAAGGAGAAGCTATTTTTTATTTTTTATTTTTTAATTTTTTTTAGAGACAGGGTCTCACTCTGACACTCAGGCTGGAAGACAATGGCATGATCATAGCTCACTGCAGTCTCTAACTCCTGGCCTCAAGCGATCCTCCCAGCTTGGCCTCCCAAAGGAGGAATCTTGGCTGGGATTATAGGTGTGAGCCACTGCCGAGAAGCTATTATTTTAAATGACACACCTCAGAGCCAAATCTCCCAGCTCCAACACCACATCCAGATAACCATCTATCCAAAAAACAACTCTGATCACTTCACTCTCTGCCTGAAATTCCTGGTGGCTTCATCCTCTGAGGATGATTTCATTCATCCTCAGAATGAAATTCTGATTCCTCTGTGGACCCTGCAGTAGCCTCAGTGTACCTTCCTAGCCTTGTCTTCTATTCTCCCTGCCATGGGAGCCCCAACAGTGCTATGCTCATTCTCATCTCCACGTGTTTACACATGCTGTACCCTCTGCCCAGAGTGCCTTTCCTACCCCTTCCCTGCCCGGAAAACTCCTCTTCAACCCTCAGGACCTGGCTCACAGGACTGGCTTCTCAGGCTGCAAGGAGCTCCCATAGCATCCCATACATGTACAAATATCCCTCAGCCATGGCACCCTCACACCTGAGGTACCTCTCTTCCACACTGGGCTGGCCTCCAAAAGCTTAGAGACTGGTCCTTGCAATCTCCCAAGCCAGTGTATGCCACACAGTTGGTGTTCAGTACATACTTGCTGAATGAATGAATGAGGGAGGAATGGGCTATAAATTTGGGTGGGATCCCAGCAGATAGTTGGGTAAGGTCAGTGTTCTCTTCCAGTGTGTCTGGGAGAACTGGCTAGGGCTGGGGGAGGGAAGGGCCAGGGATGGTTCCTGGGGGAGAATGTCACCGAAAAGAGGCCAGTGGGACCAGAGCCAGGAAGGGAATACAGGACAATCTGAAACCAGACTCCCGAGAAAACAGACCAGTACTGTCTTTCCTGACAACAGGCGCTCAGCCGTCCTCTCCACCGTCTTTCCTTTAAGGGACAGGGTAGGGGTGACTCTAACAGCTGATGCTCCCCTGAAAGCCATCATGAAACTCAGCATGGGAGGAGAGAAAGGTCCCTGGCCTGAGCCTCTAAGGAGACCCCAGAATCAAACTACTGACCTCTTAGGAAACTTCACGCTGTACAGGGGTAGCTTCTGTGATGTGGAGGCTTTTGATGCCTTCTTTTTTTTTTTTTTTTTTTTTTTTGGAGACAGAGTCTTGCTCTGTCATCCAGGCTAGAATGCAGTGGCGCAATCTCGGCTCACTGCAAGCTCCGCCTCCCAGGTTCACCCGGGTTCACACCATTCTCCTGCCTCAGCCTCCCGAGCAGCTGGGACTACAGGCACTGCCACCGCGCCTGGCTAATTTTTTGTATTTTTAGTAGAGATGGGGTTTCACCGTGTTAGCCAGGATGGTCTCGATCTCCTGAACTTGTGATCCGCCCACCTCGGCCTCCCAAAGTGCTGGGATTACAGGCGTGAGCCAGCGCGCCCGGCCTGATGCCTCCTTATCCCCACAACCCCCAGGGTACCAGCAGGCTCCAAGCCAGGGGTACAGATGGTGAGCAGGACCCCTCCCACACTAGCAGCAGGCCTGGCTGGGCTGAGAAATGCTGACTAATTATATGTCGGTCTGCTCTAAAACCCCCTAATGGCCTGAGAATTGCCCACTTCATTAACTAGGATGAACAGTCCCAGGATGTCTCCTTCTCCCAACTCTGACTCCTAAAAGGACACTTCTGATCCAACCTATGGCTTTGTCCTCTGCTCTATCTGTGGACATGGACAGGAAAGTTCCCCAGCTGAGGTCTAACTTTCCCTCTTACTGCTAAAGATTGGTAGATTGATTTTTTTAAAAAGCAACAAAACTAAAGCCACAGCCGTTTTCCATGGAGGTGGGCTTTATTAGGTGACTGTTGAGGCAAGGGAGGTTCTAGGGCTGGTGGACTGATGGGGGGCAAGGGCTTCTCCTTGCTTTTGAATTTAGTGCATGTTGCCTAGAGGTTAGATGTGTGAGAATAGCTGCAGAAGTGAGAGGAGAGGAAAAGAGAAGGTCATAGAATGGACATTTTCCTTGGGCCAGAACCAGGATATGGGGACTGGGGGTGGAGAGGGAGGGTACTCTTCACATAGGAGACTCCACCAAGGTCACCATTTGATACCAGCTTCCCTAACGCCCACCTGCCCCATCCCAGTTCATGCCCCAGATGCCAGCCCTGTTAGCTCCCTCAACATCCACTGGAGAAGAGGAGGGAGGAGGAGATGAGAAACGATGATACCCTTCTGCCCTCCAGCTCCCCTGCCCAGAATTGCTCGCTCTGCCTGCCCTAACTTCCCAGCCAGGATCAGGAGGTCAGGAAGCCTGGGCGCAGGCAGGGGAACAATTGTGTCCCTCACCACCCCTCTTCACACTCTGCCCTCTCCTAGCCCCTCACATGAGGTTGCAGCTTTTGGCTCGATCCTTGTGTATCTCGCCCTCATTCCCCCGGTCTGGCCGTCCTGACAGCTGAGCGGATCGCTGCATTCCCCGGCGTGAGTCAGTTCGGCGCAGCTGCCTATGGCCACGGCCAAGGGAGGCCACTGTAGCCACATGGAAGACATCCCTGACGCTGCGCTCAGAGGACCGGGAGGAGCACTCAACATAGGACACAGCCCCCACCTGCTTGGCCAGCACAGTGCCCTGGAAAAGGAAGGAGTGCATGGGAGAAAGTTATAGGTCTTAGCCTGCAGCTTAGAAAGGGGCATGGAGGCTGTGGGCTGGGGTTGAATGTCAAGGCTGGGGGCAGTCAAGGGATCAGGTCAGAGGTCACAGACCAGAACAAAGGATGAGCCAGGTAAGGTGTTTTCAAATCAGAGACTGAAGGGGCAGAGGTGACAGGTCTAGGCTGGGATGAGGTCAGACGTCAAGGGTCCCACCTGCTCATGTGTAACAGGGATAAGCCTCTGCTTGGACAGCTCCCTCAGTGTGGCCAGGTCAGTCCGCATGTCCAGTTTACAGCCAACCAGCACAACCTTGGCATTGGGGCAGAACTCTTGAGTCTCTCCTTGCCACTATGTAGGAGAAGAAAAGAGAATTGTGGAGGGGTGGAGGGAGGCACAGCGTGAGCCTTTGTGCCATGCCAGCAGTGTGCCCTCTCTTCCTCAAGCACGCAGAAACCATGTATCCCTCAGGACTCTCCCACATGAGGAAGGAGGTGAGAATGCTAGGCTTGGTTTGAGAGCAGGATGGGGTGAGAGAGAAGCAGCGGGGAGGAGAGGGCTGGCGTGGGCCTGTGGACTCTTCTCCCTCAGTGGCTATGAAGGGTCTGCCAGCCTGGAAACTTCCCATTCCCACTCGCCTTTCCCATACTCTCTCCTGGGAACAAATTTATCCCACCCTCCCCTCCCCCACCTGGGAACTGGGGCTGCCCTAGCTGACTTCTGTCCATTCACCCCTGGCTTTTGTCATGGAAACTGGGGCCTGGAGAGGAGGCCACAGGGCTTTCCTGAGCTCCAGGATCAGGCTTCCCATCCCATCCCCTCCATCTGGGACTCCCACTGCCAAGGAGTTGGAAGAGCAGAGAAGGAATCCTGTGAGTGCTTCTCCCTTCACTCCCCCACCTCCCCTAGCTGCTGTATCCAGCTCTGAGGACTTTCAGGAAAGGGGTGGCTGGGAGGGATGGGGGCTGGAGGCAGGGGTGGCAGGGATGAGAGCTTCACTCGCTAACCAGCTGATGGCCATACCCCAGCCATCACTCCCTCCTCCTGGCCCATGTTATGTCAGGACCATGGTGGTCTGGTCCCCCTCAGTCTAGCTGCCCTATTTCCCCAGGCTCCCACCTTCTTGAGAACACTGTCCAGTGTTTCTGGTCGGCTAATGTCGAAGCAGATGAGCACAGCATCAGAATCAGGATAGGCCAGAGGCCGGACATTATCATAGTAAGAGGAACCTGAAGGAAGACAGGGCATGAGGGGCCTGAGTGGATGGGAGGCCTGGAAGGGAATGGGAGACCTTACAGATCCTGGTCAAGGGATGCTGGGAGCAGAGAATGGAAAAGAGCAACCATTAATACCCATCATTAATACCCATCATGGAGTCTGGGTTTCCCAAGTGGGGGAGCGGGCAGAAGGGAGGTCACATGGTGGGAAACGGCTCTCTGCTTCCCTAGTGGTTTAAAAAGTAATAATTTTTATTCTTGACTGAGGTTTGGACCCCTTTGAGAAGCTCATAAAATCTATAGACATTCTCATAAAATGTTGCATGTGCTTTCTGGGCTTTGGCAGTCTAAAGCCCTGAAGGGAACTCTTGTAAAAATAAAAACCCTCCTTATGTTGGGAGGAGGAAAAGAGCAGTGGCAGGGAGAGCACTCTCCCATTCTCCTGGGACTTGACCTCAGATTTATCTAGTTCAATGGAGAGAAACAGCCTCCTGACCACCCCTCACTCAAGACATTCTAAATGTCTTTTCTGCTTTTTTATTTTTTGAGATGGAGTCTCGCTCTATCGCTCAGGCTGGAGTGCAGCGGCATGATCTCGGCTCACTGCAGCCTCCGCCTCCCAGGTTCCAGCGATTCTCTTGCCTCAGCCTCCTGGTAGCTGAGATTACAGGCACGTGCCACACGCCCGATTAATTTTTGTATTTTTAGTAGAGACGGAGTTTCAACCATGTTGGCCAGGCTGGTCTCAAACTCCTGACCTCAGGTGATCCCCCCACCCCAGCCTCCCAAAGTGCTAGGATTACAGGCGTGAGCCACCGTGCCTGGCCTCTAAATGTCTTTTCTAAACCCAGTCTTATCTCTGAAGGAACATGTTCCAAATTAAAAGCCATTCCTTCCCAACTTTCCCAGGTAGGCAGGACCCAGCTGAGGGGCTCAGATCCTAGGCTTTCTCCTTCAGGACATGGTTTCTGTCAGGCTCTGCAAGTTCTACCTCAGTTTCCCTGGATTTTAGCAGAATATTGATTTTTCCCTTCCTGTTGGAATTGGATGGATGGGCTGGGCTTACCTGGAACCTAAGGGTCTAACCAAGGGAGGGGACAGAGTGGGCCGCCTTGGAAGTCAGGGTGACCCCCAGGGACTTGGCTACCTGAAGTGTCCCACATGTTGAGCTCAATGCGGCGCTTGTCGATCTCAAAGCTCGCAGTGTAGTTCTCAAACACGGTGGGGACATAACTCTGCAGACACGGATGGATCCAGATGAGATCATCTCTCCAAGTCCTCACCCCAGATAAATGCCCTCCTCACTCCCACACCCCGTCCAGCCCAGCCCCTGGACACAAGTTGGTCTGGGATTGGGCAAAGGGGAGATCCCGGGAGCTCCTGCCCCCCCCCCCCCCCCCCCGGAGAATCTCTGCTAAGCTCCAAGACCTCCTCCTGTTCCCTTCTGGTCCCTTCAGCCCCCTAGTTCTTCCCCTCTCCATTGCCCAGGACCTCCGACATTCCCCTCGCCCTCCCTCCCGGATGCTCTGGTTCTCCCAAACCCCATCTATCTCACCCTGCTCCCTAATTCCTCCCACCCCAATCCTCTGCAGTCCTTCCTGAGCCCTCAAGGCCTCCCCGCGTCCTCCGACCCCCTGTCTCTTGTCCCTGGTTACCCGAGTACCCATTCCCATCCGTCGCCAGGGCCCCTGTCACCCACCCCCCAGCAGCCTTAGCGTCCCCCTCCCAAGACGCAGGTCCCTCACCCCGGGATAGGCGTCCTTGGCGAACACCTGCAGCAGCGCCGTCTTGCCGCACTCTGCGTCTCCCACCACCACGATCTTGCAGCGGCCGCTCTGCCCCTCCATGGTCCCGGCTACGAGCCGGTCCCCCACGCCACCCCTCTCCCGGTCCCCTCCTTCGCCTCTCCCGCCCCTGCAACTGCAGCCGCTCGGGCCGCCAACACCGGCATCTCCCGGGCCCGCGCCGAGCCCCCGCCCCGGGTCCGCGGCCCCCCCTCCGCCCCGCCCCCAGCCAGCGCCGCGCCCCCCGGCCCTCCTCCCACCCCCGCAGCCGGGGTCGGGGCCAGAAGATCTGGCGGAGCCCTGGGAACAGAGGCCTCAGAGCCGGGGTCCAGCCCGCCGGTGTGGTCTGAGGGGCCCCTGCCGGTTTGGGACAGGCCGAACTGGGCTTATTTGACTTTCTCGGATATAAGGGCAGGTCAGAGTTCAAGCGAAGTTCTTAGGGGTAGAATATGAGCGGCACAAGCGCGAAGCTCGGGCCTGCTGTGTACCCACGCGTGCACGCAGGTGTACCAGTGCGGACAAGAGCTGGGGCAGCCATCCACTTCCTGAACACGGCGGGAGAGAGATGCTAAGGGGAAGGAGGGAGCCTCTTTGGTTTTCTCTCCCGCGTCCGCCTATGTCCTGGCAGGGGGTCTTGGGGAAATGGGAGGGTGAACCCCAGCACACCCACCCGGACGGTGGTGACATCATAGCTTTCCGTCCCCATGGCAACGGGCAGCCGGGTCTCCGGTTACATTGACTTAACCGCCGGCCTAGACTAGCAGAGAAGCGTGGACTGAGTTCCTCCAGCCAAGCACTGGGTGGAAAGTTTTGGGGGAGCTGCGTCCTCTGGTGGATGCTTGGGGACAAGGAGATAAGGAAGAGAAAGAACCAACCGCCAGAGTTGCTCTGCTGGAGCCAGAGCTAAACCCAAAAGTCAGGCTTGATTAAGAGTCTGACAATAGGCCGGGCGCGGTGGCTCACGCCTGTAATACCAGCACTTTGGGAGGCCGAGGCGGGCGGATCAAGAGGTCAGGAGATCGAGACTATCATCCTGGCTAACACGGTGAAACCCGCACGGTGGGCGCCTGTAATCCCAGCTACTCAGGAGGCTGAGGCAGGAGAATGGCGTGAACCCGGGAGGCGGAGCTTGCAGTGAGCCGAGATTGCCTCACTGCACTCCAGCTTGTGCAATAGAGTTTCGAAAAAAAAAAAGTGCTTTTTTATATCGAGGCAATTCGAGTCAATAATATATGCTGCAAATAATTCTGTAAAGATAACTAGAAGCTGGGCGCGGTGGCTCACGCCTGTAAACTCAGCACTTTGGGAGGCCAAGGCTTGCTTGCGTGCAGGAGTTTGAGGCCATCCTGGGCAACATTAGCGAGACCCTCTCTCTAGAAAAAAAAATCAAAACTTAGCTAGGTTTGGCCACTCTAGGCACGCTGCCTATGGGGTAGCCCTGCTCTGCAAAGAGCAGTAAAACATAAAGTTAGCCGGGCGTGGTGACACATGCCTGTGGTCCCAGCTATTCAGGAGGCTGAGGTGGGAGGATTGCTTGAAGCCGGGAGTTTGAGGCTGTAGGGAGCTGTGATCGCCCCACCTCGCTCAGCCTGGGTGACAGAGTGAGACCCTGTATCAAAAAAATAAAAATATAAATATAACTAGAGCACGCAGCATCATCACTATGTTACAGAAGGGAAAATGAGGAACAGAACGTTAACACCAAAGTCAGAAAGTTTTAAAGGCTTGGTCTCCATGCTTCTACTTTGCCACTGCAAGACCACAGTGAATTAAGTCTCATCCCTGCCTGGGTTAGATGTCAGAGCCTGAGACACAATGTAGTTGGACTCCAGTCCACAGGTGGCTGACTCCAAATCTGATATGAGTTAACTCCAAATCTGATGTAAGTTCAAGTTTTGGGACTGTTCCTTAACTTTTTTTTTTTTTTTTTGAGACGGAGTCTCGCTCTGTAGCCCAGGCTGGAGTGCAGTGGCGCGATCTCGACTCACTGCAAGCTCTGCCTCCTGGGTTCATGCCATTCTCCTGCCTCAGCCTCCCAGGTAGCTGGGACTACAGGCGCCTGCCACCACGCCTGGCTAATTTTTTGTATTTTTTAGTAGAGACGGGGTTTCACCGTGTTAGCCAGGTGAATCTCCTGACCTCGTAATCTGCCCGCCTCGGCCTCCCAAAGTGCTGGGATTACAGGCGTGAGACACCGCGCCCGGCCTTTTTTTTTTTCGAGATGGAGTCTCCCTCTGTAGCCCAGGCTGGAGTGCAGCGGCATGATCTTGGCTAACTGCAACCTCCGCCTCCTGGGTTCAAGCAATTCTCCAGCCTCCGCCTCCCTAGTAGCTGGGACTATAGGCACCTGCCACCATGCCTGGCTAATTTTTGTAGTTTTAGTAGAGCTGGGGTTTCACCATACTGGTCAGGCTGGTCTCGAATTCCTGACCTCAGGTGATCCACCCACCCGCCTCGGCCTCCCAAAGTGTTGGGATTACAGGCGTGAGCACGGCGCCCGGCCCTTTTTTTTTTTTTTTTTAACAGGGTCTCACTCTGTTGCCCAGACTGGAGTGTAGTGGCGCGATCTCGGCTCACCTCCGCCTCCCAGGCTCAAGCGATTCCTCTGCCTCAGCCTCCCAAGTAGCTGAGATTACAGGCGCGCGCCACTACCGCCCGGCTAACTTTTTTATTTTTAGTAAAGACGGGGTTTCACCATGTTGGCCAGGCTGGTCTTGAACTCCTGACCTCAAATGATCCACCAGCCTCGGCCTCCCAAAGTGCTGGGATTACAGGCGTGAGCCACCGCGCCAGGCCTATCCCTTAAAATAGTTTTTAATTTGAATAAGGTTTACTATGAATAAATAAATCACAGTCGGCTTGATCCCAAGAGCACAGACGTTCCTGGTGCCCCTTTTCGTGCTCTCCCAGCTTGCGCCACTATGGCCCTGGCCCTTTAAGGCTGAGCGCGAGGCCCCGCCTCGCCCGGCGCCCCGCCCCTCCCGCTGGATCCCGCAGCCGCGGCTCTTCCCGACGCGTTCCGACTTCCCCAGCTGTGCACTCTCCATCCAGCTGTGCGCTCTCGTCGGGAGTCCCAGCCATGTCCGACGAGAGAGAGGTAGCCGAGGCAGCGACCGGGGAAGACGCCTCTTCGCCGCCTCCGAAAACCGAGGCAGCGAGCGACCCCCAGCATCCCGCGGCCTCCGAAGGGGCCGCCGCCGCCGCCGCCTCGCCGCCACTGCTGCGCTGCCTAGTGCTCACCGGCTTTGGAGGCTACGACAAGGTGAAGCTGCAGAGCCGGCCGGCAGCGGCCCCGGCCCCTGGGCCCGGCCAGCTGACGCTGCGTCTGCGGGCCTGCGGGCTCAACTTCGCAGACCTCATGGCTAGGCAGGGGCTGTACGACCGTCTCCCGCCTCTGCCTGTCACTCCGGGCATGGAGGGCGCGGGTGTTGTGATCGCAGTGGGCGAGGGAGTCAGCGACCGCAAGGTGAGCGGGTTGCGTAGGGCAGGGCAGGGCTGCGCAGGCCACTGGGCAGTGGGGCACGAGTGGGCGAGCGCCGGGGGTGTGGCAGGGCGGGAGAAACTGGCGCGGACCTGGGTGCACGAGCGTGGAAAGCGTAGCCAAGGAACTTGTGTTTGGGGGCTCCTGGAGAGCGGCATTTATGTGGGGAGGGGAGACGAAATTATCGCCCCTTCCCCAACCATTTTAAGTTGTGGCCGCCGCCCAGAAGCTGTGCTGGTGGGGGGGAAAACAATAAGGTGCCCATGCGCATGCGCACAACCACACTACCGTCCCCACCCACCCCCCCCCCCCCCATTAAAACCACACCTGTACCCCTACCCACCAAACACTCTCTGGGTAATTGTGGTCTGTGACTATGAGTGACGGTTAGTGCCCCCTTTCCCCGAGGGAGCTTGAGGGGCTATGTCGTCGGGGTTGGGCGGGGGCACAGCGGCCGTGCCAGAGTCCTGGTCACATGCAGCCCCGTGGTCTGTGGGGGTGTGAGGCGGCCCCTCCCAAAGCAAGGCCAAAGAGACGAGACACGCCCATCACGGAGGAGAGAGAGCCTTTGCTACCCCACCGCCACCAGCCTTACACCGCCGATCTGATTTTGGGGTGGGGGAGGCGGGATTGGGTCATCCGATCTTTGTCTTGGGCTCTGTGTCTCCCGTGACTGCAGTATCTCCTCCTCCTGTGACTCAGCCCTCAGCCTTCGGGCCACGACCCGGGGCTGCCCTTGGGAATGCCTGGGGCGGGGAGTGGAAGGGGGGACCCACCTCTGCCTTCCTCCTGCAGAGGACCCCCACTTCAGAAACCCCAGTGCCAGGGGTTTGGACTGGAACGGAGAGGTGCGGCGCCTTGAACTGGTTGGCCAAGTCTGCAGGCCTGTTTCTCCTTCTCATTTATCATTAATCTTGGCCACAACCCTGGACACCAGAGAGCTCAAAATGATCAGCTTTTTGAGAGACCTGGGATGAGGCCTCAGCACGCCATTTGTTTAGAGGTTTCTTTTTTTTTTCTTTTTCTTTTTTTTTTTTTTTTTTTTTAGACGGAGTTTCGCTCTTGTTGCCCAGGCTGGAGTGCAATGGCGCGATCTCGGCTCACCGCAACCTCTGCCTCCCGGGTTCAAGCGATTCTCCTGCCTCAGCCTCTCGAGTAGCTGGGATTACAGGCATGCGCCACCATGCCTGGCTAATTTTCGTATTTTTTAGTAGAGACAAGGTTTCACCATTTTGGGCAGGCTGGTCTCGAACTCCCGACCTCAGGTGATCTGCCCACCTCGGCCTCCCTAAGTGCTGGGGTTACAGACATAAGCCACTGCGCTTGGCCAGGAGTTTCCTTTTTAAATCAGACCCCTCAATGAGAGGCCCCACAGATGCAGCCTCTTGCAGACCTGCCAGCCCAATTCTGGAGCCAGGTTTGTTGGATTCATCCTGTATGCAAACAGCTTCTCCTTAAGGCTTTCCTCTGAATTCAGCTCTGGCCCCACCCTCAAACTGACTTCTAAATGATCCCACTCTTGAGCAGGCGTCTAAGAGGAATATTTTCGGGAGGTAGTTGTAGTTCATGTTACTGCTGAAGGCCACCCACCTCACCTCCCCTCCATACACTTTCCGCCTGGTAAATACAGGATATCCTGTCCAGGGCAAGAATCTGATGTAAGAGCCTGGATTCTGCGGGGAGGGCCCTTCCCTCTCTCTCCCTCCTCCTCCCTCCTGGTGTCTGGGTTGGGGAGGGGTCATGGCCCTGATTTGGATGGCCTGAGGGTTAGCATGAGCCAGGGTAAGTGAGACTTGTTCTGGGTCAAATCTGGGACTGGCCATGACCCTAAATGACCAATGCACTCCTCGCAGCTCTCCTGGGTTGTTCTGTATCTGCTAGTCCTGAGTCCCTGGGTGGAGGGCTTCCGTTCTTGTTCTCCAGACCTCATCTCAGGCCAGAACTTGGAAGGAAAGACCCCAGCATGCCCTCAGTTCTCGTATTCAGTGGAGTGTGGGGGCTTGAGGACATGAAAAAGGGCGTAAGTGGCAGTCCCATCCCCCTTCCCCATGGACCCTAACTCTTGTTAATATACAGAATTCCCATCATTCCTGGCAGGGATCAAGACAGACCCAGATTGTCCCAGAACAGCACCCACACCTCCCTCTTCATGCTCTTCAGAGAGCGCAGAGAAGTCTTTTCTCCTGACGCTCCCTCCTTTTCCCTGCCCTTCCCTTGACCCCACTTGCTAAGCTGGAGAGAAAGGTTCTGTTATCTTTGTCCCCTTTCCCTCCTGCACAGAGGCTCTCGTGGGGGTGGGGGGGAAGCCTTTTACTGCTGCGTAGGCCTCTGTAGCCCTTCTTGTCTGTTGCCCCTCCTGCACCATCTCTGAGTGAAGATGTTTTCTGGGCTCCCAGTGCTGGCTCAAACACACTTCTCCCGAGGTGACCACACCCTGCTGTAAGCGCTCAGAGAACTTTGTCTGCACTTTGGTATGGCCCTGACCACACAGTGCCGTCTTCTTTTGGTTGTGTGACTTCCTTGCTGCTATTATATTATTATTATTATTATTGTTAGCTAACATTATTAAGTGCTTATTATGTGCCAGACATTGTGCTAAAATTTTTTTTTTCCATTTGGAAAAACTGCCCTAATTGACAGATAAGAAAACTGGAGCTGGAAAAGTGGAGCTCAAAAAGATTAAGTAATTTTTATGCATCCGAAGTCACACAGTCAGTAAACAGTTGAGACCGCTTTTGTAACCACAGCAGTTTGATCTTTTCCACAATACTTCATGCTGCCCTAACTGTAAGCTTCTTGCATTCAGGGATCTTACACAATAGTGACATGTAAGATCTGTAAGAAGATGATAAGGATAGTATCTGCCTCAAAGAACTGATGTAAGGGTTAATTAAGCATTATATATAAAGCACTTGAAATCGGGCTCGGCCCTCAGTCAGCACTCAGTAAAGGTGAGTTGTTATTGTTGTTGATGATGATGTTATTATTATTATTACCATGACTATTGCTGCTTCTCCTGCTACTTCATTTGGAAGAAGGTGGCCTTGTACCTAGGGGGAAATCAGTAAATAGCCTGTGGGTGAATGAATGAGTGACTGAATGATACTCTTCTGTTCTTCAAGGCAGGAGACCGGGTGATGGTGTTGAACCGGTCAGGGATGTGGCAGGAAGAGGTGACTGTGCCCTCGGTCCAGACCTTCCTGATTCCTGAGGCCATGACCTTTGAGGAAGCTGCTGCCTTGCTCGTCAATTACATTACAGCCTACATGGTCCTCTTTGACTTCGGCAACCTACAGCCTGGCCACAGCGTCTTGGTACACATGGCTGCAGGTGACAGGTCCCCTCACTTTATCACCCCTTACCCCACCCAGATTTCCTTCCAGGCCCCTTCCCTGCAGCCTGTCTGGGTTGTTGTCATGGCAACACCAGGCTGCCTTGGCCTGTGGCTCCCAGAGGCCTCTGCTGTGTAGTTGCCGTGGTAACATTCAGGCACCAGGTCTAGTCTGGTGTGCTATCCTTAGCAACGTGCCCTCACCCCACACCCCCACCTCTCTAGCTACCTTCCCCACCACTTCTCAGTCATGGAAATTAGACACGGCCCTAAAATGAGCGTAGGCAAAATGAAGGTGACAGGCTGAGTCCCTGGGAGGCTAGAATGGAGTGGTTGGTGGCCAGGGCAACTCCATATCCCCTGCTTATGGGTGTCTTGCTGCAGGGGGTGTGGGTATGGCTGCCGTGCAGCTGTGCCGTACAGTGGAGAATGTGACAGTGTTCGGAACGGCCTCGGCCAGCAAGCACGAGGCACTGAAGGAGAATGGGGTCACACATCCCATCGACTATCACACGACTGACTACGTGGATGAGATCAAGAAGATTTCCCCTAAAGGTGGGGGGCATAATATGGGAGGGGGTAGGGAGGCACAGGACAGGGAGGGGAGCTCCAGATCTGTGGATCCTAATGTTGTTCTTGGGTTCCCCTACTCTATGACAGGAGTGGACATTGTCATGGACCCTCTGGGTGGGTCAGATACTGCCAAGGGCTACAACCTCCTGAAACCCATGGGCAAAGTCGTCACCTATGGTGAGTTAGTGGGCCAGGGATGGAGAGAGCATGTGAGGGCAGGAGGGAGGGTCTAAGGGGTGGGATATAGAGGCCAGGGCTTTTGAATGAAGAAGGGGTAGGGACTCAGGTGCTCTGTAGACGATCAGGGTTAGGAATGGTCCTGTATGCTGCATTCAGATTGCTGACTCTTGGGTACCAGCTCTTTTCATTCTCTGTCACAACTTTTCATATGAGTGATAGTAAATTCTACATTCTTTTTTTTGGTTTTTTTTTTGAGATGGAGTTTCGCTCTTGTCGCCCAGGCTGGAGTGCAATGGCATGATCTCGGTCAGTGCAACCTCTGCCTCCTGGGTTCAAGCGATTCTCCTGCCTCACCCTCCCGAGTAGCTGGAATTACAGGTGTCTGCCACCACGCCCAACTAATTTTTGTATTTTTAGTAGAGGCGGTGTTTCACCATGTTGGCCAGGCTGGTCTTGAACTCCTGATCTCAGGTGATCCAGCCGCCTCAGCCTCCCAAAGTGCTGGGATTATAGCCGTGAGCCACCACGCCTGGCCAAATTCTACATTCTTGTTTGGGGATTATTCTTGAACAACCAGCCTGCCTTCTTTCTGTCCTACCTCCCTGAGCATCTTAGGCAGGGTGCATTTTCATTTAAAAAAGTATTTCATACAACAAAATAAGCCAGGCATGGTGGCTCATGCCTGTAATCCCAGCACTTTGGAAGGCCAGGGCAGGCAGATGGCTTGAGCCTAGAAATTCGAGACCAGCCTGGTCAACATGGTGTACCTTATCTCCACAAAAAATACAAAAATTAGCCAGGTGTGGTGGCACTGTACTCCAGCCTGGGCAACAGAGCGAGACCCTGACTCAAACAAATGAACAAACAAGCAAATACATAAAGATTAGAGCAATTTTTTTTTTTTTGAGACAGAATATCACTCTGTTACCCATCCTGGAGTGCAGTGGCGCAACCTCGGCTCTCTGCAGCATCCACCTCCCTGGTTCAAGCAGTTCTGCCTCAGGCTCCTGAGTAGCTGGAATTACAGGTGCCCATCTCCACGCCTGGCTTTTTTTTTTTTCTTTTTCTTGAGACAGAGTCTGGCTGTCACCCAGGCTGGAGTGCAGTGACACGATCTCGGCTCACTGCAACCTCCACCTCCCGGATTCAAGCAATTCTTCTGCCTCAGCCTCCCAAGTAGCTGGGACTGCGGGCGCACGCCACCATACCTGGCTAATTTTTGTATTGTTGTGGGTTTTTTTGTTTGTTTTGTTTTGTTTTTTTTTTTTGAGACGGAGTTTCGCTCTTTTTGCCCAGGCTGAAGTGCAGTGGCGCGATCTCGGCTCACTGCAACCTCCGCCTCCCGGGTTCAAGCGATTCTCCTGCCTCAGACTTCCTGAGTAGCTGGGATTACAGGCATGTACCACCATGCCCAGCTAATTTTGTATTTTCAGTAGAGACGGGGTTTCTCCATGTTGGTCACGCTGGTCTCGAACTCCTGACGTCCAGTGATCCGCCCACCTCGGCCTCCCAAAGTGCTGGGATTATAGGCGTGAGCCACCATACCCGGCCAACACCTGGCTAATTTTCGTATTTTTTAGTAGAGACAAGGTTTCACCATTTTGGGCAGGCTGGTCTCGAACTCCTGACCTCAAGTGATCCCCCCACCTTGGCTTCCCAGAGTGCTGGGATTATGGATGTGAGCCATAGCACCCAGCCCCTAGAGCAATTTAAAGTCAGCCAGGGTTGGTTTGGGCCTGGTAACCAGCAGTTTGAGAATTATCCAATCACTCCCTGGCACTGGTGTGGAGAATTGCAAGGGGATCACAGGGAACAGAGAGCACAGATGCAGACACACAGGGATGTGCCTGGGGGGGTTCACAGGCTATGTCACCTTGTCCTTCAGGAATGGCCAACCTGCTGACGGGCCCCAAACGGAACCTGATGGCCCTGGCCCGGACATGGTGGAATCAGTTCAGCGTGACAGCTCTGCAGCTGCTGCAGGCCAACCGGGCTGTGTGTGGCTTCCACCTGGGCTACCTGGATGGTGAGGTGGAGCTGGTCAGTGGTGTGGTGGCCCGCCTCCTGGCTCTGTACAACCAGGGCCACATCAAGCCCCACATTGACTCAGTCTGGCCCTTCGAGAAGGTGAATGTGAGGACTTTGCAGGGAGGGCTTGGGTAGGACTCATGAAGGCTGGGGTCCCAAGGGGCAGATTCCTGGGGAAGAGGAGGGCTGCCTGCATCACACTGGCCCCTGTTGGATGAGGGTTGGATAGCACTGGGAGCCGCATCTTTCCTTCCTCCCCAGGTGGCTGATGCCATGAAACAGATGCAGGAGAAGAAGAATGTGGGCAAGGTCCTCCTGGTTCCAGGGCCAGAGAAGCAGAACTAGGGCAAGTGGCTGTGAGACCCTAGAGACCAGCGAAGGGAGAAGTTGGGAAGCTACGTTCTGTTGGCCACCAGACTTGCATTTCAGCCTCTGTCATAATGCTCTGCCCTCCCTCCCCCGAAGTTCTCTGTGGTGATGACCGCTCTCCCCTGCCCCTCCCCGCTTCCTGACCTCTGAAGAGGTTGGGAAGTGACCATTTGGATGTCTGGGCCCTGCCAAGGCGACAGGGAGGGTCAGAGGGAGGCCGGCTGCTTCCTGCCCCCACCCTTTCCCCGGGCCTGCTGTGCTGCTTTTGTGCCAAGGTTAGCCAGTCCCCCCTGTTGTGTTCCATGTGCTTTCACCTCTGCCTCATCTTTCCTCCCGTCCCTGCCCCGCCACCTCCCCAAAGAATTGAAACGTCAGCTCAGGATATGGGGCCAATCTCTGTGAGTCCAGCATGTACCTGTCTCTCCCTAGTGTCCCTTCAGCCTGGGCTGACCAGTGCCCGCCTCTGGGCTTGACCAGTTCCCAATCTCGTCCTCTGTCCCCAACTTCTTAAGCACAATTGGGCTTCTTCCATCTCCAGGTTTTCTGCCATTCTTAACCAAGGCTGCCTCTTCCAACAGGGCGGGAATCAGACCTACTCCCCTAGGTCACAACTCTGGGAAGGATACAGAGCCCCCACCCTTCACTGAGTTCTCTGGATTTGTTCTCAGTGCCTTAGCAACGAAAACCTGTGCTTGTGTGTGTGTGGCGGCGGGGAGGGAGGATCCTGTTTCCCACCTCCTTCTCCTCCCCTGTACTCCCCAGTGCCTTCCTTGTTCTGGTGGAGCTGGGGTTTCTCTCCTCCCCAGTCCCACAACACTGCCAAAAATCTGTGTATGTGCCATTGGGTGGGGCAGCCCCAAGCCTCCTGGGGAGGCAGGGCAAAAACAGGTGCCCTCATCGTGGTCTGTGCCATGTCCCGTCTCTATGGTGGTTGAGGAGAAAGGCGGGGAAGCTTCCTCAGCCTTGCAGATATGTGTGGCATTTACTAGCCAGAGCTCTGAAAGGCAGTGCTGTCTGTTTCTTGTACTGGGACCAAAGTAAAAATCCAAGCACATTCCCCTTGCAGTTAGGGGAGGCCCTACTGCCTTCTCAAAGCAGAGAGGCAGCTTATCAAACTCAGCCCAAAACTCTGTTTACATGGGTGGGGAGATGGAGCAGGGAAGTACAGAGTGGGATGGTCAGGACCTGGGCCATTGCAACCAAAATGGGGACTTCCTGGGTAGGGAGGTCACTCCCTCTACTCACTGAGCTAGGATTAGGGAGGGTTATTGCCCCAACCATTGCAATGGGAGGTGGAGGGACAGGCTCAGCCTCCTCATTGTCTAAATGAGGCCTAAATGTGTGAAGTGCGATTTCTGCTTTTGTGTACCCCACCACCCCATTACCACAGCTGCCTTTGTGTGTTTGTGTCAATAAAAAGCCAAACCCTGGGTCCTGCTTGTTGCCTCTGAGAGTGGAGGGAAGGTGAGCTCCTGGAAGGCTAGTGCTGCCAGCAGAAGATCTGGGCTGCTTCCTGCCCCCTGCCTCTTTCCATGCCCAAATCACGTTTCCTTTCATGAGTGAAATGAGGAAGAACATCATGGCATGCAGGCTCTTTTTACTGTTCTGGGCAGTGTTTTGCAATGTGTGACCCCTCCGCACTGTTGGTGAACATACAGACCTCCTATATGGGCACCCAAGCCCAGGCCAGTGTGAGAACCTTGGCGGGGGGGTGGGGAGGATGAGAAGGGGAGGCCCCTAGCCTGACTCAGAGGTGAAGACTGCTAGGCCCTGCTGTCCTTGGGGTACGACTGTCAGGGCCTCTACCTCCCCGCCCCCGCGGGTGGGCTTCTGGAAGTGGATCTCCAGGACGTCATGCAGCTCCGGGCCATCCAAGATATCAGGAATGTTGAGCACCAGTACCGAGCGGGGAACTGGCTGCGACCTGATCTGGAAAAGGAGCCAGGAGATGGCAAAGGCTCATGGGAGAAGGGCTGGGGGCTGGGGGTAGGGCAGGCAGTGCCCCATGGGGGTATGAGGTCGGGAGGCCTGGAGAGGCTGATGGTGGGTAGGTAGGTCAGTGGGGTTTGGGGCCTCTGATCCTTCATTGGGCAAGTTCCTGGCAGGCAGACAGGTTACCCAGCCCAGCCCCTGTTCTTCACCCCTCCTGCTTACCTCAGCCTTCTGGATCTCCCCATTCACATACGGAGAGACTCTCAGAGGGACTTGCTGCCCACCCAGTGGCACTGTGAACTGGCCGATTTGGCACAGACGCTGAGCCACTGTGGGGAGCAAGGAGGGGTGGGCCTTTAGCATCAAGCCCTCTCCTCTCCCTGCACCATAATCTTGCACACCCTATACCCTCTCCCCTGCAGGAGGCCTGCATAGCCCTCACCTCCATCCCTAGCAAACCCCAGCATGACACTCCCTGGCAGTAGCTCCCGAACGTCCACATCGCCACCTCCGTTCCTAGTCTTGCCAAAGAAGATCTCTAGCTTGTCCAGCAGCTCCTCCTCACTCAGCCTGAGGCTGGCAGGAAATCCAGTGACCAACACCCTCCGGCCACTCAACTGGCTGGACACCTAGGGGGAGACAGCAAGGGGTGGTCCCAGACACAGCTCCACTTCCCCATGCCCAGGTGCATGGCATGCTTTGCATGCCCCAGGATTCTGTCATACCATCACCTGGATGGTGGTGACCATGGGCAGCTCCAAGGGCTGGACCTGCACCCGCAGCCGGCACTCCTCCATGTTGATCGTGTGCTCCTTTTGTTGCAGCACCTGCTCAGCCACTGGGTGGTGGGAAACAGGGTCAGTACTGGGAACCCTCCCCACCTCCCTCCTGAGGCTCCCCATGAGCTTACCTTTGGGGTCATCAAAGGTGATCAGAGCAGAGCCCGCAAGCAGAGGGCAGTGGATCCGCAAATTGGAAACTAAAGACTTAGGCACTTCCGGGTCCTGCTGGGTGTGTCCTCGGAATACCAGGGGGATCTTGGGCACTGAAAATGGGACCTGGAAGTAGGGGAGGGGAGTAGGAGTGTTCCTCACTCCCACCTAGGAGGAAGGCATCTCCGATTCCATTCCATTGATGCTGAGTGCCGGAGATAAATACATTTACTGAAAGAAAAGCTGGATAAATGAGTGGATGAATGCAGGTCTGGTCCATACAGGGCAATTTACATACAACATCTTAATTTGTCCTGGGAGGTGGGTAGCTCTACTTTACAGATGTTCAAGTAACATAATGGAGGTCACACAGCAAGGAAGTAGCAGAGCCAGGAATAAAACCGAGAACTCCCCAGCTCTTTTTTGTGTTTCTTTGTTTTAAAGGGAGTCTTGCTCTGTCACCCAGCTGGAGTGTAGTGGCATGATCTTGGCTCACTGCAACCTCCACTTCCCAGGTTCAAGCAATTCGGACTCAGCCTCCCAAGTAGCTGGGATTACAGGCATGTGCCACCAAACCCAGCTAATTTTTGTATTTTTAGTAGAGACGGGGTTTCACCCTGTTGGCCAGGCTGGTCTCAAACTGACCTCAGGTGATCCACCAGCCTCGGCCTCCCAAAGTGCTGGGATTACAGGCGTGAGCCACTGCGCCCGGCCTAATTTTTGTATTTTTAGTAGAGATGGGATTTCACTGTGTTGGCCAGGCTGGTCTCAAACTCCTGACCTGAGGTGATCAGGCCCCCTTGGCCTACCAAAGTGCTGGGTTTACAGGTGTGAGCCACCGCACCCGGCCTCGCCAGCTCGTTTTTACCAAACAACACCAGATCCTTTAGGGGGGGTTATTGCGGGCGGATTTTTGAAACGGAGGGCTGGTGATAGGCTTTTTATAGGTATGCATGTATATGGTTCTAGCGTAGTGGATTTTGGGAATTGCGGT",
+    "description": "L78833.1 Homo sapiens BRCA1 (BRCA1) gene, complete cds; ribosomal protein L21-like protein (rpL21) pseudogene, complete sequence; Rho7 (Rho7) and VatI (VatI) genes, complete cds; and unknown (ifp35) gene, exons 1 through 3 and partial cds"
+  }
+}

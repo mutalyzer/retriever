@@ -112,6 +112,7 @@ QUALIFIERS = {
         "transl_except": "translation_exception",
         "exception": "exception",
         "transl_table": "translation_table",
+        "pseudo": "pseudo",
     },
     "mRNA": {
         "version": "version",
@@ -167,8 +168,16 @@ def _get_feature_id(feature):
             if feature.id.startswith("rna-"):
                 return feature.id[len("rna-"):]
             return feature.id
-    elif feature.type == "CDS" and feature.qualifiers.get("protein_id"):
-        return feature.qualifiers["protein_id"][0]
+    elif feature.type == "CDS":
+        # As for transcripts, fall back to the GFF3 local id, stripped of the
+        # "cds-" prefix (no protein_id: pseudo in L78833.1, rearrangement in
+        # NG_000016.1).
+        if feature.qualifiers.get("protein_id"):
+            return feature.qualifiers["protein_id"][0]
+        if feature.id and ":" not in feature.id:
+            if feature.id.startswith("cds-"):
+                return feature.id[len("cds-"):]
+            return feature.id
     elif feature.type == "exon":
         if feature.qualifiers.get("exon_id"):
             return feature.qualifiers["exon_id"][0]
