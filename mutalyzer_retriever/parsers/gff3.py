@@ -495,18 +495,19 @@ def _get_region_model(features):
 def _get_bare_rna_feature(record):
     """
     Exceptional case for transcripts with no gene id, but with some sort of
-    RNA and exons (e.g. NR_114042.1).
+    RNA and exons (e.g. NR_114042.1), or an mRNA with its CDS (X55027.1).
     """
     for feature in record.features:
-        if feature.type not in NCRNA_TYPES:
+        if feature.type not in [*NCRNA_TYPES, "mRNA"]:
             continue
 
         exons = []
+        cdses = []
         for sub_feature in feature.sub_features:
-            if sub_feature.type == "exon":
-                exon_model = _get_feature_model(sub_feature, considered_types=["exon"])
-                if exon_model:
-                    exons.append(exon_model)
+            if sub_feature.type in ("exon", "CDS"):
+                sub_model = _get_feature_model(sub_feature, considered_types=[sub_feature.type])
+                if sub_model:
+                    (exons if sub_feature.type == "exon" else cdses).append(sub_model)
         if not exons:
             continue
 
@@ -520,11 +521,13 @@ def _get_bare_rna_feature(record):
             "location": make_location(
                 sorted(exon_positions)[0], sorted(exon_positions)[-1]
             ),
-            "features": exons,
+            "features": exons + cdses,
         }
         qualifiers = _get_qualifiers(feature)
         if qualifiers:
             rna_model["qualifiers"] = qualifiers
+        if rna_model["type"] == "mRNA":
+            _combine_cdses(rna_model)
         return [rna_model]
     return []
 

@@ -1,0 +1,13 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region X55027.1 1 2367
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9913
+X55027.1	EMBL	region	1	2367	.	+	.	ID=X55027.1:1..2367;Dbxref=taxon:9913;clone=ChB73;clone-lib=okayama-berg;gbkey=Src;mol_type=mRNA
+X55027.1	EMBL	mRNA	127	2067	.	+	.	ID=rna-X55027.1:127..2067;Note=for chromogranin B;end_range=2067,.;gbkey=mRNA;partial=true;start_range=.,127
+X55027.1	EMBL	exon	127	2067	.	+	.	ID=exon-X55027.1:127..2067-1;Parent=rna-X55027.1:127..2067;Note=for chromogranin B;end_range=2067,.;gbkey=mRNA;partial=true;start_range=.,127
+X55027.1	EMBL	CDS	127	2067	.	+	0	ID=cds-CAA38846.1;Parent=rna-X55027.1:127..2067;Dbxref=GOA:P23389,InterPro:IPR001819,InterPro:IPR001990,InterPro:IPR018054,UniProtKB/Swiss-Prot:P23389,NCBI_GP:CAA38846.1;Name=CAA38846.1;gbkey=CDS;product=chromogranin B;protein_id=CAA38846.1
+X55027.1	EMBL	signal_peptide_region_of_CDS	127	186	.	+	.	ID=id-CAA38846.1:1..20;Parent=cds-CAA38846.1;gbkey=Prot
+X55027.1	EMBL	mature_protein_region_of_CDS	187	2064	.	+	.	ID=id-CAA38846.1:21..646;Parent=cds-CAA38846.1;gbkey=Prot;product=chromogranin B
+X55027.1	EMBL	region	2346	2351	.	+	.	ID=id-X55027.1:2346..2351;gbkey=polyA_signal
+
