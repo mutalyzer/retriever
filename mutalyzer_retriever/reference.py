@@ -25,6 +25,8 @@ T2T = {
     "X": "NC_060947.1",
     "24": "NC_060948.1",
     "Y": "NC_060948.1",
+    "M": "CP068254.1",
+    "MT": "CP068254.1",
 }
 
 GRCH38 = {
@@ -54,6 +56,8 @@ GRCH38 = {
     "X": "NC_000023.11",
     "24": "NC_000024.10",
     "Y": "NC_000024.10",
+    "M": "NC_012920.1",
+    "MT": "NC_012920.1",
 }
 
 GRCH37 = {
@@ -83,12 +87,17 @@ GRCH37 = {
     "X": "NC_000023.10",
     "24": "NC_000024.9",
     "Y": "NC_000024.9",
+    # chrM: we opt for the newer NC_012920.1 (rCRS), although UCSC hg19 chrM is
+    # still the older NC_001807.4, which NCBI suppressed in favour of NC_012920.1
+    "M": "NC_012920.1",
+    "MT": "NC_012920.1",
 }
 
 ASSEMBLY_ALIASES = {
     "T2T-CHM": "T2T",
     "T2T-CHM13": "T2T",
-    "T2T-CHM13v2.0": "T2T",
+    "T2T-CHM13V2.0": "T2T",
+    "HS1": "T2T",
     "HG38": "GRCH38",
     "HG19": "GRCH37",
 }
