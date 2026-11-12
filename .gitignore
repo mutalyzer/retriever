@@ -37,6 +37,9 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
+# Docs build output
+docs/_build/
+
 # Other files
 *.png
 tmp/

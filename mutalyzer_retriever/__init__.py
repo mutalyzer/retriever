@@ -1,3 +1,4 @@
+from email.utils import parseaddr
 from importlib.metadata import PackageNotFoundError, metadata
 from re import split
 from typing import Callable
@@ -14,16 +15,15 @@ def _extract(key: str, delim: str = r"[^\s\S]", index: int = 0) -> str:
 
 
 def doc_split(func: Callable) -> str:
-    return func.__doc__.split("\n\n")[0]
+    return (func.__doc__ or "").split("\n\n")[0]
 
 
-_email = _extract("Author-email", r"<|>", 1)
 _url = _extract("Project-URL", r", ", 1)
 _year = "2018-2026"
 
 project = _extract("Name")
 release = _extract("Version")
-author = _extract("Author-email", r'"', 1)
+author, _email = parseaddr(_extract("Author-email"))
 description = _extract("Summary")
 copyright = f"{_year} by {author} <{_email}>"
 info = f"""{project} version {release}
