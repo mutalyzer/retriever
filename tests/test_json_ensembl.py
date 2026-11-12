@@ -1,4 +1,8 @@
+import pytest
+import requests
+
 from mutalyzer_retriever import parser
+from mutalyzer_retriever.parsers.json_ensembl import _seq_from_rest
 
 
 def test_json_parse_does_not_fetch_sequence(monkeypatch):
@@ -40,3 +44,21 @@ def test_json_parse_does_not_fetch_sequence(monkeypatch):
     model = parser.parse(tark_results, "json")
 
     assert model["type"] == "record"
+
+
+def _unavailable(*args, **kwargs):
+    response = requests.Response()
+    response.status_code = 503
+    return response
+
+
+def _timeout(*args, **kwargs):
+    raise requests.exceptions.ReadTimeout("Read timed out.")
+
+
+@pytest.mark.parametrize("get", [_unavailable, _timeout])
+def test_seq_from_rest_connection_error(get, monkeypatch):
+    monkeypatch.setattr("mutalyzer_retriever.parsers.json_ensembl.requests.get", get)
+
+    with pytest.raises(ConnectionError):
+        _seq_from_rest("GRCh38", "1", 1, 10, 20, timeout=1)

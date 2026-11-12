@@ -5,9 +5,13 @@ import pytest
 
 from mutalyzer_retriever import retrieve_model
 from mutalyzer_retriever.parsers.gff3 import parse
-from mutalyzer_retriever.retriever import ReferenceParseError, retrieve_model_from_file
+from mutalyzer_retriever.retriever import (
+    NoReferenceError,
+    ReferenceParseError,
+    retrieve_model_from_file,
+)
 
-from .commons import _get_content, patch_retriever, references
+from .commons import _get_content, _retrieve_raw, patch_retriever, references
 
 
 def get_tests(references):
@@ -134,3 +138,31 @@ def test_translation_exception_split_codon():
             }
         ]
     }
+
+
+def test_sequence_not_retrieved_tark(monkeypatch):
+    # The transcript is found in Tark, but the Ensembl sequence download fails.
+    def seq_from_rest(*args):
+        raise ConnectionError("(ensembl sequence)(Read timed out.)")
+
+    monkeypatch.setattr(
+        "mutalyzer_retriever.parsers.json_ensembl._seq_from_rest", seq_from_rest
+    )
+
+    with pytest.raises(NoReferenceError) as e:
+        retrieve_model("ENST00000383925.1", "ensembl_tark", "json")
+    assert e.value.uncertain_sources == ["ensembl_tark"]
+
+
+def test_sequence_not_retrieved_fasta(monkeypatch):
+    # The GFF3 is retrieved, but the FASTA download fails.
+    def retrieve_raw(r_id, r_source=None, r_type=None, size_off=True, timeout=1):
+        if r_type == "fasta":
+            raise ConnectionError("(fasta)(Read timed out.)")
+        return _retrieve_raw(r_id, r_source, r_type, size_off, timeout=timeout)
+
+    monkeypatch.setattr("mutalyzer_retriever.retriever.retrieve_raw", retrieve_raw)
+
+    with pytest.raises(NoReferenceError) as e:
+        retrieve_model("NM_000077.4", "ncbi", "gff3")
+    assert e.value.uncertain_sources == ["ncbi"]

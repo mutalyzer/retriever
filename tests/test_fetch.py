@@ -1,8 +1,19 @@
-import pytest
+import json
+from urllib.error import HTTPError
 
-from mutalyzer_retriever.request import RequestErrors
+import pytest
+import requests
+
+from mutalyzer_retriever.request import Http400, RequestErrors
 from mutalyzer_retriever.sources import ensembl
-from mutalyzer_retriever.sources.ensembl import fetch
+from mutalyzer_retriever.sources.ensembl import (
+    _get_reference_information,
+    _get_tark_versions,
+    fetch,
+    fetch_gff3,
+    fetch_json,
+)
+from mutalyzer_retriever.sources.lrg import fetch_lrg
 
 from .commons import _get_content, patch_retriever
 
@@ -154,7 +165,7 @@ def test_ensembl_fetch_default_falls_back_to_tark_when_rest_lacks_version(monkey
 
 def test_ensembl_fetch_default_falls_back_to_tark_on_rest_request_error(monkeypatch):
     def get_rest_api_base(r_id, r_version, timeout):
-        raise RequestErrors(["503 Service Unavailable"])
+        raise ConnectionError("503 Service Unavailable")
 
     def get_transcript_api_base(r_id, r_version, r_source, timeout):
         return ensembl.settings.get("ENSEMBL_TARK_API"), "GRCh38"
@@ -223,3 +234,86 @@ def test_ensembl_fetch_default_explicit_tark_source_uses_tark_not_rest(monkeypat
 
     assert reference_type == "json"
     assert calls == [("ENST00000304494", None, "ensembl_tark")]
+
+
+def test_lrg_fetch_non_ascii_id(monkeypatch):
+    # Seen in the production logs: a full-width colon in the description.
+    def urlopen(url, timeout):
+        url.encode("ascii")  # what http.client does with the request line
+        raise HTTPError(url, 404, "Not Found", None, None)
+
+    monkeypatch.setattr("mutalyzer_retriever.sources.lrg.urlopen", urlopen)
+
+    with pytest.raises(NameError):
+        fetch_lrg("NM_145239.3：c.1013-29del")
+
+
+def _http400(error):
+    response = requests.Response()
+    response.status_code = 400
+    response._content = json.dumps({"error": error}).encode()
+    return Http400(requests.exceptions.HTTPError(response=response))
+
+
+@pytest.mark.parametrize(
+    "function, r_id, error",
+    [
+        # Overlap does not support protein ids, the error is just the id.
+        (fetch_gff3, "ENSP00000462054", "ENSP00000462054"),
+        (
+            _get_reference_information,
+            "ENST00000000000",
+            "ID 'ENST00000000000' not found",
+        ),
+    ],
+)
+def test_ensembl_http400_is_name_error(function, r_id, error, monkeypatch):
+    def request(*args, **kwargs):
+        raise _http400(error)
+
+    monkeypatch.setattr("mutalyzer_retriever.sources.ensembl.request", request)
+
+    with pytest.raises(NameError):
+        function(r_id, "https://rest.ensembl.org", timeout=1)
+
+
+@pytest.mark.parametrize("function", [_get_reference_information, _get_tark_versions])
+def test_ensembl_request_errors_are_connection_errors(function, monkeypatch):
+    def request(*args, **kwargs):
+        raise RequestErrors([requests.exceptions.ReadTimeout("Read timed out.")])
+
+    monkeypatch.setattr("mutalyzer_retriever.sources.ensembl.request", request)
+
+    with pytest.raises(ConnectionError):
+        function("ENST00000257430", "https://rest.ensembl.org", timeout=1)
+
+
+@pytest.mark.parametrize(
+    "status_code, content, error",
+    [
+        (200, {"results": []}, NameError),
+        (503, {"detail": "Service temporarily unavailable"}, ConnectionError),
+    ],
+)
+def test_ensembl_fetch_json_no_results(status_code, content, error, monkeypatch):
+    response = requests.Response()
+    response.status_code = status_code
+    response._content = json.dumps(content).encode()
+
+    monkeypatch.setattr(
+        "mutalyzer_retriever.sources.ensembl.requests.request",
+        lambda **kwargs: response,
+    )
+
+    with pytest.raises(error):
+        fetch_json("ENST00000257430.4:c.835-8A>G", None, "https://tark.ensembl.org/api")
+
+
+def test_ensembl_fetch_json_timeout(monkeypatch):
+    def request(**kwargs):
+        raise requests.exceptions.ReadTimeout("Read timed out. (read timeout=10)")
+
+    monkeypatch.setattr("mutalyzer_retriever.sources.ensembl.requests.request", request)
+
+    with pytest.raises(ConnectionError):
+        fetch_json("ENST00000257430", 4, "https://tark.ensembl.org/api")

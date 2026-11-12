@@ -98,11 +98,13 @@ def _seq_from_rest(
     else:
         raise NameError("Unsupported assembly {assembly}")
     ext = f"/sequence/region/human/{chr_idx}:{loc_start}..{loc_end}:{strand}?"
-    r = requests.get(
-        server + ext, headers={"Content-Type": "text/plain"}, timeout=timeout
-    )
-    if not r.ok:
-        raise NameError
+    try:
+        r = requests.get(
+            server + ext, headers={"Content-Type": "text/plain"}, timeout=timeout
+        )
+        r.raise_for_status()
+    except requests.exceptions.RequestException as e:
+        raise ConnectionError(f_e("ensembl sequence", e)) from e
     return r.text
 
 

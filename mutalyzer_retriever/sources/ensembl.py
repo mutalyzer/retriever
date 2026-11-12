@@ -17,10 +17,7 @@ def fetch_fasta(feature_id, api_base, timeout=DEFAULT_TIMEOUT):
     except RequestErrors as e:
         raise ConnectionError(f_e("gff3", e)) from e
     except Http400 as e:
-        response_json = e.response.json()
-        if response_json and response_json.get("error") == f"ID '{feature_id}' not found":
-            raise NameError(f_e("fasta", e, response_json.get("error"))) from e
-        raise
+        raise NameError(f_e("fasta", e, e.response.json().get("error"))) from e
     return response
 
 
@@ -34,19 +31,20 @@ def fetch_gff3(feature_id, api_base, timeout=DEFAULT_TIMEOUT):
     except RequestErrors as e:
         raise ConnectionError(f_e("gff3", e)) from e
     except Http400 as e:
-        response_json = e.response.json()
-        if response_json and response_json.get("error") == f"ID '{feature_id}' not found":
-            raise NameError(f_e("gff3", e, response_json.get("error"))) from e
-        raise
+        # Not found, but also ids overlap does not support (e.g. ENSP).
+        raise NameError(f_e("gff3", e, e.response.json().get("error"))) from e
     return response
 
 
 def _get_tark_versions(reference_id, api_base, timeout=DEFAULT_TIMEOUT):
     endpoint = "transcript"
     params = {"stable_id": reference_id}
-    tark_req = json.loads(
-        request(url=f"{api_base}/{endpoint}", params=params, timeout=timeout)
-    )
+    try:
+        tark_req = json.loads(
+            request(url=f"{api_base}/{endpoint}", params=params, timeout=timeout)
+        )
+    except RequestErrors as e:
+        raise ConnectionError(f_e("ensembl tark", e)) from e
     tark_versions_38 = []
     tark_versions_37 = []
     if tark_req["results"]:
@@ -66,7 +64,12 @@ def _get_most_recent_version(reference_id, api_base, timeout=DEFAULT_TIMEOUT):
 def _get_reference_information(reference_id, api_base, timeout=DEFAULT_TIMEOUT):
     url = f"{api_base}/lookup/id/{reference_id}"
     headers = {"Content-Type": "application/json"}
-    return json.loads(request(url, headers=headers, timeout=timeout))
+    try:
+        return json.loads(request(url, headers=headers, timeout=timeout))
+    except RequestErrors as e:
+        raise ConnectionError(f_e("lookup", e)) from e
+    except Http400 as e:
+        raise NameError(f_e("lookup", e, e.response.json().get("error"))) from e
 
 
 def _get_id_and_version(reference_id):
@@ -99,10 +102,17 @@ def fetch_json(
         "stable_id_version": reference_version,
         "expand": "translations, genes, exons",
     }
-    req = requests.request(
-        method="get", url=f"{api_base}/{endpoint}", params=params, timeout=timeout
-    )
-    return req.json()
+    try:
+        req = requests.request(
+            method="get", url=f"{api_base}/{endpoint}", params=params, timeout=timeout
+        )
+        req.raise_for_status()
+        tark_results = req.json()
+    except requests.exceptions.RequestException as e:
+        raise ConnectionError(f_e("ensembl tark", e)) from e
+    if not tark_results.get("results"):
+        raise NameError(f_e("ensembl tark", extra=f"no results for {reference_id}"))
+    return tark_results
 
 
 def get_rest_api_base(r_id, r_version, timeout=DEFAULT_TIMEOUT):
@@ -142,12 +152,11 @@ def _fetch_default(r_id, r_version, reference_source, timeout):
         return fetch_json(r_id, r_version, api_base, assembly, timeout), "json"
 
     # gff3 only exists on REST. Resolving or fetching it can fail as
-    # NameError, ConnectionError, or a raw RequestErrors, all of which
-    # fall back to Tark below.
+    # NameError or ConnectionError, both of which fall back to Tark below.
     try:
         api_base, assembly = get_rest_api_base(r_id, r_version, timeout)
         return fetch_gff3(r_id, api_base, timeout), "gff3"
-    except (NameError, ConnectionError, RequestErrors):
+    except (NameError, ConnectionError):
         if "ENST" not in r_id:
             raise
         api_base, assembly = get_transcript_api_base(

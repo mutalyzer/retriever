@@ -160,6 +160,20 @@ def _parse_gff3(reference_id, reference_content, reference_source):
         raise ReferenceParseError(f"{reference_id}: {e}") from e
 
 
+def _sequence_not_retrieved(reference_source, error):
+    """The reference was found, but downloading its sequence failed."""
+    return NoReferenceError({reference_source: {"errors": [error]}}, [reference_source])
+
+
+def _retrieve_fasta(reference_id, reference_source, size_off, timeout):
+    try:
+        return retrieve_raw(
+            reference_id, reference_source, "fasta", size_off, timeout=timeout
+        )[0]
+    except ConnectionError as e:
+        raise _sequence_not_retrieved(reference_source, e) from e
+
+
 def retrieve_model(
     reference_id,
     reference_source=None,
@@ -194,18 +208,14 @@ def retrieve_model(
     elif reference_type == "gff3":
         if model_type == "all":
             annotations = _parse_gff3(reference_id, reference_content, reference_source)
-            fasta = retrieve_raw(
-                reference_id, reference_source, "fasta", size_off, timeout=timeout
-            )
+            fasta = _retrieve_fasta(reference_id, reference_source, size_off, timeout)
             return {
                 "annotations": annotations,
-                "sequence": parser.parse(fasta[0], "fasta"),
+                "sequence": parser.parse(fasta, "fasta"),
             }
         if model_type == "sequence":
-            fasta = retrieve_raw(
-                reference_id, reference_source, "fasta", size_off, timeout=timeout
-            )
-            return {"sequence": parser.parse(fasta[0], "fasta")}
+            fasta = _retrieve_fasta(reference_id, reference_source, size_off, timeout)
+            return {"sequence": parser.parse(fasta, "fasta")}
         if model_type == "annotations":
             return _parse_gff3(reference_id, reference_content, reference_source)
     elif reference_type == "fasta":
@@ -218,7 +228,10 @@ def retrieve_model(
             annotations = parser.parse(reference_content, "json")
             if model_type == "annotations":
                 return annotations
-            sequence = json_ensembl.sequence(reference_content, timeout=timeout)
+            try:
+                sequence = json_ensembl.sequence(reference_content, timeout=timeout)
+            except ConnectionError as e:
+                raise _sequence_not_retrieved(reference_source, e) from e
             if model_type == "sequence":
                 return sequence["seq"]
             return {"annotations": annotations, "sequence": sequence}

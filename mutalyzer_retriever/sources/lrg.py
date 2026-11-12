@@ -1,5 +1,6 @@
 import socket
 from urllib.error import HTTPError, URLError
+from urllib.parse import quote
 from urllib.request import urlopen
 
 from ..configuration import DEFAULT_TIMEOUT, settings
@@ -51,7 +52,7 @@ def fetch_lrg(reference_id, size_on=True, timeout=DEFAULT_TIMEOUT):
     :returns: the file content or None when the file was not retrieved
     """
     if settings.get("LRG_URL"):
-        url = f"{settings['LRG_URL']}/{reference_id}.xml"
+        url = f"{settings['LRG_URL']}/{quote(reference_id, safe='')}.xml"
     else:
         raise NoLrgUrlSet()
 
