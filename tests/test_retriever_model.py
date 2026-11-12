@@ -4,6 +4,7 @@ from pathlib import Path
 import pytest
 
 from mutalyzer_retriever import retrieve_model
+from mutalyzer_retriever.parsers.gff3 import parse
 from mutalyzer_retriever.retriever import ReferenceParseError, retrieve_model_from_file
 
 from .commons import _get_content, patch_retriever, references
@@ -98,3 +99,38 @@ def test_unparsable_gff3():
     # NC_037304.1: CDS lines outside the lines of their trans-spliced nad5 gene.
     with pytest.raises(ReferenceParseError):
         retrieve_model("NC_037304.1", "ncbi", "gff3")
+
+
+def test_translation_exception_split_codon():
+    # A codon split by an intron is given as join(...), which crashed the parsing
+    # of whole chromosomes in production (Xenopus, zebrafish, chicken, cow, etc.).
+    # Trimmed lines of NC_141022.1 (zebrafish), XP_087097748.1.
+    content = (
+        "##gff-version 3\n"
+        "##sequence-region NC_141022.1 1 63929756\n"
+        "NC_141022.1\tRefSeq\tregion\t1\t63929756\t.\t+\t.\tID=NC_141022.1:1..63929756;gbkey=Src\n"
+        "NC_141022.1\tGnomon\tgene\t53243316\t53268470\t.\t+\t.\tID=gene-LOC101882419;Name=LOC101882419;gbkey=Gene;gene=LOC101882419;gene_biotype=protein_coding\n"
+        "NC_141022.1\tGnomon\tmRNA\t53243316\t53268470\t.\t+\t.\tID=rna-XM_087241622.1;Parent=gene-LOC101882419;Name=XM_087241622.1;gbkey=mRNA;gene=LOC101882419;transcript_id=XM_087241622.1\n"
+        "NC_141022.1\tGnomon\tCDS\t53245300\t53245374\t.\t+\t0\tID=cds-XP_087097748.1;Parent=rna-XM_087241622.1;Name=XP_087097748.1;gbkey=CDS;gene=LOC101882419;protein_id=XP_087097748.1;transl_except=(pos:join(53263975%2C53265999..53266000)%2Caa:Other)\n"
+        "NC_141022.1\tGnomon\tCDS\t53246650\t53246752\t.\t+\t0\tID=cds-XP_087097748.1;Parent=rna-XM_087241622.1;Name=XP_087097748.1;gbkey=CDS;gene=LOC101882419;protein_id=XP_087097748.1;transl_except=(pos:join(53263975%2C53265999..53266000)%2Caa:Other)\n"
+        "NC_141022.1\tGnomon\tCDS\t53246866\t53247444\t.\t+\t2\tID=cds-XP_087097748.1;Parent=rna-XM_087241622.1;Name=XP_087097748.1;gbkey=CDS;gene=LOC101882419;protein_id=XP_087097748.1;transl_except=(pos:join(53263975%2C53265999..53266000)%2Caa:Other)\n"
+        "NC_141022.1\tGnomon\tCDS\t53257673\t53257752\t.\t+\t2\tID=cds-XP_087097748.1;Parent=rna-XM_087241622.1;Name=XP_087097748.1;gbkey=CDS;gene=LOC101882419;protein_id=XP_087097748.1;transl_except=(pos:join(53263975%2C53265999..53266000)%2Caa:Other)\n"
+        "NC_141022.1\tGnomon\tCDS\t53259929\t53260667\t.\t+\t0\tID=cds-XP_087097748.1;Parent=rna-XM_087241622.1;Name=XP_087097748.1;gbkey=CDS;gene=LOC101882419;protein_id=XP_087097748.1;transl_except=(pos:join(53263975%2C53265999..53266000)%2Caa:Other)\n"
+        "NC_141022.1\tGnomon\tCDS\t53260670\t53263975\t.\t+\t2\tID=cds-XP_087097748.1;Parent=rna-XM_087241622.1;Name=XP_087097748.1;gbkey=CDS;gene=LOC101882419;protein_id=XP_087097748.1;transl_except=(pos:join(53263975%2C53265999..53266000)%2Caa:Other)\n"
+        "NC_141022.1\tGnomon\tCDS\t53265999\t53266013\t.\t+\t2\tID=cds-XP_087097748.1;Parent=rna-XM_087241622.1;Name=XP_087097748.1;gbkey=CDS;gene=LOC101882419;protein_id=XP_087097748.1;transl_except=(pos:join(53263975%2C53265999..53266000)%2Caa:Other)\n"
+        "NC_141022.1\tGnomon\tCDS\t53267737\t53268470\t.\t+\t2\tID=cds-XP_087097748.1;Parent=rna-XM_087241622.1;Name=XP_087097748.1;gbkey=CDS;gene=LOC101882419;protein_id=XP_087097748.1;transl_except=(pos:join(53263975%2C53265999..53266000)%2Caa:Other)\n"
+    )
+    cds = parse(content, "ncbi")["features"][0]["features"][0]["features"][0]
+    assert cds["qualifiers"]["translation_exception"] == {
+        "exceptions": [
+            {
+                "location": {
+                    "type": "range",
+                    "start": {"type": "point", "position": 53263974},
+                    "end": {"type": "point", "position": 53266000},
+                    "strand": 1,
+                },
+                "amino_acid": "X",
+            }
+        ]
+    }

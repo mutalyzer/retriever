@@ -34,6 +34,7 @@ Notes:
 """
 
 import io
+import re
 
 from BCBio.GFF import GFFParser
 from Bio.SeqUtils import seq1
@@ -318,26 +319,13 @@ def _extract_translation_exception(translation_exception):
         translation_exception = [translation_exception]
 
     for t_e in translation_exception:
-        pos, aa = t_e.strip("()").split(",")
+        pos, aa = t_e.strip("()").rsplit(",", 1)
 
-        if "complement" in pos:
-            strand = -1
-            if ".." in pos:
-                pos_start, pos_end = pos.split("(")[1].strip(")").split("..")
-            else:
-                pos_start = pos.split("(")[1].strip(")")
-                pos_end = None
-        else:
-            strand = 1
-            if ".." in pos:
-                pos_start, pos_end = pos.split(":")[1].split("..")
-            else:
-                pos_start = pos.split(":")[1]
-                pos_end = None
-
-        pos_start = int(pos_start) - 1
-        if pos_end is not None:
-            pos_end = int(pos_end)
+        strand = -1 if "complement" in pos else 1
+        # A codon split by an intron is given as join(...) of several parts.
+        positions = [int(p) for p in re.findall(r"\d+", pos.split(":", 1)[1])]
+        pos_start = min(positions) - 1
+        pos_end = max(positions) if len(positions) > 1 else None
 
         if ":" in aa:
             aa = aa.split(":")[1]
