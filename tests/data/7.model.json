@@ -19,20 +19,37 @@
     },
     "features": [
       {
-        "type": "CDS",
+        "id": "X51700.1",
+        "type": "mRNA",
         "location": {
           "type": "range",
           "start": {
             "type": "point",
-            "position": 27
+            "position": 0
           },
           "end": {
             "type": "point",
-            "position": 330
-          },
-          "strand": 1
+            "position": 437
+          }
         },
-        "id": "CAA35997.1"
+        "features": [
+          {
+            "type": "CDS",
+            "location": {
+              "type": "range",
+              "start": {
+                "type": "point",
+                "position": 27
+              },
+              "end": {
+                "type": "point",
+                "position": 330
+              },
+              "strand": 1
+            },
+            "id": "CAA35997.1"
+          }
+        ]
       }
     ]
   },

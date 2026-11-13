@@ -127,7 +127,7 @@ references = {
             # Gene and parentless exons dropped; mRNAs with no gene; 3 split CDSs
             "AB006684.1",
             "NM_004152.3",  # CDS slices with ribosomal slippage, kept apart
-            "7",
+            "7",  # X51700.1, mRNA record: a lone CDS (no gene or mRNA) gets the mRNA
             "M65131.1",  # mRNA record with gene-mRNA-exon/CDS nesting
             "XR_948219.2",  # gene-lnc_RNA-exon nesting
             "NR_023343.1",  # snRNA, ncRNA wrapper

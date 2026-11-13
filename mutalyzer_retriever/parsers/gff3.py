@@ -535,6 +535,14 @@ def _get_rna_features(record, mol_type):
 
     if not features:
         return _get_bare_rna_feature(record)
+    if mol_type == "mRNA" and len(features) == 1 and features[0]["type"] == "CDS":
+        # A lone CDS with no gene or mRNA (AF188703.1): the record is its mRNA.
+        rna_model["location"] = make_location(
+            record.annotations["sequence-region"][0][1],
+            record.annotations["sequence-region"][0][2],
+        )
+        rna_model["features"] = features
+        return [rna_model]
     if features[0].get("type") in TRANSCRIPT_TYPES:
         # Use the reference accession as the bare RNA's selector ID.
         features[0]["id"] = record.id
