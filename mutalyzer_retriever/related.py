@@ -7,12 +7,15 @@ import requests
 from mutalyzer_retriever.client import EnsemblClient, NCBIClient, NCBIEutilsClient
 from mutalyzer_retriever.configuration import DEFAULT_TIMEOUT, cache_url
 from mutalyzer_retriever.parsers import datasets, ensembl_gene_lookup
-from mutalyzer_retriever.request import request
+from mutalyzer_retriever.request import RequestErrors, request
 from mutalyzer_retriever.util import (
     HUMAN_TAXON,
     DataSource,
     MoleculeType,
 )
+
+# Ensembl timed out, failed (5xx) or did not answer with JSON.
+ENSEMBL_UNAVAILABLE = (RequestErrors, ConnectionError, json.JSONDecodeError)
 
 
 def get_cds_to_mrna(cds_id, timeout=DEFAULT_TIMEOUT):
@@ -32,13 +35,9 @@ def get_cds_to_mrna(cds_id, timeout=DEFAULT_TIMEOUT):
         return mrna_id
 
     ncbi = _fetch_ncbi_datasets_gene_accession(cds_id, timeout)
-    if (
-        ncbi.get("genes")
-        and len(ncbi["genes"]) == 1
-        and ncbi["genes"][0].get("gene")
-        and ncbi["genes"][0]["gene"].get("transcripts")
-    ):
-        transcripts = ncbi["genes"][0]["gene"]["transcripts"]
+    reports = ncbi.get("reports", [])
+    if len(reports) == 1 and reports[0].get("product", {}).get("transcripts"):
+        transcripts = reports[0]["product"]["transcripts"]
         mrna_ids = set()
         for transcript in transcripts:
             if (
@@ -301,7 +300,10 @@ def _get_related_by_gene_symbol(gene_symbol):
         RuntimeError: If the NCBI Datasets API is unavailable or returns an invalid response.
     """
     ncbi_related = _get_related_by_gene_symbol_from_ncbi(gene_symbol, taxon_name=HUMAN_TAXON)
-    ensembl_related = _get_related_by_gene_symbol_from_ensembl(gene_symbol)
+    try:
+        ensembl_related = _get_related_by_gene_symbol_from_ensembl(gene_symbol)
+    except ENSEMBL_UNAVAILABLE:
+        ensembl_related = {}  # the NCBI part only
     related = _merge(ensembl_related, ncbi_related)
     related = filter_related(gene_symbol, related)
     return related
@@ -683,7 +685,15 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
             if provider.get("name") == DataSource.ENSEMBL
         ]
 
-        if not ensembl_genes_id:
+        try:
+            ensembl_genes_related = [
+                _get_ensembl_gene_info(ensembl_gene, moltype=MoleculeType.DNA)
+                for ensembl_gene in ensembl_genes_id
+            ]
+        except ENSEMBL_UNAVAILABLE:
+            ensembl_genes_related = []  # the NCBI part only
+
+        if not ensembl_genes_related:
             related = ncbi_related
             if taxon_name and taxon_name.upper() == HUMAN_TAXON:
                 related = filter_related(accession_base, related)
@@ -691,8 +701,7 @@ def _get_related_by_ncbi_id(accession, moltype, locations):
 
         all_genes = []
         all_assemblies = []
-        for ensembl_gene in ensembl_genes_id:
-            ensembl_gene_related = _get_ensembl_gene_info(ensembl_gene, moltype=MoleculeType.DNA)
+        for ensembl_gene_related in ensembl_genes_related:
             if not taxon_name:
                 taxon_name = ensembl_gene_related.get("taxon_name")
             if ensembl_gene_related:

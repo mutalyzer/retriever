@@ -5,9 +5,9 @@ from unittest.mock import Mock, patch
 import pytest
 
 from mutalyzer_retriever.reference import GRCH37
-from mutalyzer_retriever.related import get_related
+from mutalyzer_retriever.related import get_cds_to_mrna, get_related
 from mutalyzer_retriever.related_schema import related_schema
-from mutalyzer_retriever.request import Http400
+from mutalyzer_retriever.request import Http400, RequestErrors
 from mutalyzer_retriever.util import HUMAN_TAXON, DataSource
 
 
@@ -483,3 +483,39 @@ def test_invalid_gene_symbol(accession, mock_ncbi_client, mock_ensembl_client):
 def test_invalid_chr_range(accession, locations, mock_ncbi_client, mock_ensembl_client):
     with pytest.raises(NameError, match=f"Invalid location format: '{locations}'. Expected format: point or range 'point;start_end'."):
         get_related(accession, locations)
+
+
+@pytest.mark.parametrize(
+    "cds_id, mrna_ids",
+    [("NP_002993.1", ["NM_003002.4"]), ("NP_000000.0", None)],
+)
+def test_get_cds_to_mrna_from_ncbi(cds_id, mrna_ids, monkeypatch):
+    # No cache API: the NCBI datasets v2 product report is used.
+    monkeypatch.setattr("mutalyzer_retriever.related.cache_url", lambda: None)
+    monkeypatch.setattr(
+        "mutalyzer_retriever.related._fetch_ncbi_datasets_gene_accession",
+        lambda accession, timeout: mock_get_accession_product_report(accession),
+    )
+    assert get_cds_to_mrna(cds_id) == mrna_ids
+
+
+@pytest.mark.parametrize(
+    "accession, locations",
+    [
+        ("NM_003002.4", None),
+        ("NC_000011.10", "112088000_112088100"),
+        ("SDHD", None),
+    ],
+)
+def test_ensembl_unavailable_gives_ncbi_part(
+    accession, locations, mock_ncbi_client, mock_ensembl_client
+):
+    def unavailable(*args, **kwargs):
+        raise RequestErrors([ConnectionError("Ensembl read timeout")])
+
+    mock_ensembl_client.lookup_id.side_effect = unavailable
+    mock_ensembl_client.lookup_symbol.side_effect = unavailable
+    related = normalize_enums(get_related(accession, locations))
+    assert related_schema.validate(related)
+    assert [gene["name"] for gene in related["genes"]] == ["SDHD"]
+    assert mock_ensembl_client.lookup_id.called or mock_ensembl_client.lookup_symbol.called
