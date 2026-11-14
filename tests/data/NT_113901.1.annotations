@@ -647,7 +647,9 @@
           },
           "id": "NM_001347681.2",
           "qualifiers": {
-            "tag": "RefSeq Select",
+            "tag": [
+              "RefSeq Select"
+            ],
             "annotation_added_from": {
               "freeze_date_id": "20220307",
               "full_assembly_name": "GRCh37.p13",
@@ -1230,7 +1232,9 @@
           },
           "id": "NM_001347681.1",
           "qualifiers": {
-            "tag": "RefSeq Select",
+            "tag": [
+              "RefSeq Select"
+            ],
             "annotation_added_from": {
               "freeze_date_id": "20190906",
               "full_assembly_name": "GRCh37.p13",

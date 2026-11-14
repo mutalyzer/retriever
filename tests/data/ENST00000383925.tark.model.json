@@ -52,7 +52,9 @@
             },
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "basic",
+              "tag": [
+                "basic"
+              ],
               "version": "1"
             },
             "features": [

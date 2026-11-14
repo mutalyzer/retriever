@@ -52,7 +52,9 @@
             "id": "ENST00000361851",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "basic",
+              "tag": [
+                "basic"
+              ],
               "version": "1"
             },
             "features": [
@@ -133,7 +135,9 @@
             "id": "ENST00000361899",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "basic",
+              "tag": [
+                "basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -214,7 +218,9 @@
             "id": "ENST00000362079",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "basic",
+              "tag": [
+                "basic"
+              ],
               "version": "2"
             },
             "features": [

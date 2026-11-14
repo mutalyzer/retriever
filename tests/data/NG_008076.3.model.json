@@ -64,7 +64,9 @@
             },
             "id": "NM_007186.6",
             "qualifiers": {
-              "tag": "MANE Select"
+              "tag": [
+                "MANE Select"
+              ]
             },
             "features": [
               {

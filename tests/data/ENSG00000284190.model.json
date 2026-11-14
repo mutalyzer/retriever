@@ -168,7 +168,9 @@
             "id": "ENST00000591877",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "3"
             },
             "features": [
@@ -223,7 +225,9 @@
             "id": "ENST00000710770",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -278,7 +282,9 @@
             "id": "ENST00000589823",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "8"
             },
             "features": [
@@ -633,7 +639,9 @@
             "id": "ENST00000891487",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -688,7 +696,9 @@
             "id": "ENST00000891488",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -743,7 +753,9 @@
             "id": "ENST00000891489",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -798,7 +810,9 @@
             "id": "ENST00000891490",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -853,7 +867,9 @@
             "id": "ENST00000891491",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -908,7 +924,9 @@
             "id": "ENST00000891492",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -963,7 +981,9 @@
             "id": "ENST00000891493",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1018,7 +1038,9 @@
             "id": "ENST00000891494",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1073,7 +1095,9 @@
             "id": "ENST00000891495",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1128,7 +1152,9 @@
             "id": "ENST00000891496",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1183,7 +1209,9 @@
             "id": "ENST00000891497",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1238,7 +1266,9 @@
             "id": "ENST00000891498",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1293,7 +1323,9 @@
             "id": "ENST00000891499",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1348,7 +1380,9 @@
             "id": "ENST00000891500",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1403,7 +1437,9 @@
             "id": "ENST00000891501",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1458,7 +1494,9 @@
             "id": "ENST00000938025",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1513,7 +1551,9 @@
             "id": "ENST00000938026",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1568,7 +1608,9 @@
             "id": "ENST00000938027",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1623,7 +1665,9 @@
             "id": "ENST00000958712",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1678,7 +1722,9 @@
             "id": "ENST00000958713",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "2"
             },
             "features": [
@@ -1733,7 +1779,9 @@
             "id": "ENST00000979482",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "1"
             },
             "features": [
@@ -1788,7 +1836,9 @@
             "id": "ENST00001040287",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "1"
             },
             "features": [
@@ -1843,7 +1893,9 @@
             "id": "ENST00001117456",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "1"
             },
             "features": [
@@ -1898,7 +1950,9 @@
             "id": "ENST00001122413",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "gencode_basic",
+              "tag": [
+                "gencode_basic"
+              ],
               "version": "1"
             },
             "features": [

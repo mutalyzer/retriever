@@ -52,7 +52,9 @@
             "id": "ENST00000304494",
             "qualifiers": {
               "assembly_name": "GRCh38",
-              "tag": "basic",
+              "tag": [
+                "basic"
+              ],
               "version": "10"
             },
             "features": [

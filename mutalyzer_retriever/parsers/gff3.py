@@ -351,8 +351,9 @@ def _get_qualifiers(feature):
     q = feature.qualifiers
     t = feature.type
     if feature.type in QUALIFIERS.keys():
+        # Tags are always a list: Ensembl gives several, NCBI usually one.
         qs = {
-            QUALIFIERS[t][k]: q[k][0] if len(q[k]) == 1 else q[k]
+            QUALIFIERS[t][k]: q[k] if k == "tag" else q[k][0] if len(q[k]) == 1 else q[k]
             for k in q.keys()
             if k in QUALIFIERS[t].keys()
         }

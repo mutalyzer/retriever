@@ -67,7 +67,7 @@ def _transcript(tark_transcript, exon_features, translation_feature):
     transcript["qualifiers"] = {
         "assembly_name": tark_transcript["assembly"],
         "version": str(tark_transcript["stable_id_version"]),
-        "tag": "basic",
+        "tag": ["basic"],
     }
     transcript["features"] = exon_features + translation_feature
     return [transcript]

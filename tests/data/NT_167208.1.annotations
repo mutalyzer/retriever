@@ -382,7 +382,9 @@
           },
           "id": "NM_001257362.3",
           "qualifiers": {
-            "tag": "RefSeq Select"
+            "tag": [
+              "RefSeq Select"
+            ]
           },
           "features": [
             {
@@ -595,7 +597,9 @@
           },
           "id": "NM_001257362.2",
           "qualifiers": {
-            "tag": "RefSeq Select",
+            "tag": [
+              "RefSeq Select"
+            ],
             "annotation_added_from": {
               "freeze_date_id": "20190906",
               "full_assembly_name": "GRCh37.p13",
